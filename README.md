@@ -13,6 +13,6 @@ This year's challenges will focus on Quantum Simulators.
 ### Project Legacy:
 The Cohort Project is open source, and hosted on GitHub. Each Monday at 8:00am EST the teams will 
 [fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-forks) 
-this repository to their own GitHub account to begin work on the challenges.  By Saturday at 11:59pm EST each team must issue a pull request with their final entry. CDL will revew the pull requests, and choose one team's work to merge into the main upstream repository. From that point on it will become part of the legacy of the 2021 Boot Camp.
+this repository to their own GitHub account to begin work on the challenges.  By Saturday at 11:59pm EST each team must issue a pull request with their final entry. CDL will review the pull requests, and choose one team's work to merge into the main upstream repository. From that point on it will become part of the legacy of the 2021 Boot Camp.
 
 ### Weekly Challenges
