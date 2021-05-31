@@ -85,7 +85,7 @@ The tasks this week will involve applying these gates to a quantum state on a cl
 You will see how chaos can arise in individual measurements of random circuits, but also that it can be tamed by averaging over many measurements.
 
 
-\section*{Supervised learning}
+\section*{Suggested weekly tasks}
 
 This section will guide you through several aspects of simulating an ion trap quantum computer using your classical computer.
 The starting points provided for these tasks make use of Julia (\url{https://julialang.org/}) and PastaQ (\url{https://github.com/GTorlai/PastaQ.jl/}), but teams are encouraged to use the environments and libraries they prefer.
@@ -113,7 +113,7 @@ gives the probability of sampling the bit-string $x$ from $\ket{\psi}$.
 
 \begin{figure}
 	\centering
-	\includegraphics{speckle_N=004,depth=032}
+	\includegraphics{images/speckle_N=004,depth=032}
 	\caption{
 		A ``speckle pattern'' displaying the probabilities of obtaining each of the 16 possible outcomes when sampling a 4-qubit state.
 	}
@@ -158,7 +158,7 @@ while those of depth 1 do not.
 
 \begin{figure}
 	\centering
-	\includegraphics{dists_N=008}
+	\includegraphics{images/dists_N=008}
 	\caption{
 		Empirical cumulative distribution functions of the probabilities $p$ for 8-qubit circuits of depth 1 and 512.
 	}
@@ -181,32 +181,25 @@ Plot $\mathcal{F}_\mathrm{XEB}$ as a function of $\Delta \Theta$.
 
 In the long term, some people expect quantum computing to become feasible on universal, gate-based quantum computers, which would undoubtedly benefit many branches of industry.
 Even with current NISQ hardware, methods exist to perform useful computations, such as the variational quantum eigensolver (VQE)~\cite{peruzzo2014variational}.
-However, sampling from random circuits does not lend itself to an obvious use case.
-\textbf{Describe a business that could be built around sampling-based quantum computing with random circuits in the NISQ era.}
+However, sampling from random circuits does not naively lend itself to an obvious use case.
+\textbf{Describe a potential business that could be built around sampling-based quantum computing with random circuits in the NISQ era.}
+Integrate you idea into this week's \href{https://github.com/CDL-Quantum/CohortProject_2021/blob/main/Week1_Trapped_Ions/Business_Application.md}{Business Application}.
 
-\medskip \noindent \textit{Hint:} \rotatebox[origin=c]{180}{Consider possible uses for certified random numbers.}
-
-
-\section*{Unsupervised learning}
+\section*{Additional Challenges}
 
 The following optional tasks are of a broader scope, and might require additional research on your part.
 
+\begin{enumerate}
 
-\subsection*{Task 6}
+\item Combine your speckle patterns from Task 2 into an animation that shows the changes in state probabilities as a single bit-flip error is moved around in a deep random circuit.
 
-Combine your speckle patterns from Task 2 into an animation that shows the changes in state probabilities as a single bit-flip error is moved around in a deep random circuit.
-
-
-\subsection*{Task 7}
-
-Download some samples and circuits from the data repository for Ref.~\citenum{arute2019quantum} at \url{https://datadryad.org/stash/dataset/doi:10.5061/dryad.k6t1rj8}.
+\item Download some samples and circuits from the data repository for Ref.~\citenum{arute2019quantum} at \url{https://datadryad.org/stash/dataset/doi:10.5061/dryad.k6t1rj8}.
 Use these to reproduce $\mathcal{F}_\mathrm{XEB}$ values from the paper.
 
 
-\subsection*{Task 8}
+\item Run your classical simulations of quantum circuits on a trapped ion quantum computer.
 
-Run your classical simulations of quantum circuits on a trapped ion quantum computer.
-
+\end{enumerate}
 
 \bibliography{refs}
 \bibliographystyle{unsrturl}
