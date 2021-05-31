@@ -2,6 +2,7 @@
 
 \usepackage{amsmath}
 \usepackage[margin=0.75in]{geometry}
+\usepackage[numbers]{natbib}
 \usepackage{physics}
 
 \usepackage{fancyhdr}
@@ -15,15 +16,6 @@
 \graphicspath{
 	{images}
 }
-
-\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
-\addbibresource{refs.bib}
-
-\DeclareCiteCommand{\citenum}
-	{}
-	{\bibhyperref{\printfield{labelnumber}}}
-	{}
-	{}
 
 \usepackage[hidelinks]{hyperref}
 
@@ -45,18 +37,18 @@
 
 \section*{Introduction}
 
-In 2019, the Martinis research group at Google ran an experiment on their Sycamore quantum computer, and they claimed it would take a classical supercomputer 10,000 years to simulate the same experiment~\autocite{arute2019quantum}.
+In 2019, the Martinis research group at Google ran an experiment on their Sycamore quantum computer, and they claimed it would take a classical supercomputer 10,000 years to simulate the same experiment~\cite{arute2019quantum}.
 Thus, they concluded that this was the world's first example of quantum computational advantage: a quantum computer has drastically outperformed a classical one at a specific task, and the disparity will grow exponentially as the task is made more difficult.
-Although different approaches have since been suggested to drastically improve on the classical bound of 10,000 years~\autocite{pednault2019leveraging,pan2021simulating}, this remains a landmark feat of engineering on the road to general purpose quantum computation.
+Although different approaches have since been suggested to drastically improve on the classical bound of 10,000 years~\cite{pednault2019leveraging,pan2021simulating}, this remains a landmark feat of engineering on the road to general purpose quantum computation.
 
 The task that was chosen for Google's demonstration is sampling from random circuits composed of 1- and 2-qubit gates.
-While this sampling task was initially believed to provide no ``real-world'' applications, potential use cases are beginning to appear~\autocite{aaronson2018certified}.
+While this sampling task was initially believed to provide no ``real-world'' applications, potential use cases are beginning to appear~\cite{aaronson2018certified}.
 It's important to keep in mind that the current state-of-the-art gate-based quantum computers are limited by errors in the individual gates, which compound to produce unreliable results.
 Indeed, the current generation of quantum computers is often referred to as ``noisy intermediate-scale quantum'' (NISQ) to emphasize their lack of error correction.
 Using quantum computers for truly useful tasks (such as Shor's algorithm to factor integers out of reach of classical factoring techniques) is estimated to still be a long way into the future.
 
 However, in a clever twist, Ref.~\citenum{arute2019quantum} actually takes advantage of the noisy nature of their quantum computer.
-Their main result is the experimental determination of the linear cross-entropy benchmarking (XEB) fidelity~\autocite{neill2018blueprint,boixo2018characterizing}:
+Their main result is the experimental determination of the linear cross-entropy benchmarking (XEB) fidelity~\cite{neill2018blueprint,boixo2018characterizing}:
 \begin{align}
 	\mathcal{F}_\mathrm{XEB}
 	&= 2^N \langle P \rangle - 1
@@ -216,6 +208,7 @@ Use these to reproduce $\mathcal{F}_\mathrm{XEB}$ values from the paper.
 Run your classical simulations of quantum circuits on a trapped ion quantum computer.
 
 
-\printbibliography
+\bibliography{refs}
+\bibliographystyle{unsrturl}
 
 \end{document}
