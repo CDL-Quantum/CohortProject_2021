@@ -1,0 +1,204 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[numbers]{natbib}
+\usepackage{physics}
+\usepackage{xcolor}
+\usepackage{cancel}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Creative Destruction Lab}
+\lhead{Week 2: Optimization problems \& Rydberg atom arrays}
+\rfoot{Page \thepage}
+
+\usepackage{graphicx}
+
+\usepackage[hidelinks]{hyperref}
+
+
+\renewcommand{\phi}{\varphi}
+
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item[]}{\end{list}}
+
+\title{Week 2: Optimization problems \& Rydberg atom arrays}
+\author{}
+\date{}
+
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\section*{Introduction}
+
+Last week, you were able to simulate elements of the seminal work produced from Google's Sycamore quantum computer on your own (classical) laptops.
+However, given that you are in the CDL stream, you are probably wondering how one might be able to demonstrate a quantum advantage in a ``real-world'' setting, such as optimization problems, instead of the simulatability of an ``odd'' probability distribution (the Porter-Thomas distribution).
+
+While superconducting-qubit (Sycamore) and trapped-ion quantum computers present high gate fidelities compared to neutral-atom quantum computers (i.e. neutral-atom quantum computers are more error-prone/noisy)~\cite{serret_solving_2020}, neutral-atom quantum computers are more scalable in terms of the physical number of programmable qubits owing to their ease of experimental control~\cite{bernien_probing_2017,ebadi_quantum_2020,henriet_quantum_2020,Browaeys2020}.
+Logically, if we have access to larger quantum computers, we can foreseeably demonstrate a quantum advantage for this very reason.
+Not only this, but given the immense scaling solutions required for today's largest data-driven problems (e.g. supply chain management), it seems more likely that neutral-atom quantum computers are closer to demonstrating a quantum advantage for today's real problems.
+
+The foundation of today's neutral-atom quantum computers comprise of Rydberg atoms~\cite{Browaeys2020}.
+Briefly, Rydberg atoms (e.g. rubidium) are large atoms that interact with each other on the scale of a few micrometres.
+A controlled laser pulse can then excite a Rydberg atom into a quantum state with a large principal quantum number that is quasi-stable.
+The binary nature of a Rydberg atom's ground and excited states gives analogous mappings to qubits.
+Besides ease of control and scalability, the value of Rydberg atoms in the context of solving real-world problems is in the way that Rydberg atoms interact with each other. 
+Their interactions with each other map trivially to a well-known mathematical problem called the Unit-Disk Maximum Independent Set (UD-MIS) problem, which is NP-hard\footnote{Problems that are NP-hard are not solvable in polynomial time, but trial solutions can be verified to be correct or not in polynomial time.}.
+
+A host of today's real-world problems are classified as NP-hard, and it turns out that NP-hard problems can be translated into other NP-hard problems with some negligible overhead.
+So, we can map a lot of real-world problems to the building blocks of quantum computers! 
+This is precisely what you will be exploring this week: exploring the UD-MIS problem as it pertains to Rydberg atoms, and mapping the UD-MIS problem to a real-life NP-hard problem.
+First, let's look at some math so that you can do your tasks!
+
+\subsection*{Modelling Rydberg atoms}
+
+Rydberg atoms need to be given a physical location. 
+We will strictly look at Rydberg atoms on a {\it graph} $G$ with vertices (physical Rydberg atom locations) and edges $V$ and $E$, respectively.
+With this, we will look at a Rydberg Hamiltonian of the form
+\begin{equation} \label{eq:rydberg_hamiltonian_Omega=0}
+	\hat{H} = -\sum_{i \in V} \hat{n}_i + \sum_{ i < j } \left( \frac{R_b}{r_{ij}} \right)^6 \hat{n}_i \hat{n}_j,
+\end{equation}
+where $\hat{n}_i = 1/2 \left( I - \hat{\sigma}_i^z \right) = \ketbra{1}{1}_i$ is called an {\it occupation operator}, $R_b$ is a parameter called the {\it blockade radius}, and $r_{ij}$ is the distance between Rydberg atoms located at vertices $i$ and $j$.
+The computational basis we will be working in is the occupation basis: the eigenstates of $\hat{n}_i$,
+\begin{subequations} \label{eq:occupation_basis}
+    \begin{align} 
+        \hat{n}_i \ket{0}_j =& 0 \qquad (\text{$\forall$ $i,j$}), \\
+        \intertext{and}
+        \hat{n}_i \ket{1}_j =& \delta_{i,j}\ket{1}_j,
+    \end{align}
+\end{subequations}
+where the state $\ket{0}$ ($\ket{1}$) represents the ground (excited) state of a Rydberg atom.
+
+On observing the form of the Hamiltonian in Eq.~\ref{eq:rydberg_hamiltonian_Omega=0}, we can see that the sum over $V$ term favours all sites being occupied, while the interaction term penalizes occupied pairs.
+It is precisely this dichotomy that leads us to our next section.
+
+\subsection*{Rydberg atoms and the UD-MIS problem}
+
+The MIS problem\footnote{Not UD-MIS!} is defined as follows \cite{serret_solving_2020}. \\
+
+\begin{changemargin}{1.5cm}{1.5cm}
+	\noindent Let $G = (V,E)$ be a graph with a set of vertices $V$ and edges $E$, $N = |V|$, and $S = (n_1, \dotsb, n_N)$ be an $N$-bit string (i.e. $n_i \in 0,1$) with Hamming weight $|S| = \sum_{i = 1}^N n_i$. 
+	The MIS problem is defined as finding the solution to the constraint
+	\begin{align*}
+		\max_{S \in \mathcal{B}} & |S|,
+	\end{align*}
+	such that $S$ is an independent set.
+	Here, $\mathcal{B}$ is the set of all possible $N$-bit strings, and an independent set is defined as mutually non-connected vertices: $n_i = n_j = 1 \Rightarrow (i,j) \cancel{\in} E$. \\
+\end{changemargin}
+
+Solving this problem consists of finding the largest possible independent set and returning an instance of it.
+With the additional unit-disk constraint, all vertices of the given graph share an edge except those that are seperated by a distance greated than 1.
+An example of an independent set on a unit-disk graph is shown in Fig.~\ref{fig:udmis_example}.
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=0.4\linewidth]{images/udmis_example.png}
+    \end{center}
+    \caption{An example of a unit-disk graph $G$ with an instance of the corresponding solution to its UD-MIS problem. Here, blue lines indicate graph edges $E$, and dots represent vertices $V$ wherein the shaded regions represent unit-radii disks. The red dots correspond to a maximum independent set.} \label{fig:udmis_example}
+\end{figure}
+
+The ground state of the Hamiltonian
+\begin{equation} \label{eq:UDMIS_hamiltonian}
+	\hat{H} = -\sum_{i \in V} \hat{n}_i + u \sum_{i,j \in E} \hat{n}_i \hat{n}_j
+\end{equation}
+is precisely the solution to the UD-MIS problem on a graph $G$\footnote{So long as $u > 1$ \cite{serret_solving_2020}. You will use $u = 1.35$ for all of your tasks.}.
+This is eerily similar to Eq.~\ref{eq:rydberg_hamiltonian_Omega=0}, with the difference being in the coefficients in front of the interaction terms.
+However, to a very good approximation, it's ``similar enough''.
+So, essentially, finding the ground state of a bunch of Rydberg atoms on the same graph $G$ will (approximately) solve the UD-MIS problem.
+
+In all of your tasks, we will be modelling Eq.~\ref{eq:UDMIS_hamiltonian} for simplicity.
+However, let's just take a moment to appreciate how having a physical neutral-atom quantum computer makes solving the UD-MIS problem so simple.
+We could just place the Rydberg atoms at the desired vertex locations, and measure their Rydberg occupation! Pretty easy\footnote{Obviously, a lot more goes into it. These experiments are highly non-trivial affairs... No free lunch!}!
+
+\subsection*{Task 1: Classical Solver}
+
+Let's first try and solve the UD-MIS problem classically.
+You'll notice that the Hamiltonian in Eq.~\ref{eq:UDMIS_hamiltonian} is diagonal in the Rydberg occupation basis (Eq.~\ref{eq:occupation_basis}).
+So, we can use classical Monte Carlo methods (namely the Metropolis-Hastings algorithm) to simulate this Hamiltonian at a finite temperature.
+But, we're interested in the {\it ground} state, not some high-temperature state.
+That being said, so long as we can simulate the Hamiltonian at a low enough temperature, it should be fine.
+
+In this directory, you will find a Jupyter notebook titled \texttt{Task1.ipynb}.
+Here, there's all the code you will need to solve the UD-MIS problem via classical {\it simulated annealing}: performing Monte Carlo simulations at lower and lower temperatures to hopefully simulate the ground (zero-temperature) state.
+The {\it annealing schedule} is the manner in which the temperature is decreased.
+We've provided an annealing schedule for you, but {\bf try other annealing schedules to see if you can get a solution to the UD-MIS problem faster (less steps)}.
+
+\subsection*{Task 2: (Simulated) Quantum Solver}
+
+Let's now try solving the UD-MIS problem quantum-ly in the following way.
+Consider an arbitrary wavefunction $\ket{\psi_0}$ written in the Rydberg occupation basis,
+\begin{equation}
+	\ket{\psi_0} = \sum_{S \in \mathcal{B}} c_S \ket{S}.
+\end{equation}
+Letting $\ket{\psi_0}$ time-evolve for a length of time $t$ according to the time-dependent Schrodinger equation,
+\begin{equation}
+	\ket{\psi(t)} = \exp(-\frac{i}{\hbar} t \hat{H}) \ket{\psi_0},
+\end{equation}
+and using a well-known result of quantum mechanics stating that so long as we time-evolve for long enough and slowly enough, we will arrive at the ground state of the Hamiltonian (in our case, Eq.~\ref{eq:UDMIS_hamiltonian}).
+Let's look at performing the time-evolution exactly with a \texttt{Julia} package called \texttt{Yao.jl} \cite{luo_yaojl_2020}\footnote{Created by our very own Roger Luo!}.
+Everything you need to solve this problem is in \texttt{run\_time\_evolution.jl}.
+The very last line draws samples from the resulting wavefunction that has been time-evolved.
+{\bf Plot the samples on the graph coordinates given in the code and verify that indeed the UD-MIS has been solved.}
+
+\subsection*{Task 3: A Real Problem}
+
+The city of Gotham is looking at putting in new cell phone towers in the city.
+The possible locations of the cell phone towers are given in Fig.~\ref{fig:gotham}.
+The billionaire Bruce Wayne is funding the project and he loves his money. 
+Therefore, Gotham should only purchase the required number of cell phone towers such that 1) the cell phone tower signal ranges do not overlap\footnote{Yes, this means some areas of Gotham city won't have cell phone service... ``Too bad,'' said Bruce.}, and 2) as much of Gotham city can be within cell signal range. 
+
+The possible Gotham City cell phone tower locations are\footnote{All coordinates are normalized to the cell phone tower signal range.}:
+\begin{enumerate}
+	\item (1.19, 4.25)
+	\item (2.71, 3.48)
+	\item (1.19, 3.51)
+	\item (2, 3.38)
+	\item (1.12, 2.86)
+	\item (1.70, 2.42)
+	\item (2.36, 2.54)
+	\item (1.52, 1.48)
+	\item (2.15, 1.54)
+	\item (2.14, 1.87)
+	\item (1.72, 0.86)
+	\item (2.29, 0.87)
+\end{enumerate}
+
+\begin{enumerate}
+	\item {\bf Explain why this is a problem that can be easily mapped to the UD-MIS problem.} A few sentences is all that is needed.
+	\item {\bf Solve Gotham City's problem!} Use any method you want (i.e. the codes provided in Tasks 1 and 2, or any other UD-MIS solving method), but extra points will be given to groups that demonstrate originality.
+	\item {\bf Should Bruce pay for a few more cell phone towers to make sure that more of Gotham City has cell phone service?}
+\end{enumerate}
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=0.4\linewidth]{images/gothamcity.pdf}
+    \end{center}
+    \caption{Possible cell phone tower locations in Gotham City.} \label{fig:gotham}
+\end{figure}
+
+\section*{Additional Challenges}
+
+\begin{itemize}
+	\item Perform any of the tasks with real quantum hardware.
+	\item Compare / benchmark the methods outlined in the Task 1 and 2 codes (if you used a different method in Task 3, consider comparing to that also). You will probably want to make larger graphs to push both of these algorithms to the test. Which method is better (i.e. faster, more efficient)?
+	\item Solve another real-world problem that can be mapped to the UD-MIS problem.
+\end{itemize}
+
+\bibliography{refs}
+\bibliographystyle{unsrturl}
+
+\end{document}
