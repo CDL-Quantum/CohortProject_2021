@@ -46,15 +46,18 @@
 \section*{Introduction}
 
 Last week, you were able to simulate elements of the seminal work produced from Google's Sycamore quantum computer on your own (classical) laptops.
-However, given that you are in the CDL stream, you are probably wondering how one might be able to demonstrate a quantum advantage in a ``real-world'' setting, such as optimization problems, instead of the simulatability of an ``odd'' probability distribution (the Porter-Thomas distribution).
+However, given that you are in the CDL stream, you are probably wondering how one might be able to demonstrate a quantum advantage in a ``real-world'' setting, such as optimization problems, instead of the simulatability of an ``unusual'' probability distribution (the Porter-Thomas distribution).
 
-While superconducting-qubit (Sycamore) and trapped-ion quantum computers present high gate fidelities compared to neutral-atom quantum computers (i.e. neutral-atom quantum computers are more error-prone/noisy)~\cite{serret_solving_2020}, neutral-atom quantum computers are more scalable in terms of the physical number of programmable qubits owing to their ease of experimental control~\cite{bernien_probing_2017,ebadi_quantum_2020,henriet_quantum_2020,Browaeys2020}.
-Logically, if we have access to larger quantum computers, we can foreseeably demonstrate a quantum advantage for this very reason.
-Not only this, but given the immense scaling solutions required for today's largest data-driven problems (e.g. supply chain management), it seems more likely that neutral-atom quantum computers are closer to demonstrating a quantum advantage for today's real problems.
+Superconducting-qubit (Sycamore) and trapped-ion devices are considered top contenders for scalable quantum computers, due to their long coherence times and
+high gate fidelities.  However, recently neutral-atom quantum computers are also proving to be competitive due to the ease of control of a large number of programmable
+qubits~\cite{serret_solving_2020,bernien_probing_2017,ebadi_quantum_2020,henriet_quantum_2020,Browaeys2020}.
+%Logically, if we have access to larger quantum computers, we can foreseeably demonstrate a quantum advantage for this very reason.
+Given the immense scaling solutions required for today's largest data-driven problems (e.g. supply chain management), it seems 
+likely that neutral-atom quantum computers could be close close to demonstrating a quantum advantage for today's real problems.
 
 The foundation of today's neutral-atom quantum computers comprise of Rydberg atoms~\cite{Browaeys2020}.
-Briefly, Rydberg atoms (e.g. rubidium) are large atoms that interact with each other on the scale of a few micrometres.
-A controlled laser pulse can then excite a Rydberg atom into a quantum state with a large principal quantum number that is quasi-stable.
+Briefly, Rydberg atoms are highly-excited atoms (e.g. rubidium) that interact with each other on the scale of a few micrometres.
+A controlled laser pulse can excite an atom into a quantum state with a large principal quantum number (i.e. a Rydberg state) that is quasi-stable.
 The binary nature of a Rydberg atom's ground and excited states gives analogous mappings to qubits.
 Besides ease of control and scalability, the value of Rydberg atoms in the context of solving real-world problems is in the way that Rydberg atoms interact with each other. 
 Their interactions with each other map trivially to a well-known mathematical problem called the Unit-Disk Maximum Independent Set (UD-MIS) problem, which is NP-hard\footnote{Problems that are NP-hard are not solvable in polynomial time, but trial solutions can be verified to be correct or not in polynomial time.}.
