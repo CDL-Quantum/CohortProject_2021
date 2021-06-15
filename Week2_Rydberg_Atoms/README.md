@@ -10,7 +10,7 @@ Please edit this markdown file directly with links to your completed tasks and c
 ## Tasks include:
 * Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
 * Finding a better annealing schedule to arrive at solutions to the problem quicker.
-* Simulating the same problem but using the time-dependent Schrodinger equation.
+* Simulating the same problem but using quantum annealing.
 * Comparing the classical and quantum methods.
 * Solving a real-world problem involving cell phone tower placement in Gotham City.
 

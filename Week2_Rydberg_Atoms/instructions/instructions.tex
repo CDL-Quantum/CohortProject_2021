@@ -127,11 +127,11 @@ In all of your tasks, we will be modelling Eq.~\ref{eq:UDMIS_hamiltonian} for si
 However, let's just take a moment to appreciate how having a physical neutral-atom quantum computer makes solving the UD-MIS problem so simple.
 We could just place the Rydberg atoms at the desired vertex locations, and measure their Rydberg occupation! Pretty easy\footnote{Obviously, a lot more goes into it. These experiments are highly non-trivial affairs... No free lunch!}!
 
-\subsection*{Task 1: Classical Solver}
+\subsection*{Task 1: Simulated Classical Annealing}
 
 Let's first try and solve the UD-MIS problem classically.
 You'll notice that the Hamiltonian in Eq.~\ref{eq:UDMIS_hamiltonian} is diagonal in the Rydberg occupation basis (Eq.~\ref{eq:occupation_basis}).
-So, we can use classical Monte Carlo methods (namely the Metropolis-Hastings algorithm) to simulate this Hamiltonian at a finite temperature.
+So, we can use classical Monte Carlo methods (namely the Metropolis-Hastings algorithm) to simulate this Hamiltonian at finite temperatures.
 But, we're interested in the {\it ground} state, not some high-temperature state.
 That being said, so long as we can simulate the Hamiltonian at a low enough temperature, it should be fine.
 
@@ -140,22 +140,35 @@ Here, there's all the code you will need to solve the UD-MIS problem via classic
 The {\it annealing schedule} is the manner in which the temperature is decreased.
 We've provided an annealing schedule for you, but {\bf try other annealing schedules to see if you can get a solution to the UD-MIS problem faster (less steps)}.
 
-\subsection*{Task 2: (Simulated) Quantum Solver}
+\subsection*{Task 2: Quantum Annealing}
 
-Let's now try solving the UD-MIS problem quantum-ly in the following way.
-Consider an arbitrary wavefunction $\ket{\psi_0}$ written in the Rydberg occupation basis,
-\begin{equation}
-	\ket{\psi_0} = \sum_{S \in \mathcal{B}} c_S \ket{S}.
+Let's now try solving the UD-MIS problem quantum-ly.
+We will employ a quantum annealing (QA)-based approach.
+Briefly, the goal of QA is to start in an easily-preparable groundstate of a Hamiltonian and time evolve this state with a time-dependent Hamiltonian.
+At the end of the time evolution process, the Hamiltonian should be such that its ground state is what we are after.
+Consider the time-dependent Hamiltonian
+\begin{equation} \label{eq:time_dep_hamiltonian}
+	\hat{H}(t) = \Omega(t) \sum_{i \in V} \hat{\sigma}_i^x - \delta(t) \sum_{i \in V} \hat{n}_i + u \sum_{i,j \in E} \hat{n}_i \hat{n}_j.
 \end{equation}
-Letting $\ket{\psi_0}$ time-evolve for a length of time $t$ according to the time-dependent Schrodinger equation,
-\begin{equation}
-	\ket{\psi(t)} = \exp(-\frac{i}{\hbar} t \hat{H}) \ket{\psi_0},
-\end{equation}
-and using a well-known result of quantum mechanics stating that so long as we time-evolve for long enough and slowly enough, we will arrive at the ground state of the Hamiltonian (in our case, Eq.~\ref{eq:UDMIS_hamiltonian}).
-Let's look at performing the time-evolution exactly with a \texttt{Julia} package called \texttt{Yao.jl} \cite{luo_yaojl_2020}\footnote{Created by our very own Roger Luo!}.
-Everything you need to solve this problem is in \texttt{run\_time\_evolution.jl}.
-The very last line draws samples from the resulting wavefunction that has been time-evolved.
-{\bf Plot the samples on the graph coordinates given in the code and verify that indeed the UD-MIS has been solved.}
+Notice that if $\Omega(t = 0) = \delta(t = 0) = 0$, the ground state of this Hamiltonian is every Rydberg atom in its ground state: $\ket{0}^{\bigotimes N}$.
+If $\Omega(t = t_{\text{final}}) = 0$ and $\delta(t = t_{\text{final}}) = 1$, we have Eq.~\ref{eq:UDMIS_hamiltonian}.
+Time-evolving the initial state $\ket{0}^{\bigotimes N}$ with the Hamiltonian in Eq.~\ref{eq:time_dep_hamiltonian} by manually choosing how to vary $\Omega(t)$ and $\delta(t)$ will hopefully give us the groundstate of the UD-MIS Hamiltonian (Eq.~\ref{eq:UDMIS_hamiltonian}).
+In a nutshell, this is the QA process as it pertains to our problem.
+
+Mathematically and algorithmically, QA looks like the following
+\begin{align*}
+	\ket{\psi(t)} =& U(t) U(t - \delta t) \cdots U(t_0 + \delta t) U(t_0) \ket{\psi (t = t_0)},
+\end{align*}
+where $U(t)$ is the time-evolution operator
+\begin{align*}
+	U(t) =& \exp(-\frac{i}{\hbar} \delta t \hat{H}(t)),
+\end{align*}
+$\hat{H}(t)$ is given in Eq.~\ref{eq:time_dep_hamiltonian}, and $\delta t$ is a user-defined increment of time that defines the number of subdivisions in the time interval $t \in [t_0, t_f]$.
+We will implement this on a quantum circuit simulator package in the \texttt{Julia} programming language called \texttt{Yao.jl} \cite{luo_yaojl_2020}\footnote{Created by our very own Roger Luo!}.
+Everything you need is in \texttt{run\_quantum\_annealing.jl}.
+We have taken inspiration from Ref.~\cite{serret_solving_2020} for the annealing schedule (see Fig. 2 in this work).
+The very last line in \texttt{run\_quantum\_annealing.jl} draws samples from the resulting wavefunction $\ket{\psi(t)}$ that has been time-evolved.
+{\bf Plot the samples on the graph coordinates given in the code and verify that indeed the UD-MIS problem has been solved.}
 
 \subsection*{Task 3: A Real Problem}
 
