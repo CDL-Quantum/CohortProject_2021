@@ -17,7 +17,7 @@ Please edit this markdown file directly with links to your completed tasks and c
 ## Further Challenges:
 * Comparing the methods used to solve the UD-MIS problem.
 * Solving the problem with real quantum hardware.
-* Demonstrating how other problems can be mapped to the UD-MIS problem and solving said problem.
+* Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
 
 
 ## Business Application

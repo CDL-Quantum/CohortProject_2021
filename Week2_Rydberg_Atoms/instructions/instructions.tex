@@ -55,21 +55,21 @@ qubits~\cite{serret_solving_2020,bernien_probing_2017,ebadi_quantum_2020,henriet
 Given the immense scaling solutions required for today's largest data-driven problems (e.g. supply chain management), it seems 
 likely that neutral-atom quantum computers could be close close to demonstrating a quantum advantage for today's real problems.
 
-The foundation of today's neutral-atom quantum computers comprise of Rydberg atoms~\cite{Browaeys2020}.
+The foundation of today's neutral-atom quantum computers is comprised of Rydberg atoms~\cite{Browaeys2020}.
 Briefly, Rydberg atoms are highly-excited atoms (e.g. rubidium) that interact with each other on the scale of a few micrometres.
 A controlled laser pulse can excite an atom into a quantum state with a large principal quantum number (i.e. a Rydberg state) that is quasi-stable.
-The binary nature of a Rydberg atom's ground and excited states gives analogous mappings to qubits.
+The binary nature of a Rydberg atom's ground and excited states is analogous to the state of a qubit.
 Besides ease of control and scalability, the value of Rydberg atoms in the context of solving real-world problems is in the way that Rydberg atoms interact with each other. 
-Their interactions with each other map trivially to a well-known mathematical problem called the Unit-Disk Maximum Independent Set (UD-MIS) problem, which is NP-hard\footnote{Problems that are NP-hard are not solvable in polynomial time, but trial solutions can be verified to be correct or not in polynomial time.}.
+Their interactions map trivially to a well-known mathematical problem called the Unit-Disk Maximum Independent Set (UD-MIS) problem, which is NP-hard\footnote{Problems that are NP-hard are not solvable in polynomial time, but trial solutions can be verified to be correct or not in polynomial time.}.
 
 A host of today's real-world problems are classified as NP-hard, and it turns out that NP-hard problems can be translated into other NP-hard problems with some negligible overhead.
 So, we can map a lot of real-world problems to the building blocks of quantum computers! 
-This is precisely what you will be exploring this week: exploring the UD-MIS problem as it pertains to Rydberg atoms, and mapping the UD-MIS problem to a real-life NP-hard problem.
-First, let's look at some math so that you can do your tasks!
+This is precisely what you will be investigating this week: exploring the UD-MIS problem as it pertains to Rydberg atoms, and mapping it to a real-life NP-hard problem.
+First, let's look at some of the relevant math so that you can do your tasks!
 
 \subsection*{Modelling Rydberg atoms}
 
-Rydberg atoms need to be given a physical location. 
+Rydberg atoms need to be placed at a physical location.
 We will strictly look at Rydberg atoms on a {\it graph} $G$ with vertices (physical Rydberg atom locations) and edges $V$ and $E$, respectively.
 With this, we will look at a Rydberg Hamiltonian of the form
 \begin{equation} \label{eq:rydberg_hamiltonian_Omega=0}
@@ -86,25 +86,25 @@ The computational basis we will be working in is the occupation basis: the eigen
 \end{subequations}
 where the state $\ket{0}$ ($\ket{1}$) represents the ground (excited) state of a Rydberg atom.
 
-On observing the form of the Hamiltonian in Eq.~\ref{eq:rydberg_hamiltonian_Omega=0}, we can see that the sum over $V$ term favours all sites being occupied, while the interaction term penalizes occupied pairs.
+On observing the form of the Hamiltonian in Eq.~\ref{eq:rydberg_hamiltonian_Omega=0}, we can see that the first term (sum over $V$) favours all sites being occupied, while the interaction term penalizes occupied pairs.
 It is precisely this dichotomy that leads us to our next section.
 
 \subsection*{Rydberg atoms and the UD-MIS problem}
 
-The MIS problem\footnote{Not UD-MIS!} is defined as follows \cite{serret_solving_2020}. \\
+The MIS problem\footnote{Not UD-MIS!} is defined as follows \cite{serret_solving_2020}: \\
 
 \begin{changemargin}{1.5cm}{1.5cm}
 	\noindent Let $G = (V,E)$ be a graph with a set of vertices $V$ and edges $E$, $N = |V|$, and $S = (n_1, \dotsb, n_N)$ be an $N$-bit string (i.e. $n_i \in 0,1$) with Hamming weight $|S| = \sum_{i = 1}^N n_i$. 
-	The MIS problem is defined as finding the solution to the constraint
+	The MIS problem is defined as finding
 	\begin{align*}
 		\max_{S \in \mathcal{B}} & |S|,
 	\end{align*}
-	such that $S$ is an independent set.
-	Here, $\mathcal{B}$ is the set of all possible $N$-bit strings, and an independent set is defined as mutually non-connected vertices: $n_i = n_j = 1 \Rightarrow (i,j) \cancel{\in} E$. \\
+	subject to the constraint that $S$ is an independent set.
+	Here, $\mathcal{B}$ is the set of all possible $N$-bit strings, and an independent set is defined as a set with mutually non-connected vertices: $n_i = n_j = 1 \Rightarrow (i,j) \cancel{\in} E$. \\
 \end{changemargin}
 
 Solving this problem consists of finding the largest possible independent set and returning an instance of it.
-With the additional unit-disk constraint, all vertices of the given graph share an edge except those that are seperated by a distance greated than 1.
+With the additional unit-disk constraint, all vertices of the given graph share an edge except those that are separated by a distance greater than 1.
 An example of an independent set on a unit-disk graph is shown in Fig.~\ref{fig:udmis_example}.
 
 \begin{figure}
@@ -172,10 +172,10 @@ The very last line in \texttt{run\_quantum\_annealing.jl} draws samples from the
 
 \subsection*{Task 3: A Real Problem}
 
-The city of Gotham is looking at putting in new cell phone towers in the city.
+The City of Gotham is looking at putting in new cell phone towers.
 The possible locations of the cell phone towers are given in Fig.~\ref{fig:gotham}.
 The billionaire Bruce Wayne is funding the project and he loves his money. 
-Therefore, Gotham should only purchase the required number of cell phone towers such that 1) the cell phone tower signal ranges do not overlap\footnote{Yes, this means some areas of Gotham city won't have cell phone service... ``Too bad,'' said Bruce.}, and 2) as much of Gotham city can be within cell signal range. 
+Therefore, Gotham should only purchase the required number of cell phone towers such that 1) the cell phone tower signal ranges do not overlap\footnote{Yes, this means some areas of Gotham City won't have cell phone service... ``Too bad,'' said Bruce.}, and 2) as much of Gotham City can be within cell signal range. 
 
 The possible Gotham City cell phone tower locations are\footnote{All coordinates are normalized to the cell phone tower signal range.}:
 \begin{enumerate}
