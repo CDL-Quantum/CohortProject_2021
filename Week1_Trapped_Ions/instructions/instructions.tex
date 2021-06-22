@@ -89,7 +89,7 @@ You will see how chaos can arise in individual measurements of random circuits, 
 \section*{Suggested weekly tasks}
 
 This section will guide you through several aspects of simulating an ion trap quantum computer using your classical computer.
-The starting points provided for these tasks make use of Julia (\url{https://julialang.org/}), PastaQ (\url{https://github.com/GTorlai/PastaQ.jl/}), and ITensor (\url{https://itensor.github.io/ITensors.jl/v0.1/ITensorType.html}) but teams are encouraged to use the environments and libraries they prefer.
+The starting points provided for these tasks make use of Julia (\url{https://julialang.org/}), PastaQ (\url{https://github.com/GTorlai/PastaQ.jl/}), and ITensors (\url{https://itensor.github.io/ITensors.jl/v0.1/ITensorType.html}) but teams are encouraged to use the environments and libraries they prefer.
 
 
 \subsection*{Task 1}
@@ -103,6 +103,9 @@ You will use this analogy to draw ``speckle patterns'' in order to visualize the
 
 The example script \texttt{run\_random\_circuit.jl} creates and runs a random circuit using the ion trap $R$ and $M$ gates, resulting in a random matrix product state (MPS), which represents a quantum state $\ket{\psi}$.
 Extend this script to \textbf{extract the coefficients $\ip{x}{\psi}$ for each bit-string $x$ from the MPS}.
+Please note that if you are using ITensors and PastaQ that PastaQ requires ITensors \texttt{v0.1.41}.
+Unfortunately, there are functionalities in ITensors \texttt{v0.2.2} that would make this task very fast to complete, but they simply do not work in conjunction with PastaQ.
+That being said, there are still many ways to do this Task!
 
 
 The squared magnitude of each coefficient,
