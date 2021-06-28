@@ -15,6 +15,8 @@ The Cohort Project is open source, and hosted on GitHub. Each Monday at 8:00am E
 [fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-forks) 
 this repository to their own GitHub account to begin work on the challenges.  By Saturday at 11:59pm EST each team must issue a pull request with their final entry. CDL will review the pull requests, and choose one team's work to merge into the main upstream repository. From that point on it will become part of the legacy of the 2021 Boot Camp.
 
-### Weekly Challenges
-* Week 1: Quantum Advantage with Trapped Ions
-* ...
+### 2021 Weekly Challenges
+* Week 1: Simulating Quantum Advantage with Trapped Ions
+* Week 2: Optimization Problems & Rydberg Atom Arrays
+* Week 3: Variational Quantum Eigensolvers
+* Week 4: Natural Language Processing
