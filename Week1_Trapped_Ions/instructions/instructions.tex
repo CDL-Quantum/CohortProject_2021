@@ -89,7 +89,7 @@ You will see how chaos can arise in individual measurements of random circuits, 
 \section*{Suggested weekly tasks}
 
 This section will guide you through several aspects of simulating an ion trap quantum computer using your classical computer.
-The starting points provided for these tasks make use of Julia (\url{https://julialang.org/}), PastaQ (\url{https://github.com/GTorlai/PastaQ.jl/}), and ITensors (\url{https://itensor.github.io/ITensors.jl/v0.1/ITensorType.html}) but teams are encouraged to use the environments and libraries they prefer.
+The starting points provided for these tasks make use of Julia (\url{https://julialang.org/}), PastaQ (\url{https://github.com/GTorlai/PastaQ.jl/}), and ITensor (\url{https://itensor.github.io/ITensors.jl/v0.1/ITensorType.html}) but teams are encouraged to use the environments and libraries they prefer.
 
 
 \subsection*{Task 1}
@@ -103,8 +103,8 @@ You will use this analogy to draw ``speckle patterns'' in order to visualize the
 
 The example script \texttt{run\_random\_circuit.jl} creates and runs a random circuit using the ion trap $R$ and $M$ gates, resulting in a random matrix product state (MPS), which represents a quantum state $\ket{\psi}$.
 Extend this script to \textbf{extract the coefficients $\ip{x}{\psi}$ for each bit-string $x$ from the MPS}.
-Please note that if you are using ITensors and PastaQ that PastaQ requires ITensors \texttt{v0.1.41}.
-Unfortunately, there are functionalities in ITensors \texttt{v0.2.2} that would make this task very fast to complete, but they simply do not work in conjunction with PastaQ.
+Please note that if you are using ITensor and PastaQ that PastaQ requires ITensor \texttt{v0.1.41}.
+Unfortunately, there are functionalities in ITensor \texttt{v0.2.2} that would make this task very fast to complete, but they simply do not work in conjunction with PastaQ.
 That being said, there are still many ways to do this Task!
 
 
@@ -182,12 +182,15 @@ Starting from a sufficiently deep random circuit, \textbf{perturb the angle of e
 Plot $\mathcal{F}_\mathrm{XEB}$ as a function of $\Delta \Theta$.
 
 
-\subsection*{Task 5}
+\subsection*{Business Application}
 
-In the long term, some people expect quantum computing to become feasible on universal, gate-based quantum computers, which would undoubtedly benefit many branches of industry.
-Even with current NISQ hardware, methods exist to perform useful computations, such as the variational quantum eigensolver (VQE)~\cite{peruzzo2014variational}.
-However, sampling from random circuits does not naively lend itself to an obvious use case.
-\textbf{Describe a potential business that could be built around sampling-based quantum computing with random circuits in the NISQ era.}
+As apparent from your simulations, random circuits can be implemented on non-fault-tolerant NISQ hardware without error correction.
+In the long term, people expect quantum computing to become feasible on universal, gate-based quantum computers with error correction, 
+which would benefit many applications in industry.
+Even with current NISQ hardware, methods exist to perform useful computations, such as the variational quantum eigensolver (VQE)~\cite{peruzzo2014variational},
+which you will learn about in Week 3.
+However, sampling from random circuits does not naively lend itself to such an obvious use case.
+\textbf{Devise a potential business that could be built around sampling-based quantum computing with random circuits in the NISQ era.}
 Integrate your idea into this week's \href{https://github.com/CDL-Quantum/CohortProject_2021/blob/main/Week1_Trapped_Ions/Business_Application.md}{Business Application}.
 
 \section*{Additional Challenges}
@@ -201,8 +204,7 @@ The following optional tasks are of a broader scope, and might require additiona
 \item Download some samples and circuits from the data repository for Ref.~\citenum{arute2019quantum} at \url{https://datadryad.org/stash/dataset/doi:10.5061/dryad.k6t1rj8}.
 Use these to reproduce $\mathcal{F}_\mathrm{XEB}$ values from the paper.
 
-\item Run your quantum circuits on a trapped ion quantum computer.
-One option is to use IonQ's quantum computers via Google Cloud Marketplace: \url{https://ionq.com/news/june-17-2021-ionq-quantum-computers-now-available-on-google-cloud/}.
+\item Run your quantum circuits on a trapped ion quantum computer, for example IonQ's quantum computers via Google Cloud Marketplace: \url{https://ionq.com/news/june-17-2021-ionq-quantum-computers-now-available-on-google-cloud/}.
 
 \end{enumerate}
 
