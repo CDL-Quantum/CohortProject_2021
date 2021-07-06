@@ -1,5 +1,6 @@
 Hello Team 3! This is a fork of the Cohort project 2021 - Week1. 
-In the interest of time, you can start comitting to the main branch here.
+Please see [instructions](setup.md) for setting up your local environment.
+
 
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 1: Quantum Advantage with Trapped Ions 
