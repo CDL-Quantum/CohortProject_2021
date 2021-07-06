@@ -20,3 +20,9 @@ this repository to their own GitHub account to begin work on the challenges.  By
 * Week 2: Optimization Problems & Rydberg Atom Arrays
 * Week 3: Variational Quantum Eigensolvers
 * Week 4: Natural Language Processing
+
+### Some suggested reading
+* [Hello quantum world! Google publishes landmark quantum supremacy claim](https://www.nature.com/articles/d41586-019-03213-z)
+* [Quantum Supremacy Is Coming: Here's What You Should Know](https://www.quantamagazine.org/quantum-supremacy-is-coming-heres-what-you-should-know-20190718/)
+* [Towards a quantum advantage](https://physicsworld.com/a/towards-a-quantum-advantage/)
+* [Quantum Computing in the NISQ era and beyond](https://arxiv.org/abs/1801.00862)
