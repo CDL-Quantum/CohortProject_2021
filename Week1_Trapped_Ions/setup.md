@@ -7,7 +7,7 @@ Please follow the platform specific download instructions to install the latest 
 
 The following packages are required to run the code:
 * [PastaQ](https://github.com/GTorlai/PastaQ.jl/)
-* [ITensor](https://itensor.github.io/ITensors.jl/v0.1/ITensorType.html)
+* [ITensors](https://itensor.github.io/ITensors.jl/v0.1/ITensorType.html)
 * [IJulia](https://github.com/JuliaLang/IJulia.jl)
 * [Plots](https://docs.juliaplots.org/latest/colors/)
 
