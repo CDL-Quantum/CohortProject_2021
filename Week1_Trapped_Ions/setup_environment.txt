@@ -6,4 +6,4 @@ Setuping Julia Environment:
 3. Install PastaQ, since pastaQ uses Itensor, we only need to install pastaQ
 - Inside the julia REPL, which can be access just typing julia in the terminal, type ], which will open the package manager.
 - type add PastaQ and hit enter
-4. Once it finishes download, just enter the notebook() command in the julia REPL and you're good to go
+4. Once it finishes download, just enter `using IJulia` and then the `notebook()` commands in the julia REPL and you're good to go
