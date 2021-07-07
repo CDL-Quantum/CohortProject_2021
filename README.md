@@ -1,5 +1,5 @@
 ![CDL 2020 Cohort Project](figures/CDL_logo.jpg)
-## Quantum Bootcamp Cohort Project 2021
+### Quantum Bootcamp Cohort Project 2021
 
 The 2021 Cohort Project is an online collaboration bringing together founders in a series of open-source challenges.
 During the four-week bootcamp, the cohort will be split into teams.  These teams will compete on a set of challenges 
