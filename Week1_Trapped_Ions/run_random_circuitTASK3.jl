@@ -74,7 +74,7 @@ depth = parse(Int, ARGS[2])
 
 #Plot exact
 f(x) = 1-exp(-(2^N)*x)
-plot(f,(1:2^N)./2^N, linestyle=:dot, xaxis=:log, linecolor=:black, linewidth=4, labels="exact",legend=:bottomright)
+plot(f,10^-3,1, linestyle=:dot, xaxis=:log, linecolor=:black, linewidth=4, labels="exact",legend=:bottomright)
 
 depths = [1,2,4,8,16,32,64,128,256,512]
 for i in depths
