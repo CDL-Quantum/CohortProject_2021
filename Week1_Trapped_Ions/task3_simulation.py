@@ -4,7 +4,7 @@ from itertools import product
 from tqdm import tqdm
 
 from Week1_Trapped_Ions.julia_run_random_circuit import run_random_circuit
-from Week1_Trapped_Ions.utils import get_histogram_from_outcomes
+from Week1_Trapped_Ions.utils import get_histogram_from_outcomes_small
 
 if __name__ == "__main__":
     N = 8
@@ -15,9 +15,9 @@ if __name__ == "__main__":
     num_trials = 1000
 
     hist_list = {D: list() for D in depths}
-    for D, _ in tqdm(product(depths, range(num_trials))):
+    for D, _ in tqdm(list(product(depths, range(num_trials)))):
         result = run_random_circuit(N, D, shots)
-        hist_list[D].append(list(get_histogram_from_outcomes(result)))
+        hist_list[D].append(list(get_histogram_from_outcomes_small(result)))
 
     with open("task3_simulation_result_fine.txt", 'wb') as of:
         pickle.dump({
