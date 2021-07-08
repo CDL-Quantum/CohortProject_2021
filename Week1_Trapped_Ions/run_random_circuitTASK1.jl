@@ -66,17 +66,10 @@ function task_1(psi,N)
     end
 
     #plot and save
-    scatter(1:2^N,ones(2^N),markersize=100*probs,markercolor=:red,grid=false,ylims=(0.9, 1.1),ticks=false,showaxis=false,legend=false)
+    scatter(1:2^N,ones(2^N),markersize=100*probs,markercolor=:red,grid=false,ylims=(0.95, 1.05),ticks=false,showaxis=false,legend=false)
     png("Speckle")
 end
 
-function task_2
-    #define bit flip error
-    bit_flip = [
-        0 1
-        1 0
-    ]
-end
 
 N = parse(Int, ARGS[1])
 depth = parse(Int, ARGS[2])
