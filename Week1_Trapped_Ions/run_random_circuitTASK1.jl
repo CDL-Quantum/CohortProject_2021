@@ -68,7 +68,7 @@ function task_1(psi,N)
 
     #plot and save
     scatter(1:2^N,ones(2^N),markersize=100*probs,markercolor=:red,grid=false,ylims=(0.99, 1.01),ticks=false,showaxis=false,legend=false)
-    png("Speckle412")
+    png("Speckle612")
 end
 
 
