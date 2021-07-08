@@ -25,16 +25,35 @@ function PastaQ.gate(::GateName"X";)
     ]
 end
 
-function run(N::Int64, depth::Int64, nshots::Int64=0, rand_x::Bool=false)
+function run(N::Int64, depth::Int64, nshots::Int64=0, rand_x::Bool=false, ret_params::Bool=false,
+             in_r_param::Union{Vector{Tuple{Float64, Float64}}, Nothing}=nothing, in_m_param::Union{Vector{Float64}, Nothing}=nothing)
     # Random circuit.
     gates = Vector{Tuple}[]
+    if ret_params
+        r_params = Tuple{Float64, Float64}[]
+        m_params = Float64[]
+    end
+
+    r_idx = 1
+    m_idx = 1
 
     for i in 1:depth
         one_qubit_layer = Tuple[]
         two_qubit_layer = Tuple[]
 
         for j in 1:N
-            gate = ("R", j, (theta=2pi*rand(), phi=2pi*rand()))
+            if in_r_param !== nothing
+                th = in_r_param[r_idx][1]
+                phi = in_r_param[r_idx][2]
+                r_idx += 1
+            else
+                th = 2pi*rand()
+                phi = 2pi*rand()
+            end
+            if ret_params
+                push!(r_params, (th, phi))
+            end
+            gate = ("R", j, (theta=th, phi=phi))
             push!(one_qubit_layer, gate)
         end
 
@@ -42,7 +61,16 @@ function run(N::Int64, depth::Int64, nshots::Int64=0, rand_x::Bool=false)
         idx_first = i % 2 + 1
 
         for j in idx_first:2:(N-1)
-            gate = ("M", (j, j+1), (Theta=2pi*rand(),))
+            if in_m_param !== nothing
+                th = in_m_param[m_idx]
+                m_idx += 1
+            else
+                th = 2pi*rand()
+            end
+            if ret_params
+                push!(m_params, th)
+            end
+            gate = ("M", (j, j+1), (Theta=th,))
             push!(two_qubit_layer, gate)
         end
 
@@ -59,9 +87,15 @@ function run(N::Int64, depth::Int64, nshots::Int64=0, rand_x::Bool=false)
 
     psi = runcircuit(N, gates)
     if nshots > 0
-        return getsamples(psi, nshots)
+        ret_data = getsamples(psi, nshots)
     else
-        return psi
+        ret_data = psi
+    end
+
+    if ret_params
+        return (ret_data, r_params, m_params)
+    else
+        return ret_data
     end
 end
 
