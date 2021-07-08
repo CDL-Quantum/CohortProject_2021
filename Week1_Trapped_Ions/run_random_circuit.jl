@@ -46,7 +46,7 @@ function run(N, depth)
     psi = runcircuit(N, gates)
 end
 
-N = parse(Int, ARGS[1])
-depth = parse(Int, ARGS[2])
+# N = parse(Int, ARGS[1])
+# depth = parse(Int, ARGS[2])
 
-run(N, depth)
+# run(N, depth)
