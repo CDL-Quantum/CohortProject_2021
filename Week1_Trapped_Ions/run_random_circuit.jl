@@ -32,45 +32,54 @@ end
 function run(N, depth)
     # Random circuit.
     gates = Vector{Tuple}[]
+    
+    rdms = []
+    for i in 1:N
+        push!(rdms, i)
+    end
+    
+    
+    rdm = rand((rdms))
 
     for i in 1:depth
         one_qubit_layer = Tuple[]
         two_qubit_layer = Tuple[]
         err_qubit_layer = Tuple[]
+        
+        begin (rdm < N)
+        idx_err = rdm
+        end
+        
+        for j in idx_err
+            gate = ("E", j)
+            #println("Gate E" , ' ' , i, ' ', j)
+            push!(err_qubit_layer, gate)
+        end
+        
 
         for j in 1:N
-            gate = ("R", j, (theta=2pi*rand(), phi=2pi*rand()))
-            #println(gate)
-            #println("Gate 1", ' ', i)
-            push!(one_qubit_layer, gate)
-            #println(one_qubit_layer)
-            #println("")
+            if j != rdm
+                gate = ("R", j, (theta=2pi*rand(), phi=2pi*rand()))
+                #println(gate)
+                #println("Gate R", ' ', i, ' ', j)
+                push!(one_qubit_layer, gate)
+                #println(one_qubit_layer)
+                #println("")
+            end
         end
 
         # Alternate start qubit for pairs.
         idx_first = i % 2 + 1
 
         for j in idx_first:2:(N-1)
-            gate = ("M", (j, j+1), (Theta=2pi*rand(),))
-            #println(gate)
-            #println(two_qubit_layer)
-            #println("Gate 2", ' ', i)
-            push!(two_qubit_layer, gate)
-            #println("")
-        end
-        
-        rdm = rand((1, N))
-        #println(rdm)
-        
-        begin rdm < N
-        idx_err = rdm
-            end 
-        
-        for j in idx_err:(N-1)
-            gate = ("E", j)
-            #println("Gate E" , ' ' , i)
-            push!(err_qubit_layer, gate)
-            
+            if j != rdm
+                gate = ("M", (j, j+1), (Theta=2pi*rand(),))
+                #println(gate)
+                #println(two_qubit_layer)
+                #println("Gate M", ' ', i, ' ', j)
+                push!(two_qubit_layer, gate)
+                #println("")
+            end
         end
         
         push!(gates, one_qubit_layer)
