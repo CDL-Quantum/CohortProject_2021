@@ -8,7 +8,3 @@
 ## Task 3: 
 
 ## Task 4:
-
-## Business Application:
-
-*Mirror randomized benchmarking*
