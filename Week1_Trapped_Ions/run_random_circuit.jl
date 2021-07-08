@@ -2,6 +2,8 @@
 
 using PastaQ
 using ITensors
+using Plots
+using LinearAlgebra, Statistics, Compat
 
 function PastaQ.gate(::GateName"R"; theta::Real, phi::Real)
     [
@@ -46,23 +48,33 @@ function run(N, depth)
 
     psi = runcircuit(N, gates)
 
+end
+
+function task_1(psi,N)
     #generate computational basis (there is probably a simpler way to do this)
-    #maybe a built-in function
     all_perms(xs,n) = vec(map(collect, Iterators.product(ntuple(_ -> xs, n)...)))
     basis = all_perms(["↑","↓"],N)
     s = siteinds("S=1/2",N)
+
+    #calculate inner products with all basis
     sum = 0.0
     probs = []
     for i in 1:2^N
-        data = abs.(inner(psi,productMPS(s,basis[i])))^2
-        push!(probs, data)
-        sum = sum + data
+        p = abs.(inner(psi,productMPS(s,basis[i])))^2
+        push!(probs, p)
+        #make sure probs add to one
+        sum = sum + p
     end
-    print(sum)
-    print(probs)
+
+    scatter(1:2^N,ones(2^N),markersize=100*probs,markercolor=:red,grid=false,ylims=(0.75, 1.25),ticks=false,showaxis=false,legend=false)
+    png("Speckle")
+
 end
 
 N = parse(Int, ARGS[1])
 depth = parse(Int, ARGS[2])
 
-run(N, depth)
+psi = run(N, depth)
+task_1(psi, N)
+
+
