@@ -1,6 +1,7 @@
 #!/usr/bin/env julia
 
 using PastaQ
+using ITensors
 
 function PastaQ.gate(::GateName"R"; theta::Real, phi::Real)
     [
@@ -44,6 +45,21 @@ function run(N, depth)
     end
 
     psi = runcircuit(N, gates)
+
+    #generate computational basis (there is probably a simpler way to do this)
+    #maybe a built-in function
+    all_perms(xs,n) = vec(map(collect, Iterators.product(ntuple(_ -> xs, n)...)))
+    basis = all_perms(["↑","↓"],N)
+    s = siteinds("S=1/2",N)
+    sum = 0.0
+    probs = []
+    for i in 1:2^N
+        data = abs.(inner(psi,productMPS(s,basis[i])))^2
+        push!(probs, data)
+        sum = sum + data
+    end
+    print(sum)
+    print(probs)
 end
 
 N = parse(Int, ARGS[1])
