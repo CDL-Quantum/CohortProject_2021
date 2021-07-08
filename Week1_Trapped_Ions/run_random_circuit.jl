@@ -18,7 +18,14 @@ function PastaQ.gate(::GateName"M"; Theta::Real)
     ]
 end
 
-function run(N::Int64, depth::Int64, nshots::Int64=0)
+function PastaQ.gate(::GateName"X";)
+    [
+        0   1
+        1   0
+    ]
+end
+
+function run(N::Int64, depth::Int64, nshots::Int64=0, rand_x::Bool=false)
     # Random circuit.
     gates = Vector{Tuple}[]
 
@@ -41,6 +48,13 @@ function run(N::Int64, depth::Int64, nshots::Int64=0)
 
         push!(gates, one_qubit_layer)
         push!(gates, two_qubit_layer)
+    end
+
+    if rand_x
+        rand_pos = rand(1:size(gates)[1]+1)
+        rand_qubit = rand(1:N)
+        gate = ("X", rand_qubit)
+        insert!(gates, rand_pos, [gate])
     end
 
     psi = runcircuit(N, gates)
