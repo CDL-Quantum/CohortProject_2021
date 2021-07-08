@@ -45,7 +45,7 @@ Results:
 The code used to solve this task can be found [here](run_random_circuitTASK2.jl)
 
 Usage:
-> julia  run_random_circuitTASK1.jl  num_qubits circuit_depth num_realisations
+> julia  run_random_circuitTASK2.jl  num_qubits circuit_depth num_realisations
 
 The goal of this task is to evaluate the effect of a single bit-flip error in different locations of a fixed random circuit. In order to do this and for each realization we:
 
