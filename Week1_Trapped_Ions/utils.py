@@ -1,4 +1,4 @@
-from typing import List, Any
+from typing import List, Any, Union
 
 import matplotlib.pyplot as plt
 
@@ -14,7 +14,7 @@ def bin_to_int(bin_l: list) -> int:
     return ret
 
 
-def get_histogram_from_outcomes(result: List[List[int]]) -> np.ndarray:
+def get_histogram_from_outcomes_small(result: List[List[int]]) -> np.ndarray:
     shots = len(result)
     n_qubits = len(result[0])
     histogram_list = np.zeros(2 ** n_qubits)
@@ -23,15 +23,36 @@ def get_histogram_from_outcomes(result: List[List[int]]) -> np.ndarray:
     return histogram_list
 
 
-def get_xeb_from_outcomes(result: List[List[int]]) -> float:
+def get_histogram_from_outcomes_large(result: List[List[int]]) -> dict:
     shots = len(result)
     n_qubits = len(result[0])
-    hist = get_histogram_from_outcomes(result)
-    ret = 0
+    histogram_list = dict()
     for r in result:
-        i = bin_to_int(r)
-        ret += hist[i]
-    return ((2**n_qubits) * ret / shots) - 1
+        b = bin_to_int(r)
+        if b not in histogram_list:
+            histogram_list.update({b: 0.0})
+        histogram_list[b] += 1 / shots
+    return histogram_list
+
+
+def get_xeb_from_hist_small(obsvd_hist: Union[List[float], np.ndarray],
+                            ideal_hist: Union[List[float], np.ndarray]) -> float:
+    if len(obsvd_hist) != len(ideal_hist):
+        raise ValueError
+    ret = 0
+    for p_o, p_i in zip(obsvd_hist, ideal_hist):
+        ret += p_o * p_i
+    return len(obsvd_hist) * ret - 1
+
+
+def get_xeb_from_hist_large(obsvd_hist: dict,
+                            ideal_hist: dict,
+                            num_qubits: int) -> float:
+    ret = 0
+    for o_key in obsvd_hist:
+        if o_key in ideal_hist:
+            ret += ideal_hist[o_key] * obsvd_hist[o_key]
+    return (2 ** num_qubits) * ret - 1
 
 
 def draw_circles(histogram_list: List[float], fig=None, ax=None, **kwargs) -> Any:
