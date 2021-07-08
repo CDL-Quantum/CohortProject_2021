@@ -47,7 +47,6 @@ function run(N, depth)
     end
 
     psi = runcircuit(N, gates)
-
 end
 
 function task_1(psi,N)
@@ -66,9 +65,17 @@ function task_1(psi,N)
         sum = sum + p
     end
 
-    scatter(1:2^N,ones(2^N),markersize=100*probs,markercolor=:red,grid=false,ylims=(0.75, 1.25),ticks=false,showaxis=false,legend=false)
+    #plot and save
+    scatter(1:2^N,ones(2^N),markersize=100*probs,markercolor=:red,grid=false,ylims=(0.9, 1.1),ticks=false,showaxis=false,legend=false)
     png("Speckle")
+end
 
+function task_2
+    #define bit flip error
+    bit_flip = [
+        0 1
+        1 0
+    ]
 end
 
 N = parse(Int, ARGS[1])
