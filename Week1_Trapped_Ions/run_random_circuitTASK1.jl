@@ -64,10 +64,11 @@ function task_1(psi,N)
         #make sure probs add to one
         sum = sum + p
     end
+    print(sum)
 
     #plot and save
-    scatter(1:2^N,ones(2^N),markersize=100*probs,markercolor=:red,grid=false,ylims=(0.95, 1.05),ticks=false,showaxis=false,legend=false)
-    png("Speckle")
+    scatter(1:2^N,ones(2^N),markersize=100*probs,markercolor=:red,grid=false,ylims=(0.99, 1.01),ticks=false,showaxis=false,legend=false)
+    png("Speckle412")
 end
 
 
