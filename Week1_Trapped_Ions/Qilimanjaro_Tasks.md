@@ -38,6 +38,8 @@ Results:
 
 ![N=4,depth=12](Speckle612.png)
 
+*Bonus*:
+
 ## Task 2:
 
 The code used to solve this task can be found [here](run_random_circuitTASK2.jl)
