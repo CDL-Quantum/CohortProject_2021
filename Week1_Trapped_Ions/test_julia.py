@@ -11,4 +11,4 @@ else:
 jl = Julia(compiled_modules=False)
 x = jl.include("./run_random_circuit.jl")
 print(x)
-print(x(2, 2))
+print(x(2, 2, 2000))

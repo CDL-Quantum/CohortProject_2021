@@ -18,7 +18,7 @@ function PastaQ.gate(::GateName"M"; Theta::Real)
     ]
 end
 
-function run(N, depth)
+function run(N::Int64, depth::Int64, nshots::Int64=0)
     # Random circuit.
     gates = Vector{Tuple}[]
 
@@ -44,12 +44,17 @@ function run(N, depth)
     end
 
     psi = runcircuit(N, gates)
-    return psi
+    if nshots > 0
+        return getsamples(psi, nshots)
+    else
+        return psi
+    end
 end
 
 #=
 N = parse(Int, ARGS[1])
 depth = parse(Int, ARGS[2])
+shots = parse(Int, ARGS[3])
 
-run(N, depth)
+print(run(N, depth, shots))
 =#
