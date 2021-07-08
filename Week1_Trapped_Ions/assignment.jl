@@ -116,7 +116,7 @@ function studyBondDim_single(N, depth, seed=0)
     display(p)
 end
 
-function studyBondDim(N, depth, samples=10, seed=0)
+function studyBondDim(N, depth, samples=20, seed=0)
 
     samplebDim = Vector{Float64}(undef, size(depth)[1])
     samplebDim2 = Vector{Float64}(undef, size(depth)[1])
@@ -228,12 +228,12 @@ function cgfScaling(N, samples=1000, dp = 0.001, seed=0)
 
     plotColl = Array{Plots.Plot{Plots.GRBackend},1}() 
     #for d in [1, 2, 4, 8, 16, 32, 64, 128, 256, 512]
-    for d in [1, 4]
+    for d in [1, 4, 16, 32]
         push!(plotColl, cgfScalingSingle(N, d, samples, dp, seed))
     end
 
-   fp = plot( (p for p in plotColl)...)
-   display(fp)
+    fp = plot( (p for p in plotColl)...)
+    display(fp)
 end
 
 function crossEntropywDTheta(N, depth, DTheta, samples=1000, seed=0)
@@ -281,16 +281,17 @@ end
 #N = parse(Int, ARGS[1])
 #depth = parse(Int, ARGS[2])
 
-#Task 1a
-N = 4 
+N = 8 
 depth = 16
+
+#Task 1a
 #psi = run(N, depth)
 #amp2 = getAmp2(N, psi)
 #p = plotSpeckle(N, amp2)
 #display(p)
 
 #Task 1b
-#studyBondDim(N, 1:2:10, 10)
+#studyBondDim(N, 1:2:depth, 20)
 
 #Task 2
 #bitFlipCompile(N, depth, 12, (4,3))
@@ -299,4 +300,4 @@ depth = 16
 #cgfScaling(N)
 
 #Task 4
-crossEntropy(N, depth, 20)
+#crossEntropy(N, depth, 20)
