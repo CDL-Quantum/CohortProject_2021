@@ -49,6 +49,3 @@ def hamming_distance(x: List, y: List) -> Any:
     if len(x) != len(y):
         raise ValueError
     return sum([abs(x[i] - y[i]) for i in range(len(x))])
-
-
-
