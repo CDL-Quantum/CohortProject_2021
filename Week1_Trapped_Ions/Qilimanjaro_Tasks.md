@@ -63,4 +63,11 @@ Result:
 
 ## Task 3: 
 
+The code used to solve this task can be found [here](run_random_circuitTASK3.jl)
+
+Result:
+
+![CDF](CDF.png)
+
+
 ## Task 4:
