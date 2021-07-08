@@ -1,2 +1,5 @@
 instructions/instructions.*
 !instructions/instructions.tex
+
+# Environment
+env/

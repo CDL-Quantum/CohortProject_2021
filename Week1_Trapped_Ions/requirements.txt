@@ -1,0 +1,7 @@
+numpy
+scipy
+cython
+qutip
+cvxpy
+
+git+git://github.com/andrewdarmawan/tncontract.git@master
