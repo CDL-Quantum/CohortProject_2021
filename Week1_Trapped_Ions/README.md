@@ -5,7 +5,9 @@ Please see [instructions](setup.md) for setting up your local environment.
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 1: Quantum Advantage with Trapped Ions 
 
-This project will guide you through the recent Google quantum supremacy result, and its possible implementation using near-term quantum computers built with trapped ions.
+Simulating matter at the quantum level is a difficult task to do on conventional computers. As the size of the system increases, exponential resources in both memory and time are required. This led Richard Feynman in 1982, one of the most brilliant physicists of the century, to suggest that such simulations should be performed on a computer that runs natively in the quantum domain. The field of quantum computing was born.
+
+Decades later, his prophecy came true, though not completely, with the advent of quantum computers built by various big tech companies. John Preskill coined them Noisy Intermediate-Scale Quantum (NISQ) devices. Despite their noise, NISQ devices have been shown to have a quantum advantage. In this project we will guide you through the recent Google quantum supremacy result, and its possible implementation using near-term quantum computers built with trapped ions.
 
 Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week1_Trapped_Ions/instructions.pdf) to begin learning about your tasks for this week!
 
