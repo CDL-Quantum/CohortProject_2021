@@ -10,7 +10,7 @@ if __name__ == "__main__":
     N = 8
     MAX_D = 512
     STEP_D = 256
-    depths = [1,30,512]
+    depths = [1, 2, 10, 30, 512]
     shots = 10000
     num_trials = 1000
 
@@ -19,7 +19,7 @@ if __name__ == "__main__":
         result = run_random_circuit(N, D, shots)
         hist_list[D].append(list(get_histogram_from_outcomes_small(result)))
 
-    with open("task3_simulation_result_fine.txt", 'wb') as of:
+    with open("task3_simulation_result_more_d.txt", 'wb') as of:
         pickle.dump({
             'num_qubits': N,
             'num_shots': shots,
