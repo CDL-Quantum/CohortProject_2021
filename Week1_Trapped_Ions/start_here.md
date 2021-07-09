@@ -60,10 +60,12 @@ Run the following on the terminal.
     - and some extra tool functions.
     
 - `./task(3|4)_simulation.py` generates heavy simulation data which might take several hours.
-It save the data in `./simulation_results/`, and main files will refer them.
+It save the data as a `pickle` in `./simulation_results/`, and main files will refer them.
 - The outputs of additional challenge #1 are in `./animation_taskA1/`.
 - `./dataset/` remains empty by gitignore, because the [dataset](https://datadryad.org/stash/dataset/doi:10.5061/dryad.k6t1rj8) is very large.
 Download and extract by yourself.
   
 - If you have a trouble when accessing to julia, because environment variable `PATH` could be different in venv,
-  create `./envvir.py` containing a constant `JULIA_PATH = "path/to/julia/bin/"`.
+  create `./envvir.py` containing a constant `JULIA_PATH = "/path/to/julia/bin/"`.
+
+- - -
