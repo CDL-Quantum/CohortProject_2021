@@ -12,7 +12,7 @@ if not any([x in os.environ['PATH'] for x in ['julia', 'Julia']]):
         raise FileNotFoundError
 
 jl = Julia(compiled_modules=False)
-_run_random_circuit = jl.include("./run_random_circuit.jl")
+_run_random_circuit = jl.include("./src/run_random_circuit.jl")
 
 
 def run_random_circuit(num_qubits: int,
