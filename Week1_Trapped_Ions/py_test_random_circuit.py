@@ -81,6 +81,7 @@ if __name__ == "__main__":
     depth = 3
 
     qreg, circuit, result = run(N, depth)
+    print(qreg)
     _ = cirq.vis.plot_state_histogram(result)
 
     # Add sigma_x randomly and run of the random circuit
