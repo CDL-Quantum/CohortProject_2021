@@ -328,13 +328,15 @@ end
 
 function crossEntropywDavg(N, depth, dsamples=20, seed=0)
     
-    DThetas = 0.0:0.5:2pi
+    DThetas = 0.0:0.1:2pi
     
     fxebs = fill(0.0, size(DThetas)[1])
     sfxebs = fill(0.0, size(DThetas)[1])
         
     for i in 1:dsamples
-        
+     
+        println("Sample ",i)
+   
         #Get original state
         rng = MersenneTwister(seed + i)
         psi0 = run(N, depth, rng) 
@@ -386,6 +388,6 @@ depth = 512
 #crossEntropy(N, depth)
 
 #Task 4b
-N = 8
-depth = 32
-crossEntropywDavg(N, depth, 50)
+N = 4 
+depth = 128 
+crossEntropywDavg(N, depth, 200)
