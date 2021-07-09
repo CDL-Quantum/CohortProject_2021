@@ -88,7 +88,7 @@ def random_two_qubit_gate_layer(n_sites, left=0):
     """
     if n_sites % 2 == 0 and left == 1:
         # this case we need to padded identites at the ends of the chain
-        n_gates = (n_sites - 1) / 2
+        n_gates = int((n_sites - 1) / 2)
     else:
         n_gates = int(np.floor(n_sites / 2))
     thetas = 2 * np.pi * np.random.rand(n_gates)
@@ -103,7 +103,7 @@ def random_two_qubit_gate_ladder(n_sites):
     """
     if n_sites <= 2:
         raise ValueError("Must have more than 2 qubits to form a ladder circuit (n_sites={}).".format(n_sites))
-    layer_1 = random_two_qubit_gate_layer(n_sites,left=0)
+    layer_1 = random_two_qubit_gate_layer(n_sites, left=0)
     layer_2 = random_two_qubit_gate_layer(n_sites, left=1)
     return layer_1, layer_2
 
@@ -116,7 +116,6 @@ def single_qubit_gate_layer(n_sites, angles):
         thetas: list
             list of tuples containing the single qubit rotation angles. Each site
             needs (\theta_i, \phi_i)
-
     """
     mpo = [single_qubit_gate(*site_angles) for site_angles in angles]
     return tn.onedim.MatrixProductOperator(mpo)
