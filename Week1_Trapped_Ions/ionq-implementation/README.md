@@ -5,22 +5,26 @@ For reference, you can find the IonQ API docs [here](https://docs.ionq.com/).
 
 ## Getting started
 
+Hint: See [video tutorial of this step](https://share.vidyard.com/watch/GtNkHkpUTbV7rwEpjqNBxG?)
+
 1. Create an account with ionq at https://cloud.ionq.com/
 2. Generate an API key at https://cloud.ionq.com/settings/keys
-3. If you don't have npm or node, follow [these instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to download them (node v13.2.0)
-4. In this directory, run the following command:
-    ```
-    > npm install
-    ```
-5. Add your API key to `./config.js`. If your API key was `"test-key"`, the file should look something like:
+3. Add your API key to `./src/config.js`. If your API key was `"test-key"`, the file should look something like:
     ```
     export default {
         API_KEY: "test-key",
         API_ENDPOINT: "https://api.ionq.co/v0.1/jobs"
     }
     ```
+4. If you don't have npm or node, follow [these instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to download them (node v13.2.0)
+5. In this directory, run the following command:
+    ```
+    > npm install
+    ```
 
 ## Deploy a random circuit on the IonQ trapped ion quantum computer
+
+Hint: See [video tutorial of this step](https://share.vidyard.com/watch/8HEzZBBsWuMbV5GM7PqJd4?)
 
 1. The easiest way is to use the npm script `create-default-job` (defined in `./package.json`):
     ```
@@ -52,6 +56,8 @@ For reference, you can find the IonQ API docs [here](https://docs.ionq.com/).
 
 ## Plotting the bit string probabilities of a completed job
 
+Hint: See [video tutorial of this step](https://share.vidyard.com/watch/Cz4asXb3cTaitq9sJfnH7W?)
+
 1. Get the id of the job you wish to plot from [here](https://cloud.ionq.com/jobs)
 2. Run the following command:
     ```
@@ -61,6 +67,13 @@ For reference, you can find the IonQ API docs [here](https://docs.ionq.com/).
     ```
     > npm run plot-cdf 72e912d3-ea97-4f19-9cc0-8e6dbfa06ac4
     ```
+
+## Resources
+
+I made some video recordings outlining the above sections: 
+1. [How to set the repository up](https://share.vidyard.com/watch/GtNkHkpUTbV7rwEpjqNBxG?)
+2. [How to create a job](https://share.vidyard.com/watch/8HEzZBBsWuMbV5GM7PqJd4?)
+3. [How to plot the cdf](https://share.vidyard.com/watch/Cz4asXb3cTaitq9sJfnH7W?)
 
 ## Contact
 If you have issues, shoot me an email at cleland.theo@gmail.com
