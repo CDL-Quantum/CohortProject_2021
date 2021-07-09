@@ -9,8 +9,6 @@ if __name__ == "__main__":
     root_dataset_path = './dataset/'
     dir_pattern = r'n(\d+)_m(\d+)'
     meas_file_pattern = r'measurements_n(\d+)_m(\d+)_s(\d+)_e(\d+)_p((EFGH)|(ABCDCDAB)).txt'
-    'measurements_n50_m14_s9_e0_pEFGH.txt'
-
     worklist = list()
     for dir_name in os.listdir(root_dataset_path):
         mat1 = re.match(dir_pattern, dir_name)
@@ -19,7 +17,6 @@ if __name__ == "__main__":
         n, m = int(mat1.group(1)), int(mat1.group(2))
         for file_name in os.listdir(root_dataset_path + dir_name):
             mat2 = re.match(meas_file_pattern, file_name)
-            print(file_name, mat2)
             if mat2 is None:
                 continue
             assert n == int(mat2.group(1)) and m == int(mat2.group(2))
