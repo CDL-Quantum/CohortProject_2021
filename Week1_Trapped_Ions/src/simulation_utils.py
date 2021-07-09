@@ -41,7 +41,7 @@ def two_qubit_ms_gate(theta):
     return [U, V]
 
 
-def two_qubit_gate_layer(n_sites, thetas, align=0):
+def two_qubit_gate_layer(n_sites, thetas, left=0):
     """
     Return an MPO with MS gates along the chain with angles.
     Parameters
@@ -49,12 +49,12 @@ def two_qubit_gate_layer(n_sites, thetas, align=0):
         n_sites : int
         thetas: list
             list of MS gate angles
-        align : int
-            If n_sites is an odd number, align determines wether the two qubit gates begin from
-            qubit 0 (aligned left) or 1 (aligned right).
+        left : int
+            left determines wether the two qubit gates begin from
+            qubit 0 or 1. For example, to make ladder circuits
     """
-    if align != 0 and align != 1:
-        raise ValueError("align={}. Can only take the value 0 or 1".format(align))
+    if left != 0 and left != 1:
+        raise ValueError("left={}. Can only take the value 0 or 1".format(left))
 
     id_tensor = tn.Tensor(np.eye(2).reshape(2, 2, 1, 1), ['physout', 'physin', 'left', 'right'])
     mpo = []
@@ -62,9 +62,13 @@ def two_qubit_gate_layer(n_sites, thetas, align=0):
         mpo += two_qubit_ms_gate(theta)
 
     if n_sites % 2 == 0:
-        return tn.onedim.MatrixProductOperator(mpo)
+        if left == 0:
+            return tn.onedim.MatrixProductOperator(mpo)
+        else:
+            # pad identities on each end of the chain
+            return tn.onedim.MatrixProductOperator([id_tensor] + mpo + [id_tensor])
     else:
-        if align == 0:
+        if left == 0:
             # put an identity tensor at end qubit
             return tn.onedim.MatrixProductOperator(mpo + [id_tensor])
         else:
@@ -72,18 +76,36 @@ def two_qubit_gate_layer(n_sites, thetas, align=0):
             return tn.onedim.MatrixProductOperator([id_tensor] + mpo)
 
 
-def random_two_qubit_gate_layer(n_sites, align=0):
+def random_two_qubit_gate_layer(n_sites, left=0):
     """
     Return an MPO with random angle MS gates along the chain.
     Parameters
         ----------
         n_sites : int
-        align : int
-            If n_sites is an odd number, align determines wether the two qubit gates begin from
+        left : int
+            If n_sites is an odd number, left determines wether the two qubit gates begin from
             qubit 0 (aligned left) or 1 (aligned right).
     """
-    thetas = 2 * np.pi * np.random.rand(int(np.floor(n_sites / 2)))
-    return two_qubit_gate_layer(n_sites, thetas, align=align)
+    if n_sites % 2 == 0 and left == 1:
+        # this case we need to padded identites at the ends of the chain
+        n_gates = (n_sites - 1) / 2
+    else:
+        n_gates = int(np.floor(n_sites / 2))
+    thetas = 2 * np.pi * np.random.rand(n_gates)
+    return two_qubit_gate_layer(n_sites, thetas, left=left)
+
+def random_two_qubit_gate_ladder(n_sites):
+    """
+    Return a random 2-qubit ladder circuit in the form of two MPOs.
+    Parameters
+        ----------
+        n_sites : int
+    """
+    if n_sites <= 2:
+        raise ValueError("Must have more than 2 qubits to form a ladder circuit (n_sites={}).".format(n_sites))
+    layer_1 = random_two_qubit_gate_layer(n_sites,left=0)
+    layer_2 = random_two_qubit_gate_layer(n_sites, left=1)
+    return layer_1, layer_2
 
 def single_qubit_gate_layer(n_sites, angles):
     """
