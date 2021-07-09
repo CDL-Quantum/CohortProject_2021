@@ -43,6 +43,10 @@ cases and eventually improve the classical solutions.
 
 ### 2.1 Certification
 
+![CDL 2020 Cohort Project](../Week1_Trapped_Ions/img/dilbert.jpg)
+[source](https://www.random.org/analysis/)
+
+
 Certification is in fact a key feature of security systems. In fact, all classical systems use pseudo-random number 
 generators (PRNG) based on an input variable called seed. Consequently, if a hacker were to uncover the seed, it would 
 compromise the validity and security of the PRNG. 
