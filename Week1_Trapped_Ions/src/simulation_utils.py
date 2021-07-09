@@ -9,8 +9,7 @@ def bit_flip_layer(p, n_sites):
     """
     x_error = tn.Tensor(qt.sigmax().full().reshape(2, 2, 1, 1), ['physout', 'physin', 'left', 'right'])
     id_tensor = tn.Tensor(np.eye(2).reshape(2, 2, 1, 1), ['physout', 'physin', 'left', 'right'])
-    return tn.onedim.MatrixProductOperator(
-        [x_error if error_site else id_tensor for error_site in np.random.binomial(1, p, n_sites)])
+    return tn.onedim.MatrixProductOperator([x_error if error_site else id_tensor for error_site in np.random.binomial(1, p, n_sites)])
 
 
 def single_qubit_gate(theta, phi):
@@ -40,11 +39,6 @@ def two_qubit_ms_gate(theta):
     U.replace_label(['physout_1', 'physin_1', 'svd_in'], ['physout', 'physin', 'right'])
     V.replace_label(['physout_2', 'physin_2', 'svd_out'], ['physout', 'physin', 'left'])
     return [U, V]
-
-
-def random_single_qubit_layer(n_sites):
-    #TODO: generate a random theta,phi for each site. Figure out range of theta,phi
-    pass
 
 
 def two_qubit_gate_layer(n_sites, thetas, align=0):
@@ -78,7 +72,7 @@ def two_qubit_gate_layer(n_sites, thetas, align=0):
             return tn.onedim.MatrixProductOperator([id_tensor] + mpo)
 
 
-def random_two_gate_qubit_layer(n_sites, align=0):
+def random_two_qubit_gate_layer(n_sites, align=0):
     """
     Return an MPO with random angle MS gates along the chain.
     Parameters
@@ -90,3 +84,27 @@ def random_two_gate_qubit_layer(n_sites, align=0):
     """
     thetas = 2 * np.pi * np.random.rand(int(np.floor(n_sites / 2)))
     return two_qubit_gate_layer(n_sites, thetas, align=align)
+
+def single_qubit_gate_layer(n_sites, angles):
+    """
+    Return an MPO with MS gates along the chain with angles.
+    Parameters
+        ----------
+        n_sites : int
+        thetas: list
+            list of tuples containing the single qubit rotation angles. Each site
+            needs (\theta_i, \phi_i)
+
+    """
+    mpo = [single_qubit_gate(*site_angles) for site_angles in angles]
+    return tn.onedim.MatrixProductOperator(mpo)
+
+def random_single_qubit_gate_layer(n_sites):
+    """
+    Return an MPO with random single qubit rotations along the chain.
+    Parameters
+        ----------
+        n_sites : int
+    """
+    angles = [(2 *np.pi * np.random.rand(), 2 *np.pi * np.random.rand()) for _ in range(n_sites)]
+    return single_qubit_gate_layer(n_sites, angles)
