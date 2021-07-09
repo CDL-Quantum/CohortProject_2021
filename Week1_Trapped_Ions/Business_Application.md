@@ -38,7 +38,21 @@ is high enough. The verified bitstrings can then be concatenated and hashed to o
 Both the efficient random distribution sampling and certification of random bitstrings can be applied to practical use 
 cases and eventually improve the classical solutions. 
 
-When discussing certification, the first 
+Certification is in fact a key feature of security systems. In fact, all classical systems use pseudo-random number 
+generators (PRNG) based on an input variable called seed. Consequently, if a hacker were to uncover the seed, it would 
+compromise the validity and security of the PRNG. 
+Having a verifiable true random number generation is therefore crucial to the security of large financial institutions 
+as well as governments to protect transactions or information. 
+
+However, in most cases PRNG is still good enough as it’s executed server-side. On the other hand, in the blockchain domain
+such the issue of hacking the seed for random generation is amplified by the transparent nature of the blockchain. In this 
+case, true randomness for blockchain transactions, e.g. smart contracts and digital signature, is essential and 
+certification via quantum random circuits can provide a way to improve the security of these transactions. 
+
+
+
+
+
 
 ## 3. Quantum Random Circuits: the way to ...
 
