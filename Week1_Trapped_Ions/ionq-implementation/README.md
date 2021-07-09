@@ -7,9 +7,9 @@ For reference, you can find the IonQ API docs [here](https://docs.ionq.com/).
 
 Hint: See [video tutorial of this step](https://share.vidyard.com/watch/GtNkHkpUTbV7rwEpjqNBxG?)
 
-1. Create an account with ionq at https://cloud.ionq.com/
-2. Generate an API key at https://cloud.ionq.com/settings/keys
-3. Add your API key to `./src/config.js`. If your API key was `"test-key"`, the file should look something like:
+1. Create an account with ionq [here](https://cloud.ionq.com/)
+2. Generate an API key [here](https://cloud.ionq.com/settings/keys)
+3. Add your API key to [./src/config.js](./src/config.js). If your API key was `"test-key"`, the file should look something like:
     ```
     export default {
         API_KEY: "test-key",
@@ -26,7 +26,7 @@ Hint: See [video tutorial of this step](https://share.vidyard.com/watch/GtNkHkpU
 
 Hint: See [video tutorial of this step](https://share.vidyard.com/watch/8HEzZBBsWuMbV5GM7PqJd4?)
 
-1. The easiest way is to use the npm script `create-default-job` (defined in `./package.json`):
+1. The easiest way is to use the npm script `create-default-job` (defined in [./package.json](./package.json)):
     ```
     > npm run create-default-job
     ```
@@ -38,7 +38,7 @@ Hint: See [video tutorial of this step](https://share.vidyard.com/watch/8HEzZBBs
     > cd src/scripts
     ```
 
-2. Call the script defined in `./src/scripts/create-job.run.js` (feel free to modify parameters):
+2. Call the script defined in [./src/scripts/create-job.run.js](./src/scripts/create-job.run.js) (feel free to modify parameters):
     ```
     > node create-job.run.js --n-qubits 8 --circuit-depth 256 --machine-type qpu --name first-qpu-job
     ```
@@ -52,7 +52,7 @@ Hint: See [video tutorial of this step](https://share.vidyard.com/watch/8HEzZBBs
     ```
     > node create-job.run.js --help
     ```
-3. Navigate to https://cloud.ionq.com/jobs to see the job
+3. Navigate to [https://cloud.ionq.com/jobs](https://cloud.ionq.com/jobs) to see the job
 
 ## Plotting the bit string probabilities of a completed job
 
