@@ -25,7 +25,7 @@ function PastaQ.gate(::GateName"X";)
     ]
 end
 
-function run(N::Int64, depth::Int64, nshots::Int64=0, rand_x::Bool=false, ret_params::Bool=false,
+function run(N::Int64, depth::Int64, nshots::Int64=0, rand_x::Bool=false, ret_params::Bool=false, ret_x_pos::Bool=false,
              in_r_param::Union{Vector{Tuple{Float64, Float64}}, Nothing}=nothing, in_m_param::Union{Vector{Float64}, Nothing}=nothing)
     # Random circuit.
     gates = Vector{Tuple}[]
@@ -94,6 +94,8 @@ function run(N::Int64, depth::Int64, nshots::Int64=0, rand_x::Bool=false, ret_pa
 
     if ret_params
         return (ret_data, r_params, m_params)
+    elseif ret_x_pos
+        return (ret_data, rand_pos, rand_qubit)
     else
         return ret_data
     end
