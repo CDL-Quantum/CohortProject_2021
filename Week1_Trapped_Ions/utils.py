@@ -49,6 +49,10 @@ def get_xeb_from_hist_large(obsvd_hist: dict,
                             ideal_hist: dict,
                             num_qubits: int) -> float:
     ret = 0
+    if not isinstance(obsvd_hist, dict):
+        raise TypeError
+    if not isinstance(ideal_hist, dict):
+        raise TypeError
     for o_key in obsvd_hist:
         if o_key in ideal_hist:
             ret += ideal_hist[o_key] * obsvd_hist[o_key]
