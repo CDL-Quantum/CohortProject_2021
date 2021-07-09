@@ -33,8 +33,32 @@ fidelity, <img src="https://render.githubusercontent.com/render/math?math=F_{XEB
 
 is high enough. The verified bitstrings can then be concatenated and hashed to obtain a certified true random bitstring.
 
-###HERE WE HAVE TO WRITE SOMETHING ABOUT THE PROBLEMS THAT WE SOLVED IN THE TASKS AND PUT SOME PLOTS
+In our analysis, we addressed several tasks to assess the properties of a quantum random circuit built starting
+from two gates used to control in Ion Trap quantum computers: a single-qubit rotation gate and a two-qubit rotation
+gate which is the source of entanglement among the qubits of the system.
 
+[This notebook](../Week1_Trapped_Ions/solutions_python.ipynb) contains the performed analysis.
+First, we implemented the rotation gates and sampled output from the quantum circuit to obtain a random distribution.
+Next, we observed that by slightly perturbing the circuit with a single bit-flip in a random location, 
+the probability distribution substantially changes, exhibiting the expected chaotic behavior. 
+The chaotic behavior of the probability distribution can also be seen in the speckle pattern animation,
+which shows how the probability distribution changes under small perturbations at each iteration.
+
+![CDL 2020 Cohort Project](../Week1_Trapped_Ions/img/speckle.gif)
+
+We then proved that by increasing the depth of the circuit (proportional to the number of gates used in
+the circuit), the distribution of the probabilities tends to the Porter-Thomas (exponential) 
+distribution.
+
+Finally, we plot the linear cross-entropy XEB (calculated starting from the probability distributions) 
+as a function of a systematic error simulated with a fixed shift in the rotation angle of the two-qubit 
+gate. 
+
+####add conclusion on point 4???
+
+We also provide a [python notebook](../Week1_Trapped_Ions/solutions_python.ipynb) for people who are more familiar
+with the latter programming language. For this notebook the implementation is done in 
+[Cirq](https://quantumai.google/cirq). 
 
 ## 2. Real-world problems which can be approached with Quantum Random Circuits
 

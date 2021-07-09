@@ -46,8 +46,14 @@ Aircraft dynamic modelling application: random number generators are used to pro
 (Lockheed Martin	$53,800 million)
 
 #### Ethereum (blockchain)
-Ethereum: Those familiar with random number generation (RNG) problem know that all of the software-based random algorithms are generating pseudo-randomness (PRNG) as opposed to true-randomness (TRNG). In short, it means that computers generate random numbers based on a variable called a seed. Consequently, if a malicious user uncovered the value of such a seed or took control over it, it would compromise the validity and security of a PRNG. In most cases PRNG is still good enough as it’s executed server-side, protected from the evil of this world by infrastructure.
-Due to the transparent nature of blockchain and isolation of respective blocks, this challenge is only magnified in the blockchain environment. Smart contracts can’t access data from the outside world, so in order to provide seed for on-chain PRNG, we would need to use some data that is also available to a miner.
+Ethereum: Those familiar with random number generation (RNG) problem know that all of the software-based random algorithms are generating pseudo-randomness (PRNG) as opposed to true-randomness (TRNG). 
+In short, it means that computers generate random numbers based on a variable called a seed. Consequently, if a 
+malicious user uncovered the value of such a seed or took control over it, it would compromise the validity and 
+security of a PRNG. In most cases PRNG is still good enough as it’s executed server-side, protected from the evil 
+of this world by infrastructure.
+Due to the transparent nature of blockchain and isolation of respective blocks, this challenge 
+is only magnified in the blockchain environment. Smart contracts can’t access data from the outside 
+world, so in order to provide seed for on-chain PRNG, we would need to use some data that is also available to a miner.
 https://medium.com/gardeneroracle/random-number-generation-in-gardener-1660e5c25e00
 
 #### Online poker companies: a bit obvious
