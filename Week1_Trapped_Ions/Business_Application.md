@@ -33,10 +33,15 @@ fidelity, <img src="https://render.githubusercontent.com/render/math?math=F_{XEB
 
 is high enough. The verified bitstrings can then be concatenated and hashed to obtain a certified true random bitstring.
 
+###HERE WE HAVE TO WRITE SOMETHING ABOUT THE PROBLEMS THAT WE SOLVED IN THE TASKS AND PUT SOME PLOTS
+
+
 ## 2. Real-world problems which can be approached with Quantum Random Circuits
 
 Both the efficient random distribution sampling and certification of random bitstrings can be applied to practical use 
 cases and eventually improve the classical solutions. 
+
+### 2.1 Certification
 
 Certification is in fact a key feature of security systems. In fact, all classical systems use pseudo-random number 
 generators (PRNG) based on an input variable called seed. Consequently, if a hacker were to uncover the seed, it would 
@@ -49,18 +54,29 @@ such the issue of hacking the seed for random generation is amplified by the tra
 case, true randomness for blockchain transactions, e.g. smart contracts and digital signature, is essential and 
 certification via quantum random circuits can provide a way to improve the security of these transactions. 
 
+### 2.2 Sampling random distribution
+The second application of quantum random circuit is the efficient sampling from random distributions.
 
+Sampling from random distribution finds applications in the simulation domain as well as in machine learning.
+In fact, sampling true randomness is essential for improving the quality of simulation when looking at complex financial
+drivers (e.g. yield curve forecasting and scenario analysis) or simulating and testing objects under physical stress 
+conditions (e.g. dynamic turbulence conditions for aircraft or drone modelling).
 
+Further, random distribution sampling can be useful to address problems by mapping each gate of the quantum circuit to a 
+specific parameter of the problem. For instance, by mapping the gates to different environments in a gaming landscape 
+(e.g. desert, water or forest) one could dynamically sample different environments, with a different distribution of 
+resources, to effectively improve the virtual reality of the game.
+ 
+In any case, the application where we identified a substantial advantage is in the sampling from random distribution for 
+Generative Adversarial Networks (GANs). In fact, 
 
+###TO BE CONTINUED
 
+## 3. Quantum Random Circuits: the way to ...WE HAVE TO DECIDE WHAT TO FOCUS ON
 
-## 3. Quantum Random Circuits: the way to ...
-
-Examples: 
-- Federal Express
-- Canada Post
+###TO DECIDE WHAT CUSTOMER WE ARE THINKING OF AND THE PRACTICAL APPLICATION
 
 ## 4. Business application pitch 
 
-Example: By travelling to all destinations via the shortest route, a courier can generate the same revenue that it would have generated following any other route, but will minimize travel costs (e.g., fuel costs). By minimizing travel costs, the courier will be more profitable than it would have been had it travelled through any other route.
+###PREPARE THE SCRIPT FOR THE VIDEO
 
