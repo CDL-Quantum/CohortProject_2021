@@ -3,6 +3,7 @@
 using PastaQ
 using ITensors
 using Random
+using Plots
 
 function PastaQ.gate(::GateName"F"; theta::Real, phi::Real)
     [
@@ -117,9 +118,6 @@ function studyBondDim_single(N, depth, seed=0)
 end
 
 function studyBondDim(N, depth, samples=20, seed=0)
-
-    samplebDim = Vector{Float64}(undef, size(depth)[1])
-    samplebDim2 = Vector{Float64}(undef, size(depth)[1])
 
     samplebDim = fill(0.0, size(depth)[1])
     samplebDim2 = fill(0.0, size(depth)[1])
@@ -236,40 +234,82 @@ function cgfScaling(N, samples=1000, dp = 0.001, seed=0)
     display(fp)
 end
 
-function crossEntropywDTheta(N, depth, DTheta, samples=1000, seed=0)
+function crossEntropyValue(N, depth, psi0, psi)
 
-    rng = MersenneTwister(seed)
     sites = siteinds("Qubit", N)
-    state = digits(2^(N-1), base=2, pad=N) |> reverse
-    state += [1 for i in 1:N]
-
+    offset = [1 for i in 1:N]
+     
     avg = 0.0
-    sig = 0.0
-    for s in 1:samples        
-        psi = run(N, depth, rng, false, DTheta) 
-        amp2 = abs(dot(psi,productMPS(sites,state)))^2
-        avg += amp2
-        sig += amp2*amp2
+    for s in 1:2^N        
+        random_state = digits(s-1, base=2, pad=N) |> reverse
+        random_state += offset #Get new binary representation of state
+
+        pmps = productMPS(sites, random_state)
+        amp2_0 = abs(dot(psi0,pmps))^2
+        amp2_ns = abs(dot(psi,pmps))^2
+
+        avg += amp2_0*amp2_ns 
     end
 
-    avg/=samples
-    sig = ((sig/samples - avg*avg)/samples/(samples-1))^0.5
-
     fxeb = 2^N*avg - 1
-    sigfxeb = 2^N*sig
 
-    return fxeb, sigfxeb 
+    return fxeb 
 end
 
-function crossEntropy(N, depth, samples=1000, seed=0)
+function crossEntropy(N, depth, seed=0)
+    
+    #Get original state
+    rng = MersenneTwister(seed)
+    psi0 = run(N, depth, rng) 
 
-    DThetas = 0.0:0.1:2pi
+
+    DThetas = 0.0:0.5:2pi
     fxebs = Vector{Float64}()
-    sfxebs = Vector{Float64}()
     for DTheta in DThetas
-        fxeb, sfxeb = crossEntropywDTheta(N, depth, DTheta, samples, seed)
+    
+        #Get DTheta state
+        rng = MersenneTwister(seed) #Have to reset to make sure starting random circuit is identical
+        psi = run(N, depth, rng, false, DTheta)
+
+        fxeb = crossEntropyValue(N, depth, psi0, psi)
         push!(fxebs, fxeb)
-        push!(sfxebs, sfxeb)
+        
+        println(DTheta," ",fxeb)
+    end
+    
+    plt = plot(DThetas, fxebs, xlabel="DTheta", legend=false)
+    display(plt)
+end
+
+
+function crossEntropywDavg(N, depth, dsamples=20, seed=0)
+    
+    DThetas = 0.0:0.5:2pi
+    
+    fxebs = fill(0.0, size(DThetas)[1])
+    sfxebs = fill(0.0, size(DThetas)[1])
+        
+    for i in 1:dsamples
+        
+        #Get original state
+        rng = MersenneTwister(seed + i)
+        psi0 = run(N, depth, rng) 
+    
+        for (s,DTheta) in enumerate(DThetas)
+    
+            #Get DTheta state
+            rng = MersenneTwister(seed + i) #Have to reset to make sure starting random circuit is identical
+            psi = run(N, depth, rng, false, DTheta)
+
+            fxeb = crossEntropyValue(N, depth, psi0, psi)
+            fxebs[s] += fxeb
+            sfxebs[s] += fxeb*fxeb
+        end
+    end
+   
+    for (s,Dtheta) in enumerate(DThetas) 
+        fxebs[s] /= dsamples
+        sfxebs[s] = ((sfxebs[s]/dsamples - fxebs[s]*fxebs[s])/(dsamples-1))^0.5
     end
     
     plt = plot(DThetas, fxebs, yerror=sfxebs, xlabel="DTheta", legend=false)
@@ -281,8 +321,8 @@ end
 #N = parse(Int, ARGS[1])
 #depth = parse(Int, ARGS[2])
 
-N = 8 
-depth = 16
+N = 3 
+depth = 512 
 
 #Task 1a
 #psi = run(N, depth)
@@ -300,4 +340,7 @@ depth = 16
 #cgfScaling(N)
 
 #Task 4
-#crossEntropy(N, depth, 20)
+#crossEntropy(N, depth)
+
+#Task 4b
+crossEntropywDavg(N, depth, 50)
