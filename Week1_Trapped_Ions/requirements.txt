@@ -4,5 +4,6 @@ cython
 qutip
 cvxpy
 jupyter
+matplotlib
 
 git+git://github.com/andrewdarmawan/tncontract.git@master
