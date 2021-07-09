@@ -1,12 +1,15 @@
 from typing import List, Any, Union
 
 import matplotlib.pyplot as plt
-
 import numpy as np
-import os
 
 
 def bin_to_int(bin_l: list) -> int:
+    """
+    Converts list of binary integer to an integer.
+    :param bin_l:
+    :return: integer.
+    """
     l = len(bin_l)
     ret = 0
     for i, v in enumerate(bin_l):
@@ -15,6 +18,11 @@ def bin_to_int(bin_l: list) -> int:
 
 
 def get_histogram_from_outcomes_small(result: List[List[int]]) -> np.ndarray:
+    """
+    Generate histogram in list form.
+    :param result: sample data
+    :return: histogram in list form
+    """
     shots = len(result)
     n_qubits = len(result[0])
     histogram_list = np.zeros(2 ** n_qubits)
@@ -24,6 +32,11 @@ def get_histogram_from_outcomes_small(result: List[List[int]]) -> np.ndarray:
 
 
 def get_histogram_from_outcomes_large(result: List[List[int]]) -> dict:
+    """
+    Generate histogram in dict form.
+    :param result: sample data
+    :return: histogram in dict form
+    """
     shots = len(result)
     n_qubits = len(result[0])
     histogram_list = dict()
@@ -37,6 +50,12 @@ def get_histogram_from_outcomes_large(result: List[List[int]]) -> dict:
 
 def get_xeb_from_hist_small(obsvd_hist: Union[List[float], np.ndarray],
                             ideal_hist: Union[List[float], np.ndarray]) -> float:
+    """
+    Get cross entropy benchmark fidelity from list form histogram.
+    :param obsvd_hist: observed distribution in list form
+    :param ideal_hist: ideal distribution in list form
+    :return: fidelity
+    """
     if len(obsvd_hist) != len(ideal_hist):
         raise ValueError
     ret = 0
@@ -48,6 +67,13 @@ def get_xeb_from_hist_small(obsvd_hist: Union[List[float], np.ndarray],
 def get_xeb_from_hist_large(obsvd_hist: dict,
                             ideal_hist: dict,
                             num_qubits: int) -> float:
+    """
+    Get cross entropy benchmark fidelity from dict form histogram.
+    :param obsvd_hist: observed distribution in dict form
+    :param ideal_hist: ideal distribution in dict form
+    :param num_qubits:
+    :return: fidelity
+    """
     ret = 0
     if not isinstance(obsvd_hist, dict):
         raise TypeError
@@ -60,6 +86,14 @@ def get_xeb_from_hist_large(obsvd_hist: dict,
 
 
 def draw_circles(histogram_list: List[float], fig=None, ax=None, **kwargs) -> Any:
+    """
+    Draw speckle pattern of probabilities distribution.
+    :param histogram_list:
+    :param fig: matplotlib fig object, if None, it generates new one.
+    :param ax: matplotlib axis object, if None, it generates new one.
+    :param kwargs: passed to plt.Circle().
+    :return: fig, ax
+    """
     if fig is None or ax is None:
         fig, ax = plt.subplots()
         ax.set(xlim=(0, 2 * len(histogram_list)), ylim=(-1, 1))

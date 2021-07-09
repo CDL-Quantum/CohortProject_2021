@@ -4,8 +4,8 @@ import os
 
 from tqdm import tqdm
 
-from Week1_Trapped_Ions.julia_run_random_circuit import run_random_circuit
-from Week1_Trapped_Ions.utils import get_histogram_from_outcomes_small, draw_circles
+from Week1_Trapped_Ions.src.julia_run_random_circuit import run_random_circuit
+from Week1_Trapped_Ions.src.utils import get_histogram_from_outcomes_small, draw_circles
 
 if __name__ == "__main__":
     N = 4

@@ -1,15 +1,19 @@
+"""
+    Generates RQC results with two qubit gate errors.
+"""
+
 import numpy as np
 import pickle
 from tqdm import tqdm
 
-from Week1_Trapped_Ions.julia_run_random_circuit import run_random_circuit
-from Week1_Trapped_Ions.utils import get_histogram_from_outcomes_large
+from Week1_Trapped_Ions.src.julia_run_random_circuit import run_random_circuit
+from Week1_Trapped_Ions.src.utils import get_histogram_from_outcomes_large
 
 if __name__ == "__main__":
     N = 15
     D = 1024
     shots = 5000
-    log_file_name = "task4_simulation_result_large.txt"
+    log_file_name = "simulation_results/task4_simulation_result_large.txt"
 
     orig_result, r_params, m_params = run_random_circuit(N, D, shots,
                                                          ret_params=True)
