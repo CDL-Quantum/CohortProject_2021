@@ -92,15 +92,39 @@ function getAmp2(N, psi)
     return amp2
 end
 
-function plotSpeckle(N, amp2, scale=100, gsize=(400,100))
+function plotSpeckle(N, depth, amp2, scale=100, gsize=(400,50))
 
-    p = plot([1],[1], seriestype = :scatter, markersize = scale*amp2[1], legend= false, xlims=(0,2^N+1), ylims = (0.5,1.5), markercolor = :red, axis=nothing, size=gsize)
+    p = plot([1],[1], seriestype = :scatter, markersize = scale*amp2[1], legend= false, xlims=(0,2^N+1), ylims = (0.5,1.5), markercolor = :red, axis=nothing, size=gsize) #, title="N = $N depth = $depth")
     for i in 2:2^N
         plot!(p,[i],[1], seriestype = :scatter, markersize = scale*amp2[i], legend = false, markercolor = :red)
     end
 
     return p
 end
+
+function speckles()
+
+
+    plotColl = Array{Plots.Plot{Plots.GRBackend},1}() 
+    scales = [10,20,50,100]
+
+    for (i,N) in enumerate([2,3,4,5])
+
+        scale = scales[i]
+        
+        for depth in [4,16,32,64]
+            psi = run(N, depth)
+            amp2 = getAmp2(N, psi)
+            p = plotSpeckle(N, depth, amp2, scale)
+            push!(plotColl, p)
+        end
+    end
+
+    #Create Collage
+    newp = plot( (plotColl[i] for i in 1:size(plotColl)[1])..., size=(1800,600))
+    display(newp)
+end
+
 
 function studyBondDim_single(N, depth, seed=0)
 
@@ -111,41 +135,54 @@ function studyBondDim_single(N, depth, seed=0)
         psi = run(N, d, rng)
         bdim[i] = maxlinkdim(psi)         
     end
-    @show bdim
  
     p = plot(depth, bdim, seriestype = :scatter, markersize=5, legend=false, markercolor = :red)
     display(p)
 end
 
+
 function studyBondDim(N, depth, samples=20, seed=0)
 
-    samplebDim = fill(0.0, size(depth)[1])
-    samplebDim2 = fill(0.0, size(depth)[1])
 
     rng = MersenneTwister(seed)
+    plotColl = Array{Plots.Plot{Plots.GRBackend},1}() 
+    colors = [:red, :blue, :green, :black, :orange, :magenta, :cyan]  
+    
+    Ns = N |> reverse 
+    p = 0 
+    for (j,n) in enumerate(Ns)
+    
+        samplebDim = fill(0.0, size(depth)[1])
+        samplebDim2 = fill(0.0, size(depth)[1])
 
-    for i in 1:samples
+        for i in 1:samples
 
-        lbdim = Vector{Int}(undef, size(depth)[1])
-        for (i,d) in enumerate(depth)
-            psi = run(N, d, rng)
-            lbdim[i] = maxlinkdim(psi)
-        end        
+            lbdim = Vector{Int}(undef, size(depth)[1])
+            for (i,d) in enumerate(depth)
+                psi = run(n, d, rng)
+                lbdim[i] = maxlinkdim(psi)
+            end        
 
-        #@show lbdim
+            #@show lbdim
 
-        samplebDim += lbdim
-        samplebDim2 += lbdim.*lbdim
+            samplebDim += lbdim
+            samplebDim2 += lbdim.*lbdim
+        end
+
+        samplebDim /= samples
+        samplebDim2 /= samples
+        samplebDim2 = ((samplebDim2 - samplebDim.*samplebDim)/samples).^0.5
+
+        if(p==0)
+            p = plot(depth, samplebDim, seriestype = :scatter, markersize=5 + 0.2*n, legend=:topleft, markercolor = colors[j], yerror=samplebDim2, label="N = $n")
+        else
+            plot!(p, depth, samplebDim, seriestype = :scatter, markersize=5 + 0.2*n, legend=:topleft, markercolor = colors[j], yerror=samplebDim2, label="N = $n")
+        end
     end
 
-    samplebDim /= samples
-    samplebDim2 /= samples
-    samplebDim2 = ((samplebDim2 - samplebDim.*samplebDim)/samples).^0.5
-
-    p = plot(depth, samplebDim, seriestype = :scatter, markersize=5, legend=false, markercolor = :red, yerror=samplebDim2)
-    display(p)
-    
+    display(p)    
 end
+
 
 function bitFlipCompile(N, depth, samples=10, lout=(samples,1), seed=0)
 
@@ -156,15 +193,15 @@ function bitFlipCompile(N, depth, samples=10, lout=(samples,1), seed=0)
     for i in 1:samples
         psi = run(N, depth, rng, true)
         amp2 = getAmp2(N, psi)
-        push!(plotColl,plotSpeckle(N, amp2))
+        push!(plotColl,plotSpeckle(N, depth, amp2))
     end
 
     #Create Collage
-    newp = plot( (plotColl[i] for i in 1:samples)..., layout=lout, size=(1000,600))
+    newp = plot( (plotColl[i] for i in 1:samples)..., layout=lout, size=(1800,600))
     display(newp)
 end
 
-function cgfScalingSingle(N, depth, samples=10000, dp = 0.001, seed=0)
+function cgfScalingSingle(N, depth, samples=10000, dp=0.001, seed=0; plt=nothing)
 
     rng = MersenneTwister(seed)
     sites = siteinds("Qubit", N)
@@ -212,26 +249,33 @@ function cgfScalingSingle(N, depth, samples=10000, dp = 0.001, seed=0)
     for i in 2:lidx
         push!(cfreq,cfreq[i-1] + freq[i])
     end
-    p2 = plot(mval, cfreq, xaxis = :log, label="calculation")
-
-    tsize = 2^N
-    theoryf = [1 - exp(-tsize*m) for m in mval]
-    plot!(p2, mval, theoryf, xaxis = :log, label="theory", legend=:topleft, title="Depth: $depth")
-    #display(p2)
-
-    return p2
+    if(plt === nothing)
+        p2 = plot(mval, cfreq, xaxis = :log, label="depth = $depth", markersize=5, lw = 2)
+        return p2, mval
+    else
+        plot!(plt,mval, cfreq, xaxis = :log, label="depth = $depth", markersize=5, lw = 2)
+        return plt, mval
+    end
 end
 
-function cgfScaling(N, samples=1000, dp = 0.001, seed=0)
+function cgfScaling(N, samples=1000, dp = 0.0001, seed=0)
 
-    plotColl = Array{Plots.Plot{Plots.GRBackend},1}() 
-    #for d in [1, 2, 4, 8, 16, 32, 64, 128, 256, 512]
-    for d in [1, 4, 16, 32]
-        push!(plotColl, cgfScalingSingle(N, d, samples, dp, seed))
+    plt = 0
+    mval = nothing
+
+    for (i,d) in enumerate([1, 4, 16, 64, 128, 256, 512])
+        if(i==1)
+            plt, mval = cgfScalingSingle(N, d, samples, dp, seed)
+        else
+            plt, mval = cgfScalingSingle(N, d, samples, dp, seed; plt)            
+        end
     end
+    
+    tsize = 2^N
+    theoryf = [1 - exp(-tsize*m) for m in mval]
+    plot!(plt, mval, theoryf, xaxis = :log, label="theory", legend=:topleft, title="Depth: $depth", markersize=5, lw=2)
 
-    fp = plot( (p for p in plotColl)...)
-    display(fp)
+    display(plt)
 end
 
 function crossEntropyValue(N, depth, psi0, psi)
@@ -263,7 +307,7 @@ function crossEntropy(N, depth, seed=0)
     psi0 = run(N, depth, rng) 
 
 
-    DThetas = 0.0:0.5:2pi
+    DThetas = 0.0:0.1:2pi
     fxebs = Vector{Float64}()
     for DTheta in DThetas
     
@@ -277,7 +321,7 @@ function crossEntropy(N, depth, seed=0)
         println(DTheta," ",fxeb)
     end
     
-    plt = plot(DThetas, fxebs, xlabel="DTheta", legend=false)
+    plt = plot(DThetas, fxebs, xlabel="DTheta", legend=false, lw=3)
     display(plt)
 end
 
@@ -312,35 +356,36 @@ function crossEntropywDavg(N, depth, dsamples=20, seed=0)
         sfxebs[s] = ((sfxebs[s]/dsamples - fxebs[s]*fxebs[s])/(dsamples-1))^0.5
     end
     
-    plt = plot(DThetas, fxebs, yerror=sfxebs, xlabel="DTheta", legend=false)
+    plt = plot(DThetas, fxebs, yerror=sfxebs, xlabel="DTheta", legend=false, lw = 3)
     display(plt)
 end
 
 
 #-----------------------------------------------------------------------------------------------
-#N = parse(Int, ARGS[1])
-#depth = parse(Int, ARGS[2])
-
-N = 3 
-depth = 512 
 
 #Task 1a
-#psi = run(N, depth)
-#amp2 = getAmp2(N, psi)
-#p = plotSpeckle(N, amp2)
-#display(p)
+#speckles()
 
 #Task 1b
-#studyBondDim(N, 1:2:depth, 20)
+N = 12
+depth = 32 
+#studyBondDim(2:2:N, 1:2:depth, 5)
 
 #Task 2
+N = 5
+depth = 16 
 #bitFlipCompile(N, depth, 12, (4,3))
 
 #Task 3
+N = 8
 #cgfScaling(N)
 
 #Task 4
+N = 8
+depth = 512
 #crossEntropy(N, depth)
 
 #Task 4b
+N = 8
+depth = 32
 crossEntropywDavg(N, depth, 50)
