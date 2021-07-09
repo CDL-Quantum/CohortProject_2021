@@ -1,0 +1,22 @@
+{
+  "name": "ionq-implementation",
+  "version": "1.0.0",
+  "description": "Implemention of trapped ions on the ionq machine",
+  "main": "index.js",
+  "engines": {
+    "node": "v13.2.0"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-default-job": "cd src/scripts && node create-job.run.js --n-qubits 8 --circuit-depth 256 --machine-type qpu --name default-qpu-job",
+    "plot-cdf": "cd src/scripts && node plot-job-histogram.run.js --id"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "nodeplotlib": "^0.7.5",
+    "yargs": "^17.0.1"
+  }
+}
