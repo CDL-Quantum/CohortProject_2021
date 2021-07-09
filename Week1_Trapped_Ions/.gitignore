@@ -1,2 +1,6 @@
 instructions/instructions.*
 !instructions/instructions.tex
+
+.ipynb_checkpoints
+.log
+
