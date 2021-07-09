@@ -3,5 +3,6 @@ scipy
 cython
 qutip
 cvxpy
+jupyter
 
 git+git://github.com/andrewdarmawan/tncontract.git@master
