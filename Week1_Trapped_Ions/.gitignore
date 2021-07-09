@@ -3,3 +3,8 @@ instructions/instructions.*
 
 # Environment
 env/
+
+# Notebooks
+examples/.ipynb_checkpoints/
+
+.idea/
