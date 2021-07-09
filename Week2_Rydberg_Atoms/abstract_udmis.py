@@ -24,6 +24,6 @@ class AbstractUDMIS(abc.ABC):
 
             if (dE < 0) or (np.random.rand() < np.exp(-dE / T)):
                 current_energy += dE
-                self.occupations[vertex] *= -1
+                self.occupations[vertex] ^= 1
 
         return current_energy
