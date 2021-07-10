@@ -13,7 +13,7 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 * Describe a business that could be build around random circuits.  (See below Business Application)
 
 ## Summary of Results
-### [Task 3](./Task3.ipynb):
+### [Task 3](./Task3.ipynb): Emperical Cumulative Distribution of Random Circuit Sampling Probabilities
 
 <figure class="image">
   <img width="400" src = "./figures/task3_result.png" />
