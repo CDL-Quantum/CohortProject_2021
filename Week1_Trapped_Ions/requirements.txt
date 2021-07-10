@@ -5,3 +5,5 @@ tqdm~=2.2.4
 cirq~=0.11.0
 ply
 imageio
+qiskit==0.26.2
+pylatexenc

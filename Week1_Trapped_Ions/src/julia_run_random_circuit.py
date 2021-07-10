@@ -21,6 +21,7 @@ def run_random_circuit(num_qubits: int,
                        rand_x: bool = False,
                        ret_params: bool = False,
                        ret_x_pos: bool = False,
+                       ret_gates: bool = False,
                        in_r_param: Optional[List[Tuple[float]]] = None,
                        in_m_param: Optional[List[float]] = None) \
         -> Any:
@@ -33,6 +34,7 @@ def run_random_circuit(num_qubits: int,
     :param rand_x: If true, an x gate is introduced to random position in the circuit.
     :param ret_params: If true, returns the parameters for each gates.
     :param ret_x_pos: If true, returns the random position and idx of qubit which random x gate is inserted.
+    :param ret_gates: If true, returns the gate array.
     :param in_r_param: If not None, the circuit doesn't generate random parameters, instead, use this as parameters for r gates.
     :param in_m_param: If not None, the circuit doesn't generate random parameters, instead, use this as parameters for m gates.
     :return:
@@ -40,4 +42,4 @@ def run_random_circuit(num_qubits: int,
         (optional)
         r_params, m_params, pos_x, qubit_x
     """
-    return _run_random_circuit(num_qubits, depth, num_shots, rand_x, ret_params, ret_x_pos, in_r_param, in_m_param)
+    return _run_random_circuit(num_qubits, depth, num_shots, rand_x, ret_params, ret_x_pos, ret_gates, in_r_param, in_m_param)
