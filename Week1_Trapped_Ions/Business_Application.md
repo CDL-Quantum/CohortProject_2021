@@ -37,6 +37,7 @@ In our analysis, we addressed several tasks to assess the properties of a quantu
 from two gates used to control in Ion Trap quantum computers: a single-qubit rotation gate and a two-qubit rotation
 gate which is the source of entanglement among the qubits of the system.
 
+### 1.1 Simulations in Julia and Python 
 [This notebook](../Week1_Trapped_Ions/solutions_python.ipynb) contains the performed analysis.
 First, we implemented the rotation gates and sampled output from the quantum circuit to obtain a random distribution.
 Next, we observed that by slightly perturbing the circuit with a single bit-flip in a random location, 
@@ -54,11 +55,13 @@ Finally, we plot the linear cross-entropy XEB (calculated starting from the prob
 as a function of a systematic error simulated with a fixed shift in the rotation angle of the two-qubit 
 gate. 
 
-####add conclusion on point 4???
-
 We also provide a [python notebook](../Week1_Trapped_Ions/solutions_python.ipynb) for people who are more familiar
-with the latter programming language. For this notebook the implementation is done in 
-[Cirq](https://quantumai.google/cirq). 
+with the latter programming language. For implementing the circuit and performing the simulation and analysis we used 
+[Cirq](https://quantumai.google/cirq), the quantum circuit library developed by Google AI. 
+
+###1.2 Implementation on a real ion-trap architecture: IonQ
+
+
 
 ## 2. Real-world problems which can be approached with Quantum Random Circuits
 
@@ -95,7 +98,7 @@ specific parameter of the problem. For instance, by mapping the gates to differe
 (e.g. desert, water or forest) one could dynamically sample different environments, with a different distribution of 
 resources, to effectively improve the virtual reality of the game.
  
-#### 2.3 Next generation chip design with quantum random circuit generator
+### 2.3 Next generation chip design with quantum random circuit generator
 Recent demonstration of chip floorplanning using reinforcement learning by the Google team ([Mirhoseini et al.]
 (https://www.nature.com/articles/s41586-021-03544-w)) highlighted the massive potential of reinforcement learning in next generation chip
 design. These advancements are capable of disrupting the $500 billion chip industry particularly at this sensitive era of chip shortage.
@@ -109,7 +112,7 @@ classical methods.
 
 ![image](https://user-images.githubusercontent.com/71100338/125154188-ad1b3d00-e10d-11eb-935e-b0e253c71a18.png)
 
-#### 2.4 Training of AI datasets using quantum Generative Adversarial Networks (GANs)
+### 2.4 Training of AI datasets using quantum Generative Adversarial Networks (GANs)
 Generative adversarial training has resulted in breakthrough applications in classical machine learing. In the past few years, Quantum 
 circuits have been used to construct generative adversarial networks ([Dallaire-Demers et al.](10.1103/PhysRevA.98.012324)) and to load 
 random distributions([Zoufal et al.](https://www.nature.com/articles/s41534-019-0223-2)). 
@@ -122,7 +125,7 @@ speed that is competitive with classical methods.
 Our core technology which relies on quantum random circuits adds significant value to two sectors: financial industry 
 and AI driven sector. 
 
-#### 3.1 Financial industry
+### 3.1 Financial industry
 Financial institutions and blockchain sector can benefit from the certifiable highly secure systems based on our true random distribution generators.
 We believe that these applications are crucial for the security of the following financial institutions (percentage refers to the 
 global market share of revenue as of Apr '21):
@@ -138,7 +141,7 @@ as well as for the security in the domain of the blockchain industry (revenue in
 - Intellectsoft (12 mln)
 - Chain (4 mln)
 
-#### 3.2 Artifical Intelligence sector 
+### 3.2 Artifical Intelligence sector 
 AI sector customers add value to their systems in two main categories:
 - Chip manufacturing sector and ASIC companies can gain competitive advantage in AI generated chip floorplanning.
 Main customers for this application are:
@@ -147,7 +150,7 @@ Main customers for this application are:
   - Taiwan Semiconductor Manufacturing Co. Ltd. (37.9 bln)
   - Qualcomm Inc. (24.7 bln)
 
-- GAN based training models can generate faster and more accurate results by taking advantage our competitive random noise generator.
+- GAN based training models can generate faster and more accurate results by taking advantage of our competitive random noise generator.
 Companies in this sector are (revenue in USD):
   - Soul machines (26 mln)
   - Rosebud AI (10-25 mln, expected)
