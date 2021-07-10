@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "create-default-job": "cd src/scripts && node create-job.run.js --n-qubits 8 --circuit-depth 256 --machine-type qpu --name default-qpu-job",
-    "plot-cdf": "cd src/scripts && node plot-job-histogram.run.js --id"
+    "plot-cdf": "cd src/scripts && node plot-job-histogram.run.js --show-true-cdf --id"
   },
   "author": "",
   "license": "ISC",

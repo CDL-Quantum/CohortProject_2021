@@ -11,7 +11,7 @@
  import { getJob } from '../api/index.js'
  import plot from 'nodeplotlib'
  
- const run = async (jobId) => {
+ const run = async (jobId, showTrueCdf) => {
     let data
     try {
         ({ data } = await getJob(jobId))
@@ -27,14 +27,22 @@
     try {
         const job = data.jobs[0]
         const histogram = job.data.histogram
-        const x = Object.values(histogram)
-        x.sort()
-        const y = Array.from(x, (_, idx) => idx).map((idx) => idx / (x.length - 1))
-        const plotData = [{x: x.map((val) => Math.log(val)), y, type: 'scatter'}];
-        const layout = {
-            title: `Cumulative Distribution of Bit String Probabilties for ${job.qubits} Qubits on the IonQ "${job.target}" Machine`,
+        const { qubits, target } = job
+        const probabilties = Object.values(histogram)
+        const x = Array.from(probabilties, (_, idx) => idx).map((idx) => idx / (probabilties.length - 1))
+        // Plot the histogram
+        plot.stack([{x, y: probabilties}], { title: `Bit String Probabilties for ${qubits} Qubits on the IonQ "${target}" Machine`})
+        // Plot the cdf 
+        const cdf = [...probabilties]
+        cdf.sort()
+        console.log(cdf)
+        plot.stack([{x: cdf.map(Math.log), y: x}], { title: `Cumulative Distribution of Bit String Probabilties for ${qubits} Qubits on the IonQ "${target}" Machine`})
+        if (showTrueCdf) {
+            // True CDF for the specific case: 1 - e^(-2^N * p)
+            const fn = (value) => 1 - Math.exp(-(2**qubits)*value)
+            plot.stack([{x: cdf.map(Math.log), y: cdf.map(fn), type: 'scatter'}], { title: `True Cumulative Distribution of Bit String Probabilties for 8 Qubits at Sufficient Depth`})
         }
-        plot.plot(plotData, layout);
+        plot.plot();
     } catch (err) {
         console.error('An error occured generating histogram plot!')
         console.error(err)
@@ -42,12 +50,17 @@
     return
  }
  
-const { id } = yargs(process.argv.slice(2))
+const { id, showTrueCdf } = yargs(process.argv.slice(2))
     .option('id', {
         type: 'string',
         description: 'Id of the job to fetch',
         required: true
     })
+    .option('show-true-cdf', {
+        type: 'boolean',
+        description: 'Indicates if the true CDF will be plotted along side the computed one',
+    })
+    .default('show-true-cdf', false)
     .argv
  
-run(id)
+run(id, showTrueCdf)
