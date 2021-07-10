@@ -21,7 +21,7 @@ Later in task 4, we investigate the cross entropy between the true state psi, an
 
 ![Entanglement Entropy with Increasing Circuit Depth](../Week1_Trapped_Ions/img/bonus2.png)
 
-It's clear that for small depth the entanglement entropy starts rather small and then falls off- while for increasing depth the initial entropy is larger and then falls off as we get to the 'end' of the MPS (the last index). This makes sense, as we increase the depth we are hitting more 'M' gates which further entangle our qubits- leading to a larger Von Neumann entropy for the state Psi. It is interesting that the largest entropy is captured in the first few indices of the MPS. For varying number of qubits the plots look very similar:
+It's clear that for small depth the entanglement entropy starts rather small and then falls off- while for increasing depth the initial entropy is larger and then falls off as we get to the 'end' of the MPS (the last index). This makes sense, as we increase the depth we are hitting more 'M' gates which further entangle our qubits- leading to a larger Von Neumann entropy for the state Psi. It is interesting that the largest entropy is captured towards the middle indices of the MPS. For varying number of qubits the plots look very similar:
 
 ![Entanglement Entropy with Increasing Qubit number](../Week1_Trapped_Ions/img/bonus3.png)
 
@@ -47,7 +47,7 @@ And checkout out this heatmap displaying the random probabilities:
 
 ### Task 3: Convergence of the Emprical CDF of P(x) (probability distribution for each state PSI can take)
 
-
+\large e^{i\pi} = -1
 
 
 
