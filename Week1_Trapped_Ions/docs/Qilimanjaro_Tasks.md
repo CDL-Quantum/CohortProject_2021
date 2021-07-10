@@ -61,6 +61,12 @@ Result:
 
 ![N=4,depth=5,rel=6](./images/Speckle_collage.png)
 
+*Bonus task:*
+
+We obtaing a gif animation on how the speckle pattern changes as the random location of the bit-flip error is changed:
+
+![Speckle animation](./images/Speckle.gif) 
+
 ## Task 3: 
 
 Usage:
