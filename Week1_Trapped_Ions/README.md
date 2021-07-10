@@ -27,7 +27,7 @@ It's clear that for small depth the entanglement entropy starts rather small and
 
 ![Entanglement Entropy with Increasing Qubit number](../Week1_Trapped_Ions/img/bonus4.png)
 
-We also looked at how bond dimension (the max rank of the MPS) increased with the depth of the circuit. We did this for a large number of qubits since the bond dimension does not change much for smaller MPS's. 
+We also looked at how bond dimension (the max rank of the MPS) increased with the depth of the circuit. We did this for a large number of qubits since the bond dimension does not change much for smaller MPS's. *Note: title should say N=15.*
 
 ![Bond Dimension](../Week1_Trapped_Ions/img/bonus_dim.png)
 
