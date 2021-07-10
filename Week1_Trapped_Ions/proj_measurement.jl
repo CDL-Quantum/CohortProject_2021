@@ -11,7 +11,7 @@ function BinaryToDecimal(M,N)
 end
 
 # Get Probabilities dictionary
-function get_probabilities(N,qc,shots,basis)
+function get_probabilities(N,qc,shots)
     #= 
     N = number of qubits
     qc = Result of the quantum circuit, i.e. outcome of execute() 
