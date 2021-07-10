@@ -1,10 +1,7 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 # Week1: Quantum Cohort Project Business Application of Random Circuit Sampling
 
-For each weekly project, your team is asked to complete the below business application exercise.
-To complement the technical tasks, please consdier the four questions below.
-You are free to format your response to these four questions as you wish (with the final question done as a short recorded video), and to include
-the content (or links to the content) on your forked repository.
+As with other quantum sampling problems like boson sampling and instantaneous quantum polynomial, the random circuit sampling (RCS) problem has no apparent practical application. The main focus of these quantum sampling experiments is the advancement of knowledge. 
 
 A brief example for each question is included for the 
 [Traveling Salesman Problem.](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
