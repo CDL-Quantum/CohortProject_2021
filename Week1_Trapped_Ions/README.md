@@ -27,6 +27,8 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 
 
 ## Business Application
+An interesting application of random circuit sampling addressed in this cohort project is secure communication. The communication protocol can be used by any individuals, companies, governments, and militaries demanding high-level communication security. We provide more detailed description about the business application [here](./Business_Application_team23.md)
+
 For each week, your team is asked to complete a Business Application. Questions you will be asked are:
 
 * Explain to a layperson the technical problem you solved in this exercise.
