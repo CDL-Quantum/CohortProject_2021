@@ -14,6 +14,7 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 
 ## Summary of Results
 ### [Task 3](./Task3.ipynb):
+![Task3 final results](./figures/task3_result.pdf)
 
 ## Further Challenges:
 * Animate your speckle pattern.
