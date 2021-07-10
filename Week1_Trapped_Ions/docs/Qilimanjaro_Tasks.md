@@ -39,6 +39,7 @@ Results:
 ![N=4,depth=12](./images/Speckle612.png)
 
 *Bonus*:
+The bond dimension of the MPS increases as the random circuit is made deeper. The entanglement entropy is bounded by the bond dimension, so larger bond dimensions will allow for the presence of higher entanglement entropy. 
 
 ## Task 2:
 
