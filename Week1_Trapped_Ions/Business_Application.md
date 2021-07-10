@@ -8,6 +8,7 @@
 
 A random quantum circuit is a random unitary operator (or gate) applied to a qubit system. Generally, this unitary gate 
 can be built as the product of single- and multi-qubit unitary gates. Below is a simple 3 qubit circuit printed from Cirq. 
+
 ![CDL 2020 Cohort Project](../Week1_Trapped_Ions/img/simple_circuit.png)
 
 Random circuits can be used to sample data from random distributions.
@@ -160,8 +161,3 @@ Companies in this sector are (revenue in USD):
   - Rosebud AI (10-25 mln, expected)
   - UneeQ (8 mln)
   - Jibo (3 mln)
-   
-## 4. Business application pitch 
-
-###PREPARE THE SCRIPT FOR THE VIDEO
-
