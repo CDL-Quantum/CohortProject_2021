@@ -70,7 +70,6 @@ end
 
 
 N = parse(Int, ARGS[1])
-depth = parse(Int, ARGS[2])
 
 # Plot exact
 f(x) = 1 - exp(-(2^N) * x)
