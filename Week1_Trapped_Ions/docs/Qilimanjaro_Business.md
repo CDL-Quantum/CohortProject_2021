@@ -1,5 +1,5 @@
 ![CDL 2021 Cohort Project](./images/logo.jpg)
-# Assessing quantum computers with randomized benchmarking
+# rQIBO: assessing quantum computers with randomized benchmarking
 
 ## Step 1: Explain the technical problem you solved in this exercise
 
