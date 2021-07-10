@@ -7,11 +7,11 @@ One of the possible foundations for gate-based quantum computers is trapped ions
 
 ## Examples of real-world business applications built around sampling-based quantum computing with random curcuits
 
-** Key creation for encryption **
+**Key creation for encryption**
 
-** qGANs **
+**qGANs**
 
-** Business Analytics, sampling from big populations **
+**Business Analytics, sampling from big populations**
 
 ## Potential cusomers in these areas
 
