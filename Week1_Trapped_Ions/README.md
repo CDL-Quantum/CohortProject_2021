@@ -15,7 +15,7 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 ## Summary of Results
 ### [Task 3](./Task3.ipynb):
 <p align = "center">
-<img width="200" src = "./figures/task3_result.png" />
+<img width="400" src = "./figures/task3_result.png" />
 <p />
 
 ## Further Challenges:
