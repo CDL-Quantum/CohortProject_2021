@@ -31,16 +31,43 @@
         const probabilties = Object.values(histogram)
         const x = Array.from(probabilties, (_, idx) => idx).map((idx) => idx / (probabilties.length - 1))
         // Plot the histogram
-        plot.stack([{x, y: probabilties}], { title: `Bit String Probabilties for ${qubits} Qubits on the IonQ "${target}" Machine`})
+        plot.stack([{
+            x: Array.from(probabilties, (_, idx) => idx), 
+            y: probabilties
+        }], { 
+            title: `Bit String Probabilties for ${qubits} Qubits on the IonQ "${target}" Machine`,
+            xaxis: {
+                title: 'Bit string'
+            },
+            yaxis: {
+                title: 'Probability of bit string'
+            }
+        })
         // Plot the cdf 
         const cdf = [...probabilties]
         cdf.sort()
-        console.log(cdf)
-        plot.stack([{x: cdf.map(Math.log), y: x}], { title: `Cumulative Distribution of Bit String Probabilties for ${qubits} Qubits on the IonQ "${target}" Machine`})
+        plot.stack([{
+            x: cdf.map(Math.log), 
+            y: x
+        }], { 
+            title: `Cumulative Distribution of Bit String Probabilties for ${qubits} Qubits on the IonQ "${target}" Machine`,
+            xaxis: {
+                title: 'log(p)'
+            },
+        })
         if (showTrueCdf) {
             // True CDF for the specific case: 1 - e^(-2^N * p)
             const fn = (value) => 1 - Math.exp(-(2**qubits)*value)
-            plot.stack([{x: cdf.map(Math.log), y: cdf.map(fn), type: 'scatter'}], { title: `True Cumulative Distribution of Bit String Probabilties for 8 Qubits at Sufficient Depth`})
+            plot.stack([{
+                x: cdf.map(Math.log), 
+                y: cdf.map(fn), 
+                type: 'scatter'
+            }], { 
+                title: `True Cumulative Distribution of Bit String Probabilties for 8 Qubits at Sufficient Depth`,
+                xaxis: { title: 
+                    'log(p)'
+                }
+            })
         }
         plot.plot();
     } catch (err) {
