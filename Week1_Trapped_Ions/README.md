@@ -5,7 +5,7 @@ This project will guide you through the recent Google quantum supremacy result, 
 
 ## Solutions
 
-All solution in Julia can be found in [this notebook](./solution_julia.ipynb). We've also created an analogous [notebook](./solutions_python.ipynb) in python in for those who are more familiar the language. If you're interested in the full instructions for the tasks we completed, check out the [pdf](./instructions.pdf). 
+All solution in Julia can be found in this [Julia notebook](./solution_julia.ipynb). We've also created an analogous [Python notebook](./solutions_python.ipynb)  using Google's quantum computing language- Cirq, for those who are more familiar with python. If you're interested in the full instructions for the tasks we completed, check out the [pdf](./instructions.pdf). 
 
 ### Task 1: Plot the probability of each bit string for various circuit widths and depths
 
@@ -64,9 +64,9 @@ As mentioned in the bonus task for task 1, for our final task we studied the how
 
 In [2], the authors use different definitions for fidelity and cross entropy. We decided to try to replicate these formulas to see how they would look with the data we had. Close to 0 perturbation the fidelity and cross entropy are close to one- but they then seem to exhibit a strange randomness as the we increase the perturbation. 
 
-![Cross Entropy](../Week1_Trapped_Ions/img/task4_1.png)
+![Cross Entropy](../Week1_Trapped_Ions/img/task4_2.png)
 
-![Fidelity](../Week1_Trapped_Ions/img/task4_1.png)
+![Fidelity](../Week1_Trapped_Ions/img/task4_3.png)
 
 
 ### Bonus: Implement the circuit on a real trapped ion computer
