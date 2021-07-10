@@ -7,8 +7,8 @@ using LinearAlgebra, Statistics, Compat
 
 function PastaQ.gate(::GateName"R"; theta::Real, phi::Real)
     [
-        cos(theta/2)    (-im * exp(-im * phi) * sin(theta/2))
-        (-im * exp(im * phi) * sin(theta/2))     cos(theta/2)
+        cos(theta / 2)    (-im * exp(-im * phi) * sin(theta / 2))
+        (-im * exp(im * phi) * sin(theta / 2))     cos(theta / 2)
     ]
 end
 
@@ -30,15 +30,15 @@ function get_circuit(N, depth)
         two_qubit_layer = Tuple[]
 
         for j in 1:N
-            gate = ("R", j, (theta=2pi*rand(), phi=2pi*rand()))
+            gate = ("R", j, (theta = 2pi * rand(), phi = 2pi * rand()))
             push!(one_qubit_layer, gate)
         end
 
         # Alternate start qubit for pairs.
         idx_first = i % 2 + 1
 
-        for j in idx_first:2:(N-1)
-            gate = ("M", (j, j+1), (Theta=2pi*rand(),))
+        for j in idx_first:2:(N - 1)
+            gate = ("M", (j, j + 1), (Theta = 2pi * rand(),))
             push!(two_qubit_layer, gate)
         end
 
@@ -48,70 +48,70 @@ function get_circuit(N, depth)
     return gates
 end
 
-function task_2(N,depth,rel)
+function task_2(N, depth, rel)
 
-    #generate computational basis (there is probably a simpler way to do this)
-    all_perms(xs,n) = vec(map(collect, Iterators.product(ntuple(_ -> xs, n)...)))
-    basis = all_perms(["↑","↓"],N)
-    s = siteinds("S=1/2",N)
+    # generate computational basis (there is probably a simpler way to do this)
+    all_perms(xs, n) = vec(map(collect, Iterators.product(ntuple(_ -> xs, n)...)))
+    basis = all_perms(["↑","↓"], N)
+    s = siteinds("S=1/2", N)
 
-    #get a random circuit
-    gates = get_circuit(N,depth)
+    # get a random circuit
+    gates = get_circuit(N, depth)
 
-    #array for plotting data
+    # array for plotting data
     plot_probs = []
     for i in 1:rel
 
-        #new circuit with error
+        # new circuit with error
         gates_err = Vector{Tuple}[]
 
-        #circuit layers
+        # circuit layers
         one_qubit_layer = Tuple[]
         two_qubit_layer = Tuple[]
 
-        #random error position
-        k = rand(1:depth) #depth
-        l = rand(1:N) #qubit
+        # random error position
+        k = rand(1:depth) # depth
+        l = rand(1:N) # qubit
 
-        #make a copy
+        # make a copy
         circ = copy(gates)
 
-        #extract circuit and add error
+        # extract circuit and add error
         for j in 1:depth
             one_qubit_layer = popfirst!(circ)
             two_qubit_layer = popfirst!(circ)
 
-            #add error in rand position
+            # add error in rand position
             if j == k
-                push!(one_qubit_layer,("X",l))
+                push!(one_qubit_layer, ("X", l))
             end
 
             push!(gates_err, one_qubit_layer)
             push!(gates_err, two_qubit_layer)
         end
 
-        psi = runcircuit(N,gates_err)
+        psi = runcircuit(N, gates_err)
 
-        #calculate inner products with all basis
+        # calculate inner products with all basis
         sum = 0.0
         probs = []
         for i in 1:2^N
-            p = abs.(inner(psi,productMPS(s,basis[i])))^2
+            p = abs.(inner(psi, productMPS(s, basis[i])))^2
             push!(probs, p)
-            #make sure probs add to one
+            # make sure probs add to one
             sum = sum + p
         end
 
-        push!(plot_probs,probs)
+        push!(plot_probs, probs)
     end
 
-    #plot and save
+    # plot and save
     plots = []
     for i in 1:rel
-        push!(plots,scatter(1:2^N,ones(2^N),markersize=100*plot_probs[i],markercolor=:red,grid=false,ylims=(0.95, 1.05),ticks=false,showaxis=false,legend=false))
+        push!(plots, scatter(1:2^N, ones(2^N), markersize=100 * plot_probs[i], markercolor=:red, grid=false, ylims=(0.95, 1.05), ticks=false, showaxis=false, legend=false))
     end
-    plot(plots...,layout=(rel,1))
-    png("Speckle_collage")
+    plot(plots..., layout=(rel, 1))
+    png("../docs/images/Speckle_collage")
 end
 
 N = parse(Int, ARGS[1])
