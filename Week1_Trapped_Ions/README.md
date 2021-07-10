@@ -51,17 +51,23 @@ In tasks 1 and 2 we display the probability distribution (in the form of the lin
 
 ![Emprical Distribution of Psi](../Week1_Trapped_Ions/img/task3_1.png)
 
-![Emprical Distribution of Psi](../Week1_Trapped_Ions/img/task3_1.png)
+![Emprical Distribution of Psi](../Week1_Trapped_Ions/img/task3_2.png)
 
 
 ### Task 4: Studying the Linear Fidelity
 
+As mentioned in the bonus task for task 1, for our final task we studied the how the linear fidelity (or cross entropy) changed as we made small perturbations to theta (the angle destribing the transformations for the 'M' gate). We confirmed that the linear fidelity is equal to 1 when there is no perturbation, and as the perturbation increases the linear fidelity approaches zero. Here we used 8 qubits with a circuit depth of 50. 
 
-
-
+![Linear Fidelity](../Week1_Trapped_Ions/img/task4_1.png)
 
 ## Bonus Task 4: Using different definitions of Fidelity & Cross Entropy
-Another approach to determine the quality of the results is to look at the linear XEB fidelity, $F_{XEB}$.  Here we plot it as a function of a delta theta which is imposed to simulate systematic error. 
+
+In [2], the authors use different definitions for fidelity and cross entropy. We decided to try to replicate these formulas to see how they would look with the data we had. Close to 0 perturbation the fidelity and cross entropy are close to one- but they then seem to exhibit a strange randomness as the we increase the perturbation. 
+
+![Cross Entropy](../Week1_Trapped_Ions/img/task4_1.png)
+
+![Fidelity](../Week1_Trapped_Ions/img/task4_1.png)
+
 
 ### Bonus: Implement the circuit on a real trapped ion computer
 
@@ -99,3 +105,12 @@ Which can be compared to the true Porter-Thomas distribution shown here:
 For more details refer to the [Business Application found here](./Business_Application.md)
 
 ## References
+
+[1]  Frank  Arute,  Kunal  Arya,  Ryan  Babbush,  Dave  Bacon,  Joseph  C.  Bardin,  Rami  Barends,Rupak  Biswas,  Sergio  Boixo,  Fernando  G.  S.  L.  Brandao,  David  A.  Buell,  Brian  Burkett,Yu  Chen,  Zijun  Chen,  Ben  Chiaro,  Roberto  Collins,  William  Courtney,  Andrew  Dunsworth,Edward Farhi, Brooks Foxen, Austin Fowler, Craig Gidney, Marissa Giustina, Rob Graff, KeithGuerin, Steve Habegger, Matthew P. Harrigan, Michael J. Hartmann, Alan Ho, Markus Hoff-mann,  Trent  Huang,  Travis  S.  Humble,  Sergei  V.  Isakov,  Evan  Jeffrey,  Zhang  Jiang,  DvirKafri,  Kostyantyn  Kechedzhi,  Julian  Kelly,  Paul  V.  Klimov,  Sergey  Knysh,  Alexander  Ko-rotkov,  Fedor  Kostritsa,  David  Landhuis,  Mike  Lindmark,  Erik  Lucero,  Dmitry  Lyakh,  Sal-vatore  Mandra,  Jarrod  R.  McClean,  Matthew  McEwen,  Anthony  Megrant,  Xiao  Mi,  KristelMichielsen, Masoud Mohseni, Josh Mutus, Ofer Naaman, Matthew Neeley, Charles Neill, Mur-phy  Yuezhen  Niu,  Eric  Ostby,  Andre  Petukhov,  John  C.  Platt,  Chris  Quintana,  Eleanor  G.Rieffel, Pedram Roushan, Nicholas C. Rubin, Daniel Sank, Kevin J. Satzinger, Vadim Smelyan-skiy, Kevin J. Sung, Matthew D. Trevithick, Amit Vainsencher, Benjamin Villalonga, TheodoreWhite, Z. Jamie Yao, Ping Yeh, Adam Zalcman, Hartmut Neven, and John M. Martinis. Quan-tum supremacy using a programmable superconducting processor.Nature, 574(7779):505–510,2019.doi:10.1038/s41586-019-1666-5.
+[2]  C.  Neill,  P.  Roushan,  K.  Kechedzhi,  S.  Boixo,  S.  V.  Isakov,  V.  Smelyanskiy,  A.  Megrant,B.  Chiaro,  A.  Dunsworth,  K.  Arya,  R.  Barends,  B.  Burkett,  Y.  Chen,  Z.  Chen,  A.  Fowler,B. Foxen, M. Giustina, R. Graff, E. Jeffrey, T. Huang, J. Kelly, P. Klimov, E. Lucero, J. Mu-tus,  M.  Neeley,  C.  Quintana,  D.  Sank,  A.  Vainsencher,  J.  Wenner,  T.  C.  White,  H.  Neven,and J. M. Martinis.  A blueprint for demonstrating quantum supremacy with superconductingqubits.Science, 360(6385):195–199, 2018.doi:10.1126/science.aao4309.
+[3]  Sergio Boixo, Sergei V. Isakov, Vadim N. Smelyanskiy, Ryan Babbush, Nan Ding, Zhang Jiang,Michael J. Bremner, John M. Martinis, and Hartmut Neven. Characterizing quantum supremacyin near-term devices.Nat. Phys., 14(6):595–600, 2018.doi:10.1038/s41567-018-0124-x.
+
+
+
+
+
