@@ -72,6 +72,13 @@ We obtaing a gif animation on how the speckle pattern changes as the random loca
 Usage:
 > julia  run_random_circuitTASK3.jl  num_qubits
 
+The goal of this task is to show how the distribution of the probability amplitudes of the output state converge to the exact CDF distribution (dotted lines) as the random circuit is made deeper. In order to do this and for each depth we:
+
+  * Generate a random quantum circuit of specified depth and number of qubits.
+  * Calculate the ideal CDF distribution.
+  * Calculate the probability distributions for the output state of the random circuit.
+  * Plot and save. 
+
 The code used to solve this task can be found [here](../src/run_random_circuitTASK3.jl)
 
 Result:
