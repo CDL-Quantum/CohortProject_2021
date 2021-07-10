@@ -6,14 +6,16 @@ As with other quantum sampling problems like [boson sampling](https://en.wikiped
 
 ## Step 1: Explain the technical problem you solved in this exercise
 
-Problem: Alice (the message sender) wants to send a secret key (binary numbers) to Bob (the message receiver) without being eavesdropped on by Eve (the eavesdropper).  
+Problem: Alice (the message sender) wants to send a secret key (binary numbers) to Bob (the message receiver) without being eavesdropped on by Eve (the eavesdropper). 
+
+Solution: 
 <img width="1018" alt="Screen Shot 2021-07-08 at 8 38 32 PM" src="https://user-images.githubusercontent.com/87050306/125159514-d8a43300-e1b2-11eb-8507-13aa8448e3f0.png">
 <img width="1024" alt="Screen Shot 2021-07-08 at 8 38 20 PM" src="https://user-images.githubusercontent.com/87050306/125159519-df32aa80-e1b2-11eb-89e6-eccfbfa62a86.png">
 
 
 ## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
 
-Example: A courier has to deliver parcels to several locations and is looking to minimize its travel time. (e.g., “the travelling salesman problem”).
+For example, one-time-pads (OTPs) can be sent to online banking users using the secure communication protocol suggested in this report. This protocol can be used by any individuals, companies, governments, and militaries demanding high-level communication security. 
 
 ## Step 3: Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved
 
