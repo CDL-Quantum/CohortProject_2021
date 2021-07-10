@@ -38,7 +38,7 @@ from two gates used to control in Ion Trap quantum computers: a single-qubit rot
 gate which is the source of entanglement among the qubits of the system.
 
 ### 1.1 Simulations in Julia and Python 
-[This notebook](../Week1_Trapped_Ions/solutions_python.ipynb) contains the performed analysis.
+[This notebook](../Week1_Trapped_Ions/solution_julia.ipynb) contains the performed analysis.
 First, we implemented the rotation gates and sampled output from the quantum circuit to obtain a random distribution.
 Next, we observed that by slightly perturbing the circuit with a single bit-flip in a random location, 
 the probability distribution substantially changes, exhibiting the expected chaotic behavior. 
