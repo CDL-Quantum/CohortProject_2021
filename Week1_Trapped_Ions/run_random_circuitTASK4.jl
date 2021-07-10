@@ -34,9 +34,7 @@ function run(N, depth, err)
         two_qubit_layer = Tuple[]
 
         for j in 1:N
-            teta=2pi*rand()
-            pii=2pi*rand()
-            gate = ("R", j, (theta=teta, phi=pii))
+            gate = ("R", j, (theta=2pi*rand(), phi=2pi*rand()))
             push!(one_qubit_layer, gate)
         end
 
@@ -52,7 +50,6 @@ function run(N, depth, err)
         push!(gates, two_qubit_layer)
 
     end
-
     psi = runcircuit(N, gates)
 end
 
@@ -79,23 +76,28 @@ end
 N = parse(Int, ARGS[1])
 depth = parse(Int, ARGS[2])
 
+#run ideal case
+psi = run(N,depth,0)
+probs_ideal = task_4(psi,N)
 
-errs = [0.0:0.02:0.1;]
-shots = 10^7
+errs = [0.0:0.01:0.1;]
+shots = 10^6
 FXEB = []
+#run circuits with errors
 for i in errs
-    print("\n",i)
     psi = run(N, depth, i)
     probs = task_4(psi,N)
     samps = []
+    #sample bitstrings from circuit
     for j in 1:shots
-        samp = StatsBase.sample(probs,Weights(probs))
-        push!(samps,samp)
+        samp = StatsBase.sample(Weights(probs))
+        #record ideal probability of that bitstring
+        push!(samps,probs_ideal[samp])
     end
     print("\n",sum(samps))
     push!(FXEB,2^N*mean(samps)-1)
 end
 #plot and save
-plot(errs, FXEB, linewidth=2)
+plot(errs, FXEB, linewidth=2,labels="FXEB")
 png("FXEB")
 
