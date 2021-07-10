@@ -1,6 +1,6 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
-# Quantum Cohort Project Week 1 Business Application \ 
-Simulating quantum advantage with trapped ions
+# Quantum Cohort Project Week 1 Business Application
+# Simulating quantum advantage with trapped ions
 
 ## Summary of the technical problems solved in the exercise
 
