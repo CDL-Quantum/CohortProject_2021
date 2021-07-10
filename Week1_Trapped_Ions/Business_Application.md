@@ -63,7 +63,7 @@ with the latter programming language. For implementing the circuit and performin
 
 ![CDL 2020 Cohort Project](../Week1_Trapped_Ions/img/ionq.jpg)
 
-
+We use state of the art technology by connecting the IonQ trapped ion computer over the cloud. We've built a highly portable and scalable NodeJs repository [found here](./ionq-implementation/README.md) which can run quantum circuits on their machines and generate inference plots by connecting to their API. We can easily extend the repository to power our business, generating low latency and authentic random distributions at the click of a button.
 
 
 ## 2. Real-world problems which can be approached with Quantum Random Circuits
