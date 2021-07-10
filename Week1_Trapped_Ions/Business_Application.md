@@ -1,12 +1,9 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 # Quantum Cohort Project Week 1 Business Application: Simulating quantum advantage with trapped ions
 
-A brief example for each question is included for the 
-[Traveling Salesman Problem.](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+## Summary of the technical problems solved in the exercise
 
-## Step 1: Explain the technical problem you solved in this exercise
-
-Example: Finding a global minimum in settings where a classical approach may not be able to find a global minimum.
+One of the possible foundation for gate-based quantum computers are trapped ions.
 
 ## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
 
