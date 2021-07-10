@@ -61,7 +61,7 @@ In tasks 1 and 2 we display the probability distribution (in the form of the lin
 
 
 ## Bonus Task 4: Using different definitions of Fidelity & Cross Entropy
-
+Another approach to determine the quality of the results is to look at the linear XEB fidelity, $F_{XEB}$.  Here we plot it as a function of a delta theta which is imposed to simulate systematic error. 
 
 ### Bonus: Implement the circuit on a real trapped ion computer
 
