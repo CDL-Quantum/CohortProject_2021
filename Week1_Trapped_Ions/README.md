@@ -47,8 +47,11 @@ And checkout out this heatmap displaying the random probabilities:
 
 ### Task 3: Convergence of the Emprical CDF of P(x) (probability distribution for each state PSI can take)
 
-\large e^{i\pi} = -1
+In tasks 1 and 2 we display the probability distribution (in the form of the line histogram or speckle patterns) for the probabilities of each of the 2^N states that PSI can take. The true distribution of these probabilities is given by the Porter-Thomas distribution (an exponential distribution). For Task 3, we plotting the probabilities distribitions for the Psi states we sampled v.s increasing depth. The tend towards the true distribution as the depth increasing- however you can see that the largest differences occur for small probabilities. 
 
+![Emprical Distribution of Psi](../Week1_Trapped_Ions/task3_1.png)
+
+![Emprical Distribution of Psi](../Week1_Trapped_Ions/task3_1.png)
 
 
 ### Task 4: Studying the Linear Fidelity
