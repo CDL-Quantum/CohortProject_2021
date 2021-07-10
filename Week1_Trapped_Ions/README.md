@@ -14,7 +14,7 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 
 ## Summary of Results
 ### [Task 3](./Task3.ipynb):
-<img align = "center" src = "./figures/task3_result.png" />
+<img align = "right" src = "./figures/task3_result.png" />
 
 ## Further Challenges:
 * Animate your speckle pattern.
