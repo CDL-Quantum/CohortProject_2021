@@ -1,5 +1,5 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
-# Quantum Cohort Project Business Application
+# Week1: Quantum Cohort Project Business Application of Random Circuit Sampling
 
 For each weekly project, your team is asked to complete the below business application exercise.
 To complement the technical tasks, please consdier the four questions below.
