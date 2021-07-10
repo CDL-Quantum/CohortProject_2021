@@ -10,8 +10,19 @@ function BinaryToDecimal(M,N)
     return idx
 end
 
+# From sampling of state to Decimal representation vector
+function execute(ψ,N,shots,basis)
+    #=
+    basis (Str) = "X", "Y", or "Z" basis for the projective measurement
+    =#
+    data = getsamples(ψ, shots ,local_basis=[basis])
+    B = last.(data)
+    C = BinaryToDecimal(B,N)
+    return C
+end
+
 # Get Probabilities dictionary
-function get_probabilities(N,qc,shots)
+function get_probabilities(N,qc)
     #= 
     N = number of qubits
     qc = Result of the quantum circuit, i.e. outcome of execute() 
@@ -36,15 +47,4 @@ function get_probabilities(N,qc,shots)
     end
     
     return sort(Prob)
-end
-
-# From sampling of state to Decimal representation vector
-function execute(ψ,N,shots,basis)
-    #=
-    basis (Str) = "X", "Y", or "Z" basis for the projective measurement
-    =#
-    data = getsamples(ψ, shots ,local_basis=[basis])
-    B = last.(data)
-    C = BinaryToDecimal(B,N)
-    return C
 end
