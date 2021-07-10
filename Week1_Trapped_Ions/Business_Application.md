@@ -3,7 +3,7 @@
 
 ## Summary of the technical problems solved in the exercise
 
-One of the possible foundation for gate-based quantum computers are trapped ions.
+One of the possible foundations for gate-based quantum computers is trapped ions. Here, we followed Google's notable demonstration of quantum computational advantage to simulate random circuits sampling for an ion-trap quantum computer. The performance of the current quantum computers is limited by noise and decoherence, so, to account for that, we introduced errors in the individual gates. 
 
 ## Examples of real-world business applications built around sampling-based quantum computing with random curcuits
 
