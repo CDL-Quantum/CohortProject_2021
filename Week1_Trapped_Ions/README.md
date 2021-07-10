@@ -62,11 +62,9 @@ As mentioned in the bonus task for task 1, for our final task we studied the how
 
 ## Bonus Task 4: Using different definitions of Fidelity & Cross Entropy
 
-In [2], the authors use different definitions for fidelity and cross entropy. We decided to try to replicate these formulas to see how they would look with the data we had. Close to 0 perturbation the fidelity and cross entropy are close to one- but they then seem to exhibit a strange randomness as the we increase the perturbation. 
+In [2], the authors use a different definition for the cross entropy. We decided to try to replicate these formulas to see how they would look with the data we had. Close to 0 perturbation the cross entropy is 1 and then grows as we increse the perturbation. The data is also alot more random, compared to the linear fidelity plot showed earlier. It is interesting to see that the linear fidelity and the cross entropy exhibit the opposite behaviour- the linear fidelity shrinks towards zero as we increase the perturbation, while the cross entropy grows to be greater than 1 as the perturbation increases. 
 
 ![Cross Entropy](../Week1_Trapped_Ions/img/task4_2.png)
-
-![Fidelity](../Week1_Trapped_Ions/img/task4_3.png)
 
 
 ### Bonus: Implement the circuit on a real trapped ion computer
