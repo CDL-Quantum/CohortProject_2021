@@ -76,7 +76,7 @@ The goal of this task is to show how the distribution of the probability amplitu
 
   * Generate a random quantum circuit of specified depth and number of qubits.
   * Calculate the ideal CDF distribution.
-  * Calculate the probability distributions for the output state of the random circuit.
+  * Calculate the ECDF probability distributions of the output state of the random circuit.
   * Plot and save. 
 
 The code used to solve this task can be found [here](../src/run_random_circuitTASK3.jl)
