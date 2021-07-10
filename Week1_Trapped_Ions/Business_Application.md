@@ -59,9 +59,11 @@ We also provide a [python notebook](../Week1_Trapped_Ions/solutions_python.ipynb
 with the latter programming language. For implementing the circuit and performing the simulation and analysis we used 
 [Cirq](https://quantumai.google/cirq), the quantum circuit library developed by Google AI. 
 
-###1.2 Implementation on a real ion-trap architecture: IonQ
+### 1.2 Implementation on a real ion-trap architecture: IonQ
 
 ![CDL 2020 Cohort Project](../Week1_Trapped_Ions/img/ionq.jpg)
+
+
 
 
 ## 2. Real-world problems which can be approached with Quantum Random Circuits
