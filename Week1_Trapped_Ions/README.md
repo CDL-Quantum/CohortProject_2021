@@ -25,7 +25,7 @@ All solution in Julia can be found in [this notebook](./solution_julia.ipynb). W
 
 ### Task 1: Plot the probability of each bit string for various circuit widths and depths
 
-We implemented the rotation gates and sampled the outputs from the quantum circuit to obtain a random distribution of bit string probabilities. In the Julia implementation, we chose to test combinations of 4, 8, 12 qubits with varying depths of 1, 256 and 512 gates. We generated speckle patterns of each combination which is shown here in the following figure.
+We implemented the rotation gates and sampled the outputs from the quantum circuit to obtain a random distribution of bit string probabilities. In the Julia implementation, we chose to test combinations of 4, 8, 12 qubits with varying depths of 1, 256 and 512 gates. We generated speckle patterns of each combination which is shown here in the following figure. *Note: these speckle patterns are normalized.*
 
 ![Task 1: Speckle Patterns](./img/task-1-speckle-patterns.svg)
 
