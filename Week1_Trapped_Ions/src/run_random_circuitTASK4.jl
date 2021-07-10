@@ -77,8 +77,8 @@ N = parse(Int, ARGS[1])
 depth = parse(Int, ARGS[2])
 
 # run ideal case
-psi = run(N, depth, 0)
-probs_ideal = task_4(psi, N)
+ideal_psi = run(N, depth, 0)
+probs_ideal = task_4(ideal_psi, N)
 
 errs = [0.0:0.01:0.1;]
 shots = 10^6
