@@ -1,10 +1,10 @@
 /**
  * Plots the probability histograms of a job on the IonQ machine via their API through the CLI. 
  * Make sure you are in the scripts folder:
- * > node plot-job-histogram.run.js --id [STRING]
+ * > node analyze-job.run.js --id [STRING]
  * 
  * For example:
- * > node plot-job-histogram.run.js --id 4d751fc4-5652-492b-8199-f67e201782dd
+ * > node analyze-job.run.js --id 4d751fc4-5652-492b-8199-f67e201782dd
  */
 
  import yargs from 'yargs'
