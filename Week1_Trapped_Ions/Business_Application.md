@@ -161,3 +161,8 @@ Companies in this sector are (revenue in USD):
   - Rosebud AI (10-25 mln, expected)
   - UneeQ (8 mln)
   - Jibo (3 mln)
+
+
+
+https://user-images.githubusercontent.com/7820224/125178050-eb5c3f00-e195-11eb-8467-40f20476473a.mp4
+
