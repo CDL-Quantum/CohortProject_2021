@@ -64,7 +64,7 @@ As mentioned in the bonus task for task 1, for our final task we studied the how
 
 In [2], the authors use a different definition for the cross entropy. We decided to try to replicate these formulas to see how they would look with the data we had. Close to 0 perturbation the cross entropy is 1 and then grows as we increse the perturbation. The data is also alot more random, compared to the linear fidelity plot showed earlier. It is interesting to see that the linear fidelity and the cross entropy exhibit the opposite behaviour- the linear fidelity shrinks towards zero as we increase the perturbation, while the cross entropy grows to be greater than 1 as the perturbation increases. 
 
-![Cross Entropy](../Week1_Trapped_Ions/img/task4_2.png)
+![Cross Entropy](../Week1_Trapped_Ions/img/tas4_2.png)
 
 
 ### Bonus: Implement the circuit on a real trapped ion computer
