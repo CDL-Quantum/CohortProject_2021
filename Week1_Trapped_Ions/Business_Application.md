@@ -31,8 +31,6 @@ However, quantum random circuits provide a way to certify the generated random n
 quantum random circuit, the generated random bitsrings have high associated probabilities and that the linear cross-entropy
 fidelity, <img src="https://render.githubusercontent.com/render/math?math=F_{XEB}">:
 
-$ F_{XEB}$
-
 <p style="text-align: center;"><img src="https://render.githubusercontent.com/render/math?math=F_{XEB}=2^N<P>-1"></p>
 
 is high enough. The verified bitstrings can then be concatenated and hashed to obtain a certified true random bitstring.
