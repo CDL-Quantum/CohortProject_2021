@@ -27,6 +27,10 @@ It's clear that for small depth the entanglement entropy starts rather small and
 
 ![Entanglement Entropy with Increasing Qubit number](../Week1_Trapped_Ions/img/bonus4.png)
 
+We also looked at how bond dimension (the max rank of the MPS) increased with the depth of the circuit. We did this for a large number of qubits since the bond dimension does not change much for smaller MPS's. 
+
+![Bond Dimension](../Week1_Trapped_Ions/img/bonus_dim.png)
+
 ### Task 2: Adding random bit flip errors
 
 We modified the circuits in the notebooks to randomly generate bit flip errors. We demonstrate that this substantially changes the probability distributions by plotting the speckle patterns for 9 different iterations. This yields completely random distributions which is shown in the following animation:
