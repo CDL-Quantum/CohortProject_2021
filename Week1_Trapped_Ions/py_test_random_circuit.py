@@ -67,16 +67,31 @@ def run(N, depth):
 
     sim = cirq.Simulator()
 
-    result = sim.run(circuit, repetitions=100)
+    result = sim.run(circuit, repetitions=10000)
 
     # print('Results:')
     # print(result)
     return qreg, circuit, result
 
 
+def calculate_probs(result, x):
+    df = result.data
+    for c in df.columns:
+        df['b' + c] = df[c]*2**int(c)
+        df.drop(c, axis=1)
+
+    df['sum_all'] = df[df.columns[-N:]].sum(axis=1)
+
+    all_nums = range(2**N)
+    hist = [(i, df[df['sum_all'] == i].shape[0]) for i in range(2**N)]
+    probs = [(i, df[df['sum_all'] == i].shape[0]/df.shape[0]) for i in range(2**N)]
+    prob = probs[x][1]
+    return prob
+
+
 if __name__ == "__main__":
     # basic run of the random circuit
-    np.random.seed(123)
+    np.random.seed(1234)
     N = 4
     depth = 3
 
@@ -102,9 +117,9 @@ if __name__ == "__main__":
         # result = run(N, depth, sigma_x=True)
         _ = cirq.vis.plot_state_histogram(result, ax[i,j])
 
-    # Test different depths
+    # Test different convergence to exponential
     N = 8
-    depths = [2**n for n in range(8)]
+    depths = [2**n for n in range(N)]
     n_sims = len(depths)
     n_pl = int(np.ceil(np.sqrt(n_sims)))
     fig2, ax2 = plt.subplots(n_pl, n_pl)
@@ -116,3 +131,25 @@ if __name__ == "__main__":
 
         qreg, circuit, result = run(N, depths[x])
         # _ = cirq.vis.plot_state_histogram(result, ax2[i, j], title=f"depth={depths[x]}")
+
+        df = result.data
+        for c in df.columns:
+            df['b' + c] = df[c] * 2 ** int(c)
+            df.drop(c, axis=1)
+
+        df['sum_all'] = df[df.columns[-N:]].sum(axis=1)
+
+        all_nums = range(2 ** N)
+        hist = [df[df['sum_all'] == i].shape[0] for i in range(2 ** N)]
+        # hist = [(i, df[df['sum_all'] == i].shape[0]) for i in range(2 ** N)]
+        probs = [df[df['sum_all'] == i].shape[0] / df.shape[0] for i in range(2 ** N)]
+
+        values, base = np.histogram(probs, bins=100)
+
+        cumulative = np.cumsum(values)/2**N
+
+        # plot the cumulative function
+        ax2[i,j].semilogx(base[:-1], cumulative)
+        ax2[i,j].plot(base[:-1], [(1 - np.exp(-pow(2, N) * p)) for p in base[:-1]], label='Porter-Thomas')
+        ax2[i,j].set_title(f"depth={depths[x]}")
+
