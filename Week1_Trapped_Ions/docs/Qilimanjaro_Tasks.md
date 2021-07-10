@@ -86,6 +86,15 @@ Usage:
 
 The code used to solve this task can be found [here](../src/run_random_circuitTASK4.jl)
 
+The goal of this task is to obtain the cross-entropy benchmarking fidelity (FXEB) to observe how much the sampled probabilities of the random circuit deviate form the ideal Porter-Thomas distribution as we increase a systematic error present in the two-qubit gates. In order to do this and for each value of error we:
+
+  * Generate a random quantum circuit with an specified depth, number of qubits *N* and error. 
+  * Calculate the probability amplitudes of the random circuit with error.
+  * Calculate the probability amplitudes of the same circuit but with no error.
+  * For a given sample size, sample bitstring probabilities from the noisy circuit.
+  * Average over the sample size the ideal probabilities of the sampled bistrings from the random circuit.
+  * Calculate FXEB, plot against error and save.
+
 Result:
 
 ![FXEB](./images/FXEB.png)
