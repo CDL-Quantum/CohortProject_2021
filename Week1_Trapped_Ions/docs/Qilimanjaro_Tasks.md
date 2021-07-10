@@ -32,11 +32,11 @@ Results:
 
 **N=5, depth=12**
 
-![N=4,depth=12](./images/Speckle512.png)
+![N=5,depth=12](./images/Speckle512.png)
 
-**N=5, depth=12**
+**N=6, depth=12**
 
-![N=4,depth=12](./images/Speckle612.png)
+![N=6,depth=12](./images/Speckle612.png)
 
 *Bonus*:
 The bond dimension of the MPS increases as the random circuit is made deeper. The entanglement entropy is bounded by the bond dimension, so larger bond dimensions will allow for the presence of higher entanglement entropy. 
