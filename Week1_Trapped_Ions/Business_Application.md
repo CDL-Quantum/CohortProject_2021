@@ -7,7 +7,7 @@
 ## 1. Quantum random circuits
 
 A random quantum circuit is a random unitary operator (or gate) applied to a qubit system. Generally, this unitary gate 
-can be built as the product of single- and multi-qubit unitary gates. Below is a simple 3 qubit circuit printed from Cirq. 
+can be built as the product of single and multi-qubit unitary gates. Below is a simple 3 qubit circuit printed from Cirq. 
 
 ![CDL 2020 Cohort Project](../Week1_Trapped_Ions/img/simple_circuit.png)
 
@@ -16,7 +16,7 @@ In particular, random circuits can be used to approximate the probability distri
 data from the approximated distribution. The closeness between the two distributions can be calculated by means of 
 standard statistical metrics, such as the Kullback–Leibler (KL) divergence.
 
-In 2018, Google proved that the sampling from quantum random circuits composed of 1- and 2-qubit gates 
+In 2018, Google proved that the sampling from quantum random circuits composed of 1 and 2-qubit gates 
 outperforms the same task done on a classical computer ([Arute et al.](https://www.nature.com/articles/s41586-019-1666-5)). 
 Thus, Quantum Random Circuits clearly provide an advantage with respect to classical computers in producing samples 
 based on a random distribution. 
