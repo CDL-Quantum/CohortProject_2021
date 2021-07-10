@@ -61,6 +61,7 @@ with the latter programming language. For implementing the circuit and performin
 
 ###1.2 Implementation on a real ion-trap architecture: IonQ
 
+![CDL 2020 Cohort Project](../Week1_Trapped_Ions/img/ionq.jpg)
 
 
 ## 2. Real-world problems which can be approached with Quantum Random Circuits
