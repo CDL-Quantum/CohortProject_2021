@@ -13,6 +13,8 @@ One of the possible foundations for gate-based quantum computers is trapped ions
 
 **- Business Analytics, sampling from big populations**
 
+**- Online casinos, for marketing purposes**
+
 ## Potential cusomers in these areas
 
 Examples: 
