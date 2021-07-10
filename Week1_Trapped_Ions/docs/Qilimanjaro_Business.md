@@ -9,6 +9,8 @@ Random quantum circuits have been widely implemented in superconducting qubit ch
 
 In randomized benchmarking a random circuit composed of one- and two-qubit Clifford gates is concatenated with its reverse (conjugate transpose) to an initial state with all qubits in the 0 (or down) state. In the absence of errors, this effectivly applies a random quantum operation to the qubits and undoes it afterwards. The consequence of this is that the final state is equal to the initial one. However, if errors happen the initial and final state are not the same. Under this framweork, sampling the output state probabilities of random circuits of different depths gives information on the present errors. 
 
+<img src="./images/randbench.png" width="500">
+
 ## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
 
 
