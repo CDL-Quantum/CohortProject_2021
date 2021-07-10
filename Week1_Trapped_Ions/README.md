@@ -5,7 +5,7 @@ This project will guide you through the recent Google quantum supremacy result, 
 
 ## Solutions
 
-All solution in Julia can be found in [this notebook](./solution_julia.ipynb). We've also created an analogous [notebook](./solutions_python.ipynb) in python in for those who are more familiar the language.
+All solution in Julia can be found in [this notebook](./solution_julia.ipynb). We've also created an analogous [notebook](./solutions_python.ipynb) in python in for those who are more familiar the language. If you're interested in the full instructions for the tasks we completed, check out the [pdf](./instructions.pdf). 
 
 ### Task 1: Plot the probability of each bit string for various circuit widths and depths
 
@@ -15,9 +15,17 @@ We implemented the rotation gates and sampled the outputs from the quantum circu
 
 ## Bonus Task 1: Investegating Entaglement Entropy with MPS index
 
+Later in task 4, we investigate the cross entropy between the true state psi, and a perturbed state. In the bonus for task 1 however, we studied a different kind of entropy- the Von Neumman (Entanglement) Entropy. We decided to see how the entanglement entropy varies as you look at different indices of the MPS (Matrix Product State) of PSI. We varied both the depth and the Number of qubits to see what would happen. Here are the plots for different depths:
 
+![Entanglement Entropy with Increasing Circuit Depth](../Week1_Trapped_Ions/img/bonus1.png)
 
+![Entanglement Entropy with Increasing Circuit Depth](../Week1_Trapped_Ions/img/bonus2.png)
 
+It's clear that for small depth the entanglement entropy starts rather small and then falls off- while for increasing depth the initial entropy is larger and then falls off as we get to the 'end' of the MPS (the last index). This makes sense, as we increase the depth we are hitting more 'M' gates which further entangle our qubits- leading to a larger Von Neumann entropy for the state Psi. It is interesting that the largest entropy is captured in the first few indices of the MPS. For varying number of qubits the plots look very similar:
+
+![Entanglement Entropy with Increasing Qubit number](../Week1_Trapped_Ions/img/bonus3.png)
+
+![Entanglement Entropy with Increasing Qubit number](../Week1_Trapped_Ions/img/bonus4.png)
 
 ### Task 2: Adding random bit flip errors
 
@@ -49,7 +57,7 @@ And checkout out this heatmap displaying the random probabilities:
 
 
 
-
+## Bonus Task 4: Using different definitions of Fidelity & Cross Entropy
 
 
 ### Bonus: Implement the circuit on a real trapped ion computer
