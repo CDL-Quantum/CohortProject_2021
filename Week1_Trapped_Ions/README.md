@@ -3,22 +3,6 @@
 
 This project will guide you through the recent Google quantum supremacy result, and its possible implementation using near-term quantum computers built with trapped ions.
 
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week1_Trapped_Ions/instructions.pdf) to begin learning about your tasks for this week!
-
-Please edit this markdown file directly with links to your completed tasks and challenges.  
-
-## Tasks include:
-* Simulating a random circuit with a Matrix Product State code, and producing a speckle pattern.
-* Adding a single bit-flip error and exploring the change in the speckle pattern.
-* Exploring convergence of the Porter-Thomas Distribution.
-* Exploring the effect of 2-qubit gate errors.
-* Describe a business that could be build around random circuits.  (See below Business Application)
-
-## Further Challenges:
-* Animate your speckle pattern.
-* Reproduce the Google cross entropy results.
-* Implement this circuit on a real trapped ion computer!
-
 ## Solutions
 
 All solution in Julia can be found in [this notebook](./solution_julia.ipynb). We've also created an analogous [notebook](./solutions_python.ipynb) in python in for those who are more familiar the language.
@@ -29,7 +13,11 @@ We implemented the rotation gates and sampled the outputs from the quantum circu
 
 ![Task 1: Speckle Patterns](./img/task-1-speckle-patterns.svg)
 
-<span style="color:red">Eli can you please add the bonus to q1 here too?</span>
+## Bonus Task 1: Investegating Entaglement Entropy with MPS index
+
+
+
+
 
 ### Task 2: Adding random bit flip errors
 
@@ -49,9 +37,20 @@ And checkout out this heatmap displaying the random probabilities:
 
 ![Heatmap](../Week1_Trapped_Ions/tutorial_heatmap_anim.gif)
 
-### Task 3:
+### Task 3: Convergence of the Emprical CDF of P(x) (probability distribution for each state PSI can take)
 
-### Task 4:
+
+
+
+
+### Task 4: Studying the Linear Fidelity
+
+
+
+
+
+
+
 
 ### Bonus: Implement the circuit on a real trapped ion computer
 
@@ -83,12 +82,9 @@ Which can be compared to the true Porter-Thomas distribution shown here:
 
 ![QPU CDF](../Week1_Trapped_Ions/img/simulator-true-cdf-deep.png)
 
-## Business Application
-For each week, your team is asked to complete a Business Application. Questions you will be asked are:
 
-* Explain to a layperson the technical problem you solved in this exercise.
-* Explain or provide examples of the types of real-world problems this solution can solve.
-* Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved.
-* Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
+## Business Application
 
 For more details refer to the [Business Application found here](./Business_Application.md)
+
+## References
