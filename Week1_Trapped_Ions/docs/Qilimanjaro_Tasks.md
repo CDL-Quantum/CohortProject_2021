@@ -1,9 +1,9 @@
-![CDL 2021 Cohort Project](logo.jpg)
+![CDL 2021 Cohort Project](./images/logo.jpg)
 # Project 1: Quantum Advantage with Trapped Ions 
 
 ## Task 1:
 
-The code used to solve this task can be found [here](run_random_circuitTASK1.jl)
+The code used to solve this task can be found [here](../src/run_random_circuitTASK1.jl)
 
 Usage:
 > julia  run_random_circuitTASK1.jl  num_qubits circuit_depth
@@ -20,29 +20,29 @@ Results:
 
 **N=4, depth=4**
 
-![N=4,depth=4](Speckle44.png)
+![N=4,depth=4](./images/Speckle44.png)
 
 **N=4, depth=8**
 
-![N=4,depth=8](Speckle48.png)
+![N=4,depth=8](./images/Speckle48.png)
 
 **N=4, depth=12**
 
-![N=4,depth=12](Speckle412.png)
+![N=4,depth=12](./images/Speckle412.png)
 
 **N=5, depth=12**
 
-![N=4,depth=12](Speckle512.png)
+![N=4,depth=12](./images/Speckle512.png)
 
 **N=5, depth=12**
 
-![N=4,depth=12](Speckle612.png)
+![N=4,depth=12](./images/Speckle612.png)
 
 *Bonus*:
 
 ## Task 2:
 
-The code used to solve this task can be found [here](run_random_circuitTASK2.jl)
+The code used to solve this task can be found [here](../src/run_random_circuitTASK2.jl)
 
 Usage:
 > julia  run_random_circuitTASK2.jl  num_qubits circuit_depth num_realisations
@@ -59,15 +59,27 @@ Result:
 
 **N=4, depth=5, rel=6**
 
-![N=4,depth=5,rel=6](Speckle_collage.png)
+![N=4,depth=5,rel=6](./images/Speckle_collage.png)
 
 ## Task 3: 
 
-The code used to solve this task can be found [here](run_random_circuitTASK3.jl)
+Usage:
+> julia  run_random_circuitTASK3.jl  num_qubits
+
+The code used to solve this task can be found [here](../src/run_random_circuitTASK3.jl)
 
 Result:
 
-![CDF](CDF.png)
+![CDF](./images/CDF.png)
 
 
 ## Task 4:
+
+Usage:
+> julia  run_random_circuitTASK4.jl  num_qubits circuit_depth
+
+The code used to solve this task can be found [here](../src/run_random_circuitTASK4.jl)
+
+Result:
+
+![FXEB](./images/FXEB.png)
