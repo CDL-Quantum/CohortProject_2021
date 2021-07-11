@@ -42,11 +42,7 @@ For the US, each state is governed by different regulations. As a result, agenci
 
 ## Presentation of the value proposition of our innovation to the potential customer
 
-<!-- blank line -->
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/CEDotbqWZpM" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-<!-- blank line -->
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=CEDotbqWZpM "CDL Cohort 2021 Week 1 Group 4")
 
 
 [id1]: https://www.forbes.com/sites/davidschwartz/2018/06/04/how-casinos-use-math-to-make-money-when-you-play-the-slots/?sh=ecd88ae94d09
