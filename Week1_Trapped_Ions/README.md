@@ -50,7 +50,7 @@ In task 4, we invesitg the effect of systematic error (i.e. systematic error in 
   <figcaption> <b>Fig.4</b> Cross entropy benchmarking fidelity as a function of systematic error in two-qubit gates for random quantum circuits with severl circuit depth. </figcaption>
 </figure>
 <br></br>
-If the XEB fidelity, the probability distribution is uniform and hence it is easy to simulate classically, meaning that the quantum supremacy diminishes. Thus it is extremely important to suppress noise as much as possible to keep XEB non-zero while increasing the quantum circuit size. 
+If the XEB fidelity is zero, the probability distribution is uniform and hence it is easy to simulate classically. This means that the quantum supremacy diminishes. Therefore it is extremely important to suppress noise as much as possible to keep XEB non-zero while increasing the quantum circuit size. 
 
 ## Business Application
 An interesting application of random circuit sampling addressed in this cohort project is secure communication. The communication protocol can be used by any individuals, companies, governments, and militaries demanding high-level communication security. We provide more detailed description about the business application [here](./Business_Application_Team23.md)
