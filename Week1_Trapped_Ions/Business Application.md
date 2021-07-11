@@ -20,7 +20,7 @@ It turns out that the probability distributions obtained in this way display a c
 >The production of certifiable randomness based on the evaluation of random quantum circuits can be of interest for different industrial and commercial activities that rely on the assumption that certain bit strings are truly random.
  
 
-## Potential customers for the utilization of our solution approach:
+## Potential customers for the utilization of our solution approach
 There is an important sector of private and public institutions and organizations which carry out several activities that rely on the use of certified randomness. Among them, one can find security, defense, research, commerce and testing of products. In particular, the game industry makes use of random number generators.
 
 As expected, the number of targeted attacks and breaches against gaming machines and applications increases with time, given that the development of computing technologies and algorithms offer new tools for eventual hackers to break in. In this context, Pseudo Random Number Generators (PRNGs) find increasing challenges in the task of fulfilling the security requirements of the gaming industry. This observation also holds true for the security industry, which is of interest for political and governmental organizations.
