@@ -2,6 +2,7 @@ import numpy as np
 import tncontract as tn
 import qutip as qt
 
+from copy import deepcopy
 
 """
 Single-qubit gates
@@ -171,3 +172,36 @@ def bit_flip_layer(p, n_sites):
         [x_error if error_site else id_tensor for error_site in np.random.binomial(1, p, n_sites)]
     )
 
+
+"""
+Circuit tools
+"""
+
+
+def random_circuit(psi, n_qubits, cct_depth):
+    """
+    Apply a random circuit to a quantum state.
+    """
+    for j in range(cct_depth//2):
+        # Random single-qubit and two-qubit gate layer.
+        one_qubit_layer = random_single_qubit_gate_layer(n_qubits)
+        two_qubit_layer = random_two_qubit_gate_ladder(n_qubits)[np.mod(j, 2)]
+        # Apply single-qubit gate layer.
+        psi = tn.onedim.contract_mps_mpo(psi, one_qubit_layer)
+        psi.left_canonise(chi=None)
+        # Apply two-qubit gate layer.
+        psi = tn.onedim.contract_mps_mpo(psi, two_qubit_layer)
+        psi.left_canonise(chi=None)
+        return psi
+
+
+def output_probabilities(psi):
+    """
+    Extract the probabilities for obtaining each output of a quantum circuit.
+    """
+    psi_copy = deepcopy(psi)
+    psi_copy.left_canonise(normalise=True)
+    psi_vec = tn.onedim.contract_virtual_indices(psi_copy)
+    psi_vec.fuse_indices('physout', 'physout')
+    probs = abs(psi_vec.data.reshape(-1, 1)) ** 2
+    return probs
