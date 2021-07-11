@@ -20,12 +20,10 @@ Please edit this markdown file directly with links to your completed tasks and c
 * Implement this circuit on a real trapped ion computer!
 
 
-## Business Application
-For each week, your team is asked to complete a Business Application. Questions you will be asked are:
+## Project submission
+* In the [collected](https://github.com/edenian/CohortProject_2021/tree/main/Week1_Trapped_Ions/collected) folder you can find our solutions.
+* We have also added several [helper functions](https://github.com/edenian/CohortProject_2021/tree/main/Week1_Trapped_Ions/collected/task_functions.jl).
+* Additionally, we have also made a [pennylane implementation for task 1 and 2](https://github.com/edenian/CohortProject_2021/blob/main/Week1_Trapped_Ions/supremacy_pennylane.ipynb)
+* Our business proposal [video](https://drive.google.com/file/d/14un0QcZAPzFebu80yCkA4NXwRZUjdDI_/view?usp=sharing) and accompanying [slide deck](https://drive.google.com/file/d/1PaEO5x007ML564jlR8ytTPmc7rERudiU/view?usp=sharing)
 
-* Explain to a layperson the technical problem you solved in this exercise.
-* Explain or provide examples of the types of real-world problems this solution can solve.
-* Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved.
-* Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
 
-For more details refer to the [Business Application found here](./Business_Application.md)
