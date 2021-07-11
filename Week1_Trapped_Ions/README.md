@@ -43,16 +43,14 @@ In task 3, we examine whether the samping probability distribution of the random
 
 ### [Task 4](./Task4.ipynb): Effect of gate error on the cross entropy benchmarking fidelity
 
+In task 4, we invesitg the effect of systematic error (i.e. systematic error in two-qubit gates) on the cross entropy benchmarking (XEB) fidelity. Our study shows that as the error rate increases, the XEP fidelity quickly decays to zero. In the figure below, we plot the XEB fidelity as a function of the varying degree of the two-qubit gate parameter (which corresponds to the amount of error), and we plot several curves for different quantum circuit depth. Of course, increasing the quantum circuit depth increases the amount of error, and hence the decay rate with respect to the degree of error in the two-qubit rotation.
+
 <figure class="image">
   <img width="400" src = "./figures/task4_result.png" />
-  <figcaption> <b>Fig.4</b> Cross entropy benchmarking fidelity as a function of systematic error in the two-qubit gate. </figcaption>
+  <figcaption> <b>Fig.4</b> Cross entropy benchmarking fidelity as a function of systematic error in two-qubit gates for random quantum circuits with severl circuit depth. </figcaption>
 </figure>
 
-## Further Challenges:
-* Animate your speckle pattern.
-* Reproduce the Google cross entropy results.
-* Implement this circuit on a real trapped ion computer!
-
+If the XEB fidelity, the probability distribution is uniform and hence it is easy to simulate classically, meaning that the quantum supremacy diminishes. Thus it is extremely important to suppress noise as much as possible to keep XEB non-zero while increasing the quantum circuit size. 
 
 ## Business Application
 An interesting application of random circuit sampling addressed in this cohort project is secure communication. The communication protocol can be used by any individuals, companies, governments, and militaries demanding high-level communication security. We provide more detailed description about the business application [here](./Business_Application_Team23.md)
