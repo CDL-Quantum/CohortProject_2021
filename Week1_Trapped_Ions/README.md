@@ -37,7 +37,7 @@ In task 2, we examined how the probability distribution of the random circuit sa
 In task 3, we examine whether the samping probability distribution of the random circuit converges to the Porter–Thomas distribution, characteristic of quantum chao, as the circuit depth increases. Reproducing such probability distribution classically is conjectured to be exponentially difficult as the number of qubits increases. We demonstrate the convergence of the random circuit sampling probability distribution to the Porter-Thomas distribution by plotting the empirical cumulative distribution for a quantum circuit with 8 qubits with several quantum circuit depth. The quantum circuit depths are 1, 2, 5, 10, 100 and 200. The figure clearly shows that the empirical cumulative distribution converges to that of the exponential distribution (i.e. Porter-Thomas) as expected.
 
 <figure class="image">
-  <img width="400" src = "./figures/task3_result.png" />
+  <img width="500" src = "./figures/task3_result.png" />
   <figcaption> <b>Fig.3</b> Cumulative distribution function of the exponential distribution (dashed) and the probabilities in the random circuit sampling (solid) with increasing circuit depth. </figcaption>
 </figure>
 
@@ -46,9 +46,10 @@ In task 3, we examine whether the samping probability distribution of the random
 In task 4, we invesitg the effect of systematic error (i.e. systematic error in two-qubit gates) on the cross entropy benchmarking (XEB) fidelity. Our study shows that as the error rate increases, the XEP fidelity quickly decays to zero. In the figure below, we plot the XEB fidelity as a function of the varying degree of the two-qubit gate parameter (which corresponds to the amount of error), and we plot several curves for different quantum circuit depth. Of course, increasing the quantum circuit depth increases the amount of error, and hence the decay rate with respect to the degree of error in the two-qubit rotation.
 
 <figure class="image">
-  <img width="400" src = "./figures/task4_result.png" />
+  <img width="500" src = "./figures/task4_result.png" />
   <figcaption> <b>Fig.4</b> Cross entropy benchmarking fidelity as a function of systematic error in two-qubit gates for random quantum circuits with severl circuit depth. </figcaption>
 </figure>
+
 
 If the XEB fidelity, the probability distribution is uniform and hence it is easy to simulate classically, meaning that the quantum supremacy diminishes. Thus it is extremely important to suppress noise as much as possible to keep XEB non-zero while increasing the quantum circuit size. 
 
