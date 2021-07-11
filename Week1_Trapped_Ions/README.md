@@ -20,6 +20,13 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
   <figcaption> <b>Fig.3</b> Cumulative distribution function </figcaption>
 </figure>
 
+### [Task 4](./Task4.ipynb): Effect of gate error on the cross entropy benchmarking fidelity
+
+<figure class="image">
+  <img width="400" src = "./figures/task4_result.png" />
+  <figcaption> <b>Fig.4</b> Cross entropy benchmarking fidelity as a function of systematic error in the two-qubit gate. </figcaption>
+</figure>
+
 ## Further Challenges:
 * Animate your speckle pattern.
 * Reproduce the Google cross entropy results.
