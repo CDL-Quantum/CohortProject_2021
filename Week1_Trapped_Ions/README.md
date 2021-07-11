@@ -52,5 +52,5 @@ This project  folder contains contributions from CDL Cohort Team 3 members: Oleg
 - The [first Jupyter notebook](run_random_circuit_ZQ.ipynb) contains classical simulations using Julia language (Tasks 1-4 and Additional Challenges 1,2). You will also find a "Polock art" piece at the end of the notebook.  Please see [instructions](setup.md) for setting up your local environment with required prerequisites for running this Notebook.
 - The [second Jupyter notebook](run_random_circuit_braket_ionq_ak.ipynb) contains Amazon bracket code that was executed on IonQ's IonTrap (Additional Challenge 3)
 - Our proposed Business Application can be found [here](Business_Application.pdf)
-- The [video](Business_presentation_AK.mp4) and the [presentation slide](Presentation.pdf) summarize our business proposal at executive level
+- The [video](Business_presentation_AK.mp4) and the [executive summary](Presentation.pdf) summarize our business proposal for potential customers
 
