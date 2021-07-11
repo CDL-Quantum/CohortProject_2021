@@ -99,6 +99,12 @@ function get_Probs(psi,N)
     return probs
 end
 
+# Task 1
+# plot our data
+function plot_data(x,y,size)
+    return scatter!(y, ms=size*x, ticks=nothing, axis=false, legend=false)
+end
+
 #Task 2
 #This function runs the circuit multiple times
 function runcirc_multiple(M,N,depth,flipon)
@@ -108,6 +114,20 @@ function runcirc_multiple(M,N,depth,flipon)
         push!(results,get_Probs(psi,N))
     end
     return results
+end
+
+#Task 3
+#This function computes the derivative (forward) of a vector
+function take_derivative(f, h)
+    derivative = zeros(0)
+    for i in 1:length(f)
+        if i == length(f) # Since we are computing df/dx = (f(x_{i+1}) - f(x_i))/h, we need to take care of i+1 state
+            push!(derivative,i)
+        else
+            push!(derivative, (f[i+1] - f[i])/h)
+        end
+    end
+    return derivative
 end
 
 #Task 4
