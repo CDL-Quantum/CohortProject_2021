@@ -26,7 +26,11 @@
 
 
 \title{Week 1: Simulating quantum advantage with trapped ions}
-\author{Team 10: Alexander (Sandy) Bell, Na Young Kim, Sushanta Mitra, Ushnish Ray, Ming-Tso Wei}
+\author{Team 10: Alexander (Sandy) Bell, 
+\and Na Young Kim, 
+\and Sushanta Mitra, 
+\and Ushnish Ray, 
+\and Ming-Tso Wei}
 \date{\today}
 
 
@@ -46,9 +50,10 @@ We put all the functions for the coding tasks in the script \texttt{assignment.j
 
 \section*{Task 1}
 
-In this task, we create a function \texttt{getAmp2} to calculate the probability $P(x)= \abs{\ip{x}{\psi}}^2$ of each bit-string $x$ showing as a dot in the speckle pattern by taking the dot product between the bit-string and $\ket{\psi}$ from the \texttt{run} function given in the script \texttt{run\_random\_circuit.jl}. In Fig. \ref{fig:speckle}, we plot 16 different combinations of $N$ and circuit depths, where $N$ varies from 2 to 5, and the depths include 4, 16, 32, and 64. These patterns are plotted by the function \texttt{speckles()}. One can find that some bitstrings are much more likely to occur than others, especially when $N$ is larger. The location $x$ with highest probability seems to distribute randomly.
+In this task, we create a function \texttt{getAmp2} to calculate the probability $P(x)= \abs{\ip{x}{\psi}}^2$ of each bit-string $x$ by taking a dot product between the the MPS ($|\psi\rangle$) and a simple product state $|x\rangle$
+(of bond dimension $D = 1$). The state $|\psi\rangle$ is obtained by applying the quantum circuit made of random one qubit and two qubit gates applied to the $N$ qubits of the system we are simulating. These gates are applied in layers leading to an effective circuit of depth $d$. In Fig. \ref{fig:speckle}, we plot 16 speckle patterns representing the state for a system of $N \in \{2,3,4,5\}$ qubits and random quantum circuits of depth $d \in \{ 4, 16, 32, 64\}$. Each speckle pattern consists of red circles with an area proportional to the probability. Owing to the random nature of the circuit one finds that the probabilities associated with different states are distributed randomly.
 
-\begin{figure}
+\begin{figure}[bh]
 	\centering
 	\includegraphics [width=\linewidth] {figures/Task_1a}
 	\caption{
@@ -57,25 +62,22 @@ In this task, we create a function \texttt{getAmp2} to calculate the probability
 	\label{fig:speckle}
 \end{figure}
 
-We also make a function \texttt{studyBondDim} to calculate the bond dimension in the bonus problem by using the built-in function \texttt{maxlinkdim} in ITensor. In Fig. \ref{fig:bonddim}, we plot  the bond dimensions as a function of circuit depth at several values of $N$. The bond dimension saturates at a higher circuit depth when $N$ is larger. % I'm not sure what it means here actually.
+We also make a function \texttt{studyBondDim} to calculate the bond dimension in the bonus problem by using the built-in function \texttt{maxlinkdim} in ITensor. In Fig. \ref{fig:bonddim}, we plot the bond dimensions as a function of circuit depth at several values of $N$. In all cases the function returns the bond dimension associated with the central link of the MPS. It is straightforward to see that as the circuit depth is increase the entanglement in the system grows and ultimately saturates at the largest possible value $2^{N/2}$, i.e., $D = 2, 4, 8, 16, 32, 64$ for $N = 2, 4, 6, 8, 10 ,12$. Note that as the circuits are random the scaling can be noisy. As such we perform an average over 20 random circuits to get a better understanding of the scaling. 
 
 \begin{figure}
 	\centering
 	\includegraphics [width=0.8\linewidth] {figures/Task1b}
 	\caption{
-		The bond dimensions of central links as a function of circuit depth at different numbers of qubits. At a 
-	}
+		The bond dimensions of the central link associated with the MPS as a function of circuit depth for varying number of qubits.}
 	\label{fig:bonddim}
 \end{figure}
-
-%% Need some discussion for the connection to entanglement entropy here.
 
 
 \section*{Task 2}
 
-To consider a single random bit flip, we modified the given \texttt{run} function by adding an argument \texttt{wbitflip}. If \texttt{wbitflip} is \texttt{True}, we assign a bit flip at a random location \texttt{bitloc} in the modified \texttt{run} function. In the \texttt{bitFlipCompile} function, we let \texttt{wbitflip=True} and plot 16 different speckle patterns generated from a single bit flip error of a single gate and collect them into a collage, as shown in Fig. \ref{fig:bitflip}.
+To consider a single random bit flip, we modified the given \texttt{run} function by adding an argument \texttt{wbitflip}. If \texttt{wbitflip} is \texttt{True}, we assign a bit flip operator ($\hat{\sigma}_z$) at a random location (layer and qubit) of the circuit. In Fig. \ref{fig:bitflip}, we plot 16 different speckle patterns that result from the bit flip error.
 
-\begin{figure}
+\begin{figure}[th]
 	\centering
 	\includegraphics [width=\linewidth] {figures/Task2}
 	\caption{
@@ -99,10 +101,9 @@ In this task, we create a function \texttt{cgfScalingSingle} to calculate the cu
 
 \section*{Task 4}
 
-In the function \texttt{crossEntropyValue}, we calculate the linear cross-entropy benchmarking (XEB) fidelity $\mathcal{F}_\mathrm{XEB}$, defined in Eq. (1) of the instruction. In Fig. \ref{fig:task4}, the function \texttt{crossEntropy} assembles the results at different $\Delta \Theta$ and plots the $\mathcal{F}_\mathrm{XEB}$ as a function of $\Delta \Theta$.
+In the function \texttt{crossEntropyValue}, we calculate the linear cross-entropy benchmarking (XEB) fidelity $\mathcal{F}_\mathrm{XEB}$ between two states $|\psi_0\rangle$ and $|\psi_1\rangle$ as $\mathcal{F}_\mathrm{XEB} = 2^N \sum_{x} |\langle x|\psi_0\rangle|^2 |\langle x|\psi_1\rangle|^2 - 1$. This is used as a helper function for computations of interest in this task. 
 
-In the function \texttt{crossEntropywDavg}, $\mathcal{F}_\mathrm{XEB}$ is calculated by averaging over a certain number of samples $s$. In Figs. \ref{fig:XEBfidelity} (b) - (d), we calculate the XEB fidelity $\mathcal{F}_\mathrm{XEB}$ when performing the averages over a number of samples $s$. A peak occurs near $\Delta \Theta=\pi$.
-
+In Fig. \ref{fig:task4}, the function \texttt{crossEntropy} computes $\mathcal{F}_\mathrm{XEB} = 2^N \sum_{x} |\langle x|\psi_0\rangle|^2 |\langle x|\psi_0(\Delta\Theta) \rangle|^2 - 1$, i.e. the linear cross-entropy benchmarking (XEB) fidelity between the static state $|\psi_0\rangle$ generated from a single random circuit and $\psi_0(\Delta \Theta)\rangle$ generated by perturbing every 2-qubit gate of the static circuit by an angle $\Delta \Theta$. This results is for a system of $N = 8$ qubits and circuit depth of $d = 512$. The lack of averaging over random samples makes it difficult to understand the behaviour of the function leading to negative numbers in some cases (this is particularly true for small depths and system sizes). Consequently in in Figs. \ref{fig:XEBfidelity} (b) - (d), we calculate $\mathcal{F}_\mathrm{XEB}$ by averaging over a number of samples. This allows us to see a remarkable resurgence of $\mathcal{F}_\mathrm{XEB}$ at $\Delta \Theta = \pi$.
 
 \begin{figure}
 	\centering
