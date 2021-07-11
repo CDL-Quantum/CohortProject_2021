@@ -26,9 +26,3 @@ this repository to their own GitHub account to begin work on the challenges.  By
 * [Quantum Supremacy Is Coming: Here's What You Should Know](https://www.quantamagazine.org/quantum-supremacy-is-coming-heres-what-you-should-know-20190718/)
 * [Towards a quantum advantage](https://physicsworld.com/a/towards-a-quantum-advantage/)
 * [Quantum Computing in the NISQ era and beyond](https://arxiv.org/abs/1801.00862)
-
-### Project submission
-* In the [collected](https://github.com/edenian/CohortProject_2021/tree/main/Week1_Trapped_Ions/collected) folder you can find our solutions.
-* We have also added several [helper functions](https://github.com/edenian/CohortProject_2021/tree/main/Week1_Trapped_Ions/collected/task_functions.jl).
-* Additionally, we have also made a [pennylane implementation for task 1 and 2](https://github.com/edenian/CohortProject_2021/blob/main/Week1_Trapped_Ions/supremacy_pennylane.ipynb)
-* Our business proposal [video](https://drive.google.com/file/d/14un0QcZAPzFebu80yCkA4NXwRZUjdDI_/view?usp=sharing) and accompanying [slide deck](https://drive.google.com/file/d/1PaEO5x007ML564jlR8ytTPmc7rERudiU/view?usp=sharing)
