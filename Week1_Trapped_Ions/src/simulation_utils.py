@@ -45,6 +45,13 @@ def random_single_qubit_gate_layer(n_sites):
     return single_qubit_gate_layer(n_sites, angles)
 
 
+def random_single_qubit_layer_qutip(n_qubits):
+    operators = []
+    for n in range(n_qubits):
+        operators.append(qt.rand_unitary(2))
+    return qt.tensor(operators)
+
+
 """
 Two-qubit gates
 """
