@@ -1,12 +1,14 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 1: Quantum Advantage with Trapped Ions 
 
-## Technical Tasks 
+## Technical Tasks
+
 * Simulating a random circuit with a Matrix Product State code, and producing a speckle pattern.
 * Adding a single bit-flip error and exploring the change in the speckle pattern.
 * Exploring convergence of the Porter-Thomas Distribution.
 * Exploring the effect of 2-qubit gate errors.
-[https://github.com/stared/CohortProject_2021/blob/main/Week1_Trapped_Ions/Project_week1_Team9.ipynb] (https://github.com/stared/CohortProject_2021/blob/main/Week1_Trapped_Ions/Project_week1_Team9.ipynb)
+
+Our solutions in [Project_week1_Team9.ipynb](Project_week1_Team9.ipynb), also available as [an interactive Colab Notebook](https://colab.research.google.com/github/stared/CohortProject_2021/blob/main/Week1_Trapped_Ions/Project_week1_Team9.ipynb).
 
 ## Business Task
 Describe a business that could be build around random circuits.
