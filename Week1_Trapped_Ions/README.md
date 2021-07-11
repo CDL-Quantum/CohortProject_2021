@@ -23,6 +23,15 @@ In task 1, we demonstrate the probability distribution obtained by performing pr
   <figcaption> <b>Fig.1</b> Speckle patterns displaying the probabilities of obtaining each outcomes from random circuit sampling for various quantum circuit width (i.e. the number of qubits) and depth. </figcaption>
 </figure>
 
+### [Task 2](./Task2.ipynb): Effect of a single-qubit bit-flip error on speckle patterns
+
+In task 2, we examined how the probability distribution of the random circuit sampling changes with a single-qubit bit-flip error occuring at a random place on the quantum circuit. For example, we plot various speckle patterns obtained under the random bit-flip error for a quantum circuit consisting with 4 qubits and the circuit depth of 10 in the figure below. We can clearly see that the pattern looks very different in each experiment although the same random circuit was executed. 
+
+<figure class="image">
+  <img width="400" src = "./figures/task1_result.png" />
+  <figcaption> <b>Fig.2</b> Speckle patterns of a fixed random circuit with 4 qubits and the circuit depth of 10 under the random bit-flip error. </figcaption>
+</figure>
+
 ### [Task 3](./Task3.ipynb): Emperical Cumulative Distribution of Random Circuit Sampling Probabilities
 
 <figure class="image">
