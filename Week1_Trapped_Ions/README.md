@@ -38,7 +38,7 @@ In task 3, we examine whether the samping probability distribution of the random
 
 <figure class="image">
   <img width="400" src = "./figures/task3_result.png" />
-  <figcaption> <b>Fig.3</b> Cumulative distribution function </figcaption>
+  <figcaption> <b>Fig.3</b> Cumulative distribution function of the exponential distribution (dashed) and the probabilities in the random circuit sampling (solid) with increasing circuit depth. </figcaption>
 </figure>
 
 ### [Task 4](./Task4.ipynb): Effect of gate error on the cross entropy benchmarking fidelity
