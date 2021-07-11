@@ -1,9 +1,10 @@
 ![CDL 2020 Cohort Project](../figures/Slot_machine.png)
-# Quantum Cohort Project Week 1. Simulating quantum advantage with trapped ions.  Business Application. 
+# Quantum Cohort Project Week 1 Business Application. Simulating quantum advantage with trapped ions
 
 ## Summary of the technical problems solved in the exercise
 
-One of the possible foundations for gate-based quantum computers is trapped ions. Here, we followed Google's notable demonstration of quantum computational advantage to simulate random circuits sampling for an ion-trap quantum computer. The performance of the current quantum computers is limited by noise and decoherence, so to account for that, we introduced errors in the individual gates. 
+The goal of this project is to replicate Google's supremacy experiment on Trapped Ions based quantum computers and study the results with a business focus. The random circuit simulation is carried out with a Matrix Product State code and explored the output distribution by plotting them as speckle patterns across different circuit widths and depths. We then studied the effect of errors in 1-qubit gates. Next, we study the convergence of a perfect quantum random-circuit to a Porter-Thomas distribution and deviations from these distributions as the 2-qubit gate errors increase. To tackle the technical challenge, we studied Google's original experiment in detail along with relevant theoretical methods to understand the quantum advantage hypothesis laid out in their experiment. In particular, we have studied the cross-entropy benchmark (XEB) used to measure the fidelity of the random circuits and how their outputs over a large sample of outcomes converge to Porter-Thomas distribution. We have taken these learnings and applied them to the Julia based Matrix Product State simulator to generate random circuits and extract samples for experiments relevant to different tasks.
+
 
 ## Examples of real-world business applications built around sampling-based quantum computing with random circuits
 
