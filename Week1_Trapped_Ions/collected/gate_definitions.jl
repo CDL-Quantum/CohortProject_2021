@@ -1,6 +1,5 @@
-using PastaQ
+# Define our gates
 
-# Gate Definitions
 function PastaQ.gate(::GateName"R"; theta::Real, phi::Real)
     [
         cos(theta/2)    (-im * exp(-im * phi) * sin(theta/2))
@@ -28,5 +27,14 @@ function PastaQ.gate(::GateName"X";)
     [
         0    1.00
         1.00     0
+    ]
+end
+#perturbation added to M gate
+function PastaQ.gate(::GateName"M_p"; Theta::Real, delta::Real)
+    [
+        cos(Theta+delta)    0    0    (-im * sin(Theta+delta))
+        0    cos(Theta+delta)    (-im * sin(Theta+delta))    0
+        0    (-im * sin(Theta+delta))    cos(Theta+delta)    0
+        (-im * sin(Theta+delta))    0    0    cos(Theta+delta)
     ]
 end

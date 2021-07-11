@@ -44,6 +44,43 @@ function run(N, depth, flipon)
     psi = runcircuit(N, gates)
 end
 
+#Runs random circuit with systemic error
+function run_sysErr(N, depth, flipon, delta)
+    # Random circuit.
+    gates = Vector{Tuple}[]
+    if flipon == true
+        td=rand(1:depth)
+        tN=rand(1:N)
+    end
+    for i in 1:depth
+        one_qubit_layer = Tuple[]
+        two_qubit_layer = Tuple[]
+
+        for j in 1:N
+            gate = ("R", j, (theta=2pi*rand(), phi=2pi*rand()))
+            push!(one_qubit_layer, gate)
+            if flipon == true
+                if j==tN && i==td
+                    push!(one_qubit_layer, ("X", j))
+                end
+            end
+        end
+
+        # Alternate start qubit for pairs.
+        idx_first = i % 2 + 1
+
+        for j in idx_first:2:(N-1)
+            gate = ("M_p", (j, j+1), (Theta=2pi*rand(), delta))
+            push!(two_qubit_layer, gate)
+        end
+
+        push!(gates, one_qubit_layer)
+        push!(gates, two_qubit_layer)
+
+    end
+    psi = runcircuit(N, gates)
+end
+
 # Task 1
 # This function extracts probabilitios
 function get_Probs(psi,N)
