@@ -25,7 +25,7 @@ In task 1, we produce the probability distribution obtained by performing projec
 
 ### [Task 2](./Task2.ipynb): Effect of a single-qubit bit-flip error on speckle patterns
 
-In task 2, we examined how the probability distribution of the random circuit sampling changes with a single-qubit bit-flip error occuring at a random place on the quantum circuit. For example, we plot various speckle patterns obtained under the random bit-flip error for a quantum circuit consisting with 4 qubits and the circuit depth of 10 in Figure 2. We can clearly see that the pattern looks very different in each experiment although the same random circuit was executed. 
+In task 2, we examine how the probability distribution of the random circuit sampling changes with a single-qubit bit-flip error occuring at a random place on the quantum circuit. For example, we plot various speckle patterns obtained under the random bit-flip error for a quantum circuit consisting with 4 qubits and the circuit depth of 10 in Figure 2. We can clearly see that the pattern looks very different in each experiment although the same random circuit was executed. 
 
 <figure class="image">
   <img width="400" src = "./figures/task2_result.png" />
@@ -43,7 +43,7 @@ In task 3, we examine whether the samping probability distribution of the random
 
 ### [Task 4](./Task4.ipynb): Effect of gate error on the cross entropy benchmarking fidelity
 
-In task 4, we invesitg the effect of systematic error (i.e. systematic error in two-qubit gates) on the cross entropy benchmarking (XEB) fidelity. Our study shows that as the error rate increases, the XEP fidelity quickly decays to zero. In Figure 4, we plot the XEB fidelity as a function of the varying degree of the two-qubit gate parameter (which corresponds to the amount of error), and we plot several curves for different quantum circuit depth. Of course, increasing the quantum circuit depth increases the amount of error, and hence the decay rate with respect to the degree of error in the two-qubit rotation.
+In task 4, we investigate the effect of systematic error (i.e. systematic error in two-qubit gates) on the cross entropy benchmarking (XEB) fidelity. Our study shows that as the error rate increases, the XEP fidelity quickly decays to zero. In Figure 4, we plot the XEB fidelity as a function of the varying degree of the two-qubit gate parameter (which corresponds to the amount of error), and we plot several curves for different quantum circuit depth. Of course, increasing the quantum circuit depth increases the amount of error, and hence the decay rate with respect to the degree of error in the two-qubit rotation.
 
 <figure class="image">
   <img width="500" src = "./figures/task4_result.png" />
