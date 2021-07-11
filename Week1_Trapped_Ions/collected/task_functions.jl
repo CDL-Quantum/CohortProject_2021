@@ -4,37 +4,10 @@ using ITensors
 using Plots
 using StatsPlots
 
-# Define our gates
-function PastaQ.gate(::GateName"R"; theta::Real, phi::Real)
-    [
-        cos(theta/2)    (-im * exp(-im * phi) * sin(theta/2))
-        (-im * exp(im * phi) * sin(theta/2))     cos(theta/2)
-    ]
-end
+# Import Gates
+include("gate_definitions.jl")
 
-function PastaQ.gate(::GateName"M"; Theta::Real)
-    [
-        cos(Theta)    0    0    (-im * sin(Theta))
-        0    cos(Theta)    (-im * sin(Theta))    0
-        0    (-im * sin(Theta))    cos(Theta)    0
-        (-im * sin(Theta))    0    0    cos(Theta)
-    ]
-end
-
-function PastaQ.gate(::GateName"Z";)
-    [
-        1.00    0
-        0     -1.00
-    ]
-end
-
-function PastaQ.gate(::GateName"X";)
-    [
-        0    1.00
-        1.00     0
-    ]
-end
-
+# run_random_circuit extension to support random bitflips
 function run(N, depth, flipon)
     # Random circuit.
     gates = Vector{Tuple}[]
@@ -71,6 +44,8 @@ function run(N, depth, flipon)
     psi = runcircuit(N, gates)
 end
 
+# Task 1
+# This function extracts probabilitios
 function get_Probs(psi,N)
     sites = siteinds("S=1/2", N)
     norm=0
@@ -87,6 +62,8 @@ function get_Probs(psi,N)
     return probs
 end
 
+#Task 2
+#This function runs the circuit multiple times
 function runcirc_multiple(M,N,depth,flipon)
     results=Tuple[]
     for i=1:M
@@ -94,4 +71,29 @@ function runcirc_multiple(M,N,depth,flipon)
         push!(results,get_Probs(psi,N))
     end
     return results
+end
+
+#Task 4
+#This functions create P(xi) samples for equation #1
+function run_sampling(s,N,depth,flipon,delta)
+    fxeb=zeros(2^N)
+    for i=1:s
+        psi=run_sysErr(N,depth,flipon,delta)
+        fxeb=fxeb+get_Probs(psi,N)
+    end
+    fxeb=(2^N)*fxeb/s .-1
+    return fxeb
+end
+
+#Task 4
+#Applying the perturbation for series of DeltaThetas between zero to 2pi with the steps 2pi/gran
+function perturb(gran,s,N,depth,flipon,site)
+    deltas=zeros(0)
+    avg_fxeb=zeros(0)
+    for x=0:pi/gran:2pi
+        append!(deltas,x)
+        fxeb=run_sampling(s,N,depth,flipon,x)
+        append!(avg_fxeb,fxeb[site])
+    end
+    return deltas,avg_fxeb
 end
