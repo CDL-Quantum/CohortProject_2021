@@ -1,4 +1,4 @@
-![CDL 2020 Cohort Project](../figures/Slot_machine.png)
+![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 # Quantum Cohort Project Week 1. Simulating quantum advantage with trapped ions.  Business Application. 
 
 ## Summary of the technical problems solved in the exercise
