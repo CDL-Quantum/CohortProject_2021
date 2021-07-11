@@ -31,7 +31,7 @@ Run the following on the terminal.
 - [x] Step 1
 - [x] Step 2
 - [x] Step 3
-- [x] Step 4
+- [ ] Step 4
 
 ### 2.3. Additional Challenges
 - [x] Additional Challenge 1 - Animation for Task 2.
