@@ -1,2 +1,5 @@
 instructions/instructions.*
 !instructions/instructions.tex
+# ignore mac and Jupyter generated temp files
+.DS_Store
+.ipynb_checkpoints/*
