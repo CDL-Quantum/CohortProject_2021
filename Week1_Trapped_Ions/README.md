@@ -49,7 +49,6 @@ In task 4, we invesitg the effect of systematic error (i.e. systematic error in 
   <img width="500" src = "./figures/task4_result.png" />
   <figcaption> <b>Fig.4</b> Cross entropy benchmarking fidelity as a function of systematic error in two-qubit gates for random quantum circuits with severl circuit depth. </figcaption>
 </figure>
-
 <br></br>
 If the XEB fidelity, the probability distribution is uniform and hence it is easy to simulate classically, meaning that the quantum supremacy diminishes. Thus it is extremely important to suppress noise as much as possible to keep XEB non-zero while increasing the quantum circuit size. 
 
