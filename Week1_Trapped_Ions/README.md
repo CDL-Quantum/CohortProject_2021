@@ -19,7 +19,7 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 In task 1, we demonstrate the probability distribution obtained by performing projective measurement in the Z basis on the random quantum circuits (as defined in the problem) with varying quantum circuit depth and width (i.e. the number of qubits). To help solve this problem, we created some functions in [proj_measurement.jl](./proj_measurement.jl) that performs the projective measurement in the basis of choice among X, Y, and Z. For example, we plotted the "speckle patterns" for random quantum circuits with {width, depth} of {3, 10}, {3, 20}, {5, 10}, {5, 20}, and {6, 10} in the figure below.
 
 <figure class="image">
-  <img width="600" src = "./figures/task2_result.png" />
+  <img width="800" src = "./figures/task1_result.png" />
   <figcaption> <b>Fig.1</b> Speckle patterns displaying the probabilities of obtaining each outcomes from random circuit sampling for various quantum circuit width (i.e. the number of qubits) and depth. </figcaption>
 </figure>
 
@@ -28,7 +28,7 @@ In task 1, we demonstrate the probability distribution obtained by performing pr
 In task 2, we examined how the probability distribution of the random circuit sampling changes with a single-qubit bit-flip error occuring at a random place on the quantum circuit. For example, we plot various speckle patterns obtained under the random bit-flip error for a quantum circuit consisting with 4 qubits and the circuit depth of 10 in the figure below. We can clearly see that the pattern looks very different in each experiment although the same random circuit was executed. 
 
 <figure class="image">
-  <img width="400" src = "./figures/task1_result.png" />
+  <img width="400" src = "./figures/task2_result.png" />
   <figcaption> <b>Fig.2</b> Speckle patterns of a fixed random circuit with 4 qubits and the circuit depth of 10 under the random bit-flip error. </figcaption>
 </figure>
 
