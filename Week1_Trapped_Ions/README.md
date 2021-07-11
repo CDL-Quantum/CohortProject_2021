@@ -17,7 +17,7 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 ### [Task 1](./Task3.ipynb): Speckle patterns of probabilities for various quantum circuit sizes
 
 <figure class="image">
-  <img width="400" src = "./figures/task1_result.png" />
+  <img width="600" src = "./figures/task1_result.png" />
   <figcaption> <b>Fig.3</b> Speckle patterns displaying the probabilities of obtaining each outcomes from random circuit sampling for various quantum circuit width (i.e. the number of qubits) and depth. </figcaption>
 </figure>
 
