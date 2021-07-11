@@ -47,6 +47,8 @@ Customers would include both private contractors such as Raytheon, Lockheed Mart
 
 Below is the 90 second video explaining the value proposition of our innovation to the potential customers;
 
+
+[![90 SECOND VIDEO-BUSINESS APPLICATIONS](./instructions/images/team16-week1-pics/Pic5.png)](https://youtu.be/ugsOhL_dxD0 "Little red riding hood - Click to Watch!")
 [![90 SECOND VIDEO-BUSINESS APPLICATIONS](./instructions/images/team16-week1-pics/Pic4.png)](https://youtu.be/qeRbIm-tWhg "Little red riding hood - Click to Watch!")
 
 ## References:
