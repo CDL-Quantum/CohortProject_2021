@@ -8,7 +8,7 @@ The aim of this project was to investigate the quantum supremacy result reported
 
 The Google experiment involved a pseudo-random circuit constructed from an alternating sequence of one and two-qubit gates, which produced a random unitary transformation on a sequence of qubits. The output was then sampled many times in order to obtain a probability distribution for the particular circuit. As the number of qubits and the depth of the circuit increased, the distribution became increasingly difficult to simulate using the fastest classical computer, to the point where a sufficiently large circuit would take around 10,000 years to complete.
 
-In our technical exercise, we first wrote a program to simulate the result of random quantum circuits. The code was implemented fully in python (see “Beyond classical computing with qsim”).
+In our technical exercise, we first wrote a program to simulate the result of random quantum circuits. The code was implemented fully in python (see “Beyond classical computing with qsim”). [Random Circuit Code](https://github.com/EhsanTorabizadeh/CohortProject_2021/blob/653ba81429b2075bf97de4dd36cdb60a1ed02d0e/Week1_Trapped_Ions/instructions/Random%20circuit%20code.ipynb)
 
 A simulation produced a “speckle” pattern, which occurs because of random interference between qubits. The speckle pattern would change with every realization.
 
