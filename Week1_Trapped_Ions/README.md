@@ -9,11 +9,11 @@ All solution in Julia can be found in this [Julia notebook](./solution_julia.ipy
 
 ### Task 1: Plot the probability of each bit string for various circuit widths and depths
 
-We implemented the rotation gates and sampled the outputs from the quantum circuit to obtain a random distribution of bit string probabilities. In the Julia implementation, we chose to test combinations of 4, 8, 12 qubits with varying depths of 1, 256 and 512 gates. We generated speckle patterns of each combination which is shown here in the following figure. *Note: these speckle patterns are normalized.*
+We implemented the rotation gates and sampled the outputs from the quantum circuit to obtain a random distribution of bit string probabilities. In the [Julia implementation](./solution_julia.ipynb), we chose to test combinations of 4, 8, 12 qubits with varying depths of 1, 256 and 512 gates. A cool way to visualize the probabilities is in a speckle pattern where large probabilities correspond to larger circles, and smaller probabilities are small circles . We generated speckle patterns of each combination which is shown here in the following figure. *Note: the size of the circles are normalized to an arbitrary constant to make the circles big enough to see. Whats most important is the relative size of the circles.*
 
 ![Task 1: Speckle Patterns](./img/task-1-speckle-patterns.svg)
 
-## Bonus Task 1: Investegating Entaglement Entropy with MPS index
+## Bonus Task 1: Investigating Entaglement Entropy with MPS index
 
 Later in task 4, we investigate the cross entropy between the true state psi, and a perturbed state. In the bonus for task 1 however, we studied a different kind of entropy- the Von Neumman (Entanglement) Entropy. We decided to see how the entanglement entropy varies as you look at different indices of the MPS (Matrix Product State) of PSI. We varied both the depth and the Number of qubits to see what would happen. Here are the plots for different depths:
 
@@ -21,7 +21,7 @@ Later in task 4, we investigate the cross entropy between the true state psi, an
 
 ![Entanglement Entropy with Increasing Circuit Depth](../Week1_Trapped_Ions/img/bonus2.png)
 
-It's clear that for small depth the entanglement entropy starts rather small and then falls off- while for increasing depth the initial entropy is larger and then falls off as we get to the 'end' of the MPS (the last index). This makes sense, as we increase the depth we are hitting more 'M' gates which further entangle our qubits- leading to a larger Von Neumann entropy for the state Psi. It is interesting that the largest entropy is captured towards the middle indices of the MPS. For varying number of qubits the plots look very similar, the interested reader can refer to the Julia notebook to see them. We also looked at how bond dimension (the max rank of the MPS) increased with the depth of the circuit. We did this for a large number of qubits since the bond dimension does not change much for smaller MPS's. *Note: title should say N=15.*
+It's clear that for small depth the entanglement entropy starts rather small and then falls off- while for increasing depth the initial entropy is larger and then falls off as we get to the 'end' of the MPS (the last index). This makes sense, as we increase the depth we are hitting more 'M' gates which further entangle our qubits- leading to a larger Von Neumann entropy for the state Psi. It is interesting that the largest entropy is captured towards the middle indices of the MPS. For varying number of qubits the plots look very similar, the interested reader can refer to the [Julia notebook](./solution_julia.ipynb) to see them. We also looked at how bond dimension (the max rank of the MPS) increased with the depth of the circuit. We did this for a large number of qubits since the bond dimension does not change much for smaller MPS's. *Note: title should say N=15.*
 
 ![Bond Dimension](../Week1_Trapped_Ions/img/bonus_dim.png)
 
@@ -35,7 +35,7 @@ We demonstrate the same animation in a single figure shown here:
 
 ![Speckle pattern probabilities](../Week1_Trapped_Ions/img/task-2-speckle-pattern-subplots.svg)
 
-We also show another set as a collection of line graphs:
+We also show another set as a collection of line graphs (x-axis is the index of the bit string, y-axis is the probability of observing it):
 
 ![Line grap probabilities](../Week1_Trapped_Ions/img/task-2-probs-line-graph.svg)
 
@@ -45,7 +45,7 @@ And checkout out this heatmap displaying the random probabilities:
 
 ### Task 3: Convergence of the Emprical CDF of P(x) (probability distribution for each state PSI can take)
 
-In tasks 1 and 2 we display the probability distribution (in the form of the line histogram or speckle patterns) for the probabilities of each of the 2^N states that PSI can take. The true distribution of these probabilities is given by the Porter-Thomas distribution (an exponential distribution). For Task 3, we plotting the probabilities distribitions for the Psi states we sampled v.s increasing depth. The tend towards the true distribution as the depth increasing- however you can see that the largest differences occur for small probabilities. 
+In tasks 1 and 2 we display the probability distribution (in the form of the line histogram or speckle patterns) for the probabilities of each of the 2^N states that PSI can take. The true distribution of these probabilities is given by the Porter-Thomas distribution (an exponential distribution). For Task 3, we plot the probability distributions for the Psi states we sampled v.s increasing circuit depth. They tend towards the true distribution as the depth increases- however you can see that the largest differences occur for small probabilities. 
 
 ![Emprical Distribution of Psi](../Week1_Trapped_Ions/img/task3_1.png)
 
@@ -69,13 +69,13 @@ In [2], the authors use a different definition for the cross entropy. We decided
 
 We implemented the random circuit on the IonQ trapped ion computer by connecting to their API. We built a sweet NodeJs repository to be able to so with simple commands via the command line. Checkout the repo's [README](./ionq-implementation/README.md) for more information. 
 
-We could choose to implement the circuit on their quantum machine or a simulator. So we did both. Unfortunately, the results from the quantum machine was not very precise and only gave us up to 3 decimal places in precision (we are on the free plan), so the plots may be a little crude. 
+We had the ability to use their simulator or their real trapped ion computer. So we did both. Unfortunately, the results from the quantum computer was not very precise and only gave us up to 3 decimal places in precision (because we are on a basic plan), so the plots may be a little crude. 
 
 Here are the probability distributions for an 8 qubit system on a 512 deep circuit on the trapped ion machine:
 
 ![QPU Probabilities](../Week1_Trapped_Ions/img/qpu-histo-deep.png)
 
-Next we tried to replicate the analysis in task 3 by showing that the cumulative distribution function of p would tend to the Porter-Thomas (exponential) distribution. Recall though, that the low precision of the free tier yielded very choppy graphs:
+Next we tried to replicate the analysis in task 3 by showing that the cumulative distribution function of p would tend to the Porter-Thomas (exponential) distribution. Recall though, that the low precision of the basic tier yielded very choppy graphs:
 
 ![QPU CDF](../Week1_Trapped_Ions/img/qpu-cdf-deep.png)
 
@@ -83,17 +83,19 @@ Compared to the true Porter-Thomas (exponential) distribution:
 
 ![QPU True CDF](../Week1_Trapped_Ions/img/qpu-true-cdf-deep.png)
 
-Due to the coarseness of the predictions, we tried the simulator with a higher precision of 9 decimal places. To replicate the work in task 3, we first tried a circuit of depth 1 as shown here: 
+We can see that the CDF tends to follow the Porter-Thomas distribution approximately well, but its tough to say for sure due to the low resolution.
+
+Hence we did the same experiment on the simulator since we could get much higher precision (~9 decimal places). To replicate the work in task 3, we first tried a shallow circuit of depth 1: 
 
 ![Simulator depth 1 CDF](../Week1_Trapped_Ions/img/simulator-cdf-shallow.png)
 
-And by increasing the depth we achieved a very similar CDF to the Porter-Thomas distribution: 
-
-![Simulator depth 1 CDF](../Week1_Trapped_Ions/img/simulator-cdf-deep.png)
-
-Which can be compared to the true Porter-Thomas distribution shown here:
+Notice, due to the shallow depth of the circuit, this distribution does not tightly follow the true Porter-Thomas distribution which is shown here: 
 
 ![QPU CDF](../Week1_Trapped_Ions/img/simulator-true-cdf-deep.png)
+
+However, when increasing the depth (just like in task 3), the cdf tends to the true Porter-Thomas distribution. Here we show the same circuit but at a much deeper depth ~750:
+
+![Simulator depth 1 CDF](../Week1_Trapped_Ions/img/simulator-cdf-deep.png)
 
 
 ## Business Application
