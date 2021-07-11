@@ -1,5 +1,5 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
-In this work we perform the sampling a pseudo-random quantum circuit probability distribution using trapped ion gates simulated on a classical computer. We explore how the probability distribution depends on the depth (number of layers or gates) and width (number of qubits) of the circuit and how sensitive the resulting speckled pattern is to perturbations (errors in the circuit). Next we study the convergence of a perfect quantum random-circuit to a Porter-Thomas distribution and deviations from these distribution as the 2-qubit gate errors increase.
+In this work we perform sampling of pseudo-random quantum circuit probability distribution using trapped ion gates simulated on a classical computer. We explore how the probability distribution depends on the depth (number of layers or gates) and width (number of qubits) of the circuit and how sensitive the resulting speckled pattern is to perturbations (errors in the circuit). Next we study the convergence of a perfect quantum random-circuit to a Porter-Thomas distribution and deviations from these distribution as the 2-qubit gate errors increase.
 
 A very brief introduction to the main ideas behind the project are presented [here.](./Documentation_week1.pdf).
 
