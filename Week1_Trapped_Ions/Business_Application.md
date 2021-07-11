@@ -9,7 +9,7 @@ One of the possible foundations for gate-based quantum computers is trapped ions
 
 **- Applied metrology for the slot machines**
 
-Slot machines are the most popular gambling options in casinos. Their simplicity and the appeal of a game of fair chances attract customers
+Slot machines are the most popular gambling options in casinos. Their simplicity and the appeal of a game of fair chances attract customers resulting in about 70% of the average casino income.
 
 ## Potential cusomers in these areas
 
