@@ -42,6 +42,10 @@ For the US, each state is governed by different regulations. As a result, agenci
 
 ## Presentation of the value proposition of our innovation to the potential customer
 
+<figure class="video_container">
+  <iframe src="https://youtu.be/CEDotbqWZpM" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
+
 [id1]: https://www.forbes.com/sites/davidschwartz/2018/06/04/how-casinos-use-math-to-make-money-when-you-play-the-slots/?sh=ecd88ae94d09
 [id2]: https://marketbusinessnews.com/the-slot-machine-market-is-going-higher-and-higher/256115/
 [id3]: https://www.marketwatch.com/press-release/global-slot-machines-market-2021-2025-with-top-countries-data-industry-size-share-business-growth-revenue-trends-market-demand-penetration-and-forecast-2021-04-14
