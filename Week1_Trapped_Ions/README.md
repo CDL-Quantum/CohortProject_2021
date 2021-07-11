@@ -7,5 +7,6 @@ A very brief introduction to the main ideas behind the project are presented [he
 From the business perspective, we first provide a non-technical description of the problem, then we give our approach in tackling the challenge. We identify a potential business application describing the current market research, customers who would benefit from the quantum advantage. Finally we present a short video explaining in a non-technical language the value proposition of these innovations to the potential customers.
 
 For more details refer to our [Business Application file.!](./Business_Application.md)
+
 More data and code here https://github.com/victor-onofre/CDL-Team-4
 
