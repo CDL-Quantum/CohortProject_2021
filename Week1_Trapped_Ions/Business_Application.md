@@ -9,7 +9,7 @@ One of the possible foundations for gate-based quantum computers is trapped ions
 
 **- Applied metrology for the slot machines**
 
-Slot machines are the most popular gambling option in casinos. Their simplicity and the appeal of a game of fair chances attract customers resulting in about 70% of the average casino income in the US.
+Slot machines are the most popular gambling option in casinos. Their simplicity and the appeal of a game of fair chances attract customers resulting in about 70% of the average casino income in the US [link]. And even in 2021, after the infamous events happening these years, the market opportunity is still prominent and promises to grow [link]. 
 
 ## Potential customers in these areas
 
@@ -17,9 +17,16 @@ Slot machines are the most popular gambling option in casinos. Their simplicity 
 
 **- Slot machines manufacturers**
 
+The manufacturers market is highly saturated. Key slot machine manufacturers include:
+* Scientific Games ($2.72B in revenues in 2020)
+* IGT ($2.64B in revenues 2020)
+* Aristocrat Leisure ($4.1B in revenues in 2020)
+* Novomatic (€0.67B in revenues in 2020)
+* Konami Gaming (total revenue for the fiscal year ending on March 31, 2021 is $2.48B)
+
 **- Gaming Control Boards**
 
-For the US, each state is governed by different regulations. As a result, agencies respective to each state in particular are operating within the borders, i.e. Nevada Gaming Commission and Control Board, New York State Gaming Commission and others.
+For the US, each state is governed by different regulations. As a result, agencies respective to each state in particular are operating within the borders, i.e. Nevada Gaming Commission and Control Board, New York State Gaming Commission, New Jersey Casino Control Commission and Division of Gaming Enforcement etc.
 
 ## Presentation of the value proposition of our innovation to the potential customer
 
