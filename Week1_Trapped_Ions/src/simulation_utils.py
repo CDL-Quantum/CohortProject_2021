@@ -174,25 +174,8 @@ def bit_flip_layer(p, n_sites):
 
 
 """
-Circuit tools
+Other tools
 """
-
-
-def apply_random_circuit(psi, n_qubits, cct_depth):
-    """
-    Apply a random circuit to a quantum state.
-    """
-    for j in range(cct_depth//2):
-        # Random single-qubit and two-qubit gate layer.
-        one_qubit_layer = random_single_qubit_gate_layer(n_qubits)
-        two_qubit_layer = random_two_qubit_gate_ladder(n_qubits)[np.mod(j, 2)]
-        # Apply single-qubit gate layer.
-        psi = tn.onedim.contract_mps_mpo(psi, one_qubit_layer)
-        psi.left_canonise(chi=None)
-        # Apply two-qubit gate layer.
-        psi = tn.onedim.contract_mps_mpo(psi, two_qubit_layer)
-        psi.left_canonise(chi=None)
-        return psi
 
 
 def output_probabilities(psi):
