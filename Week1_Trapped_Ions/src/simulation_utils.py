@@ -178,7 +178,7 @@ Circuit tools
 """
 
 
-def random_circuit(psi, n_qubits, cct_depth):
+def apply_random_circuit(psi, n_qubits, cct_depth):
     """
     Apply a random circuit to a quantum state.
     """
