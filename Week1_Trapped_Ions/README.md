@@ -8,11 +8,11 @@ In this project we try to investigate the quantum supremacy result reported by G
 
 ## Tasks summaries:
 
-1. Task1 Simulating a random circuit with a Matrix Product State code, and producing a speckle pattern.
-2. Task2 Adding a single bit-flip error and exploring the change in the speckle pattern.
-3. Task3 Exploring convergence of the Porter-Thomas Distribution.
-4. Task4 Exploring the effect of 2-qubit gate errors.
-5. Task5 Describe a business that could be build around random circuits.  (See below Business Application)
+1. Simulating a random circuit with a Matrix Product State code, and producing a speckle pattern.
+2. Adding a single bit-flip error and exploring the change in the speckle pattern.
+3. Exploring convergence of the Porter-Thomas Distribution.
+4. Exploring the effect of 2-qubit gate errors.
+5. Describe a business that could be build around random circuits.  (See below Business Application)
 
 ## Business Application
 
