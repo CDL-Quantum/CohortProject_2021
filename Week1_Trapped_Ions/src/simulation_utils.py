@@ -2,16 +2,6 @@ import numpy as np
 import tncontract as tn
 import qutip as qt
 
-def bit_flip_layer(p, n_sites):
-    """
-    Return a circuit layer each site experiences a bitflip error with
-    probability p
-    """
-    x_error = tn.Tensor(qt.sigmax().full().reshape(2, 2, 1, 1), ['physout', 'physin', 'left', 'right'])
-    id_tensor = tn.Tensor(np.eye(2).reshape(2, 2, 1, 1), ['physout', 'physin', 'left', 'right'])
-    return tn.onedim.MatrixProductOperator([x_error if error_site else id_tensor for error_site in np.random.binomial(1, p, n_sites)])
-
-
 def single_qubit_gate(theta, phi):
     """
     Return a generic single qubit unitary gate
@@ -129,3 +119,21 @@ def random_single_qubit_gate_layer(n_sites):
     """
     angles = [(2 *np.pi * np.random.rand(), 2 *np.pi * np.random.rand()) for _ in range(n_sites)]
     return single_qubit_gate_layer(n_sites, angles)
+
+# Some Noise models
+
+def depolarising_channel(pdep):
+    return qt.kraus_to_super([np.sqrt(1-3.*pdep/4.)*qt.qeye(2),
+                              np.sqrt(pdep/4.)*qt.sigmax(),
+                              np.sqrt(pdep/4.)*qt.sigmay(),
+                              np.sqrt(pdep/4.)*qt.sigmaz()])
+
+def bit_flip_layer(p, n_sites):
+    """
+    Return a circuit layer each site experiences a bitflip error with
+    probability p
+    """
+    x_error = tn.Tensor(qt.sigmax().full().reshape(2, 2, 1, 1), ['physout', 'physin', 'left', 'right'])
+    id_tensor = tn.Tensor(np.eye(2).reshape(2, 2, 1, 1), ['physout', 'physin', 'left', 'right'])
+    return tn.onedim.MatrixProductOperator([x_error if error_site else id_tensor for error_site in np.random.binomial(1, p, n_sites)])
+

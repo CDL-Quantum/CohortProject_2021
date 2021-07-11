@@ -46,3 +46,17 @@ def speckle_pattern(vector, ax=None):
 
     ax.set_xlim([-0.55, len(vector)-1 + 0.55])
     ax.set_ylim([-0.55, 0.55])
+
+
+def cumulative(samples, x):
+    """
+    Simple function for computing the cumulative distribution of a set of samples at
+    values defined by x
+    """
+    counts = []
+    for xi in x:
+        counts.append((samples < xi).sum())
+        samples = samples[samples >= xi]
+    cdf = np.cumsum(counts)
+    cdf = cdf / max(cdf)
+    return cdf
