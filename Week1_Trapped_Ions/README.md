@@ -1,31 +1,24 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 1: Quantum Advantage with Trapped Ions 
 
-This project will guide you through the recent Google quantum supremacy result, and its possible implementation using near-term quantum computers built with trapped ions.
-
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week1_Trapped_Ions/instructions.pdf) to begin learning about your tasks for this week!
-
-Please edit this markdown file directly with links to your completed tasks and challenges.  
-
-## Tasks include:
+## Technical Tasks 
 * Simulating a random circuit with a Matrix Product State code, and producing a speckle pattern.
 * Adding a single bit-flip error and exploring the change in the speckle pattern.
 * Exploring convergence of the Porter-Thomas Distribution.
 * Exploring the effect of 2-qubit gate errors.
-* Describe a business that could be build around random circuits.  (See below Business Application)
+[https://github.com/stared/CohortProject_2021/blob/main/Week1_Trapped_Ions/Project_week1_Team9.ipynb] (https://github.com/stared/CohortProject_2021/blob/main/Week1_Trapped_Ions/Project_week1_Team9.ipynb)
 
-## Further Challenges:
-* Animate your speckle pattern.
-* Reproduce the Google cross entropy results.
-* Implement this circuit on a real trapped ion computer!
+## Business Task
+Describe a business that could be build around random circuits.
 
+The underlying objective of the project relates to quantum advantage. Random number generation is routinely done classically, and when computational costs trump the true randomness of the algo, then pseudo-random number generators suffice. If you rely on RNG for crypto however, a true RNG should never produce a given random bit string in a deterministic manner, either by manipulating it’s input, or by waiting a given amount of time before the RNG cycles back and repeats itself. This is why if a given RNG is flawed and not producing true RNs, then you can predict the crypto keys that were generated and then can break into the records they were meant to protect (i.e they are not future proof) 
 
-## Business Application
-For each week, your team is asked to complete a Business Application. Questions you will be asked are:
+So where does this project come into play ? It’s in trusting that the RNs come from the right machine. Here is a way to generate RNs drawn for a distribution that is harder and harder to mimic by a classical computer as the number of qubits is increased. If the number of qubits is large enough (> 70 according to Aaronson), then it becomes classically intractable to produce the RNs required in a limited amount of time, indirectly proving that the RNs are certifiably more random than what you could be able to do classically under the same circumstances. You can check that the RNs belong to the right distribution if you gather enough of them over time and basically, you should be able to assess that it’s the correct distribution after drawing some number N times with good enough confidence. If you don’t achieve this threshold or that it takes longer, the more likely it is that the RNs you are receiving are not the good ones and should not be trusted.
 
-* Explain to a layperson the technical problem you solved in this exercise.
-* Explain or provide examples of the types of real-world problems this solution can solve.
-* Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved.
-* Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
-
-For more details refer to the [Business Application found here](./Business_Application.md)
+The underlying problem is trust in the RNG. So real-world applications will relate to those with trust issues and where trust is paramount. We can think of: 
+* polling machines for elections;
+* Notarized documents ?
+* Crypto-currencies;
+* Lotteries & casinos;
+* CGI image processing : textures and visual effects (ex: blur)
+In this case, good RNG allows you to have a random pattern on a very large scale, ie high resolution images or for very large scenery. If the RNG is bad, you’ll see obvious repetitions or structure. In a 4K frame, you have 8M+ pixels so obviously you’ll need to draw a lot of RN to generate a realistic texture if it only covers a small part of the frame. 
