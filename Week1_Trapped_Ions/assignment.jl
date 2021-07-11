@@ -4,6 +4,7 @@ using PastaQ
 using ITensors
 using Random
 using Plots
+using LaTeXStrings
 
 function PastaQ.gate(::GateName"F"; theta::Real, phi::Real)
     [
@@ -75,6 +76,16 @@ function run(N, depth, rng=MersenneTwister(0), wbitflip=false, DTheta = 0.0)
     return psi
 end
 
+
+#############################################################################################
+# Function calculates the probabilities associated with different basis states
+# Arguments:
+#   N = number of qubits
+#   psi = MPS representing the state created by application of the quantum circuit 
+# Return:
+#   amp2 = array of probabilities
+#############################################################################################
+
 function getAmp2(N, psi)
 
     #Prepare site indices
@@ -92,6 +103,19 @@ function getAmp2(N, psi)
     return amp2
 end
 
+
+#############################################################################################
+# Function creates the speckle pattern associated with the probabilities of each basis state
+# Arguments:
+#   N = number of qubits
+#   d = depth of the quantum circuit (needed only for plotting purposes)
+#   amp2 = array representing the probabilties for each basis state
+#   scale = controls the size of the circle in the speckle pattern
+#   gsize = size of the plot area
+# Return value:
+#   plot object for plotting purposes 
+#############################################################################################
+
 function plotSpeckle(N, depth, amp2, scale=100, gsize=(400,50))
 
     p = plot([1],[1], seriestype = :scatter, markersize = scale*amp2[1], legend= false, xlims=(0,2^N+1), ylims = (0.5,1.5), markercolor = :red, axis=nothing, size=gsize) #, title="N = $N depth = $depth")
@@ -102,8 +126,13 @@ function plotSpeckle(N, depth, amp2, scale=100, gsize=(400,50))
     return p
 end
 
-function speckles()
 
+#############################################################################################
+# Function for Task 1a
+# Create a collage of speckles for different number of qubits and depths
+#############################################################################################
+
+function speckles()
 
     plotColl = Array{Plots.Plot{Plots.GRBackend},1}() 
     scales = [10,20,50,100]
@@ -126,44 +155,60 @@ function speckles()
 end
 
 
-function studyBondDim_single(N, depth, seed=0)
+#############################################################################################
+# Function calculates the bond-dimension associated with the central link of the MPS encoding
+# the wavefunction of interest for different depths
+# Arguments:
+#   N = number of qubits 
+#   depths = array of circuit depths that will be simulated
+#   seed = Seed for random number generator 
+#############################################################################################
 
-    bdim = Vector{Int}(undef, size(depth)[1])    
+function studyBondDim_single(N, depths, seed=0)
+
+    bdim = Vector{Int}(undef, size(depths)[1])    
     rng = MersenneTwister(seed)
 
-    for (i,d) in enumerate(depth)
+    for (i,d) in enumerate(depths)
         psi = run(N, d, rng)
         bdim[i] = maxlinkdim(psi)         
     end
  
-    p = plot(depth, bdim, seriestype = :scatter, markersize=5, legend=false, markercolor = :red)
+    p = plot(depths, bdim, seriestype = :scatter, markersize=5, legend=false, markercolor = :red)
     display(p)
 end
 
 
-function studyBondDim(N, depth, samples=20, seed=0)
+#############################################################################################
+# Function calculates the bond-dimension associated with the central link of the MPS encoding
+# the wavefunction of interest for different depths
+# Arguments:
+#   Ns = array of number of qubits to simulate
+#   depths = array of circuit depths that will be simulated
+#   samples = number of samples to average over
+#   seed = Seed for random number generator 
+#############################################################################################
 
+function studyBondDim(Ns, depths, samples=20, seed=0)
 
     rng = MersenneTwister(seed)
     plotColl = Array{Plots.Plot{Plots.GRBackend},1}() 
     colors = [:red, :blue, :green, :black, :orange, :magenta, :cyan]  
     
-    Ns = N |> reverse 
+    rNs = Ns |> reverse #reversing for display purposes
     p = 0 
-    for (j,n) in enumerate(Ns)
+    for (j,n) in enumerate(rNs)
     
-        samplebDim = fill(0.0, size(depth)[1])
-        samplebDim2 = fill(0.0, size(depth)[1])
+        samplebDim = fill(0.0, size(depths)[1])
+        samplebDim2 = fill(0.0, size(depths)[1])
 
         for i in 1:samples
 
-            lbdim = Vector{Int}(undef, size(depth)[1])
-            for (i,d) in enumerate(depth)
+            lbdim = Vector{Int}(undef, size(depths)[1])
+            for (i,d) in enumerate(depths)
                 psi = run(n, d, rng)
                 lbdim[i] = maxlinkdim(psi)
             end        
-
-            #@show lbdim
 
             samplebDim += lbdim
             samplebDim2 += lbdim.*lbdim
@@ -174,15 +219,26 @@ function studyBondDim(N, depth, samples=20, seed=0)
         samplebDim2 = ((samplebDim2 - samplebDim.*samplebDim)/samples).^0.5
 
         if(p==0)
-            p = plot(depth, samplebDim, seriestype = :scatter, markersize=5 + 0.2*n, legend=:topleft, markercolor = colors[j], yerror=samplebDim2, label="N = $n")
+            p = plot(depths, samplebDim, seriestype = :scatter, markersize=5 + 0.2*n, legend=:topleft, markercolor = colors[j], yerror=samplebDim2, label="N = $n")
         else
-            plot!(p, depth, samplebDim, seriestype = :scatter, markersize=5 + 0.2*n, legend=:topleft, markercolor = colors[j], yerror=samplebDim2, label="N = $n")
+            plot!(p, depths, samplebDim, seriestype = :scatter, markersize=5 + 0.2*n, legend=:topleft, markercolor = colors[j], yerror=samplebDim2, label="N = $n")
         end
     end
 
     display(p)    
 end
 
+
+#############################################################################################
+# Function to create collage of speckles the results from randomly flipping a single qubit
+# gate in a random location of the circuit 
+# Arguments:
+#   N = number of qubits to simulate
+#   depth = circuit depth that will be simulated
+#   samples = number of speckles to generate 
+#   lout = Layout of collage 
+#   seed = Seed for random number generator 
+#############################################################################################
 
 function bitFlipCompile(N, depth, samples=10, lout=(samples,1), seed=0)
 
@@ -201,7 +257,26 @@ function bitFlipCompile(N, depth, samples=10, lout=(samples,1), seed=0)
     display(newp)
 end
 
-function cgfScalingSingle(N, depth, samples=10000, dp=0.001, seed=0; plt=nothing)
+
+#############################################################################################
+# Function to create the cumulant generating function associated with a single state of 
+# basis of the quantum state created after application of quantum circuit. 
+#
+# Arguments:
+#   N = number of qubits to simulate
+#   depth = circuit depth that will be simulated
+#   state = target state (as an integer)
+#   samples = number of samples to obtain for state
+#   dp = mesh increment for binning purposes
+#   seed = Seed for random number generator 
+# Optional:
+#   plt = Used for plotting. If not supplied then a new plot is generated otherwise add
+# Returns:
+#   plt = Plot object
+#   mval = probability values used for binning. 
+#############################################################################################
+
+function cgfScalingSingle(N, depth, state=2^(N-1), samples=1000, dp=0.001, seed=0; plt=nothing)
 
     rng = MersenneTwister(seed)
     sites = siteinds("Qubit", N)
@@ -215,15 +290,11 @@ function cgfScalingSingle(N, depth, samples=10000, dp=0.001, seed=0; plt=nothing
         push!(pval, lval)
     end
 
-    #p = histogram(pval; bins=0.0:dp:1.0)
-    #display(p)
-    
     pval = sort(pval)
     freq = Vector{Float64}()
     mval = Vector{Float64}()
 
     push!(freq,1)
-
     sval = 0.0
     lidx = 1
     push!(mval,sval+dp/2)
@@ -258,27 +329,53 @@ function cgfScalingSingle(N, depth, samples=10000, dp=0.001, seed=0; plt=nothing
     end
 end
 
-function cgfScaling(N, samples=1000, dp = 0.0001, seed=0)
+
+#############################################################################################
+# Function to create the cumulant generating function (CGF) associated with a single state of 
+# basis of the quantum state created after application of quantum circuit. This is a compile
+# function that plots the CGF for different circuit depths
+#
+# Arguments:
+#   N = number of qubits to simulate
+#   state = target state (as an integer)
+#   samples = number of samples to obtain for state
+#   dp = mesh increment for binning purposes
+#   seed = Seed for random number generator 
+#############################################################################################
+
+function cgfScaling(N, state, samples=1000, dp = 0.0001, seed=0)
 
     plt = 0
     mval = nothing
 
     for (i,d) in enumerate([1, 4, 16, 64, 128, 256, 512])
         if(i==1)
-            plt, mval = cgfScalingSingle(N, d, samples, dp, seed)
+            plt, mval = cgfScalingSingle(N, d, state, samples, dp, seed)
         else
-            plt, mval = cgfScalingSingle(N, d, samples, dp, seed; plt)            
+            plt, mval = cgfScalingSingle(N, d, state, samples, dp, seed; plt)            
         end
     end
     
     tsize = 2^N
     theoryf = [1 - exp(-tsize*m) for m in mval]
-    plot!(plt, mval, theoryf, xaxis = :log, label="theory", legend=:topleft, title="Depth: $depth", markersize=5, lw=2)
+    plot!(plt, mval, theoryf, xaxis = :log, label="theory", legend=:topleft, title="N: $N", markersize=5, lw=2)
 
     display(plt)
 end
 
-function crossEntropyValue(N, depth, psi0, psi)
+
+#############################################################################################
+# Function calculates the lineraized cross entropy between two states 
+# gate in a random location of the circuit 
+# Arguments:
+#   N = number of qubits to simulate
+#   psi0 = First state as an MPS
+#   psi = Second state as an MPS
+# Returns:
+#   fxeb = Linearized cross entropy value
+#############################################################################################
+
+function crossEntropyValue(N, psi0, psi)
 
     sites = siteinds("Qubit", N)
     offset = [1 for i in 1:N]
@@ -300,33 +397,21 @@ function crossEntropyValue(N, depth, psi0, psi)
     return fxeb 
 end
 
-function crossEntropy(N, depth, seed=0)
-    
-    #Get original state
-    rng = MersenneTwister(seed)
-    psi0 = run(N, depth, rng) 
 
+#############################################################################################
+# Function calculates the lineraized cross entropy between a state generated from a random
+# circuit and for the same circuit with different systematic offsets in the angle of the 
+# 2 qubit gates
+# 
+# Arguments:
+#   N = number of qubits to simulate
+#   depth = circuit depth
+#   psi = Second state as an MPS
+#   dsamples = Number of random quantum circuits to average over
+#   seed = seed used for to initialize random number generator
+#############################################################################################
 
-    DThetas = 0.0:0.1:2pi
-    fxebs = Vector{Float64}()
-    for DTheta in DThetas
-    
-        #Get DTheta state
-        rng = MersenneTwister(seed) #Have to reset to make sure starting random circuit is identical
-        psi = run(N, depth, rng, false, DTheta)
-
-        fxeb = crossEntropyValue(N, depth, psi0, psi)
-        push!(fxebs, fxeb)
-        
-        println(DTheta," ",fxeb)
-    end
-    
-    plt = plot(DThetas, fxebs, xlabel="DTheta", legend=false, lw=3)
-    display(plt)
-end
-
-
-function crossEntropywDavg(N, depth, dsamples=20, seed=0)
+function crossEntropy(N, depth, dsamples=20, seed=0)
     
     DThetas = 0.0:0.1:2pi
     
@@ -347,7 +432,7 @@ function crossEntropywDavg(N, depth, dsamples=20, seed=0)
             rng = MersenneTwister(seed + i) #Have to reset to make sure starting random circuit is identical
             psi = run(N, depth, rng, false, DTheta)
 
-            fxeb = crossEntropyValue(N, depth, psi0, psi)
+            fxeb = crossEntropyValue(N, psi0, psi)
             fxebs[s] += fxeb
             sfxebs[s] += fxeb*fxeb
         end
@@ -371,7 +456,7 @@ end
 #Task 1b
 N = 12
 depth = 32 
-#studyBondDim(2:2:N, 1:2:depth, 5)
+#studyBondDim(2:2:N, 1:2:depth)
 
 #Task 2
 N = 5
@@ -380,14 +465,14 @@ depth = 16
 
 #Task 3
 N = 8
-#cgfScaling(N)
+#cgfScaling(N, 5)
 
 #Task 4
 N = 8
 depth = 512
-#crossEntropy(N, depth)
+#crossEntropy(N, depth,1)
 
 #Task 4b
-N = 4 
+N = 8 
 depth = 128 
-crossEntropywDavg(N, depth, 200)
+crossEntropy(N, depth, 200)
