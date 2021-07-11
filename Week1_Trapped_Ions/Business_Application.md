@@ -20,8 +20,7 @@ In this field, where the chances drive the revenue of the gambling market, the s
 * MGM Resorts International ($5.16B in revenues in 2020 and $12.9B in 2019)
 * Las Vegas Sands ($3.61B in revenues in 2020 and $13.74B in 2019)
 * Wynn Resorts ($2.1B in revenues in 2020)
-* Caesars Entertainment ($3.47B in revenues in 2020)  
-and others
+* Caesars Entertainment ($3.47B in revenues in 2020)
 
 **- Slot machines manufacturers**
 
@@ -30,8 +29,7 @@ The manufacturers market is highly saturated. Key slot machine manufacturers inc
 * IGT ($2.64B in revenues 2020)
 * Aristocrat Leisure ($4.1B in revenues in 2020)
 * Novomatic (€0.67B in revenues in 2020)
-* Konami Gaming (total revenue for the fiscal year ending on March 31, 2021 is $2.48B)  
-and others
+* Konami Gaming (total revenue for the fiscal year ending on March 31, 2021 is $2.48B)
 
 **- Gaming Control Boards**
 
