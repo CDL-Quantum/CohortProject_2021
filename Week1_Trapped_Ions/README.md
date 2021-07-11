@@ -26,4 +26,8 @@ Please edit this markdown file directly with links to your completed tasks and c
 * Additionally, we have also made a [pennylane implementation for task 1 and 2](https://github.com/edenian/CohortProject_2021/blob/main/Week1_Trapped_Ions/supremacy_pennylane.ipynb)
 * Our business proposal [video](https://drive.google.com/file/d/14un0QcZAPzFebu80yCkA4NXwRZUjdDI_/view?usp=sharing) and accompanying [slide deck](https://drive.google.com/file/d/1PaEO5x007ML564jlR8ytTPmc7rERudiU/view?usp=sharing)
 
+## Project Submission Results
+### Task 1
 
+We produced the following graphs:
+[<img src="https://github.com/edenian/CohortProject_2021/blob/main/Week1_Trapped_Ions/imgs/task_1_speckle.png">](Speckle pattern]
