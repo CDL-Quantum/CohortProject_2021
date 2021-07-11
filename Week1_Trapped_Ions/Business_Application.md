@@ -7,7 +7,7 @@ One of the possible foundations for gate-based quantum computers is trapped ions
 
 ## Examples of real-world business applications built around sampling-based quantum computing with random curcuits
 
-**- Applied metrology for the casino machines**
+**- Applied metrology for the slot machines**
 
 ## Potential cusomers in these areas
 
