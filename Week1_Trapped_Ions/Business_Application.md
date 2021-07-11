@@ -10,7 +10,7 @@ One of the possible foundations for gate-based quantum computers is trapped ions
 **- Applied metrology for the slot machines**
 
 Slot machines are the most popular gambling option in casinos. Their simplicity and the appeal of a game of fair chances attract customers resulting in about 70% of the average casino income in the US [[1]][id1]. And even in 2021, after the infamous events happening these years, the market opportunity for slot machines is still prominent and promises to grow [[2]][id2]. 
-In 2018, the global Slot Machines market faced a valuation of $3.23B and the number is projected to reach $4.99B by 2025 [link].
+In 2018, the global Slot Machines market faced a valuation of $3.23B and the number is projected to reach $4.99B by 2025 [[3]][id3].
 
 In this field, where the chances drive the revenue of the gambling market, the stakeholders have to make sure the machines are providing consistently random outputs.  
 We are offering a tool on how to test the machines in a fast and accurate manner by using cutting-edge techniques. In order to achieve this goal, we are using sampling-based quantum computing with random circuits.
@@ -44,3 +44,5 @@ For the US, each state is governed by different regulations. As a result, agenci
 [id1]: https://www.theatlantic.com/magazine/archive/2005/12/sit-and-spin/304392/
 
 [id2]: https://marketbusinessnews.com/the-slot-machine-market-is-going-higher-and-higher/256115/
+
+[id3]: https://www.marketwatch.com/press-release/global-slot-machines-market-2021-2025-with-top-countries-data-industry-size-share-business-growth-revenue-trends-market-demand-penetration-and-forecast-2021-04-14
