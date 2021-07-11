@@ -22,8 +22,11 @@ It turns out that the probability distributions obtained in this way display a c
 
 ## Potential customers for the utilization of our solution approach:
 There is an important sector of private and public institutions and organizations which carry out several activities that rely on the use of certified randomness. Among them, one can find security, defense, research, commerce and testing of products. In particular, the game industry makes use of random number generators.
+
 As expected, the number of targeted attacks and breaches against gaming machines and applications increases with time, given that the development of computing technologies and algorithms offer new tools for eventual hackers to break in. In this context, Pseudo Random Number Generators (PRNGs) find increasing challenges in the task of fulfilling the security requirements of the gaming industry. This observation also holds true for the security industry, which is of interest for political and governmental organizations.
+
 The task of obtaining certified randomness is even more challenging for the different institutions and companies in developing countries. As an example, a Casino of Buenos Aires bought a quantum random number generator from a swiss company.
+
 Thus, there is a growing interest in the development of regional companies that can supply the public and private sector in the Latinamerican region, offering alternative prices and locally-produced solutions, which is especially important for the public sector. Also public and private universities can benefit from such quantum random generators produced locally.
 
 We can conclude that
