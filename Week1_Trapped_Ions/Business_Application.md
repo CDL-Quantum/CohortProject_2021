@@ -1,28 +1,10 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
-# Quantum Cohort Project Business Application
+# Week 1 Quantum Cohort Project Business Application - Team 10
 
-For each weekly project, your team is asked to complete the below business application exercise.
-To complement the technical tasks, please consdier the four questions below.
-You are free to format your response to these four questions as you wish (with the final question done as a short recorded video), and to include
-the content (or links to the content) on your forked repository.
+Team members: Alexander (Sandy) Bell, Na Young Kim, Sushanta Mitra, Ushnish Ray, Ming-Tso Wei
 
-A brief example for each question is included for the 
-[Traveling Salesman Problem.](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+In this cohort projects, we solve four tasks related to the random quantum circuits with ITensor and PastaQ that can be applicable directly on the NISQ devices. We like to apply this quantum advantage in the seismic signal processing for oil exploration business, which is one of the ten biggest Industries in the world and its annual market revenue would be around $3 trillion USD (https://www.investopedia.com/investing/oil-gas-industry-overview/). In particular, it is Canada's national industry throughout almost in all provinces.
 
-## Step 1: Explain the technical problem you solved in this exercise
+As a widely and common technigue, seismic technologies are exploited in the development of oil and gas production by constructing subsurface images both in two- and three-dimensions(https://gov.nu.ca/sites/default/files/2017_seismic_eng.pdf and https://dug.com/dug-insight/). Seismic data processing in oid and mining industries is not exact in nature and not necessary to be. Noises and errors are expected in the seismic data but the data volumes and processing requirement are huge in order to build up the tomography of the earth. Sound waves are sent through the earth and reflect back up from stratigraphic boundaries to geophones where the signal is recorded. A huge computing power is used to visualize the tomography in 3D. The real issue is the significant amount of noises in the signal. Due to the fact that geophysicists are working with (and expecting) errors in the data and that it requires the sheer computing power, our team believes that NISQ machines combined with classical computing may handle massive seismic wave data efficiently and reach correct interpretations for timely business decisions with optimal performance and economical benefits.
 
-Example: Finding a global minimum in settings where a classical approach may not be able to find a global minimum.
-
-## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
-
-Example: A courier has to deliver parcels to several locations and is looking to minimize its travel time. (e.g., “the travelling salesman problem”).
-
-## Step 3: Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved
-
-Examples: 
-- Federal Express
-- Canada Post
-
-## Step 4: Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language
-
-Example: By travelling to all destinations via the shortest route, a courier can generate the same revenue that it would have generated following any other route, but will minimize travel costs (e.g., fuel costs). By minimizing travel costs, the courier will be more profitable than it would have been had it travelled through any other route.
+The recorded 90-second video about the business application is available on YouTube: https://youtu.be/QIazGBlNJXE .
