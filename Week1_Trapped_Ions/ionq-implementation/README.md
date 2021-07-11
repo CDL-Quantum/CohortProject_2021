@@ -56,16 +56,16 @@ Hint: See [video tutorial of this step](https://share.vidyard.com/watch/8HEzZBBs
 
 ## Plotting the bit string probabilities of a completed job
 
-Hint: See [video tutorial of this step](https://share.vidyard.com/watch/Cz4asXb3cTaitq9sJfnH7W?)
+Hint: See [video tutorial of this step](https://share.vidyard.com/watch/CwRhUHxqcjMATvQfebRmS3?)
 
 1. Get the id of the job you wish to plot from [here](https://cloud.ionq.com/jobs)
 2. Run the following command:
     ```
-    > npm run plot-cdf some-job-id
+    > npm run analyze-job some-job-id
     ```
     - Be sure to replace `some-job-id` with the id of the job you found in part 1, for example:
     ```
-    > npm run plot-cdf 72e912d3-ea97-4f19-9cc0-8e6dbfa06ac4
+    > npm run analyze-job 72e912d3-ea97-4f19-9cc0-8e6dbfa06ac4
     ```
 
 ## Resources
@@ -73,7 +73,7 @@ Hint: See [video tutorial of this step](https://share.vidyard.com/watch/Cz4asXb3
 I made some video recordings outlining the above sections: 
 1. [How to set the repository up](https://share.vidyard.com/watch/GtNkHkpUTbV7rwEpjqNBxG?)
 2. [How to create a job](https://share.vidyard.com/watch/8HEzZBBsWuMbV5GM7PqJd4?)
-3. [How to plot the cdf](https://share.vidyard.com/watch/Cz4asXb3cTaitq9sJfnH7W?)
+3. [How to plot the cdf](https://share.vidyard.com/watch/CwRhUHxqcjMATvQfebRmS3?)
 
 ## Contact
 If you have issues, shoot me an email at cleland.theo@gmail.com
