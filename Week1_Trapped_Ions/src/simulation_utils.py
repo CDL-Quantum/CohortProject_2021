@@ -1,66 +1,161 @@
 import numpy as np
 import tncontract as tn
 import qutip as qt
+from itertools import product
+from functools import reduce
 
-def bit_flip_layer(p, n_sites):
+def local_operator(site, local, n_sites):
     """
-    Return a circuit layer each site experiences a bitflip error with
-    probability p
+    Simple Local operator function taking a site, the local gate and the number of sites
     """
-    x_error = tn.Tensor(qt.sigmax().full().reshape(2, 2, 1, 1), ['physout', 'physin', 'left', 'right'])
-    id_tensor = tn.Tensor(np.eye(2).reshape(2, 2, 1, 1), ['physout', 'physin', 'left', 'right'])
-    return tn.onedim.MatrixProductOperator(
-        [x_error if error_site else id_tensor for error_site in np.random.binomial(1, p, n_sites)])
+    I = qt.qeye(2)
+    width = len(local.dims[0])
+    if (site + width > (n_sites)):
+        raise ValueError("n_sites should be >= site + locality ({} > {})".format(site+width, n_sites))
+    return reduce(qt.tensor, [I for _ in range(site)] + [local] + [I for _ in range(site+width,n_sites)])
+
+def k_site_paulis(k):
+    """
+    Returns the k-site Pauli operators
+    """
+    paulis = [p/np.sqrt(2) for p in [qt.qeye(2),qt.sigmax(),qt.sigmay(),qt.sigmaz()]]
+    r = tuple([range(4) for _ in range(int(k))])
+    return [qt.tensor([paulis[i] for i in ranges]) for ranges in product(*r)]
+
+def ptm_to_super(G):
+    """
+    Converts a PTM to the corresponding superoperator in the computational basis
+    """
+    n = int(np.log2(G.shape[0])/2.)
+    paulis = k_site_paulis(n)
+    # Pauli change of basis matrix (already normalised)
+    T = np.array([p.full().reshape(-1) for p in paulis])
+    # check if G is a ket
+    if G.shape[1] == 1:
+        return np.conj(T.T) @ G
+    else:
+        return np.conj(T.T) @ G @ T
+
+from copy import deepcopy
+
+"""
+Single-qubit gates
+"""
 
 
 def single_qubit_gate(theta, phi):
     """
-    Return a generic single qubit unitary gate
+    Return a single-qubit unitary gate with angles theta and phi.
     """
-    gate = np.array([[np.cos(theta / 2), -1j * np.exp(-1j * phi) * np.sin(theta / 2)],
-                     [-1j * np.exp(1j * phi) * np.sin(theta / 2), np.cos(theta / 2)]])
+    gate = np.array([
+        [np.cos(theta / 2), -1j * np.exp(-1j * phi) * np.sin(theta / 2)],
+        [-1j * np.exp(1j * phi) * np.sin(theta / 2), np.cos(theta / 2)]
+    ])
     return tn.Tensor(gate.reshape(2, 2, 1, 1), ['physout', 'physin', 'left', 'right'])
+
+
+def single_qubit_gate_layer(n_sites, angles):
+    """
+    Return an MPO with single-qubit gates along the chain.
+    Parameters
+        ----------
+        n_sites : int
+        angles: list
+            List of tuples containing the single qubit rotation angles. Each site
+            needs (\theta_i, \phi_i).
+    """
+    mpo = [single_qubit_gate(*site_angles) for site_angles in angles]
+    return tn.onedim.MatrixProductOperator(mpo)
+
+
+def random_single_qubit_gate_layer(n_sites):
+    """
+    Return an MPO with random-angled single-qubit gates along the chain.
+    Parameters
+        ----------
+        n_sites : int
+    """
+    angles = [(2 * np.pi * np.random.rand(), 2 * np.pi * np.random.rand()) for _ in range(n_sites)]
+    return single_qubit_gate_layer(n_sites, angles)
+
+
+def random_single_qubit_layer_qutip(n_qubits):
+    operators = []
+    for n in range(n_qubits):
+        operators.append(qt.rand_unitary(2))
+    return qt.to_super(qt.tensor(operators))
+
+
+"""
+Two-qubit gates
+"""
 
 
 def two_qubit_ms_gate(theta):
     """
-    Return a two qubit addressed molmer sorenson gate
+    Return a two-qubit Molmer-Sorenson gate with angle theta.
     """
     gate = qt.operations.molmer_sorensen(theta, 2).full()
 
-    # turn the gate into Tensor with physical and virtual bonds
+    # Turn the gate into Tensor with physical and virtual bonds.
     gate_tensor = tn.Tensor(gate.reshape(4, 4, 1, 1), ['physout', 'physin', 'left', 'right'])
 
-    # split physical bonds into single qubit sites
+    # Split physical bonds into single-qubit sites.
     gate_tensor.split_index('physout', (2, 2), ['physout_1', 'physout_2'])
     gate_tensor.split_index('physin', (2, 2), ['physin_1', 'physin_2'])
 
-    # SVD cut the two qubit gate into small 2-site MPO
+    # SVD cut the two-qubit gate into small 2-site MPO.
     U, V = tn.tensor_svd(gate_tensor, row_labels=['physout_1', 'physin_1', 'left'], absorb_singular_values='left')
     U.replace_label(['physout_1', 'physin_1', 'svd_in'], ['physout', 'physin', 'right'])
     V.replace_label(['physout_2', 'physin_2', 'svd_out'], ['physout', 'physin', 'left'])
     return [U, V]
 
-
-def random_single_qubit_layer(n_sites):
-    #TODO: generate a random theta,phi for each site. Figure out range of theta,phi
-    pass
-
-
-def two_qubit_gate_layer(n_sites, thetas, align=0):
+def two_qubit_gate_layer_qutip(n_sites, thetas, left=0):
     """
-    Return an MPO with MS gates along the chain with angles.
+    Return an MPO with Molmer-Sorenson gates along the chain.
     Parameters
         ----------
         n_sites : int
         thetas: list
             list of MS gate angles
-        align : int
-            If n_sites is an odd number, align determines wether the two qubit gates begin from
-            qubit 0 (aligned left) or 1 (aligned right).
+        left : int
+            left determines wether the two qubit gates begin from
+            qubit 0 or 1. For example, to make ladder circuits
     """
-    if align != 0 and align != 1:
-        raise ValueError("align={}. Can only take the value 0 or 1".format(align))
+    if left != 0 and left != 1:
+        raise ValueError("left={}. Can only take the value 0 or 1".format(left))
+
+    id = qt.qeye(2)
+    gates = [qt.operations.molmer_sorensen(theta) for theta in thetas]
+
+    if n_sites % 2 == 0:
+        if left == 0:
+            return qt.to_super(reduce(qt.tensor, gates))
+        else:
+            # Pads identities on each end of the chain
+            return qt.to_super(reduce(qt.tensor, [id] + gates + [id]))
+    else:
+        if left == 0:
+            # Put an identity tensor at end qubit
+            return qt.to_super(reduce(qt.tensor, gates + [id]))
+        else:
+            # Put an identity tensor on the first qubit.
+            return qt.to_super(reduce(qt.tensor, [id] + gates))
+
+def two_qubit_gate_layer(n_sites, thetas, left=0):
+    """
+    Return an MPO with Molmer-Sorenson gates along the chain.
+    Parameters
+        ----------
+        n_sites : int
+        thetas: list
+            list of MS gate angles
+        left : int
+            left determines wether the two qubit gates begin from
+            qubit 0 or 1. For example, to make ladder circuits
+    """
+    if left != 0 and left != 1:
+        raise ValueError("left={}. Can only take the value 0 or 1".format(left))
 
     id_tensor = tn.Tensor(np.eye(2).reshape(2, 2, 1, 1), ['physout', 'physin', 'left', 'right'])
     mpo = []
@@ -68,25 +163,129 @@ def two_qubit_gate_layer(n_sites, thetas, align=0):
         mpo += two_qubit_ms_gate(theta)
 
     if n_sites % 2 == 0:
-        return tn.onedim.MatrixProductOperator(mpo)
+        if left == 0:
+            return tn.onedim.MatrixProductOperator(mpo)
+        else:
+            # Pads identities on each end of the chain
+            return tn.onedim.MatrixProductOperator([id_tensor] + mpo + [id_tensor])
     else:
-        if align == 0:
-            # put an identity tensor at end qubit
+        if left == 0:
+            # Put an identity tensor at end qubit
             return tn.onedim.MatrixProductOperator(mpo + [id_tensor])
         else:
-            # put and identity tensor on the first qubits
+            # Put an identity tensor on the first qubit.
             return tn.onedim.MatrixProductOperator([id_tensor] + mpo)
 
-
-def random_two_gate_qubit_layer(n_sites, align=0):
+def random_two_qubit_gate_layer_qutip(n_sites, left=0):
     """
-    Return an MPO with random angle MS gates along the chain.
+    Return an MPO with random-angled Molmer-Sorenson gates along the chain.
     Parameters
         ----------
         n_sites : int
-        align : int
-            If n_sites is an odd number, align determines wether the two qubit gates begin from
+        left : int
+            If n_sites is an odd number, left determines wether the two qubit gates begin from
             qubit 0 (aligned left) or 1 (aligned right).
     """
-    thetas = 2 * np.pi * np.random.rand(int(np.floor(n_sites / 2)))
-    return two_qubit_gate_layer(n_sites, thetas, align=align)
+    if n_sites % 2 == 0 and left == 1:
+        # This is case where we need to pad identities at the ends of the chain.
+        n_gates = int((n_sites - 1) / 2)
+    else:
+        n_gates = int(np.floor(n_sites / 2))
+    thetas = 2 * np.pi * np.random.rand(n_gates)
+    return two_qubit_gate_layer_qutip(n_sites, thetas, left=left)
+
+def random_two_qubit_gate_layer(n_sites, left=0):
+    """
+    Return an MPO with random-angled Molmer-Sorenson gates along the chain.
+    Parameters
+        ----------
+        n_sites : int
+        left : int
+            If n_sites is an odd number, left determines wether the two qubit gates begin from
+            qubit 0 (aligned left) or 1 (aligned right).
+    """
+    if n_sites % 2 == 0 and left == 1:
+        # This is case where we need to pad identities at the ends of the chain.
+        n_gates = int((n_sites - 1) / 2)
+    else:
+        n_gates = int(np.floor(n_sites / 2))
+    thetas = 2 * np.pi * np.random.rand(n_gates)
+    return two_qubit_gate_layer(n_sites, thetas, left=left)
+
+def random_two_qubit_gate_ladder_qutip(n_sites):
+    """
+    Return a random two-qubit ladder circuit in the form of two MPOs.
+    Parameters
+        ----------
+        n_sites : int
+    """
+    if n_sites <= 2:
+        raise ValueError("Must have more than 2 qubits to form a ladder circuit (n_sites={}).".format(n_sites))
+    layer_1 = random_two_qubit_gate_layer_qutip(n_sites, left=0)
+    layer_2 = random_two_qubit_gate_layer_qutip(n_sites, left=1)
+    return layer_1, layer_2
+
+def random_two_qubit_gate_ladder(n_sites):
+    """
+    Return a random two-qubit ladder circuit in the form of two MPOs.
+    Parameters
+        ----------
+        n_sites : int
+    """
+    if n_sites <= 2:
+        raise ValueError("Must have more than 2 qubits to form a ladder circuit (n_sites={}).".format(n_sites))
+    layer_1 = random_two_qubit_gate_layer(n_sites, left=0)
+    layer_2 = random_two_qubit_gate_layer(n_sites, left=1)
+    return layer_1, layer_2
+
+
+"""
+Noise models
+"""
+
+
+def depolarising_channel(p):
+    """
+    Return the superoperator for a depolarising channel.
+    """
+    return qt.kraus_to_super([
+        np.sqrt(1 - 3.*p/4.) * qt.qeye(2),
+        np.sqrt(p/4.) * qt.sigmax(),
+        np.sqrt(p/4.) * qt.sigmay(),
+        np.sqrt(p/4.) * qt.sigmaz()
+    ])
+
+
+def bit_flip_layer(p, n_sites):
+    """
+    Return a circuit layer where each site experiences a bit-flip error with
+    probability p.
+    """
+    x_error = tn.Tensor(
+        qt.sigmax().full().reshape(2, 2, 1, 1),
+        ['physout', 'physin', 'left', 'right']
+    )
+    id_tensor = tn.Tensor(
+        np.eye(2).reshape(2, 2, 1, 1),
+        ['physout', 'physin', 'left', 'right']
+    )
+    return tn.onedim.MatrixProductOperator(
+        [x_error if error_site else id_tensor for error_site in np.random.binomial(1, p, n_sites)]
+    )
+
+
+"""
+Other tools
+"""
+
+
+def output_probabilities(psi):
+    """
+    Extract the probabilities for obtaining each output of a quantum circuit.
+    """
+    psi_copy = deepcopy(psi)
+    psi_copy.left_canonise(normalise=True)
+    psi_vec = tn.onedim.contract_virtual_indices(psi_copy)
+    psi_vec.fuse_indices('physout', 'physout')
+    probs = abs(psi_vec.data.reshape(-1, 1)) ** 2
+    return probs

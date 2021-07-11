@@ -7,7 +7,7 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 
 Please edit this markdown file directly with links to your completed tasks and challenges.  
 
-## Tasks include:
+## [Tasks include:](../examples/project_summary.ipynb)
 * Simulating a random circuit with a Matrix Product State code, and producing a speckle pattern.
 * Adding a single bit-flip error and exploring the change in the speckle pattern.
 * Exploring convergence of the Porter-Thomas Distribution.

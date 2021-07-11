@@ -3,5 +3,10 @@ scipy
 cython
 qutip
 cvxpy
+jupyter
+matplotlib
+
+loguru
+black
 
 git+git://github.com/andrewdarmawan/tncontract.git@master
