@@ -14,7 +14,7 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 
 ## Summary of Results
 
-### [Task 1](./Task1.ipynb): Speckle patterns of probabilities for various quantum circuit sizes
+### [Task 1](./Task1.ipynb): Speckle patterns of probabilities for random quantum circuits various circuit sizes
 
 In task 1, we produce the probability distribution obtained by performing projective measurement in the Z basis on the random quantum circuits (as defined in the problem) with various quantum circuit depth and width (i.e. the number of qubits). To help solve this problem, we created some functions in [proj_measurement.jl](./proj_measurement.jl) to implement projective measurement in either X, Y, or Z basis. As an example, we plotted the "speckle patterns" for random quantum circuits with {width, depth} of {3, 10}, {3, 20}, {5, 10}, {5, 20}, and {6, 10} in Figure 1.
 
