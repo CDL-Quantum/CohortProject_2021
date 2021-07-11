@@ -2,8 +2,9 @@
 
 # Quantum Cohort Project Business Application
 - - -
-##**_Week 1: Simulating quantum advantage with trapped ions_**
-###Author: QuNova Computing, Inc.
+## **_Week 1: Simulating quantum advantage with trapped ions_**
+
+### Author: QuNova Computing, Inc.
 - - -
 
 
@@ -14,7 +15,7 @@ In this exercise, we created a random matrix product state (MPS) on a classical 
 and investigated several aspects by applying errors on the state.
 We now explain what we have done.
 
-###Task 1
+### Task 1
 We first produce a random MPS by using the modified _script run_random_circuit.jl_.
 We take the number of qubits is four, and the depth equals 512.
 After measuring the state in the computational basis multiple times,
@@ -23,9 +24,9 @@ The following speckle pattern is our result when we take 1000 shots.
 In the figure, the circles represent 0000, 0001, ..., 1111, respectively, from the left.
 The radius of each circle is proportional to the probability of the corresponding bit string.
 
-![CDL 2021 cohort Project](../figures/Fig.2-1.png)
+![CDL 2021 cohort Project](../Week1_Trapped_Ions/figures_week1/Fig.2-1.png)
 
-###Task 2
+### Task 2
 In Task 2, we run the circuit we used to create the state in Task 1 many times, 
 but we add a single bit flip error in a random place each time.
 Our result is shown in the speckle pattern below.
@@ -33,18 +34,18 @@ As we can see, the average probabilities are nearly equal.
 This result implies that the circuit is susceptible to slight perturbations.
 We can achieve the same result with any other random circuit selection.
 
-![CDL 2021 cohort Project](../figures/Fig.2-2.png)
+![CDL 2021 cohort Project](../Week1_Trapped_Ions/figures_week1/Fig.2-2.png)
 
-###Task 3
+### Task 3
 It is known that the distribution of the probabilities for a fixed output bit-string converges 
 to the "Porter-Thomas distribution" as the depth of the random circuits is increased.
 We show this by plotting a graph as shown below.
 We choose eight qubits, and the fixed bit string is 00000111.
 Empirical cumulative distribution functions for depths 1, 2, 10, 30, and 512 are shown in the graph.
 
-![CDL 2021 cohort Project](../figures/Fig.3.png)
+![CDL 2021 cohort Project](../Week1_Trapped_Ions/figures_week1/Fig.3.png)
 
-###Task 4
+### Task 4
 As the final main task, we compute the linear XEB fidelity. 
 If a quantum circuit is not perfectly implemented as in NISQ, 
 it could affect the distribution of the probabilities of the bit string. 
@@ -57,9 +58,9 @@ As we can see from the graph, even a tiny change in angle can make a big differe
 In other words, a quantum computer should implement random circuits almost perfectly 
 to achieve sufficiently high fidelity.
 
-![CDL 2021 cohort Project](../figures/Fig.4.png)
+![CDL 2021 cohort Project](../Week1_Trapped_Ions/figures_week1/Fig.4.png)
 
-###Additional Challenges
+### Additional Challenges
 We did two additional challenges, and the results can be found at the following links.
 
 _Additional challenge 1_
