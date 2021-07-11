@@ -42,9 +42,12 @@ For the US, each state is governed by different regulations. As a result, agenci
 
 ## Presentation of the value proposition of our innovation to the potential customer
 
+<!-- blank line -->
 <figure class="video_container">
-  <iframe src="https://youtu.be/CEDotbqWZpM" frameborder="0" allowfullscreen="true"> </iframe>
+  <iframe src="https://www.youtube.com/embed/CEDotbqWZpM" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
+<!-- blank line -->
+
 
 [id1]: https://www.forbes.com/sites/davidschwartz/2018/06/04/how-casinos-use-math-to-make-money-when-you-play-the-slots/?sh=ecd88ae94d09
 [id2]: https://marketbusinessnews.com/the-slot-machine-market-is-going-higher-and-higher/256115/
