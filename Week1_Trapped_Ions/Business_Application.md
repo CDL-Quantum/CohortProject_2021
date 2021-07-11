@@ -13,7 +13,7 @@ Slot machines are the most popular gambling option in casinos. Their simplicity 
 In 2018, the global Slot Machines market faced a valuation of $3.23B and the number is projected to reach $4.99B by 2025 [[3]][id3].
 
 In this field, where the chances drive the revenue of the gambling market, the stakeholders have to make sure the machines are providing consistently random outputs.  
-We are offering a tool on how to test the machines in a fast and accurate manner by using cutting-edge techniques. In order to achieve this goal, we are using sampling-based quantum computing with random circuits.
+We are offering a tool on how to test the machines in a fast and accurate manner by using cutting-edge techniques. The solution of this problem is achieved by constructing the probability distribution of each outcome of the slot machines and collecting samples randomly from multiple machines.
 
 ## Potential customers in these areas
 
