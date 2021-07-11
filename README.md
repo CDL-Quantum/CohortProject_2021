@@ -28,8 +28,8 @@ this repository to their own GitHub account to begin work on the challenges.  By
 * [Quantum Computing in the NISQ era and beyond](https://arxiv.org/abs/1801.00862)
 
 ### Project submission
-In the [collected](https://github.com/edenian/CohortProject_2021/tree/main/Week1_Trapped_Ions/collected) folder you can find the tasks for this project.
-We have also added several [helper functions](https://github.com/edenian/CohortProject_2021/tree/main/Week1_Trapped_Ions/collected/task_functions.jl).
-Additionally, we have also made a [pennylane implementation for task 1 and 2](https://github.com/edenian/CohortProject_2021/blob/main/Week1_Trapped_Ions/supremacy_pennylane.ipynb)
+* In the [collected](https://github.com/edenian/CohortProject_2021/tree/main/Week1_Trapped_Ions/collected) folder you can find the tasks for this project.
+* We have also added several [helper functions](https://github.com/edenian/CohortProject_2021/tree/main/Week1_Trapped_Ions/collected/task_functions.jl).
+* Additionally, we have also made a [pennylane implementation for task 1 and 2](https://github.com/edenian/CohortProject_2021/blob/main/Week1_Trapped_Ions/supremacy_pennylane.ipynb)
 
 Our business proposal [video](https://drive.google.com/file/d/14un0QcZAPzFebu80yCkA4NXwRZUjdDI_/view?usp=sharing)
