@@ -32,3 +32,6 @@ Please edit this markdown file directly with links to your completed tasks and c
 
 ### Task 2
 [<img src="https://github.com/edenian/CohortProject_2021/blob/main/Week1_Trapped_Ions/imgs/task_2_random_speckle.png">]
+
+### Task 4
+[<img src="https://github.com/edenian/CohortProject_2021/blob/main/Week1_Trapped_Ions/imgs/task_4_Fxeb_qu4_dep150_sample50.png">]
