@@ -9,11 +9,19 @@ One of the possible foundations for gate-based quantum computers is trapped ions
 
 **- Applied metrology for the slot machines**
 
-Slot machines are the most popular gambling option in casinos. Their simplicity and the appeal of a game of fair chances attract customers resulting in about 70% of the average casino income in the US [link]. And even in 2021, after the infamous events happening these years, the market opportunity is still prominent and promises to grow [link]. 
+Slot machines are the most popular gambling option in casinos. Their simplicity and the appeal of a game of fair chances attract customers resulting in about 70% of the average casino income in the US [link]. And even in 2021, after the infamous events happening these years, the market opportunity for slot machines is still prominent and promises to grow [link]. 
+In 2018, the global Slot Machines market faced a valuation of $3.23B and the number is projected to reach $4.99B by 2025 [link].
+In this field, where the chances drive the revenue of the gambling market, the stakeholders have to make sure the machines are providing consistently random outputs.
 
 ## Potential customers in these areas
 
 **- Casinos**
+
+* MGM Resorts International ($5.16B in revenues in 2020 and $12.9B in 2019)
+* Las Vegas Sands ($3.61B in revenues in 2020 and $13.74B in 2019)
+* Wynn Resorts ($2.1B in revenues in 2020)
+* Caesars Entertainment ($3.47B in revenues in 2020)
+and others
 
 **- Slot machines manufacturers**
 
