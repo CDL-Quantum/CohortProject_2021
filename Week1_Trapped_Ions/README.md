@@ -34,6 +34,8 @@ In task 2, we examined how the probability distribution of the random circuit sa
 
 ### [Task 3](./Task3.ipynb): Emperical Cumulative Distribution of Random Circuit Sampling Probabilities
 
+In task 3, we examine whether the samping probability distribution of the random circuit converges to the Porter–Thomas distribution, characteristic of quantum chao, as the circuit depth increases. Reproducing such probability distribution classically is conjectured to be exponentially difficult as the number of qubits increases. We demonstrate the convergence of the random circuit sampling probability distribution to the Porter-Thomas distribution by plotting the empirical cumulative distribution for a quantum circuit with 8 qubits with several quantum circuit depth. The quantum circuit depths are 1, 2, 5, 10, 100 and 200. The figure clearly shows that the empirical cumulative distribution converges to that of the exponential distribution (i.e. Porter-Thomas) as expected.
+
 <figure class="image">
   <img width="400" src = "./figures/task3_result.png" />
   <figcaption> <b>Fig.3</b> Cumulative distribution function </figcaption>
