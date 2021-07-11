@@ -26,6 +26,7 @@ For each week, your team is asked to complete a Business Application. Questions 
 * Explain to a layperson the technical problem you solved in this exercise.
 * Explain or provide examples of the types of real-world problems this solution can solve.
 * Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved.
-* Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
+* Prepare a 90 second [video](https://youtu.be/TAOcBjvi-_U) explaining the value proposition of your innovation to this potential customer in non-technical language.
+
 
 For more details refer to the [Business Application found here](./Business_Application.md)
