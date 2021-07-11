@@ -101,6 +101,7 @@ function task_2(N, depth, rel)
             # make sure probs add to one
             sum = sum + p
         end
+        print(sum)
 
         push!(plot_probs, probs)
     end
@@ -111,7 +112,13 @@ function task_2(N, depth, rel)
         push!(plots, scatter(1:2^N, ones(2^N), markersize=100 * plot_probs[i], markercolor=:red, grid=false, ylims=(0.95, 1.05), ticks=false, showaxis=false, legend=false))
     end
     plot(plots..., layout=(rel, 1))
-    png("../docs/images/Speckle_collage")
+    png("docs/images/Speckle_collage")
+
+    #animate speckle
+    anim = @animate for i in 1:rel
+        scatter(1:2^N,ones(2^N),markersize=100*probs[i],markercolor=:red,grid=false,ylims=(0.95, 1.05),ticks=false,showaxis=false,legend=false)
+    end
+    gif(anim,"docs/images/Speckle.gif",fps=10)
 end
 
 N = parse(Int, ARGS[1])
@@ -119,5 +126,6 @@ depth = parse(Int, ARGS[2])
 rel = parse(Int, ARGS[3])
 
 task_2(N,depth,rel)
+
 
 

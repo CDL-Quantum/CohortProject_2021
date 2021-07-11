@@ -65,6 +65,7 @@ function task_3(psi, N)
         # make sure probs add to one
         sum = sum + p
     end
+    print(sum)
     return probs
 end
 
@@ -82,5 +83,5 @@ for i in depths
     # plot and save
     plot!(sort(probs), (1:2^N) ./ 2^N, xaxis=:log, linewidth=2, labels=i)
 end
-png("../docs/images/CDF")
+png("docs/images/CDF")
 

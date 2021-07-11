@@ -69,6 +69,7 @@ function task_4(psi, N)
         # make sure probs add to one
         sum = sum + p
     end
+    print(sum)
     return probs
 end
 
@@ -99,5 +100,5 @@ for i in errs
 end
 # plot and save
 plot(errs, FXEB, linewidth=2,labels="FXEB")
-png("../docs/images/FXEB")
+png("docs/images/FXEB")
 
