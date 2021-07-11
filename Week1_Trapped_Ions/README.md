@@ -13,6 +13,14 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 * Describe a business that could be build around random circuits.  (See below Business Application)
 
 ## Summary of Results
+
+### [Task 1](./Task3.ipynb): Speckle patterns of probabilities for various quantum circuit sizes
+
+<figure class="image">
+  <img width="400" src = "./figures/task1_result.png" />
+  <figcaption> <b>Fig.3</b> Speckle patterns displaying the probabilities of obtaining each outcomes from random circuit sampling for various quantum circuit width (i.e. the number of qubits) and depth. </figcaption>
+</figure>
+
 ### [Task 3](./Task3.ipynb): Emperical Cumulative Distribution of Random Circuit Sampling Probabilities
 
 <figure class="image">
