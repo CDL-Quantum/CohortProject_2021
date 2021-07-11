@@ -31,4 +31,4 @@ this repository to their own GitHub account to begin work on the challenges.  By
 * In the [collected](https://github.com/edenian/CohortProject_2021/tree/main/Week1_Trapped_Ions/collected) folder you can find our solutions.
 * We have also added several [helper functions](https://github.com/edenian/CohortProject_2021/tree/main/Week1_Trapped_Ions/collected/task_functions.jl).
 * Additionally, we have also made a [pennylane implementation for task 1 and 2](https://github.com/edenian/CohortProject_2021/blob/main/Week1_Trapped_Ions/supremacy_pennylane.ipynb)
-* Our business proposal [video](https://drive.google.com/file/d/14un0QcZAPzFebu80yCkA4NXwRZUjdDI_/view?usp=sharing) and accompanying [slide deck](https://github.com/edenian/CohortProject_2021/blob/main/Week1_Trapped_Ions/supremacy_pennylane.ipynb)
+* Our business proposal [video](https://drive.google.com/file/d/14un0QcZAPzFebu80yCkA4NXwRZUjdDI_/view?usp=sharing) and accompanying [slide deck](https://drive.google.com/file/d/1PaEO5x007ML564jlR8ytTPmc7rERudiU/view?usp=sharing)
