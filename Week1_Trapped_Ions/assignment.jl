@@ -276,7 +276,7 @@ end
 #   mval = probability values used for binning. 
 #############################################################################################
 
-function cgfScalingSingle(N, depth, state=2^(N-1), samples=1000, dp=0.001, seed=0; plt=nothing)
+function cgfScalingSingle(N, depth, state=2^(N-1), samples=1000, dp=0.0001, seed=0; plt=nothing)
 
     rng = MersenneTwister(seed)
     sites = siteinds("Qubit", N)
@@ -473,6 +473,6 @@ depth = 512
 #crossEntropy(N, depth,1)
 
 #Task 4b
-N = 8 
+N = 4 
 depth = 128 
-crossEntropy(N, depth, 200)
+crossEntropy(N, depth, 400)
