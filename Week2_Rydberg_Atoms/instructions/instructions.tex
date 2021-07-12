@@ -144,7 +144,7 @@ We've provided an annealing schedule for you, but {\bf try other annealing sched
 
 Let's now try solving the UD-MIS problem quantum-ly.
 We will employ a quantum annealing (QA)-based approach.
-Briefly, the goal of QA is to start in an easily-preparable groundstate of a Hamiltonian and time evolve this state with a time-dependent Hamiltonian.
+Briefly, the goal of QA is to start in an easily-preparable ground state of a Hamiltonian and time evolve this state with a time-dependent Hamiltonian.
 At the end of the time evolution process, the Hamiltonian should be such that its ground state is what we are after.
 Consider the time-dependent Hamiltonian
 \begin{equation} \label{eq:time_dep_hamiltonian}
@@ -152,7 +152,7 @@ Consider the time-dependent Hamiltonian
 \end{equation}
 Notice that if $\Omega(t = 0) = \delta(t = 0) = 0$, the ground state of this Hamiltonian is every Rydberg atom in its ground state: $\ket{0}^{\bigotimes N}$.
 If $\Omega(t = t_{\text{final}}) = 0$ and $\delta(t = t_{\text{final}}) = 1$, we have Eq.~\ref{eq:UDMIS_hamiltonian}.
-Time-evolving the initial state $\ket{0}^{\bigotimes N}$ with the Hamiltonian in Eq.~\ref{eq:time_dep_hamiltonian} by manually choosing how to vary $\Omega(t)$ and $\delta(t)$ will hopefully give us the groundstate of the UD-MIS Hamiltonian (Eq.~\ref{eq:UDMIS_hamiltonian}).
+Time-evolving the initial state $\ket{0}^{\bigotimes N}$ with the Hamiltonian in Eq.~\ref{eq:time_dep_hamiltonian} by manually choosing how to vary $\Omega(t)$ and $\delta(t)$ will hopefully give us the ground state of the UD-MIS Hamiltonian (Eq.~\ref{eq:UDMIS_hamiltonian}).
 In a nutshell, this is the QA process as it pertains to our problem.
 
 Mathematically and algorithmically, QA looks like the following
@@ -169,6 +169,10 @@ Everything you need is in \texttt{run\_quantum\_annealing.jl}.
 We have taken inspiration from Ref.~\cite{serret_solving_2020} for the annealing schedule (see Fig. 2 in this work).
 The very last line in \texttt{run\_quantum\_annealing.jl} draws samples from the resulting wavefunction $\ket{\psi(t)}$ that has been time-evolved.
 {\bf Plot the samples on the graph coordinates given in the code and verify that indeed the UD-MIS problem has been solved.}
+
+The resulting time-evolved wavefunction may not \textit{perfectly} be the ground state (i.e. when you sample it, you might get configurations that aren't the solution we desire).
+Sample the resulting wavefunction several thousand times, and look for the most common bit string.
+Use this as your solution\footnote{You might need to run the code a few different times!}.
 
 \subsection*{Task 3: A Real Problem}
 
@@ -195,7 +199,7 @@ The possible Gotham City cell phone tower locations are\footnote{All coordinates
 
 \begin{enumerate}
 	\item {\bf Explain why this is a problem that can be easily mapped to the UD-MIS problem.} A few sentences is all that is needed.
-	\item {\bf Solve Gotham City's problem!} Use any method you want (i.e. the codes provided in Tasks 1 and 2, or any other UD-MIS solving method), but extra points will be given to groups that demonstrate originality.
+	\item {\bf Solve Gotham City's problem.} Use any method you want (i.e. the codes provided in Tasks 1 and 2, or any other UD-MIS solving method), but extra points will be given to groups that demonstrate originality. \textbf{Are there multiple solutions}?
 	\item {\bf Should Bruce pay for a few more cell phone towers to make sure that more of Gotham City has cell phone service?}
 \end{enumerate}
 
