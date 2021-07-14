@@ -22,8 +22,9 @@ ex_graph = jl.graph
 ex_edges = jl.edges
 ex_dt = jl.dt
 _run_annealing = jl.run_annealing
-# _get_edges = _run_quantum_annealing.get_edges
-# _hamiltonian = _run_quantum_annealing.hamiltonian
+_get_edges = jl.get_edges
+_convert_edge = jl.convert_edge
+# _hamiltonian = jl.hamiltonian
 _measure = jl.measure
 
 
@@ -38,8 +39,19 @@ def measure(state: Any,
     return _measure(state, nshots=nshots)
 
 
+def get_edges(graph: List[Tuple[float, float]]) -> List[Any]:
+    return _get_edges(graph)
+
+
+def convert_edges(edges: List[Any]) -> List[Tuple[int, int]]:
+    return [(_convert_edge(e)[0]-1, _convert_edge(e)[1]-1) for e in edges]
+
+
 if __name__ == "__main__":
     psi = run_annealing(ex_graph, ex_edges, ex_dt)
     print(psi)
-    for sample in measure(psi, nshots=10000):
-        print(sample, type(sample))
+    for i, sample in enumerate(measure(psi, nshots=10000)):
+        if i % 100 == 0:
+            print(sample, type(sample))
+    print(ex_edges)
+    print(convert_edges(ex_edges))

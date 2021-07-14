@@ -29,6 +29,10 @@ function get_edges(graph::Vector{NTuple{2, Float64}})
     return findall(edges)
 end
 
+function convert_edge(edge::CartesianIndex{2})
+    return (edge[1], edge[2])
+end
+
 function Ω(t::Float64)
     if 0 <= t <= 0.25
         return (Ω_max / 0.25) * t
