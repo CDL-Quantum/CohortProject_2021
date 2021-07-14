@@ -79,7 +79,7 @@ graph = [(0.3461717838632017, 1.4984640297338632),
         ]
 edges = get_edges(graph)
 dt = 0.001
-
+#=
 psi = run_annealing(graph, edges, dt)
 open("task2_data.dat","w") do io
     for sample in measure(psi; nshots=10_000)
@@ -89,3 +89,4 @@ end
 
 #samples = measure(psi; nshots=10)
 #@show samples
+=#
