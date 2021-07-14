@@ -5,51 +5,50 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-class DrawGraph(object):
-    def __init__(self,
-                 coordinates: List[Tuple[float, float]],
-                 radius: float):
-        self.coordinates = coordinates
-        self.radius = radius
-        self.num_vertices = len(coordinates)
+def draw_graph(coordinates: List[Tuple[float, float]],
+               radius: float,
+               answer: Optional[List[bool]] = None):
+    if answer is not None and len(answer) != len(coordinates):
+        raise ValueError
 
-    def draw(self,
-             answer: Optional[List[bool]] = None):
-        xs = [c[0] for c in self.coordinates]
-        ys = [c[1] for c in self.coordinates]
-        margin = self.radius * 1.05
-        fig, axe = plt.subplots(figsize=(max(xs)-min(xs) + 2 * margin, max(ys)-min(ys) + 2 * margin))
+    xs = [c[0] for c in coordinates]
+    ys = [c[1] for c in coordinates]
+    margin = radius * 1.05
+    fig, axe = plt.subplots(figsize=(max(xs) - min(xs) + 2 * margin, max(ys) - min(ys) + 2 * margin))
 
-        # Draw Points
-        point_to_radius_ratio = 0.1
-        points = list()
-        for i, (x, y) in enumerate(self.coordinates):
-            points.append(plt.Circle((x, y),
-                                     radius=self.radius * point_to_radius_ratio,
-                                     color='r' if answer is not None and answer[i] else 'k'))
+    # Draw Points
+    point_to_radius_ratio = 0.1
+    points = list()
+    for i, (x, y) in enumerate(coordinates):
+        points.append(plt.Circle((x, y),
+                                 radius=radius * point_to_radius_ratio,
+                                 color='r' if answer is not None and answer[i] else 'k',
+                                 zorder=2))
 
-        # Draw Circles
-        circles = list()
-        for x, y in self.coordinates:
-            circles.append(plt.Circle((x, y), radius=self.radius, alpha=0.3, color='grey'))
+    # Draw Circles
+    circles = list()
+    for x, y in coordinates:
+        circles.append(plt.Circle((x, y), radius=radius, alpha=0.3, color='grey',
+                                  zorder=0))
 
-        # Draw Edges
-        edges = list()
-        for (i, (x1, y1)), (j, (x2, y2)) in product(enumerate(self.coordinates), repeat=2):
-            if i == j:
-                continue
-            dist = np.sqrt((x1 - x2)**2 + (y1 - y2)**2)
-            if dist <= 2 * self.radius:
-                edges.append(plt.Line2D((x1, x2), (y1, y2)))
+    # Draw Edges
+    edges = list()
+    for (i, (x1, y1)), (j, (x2, y2)) in product(enumerate(coordinates), repeat=2):
+        if i == j:
+            continue
+        dist = np.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+        if dist <= 2 * radius:
+            edges.append(plt.Line2D((x1, x2), (y1, y2),
+                                    zorder=1))
 
-        # Render
-        _ = [axe.add_patch(c) for c in circles]
-        _ = [axe.add_line(e) for e in edges]
-        _ = [axe.add_patch(p) for p in points]
+    # Render
+    _ = [axe.add_patch(c) for c in circles]
+    _ = [axe.add_line(e) for e in edges]
+    _ = [axe.add_patch(p) for p in points]
 
-        plt.xlim([min(xs) - margin, max(xs) + margin])
-        plt.ylim([min(ys) - margin, max(ys) + margin])
-        plt.show()
+    plt.xlim([min(xs) - margin, max(xs) + margin])
+    plt.ylim([min(ys) - margin, max(ys) + margin])
+    plt.show()
 
 
 if __name__ == "__main__":
@@ -60,5 +59,6 @@ if __name__ == "__main__":
              (0.8663329771713457, 3.3876341010035995),
              (1.1643107343501296, 1.0823066243402013)
              ]
-    g = DrawGraph(graph, 1.0)
-    g.draw()
+    g = draw_graph(coordinates=graph,
+                   radius=1.0,
+                   answer=[True, True, False, False, True, True])
