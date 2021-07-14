@@ -1,2 +1,4 @@
 instructions/instructions.*
 !instructions/instructions.tex
+.DS_Store
+__pycache__
