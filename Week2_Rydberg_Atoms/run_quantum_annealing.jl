@@ -81,11 +81,16 @@ edges = get_edges(graph)
 dt = 0.001
 
 psi = run_annealing(graph, edges, dt)
-open("task2_data.dat","w") do io
-    for sample in measure(psi; nshots=10_000)
-        println(io, sample)
-    end
-end
+samples = measure(psi; nshots=10_000)
+
+using CSV
+CSV.write("samples.csv", samples)
+
+# open("task2_data.dat","w") do io
+#     for sample in measure(psi; nshots=10_000)
+#         println(io, sample)
+#     end
+# end
 
 #samples = measure(psi; nshots=10)
 #@show samples
