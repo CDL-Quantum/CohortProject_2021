@@ -18,12 +18,15 @@ def draw_graph(coordinates: List[Tuple[float, float]],
 
     # Draw Points
     point_to_radius_ratio = 0.1
+    txt_offset = 0.05 * radius
     points = list()
+    texts = list()
     for i, (x, y) in enumerate(coordinates):
         points.append(plt.Circle((x, y),
                                  radius=radius * point_to_radius_ratio,
                                  color='r' if answer is not None and answer[i] else 'k',
                                  zorder=2))
+        texts.append({"x": x+txt_offset, "y": y+txt_offset, "s": str(i), "zorder": 3})
 
     # Draw Circles
     circles = list()
@@ -45,6 +48,7 @@ def draw_graph(coordinates: List[Tuple[float, float]],
     _ = [axe.add_patch(c) for c in circles]
     _ = [axe.add_line(e) for e in edges]
     _ = [axe.add_patch(p) for p in points]
+    _ = [axe.text(**t) for t in texts]
 
     plt.xlim([min(xs) - margin, max(xs) + margin])
     plt.ylim([min(ys) - margin, max(ys) + margin])
@@ -60,5 +64,5 @@ if __name__ == "__main__":
              (1.1643107343501296, 1.0823066243402013)
              ]
     g = draw_graph(coordinates=graph,
-                   radius=1.0,
+                   radius=0.5,
                    answer=[True, True, False, False, True, True])
