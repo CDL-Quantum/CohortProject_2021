@@ -5,6 +5,9 @@ using Yao.ConstGate # needed for P1 = 0.5*(I - sigma_z) block
 using Plots
 using BitBasis
 using StatsBase
+using GraphRecipes
+using GRUtils
+
 
 #=
 H(t) = Ω(t) ∑_i σ_i^x - δ(t) ∑_i n_i + u ∑_ij n_i n_j
@@ -101,7 +104,90 @@ s = [string(each, base=2, pad=size(graph)[1]) for each in bins_int]
 
 datamap = countmap(samples)
 bins = unique(samples)
-bar((x -> datamap[x]).(bins),
+b_plot = bar((x -> datamap[x]).(bins),
     xticks=(1:size(s)[1],s),
     xtickfont = font(3, "Courier"))
 
+savefig(b_plot, "./Week2_Rydberg_Atoms/Graphics/histogram_solutions.svg")
+
+# get the optimal string (simply as the max)
+optimal_sol = findmax(datamap)
+
+# plot graph solution
+const G = zeros(size(graph)[1],size(graph)[1])
+
+for i=1:size(edges)[1]
+    G[edges[i][1],edges[i][2]] = 1
+end
+
+g_plot = graphplot(G,
+          markersize = 0.3,
+          fontsize = 10,
+          linecolor = :darkgrey
+          )
+
+savefig(g_plot, "./Week2_Rydberg_Atoms/Graphics/graph_plot.svg")
+
+# plot graph in the coordinate space
+bitstr_optim = optimal_sol[2]
+
+red_graph = [graph[i] for i in 1:bit_length(bitstr_optim)+1 if bitstr_optim[i]==0]
+blue_graph = [graph[i] for i in 1:bit_length(bitstr_optim)+1 if bitstr_optim[i]==1]
+
+x = [x[1] for x in graph]
+y = [x[2] for x in graph]
+
+markerunit = 37 # empirically found
+coord_plot = plot(x, y, seriestype = :scatter,
+    title="Coordinate space plot",
+    markersize=markerunit,
+    xlims=(-1,4),
+    ylims=(-1,4),
+    aspect_ratio=:equal)
+
+savefig(coord_plot, "./Week2_Rydberg_Atoms/Graphics/coordinate_plot.svg")
+
+x_red = [x[1] for x in red_graph]
+y_red = [x[2] for x in red_graph]
+x_blue = [x[1] for x in blue_graph]
+y_blue = [x[2] for x in blue_graph]
+
+coord_plot_2 = plot(x_red, y_red, seriestype = :scatter,
+    title="Coordinate space plot",
+    markersize=markerunit,
+    markercolor = :red,
+    xlims=(-1,4),
+    ylims=(-1,4),
+    aspect_ratio=:equal)
+
+plot!(coord_plot_2, x_blue, y_blue, seriestype = :scatter,
+    title="Coordinate space plot",
+    markersize=markerunit,
+    markercolor = :blue,
+    xlims=(-1,4),
+    ylims=(-1,4),
+    aspect_ratio=:equal)
+
+savefig(coord_plot, "./Week2_Rydberg_Atoms/Graphics/coordinate_plot_solution.svg")
+
+
+
+
+# test with circle function
+# function circleShape(h, k, r)
+#     θ = LinRange(0, 2*π, 500)
+#     return h .+ r*sin.(θ), k .+ r*cos.(θ)
+# end
+#
+# fig = Figure()
+# plot(circleShape(0,0,0), seriestype = [:shape,],
+#     lw=0.5, c =:blue, fillalpha=0.2, aspect_ratio=1)
+#
+# for i in 1:size(graph)[1]
+#     x_c = graph[i][1]
+#     y_c = graph[i][2]
+#     plot!(circleShape(x_c,y_c,1), seriestype = [:shape,],
+#         lw=0.5, c =:blue, fillalpha=0.2, aspect_ratio=1)
+# end
+#
+# savefig(b_plot, "./Week2_Rydberg_Atoms/Graphics/coordinate_plot.svg")
