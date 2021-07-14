@@ -2,6 +2,9 @@
 
 using Yao
 using Yao.ConstGate # needed for P1 = 0.5*(I - sigma_z) block
+using Plots
+using BitBasis
+using StatsBase
 
 #=
 H(t) = Ω(t) ∑_i σ_i^x - δ(t) ∑_i n_i + u ∑_ij n_i n_j
@@ -87,5 +90,18 @@ open("task2_data.dat","w") do io
     end
 end
 
-#samples = measure(psi; nshots=10)
-#@show samples
+# added histogram to show degeneration of the solutions
+nshots = 1000
+samples = measure(psi; nshots=nshots)
+# @show samples
+
+samples_int = [Int(b) for b in samples]
+bins_int = unique(samples_int)
+s = [string(each, base=2, pad=size(graph)[1]) for each in bins_int]
+
+datamap = countmap(samples)
+bins = unique(samples)
+bar((x -> datamap[x]).(bins),
+    xticks=(1:size(s)[1],s),
+    xtickfont = font(3, "Courier"))
+
