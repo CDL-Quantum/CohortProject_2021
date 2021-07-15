@@ -1,2 +1,9 @@
 instructions/instructions.*
 !instructions/instructions.tex
+
+# Environments
+env/
+venv/
+
+# Misc.
+.idea/
