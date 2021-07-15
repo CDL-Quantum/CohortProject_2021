@@ -51,7 +51,7 @@ space of a generic optimization problem by simulating the physical process of he
 and then slowly lowering the temperature to decrease defects, thus minimizing the system energy.
 Each transition in spanning the solution space is called anneal.
 
-###[ELI/SAESUN]: 
+### [ELI/SAESUN]: 
 can you add the analysis you performed in this section? 
 
 
@@ -82,7 +82,23 @@ Rydberg blockade mechanism, thereby providing the requisite entangling interacti
 ## 2. Gotham city and Bruce Wayne's stinginess
 * Solving a real-world problem involving cell phone tower placement in Gotham City.
 
-### A solution on a real quantum device
+### Ocean SDK: comparing simulation to a real quantum device
+D-Wave Systems created a full-stack framework ([Leap2](https://www.dwavesys.com/take-leap)) to run quantum annealing algorithms on both simulators and real quantum devices. The access to their systems uses an API mechanism for which registration is required. As part of the CDL, all users should have got a license and can access the real quantum devices. 
+
+For the simulation part, only requirement is the installation of the package [dwave-ocean-sdk](https://pypi.org/project/dwave-ocean-sdk/).
+In [this notebook](./OceanSDK_implmentation.ipynb) we show how to build a graph for the UD-MIS problem and solve it by means of three different methods:
+- simulated thermal annealing
+- simulated quantum annealing
+- quantum annealing on a real quantum device
+
+The graph provided in the previous task is built with the [networkx package](https://networkx.org/). 
+This is useful as the D-Wave library provides a wrapper to solve the MIS problem in this specific form.
+
+The results from all implementation are equivalent. Note that also in this case we 
+observed the problem intrinsic degeneracy, being the vertices 0, 3, and 5 equivalent (see figure below).
+
+![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/solution_Ocean_sdk.png)
+
 
 ## Further Challenges:
 * Comparing the methods used to solve the UD-MIS problem.
@@ -96,5 +112,6 @@ For more details refer to the [Business Application found here](./Business_Appli
 ## References
 
 [1] Andrew Lucas, Ising formulations of many NP problems (2014)
+
 [2] Albert  Messiah, Quantum  mechanics (1966)
 
