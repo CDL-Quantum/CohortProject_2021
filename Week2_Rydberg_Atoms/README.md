@@ -3,29 +3,55 @@
 
 This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
 
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week2_Rydberg_Atoms/instructions.pdf) to begin learning about your tasks for this week!
+## Code and Notebooks
+For each of the sections below a notebook with the same name is associated. The task and challenges were taken from the following  [instructions.pdf](./instructions.pdf).
 
-**Please edit this markdown file directly with links to your completed tasks and challenges.**
 
-## Tasks include:
-* Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
-* Finding a better annealing schedule to arrive at solutions to the problem quicker.
-* Simulating the same problem but using quantum annealing.
-* Comparing the classical and quantum methods.
+## Tasks 
+
+### Task 1
+associated [notebook](./Task1.ipynb)
+
+* We solved the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing, for the proposed graph for the exercise. TODO Alice
+
+* We try to find a better annealing schedule to arrive at solutions to the problem quicker.
+TODO Felipe
+
+### Task 2
+associated [notebook](./Task2.ipynb)
+* We solved the same problem but using quantum annealing, thanks to the Yao library instead.
+TODO Alice
+
+Both solutions are compliant and optimal according to the bruteforce comparaison
+
+TODO Alice : Brutforce ?
+
+### Task 3
+associated [notebook](./Task3.ipynb)
 * Solving a real-world problem involving cell phone tower placement in Gotham City.
+TODO Alice
+
 
 ## Further Challenges:
-* Comparing the methods used to solve the UD-MIS problem.
-* Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
-* Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
+
 * Solving the problem with real quantum hardware.
 
+### Implementation on Dwave
+associated [notebook](./Dwave.ipynb)
+TODO Alice
+
+### Implementation on IonQ
+TODO Victor 
+
+### mapping the Nurse Scheduling Problem to UD-MIS
+* Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
+TODO Victor
+
+### benchmarking the Nurse Scheduling Problem
+TODO Felipe
+* Comparing the methods used to solve the UD-MIS problem.
+* Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
+
+
 ## Business Application
-For each week, your team is asked to complete a Business Application. Questions you will be asked are:
-
-* Explain to a layperson the technical problem you solved in this exercise.
-* Explain or provide examples of the types of real-world problems this solution can solve.
-* Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved.
-* Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
-
 For more details refer to the [Business Application found here](./Business_Application.md)

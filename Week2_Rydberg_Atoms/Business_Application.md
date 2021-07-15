@@ -1,30 +1,29 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 # Quantum Cohort Project Business Application
 
-For each weekly project, your team is asked to complete the below business application exercise.
-To complement the technical tasks, please consdier the four questions below.
-You are free to format your response to these four questions as you wish (with the final question done as a short recorded video), and to include
-the content (or links to the content) on your forked repository.
 
-A brief example for each question is included for the 
-[Traveling Salesman Problem.](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+## Unit Disk Maximum Independent Set
 
-## Step 1: Explain the technical problem you solved in this exercise
+TODO Yurval ?
 
-Example: Finding a global minimum in settings where a classical approach may not be able to find a global minimum.
+* Explain to a layperson the technical problem you solved in this exercise.
+TODO Yurval ?
 
-## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
+## Use Case 1 : 5G and connected cars
 
-Example: A courier has to deliver parcels to several locations and is looking to minimize its travel time. (e.g., “the travelling salesman problem”).
+### explanation of the problem and the associated solution
 
-## Step 3: Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved
+### size of the market and potential customers
+TODO Felipe 
 
-Examples: 
-- Federal Express
-- Canada Post
+## Use Case 2 : Resources Management
 
-## Step 4: Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language
+### explanation of the problem and the associated solution
+story telling with Mexico water shortage
 
-Example: By travelling to all destinations via the shortest route, a courier can generate the same revenue that it would have generated following any other route, but will minimize travel costs (e.g., fuel costs). By minimizing travel costs, the courier will be more profitable than it would have been had it travelled through any other route.
+### size of the market and potential customers
+TODO Victor and Yurval 
 
-**Please store your video externally to the repo, and provide a link e.g. to Google Drive**
+## Pitch Video
+* 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
+TODO Victor and Yurval 
