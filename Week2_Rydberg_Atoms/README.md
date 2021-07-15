@@ -3,7 +3,7 @@
 
 This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
 
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week2_Rydberg_Atoms/instructions.pdf) to begin learning about your tasks for this week!
+Open up [instructions.pdf](../instructions/instructions.pdf) to begin learning about your tasks for this week!
 
 **Please edit this markdown file directly with links to your completed tasks and challenges.**
 
@@ -28,4 +28,4 @@ For each week, your team is asked to complete a Business Application. Questions 
 * Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved.
 * Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
 
-For more details refer to the [Business Application found here](./Business_Application.md)
+For more details refer to the [Business Application found here](business_application/Business_Application.md)

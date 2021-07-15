@@ -7,3 +7,4 @@ venv/
 
 # Misc.
 .idea/
+*.egg-info/
