@@ -168,9 +168,7 @@ plot!(coord_plot_2, x_blue, y_blue, seriestype = :scatter,
     ylims=(-1,4),
     aspect_ratio=:equal)
 
-savefig(coord_plot, "./Week2_Rydberg_Atoms/Graphics/coordinate_plot_solution.svg")
-
-
+savefig(coord_plot_2, "./Week2_Rydberg_Atoms/Graphics/coordinate_plot_solution.svg")
 
 
 # test with circle function
