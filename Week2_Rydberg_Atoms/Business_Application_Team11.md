@@ -1,8 +1,7 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 # Quantum Cohort Project Business Application of Unit-Disk Maximum Independent Set for Protein Folding
 
-Unit-Disk Maximum Independent Set (UD-MIS) is an NP-hard problem represented as a graph optimization problem. The graph has a constraint that the distance between two edges should be greater than a unit distance—this constraint models multiple real-world issues ranging from atomic physics to the communication industry. As the UD-MIS problem is NP-hard, many real-world problems with the domain constraint can be mapped into this simple model: wildlife distribution and packing. 
-
+Unit-Disk Maximum Independent Set (UD-MIS) is an NP-hard problem represented as a graph optimization problem. The graph has a constraint that the distance between two vertices should be greater than a unit distance—this constraint models multiple real-world issues ranging from atomic physics to the communication industry. As the UD-MIS problem is NP-hard, many real-world problems with the domain constraint can be mapped into this simple model: wildlife distribution and packing, for example.      
 
 ## Step 1: Explain the technical problem you solved in this exercise
 
