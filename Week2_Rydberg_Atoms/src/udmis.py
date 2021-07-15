@@ -16,7 +16,7 @@ class AbstractUDMIS():
         return current_energy
 
 
-class UDMIS(AbstractUDMIS):
+class ClassicalUDMIS(AbstractUDMIS):
     def __init__(self, u, graph):
         super().__init__()
         self.u, self.graph = u, graph
