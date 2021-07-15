@@ -3,11 +3,9 @@ import itertools
 import numpy as np
 import openfermion
 from copy import deepcopy
-from openfermion import QubitOperator
-from openfermion.hamiltonians import MolecularData
+from openfermion import QubitOperator, MolecularData, taper_off_qubits, commutator
 from openfermionpyscf import run_pyscf
 from openfermion.transforms import get_fermion_operator, bravyi_kitaev, jordan_wigner
-from openfermion.utils import taper_off_qubits, commutator
 
 from tequila.grouping.binary_rep import BinaryHamiltonian
 from tequila.grouping.binary_utils import binary_null_space
