@@ -1,5 +1,6 @@
 instructions/instructions.*
 !instructions/instructions.tex
+!instructions/instructions.pdf
 
 # Environments
 env/
