@@ -1,4 +1,6 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
+![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/batman-slap.jpg)
+
 ## Project 2: Optimization problems \& Rydberg atom arrays
 Optimization is a crucial element used in solving problems across many different fields, 
 from scientific to industrial applications, to generally boost performance and reduce risks.
@@ -70,8 +72,7 @@ on quantum hardware.
 
 Besides the D-Wave systems, different quantum architectures have been used to 
 implement quantum annealing. Recent developments in the quantum hardware with trapped neutral atoms 
-showed that the latter can be a useful tool to implement adiabatic quantum computation. 
-In this architecture, 
+showed that the latter can be a useful tool to implement adiabatic quantum computation [3] [4]. 
 
 Rydberg atoms are atoms with highly excited electrons, far away from the nucleus (i.e. large principal quantum number). 
 Compared with ground state atoms, they exhibit a very large electric dipole moment which facilitates strong interactions 
@@ -135,6 +136,8 @@ observed the problem intrinsic degeneracy, being the vertices 0, 3, and 5 equiva
 ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/solution_Ocean_sdk.png)
 
 ## 3. Gotham city and Bruce Wayne's stinginess
+![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/gotham.jpg)
+
 * Solving a real-world problem involving cell phone tower placement in Gotham City.
 
 
@@ -142,7 +145,6 @@ observed the problem intrinsic degeneracy, being the vertices 0, 3, and 5 equiva
 * Comparing the methods used to solve the UD-MIS problem.
 * Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
 * Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
-* (DONE): Solving the problem with real quantum hardware.
 
 ## Business Applications
 For more details refer to the [Business Application found here](./Business_Application.md)
@@ -153,3 +155,7 @@ For more details refer to the [Business Application found here](./Business_Appli
 
 [2] Albert  Messiah, Quantum  mechanics (1966)
 
+[3] Serret et al,. Solving optimization problems with Rydberg analog quantum computers: 
+Realistic requirements for quantum advantage using noisy simulation and classical benchmarks (2020).
+
+[4] Browaeys and Lahaye, Many-body physics with individually controlled Rydberg atoms (2020).
