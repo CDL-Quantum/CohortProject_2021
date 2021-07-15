@@ -45,7 +45,7 @@ of this system is equivalent to the one shown in the UD-MIS problem.
 In the following we present several solutions for the MIS problem, both from a
 classical and a quantum standpoint.
 
-### Classical simulated annealing
+### 1.1 Classical simulated annealing
 The simulated (thermal) annealing is a heuristic optimization procedure which spans the solution 
 space of a generic optimization problem by simulating the physical process of heating a material 
 and then slowly lowering the temperature to decrease defects, thus minimizing the system energy.
@@ -58,7 +58,7 @@ can you add the analysis you performed in this section?
 
 * Finding a better annealing schedule to arrive at solutions to the problem quicker.
 
-### Quantum annealing
+### 1.2 Quantum annealing
 Quantum annealing has been introduced in the 80s as a variation of the simulated thermal annealing
 for solving NP-hard optimization problems. The main difference is that besides the thermal
 excitations used in simulated annealing to span the solution space, the quantum annealing 
@@ -71,18 +71,53 @@ on quantum hardware.
 Besides the D-Wave systems, different quantum architectures have been used to 
 implement quantum annealing. Recent developments in the quantum hardware with trapped neutral atoms 
 showed that the latter can be a useful tool to implement adiabatic quantum computation. 
-In this architecture, ground state atoms are dressed by laser fields in a manner conditional on the 
-Rydberg blockade mechanism, thereby providing the requisite entangling interactions
+In this architecture, 
+
+Rydberg atoms are atoms with highly excited electrons, far away from the nucleus (i.e. large principal quantum number). 
+Compared with ground state atoms, they exhibit a very large electric dipole moment which facilitates strong interactions 
+with macroscopic external fields. Thus, this makes Rydberg atoms easy to control with static electric or magnetic, 
+laser, or microwave fields which is then ideal for implementing controllable quantum many-body simulators.
+
+![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/rydberg.jpg)
+
+In particular, the Rydberg hamiltonian has the same functional form as the QUBO hamiltonian
+used to solve the UD-MIS problem. 
+![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/ising_hamiltonian.png)
+where the linear term is responsible for the interaction of each atom with the external field,
+and the quadratic term is the interaction between two Rydberg atoms.
+
+The concept of quantum annealing can then be applied to such a system to find the ground
+state of an optimization problem that can be mapped to the hamiltonian of the Rydberg atom system.
+
+The analysis we performed is based on the extension of the provided 
+[Julia code](../Week2_Rydberg_Atoms/run_quantum_annealing.jl).
+
+The starting point is the same graph as provided in the previous section:
+![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/coordinate_plot.svg)
+
+In this code, the quadratic and linear terms of the interaction hamiltonian are defined time-dependent functions 
+such that at the beginning (t=0) one has a free hamiltonian, while by increasing time steps
+the hamiltonian adiabatically changes into the final interaction hamiltonian which maps the 
+problem that we want to solve. 
+
+Based on the adiabatic theorem, if the transition to the final interaction hamiltonian is adiabatic,
+the initial state will remain in the ground state across the whole adiabatic transofrmation.
+The ground state of the final interaction respresents thus the minimum of the optimization problem
+mapped onto the system.
+
+By simulating a measurement of the final ground state a large amount of time, we obtained a
+distribution of the results which shows that there are basically three degenerate solutions:
+![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/histogram_solutions.svg)
+
+We selected one of the three solutions and we mapped it to a graph. In the space of the coordinates, 
+the solution found is given by the graph below, where the blue circles correspond to the independent set
+of vertices:
+![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/coordinate_plot_solution.svg)
 
 
+### add something on Comparing the classical and quantum methods.
 
-* Simulating the same problem but using quantum annealing.
-* Comparing the classical and quantum methods.
-
-## 2. Gotham city and Bruce Wayne's stinginess
-* Solving a real-world problem involving cell phone tower placement in Gotham City.
-
-### Ocean SDK: comparing simulation to a real quantum device
+## 2. Ocean SDK: comparing simulation to a real quantum device
 D-Wave Systems created a full-stack framework ([Leap2](https://www.dwavesys.com/take-leap)) to run quantum annealing algorithms on both simulators and real quantum devices. The access to their systems uses an API mechanism for which registration is required. As part of the CDL, all users should have got a license and can access the real quantum devices. 
 
 For the simulation part, only requirement is the installation of the package [dwave-ocean-sdk](https://pypi.org/project/dwave-ocean-sdk/).
@@ -98,6 +133,9 @@ The results from all implementation are equivalent. Note that also in this case 
 observed the problem intrinsic degeneracy, being the vertices 0, 3, and 5 equivalent (see figure below).
 
 ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/solution_Ocean_sdk.png)
+
+## 3. Gotham city and Bruce Wayne's stinginess
+* Solving a real-world problem involving cell phone tower placement in Gotham City.
 
 
 ## Further Challenges:
