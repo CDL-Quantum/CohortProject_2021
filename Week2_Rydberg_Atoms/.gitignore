@@ -9,3 +9,4 @@ venv/
 # Misc.
 .idea/
 *.egg-info/
+__pycache__/
