@@ -33,7 +33,7 @@ class UDMIS(AbstractUDMIS):
         edges = np.zeros((self.num_vertices, self.num_vertices), dtype=bool)
         for i in range(self.num_vertices - 1):
             x_i, y_i = self.graph[i]
-            for j in range(i + 1, self.num_vertices):
+            for j in range(i+1, self.num_vertices):
                 x_j, y_j = self.graph[j]
                 if np.sqrt((x_i - x_j) ** 2. + (y_i - y_j) ** 2.) <= 1.0:
                     edges[i, j], edges[j, i] = True, True
@@ -46,7 +46,7 @@ class UDMIS(AbstractUDMIS):
         onsite_term, interaction_term = 0, 0
         for i in range(self.num_vertices):
             onsite_term += self.occupations[i]
-            for j in range(i + 1, self.num_vertices):
+            for j in range(i+1, self.num_vertices):
                 if self.edges[i, j]:
                     interaction_term += self.occupations[i] * self.occupations[j]
         return self.u * interaction_term - onsite_term
