@@ -16,7 +16,7 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 In this task we tried several different schedules as suggested in citation [1] to see their effect on the convergence of UD-MIS under simulated annealing
 
 ### Task 2: Simulating the same problem but using quantum annealing.
-We constructed an arbitrary N vertex graph, Hamiltonion for our system based off UD-MIS problem and ran a simulated annealing algorithm on it to find the lowest energy state.   In the [Task 2 Notebook](./Task 2.ipynb) we tested variations of the annealing time division and shots to sample solution to the problem and graph them.  We then compared the "best" or lowest energy returned with the most commonly returned solution.
+We constructed an arbitrary N vertex graph, Hamiltonion for our system based off UD-MIS problem and ran a simulated annealing algorithm on it to find the lowest energy state.   In the [Task 2 Notebook](./Task_2.ipynb) we tested variations of the annealing time division and shots to sample solution to the problem and graph them.  We then compared the "best" or lowest energy returned with the most commonly returned solution.
 
 ![Most Common Sampled Solution](../Week2_Rydberg_Atoms/img/common.png)
 
