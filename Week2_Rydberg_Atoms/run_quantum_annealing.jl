@@ -9,7 +9,7 @@ H(t) = Ω(t) ∑_i σ_i^x - δ(t) ∑_i n_i + u ∑_ij n_i n_j
 
 const u = 1.35 # const is a global variable whose values will not change. In introduction paper, u is choosed by 1.35.
 const Ω_max = 1.89
-const δ_0 = -1.0
+const δ_0 = -2.0
 const δ_max = 1.0
 
 # This function makes graph that satisfy constrain for UD-MIS problem
@@ -38,7 +38,11 @@ function Ω(t::Float64)
     elseif 0.25 < t <= 0.69
         return Ω_max
     elseif 0.69 < t <= 1
+<<<<<<< HEAD
         return Ω_max - Ω_max * (t-0.69) / 0.31 
+=======
+        return -Ω_max * t / 0.31 + 1.89/0.31
+>>>>>>> 2b7b1b3f97b74e6999a1b6553b9f397bd4c2f001
     end
 end
 
