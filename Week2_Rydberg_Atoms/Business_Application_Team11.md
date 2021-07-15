@@ -5,17 +5,19 @@ Unit-Disk Maximum Independent Set (UD-MIS) is an NP-hard problem represented as 
 
 ## Step 1: Explain the technical problem you solved in this exercise
 
-Example: Finding a global minimum in settings where a classical approach may not be able to find a global minimum.
+By mapping the optimal cell phone tower problem to a quantum annealing problem of a spin Hamiltonian via the UD-MIS representation, we were able to find the optimal cell phone tower configuration.  
 
 ## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
 
-Example: A courier has to deliver parcels to several locations and is looking to minimize its travel time. (e.g., “the travelling salesman problem”).
+Example: protein folding, wildlife distribution, packing problem (e.g., wood- glass- paper- industries), optimal CCTV locations, optimal distribution of franchise stores or warehouses, etc.
 
 ## Step 3: Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved
 
 Examples: 
-- Federal Express
-- Canada Post
+- pharmaceutical company
+- government
+- franchise company
+- wood- glass- paper- industries
 
 ## Step 4: Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language
 
