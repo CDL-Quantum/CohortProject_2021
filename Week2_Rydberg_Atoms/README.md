@@ -7,12 +7,24 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 
 **Please edit this markdown file directly with links to your completed tasks and challenges.**
 
+## Solutions
+
+
 ## Tasks include:
-* Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
-* Finding a better annealing schedule to arrive at solutions to the problem quicker.
-* Simulating the same problem but using quantum annealing.
+### Task 1: Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
+### Task 1: Finding a better annealing schedule to arrive at solutions to the problem quicker.
+In this task we tried several different schedules as suggested in citation [1] to see their effect on the convergence of UD-MIS under simulated annealing
+
+### Task 2: Simulating the same problem but using quantum annealing.
+We constructed an arbitrary N vertex graph, Hamiltonion for our system based off UD-MIS problem and ran a simulated annealing algorithm on it to find the lowest energy state.   In the [Task 2 Notebook](./Task2.ipynb) we tested variations of the annealing time division and shots to sample solution to the problem and graph them.  We then compared the "best" or lowest energy returned with the most commonly returned solution.
+![Most Common Sampled Solution](../Week2_Rydberg_Atoms/img/common.png)
+The most common sampled state had an energy of -2.65
+![Most Common Sampled Solution](../Week2_Rydberg_Atoms/img/best.png)
+
+The sampled state with lowest energy has an energy of -5.0
+
 * Comparing the classical and quantum methods.
-* Solving a real-world problem involving cell phone tower placement in Gotham City.
+### Task 3: Solving a real-world problem involving cell phone tower placement in Gotham City.
 
 ## Further Challenges:
 * Comparing the methods used to solve the UD-MIS problem.
