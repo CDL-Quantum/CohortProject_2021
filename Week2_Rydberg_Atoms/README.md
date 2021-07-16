@@ -3,16 +3,77 @@
 
 This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
 
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week2_Rydberg_Atoms/instructions.pdf) to begin learning about your tasks for this week!
+## Solutions
 
-**Please edit this markdown file directly with links to your completed tasks and challenges.**
+### Task 1: UD-MIS problem using classical simulated annealing
+We have implemented the simulated annealing method for finding Maximum Independent Set of a given graph with Unit-Disk constraint. Using the default scheduling with T<sub>i</sub>=100 and T<sub>f</sub>=.01, we could find the solution(s) at around 3400 Monte-Carlo simulation steps. Below is the plot showcasing the energy during the simulation steps:
+<p align="center">
+<img src="./results/task1/Task1__convergence_plot_default_schedule.png" height="250" width="350"/>
+</p>
 
-## Tasks include:
-* Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
-* Finding a better annealing schedule to arrive at solutions to the problem quicker.
-* Simulating the same problem but using quantum annealing.
-* Comparing the classical and quantum methods.
-* Solving a real-world problem involving cell phone tower placement in Gotham City.
+We have then altered the simulation schedule by changing the paramters T<sub>i</sub> and T<sub>f</sub>. We have observed that reducing the values of both T<sub>i</sub> and T<sub>f</sub> has a positive impact on quick convergence to the solution. While reducing the value of T<sub>i</sub> has the direct impact on the number of steps, we have noticed lower energy fluctuations with smaller T<sub>f</sub> values. Through paramteric search techniques, we have identified that the values of T<sub>i</sub>=1 and T<sub>f</sub>=005 have far better performance converging to the solution in 1200 simulation steps.
+
+Below are the output energy distribution for various values of T<sub>i</sub> and T<sub>f</sub>:
+<p align="center">
+<img src="./results/task1/Task1__convergence_plot_Ti_1.png" height="200" width="300"/> <img src="./results/task1/Task1__convergence_plot_Tf_0.005.png" height="200" width="300"/> <img src="./results/task1/Task1__convergence_plot_Ti_1_Tf_0.005.png" height="200" width="300"/>
+</p>
+
+In order to validate the corretness of the output solutions, below is the distribution of solution occupations for the top three occurrences identified in the annealing results:
+<p align="center">
+<img src="./results/task1/Task1__Solution_Occupations_Distribution.png" height="300" width="300"/>
+</p>
+
+These solution occupations are depicted on the original graph. The vertices marked in orange correspond to the solution to the UD-MIS problem. As it can be seen from the graphs, all of them are valid and meet our constraint of Unit-Disk.
+<p align="center">
+<img src="./results/task1/Task1__Occupation_Solutions_1.png" height="200" width="150"/>|<img src="./results/task1/Task1__Occupation_Solutions_2.png" height="200" width="150"/>|<img src="./results/task1/Task1__Occupation_Solutions_3.png" height="200" width="150"/>
+</p>
+
+The code relevent to simulated annealing along with scheduling parameter search and plot generation can be found in the python notebook [Task1.ipynb](./Task1.ipynb)
+
+### Task 2: UD-MIS problem using quantum annealing
+We have applied quantum simulation techniques to find UD-MIS problem on the same graph used in the Task 1. We have used the Yao simulator for running the quantum simulations. The code corresponding to quantum simulations can be found in the Julia script [run_quantum_annealing.jl](./run_quantum_annealing.jl)
+
+We have collected 10,000 samples from the quantum simulation and plotted top three solution occurrences below:
+<p align="center">
+<img src="./results/task2/Task2__Solution_Occupations_Distribution.png" height="300" width="300"/>
+</p>
+One interesting observation in the case of quantum simulation is that the distribution of all the valid solution are (nearly) uniform as compared to simulation annealing which tend to favour one solution most of the times.
+
+The solution occupations obtained through quantum simulation are depicted on the original graph. The vertices marked in orange correspond to the solution to the UD-MIS problem. They all coincide with the results obtained through simulated annealing. 
+<p align="center">
+<img src="./results/task2/Task2__Occupation_Solutions_2.png" height="200" width="150"/> <img src="./results/task2/Task2__Occupation_Solutions_1.png" height="200" width="150"/> <img src="./results/task2/Task2__Occupation_Solutions_3.png" height="200" width="150"/>
+</p>
+
+All the code relevent to analysing simulation results and plot generation can be found in the python notebook [Task2_Analysis.ipynb](./Task2_Analysis.ipynb)
+
+### Task 3: Gotham City Cell Tower Placement Problem
+We have applied techniques described in Task 1 and Task 2 to a real world problem for identifying the optimal number of cell towers required to reach maximum number of subscribers in Gotham city.
+
+Below are the plots describing the distribution of solution occurrences generated through both simulated annealing and quantum simulation:
+<p align="center">
+<img src="./results/task3/Task3__SA_Solution_Occupations_Distribution.png" height="250" width="250"/> <img src="./results/task3/Task3__QA_Solution_Occupations_Distribution.png" height="250" width="250"/>
+</p>
+
+The quantum simulation seems to explore multiple solutions with equal probability while simulated annealing favours one single solution.
+
+Here is the depiction of solutions found by simulated annealing and quantum annealing methods:
+<p align="center">
+<img src="./results/task3/Task3__SA_Occupation_Solutions_1.png" height="250" width="200"/> <img src="./results/task3/Task3__SA_Occupation_Solutions_3.png" height="250" width="200"/> <img src="./results/task3/Task3__SA_Occupation_Solutions_2.png" height="250" width="200"/> <img src="./results/task3/Task3__SA_Occupation_Solutions_4.png" height="250" width="200"/>
+</p>
+
+<p align="center">
+<img src="./results/task3/Task3__QA_Occupation_Solutions_2.png" height="250" width="200"/> <img src="./results/task3/Task3__QA_Occupation_Solutions_4.png" height="250" width="200"/> <img src="./results/task3/Task3__QA_Occupation_Solutions_1.png" height="250" width="200"/> <img src="./results/task3/Task3__QA_Occupation_Solutions_3.png" height="250" width="200"/>
+</p>
+
+While both methods found multiple valid solutions, their outputs are completely different for 50% of the output occupations.
+
+We then went a step forward and implemented a solution to this problem on DWave's 5000Q Advantage System. We are able to find a solution in just 10 samples (as opposed to 10,000 samples on quantum simulator) and within 16 milliseconds of QPU time. Below we depict the energy profile of QPU for this experiment as well as the soluton output.
+<p align="center">
+<img src="./results/task3/Task3__DWave_Solution_Energy.png" height="250" width="250"/> <img src="./results/task3/Task3__Dwave_Occupation_Solutions_4.png" height="250" width="200"/>
+</p>
+
+The code associated to this experiment with D-Wave QPU can be found in the python notebook [Task3_QA_DWave.ipynb](./Task3_QA_DWave.ipynb)
+
 
 ## Further Challenges:
 * Comparing the methods used to solve the UD-MIS problem.
