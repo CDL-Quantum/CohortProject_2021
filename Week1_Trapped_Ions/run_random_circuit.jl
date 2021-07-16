@@ -1,6 +1,9 @@
 #!/usr/bin/env julia
 
 using PastaQ
+using LinearAlgebra
+using ITensors
+using Plots
 
 function PastaQ.gate(::GateName"R"; theta::Real, phi::Real)
     [
@@ -8,6 +11,7 @@ function PastaQ.gate(::GateName"R"; theta::Real, phi::Real)
         (-im * exp(im * phi) * sin(theta/2))     cos(theta/2)
     ]
 end
+
 
 function PastaQ.gate(::GateName"M"; Theta::Real)
     [
@@ -21,32 +25,60 @@ end
 function run(N, depth)
     # Random circuit.
     gates = Vector{Tuple}[]
+    
+    rdms = []
+    for i in 1:N
+        push!(rdms, i)
+    end
+    
+    
+    rdm = rand((rdms))
 
     for i in 1:depth
         one_qubit_layer = Tuple[]
         two_qubit_layer = Tuple[]
+        err_qubit_layer = Tuple[]
+        
+        begin (rdm < N)
+        idx_err = rdm
+        end
+        
+        for j in idx_err
+            gate = ("E", j)
+            push!(err_qubit_layer, gate)
+        end
+        
 
         for j in 1:N
-            gate = ("R", j, (theta=2pi*rand(), phi=2pi*rand()))
-            push!(one_qubit_layer, gate)
+            if j != rdm
+                gate = ("R", j, (theta=2pi*rand(), phi=2pi*rand()))
+                push!(one_qubit_layer, gate)
+            end
         end
 
         # Alternate start qubit for pairs.
         idx_first = i % 2 + 1
 
         for j in idx_first:2:(N-1)
-            gate = ("M", (j, j+1), (Theta=2pi*rand(),))
-            push!(two_qubit_layer, gate)
+            if j != rdm
+                gate = ("M", (j, j+1), (Theta=2pi*rand(),))
+                push!(two_qubit_layer, gate)
+            end
         end
-
+        
         push!(gates, one_qubit_layer)
         push!(gates, two_qubit_layer)
+        push!(gates, err_qubit_layer)
+        
     end
 
     psi = runcircuit(N, gates)
 end
 
+<<<<<<< HEAD
 # N = parse(Int, ARGS[1])
 # depth = parse(Int, ARGS[2])
 
 # run(N, depth)
+=======
+>>>>>>> d9306be792ea6f70cbbd6af76ec7e7feae90ba5a
