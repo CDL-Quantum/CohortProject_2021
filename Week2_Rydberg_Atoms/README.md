@@ -105,9 +105,10 @@ the initial state will remain in the ground state across the whole adiabatic tra
 The ground state of the final interaction respresents thus the minimum of the optimization problem
 mapped onto the system.
 
+![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/histogram_solutions.svg)
+
 By simulating a measurement of the final ground state a large amount of time, we obtained a
 distribution of the results which shows that there are basically three degenerate solutions:
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/histogram_solutions.svg)
 
 We selected one of the three solutions and we mapped it to a graph. In the space of the coordinates, 
 the solution found is given by the graph below, where the blue circles correspond to the independent set
