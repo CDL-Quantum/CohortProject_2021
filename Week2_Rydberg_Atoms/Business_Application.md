@@ -63,7 +63,7 @@ can use to open the business, but what's the place that generates the maximum pr
 We answer this question by mapping onto our quantum system countless hypothetical locations where a store could be opened, 
 and we find the distribution which avoids overlapping with the coverage of existing franchises. 
 
-# Other applications and customers
+# Applications and Customers
 
 Besides marketing and trend research, at Quantum Strategy we offer quantum-based solutions to 
 a variety of optimization problems.
