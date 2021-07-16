@@ -75,7 +75,7 @@ associated [notebook](./Dwave.ipynb)
 
 ### Implementation on IonQ
 
-**TODO Victor **
+**TODO Victor**
 
 ### mapping the Nurse Scheduling Problem to UD-MIS
 Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
