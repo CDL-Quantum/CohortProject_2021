@@ -32,19 +32,20 @@ end
 
 function Ω(t::Float64)
     if 0 <= t <= 0.25
-        return 4. * Ω_max * t
+        return (Ω_max / 0.25) * t
     elseif 0.25 < t <= 0.69
         return Ω_max
     elseif 0.69 < t <= 1
-        return Ω_max - Ω_max * (t-0.69) / 0.31 ## ??? discontinuous???
+        return - Ω_max * t / 0.31 + Ω_max * (1 + 0.69/0.31)
     end
 end
 
 function δ(t::Float64)
+    slope = (δ_0 - δ_max)/(0.25 - 0.69)
     if 0 <= t <= 0.25
         return δ_0
     elseif 0.25 < t <= 0.69
-        return (t-0.25) * (δ_max - δ_0)/0.44 + δ_0 
+        return t * slope + (δ_max - slope * 0.69)
     elseif 0.69 < t <= 1
         return δ_max
     end
@@ -65,15 +66,27 @@ function run_annealing(graph::Vector{NTuple{2, Float64}}, edges::Vector{Cartesia
     psi_t = zero_state(size(graph)[1])  # 왜 0에서 propagate 시키더라?
     for t in 0:dt:1.0
         h = hamiltonian(graph, edges, t)
-        psi_t = psi_t |> TimeEvolution(h, dt)
+        psi_t = psi_t |> TimeEvolution(h, dt * 100)
     end
     return psi_t
 end
 
-graph = [(0.3461717838632017, 1.4984640297338632), (0.6316400411846113, 2.5754677320579895), (1.3906262250927481, 2.164978861396621), (0.66436005100802, 0.6717919819739032), (0.8663329771713457, 3.3876341010035995), (1.1643107343501296, 1.0823066243402013)]
+graph = [(0.3461717838632017, 1.4984640297338632), 
+         (0.6316400411846113, 2.5754677320579895), 
+         (1.3906262250927481, 2.164978861396621), 
+         (0.66436005100802, 0.6717919819739032), 
+         (0.8663329771713457, 3.3876341010035995), 
+         (1.1643107343501296, 1.0823066243402013)
+        ]
 edges = get_edges(graph)
 dt = 0.001
 
 psi = run_annealing(graph, edges, dt)
-samples = measure(psi; nshots=1024)
-@show samples
+open("task2_data.dat","w") do io
+    for sample in measure(psi; nshots=10_000)
+        println(io, sample)
+    end
+end
+
+#samples = measure(psi; nshots=10)
+#@show samples
