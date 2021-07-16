@@ -36,6 +36,9 @@ However, it seems that the quantum annealing solver yields an error, with an non
 
 ### Task 3
 associated [notebook](./Task3.ipynb)
+
+### original problem
+
 The City of Gotham is looking at putting in new cell phone towers. Some possible locations of the cell phone towers have been identified. To avoid overheads, Gotham should only purchase the required number of cell phone towers such that 
 1. the cell phone tower signal ranges do not overlap
 2. as much of Gotham City can be within cell signal range
@@ -45,7 +48,20 @@ This problem can be mapped to a UD-MIS problem. In that case each potential loca
 We solve the problem with the simulated classical annealing and the brute force solver. The problem is not complex enough for the simulated annealing to beat the brute force implementation in runtime (3s vs 0.2s) Moreover the brute force solver outputs a set of possible options :
 ![Task 3: Result](./img/Task3_Gotham.png)
 
-However, one can argue that the constraint of no overlap is suboptimal. Let's take the toy case where two potential sites for a tower are 0.9999 unit apart. The optimal a human would intuitively choose would be to put one tower on both sites, but instead the the UD-MIS would reject it as the two sites are formally intersecting. A new way of reformulating the problem would be to maximize the area covered while minimizing the overlap. In order to do that, the edges of the graph corresponding to the problem could be weighted by the "overlap". It turns out that the surface of overlap is very close to the function **1-x** where x is the distance between two vertices. This  would add some custom weigths in front of the entangled term of the hamiltonian.
+### reformulation of the problem
+
+However, one can argue that the constraint of no overlap is suboptimal. Let's take the toy case where there are only two potential sites at a distance of 0.9999. The optimal a human would intuitively choose would be to put a tower on both sites, but instead the the UD-MIS would reject it as the two sites are formally intersecting. A new way of reformulating the problem would be to maximize the area covered while minimizing the overlap. In order to do that, the edges of the graph corresponding to the problem could be weighted by the overlap surface. In fact if we take the exact formula of the overlap between two circle (normalised to 1 being the surface of unit circle) where **d_{i,j)** is the disance between the **i**th and **j**th centers.
+
+**w_{i,j} = 2/\pi ( arcos(d) - d \sqrt {1-d_{i,j}^2}**
+
+It turns out that the value : sum of activated tower - sum of the weights over the edges is exactly equal to the surface covered by at least one tower. In that new framework this is the quantity to maximize, for a given number of towers, that becomes the cost.
+
+By brute force we plot where all solutions stand in the space total overlap vs cost. The red line shows the optimal solution for each number of towers :
+![Task 3: Result](./img/Task3_overlap_cost.png)
+
+And below we display the optimal solution for each number of tower, the overlap value can be seen in the title
+![Task 3: Result](./img/Task3_compromise.png)
+
 
 
 ## Further Challenges:
