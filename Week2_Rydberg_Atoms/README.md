@@ -1,4 +1,3 @@
-![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/batman-slap.jpg)
 
 ## Project 2: Optimization problems \& Rydberg atom arrays
@@ -159,3 +158,5 @@ For more details refer to the [Business Application found here](./Business_Appli
 Realistic requirements for quantum advantage using noisy simulation and classical benchmarks (2020).
 
 [4] Browaeys and Lahaye, Many-body physics with individually controlled Rydberg atoms (2020).
+
+![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
