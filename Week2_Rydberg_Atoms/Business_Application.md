@@ -4,10 +4,21 @@
 
 ## Unit Disk Maximum Independent Set
 
-TODO Yurval ?
+Many real-world problems are extremely computationally intensive when posed in full generality.
+The theoretical analysis of computational intensity usually takes the form of cost scaling analysis,
+which is to say that researchers determine not the cost of solving any one *instance* of the problem
+but rather how the cost grows as the difficulty of the problem grows.
+The hardness of a problem grows as the efficiency of solving the problem shrinks.
 
-* Explain to a layperson the technical problem you solved in this exercise.
-TODO Yurval ?
+The science of computational complexity is still a young one and problems are thus frequently separated
+in terms of how hard they are relative to a better-understood class of problems. Hard problems are often encountered in real-life situations, and those faced with such problems cannot give up simply because the problem is hard. Instead, one often accepts a solution in the form of an algorithm that will *probably* give a *decent* answer. Such solutions may be "good enough" for a short time but are prone to disruption by newer, better algorithms that can solve the problem more efficiently.
+
+Stakeholders should therefore routinely prepare for the advent of new approaches to old problems. Such approaches can demonstrate radically improved efficiency, which can lead to significantly lower operational costs and hence a risk of disruption to previously well-established operations.
+
+In this document we analyse how such disruption might occur in resource management due to the deployment of a quantum computer based on the technology of Rydberg atom arrays -- a "Rydberg Quantum Computer" (RQC).
+The technology of RQCs lend themselves naturally to the development of "good enough" algorithms for the Unit-Disk Maximum Independent Set (UD-MIS) problem, which is known to be hard. Roughly put, the UD-MIS
+problem starts with a set of possibly overlapping circles and asks for the largest subset of non-overlapping
+circles. As we explain below, this problem is related to questions of resource management,
 
 ## Use Case 1 : 5G and connected cars
 
