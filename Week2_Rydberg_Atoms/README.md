@@ -46,6 +46,7 @@ The solution occupations obtained through quantum simulation are depicted on the
 
 All the code relevent to analysing simulation results and plot generation can be found in the python notebook [Task2_Analysis.ipynb](./Task2_Analysis.ipynb)
 
+
 ### Task 3: Gotham City Cell Tower Placement Problem
 We have applied techniques described in Task 1 and Task 2 to a real world problem for identifying the optimal number of cell towers required to reach maximum number of subscribers in Gotham city.
 
@@ -67,19 +68,44 @@ Here is the depiction of solutions found by simulated annealing and quantum anne
 
 While both methods found multiple valid solutions, their outputs are completely different for 50% of the output occupations.
 
-We then went a step forward and implemented a solution to this problem on DWave's 5000Q Advantage System. We are able to find a solution in just 10 samples (as opposed to 10,000 samples on quantum simulator) and within 16 milliseconds of QPU time. Below we depict the energy profile of QPU for this experiment as well as the soluton output.
+
+## Further Challenges:
+
+* Benchmarking Different Techniques
+
+In the file Optional_Task1 we have setup several scripts to address the challenges posed. For benchmarking purposes
+we first introduce a new quantum inspired method - the Density Matrix Renormalization Group algorithm that uses Matrix Product States (MPS) to tackle the UD-MIS Hamiltonian. The routines are located under simple_dmrg.py and flatnetwork.py. The latter also contains other functions that enable running calculations using a single-site mean-field theory as well as exact diagonalization or Full-CI.
+
+For illustrative purposes we tackle the Gotham City Cell Tower problem and, as a bonus, compare against the exact diagonalization or Full-CI techniques. In both cases we find the lowest energy possible. Note that due to the possibility of degenerate states, the MPS and ground state are not identical (with varying probability amplitudes).
+
+For the purposes of benchmarking we will use the functions included in flatnetwork.py. This module enables the creation of randomized graphs that have been flattened to a linear chain with long-range interactions. The linear-chain model is needed for DMRG. Though it is possible to convert a graph to a linear chain, we do not explore than avenue here due to time constraints. 
+Additionally, these randomized graphs can be scaled up in a straightforward way and we can control the density of nearest neighbor vertices and long-range interactions.  
+
+<p align="center">
+    <img src="./results/opTasks/bmEnergy.png" height="250" width="200"/>     
+</p>
+
+As we can see in the figure above all many-body methods like Simmulated Annealing (SA), Quantum Annealing (QA) and DMRG are able to obtain the lowest possible ground-state. The site-decoupled MF method we use here is particularly bad for these problems. There were many issues in the convergence showing oscillatory behavior. Nevertheless, we include it for some comparisons. 
+
+<p align="center">
+    <img src="./results/opTasks/bmEnergy.png" height="250" width="200"/>     
+</p>
+
+The final comparison regarding effeciency is illustrated in the figure above. Note that comparing Quantum Annealing (QA) simulated on classical computers is not ideal and is known to be very expensive. Between SA and DMRG, the latter clearly outperforms the former requiring very modest resources. This is necessarily due to the low entanglement in these systems. The final solution did not take more than a bond dimesion (D) of 3 in most cases.  
+
+
+* Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
+
+
+
+* Solving the problem with real quantum hardware.
+
+Due to Mr. Wayne's extraordinary generosity (not to mention an intimidating night-time visitation by a certain masked vigilante), we have implemented a solution to the Gotham City Tower Problem on DWave's 5000Q Advantage System. We are able to find a solution in just 10 samples (as opposed to 10,000 samples on quantum simulator) and within 16 milliseconds of QPU time. Below we depict the energy profile of QPU for this experiment as well as the soluton output.
 <p align="center">
 <img src="./results/task3/Task3__DWave_Solution_Energy.png" height="250" width="250"/> <img src="./results/task3/Task3__Dwave_Occupation_Solutions_4.png" height="250" width="200"/>
 </p>
-
 The code associated to this experiment with D-Wave QPU can be found in the python notebook [Task3_QA_DWave.ipynb](./Task3_QA_DWave.ipynb)
 
-
-## Further Challenges:
-* Comparing the methods used to solve the UD-MIS problem.
-* Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
-* Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
-* Solving the problem with real quantum hardware.
 
 ## Business Application
 For each week, your team is asked to complete a Business Application. Questions you will be asked are:

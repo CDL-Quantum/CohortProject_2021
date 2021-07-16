@@ -188,7 +188,7 @@ class FlatNetwork():
         return olde, mps
     
     #This is only for testing purposes. Do NOT use more than L = 12
-    def runED(self, tol=1.0e-6):        
+    def runED(self, tol=1.0e-6, nstates = 1):        
         mpos = self.get_mpos()        
         newmpo = dmrg.MPO.outer(mpos[0],mpos[1])
         #print(newmpo.ops[0][0])
@@ -198,7 +198,7 @@ class FlatNetwork():
         #print('Final Hamiltonian is: ',newmpo.ops[0][0])
         
         lh = newmpo.op[0,0]
-        [ev, psi0] = las.eigsh(lh,k=1,which='SA',maxiter=lh.shape[0]*10,tol=tol,ncv=100)        
+        [ev, psi0] = las.eigsh(lh,k=nstates,which='SA',maxiter=lh.shape[0]*10,tol=tol,ncv=100)        
         return ev, psi0
     
     #Also do a mean-field calculation
