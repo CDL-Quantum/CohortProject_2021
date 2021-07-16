@@ -1,3 +1,10 @@
+## Dutch medical facilities distribution
+# Optimal distribution of medical facilities across a country is a problem that with given simplifications (e.g. uniform
+# density of population) can be exactly mapped to the UD-MIS problem.
+# For instance, given a set of cities where it is possible to build a hospital, the goal is to find the maximum
+# independent set of cities under the constraint that the cities are at least e.g. 50km apart.
+# Quantum annealing can be used for this task.
+
 import shapefile as shp
 import seaborn as sns
 import geopandas as gpd
@@ -6,14 +13,6 @@ import networkx as nx
 from matplotlib import pyplot as plt
 import dwave_networkx as dnx
 from dwave_qbsolv import QBSolv
-
-
-## Dutch medical facilities distribution
-# Optimal distribution of medical facilities across a country is a problem that with given simplifications (e.g. uniform
-# density of population) can be exactly mapped to the UD-MIS problem.
-# For instance, given a set of cities where it is possible to build a hospital, the goal is to find the maximum
-# independent set of cities under the constraint that the cities are at least e.g. 50km apart.
-# Quantum annealing can be used for this task.
 
 sns.set(style="whitegrid", palette="pastel", color_codes=True)
 sns.mpl.rc("figure", figsize=(10, 6))
@@ -53,9 +52,9 @@ for city in cities:
             other_gemeente_idx = gemeente_df[gemeente_df.Gemeentena == other_city].index.values[0]
             x2_pts = gemeente_sf.shape(other_gemeente_idx).points[0][0]
             y2_pts = gemeente_sf.shape(other_gemeente_idx).points[0][1]
-            dist = np.ceil(np.sqrt((x_pts - x2_pts)**2 + (y_pts - y2_pts)**2)*100)
+            dist = np.ceil(np.sqrt((x_pts - x2_pts) ** 2 + (y_pts - y2_pts) ** 2) * 100)
             distances.append(dist)
-            if dist <= 50: # less than 50 km distant
+            if dist <= 50:  # less than 50 km distant
                 G.add_edge(city, other_city)
 
     data_dist.append(distances)
