@@ -30,4 +30,4 @@ Examples:
 
 ## Step 4: Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language
 
-[Business Application video can be found here](./week2_businessapplication_small.mov)
+[Business Application video can be found here](./week2_small.mov)
