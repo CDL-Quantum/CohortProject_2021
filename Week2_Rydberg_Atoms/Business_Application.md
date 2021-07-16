@@ -1,30 +1,23 @@
-![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 # Quantum Cohort Project Business Application
 
-For each weekly project, your team is asked to complete the below business application exercise.
-To complement the technical tasks, please consdier the four questions below.
-You are free to format your response to these four questions as you wish (with the final question done as a short recorded video), and to include
-the content (or links to the content) on your forked repository.
+![CDL 2020 Cohort Project_business](../Week2_Rydberg_Atoms/img/ba1.png)
 
-A brief example for each question is included for the 
-[Traveling Salesman Problem.](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+# Quantum Strategy
 
-## Step 1: Explain the technical problem you solved in this exercise
+Quantum Strategy is a team of physicists, software engineers, and data scientists who help companies make improvements through technology particularly specialized in optimization algorithms and quantum computation. We empower the business and government by providing optimized solutions via calculating heavy and difficult problems with modern computers and quantum computers such as D-wave.
 
-Example: Finding a global minimum in settings where a classical approach may not be able to find a global minimum.
+Our company focuses on a very simple problem. Can a salesman travel without too much headache? Often time salesman needs to decide where to go to make the most profit. Seems very small problem, but it is the problem that many business and organization need to solve to make scalable business and make optimum decisions. Where to build next Starbucks to optimize the benefits in Newyork? how many cell phone towers do we need to cover in the United States? and where to locate a tornado shelter to save more people in the city in Oklahoma. Unfortunately, this problem is proven to be an NP-hard problem, and many scientists are still trying to optimize it nowadays.
 
-## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
+However, with recent innovations in quantum physics, a quantum computer can be calculated much faster than what the best super-computer can calculate. By taking advantage of that innovation, we are confident we can empower the company by the optimal and successful decision which can save millions of dollars.
 
-Example: A courier has to deliver parcels to several locations and is looking to minimize its travel time. (e.g., “the travelling salesman problem”).
+# Our Solution 
 
-## Step 3: Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved
+Our company is interested in solution via using nutueral atom called Ryberg atom. From modeling the quantum system, we can provide solutions from military decisions of locating troops to city planning. For demonstration purposes, we show two examples of how our algorithm can be helpful to your business. 
 
-Examples: 
-- Federal Express
-- Canada Post
+# Eliminate Franchises
 
-## Step 4: Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language
+![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/img/ba2.png)
 
-Example: By travelling to all destinations via the shortest route, a courier can generate the same revenue that it would have generated following any other route, but will minimize travel costs (e.g., fuel costs). By minimizing travel costs, the courier will be more profitable than it would have been had it travelled through any other route.
+(Picture: Starbucks locations in Manhattan, NY) We all have seen the rise and fall of Subway restaurants as they expand their franchises aggressively. This is the common mistake that many businesses often fall into. Having too many franchises in a certain location can often cause negative revenue if the location and traffic are not optimized. This will not only reduce the company's revenue but reduce the local franchise owner's failure rate and influence the product quality. To avoid such failure, we provide optimization with factors such as human traffic, population density, and land prices by changing the potential of each atom (which is shown in the figure with a different circle radius). This information can be helpful to decide the elimination of franchises and planning for a new area to optimize the revenue and minimize the risk. The company can use the knowledge to make the decision which can save the company's time and money. 
 
-**Please store your video externally to the repo, and provide a link e.g. to Google Drive**
+![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
