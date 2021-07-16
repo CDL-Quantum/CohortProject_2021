@@ -82,7 +82,7 @@ For the purposes of benchmarking we will use the functions included in flatnetwo
 Additionally, these randomized graphs can be scaled up in a straightforward way and we can control the density of nearest neighbor vertices and long-range interactions.  
 
 <p align="center">
-    <img src="./results/opTasks/bmEnergy.png" height="250"/> <img src="./results/opTasks/bmEnergy.png" height="250"/> 
+    <img src="./results/opTasks/bmEnergy.png" height="250"/> <img src="./results/opTasks/bmTime.png" height="250"/> 
 </p>
 
 As we can see in the figure (left) above all many-body methods like Simmulated Annealing (SA), Quantum Annealing (QA) and DMRG are able to obtain the lowest possible ground-state. The site-decoupled MF method we use here is particularly bad for these problems. There were many issues in the convergence showing oscillatory behavior. Nevertheless, we include it for some comparisons. 
