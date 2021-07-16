@@ -35,7 +35,19 @@ function Ω(t::Float64)
     elseif 0.25 < t <= 0.69
         return Ω_max
     elseif 0.69 < t <= 1
+<<<<<<< HEAD
         return - Ω_max * t / 0.31 + Ω_max * (1 + 0.69/0.31)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        return Ω_max - Ω_max * (t-0.69) / 0.31 
+=======
+        return -Ω_max * t / 0.31 + 1.89/0.31
+>>>>>>> 2b7b1b3f97b74e6999a1b6553b9f397bd4c2f001
+=======
+        return - Ω_max * t / 0.31 + Ω_max * (1 + 0.69/0.31)
+>>>>>>> d9306be792ea6f70cbbd6af76ec7e7feae90ba5a
+>>>>>>> main
     end
 end
 
@@ -44,7 +56,15 @@ function δ(t::Float64)
     if 0 <= t <= 0.25
         return δ_0
     elseif 0.25 < t <= 0.69
+<<<<<<< HEAD
         return t * slope + (δ_max - slope * 0.69)
+=======
+<<<<<<< HEAD
+        return (t-0.25) * (δ_max - δ_0)/0.44 + δ_0 
+=======
+        return t * slope + (δ_max - slope * 0.69)
+>>>>>>> d9306be792ea6f70cbbd6af76ec7e7feae90ba5a
+>>>>>>> main
     elseif 0.69 < t <= 1
         return δ_max
     end
@@ -81,6 +101,13 @@ edges = get_edges(graph)
 dt = 0.001
 
 psi = run_annealing(graph, edges, dt)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+samples = measure(psi; nshots=1024)
+@show samples
+=======
+>>>>>>> main
 open("task2_data.dat","w") do io
     for sample in measure(psi; nshots=10_000)
         println(io, sample)
@@ -88,4 +115,12 @@ open("task2_data.dat","w") do io
 end
 
 #samples = measure(psi; nshots=10)
+<<<<<<< HEAD
 #@show samples
+=======
+#@show samples
+<<<<<<< HEAD
+>>>>>>> d9306be792ea6f70cbbd6af76ec7e7feae90ba5a
+=======
+>>>>>>> 5957b6928520a26ac27558630773657297bc0d97
+>>>>>>> main
