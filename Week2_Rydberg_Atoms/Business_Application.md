@@ -4,43 +4,69 @@
 
 # Quantum Strategy
 
-Quantum Strategy is a team of physicists, software engineers and data scientists who help companies make improvements 
-through technology particularly specialized in optimization algorithms and quantum computation. We empower the business 
-and government by providing optimized solutions via calculating heavy and difficult problems with modern computers and 
-quantum computers such as D-wave.
+Quantum Strategy builds tailored quantum-ready solutions for companies and governments, focusing on difficult problems 
+that requires spatial optimization. 
 
-Our company focuses on a very simple problem. Can a salesman travel without too much headache? Often time salesman needs 
-to decide where to go to make the most profit. Seems very small problem, but it is the problem that many business and 
-organization need to solve to make scalable business and make optimum decisions. Where to build next Starbucks to 
-optimize the benefits in Newyork? how many cell phone towers do we need to cover in the United States? and where to 
-locate a tornado shelter to save more people in the city in Oklahoma. Unfortunately, this problem is proven to be an 
-NP-hard problem, and many scientists are still trying to optimize it nowadays.
+We focus on a simple question: can a salesman travel without headaches? A salesman needs 
+to decide where to go, in order to make the most profit. While this may seem an easy problem, many 
+organizations struggle to solve hard challenges that can be compared to the traveling salesman problem: where to build the next Starbucks to 
+optimize profits in New York? How many cell phone towers needs to be built in Africa in order to provide maximum coverage 
+while minimizing costs? How to organize seats on a plane to ensure social distancing during the COVID-19 pandemic? 
 
-However, with recent innovations in quantum physics, a quantum computer can be calculated much faster than what the best 
-super-computer can calculate. By taking advantage of that innovation, we are confident we can empower the company by the 
-optimal and successful decision which can save millions of dollars.
+That kind of problems are proven to be "NP-hard", which means our computers have a hard time in solving them!
 
-# Our Solution:  
+However, recent discoveries revealed that quantum computers are much more efficient in tackling those challenges, even 
+compared to the best ever built super-computer. 
+Our team of physicists, software engineers and data scientists write algorithms that exploits the power of quantum computers, 
+to help you make critical decisions to save money.
 
-Our company is interested in solution via using neutral atom called Ryberg atom. From modeling the quantum system, we can provide solutions from military decisions of locating troops to city planning. For demonstration purposes, we show two examples of how our algorithm can be helpful to your business. 
+# Our Solution  
 
-## Eliminate Franchises
+Instead of writing code that runs on a classical computer, we exploit physical properties of certain neutral atoms, called Rydberg atoms.
+The process is simple:
+- We analyze your needs
+- We model the quantum system to reflect your needs
+- We look at how the quantum system naturally evolves to find the best solution to your problem
+  
+Our algorithms have a huge spectrum of application, from military decisions (where to locate troops?) to zoning regulations (where to build hospitals?). 
+We present here two use cases to demonstrate how our algorithms can deliver value to your business. 
 
-![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/img/ba2.png)
+## Redundant franchises
 
-(Picture: Starbucks locations in Manhattan, NY) We all have seen the rise and fall of Subway restaurants as they expand their franchises aggressively. This is the common mistake that many businesses often fall into. Having too many franchises in a certain location can often cause negative revenue if the location and traffic are not optimized. This will not only reduce the company's revenue but reduce the local franchise owner's failure rate and influence the product quality. To avoid such failure, we provide optimization with factors such as human traffic, population density, and land prices by changing the potential of each atom (which is shown in the figure with a different circle radius). This information can be helpful to decide the elimination of franchises and planning for a new area to optimize the revenue and minimize the risk. The company can use the knowledge to make the decision which can save the company's time and money. 
+![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/img/ba2.png) 
 
-## Next Franchise
+*(Picture on the left: some Starbucks locations in Manhattan, NY)*
+
+Many of us have seen the rise and fall of Subway restaurants as they expand their franchises aggressively.
+Many businesses often fall into this mistake: having too many franchises in a certain area may lead to suboptimal profits 
+if traffic is not optimized, or population is not dense enough in that area. 
+This not only reduces the company's profit, but also increases the overall franchise failure rate, and influence the perceived quality of the product sold. 
+
+To avoid such failure, our optimization algorithms take in consideration factors such as human traffic, population density, 
+land prices and many more, by mapping Starbucks locations onto a quantum system made by Rydberg atoms. 
+
+In the figure above on the right, circles represents the coverage of a Starbucks store. 
+Black circles represents Starbucks which have suboptimal profits, thus could be closed to save money.
+
+*Disclaimer: this example leverages a subset of Starbucks stores actually opened in New York.* 
+
+## A new franchise
 
 ![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/img/ba3.png)
 
-(Picture: Starbucks locations in Oklahoma, TX)  Besides optimizing multiple locations of the franchise, our solution can be very effective if we want to open up a new franchise for a given location. For example, unlike Starbucks in Manhattan, Oklahoma does not have many Starbucks. Therefore, there are many possible places that local owners can start the business. To optimize the best profit in Oklahoma, Starbucks can optimize the possible location. This can be simply done by constraining our hamiltonian with a given location, and we can optimize the point of interest. This will help the company to detect the rich location faster than other competitors in the field. 
+*(Picture: Starbucks locations in Oklahoma, TX)*
+
+Instead of closing down franchises to optimize profits, what about where to open the next one?
+Let's assume that Oklahoma does not have many Starbucks. Therefore, there are many possible places that local owners 
+can use to open the business, but what's the place that generates the maximum profit?
+
+We answer this question by mapping onto our quantum system countless hypothetical locations where a store could be opened, 
+and we find the distribution which avoids overlapping with the coverage of existing franchises. 
 
 # Other applications and customers
 
 Besides marketing and trend research, at Quantum Strategy we offer quantum-based solutions to 
-a variety of optimization problems in business. In the following, we show an overview of the 
-use cases and possible customers.
+a variety of optimization problems.
 
 - **Surveillance systems**: determine the optimal placement of surveillance cameras to maximize the
 coverage areas while minimizing the costs of the systems. Possible customers/partners are large 
@@ -50,29 +76,32 @@ companies providing surveillance products and services:
   - Dahua Technology 
 
 
-- **Seating plans during Covid**: during the pandemic, social distancing is necessary to reduce contagion risk. 
-  We provide a quantum-based solution to optimally distribute a group of people for event planning (e.g.
-  concert, theater or cinema) or transportation (seating plan for flights or trains). Possible customers
-  are event organizers as well as airline and railways companies, e.g.:
+- **Seating allocation during COVID-19 pandemic**: during the pandemic, social distancing is necessary to reduce the risk of infection. 
+  We optimally distribute seats of a group of people during events (e.g.
+  in theaters and cinema) or while traveling (e.g. on flights and trains). Possible customers
+  are event organizers, as well as airline and railways companies:
   - Bassett Events, Inc. or Eventbrite NL B.V. (for event organization)
   - Delta Air lines, Lufthansa Group or Deutsche Bahn (for transportation services) 
     
 
-- **Regional development planning**: a development plan sets out a local authority's policies 
-  and proposals for land use in their area. This includes the allocation of facilities as police stations,
-  hospitals or post offices. We propose a quantum based solution to determine the optimal distribution of 
-  facilities across a given region or an entire country. As an example we provide an implementation
+- **City development planning**: optimizing zoning rules in order to ensure maximum benefits for inhabitants at minimum costs for the government. 
+  This includes the allocation of facilities as police stations, hospitals or post offices. 
+  We propose a quantum-based solution to determine the optimal distribution of 
+  facilities across a given region, city or an entire country. As an example we provide an implementation
   of our algorithm to find the optimal distribution of medical facilities across the Netherlands.
   [This file](../Week2_Rydberg_Atoms/Dutch medical facilities.py) includes the code used to perform this analysis.
+  Possible customers:
+  - Ministero dei Trasporti Italiano
+  - Municipality of Amsterdam
 
-## Dutch medical facilities distribution during Covid pandemic
+## A technical deep-dive: distribution of Dutch medical facilities during COVID-19 pandemic
 Optimal distribution of medical facilities across a country is a problem that with given simplifications (e.g. uniform
 density of population) can be exactly mapped to a graph problem and solved by means of quantum annealing.
 For instance, given a set of cities where it is possible to build a hospital, the goal is to find the maximum
 independent set of cities under the constraint that the cities are at least e.g. 50km apart.
 
-We assume that the Dutch government wishes to determine a distribution of Covid-ready 
-hospital facilities across the country, given a set of cities. 
+We assume that the Dutch government wishes to determine a distribution 
+hospital facilities ready to treat patientes affected by COVID-19 across the country, given a set of cities. 
 
 ![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/Graphics/NL_initial.png)
 
@@ -84,9 +113,9 @@ We solve this problem by determining the maximum independent set of hospitals wh
 covers the region. The solution is shown in the following graph:
 ![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/Graphics/NL_graph_solution.png)
 
-The Covid-ready hospitals shall be placed in the 'red' locations, while the blue locations
+The COVID-ready hospitals shall be placed in the 'red' locations, while the blue locations
 are redundant. This is also shown in the following map, in which the red cities correspond to 
-the Covid-hospitals, while the blue dots are the redundant ones:
+the COVID-hospitals, while the blue dots are the redundant ones:
 
 ![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/Graphics/NL_plot_solution.png)
 
@@ -96,7 +125,7 @@ the Covid-hospitals, while the blue dots are the redundant ones:
 
 **Giuseppe Colucci** PhD in physics, works in the Banking industry for 7 years, expert in financial modelling, strategic hedging and optimization techniques.  
 
-**Oscar Fanelli** "Born" as software engineer 13 years ago, later on switched to a managerial path, founded and grew a start-up as CTO, now working as Head of Engineering, focusing on product, processes and people.
+**Oscar Fanelli** Italian pizza-lover, "born" as software engineer 13 years ago, founded and grew a start-up as CTO, now working as Head of Engineering, focusing on product, processes and people management.
 
 **Jose H. Leon-Janampa** I like to research and work on topics that bring some benefit to people. I have a scientific mind but with knowledge of business and finance. I am a theoretical physicist that works in finance for more than 20 years, always trying to apply cutting edge technology to the business.
 
