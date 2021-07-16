@@ -20,4 +20,25 @@ Our company is interested in solution via using nutueral atom called Ryberg atom
 
 (Picture: Starbucks locations in Manhattan, NY) We all have seen the rise and fall of Subway restaurants as they expand their franchises aggressively. This is the common mistake that many businesses often fall into. Having too many franchises in a certain location can often cause negative revenue if the location and traffic are not optimized. This will not only reduce the company's revenue but reduce the local franchise owner's failure rate and influence the product quality. To avoid such failure, we provide optimization with factors such as human traffic, population density, and land prices by changing the potential of each atom (which is shown in the figure with a different circle radius). This information can be helpful to decide the elimination of franchises and planning for a new area to optimize the revenue and minimize the risk. The company can use the knowledge to make the decision which can save the company's time and money. 
 
+# Next Franchise
+
+(Picture: Starbucks locations in Oklahoma, TX)  Besides optimizing multiple locations of the franchise, our solution can be very effective if we want to open up a new franchise for a given location. For example, unlike Starbucks in Manhattan, Oklahoma does not have many Starbucks. Therefore, there are many possible places that local owners can start the business. To optimize the best profit in Oklahoma, Starbucks can optimize the possible location. This can be simply done by constraining our hamiltonian with a given location, and we can optimize the point of interest. This will help the company to detect the rich location faster than other competitors in the field. 
+
+# Our Team
+
+ **Elijah Cavan** graduated from UWaterloo with a Bsc. Mathematics Physics and from Wilfrid Laurier with an MSc. Mathematics. My research mainly stems in cosmology and N-body systems.
+
+**Giuseppe Colucci** Originally from Bari, I moved to Frankfurt ~10y ago for my PhD in Quantum Field Theory. I then moved to Rotterdam, where I lived now for more than 7y, to start working for UL as a software engineer for security of transactions.
+
+**Oscar Fanelli** "Born" as software engineer 13 years ago, later on switched to a managerial path, founded and grew a start-up as CTO, now working as Head of Engineering, focusing on product, processes and people.
+
+**Jose H. Leon-Janampa** I like to research and work on topics that bring some benefit to people. I have a scientific mind but with knowledge of business and finance. I am a theoretical physicist that works in finance for more than 20 years, always trying to apply cutting edge technology to the business.
+
+**Saesun Kim** I am a Ph.D. student at experimental quantum optics. As well as my experimental expertise, I am also a Qiskit advocate and co-lead of Qiskit localization.
+
+# Video
+
+**Link to Business Proposal Video: **
+
+
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
