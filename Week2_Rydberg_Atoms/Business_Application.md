@@ -38,19 +38,19 @@ A humanitarian crisis is coming to the city of Tijuana in Mexico [3]. Lack of wa
 
 We propose detecting possible distribution points with a given radius of range for a division of the water cuts more efficiently. On the map, we can see a toy example of these points. Each circle is a zone with water. 
 
-![Example Intersection](Intersection_Example.png )
+![Example Intersection](./img/Intersection_Example.png )
 Figure 1.  Each circle is a zone with water 
 
 An intersection of the circle means that that section of the city will have water for more days than the rest of the city.  The land value will increase. People want to live in places where there is more water, creating unequal distribution in favor of the high-income population. We want to avoid these cases. Access to water is a human right that doesn't depend on your income.
 
-![Example Solution](Toy_example_solution.png)
+![Example Solution](./img/Toy_example_solution.png)
 Figure 2. Maximum set of independent zones with water 
 
 **The proposal is to find the maximum set of independent zones with water to enable equal water distribution. This is equivalent to finding the solution to the UD-MIS problem.** 
 
 This solution will create zones without water that make it inhabitable for the population but perfect for solar cells, wind turbines, and waste management. 
 
-![Example More points](More_distribution_points.png)
+![Example More points](./img/More_distribution_points.png)
 Figure 3. Problem with more distribution points is harder to solve. 
 
 ### Scheduling the distribution of water 
