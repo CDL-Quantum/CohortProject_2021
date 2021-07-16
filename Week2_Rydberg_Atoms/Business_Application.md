@@ -1,4 +1,4 @@
-# Quantum Cohort Project Business Application
+# Business Application: Spatial Optimizations and Rydberg Atoms
 
 ![CDL 2020 Cohort Project_business](../Week2_Rydberg_Atoms/img/ba1.png)
 
