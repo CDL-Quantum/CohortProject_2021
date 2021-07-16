@@ -128,7 +128,7 @@ class FlatNetwork():
         self.mpoc = mpoc
         return mpoc            
         
-    def run(self, cnvgThreshold = 1.0e-6, schdl = 3):
+    def run(self, cnvgThreshold = 1.0e-6, **kwargs):
         
         #Setup DMRG parameters
         dmrgp = dmrg.dmrgParams()
@@ -141,9 +141,13 @@ class FlatNetwork():
         dm = dmrg.DMRG(dmrgp,mps,mpos)
         
         #Sweep Schedule
-        sweepd = [1,10,20,30,40]
-        sweepi = [100,20,5,5,5]
-        sweepn = [1.0e-3,1.0e-4, 1.0e-4, 1.0e-4, 1.0e-5, 1.0e-5]
+        #sweepd = [2,5,10,15,20]
+        #sweepi = [100,20,5,5,5]
+        #sweepn = [1.0e-3,1.0e-4, 1.0e-4, 1.0e-4, 1.0e-5, 1.0e-5]
+        
+        sweepd = kwargs['sweepd'] if ('sweepd' in kwargs) else [1,2,2,2,3]
+        sweepi = kwargs['sweepi'] if ('sweepi' in kwargs) else [5,5,5,5,5]
+        sweepn = kwargs['sweepn'] if ('sweepn' in kwargs) else [1.0e-2,1.0e-3,1.0e-4,1.0e-5,1.0e-6]
         
         #Run
         sch = 0
@@ -151,7 +155,7 @@ class FlatNetwork():
         mps.rightNormalize()        
             
         olde = 0.0
-        for sch in range(schdl):
+        for sch in range(len(sweepd)):
             print('Schedule: ',sch,' D = ', sweepd[sch])
             
             for i in range(sweepi[sch]):
@@ -207,6 +211,10 @@ class FlatNetwork():
         cs = np.random.randint(0,2,self.L)        
         #Compute MF values
         mfN = np.zeros(self.L)
+        
+        lastE = [0.0,0.0]
+        lastState = [[],[]]
+        
         for i in range(self.L):
             fjs = [x[1] for x in self.edges if(x[0] == i)] #Get all connected neighbors            
             sjs = [x[0] for x in self.edges if(x[1] == i)] #Sorted edge list so have to be careful                
@@ -225,7 +233,10 @@ class FlatNetwork():
             for pair in self.edges:
                 uE += cs[pair[0]]*cs[pair[1]]*self.edges[pair]                
             tE = -1.0*sum(cs) + uE
-            print('** Current Energy: ',tE, 'for state: ',cs)                                                          
+            #print('** Current Energy: ',tE, 'for state: ',cs)                                                          
+            print('** Current Energy: ',tE, end='')
+            
+            
             
             #Compute new MF values
             new_mfN = np.zeros(self.L)
@@ -235,13 +246,29 @@ class FlatNetwork():
                 js = fjs + sjs                     
                 new_mfN[i] = np.sum(cs[js])            
             
-            print('Old MF: ',mfN, 'New MF: ',new_mfN)
+            #print('Old MF: ',mfN, 'New MF: ',new_mfN)
             nrm1 = la.norm(new_mfN - mfN)            
             mfN = new_mfN
                         
-            print('Delta(mf) ',nrm1)                                    
+            print(' Delta(mf) ',nrm1)                                    
             if(nrm1<threshold):
                 break                        
+            
+            if(n>10 and abs(lastE[0]-tE)<1.0e-8): 
+                break
+            
+            lastE[0] = lastE[1]
+            lastE[1] = tE
+            
+            lastState[0] = lastState[1]
+            lastState[1] = cs
+        
+        if(lastE[0]<lastE[1]):
+            tE = lastE[0]
+            cs = lastState[0]
+        else:
+            tE = lastE[1]
+            cs = lastState[1]
             
         return tE,cs
     
@@ -262,7 +289,7 @@ if __name__ == '__main__':
         print('Energy calculated ',e)
     
     else:
-        L = 16
+        L = 50
         for u in [1.35]:
 
             edges, wij, maxl = random_flat_graph(L,min(10,L/2),0.5,0.5,u)
@@ -277,7 +304,7 @@ if __name__ == '__main__':
                 print('MF Energy: ', tE)
                 print('MF State: ', fstate)
 
-            testDMRG = True
+            testDMRG = False
             if(testDMRG):
                 print('\nTesting DMRG')
                 e, mps = fn.run()    
@@ -290,7 +317,7 @@ if __name__ == '__main__':
                     print(config)
                     print(ampv**2)        
 
-            testED = True
+            testED = False
             if(L<14 and testED):
                 print('\nTesting ED')
                 ev, psi0 = fn.runED()
