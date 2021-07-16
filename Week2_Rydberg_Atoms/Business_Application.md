@@ -27,6 +27,8 @@ A humanitarian crisis is coming to the city of Tijuana in Mexico [2]. Lack of wa
 
 We propose detecting possible distribution points with a given radius of range for a division of the water cuts more efficiently. On the map, we can see a toy example of these points. Each circle is a zone with water. 
 
+![Example Solution](Toy_example_solution.png)
+
 ### size of the market and potential customers
 TODO Victor and Yurval 
 
