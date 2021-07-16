@@ -4,7 +4,7 @@
 
 # Quantum Strategy
 
-Quantum Strategy is a team of physicists, software engineers, and data scientists who help companies make improvements 
+Quantum Strategy is a team of physicists, software engineers and data scientists who help companies make improvements 
 through technology particularly specialized in optimization algorithms and quantum computation. We empower the business 
 and government by providing optimized solutions via calculating heavy and difficult problems with modern computers and 
 quantum computers such as D-wave.
@@ -63,7 +63,7 @@ companies providing surveillance products and services:
   hospitals or post offices. We propose a quantum based solution to determine the optimal distribution of 
   facilities across a given region or an entire country. As an example we provide an implementation
   of our algorithm to find the optimal distribution of medical facilities across the Netherlands.
-  [This file](./Week2_Rydberg_Atoms/Dutch medical facilities.py) includes the code used to perform this analysis.
+  [This file](../Week2_Rydberg_Atoms/Dutch medical facilities.py) includes the code used to perform this analysis.
 
 ## Dutch medical facilities distribution during Covid pandemic
 Optimal distribution of medical facilities across a country is a problem that with given simplifications (e.g. uniform
