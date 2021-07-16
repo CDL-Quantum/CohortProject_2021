@@ -76,9 +76,12 @@ function run(N, depth)
 end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # N = parse(Int, ARGS[1])
 # depth = parse(Int, ARGS[2])
 
 # run(N, depth)
 =======
 >>>>>>> d9306be792ea6f70cbbd6af76ec7e7feae90ba5a
+=======
+>>>>>>> 5957b6928520a26ac27558630773657297bc0d97

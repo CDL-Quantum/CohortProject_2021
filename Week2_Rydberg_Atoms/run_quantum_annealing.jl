@@ -108,4 +108,7 @@ end
 
 #samples = measure(psi; nshots=10)
 #@show samples
+<<<<<<< HEAD
 >>>>>>> d9306be792ea6f70cbbd6af76ec7e7feae90ba5a
+=======
+>>>>>>> 5957b6928520a26ac27558630773657297bc0d97

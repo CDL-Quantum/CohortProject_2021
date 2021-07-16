@@ -6,6 +6,7 @@ This project will guide you through the recent Google quantum supremacy result, 
 ## Solutions
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Tasks include:
 * Simulating a random circuit with a Matrix Product State code, and producing a speckle pattern.
 * Adding a single bit-flip error and exploring the change in the speckle pattern.
@@ -56,6 +57,8 @@ If the XEB fidelity is zero, the probability distribution is uniform and hence i
 ## Business Application
 An interesting application of random circuit sampling addressed in this cohort project is secure communication. The communication protocol can be used by any individuals, companies, governments, and militaries demanding high-level communication security. We provide more detailed description about the business application [here](./Business_Application_Team23.md)
 =======
+=======
+>>>>>>> 5957b6928520a26ac27558630773657297bc0d97
 All solution in Julia can be found in this [Julia notebook](./solution_julia.ipynb). We've also created an analogous [Python notebook](./solutions_python.ipynb)  using Google's quantum computing language- Cirq, for those who are more familiar with python. If you're interested in the full instructions for the tasks we completed, check out the [pdf](./instructions.pdf). 
 
 ### Task 1: Plot the probability of each bit string for various circuit widths and depths
@@ -165,4 +168,7 @@ For more details refer to the [Business Application found here](./Business_Appli
 
 
 
+<<<<<<< HEAD
 >>>>>>> d9306be792ea6f70cbbd6af76ec7e7feae90ba5a
+=======
+>>>>>>> 5957b6928520a26ac27558630773657297bc0d97
