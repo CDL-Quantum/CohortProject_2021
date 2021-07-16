@@ -13,7 +13,7 @@ organizations struggle to solve hard challenges that can be compared to the trav
 optimize profits in New York? How many cell phone towers needs to be built in Africa in order to provide maximum coverage 
 while minimizing costs? How to organize seats on a plane to ensure social distancing during the COVID-19 pandemic? 
 
-That kind of problems are proven to be "NP-hard", which means our computers have a hard time in solving them!
+That kind of problems are proven to be "[NP-hard](https://en.wikipedia.org/wiki/NP-hardness)", and our computers have a hard time in solving them!
 
 However, recent discoveries revealed that quantum computers are much more efficient in tackling those challenges, even 
 compared to the best ever built super-computer. 
