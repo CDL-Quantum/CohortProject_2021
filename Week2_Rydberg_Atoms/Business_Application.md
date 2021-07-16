@@ -22,6 +22,8 @@ Our company is interested in solution via using nutueral atom called Ryberg atom
 
 # Next Franchise
 
+![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/img/ba3.png)
+
 (Picture: Starbucks locations in Oklahoma, TX)  Besides optimizing multiple locations of the franchise, our solution can be very effective if we want to open up a new franchise for a given location. For example, unlike Starbucks in Manhattan, Oklahoma does not have many Starbucks. Therefore, there are many possible places that local owners can start the business. To optimize the best profit in Oklahoma, Starbucks can optimize the possible location. This can be simply done by constraining our hamiltonian with a given location, and we can optimize the point of interest. This will help the company to detect the rich location faster than other competitors in the field. 
 
 # Our Team
