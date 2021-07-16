@@ -21,20 +21,25 @@ For the above Toy Graph the brute force solver goes faster than the classical an
 The two implementations start to be equivalent in term of runtime around $N=20$ for density $d=1$. Several solutions are optimal
 ![Task 1: Result](./img/Task1_RandomGraph20.png)
 
-* We tried to find a better annealing schedule to arrive at solutions to the problem quicker.
-TODO Felipe
+We tried to find a better annealing schedule to arrive at solutions to the problem quicker.
+**TODO Felipe**
 
 ### Task 2
 associated [notebook](./Task2.ipynb)
-* We solved the same problem but using quantum annealing with the Yao library implementation.
-TODO Alice
+We solved the same problem but using quantum annealing with the Yao library implementation. Plotting the frequency of occurence of each bit string we find that the solver has identified thre optimal solutions :
+![Task 2: Result](./img/Task1_RandomGraph20.png)
 
-Both solutions are compliant and optimal according to the bruteforce comparaison
+However it seems that the quantum annealing solver yields an error, with an uncompliant solution propsed as optimal
+![Task 2: Result](./img/Task2_ToyGraph.png)
 
 ### Task 3
 associated [notebook](./Task3.ipynb)
-* Solving a real-world problem involving cell phone tower placement in Gotham City.
-TODO Alice
+The City of Gotham is looking at putting in new cell phone towers. Some possible locations of the cell phone towershave been identified. To avoid overheads Gotham should only purchase the required number of cell phone towers such that 
+1. the cell phone tower signal ranges do not overlap
+2. as much of Gotham City can be within cell signal range
+This problem can be mapped to a UD-MIS problem. In that case each potential location corresponds to a vertice and can hold a tower, which corresponds to being activated or not. Constraint 1 trasnlates into the disk constraint, which define the edges of the graph. Constraint 2 corresponds to the fact that a maximum of tower shall be installed which translates into optimisation of the cardinality of independent set.
+We solve the problem with the simulated classical annealing and the brute force solver. The problem is not complex enough for the simulated annealing to beat the brute force implementation in runtime (3s vs 0.2s) Moreover the brute force solver outputs a set of possible options :
+![Task 3: Result](./img/Task3_Gotham.png)
 
 
 ## Further Challenges:
@@ -43,17 +48,17 @@ TODO Alice
 
 ### Implementation on Dwave
 associated [notebook](./Dwave.ipynb)
-TODO Alice
+**TODO Alice**
 
 ### Implementation on IonQ
-TODO Victor 
+**TODO Victor **
 
 ### mapping the Nurse Scheduling Problem to UD-MIS
 * Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
-TODO Victor
+**TODO Victor**
 
 ### benchmarking the Nurse Scheduling Problem
-TODO Felipe
+**TODO Felipe**
 * Comparing the methods used to solve the UD-MIS problem.
 * Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
 
