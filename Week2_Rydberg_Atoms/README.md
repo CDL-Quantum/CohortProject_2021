@@ -53,9 +53,9 @@ and then slowly lowering the temperature to decrease defects, thus minimizing th
 Each transition in spanning the solution space is called anneal.
 
 ### [ELI/SAESUN]: 
-can you add the analysis you performed in this section? 
+We compared the two algorithms implemented on Python - however...see ([this link](https://towardsdatascience.com/the-great-csv-showdown-julia-vs-python-vs-r-aa77376fb96))
 
-
+![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/julia.png)
 
 * Finding a better annealing schedule to arrive at solutions to the problem quicker.
 
