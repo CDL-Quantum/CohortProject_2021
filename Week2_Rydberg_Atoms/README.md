@@ -92,7 +92,7 @@ The concept of quantum annealing can then be applied to such a system to find th
 state of an optimization problem that can be mapped to the hamiltonian of the Rydberg atom system.
 
 The analysis we performed is based on the extension of the provided 
-[Julia code](../Week2_Rydberg_Atoms/run_quantum_annealing.jl).
+[Julia code](../Week2_Rydberg_Atoms/legacy_run_quantum_annealing.jl).
 
 The starting point is the same graph as provided in the previous section:
 
@@ -119,7 +119,21 @@ of vertices:
 
 ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/coordinate_plot_solution.svg)
 
-# ELI/SAES: add something on Comparing the classical and quantum methods.
+### 1.3 Benchmarking classical to quantum annealing
+
+A direct comparison of the simulated and quantum annealing by means of the previous exercise is not
+straightforward. In fact, there are several parameters/conditions that make the comparison arbitrary:
+- the simulated solution strongly depends on the annealing schedule
+- the simulated and the quantum annealing codes are written in different languages
+- the D-Wave simulator (see next section) performance depends both on parameters and embedding of the problem  
+- the real device implementation (see next section) has latency issues to connect to the cloud and retrieve the solution. 
+
+However, the theoretical improvement of quantum annealing w.r.t. simulated annealing has been 
+proven for a class of problems (see [5], where they analyzed quantum annealing in a version incorporating a transverse 
+field Ising model, and showed that QA converges to optimality faster than SA in some cases).
+
+Also more recent researches [6][7][8] have shown the benefits of quantum annealing and demonstrated 
+a scaling advantage for a quantum annealer over simulated annealing. 
 
 ## 2. Ocean SDK: comparing simulation to a real quantum device
 D-Wave Systems created a full-stack framework ([Leap2](https://www.dwavesys.com/take-leap)) to run quantum annealing algorithms on both simulators and real quantum devices. The access to their systems uses an API mechanism for which registration is required. As part of the CDL, all users should have got a license and can access the real quantum devices. 
@@ -205,7 +219,6 @@ of signals.
 ## Further Challenges:
 * Comparing the methods used to solve the UD-MIS problem.
 * Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
-* Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
 
 ## Business Applications
 For more details refer to the [Business Application found here](./Business_Application.md)
@@ -220,5 +233,15 @@ For more details refer to the [Business Application found here](./Business_Appli
 Realistic requirements for quantum advantage using noisy simulation and classical benchmarks (2020).
 
 [4] Browaeys and Lahaye, Many-body physics with individually controlled Rydberg atoms (2020).
+
+[5] Kadowaki and Nishimori, Quantum annealing in the transverse Ising model (1989)
+
+[6] Albash and Lidar, Demonstration of a Scaling Advantage for a Quantum Annealer over Simulated Annealing (2018)
+
+[7] Venturelli and Kondratyev, Reverse Quantum Annealing Approach to Portfolio Optimization Problems (2018)
+
+[8] Mugel et al, Dynamic Portfolio Optimization with Real Datasets Using Quantum Processors and Quantum-Inspired Tensor Networks (2020)
+
+
 
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
