@@ -35,11 +35,14 @@ Our baseline will be the proposed anneling schedule
 
 To benchmark the annealing schedule we can check the value of the energy at the end of each iteration and see how many iterations we have to reach the ground state energy, in the baseline we have
 
-![Task 1: Result](./figs task 1/Baseline_annealing.png) { width: 200px; }
+<table><tr>
+    <td><img src="./figs task 1/Baseline_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the proposed annealing schedule </figcaption></td> 
+    <td><img src="./figs task 1/Baseline_occupations.png" style="width: 250px;"><figcaption> <font size="3">Occupation states history using the proposed annealing schedule </figcaption></td>
+    </tr>
+</table>
 
-It takes a bit of iterations but eventually around the iteration 70 it got to the ground state. We can also see how the occupations change throughout the iterations, we sample 4 different iterations to plot the graphs with the occupation states:
+It takes a bit of iterations but eventually around the iteration 70 it got to the ground state. We can also see how the occupations change throughout the iterations, we sample 4 different iterations to plot the graphs with the occupation states (right figure).
 
-![Task 1: Result](./figs task 1/Baseline_occupations.png)
 
 #### Frange cycle
 
@@ -77,7 +80,7 @@ We can use Multiplicative annealing:
 
 ![equation](https://bit.ly/3iirkYp)
 
-with k runing over the number of iterations and Lambda as the decay constant.
+with k runing over the number of iterations and Gamma as the decay constant.
 
 with the following results:
 
