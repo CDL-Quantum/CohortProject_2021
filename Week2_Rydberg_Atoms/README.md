@@ -35,7 +35,7 @@ with an edge if and only if the corresponding circles intersect.
 The problem of finding the MIS can be expressed as a quadratic unconstrained optimization problem,
 which is also equivalent to an Ising hamiltonian
 
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/ising_hamiltonian.png)
+![ising hamiltonian](../Week2_Rydberg_Atoms/img/ising_hamiltonian.png)
 
 where the quadratic terms favours disjoint circles and the linear term makes sure
 that we select as many circles as possible.
@@ -52,10 +52,10 @@ space of a generic optimization problem by simulating the physical process of he
 and then slowly lowering the temperature to decrease defects, thus minimizing the system energy.
 Each transition in spanning the solution space is called anneal.
 
-### [ELI/SAESUN]: 
+### ELI/SAESUN: 
 We compared the two algorithms implemented on Python - however...see ([this link](https://towardsdatascience.com/the-great-csv-showdown-julia-vs-python-vs-r-aa77376fb96))
 
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/julia.png)
+![julia results](../Week2_Rydberg_Atoms/img/julia.png)
 
 * Finding a better annealing schedule to arrive at solutions to the problem quicker.
 
@@ -78,12 +78,12 @@ Compared with ground state atoms, they exhibit a very large electric dipole mome
 with macroscopic external fields. Thus, this makes Rydberg atoms easy to control with static electric or magnetic, 
 laser, or microwave fields which is then ideal for implementing controllable quantum many-body simulators.
 
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/rydberg.jpg)
+![rydberg atoms](../Week2_Rydberg_Atoms/img/rydberg.jpg)
 
 In particular, the Rydberg hamiltonian has the same functional form as the QUBO hamiltonian
 used to solve the UD-MIS problem. 
 
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/ising_hamiltonian.png)
+![ising hamiltonian](../Week2_Rydberg_Atoms/img/ising_hamiltonian.png)
 
 where the linear term is responsible for the interaction of each atom with the external field,
 and the quadratic term is the interaction between two Rydberg atoms.
@@ -119,8 +119,7 @@ of vertices:
 
 ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/coordinate_plot_solution.svg)
 
-
-# add something on Comparing the classical and quantum methods.
+# ELI/SAES: add something on Comparing the classical and quantum methods.
 
 ## 2. Ocean SDK: comparing simulation to a real quantum device
 D-Wave Systems created a full-stack framework ([Leap2](https://www.dwavesys.com/take-leap)) to run quantum annealing algorithms on both simulators and real quantum devices. The access to their systems uses an API mechanism for which registration is required. As part of the CDL, all users should have got a license and can access the real quantum devices. 
@@ -137,16 +136,16 @@ This is useful as the D-Wave library provides a wrapper to solve the MIS problem
 The results from all implementation are equivalent. Note that also in this case we 
 observed the problem intrinsic degeneracy, being the vertices 0, 3, and 5 equivalent (see figure below).
 
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/solution_Ocean_sdk.png)
+![Graph solution DWave](../Week2_Rydberg_Atoms/img/solution_Ocean_sdk.png)
 
 ## 3. Gotham city and Bruce's stinginess
 
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/gotham.jpg)
+![Gotham](../Week2_Rydberg_Atoms/img/gotham.jpg)
 
 The City of Gotham is looking at putting in new cell phone towers. 
 The possible locations of the cell phone towers are given in this figure:
 
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/gotham-location.png)
+![Gotham coordinates](../Week2_Rydberg_Atoms/img/gotham-location.png)
 
 The billionaire (but stingy) Bruce Wayne is funding the project, but he loves his money. 
 Therefore, Gotham should only purchase the required number of cell phone towers such that:
@@ -164,35 +163,9 @@ Thus, the condition that the two conditions of non-overlapping cell signal and m
 can be expressed as a MIS problem on the defined graph, i.e. we maximize the number of nodes 
 (antennas) that are independent (non-overlapping signals). 
 
-[comment]: <> (the number of cell towers are N = |V| = 12, and )
-
-[comment]: <> (<img src="https://render.githubusercontent.com/render/math?math=S=&#40;n_{1},...,n_{N}&#41;"> )
-
-[comment]: <> (be an N-bit string )
-
-[comment]: <> (&#40;i.e. <img src="https://render.githubusercontent.com/render/math?math=n_{i}">  )
-
-[comment]: <> (<img src="https://render.githubusercontent.com/render/math?math=\in"> 0, 1&#41;)
-
-[comment]: <> (where <img src="https://render.githubusercontent.com/render/math?math=n_{i}=1"> &#41;)
-
-[comment]: <> (can be interpreted as having a cell tower in place and )
-
-[comment]: <> (<img src="https://render.githubusercontent.com/render/math?math=n_{i}=0"> )
-
-[comment]: <> (of not having a cell tower in place, we can also define the so called Hamming weight as the sum of )
-
-[comment]: <> (active towers <img src="https://render.githubusercontent.com/render/math?math=S= \underset{i=1}{\sum}^{N} n_{i}">. )
-
-[comment]: <> (The  MIS  problem  is  defined  as  finding the maximum value of active towers S from all the possible combinations )
-
-[comment]: <> (of active and non-active towers defined by the set B, this is defined by the optimization problem: )
-
-[comment]: <> (<img src="https://render.githubusercontent.com/render/math?math=\underset{S \in B}{Max} |S|">.)
-
 Similarly to the analysis performed in the previous sections, the UD-MIS problem can be solved for the Gotham's antennas graph by means of:
 - simulated (thermal) annealing (see [Python notebook](../Week2_Rydberg_Atoms/Task3_python.ipynb))
-- quantum annealing simulation (see Julia notebook)
+- quantum annealing simulation (see [Julia notebook](../Week2_Rydberg_Atoms/Task_3_QAnnealing.ipynb))
 - D-Wave quantum annealing solution (see [Python notebook](../Week2_Rydberg_Atoms/OceanSDK_implmentation_gotham.ipynb))
 
 #### Simulated (thermal) annealing
@@ -201,7 +174,7 @@ Similarly to the analysis performed in the previous sections, the UD-MIS problem
 #### Quantum simulated annealing
 After running the quantum annealing simulator (10000 measurements) we obtain the following histogram:
 
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/Task3/Task3_Histogram.svg)
+![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/Task3 plots/Task3_Histogram.svg)
 
 As we observed in the previous sections, the solutions are represented by bitstrings, with each bit
 corresponding to a node in the graph. For the Gotham city problem, a bit equal to 1 corresponds to an 
@@ -211,8 +184,9 @@ Thus, the most frequent bitstrings in the histogram correspond to the optimal so
 There is clearly a degeneracy of solutions which appear equally frequent in the histogram above.
 Such solutions are shown in the figures below:
 ### WRONG FIGURES: PLACE THOSE WITH RADIUS=0.5
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/Task3/011000010011c.jpg)
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/Task3/101000010011c.jpg)
+
+![Solution 0 Gotham](../Week2_Rydberg_Atoms/Graphics/Task3 plots/011000010011c.jpg)
+![Solution 1 Gotham](../Week2_Rydberg_Atoms/Graphics/Task3 plots/101000010011c.jpg)
 
 By calculating the energy of these two solutions we can see that they are effectively degenerate,
 with a hamiltonian eigenvalue of -5.
