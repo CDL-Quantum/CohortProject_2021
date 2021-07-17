@@ -34,9 +34,9 @@ TODO Felipe
 Access to clean water is a human right, but water resources are becoming scarce, there's a global water crisis on the horizon [1,2]. People struggle to access the quantity and quality of water they need for drinking, cooking, bathing, handwashing and growing their food. We propose to optimize the position of water distribution locations in a city to maximize their use and manage an equal distribution in the population. 
 
 ### Explanation of the problem in the city of Tijuana and the associated solution
-A humanitarian crisis is coming to the city of Tijuana in Mexico [3]. Lack of water has become the norm in the city and is expected to worsen in the coming year . Right now, the response of the government has been to cut the supply of water in specific neighborhoods for days, weeks, or months [4]. The consequence is an unequal distribution of the water in the city.
+A humanitarian crisis is coming to the city of Tijuana in Mexico [3]. Lack of water has become the norm in the city and is expected to worsen in the coming year . Right now, the response of the government has been to cut the supply of water in specific neighborhoods for days, weeks, or months [4]. The consequence is an unequal distribution of the water in the city, with the high-income population in control of the water and low-income neighborhoods without access to it.
 
-We propose detecting possible distribution points with a given radius of range for a division of the water cuts more efficiently. On the map, we can see a toy example of these points. Each circle is a zone with water. 
+To solve this problem, we can detect possible distribution points with a given radius of range for a division of the water cuts more efficiently. On the map, we can see a toy example of these points. Each circle is a zone with water. 
 
 ![Example Intersection](./img/Intersection_Example.png )
 Figure 1.  Each circle is a zone with water 
@@ -46,7 +46,7 @@ An intersection of the circle means that that section of the city will have wate
 ![Example Solution](./img/Toy_example_solution.png)
 Figure 2. Maximum set of independent zones with water 
 
-**The proposal is to find the maximum set of independent zones with water to enable equal water distribution. This is equivalent to finding the solution to the UD-MIS problem.** 
+**Our solution is to find the maximum set of independent zones with water to enable equal water distribution. This is equivalent to finding the solution to the UD-MIS problem.** 
 
 This solution will create zones without water that make it inhabitable for the population but perfect for solar cells, wind turbines, and waste management. 
 
