@@ -81,7 +81,7 @@ The above figures show that the exponential*inverse schedule is the best among a
 
 ### [Task 2](./Task2.ipynb): Quantum Annealing
 
-In task 2, we solve the UD-MIS problem via quantum annealing. The solution to the UD-MIS problem corresponds to the bitstring obtained after quantum annealing with the highest probability when measured in the computational basis. Figure 2.1 shows the probability distribution of the measurement outcome.
+In task 2, we solve the UD-MIS problem via quantum annealing. Here we provide brief descriptions to our solution, while we point to [Task 2](./Task2.ipynb) for more details, we briefly describe. The solution to the UD-MIS problem corresponds to the bitstring obtained after quantum annealing with the highest probability when measured in the computational basis. Figure 2.1 shows the probability distribution of the measurement outcome.
 
 <figure class="image">
   <img width="1600" src = "./figures/task2.png" />
@@ -94,8 +94,6 @@ Note that the binary string of qubits are ordered such that the rightmost bit co
   <img width="1200" src = "./figures/Task2_image_of_graph.png" />
   <figcaption> <b>Fig.2.1</b>  Probability ot measuring the bitstrings in the computational basis after quantum annealing. The bitstring with the highest probability corresponds to the optimal answer.</figcaption>
 </figure>
-<br></br>
-Detailed solutions to the problem can be found in [Task 2](./Task2.ipynb). 
 
 ### [Task 3](./Task3.ipynb): A Real Problem
 
