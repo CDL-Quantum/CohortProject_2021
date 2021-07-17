@@ -47,4 +47,4 @@ In task 3, we examine whether the samping probability distribution of the random
 </figure>
 
 ## Business Application
-An interesting application of the UD-MIS probelm addressed in this cohort project is protein folding. The protein folding problem is of significant importance in various industrial problems ranging from. We provide more detailed description about the business application [here](./Business_Application_Team11.md)
+An interesting application of the UD-MIS probelm addressed in this cohort project is protein folding. The protein folding problem is of significant importance in the pharmaceutical, medical, and healthcare industry. We provide more detailed description about the business application [here](./Business_Application_Team11.md)
