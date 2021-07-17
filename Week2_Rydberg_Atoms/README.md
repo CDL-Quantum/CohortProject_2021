@@ -85,10 +85,10 @@ Additionally, these randomized graphs can be scaled up in a straightforward way 
     <img src="./results/opTasks/bmEnergy.png" height="250"/> <img src="./results/opTasks/bmTime.png" height="250"/> 
 </p>
 
-As we can see in the figure (left) above all many-body methods like Simmulated Annealing (SA), Quantum Annealing (QA) and DMRG are able to obtain the lowest possible ground-state. The site-decoupled MF method we use here is particularly bad for these problems. There were many issues in the convergence showing oscillatory behavior. Nevertheless, we include it for some comparisons. 
+As we can see in the figure (left) above all many-body methods like Simmulated Annealing (SA), Quantum Annealing (QA) and DMRG are able to obtain the lowest possible ground-state. We note that the QA results are obtained from actual simulations on the DWave Annealer thanks to the DWave Leap Program. The relevant file and the raw data can be found in Task3_QA_DWave_bm.ipynb. We did not simulate the QA on a classical system as it was extremely slow. 
+The site-decoupled MF method we use here is particularly bad for these problems. There were many issues in the convergence showing oscillatory behavior. Nevertheless, we include it for some comparisons. 
 
-The final comparison regarding effeciency is illustrated in the figure (right) above. Note that comparing Quantum Annealing (QA) simulated on classical computers is not ideal and is known to be very expensive. Between SA and DMRG, the latter clearly outperforms the former requiring very modest resources. This is necessarily due to the low entanglement in these systems. The final solution did not take more than a bond dimesion (D) of 3 in most cases.  
-
+The final comparison regarding effeciency is illustrated in the figure (right) above. Between SA and DMRG, the latter clearly outperforms the former requiring very modest resources. This is necessarily due to the low entanglement in these systems. The final solution did not take more than a bond dimesion (D) of 3 in most cases. The clear winner here is the QA results for sufficiently large system sizes, although a direct comparison is unfair since the classical calculations here were not optimized either in terms of software or hardware. However, the scaling is illuminating and shows expected behavior.   
 
 * Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
 
