@@ -138,7 +138,21 @@ observed the problem intrinsic degeneracy, being the vertices 0, 3, and 5 equiva
 ## 3. Gotham city and Bruce Wayne's stinginess
 ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/gotham.jpg)
 
-* Solving a real-world problem involving cell phone tower placement in Gotham City.
+# Task 3
+## A  Real  Problem: The cell phone tower placement problem of Gothan city.
+The City of Gotham is looking at putting in new cell phone towers. The possible locations of the cell phone towers are given in Fig. 2. The billionaire Bruce Wayne is funding the project and he loves his money. Therefore, Gotham should only purchase the required number of cell phone towers such that:
+1) The cell signals do not overlap. 
+2) As much of Gothan city can be within cell signal range.
+![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/Task3 plots/Coordinates.PNG)
+## The Quantum Solution
+## We address the following questions: 
+###  1.   Why  this  is  a  problem  that  can  be  easily  mapped  to  the  UD-MIS  problem.
+This problem can be mapped to a UD-MIS problem by taking the cell phone towers as nodes V of a graph G(V,E) with edges E, the number of cell towers are N = |V | = 12, and <img src="https://render.githubusercontent.com/render/math?math=S ="> <img src="https://render.githubusercontent.com/render/math?math=(n_{1},,,, n_{N})"> be an N -bit string (i.e. <img src="https://render.githubusercontent.com/render/math?math=n_{i}">  <img src="https://render.githubusercontent.com/render/math?math=\in"> 0, 1 ), where <img src="https://render.githubusercontent.com/render/math?math=n_{i}=1"> can be interpreted as having a cell tower in place and <img src="https://render.githubusercontent.com/render/math?math=n_{i}=0"> of not having a cell tower in place, we can also define the so called Hamming weight as the sum of active towers <img src="https://render.githubusercontent.com/render/math?math=S= \underset{i=1}{\sum}^{N} n_{i}">.   The  MIS  problem  is  deﬁned  as  ﬁnding the maximum value of active towers S from all the possible combinations of active and non-active towers defined by the set B, this is defined by the obtimization problem: <img src="https://render.githubusercontent.com/render/math?math=\underset{S \in B}{Max} |S|">. The solution we found by running the quantum annealing simulator provided where the we input the posible locations of the cell towers which define the possible edges of the graph, the graph and edges will then define the specific Hamiltonian for the real problem which is then input in the digital quantum annealing simulator which produces the optimal state at time with the highest probability, as you can see in the histogram: ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/Task3 plots/Task3_Histogram.svg) also see the Julia solution here: ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Task_3_Jose.ipynb).
+## 2. Does the  Gotham  City’s  problem produces multiple solutions when using  the  methods  provided  in  Tasks  1  and  2?
+There are 2 solutions with same energy level but the most probable solution in the quantum case is (|110010100010>), with the maximum independent set in blue in the graph below. In he classical case we have also 2 degenerate solutions, with energy equal to -5. ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/Task3 plots/MIS_plot_solution.svg) 
+## 3. Should   Bruce   pay   for   a   few   more   cell   phone   towers   to   make   sure   that   more   of Gotham   City  has   cell   phone  service?
+Since one of the conditions for solving the problem was that the tower signals should not overlap, Bruce Wayne should pay for a few towers more if he wants to make sure more of Gotham city has cell coverage. If he takes out the ovelapping restriction then he may not need extra cell phone towers apart from the 12 towers but that is not an efficient case precisely because there is overlapping of signals. 
+ 
 
 
 ## Further Challenges:
