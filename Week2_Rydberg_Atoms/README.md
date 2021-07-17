@@ -16,21 +16,68 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 
 ### [Task 1](./Task1.ipynb): Simulated Classical Annealing
 
-In task 1, we try to solve the UD-MIS problem classically via simulated annealing. Simulated annealing repeats Monte Carlo simulations while decreasing temperautre, aiming to estimate the ground (zero-temperature) state. Note that the final result can be affected by the annealing schedule, i.e. temperature as a function of time. Here we first try the default annealing schedule provided in the problem.
+In task 1, we try to solve the UD-MIS problem classically via simulated annealing. Simulated annealing repeats Monte Carlo simulations while decreasing temperautre, aiming to estimate the ground (zero-temperature) state. Note that the final result can be affected by the annealing schedule, i.e. temperature as a function of time. Here we first try the default annealing schedule provided in the problem. In Figs. 1.1 and 1.2, we show the energy of the state resulting from simulated annealing using the default annealing schedule as a function of the annealing steps and the temperature, respectively.
 
 <figure class="image">
-  <img width="800" src = "./figures/Task1_1.png" />
-  <figcaption> <b>Fig.1</b>  </figcaption>
+  <img width="400" src = "./figures/task1_default_EvsS.png" />
+  <figcaption> <b>Fig.1.1</b>  Energy of the state resulting from simulated annealing using the default annealing schedule as a function of the number of steps.</figcaption>
 </figure>
+
+<figure class="image">
+  <img width="400" src = "./figures/task1_default_EvsS.png" />
+  <figcaption> <b>Fig.1.2</b>  Energy of the state resulting from simulated annealing using the default annealing schedule as a function of temperature.</figcaption>
+</figure>
+
+The above figures show that the energy converges to the minimum value at about T = 0.1 Kevin.
 
 Now we test some other annealing schedules, namely inverse, inverse-log, and exponential*inverse (see [Task 1](./Task1.ipynb) for how they are defined). First let us plot and see how the annealing schedules look like.
 
 <figure class="image">
-  <img width="800" src = "./figures/Task1_1.png" />
-  <figcaption> <b>Fig.1</b>  </figcaption>
+  <img width="400" src = "./figures/task1_schedule_log.png" />
+  <figcaption> <b>Fig.1.3</b>  Energy of the state resulting from simulated annealing using the default annealing schedule as a function of temperature.</figcaption>
 </figure>
 
-Now let us simulate annealing with the new annealing schedules shown in the above. Let us start with the inverse schedule.
+Now let us simulate annealing with the new annealing schedules shown in the above. Let us start with the inverse schedule. As in Figs. 1.1 and 1.2, we plot the energy as a function of the number of annealing steps and temperature, respectively.
+
+<figure class="image">
+  <img width="400" src = "./figures/task1_T1_EvsS.png" />
+  <figcaption> <b>Fig.1.4</b>  Energy of the state resulting from simulated annealing using the inverse annealing schedule as a function of the number of steps.</figcaption>
+</figure>
+
+<figure class="image">
+  <img width="400" src = "./figures/task1_T1_EvsS.png" />
+  <figcaption> <b>Fig.1.5</b>  Energy of the state resulting from simulated annealing using the inverse annealing schedule as a function of temperature.</figcaption>
+</figure>
+
+The above figures show that although the energy reachs the minimum value after about 300 time steps, there is noticeable fluctuation.
+
+Next let us investigate the inverse-log schedule. We again plot the energy as a function of the number of annealing steps and temperature, respectively.
+
+<figure class="image">
+  <img width="400" src = "./figures/task1_T2_EvsS.png" />
+  <figcaption> <b>Fig.1.6</b>  Energy of the state resulting from simulated annealing using the inverse-log annealing schedule as a function of the number of steps.</figcaption>
+</figure>
+
+<figure class="image">
+  <img width="400" src = "./figures/task1_T2_EvsS.png" />
+  <figcaption> <b>Fig.1.7</b>  Energy of the state resulting from simulated annealing using the inverse-log annealing schedule as a function of temperature.</figcaption>
+</figure>
+
+The above figures clearly show that the inverse-log schedule is not a good strategy as the energy does not decrease during the simulated annealing.
+
+Finally, let us investigate the exponential*inverse schedule.
+
+<figure class="image">
+  <img width="400" src = "./figures/task1_T3_EvsS.png" />
+  <figcaption> <b>Fig.1.8</b>  Energy of the state resulting from simulated annealing using the exponential*inverse annealing schedule as a function of the number of steps.</figcaption>
+</figure>
+
+<figure class="image">
+  <img width="400" src = "./figures/task1_T3_EvsS.png" />
+  <figcaption> <b>Fig.1.9</b>  Energy of the state resulting from simulated annealing using the exponential*inverse annealing schedule as a function of temperature.</figcaption>
+</figure>
+
+The above figures show that the exponential*inverse schedule is the best among all annealing schedules tried in this task as the energy quickly converges to the minimum value, and stably stays  in the ground state.
 
 ### [Task 2](./Task2.ipynb): Effect of a single-qubit bit-flip error on speckle patterns
 
