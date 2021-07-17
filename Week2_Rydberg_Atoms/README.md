@@ -24,7 +24,7 @@ In task 1, we try to solve the UD-MIS problem classically via simulated annealin
 </figure>
 
 <figure class="image">
-  <img width="500" src = "./figures/task1_default_EvsS.png" />
+  <img width="500" src = "./figures/task1_default_EvsT.png" />
   <figcaption> <b>Fig.1.2</b>  Energy of the state resulting from simulated annealing using the default annealing schedule as a function of temperature.</figcaption>
 </figure>
 
@@ -45,7 +45,7 @@ Now let us simulate annealing with the new annealing schedules shown in the abov
 </figure>
 
 <figure class="image">
-  <img width="500" src = "./figures/task1_T1_EvsS.png" />
+  <img width="500" src = "./figures/task1_T1_EvsT.png" />
   <figcaption> <b>Fig.1.5</b>  Energy of the state resulting from simulated annealing using the inverse annealing schedule as a function of temperature.</figcaption>
 </figure>
 
@@ -59,7 +59,7 @@ Next let us investigate the inverse-log schedule. We again plot the energy as a 
 </figure>
 
 <figure class="image">
-  <img width="500" src = "./figures/task1_T2_EvsS.png" />
+  <img width="500" src = "./figures/task1_T2_EvsT.png" />
   <figcaption> <b>Fig.1.7</b>  Energy of the state resulting from simulated annealing using the inverse-log annealing schedule as a function of temperature.</figcaption>
 </figure>
 
@@ -73,7 +73,7 @@ Finally, let us investigate the exponential*inverse schedule.
 </figure>
 
 <figure class="image">
-  <img width="500" src = "./figures/task1_T3_EvsS.png" />
+  <img width="500" src = "./figures/task1_T3_EvsT.png" />
   <figcaption> <b>Fig.1.9</b>  Energy of the state resulting from simulated annealing using the exponential*inverse annealing schedule as a function of temperature.</figcaption>
 </figure>
 
