@@ -126,21 +126,32 @@ $$ H = -\sum_{i \in V} n_i + u \sum_{i,j \in E} n_i n_j $$
 
 ### Solve Gotham City's Problem
 
-We solve this problem in three ways using a simulated classical annealing approach, a real quantum algorithm as well as on real quantum hardware using DWave.
+We solve this problem in three ways using a simulated classical annealing approach, a real quantum algorithm as well as on real quantum hardware using D-Wave.
+
+#### Simulated Classical Annealing
 
 Running the algorithm on a simulated classical annealing algorithm yields a lowest energy level of -5. We reached convergance after about 3700 iterations using the default cooling schedule $T = T_i * ((T_f/T_i) ** (t/N))$. We plot one solution in the following figure in green:
 
 ![Graph with Solution](./resources/gotham-nodes-with-solution.png) |
 
+#### Quantum Annealing
+
 Next we also run the same algorithm quantum-ly.
 <span style="color:red;font-size:40px">@Henry to fill this in</span>
 
-We also solve this problem on real quantum hardware using DWave (Please see ["Solving the Problem with Real Quantum Hardware"](#toc8) section for more details). Here, we found multiple solutions with the same lowest energy of -5. We display the top solutions found in the left, along with an awesome GIF displaying each solution on the right (green nodes are occupied).
+#### Real Quantum Hardware: D-Wave
 
-| DWave Solutions for Gotham Problem | GIF of the Multiple Best Solutions Found |
+We also solve this problem on real quantum hardware using D-Wave. Here, we found multiple solutions with the same lowest energy of -5. We display the top solutions found in the left, along with an awesome GIF displaying each solution on the right (green nodes are occupied).
+
+| D-Wave Solutions for Gotham Problem | GIF of the Multiple Best Solutions Found |
 | :--------------: | :---------: |
 | ![Gotham Dwave Energy Levels](./resources/image%20b22.png)| ![Gotham Dwave energy solutions](./resources/Gotham%20Solutions%201.gif) |
 
+We also show the graph representation of the problem in D-Wave (left), the actual embedding on D-Wave 2000Q (middle) along with the energies sampled from Dwave (right).
+
+| Graph Representation on D-Wave | Embeddings on D-Wave | Energies Sampled on D-Wave |
+| :--------------: | :---------: |  :---------: |
+| ![D-Wave Graph](./resources/image%20b41.png) | ![D-Wave Embeddings](./resources/image%20b42.png) | ![D-Wave Energy Samples](.//resources/image%20b43.png) |
 
 
 ### Should Bruce pay for a few more cell towers?
