@@ -1,6 +1,8 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 2: Optimization problems \& Rydberg atom arrays
 
+Team 8 Alex Khan, Theo Cleland, Henry Makhanov, Ehsan Torabizadeh, Darshit Mehta
+
 In this project we are going to demonstrate the amazing power of classical and quantum annealers. Throughout a series of tasks we will demonstrate the existing annealing techniques to solving a variety of problems. Crucially, we will show a solution to the unit-disk maximum independent set (UD-MIS) problem using both a simulated classical annealer with different schedules and a quantum annealer. For the third task, we have also solved the Gotham City Cell Tower problem using both classical annealer and quantum annealer. Finally, we have mapped a real-world protein redundancy problem to the UD-MIS problem and found very promising results that will serve as a founding block for our business proposal. 
 
 ### Table of Contents  
@@ -9,7 +11,10 @@ In this project we are going to demonstrate the amazing power of classical and q
 3. [Simulating the same problem but using quantum annealing](#toc3)
 4. [Comparing the classical and quantum methods](#toc4)
 5. [Solving a real-world problem involving cell phone tower placement in Gotham City](#toc5)
-6. [Comparing the methods used to solve the UD-MIS problem]($toc6)
+6. [Comparing the methods used to solve the UD-MIS problem](#toc6)
+7. [Real world problem: Finding non-redundant protein sequences](#toc7)
+8. [Solving the problem with real quantum hardware](#toc8)
+9. [References](#toc9)
 
 
 ### Resources
@@ -18,7 +23,7 @@ In this project we are going to demonstrate the amazing power of classical and q
 - [Notebook for task 3 (Gotham city) running on real quantum hardware](./Task%203,%20Additional-Challenges%20b,%20d-ak.ipynb)
 - [Notebook for extra challenge: Finding the least redundant set of protein sequences](./real_world_protein_redundancy.ipynb)
 
-
+This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
 
 <a name="toc1"></a>
 
@@ -26,20 +31,16 @@ In this project we are going to demonstrate the amazing power of classical and q
 
 Please view [this notebook](./Task1.ipynb) for the code used to solve this section. 
 
-We simulate the UD-MIS using classical simulated annealing for the following abstract graph (truncated to 2 decimal places):
+We simulate the UD-MIS using classical simulated annealing for the following abstract graph (truncated to 2 decimal places). Edges are created whenever a node is closer than a unit distance of 1.
 
-| X Coordinate   | Y Coordinate |
-| :------------- | :----------: |
-|  0.35 | 1.50   |
-| 0.63  | 2.58 |
-| 1.39  | 2.16 |
-| 0.66  | 0.67 |
-| 0.87  | 3.39 |
-| 1.16  | 1.08 |
+|Table Representation of Graph | Visual Representation of Graph|
+| :--------------: | :---------: 
+| <table>   <thead>   <tr> <th>X Coordinate</th>  <th>Y Coordinate</th>  </tr>   </thead>   <tbody>   <tr>  <td>0.35</td>  <td>1.50</td> </tr> <tr>  <td>0.63</td>  <td>2.58</td> </tr> <tr>  <td>1.39</td>  <td>2.16</td> </tr> <tr>  <td>0.66</td>  <td>0.67</td> </tr> <tr>  <td>0.87</td>  <td>3.39</td> </tr> <tr>  <td>1.16</td>  <td>1.08</td> </tr> </tbody> </table> | ![Unsolved Graph](./resources/task1-graph-fixed.png)
 
-We construct the graph by creating an edge whenever a node is closer than a unit distance of 1. This graph can be visualized like this:
 
-![Unsolved Graph](./resources/task1-graph-fixed.png)
+
+
+
 
 Next we simulate annealing to solve the ground state of the following Hamiltonian:
 
@@ -92,13 +93,14 @@ We see clearly that the `exponential ~4x` schedule converges the fastest, and is
 
 ## Simulating the same problem but using quantum annealing
 
-
+<span style="color:red">TODO</span>
 
 
 <a name="toc4"></a>
 
 ## Comparing the classical and quantum methods
 
+<span style="color:red">TODO</span>
 
 
 
@@ -113,6 +115,32 @@ We see clearly that the `exponential ~4x` schedule converges the fastest, and is
 
 ## Comparing the methods used to solve the UD-MIS problem
 
+<span style="color:red">TODO</span>
+
+
+
+
+<a name="toc7"></a>
+
+
+
+
+
+<a name="toc8"></a>
+
+## Solving the problem with real quantum hardware
+
+<span style="color:red">TODO</span>
+
+
+
+<a name="toc9"></a>
+
+## References
+
+<a name="ref1">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5835207/<a>
+
+
 
 <br/><br/><br/><br/><br/><br/><br/>
 
@@ -121,8 +149,8 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 **Please edit this markdown file directly with links to your completed tasks and challenges.**
 
 ## Tasks include:
-* (QUEUE) Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
-* (QUEUE) Finding a better annealing schedule to arrive at solutions to the problem quicker.
+* (DONE) Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
+* (DONE) Finding a better annealing schedule to arrive at solutions to the problem quicker.
 * (QUEUE) Simulating the same problem but using quantum annealing.
 * (QUEUE) Comparing the classical and quantum methods.
 * (QUEUE) Solving a real-world problem involving cell phone tower placement in Gotham City.
@@ -130,7 +158,7 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 ## Further Challenges:
 * (QUEUE) Comparing the methods used to solve the UD-MIS problem.
 * Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
-* Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
+* (QUEUE) Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
 * Solving the problem with real quantum hardware.
 
 ## Business Application
