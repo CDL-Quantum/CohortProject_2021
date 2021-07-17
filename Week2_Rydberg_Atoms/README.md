@@ -218,7 +218,7 @@ Exponential annealing results for 25 vertices graph:
     </tr>
 </table>
 
-![Task 1: Benchmark](./figs task 1/Benchmarks_Multi_exp_annealing.png)
+![Task 1: Result](./figs task 1/Benchmarks_Multi_exp_annealing.png)
 We can conclude that for this task the multiplicative and exponential annealing schedules provide the fastest results, with in some cases the exponential annealing providing the fastest results
 
 ### Task 2
