@@ -126,18 +126,26 @@ We see clearly that the `exponential ~4x` schedule converges the fastest, and is
 
 We take this project one step further by solidifying our business case with a real application: finding the least redundant set of proteins from real data! See [this notebook](./real_world_protein_redundancy.ipynb) for the implementation. 
 
-Qamino strives in finding non-redundant protein sets to enable our customers to efficiently produce drugs without having to waste time experimenting with proteins that have already been tested. We test our algorithm on data found from the [Dali Protein Structure Comparison Server](http://ekhidna.biocenter.helsinki.fi/dali/). [Our data](./protein_similarities.csv) is a matrix of the "similarity" scores between 59 different protein sequences. Here are the following sequences we investigate:
+Qamino strives in finding non-redundant protein sets to enable our customers to efficiently produce drugs without having to waste time experimenting with proteins that have already been tested. We test our algorithm on data found from the [Dali Protein Structure Comparison Server](http://ekhidna.biocenter.helsinki.fi/dali/). [Our data](./protein_similarities.csv) is a matrix of the "similarity" scores between 59 different protein sequences. Here are the following protein sequences we investigate:
 
 `1bksA,  3f2bA,  2yb1A,  3e38A,  2anuA,  3qy6A,  1v77A,  3dcpA,  3au2A, 1m65A,  2a3lA,  2qpxA,  3iacA,  1j5sA,  1itqA,  4mupB,  4dlfA,  2ffiA, 3irsA,  3cjpA,  4dziC,  2gwgA,  4ofcA,  4hk5D,  4qrnA,  2dvtA,  3gg7A, 2y1hB,  2vc5A,  2ob3A,  3k2gB,  1bf6A,  1a4mA,  2ogjA,  1a5kC,  1yrrB, 3nqbA,  2vunA,  1onxA,  3pnuA,  3giqA,  3griA,  3e74A,  4b3zD,  1gkpA, 2imrA,  3ooqA,  3icjA,  2oofA,  4c5yA,  3mtwA,  3mkvA,  4cqbA,  1k6wA, 4rdvB,  2uz9A,  2pajA,  3ls9A,  1j6pA`
 
-To formulate this problem as a UD-MIS problem, we simply need to construct the edge matrix based on the similarity values from the [Dali Protein Structure Comparison Server](http://ekhidna.biocenter.helsinki.fi/dali/). To do so, we must choose a good threshold to consider an edge. We use the following histogram to arbitrarily determine the best threshold. We chose a threshold of 25 indicated by the red dotted line on the histogram. 
+To formulate this problem as a UD-MIS problem, we simply need to construct the edge matrix based on the similarity values from the [Dali Protein Structure Comparison Server](http://ekhidna.biocenter.helsinki.fi/dali/). To do so, we must choose a good threshold to consider an edge. We use the following histogram to arbitrarily determine the best threshold. We chose a threshold of 25 indicated by the red dotted line on the histogram. On the right, we show the graph created (node positions are randomly assigned).
 
-![Protein Similarities](./resources/protein-histogram-take2.png)
+| Histogtam of Similarity Values | Graph Visualization |
+| :--------------: | :---------: |
+|![Protein Similarities](./resources/protein-histogram-take2.png) | <img src="./resources/protein-case-graph.png" style="margin-bottom:55px">
+
+We then solve the UD-MIS problem using a clasical simulated annealing schedule T_i * (T_f/T_i)^(t/N) where T_i = 100 and T_f = 0. We find a ground state for an energy level of -28. We plot the corresponding energies per iteration (left) and the graph solution in green (right) in the following figures:
 
 
+| Histogtam of Similarity Values | Graph Visualization |
+| :--------------: | :---------: |
+| ![Protein Energy History](./resources/protein-energy-history.png) | <img src="./resources/protein-solution-graph.png" style="margin-bottom:25px"> |
 
+The solution set yielded from the classical simulation found 28 non-redundant proteins:
 
-
+`1bksA, 3f2bA, 2yb1A, 3e38A, 2anuA, 3qy6A, 1v77A, 3dcpA, 3au2A, 2a3lA, 2qpxA, 3iacA, 1itqA, 2ffiA, 3irsA, 3cjpA, 4dziC, 2gwgA, 2y1hB, 2vc5A, 1a4mA, 2ogjA, 1a5kC, 1yrrB, 3pnuA, 2imrA, 3ooqA, 3icj`
 
 <a name="toc8"></a>
 
