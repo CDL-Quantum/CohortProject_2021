@@ -174,7 +174,7 @@ Similarly to the analysis performed in the previous sections, the UD-MIS problem
 #### Quantum simulated annealing
 After running the quantum annealing simulator (10000 measurements) we obtain the following histogram:
 
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/Task3 plots/Task3_Histogram.svg)
+![CDL 2020 Cohort Project](Graphics/Task3_plots/Task3_Histogram.svg)
 
 As we observed in the previous sections, the solutions are represented by bitstrings, with each bit
 corresponding to a node in the graph. For the Gotham city problem, a bit equal to 1 corresponds to an 
@@ -185,8 +185,8 @@ There is clearly a degeneracy of solutions which appear equally frequent in the 
 Such solutions are shown in the figures below:
 ### WRONG FIGURES: PLACE THOSE WITH RADIUS=0.5
 
-![Solution 0 Gotham](../Week2_Rydberg_Atoms/Graphics/Task3 plots/011000010011c.jpg)
-![Solution 1 Gotham](../Week2_Rydberg_Atoms/Graphics/Task3 plots/101000010011c.jpg)
+![Solution 0 Gotham](Graphics/Task3_plots/011000010011c.jpg)
+![Solution 1 Gotham](Graphics/Task3_plots/101000010011c.jpg)
 
 By calculating the energy of these two solutions we can see that they are effectively degenerate,
 with a hamiltonian eigenvalue of -5.
