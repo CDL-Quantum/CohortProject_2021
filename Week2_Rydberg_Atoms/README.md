@@ -181,7 +181,7 @@ To formulate this problem as a UD-MIS problem, we simply need to construct the e
 We then solve the UD-MIS problem using a clasical simulated annealing schedule T_i * (T_f/T_i)^(t/N) where T_i = 100 and T_f = 0. We find a ground state for an energy level of -28. We plot the corresponding energies per iteration (left) and the graph solution in green (right) in the following figures:
 
 
-| Histogtam of Similarity Values | Graph Visualization |
+| Energy Values | Graph Visualization |
 | :--------------: | :---------: |
 | ![Protein Energy History](./resources/protein-energy-history.png) | <img src="./resources/protein-solution-graph.png" style="margin-bottom:25px"> |
 
