@@ -12,9 +12,9 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 
 ## Tasks include:
 ### Task 1: Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
-In this task we tried several different schedules as suggested in citation [1] to see their effect on the convergence of UD-MIS under simulated annealing. Below is a plot of the graph we are applying UD-MIS against:
+In this task we tried several different schedules as suggested in citation [1] to see their effect on the convergence of UD-MIS under simulated annealing. Below are two graphs, graph before simulated annealing is ran (Right) and graph after simulated annealing is ran (Left), note that the maximum independent sets are seen in red color.
 
-![Graph](../Week2_Rydberg_Atoms/img/Task_1_Graph.png)
+![Graph](../Week2_Rydberg_Atoms/img/Task_1_Graph.png) ![Graph](../Week2_Rydberg_Atoms/img/complete_udmis_graph_task_1.png)
 
 We were able to find the ground state energy, which converged at an energy of -3. As we decreased the temperature, we found that the monte carlo algorithm converged faster as expected, and below is a graph demonstrating that result:
 
