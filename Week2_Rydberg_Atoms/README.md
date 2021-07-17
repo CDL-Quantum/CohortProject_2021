@@ -39,7 +39,7 @@ We simulate the UD-MIS using classical simulated annealing for the following abs
 
 We construct the graph by creating an edge whenever a node is closer than a unit distance of 1. This graph can be visualized like this:
 
-![Unsolved Graph](./resources/task1.1-graph.png)
+![Unsolved Graph](./resources/task1-graph-fixed.png)
 
 Next we simulate annealing to solve the ground state of the following Hamiltonian:
 
@@ -52,7 +52,7 @@ $T_i * (T_f/T_i)^(t/N)$
 
 We find a ground state energy level of `-3` after about 4000 iterations. We plot in the following corresponding occupations in green which yield the ground state:
 
-![Solved Graph](./resources/task1.1-graph-solved.png)
+![Solved Graph](./resources/task1-graph-solution-fixed.png)
 
 
 
