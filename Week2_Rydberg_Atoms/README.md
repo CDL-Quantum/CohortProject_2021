@@ -156,7 +156,18 @@ field Ising model, and showed that QA converges to optimality faster than SA in 
 Also more recent researches [6][7][8] have shown the benefits of quantum annealing and demonstrated 
 a scaling advantage for a quantum annealer over simulated annealing. 
 
-## 2. Ocean SDK: comparing simulation to a real quantum device
+## 2. Simulations using Quantum Algorithms
+
+In this ([this notebook](../Week2_Rydberg_Atoms/Task2_julia.ipynb) we implement a quantum annealing algorithm to find the solution for the 6 node graph. Simulations for various number of sample sizes, N are shown here (and the corresponding most likely ground state configuration). As with the classical case we notice some degeneracy; however the states are much more distinguished than what we saw for the histograms for the classical algorithms above. We can also see that the classical and quantum solutions correspond to the same states (i.e the top 3 quantum states are contained within the top 3 states for the classical algorithm - just need to switch 0 -> 1 when comparing the algorithms). The histogram for the quantum solution is shown below:
+
+![t21](../Week2_Rydberg_Atoms/img/t21.png)
+
+We also compared how the speed of the quantum solution varried with the value of dt, which is shown in the plot below:
+
+![t21](../Week2_Rydberg_Atoms/img/t22.png)
+
+# Ocean SDK: comparing simulation to a real quantum device
+
 D-Wave Systems created a full-stack framework ([Leap2](https://www.dwavesys.com/take-leap)) to run quantum annealing algorithms on both simulators and real quantum devices. The access to their systems uses an API mechanism for which registration is required. As part of the CDL, all users should have got a license and can access the real quantum devices. 
 
 For the simulation part, only requirement is the installation of the package [dwave-ocean-sdk](https://pypi.org/project/dwave-ocean-sdk/).
