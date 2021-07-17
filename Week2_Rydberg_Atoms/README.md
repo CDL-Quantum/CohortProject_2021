@@ -99,6 +99,8 @@ Here we only present and describe the final results. First, Fig. 3.1 shows all p
   <figcaption> <b>Fig.3.1</b> Locations in Gotham city on which phone towers can be built (center of each circle), and the area that can be covered by each phone tower. </figcaption>
 </figure>
 
+Finally, Fig. 3.2 depicts the optimal positions of the phone towers that are found by solving the problem via quantum annealing, and their signal coverage.
+
 <figure class="image">
   <img width="600" src = "./figures/selected_tower.jpg" />
   <figcaption> <b>Fig.3.2</b> Locations of phone towers that can be build when Bruce wants to minimize the cost while maximizing the signal coverage. The area of each circle represents the area that can recieve the signal from the phone tower. </figcaption>
