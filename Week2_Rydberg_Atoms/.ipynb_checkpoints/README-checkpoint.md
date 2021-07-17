@@ -1,4 +1,5 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
+
 ## Project 2: Optimization problems \& Rydberg atom arrays
 
 This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
@@ -30,7 +31,7 @@ For the annealing schedules codes please check the [notebook](./Task 1 Felipe.ip
 
 Our baseline will be the proposed anneling schedule
 
-$T = T_i * (\frac{T_f}{T_i})^{(\frac{t}{N})}$
+![equation](https://latex.codecogs.com/svg.image?T&space;=&space;T_i&space;*&space;(\frac{T_f}{T_i})^{(\frac{t}{N})})
 
 To benchmark the annealing schedule we can check the value of the energy at the end of each iteration and see how many iterations we have to reach the ground state energy, in the baseline we have
 
@@ -56,9 +57,11 @@ Although the frange cycle can be interesting it does not reach the ground state 
 
 In this annealing scheme we have:
 
-$T_k = T_{initial}∗\Lambda_{k}$
+![equation](https://bit.ly/2Up3d2e)
 
-we got the following results from this schedule:
+with k runing over the number of iterations and Lambda as the decay constant.
+
+We got the following results from this schedule:
 
 <table><tr>
     <td><img src="./figs task 1/Lambda_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the LAMBDA annealing schedule </figcaption></td> 
@@ -72,9 +75,11 @@ Quite good, we reach the ground state around iteration 17, can we do better?
 
 We can use Multiplicative annealing:
 
-$T_k= T_{k - 1}∗\Lambda_K$
+![equation](https://bit.ly/3iirkYp)
 
-and se what can we get from it:
+with k runing over the number of iterations and Lambda as the decay constant.
+
+with the following results:
 
 <table><tr>
     <td><img src="./figs task 1/Multiplicative_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the Multiplicative annealing schedule </figcaption></td> 
@@ -88,13 +93,6 @@ Thats quite fast!!!, we reach the ground state at iteration 3.
 
 This schedule decays the temperature by gamma every step_size iteration. 
 
-\begin{equation*}
-T_{N} = \left\{
-\begin{matrix} \Gamma∗T_{N - 1} & \text{if N % step_size=0}\\ 
-T_{N - 1} & \text{otherwise}
-\end{matrix}
-\right.
-\end{equation*}  
 
 we got the following results from this schedule:
 
@@ -108,13 +106,6 @@ we got the following results from this schedule:
 
 This schedule is similar to the Step annealing, however the temperature decays everytime when the iteration reach some milestone
 
-\begin{equation*}
-T_{N} = \left\{
-\begin{matrix} \Gamma∗T_{N - 1} & \text{if  epoch in [milestones]}\\ 
-T_{N - 1} & \text{otherwise}
-\end{matrix}
-\right.
-\end{equation*}
 
 and we have:
 
@@ -128,9 +119,9 @@ that aint a good one, lets check another schedule
 
 #### Exponential annealing
 
-In this schedule the temperature decays by gamma factor every epoch. 
+In this schedule the temperature decays by a factor (gamma) every iteration (k). 
 
-$$T_{N}=\Gamma∗T_{N-1}$$
+![equation](https://bit.ly/3zb4tom)
 
 and we have:
 
@@ -146,7 +137,8 @@ thats really fast, however I think this must be because the temperature decays t
 
 This schedule works by setin the temperatures using a cosine annealing, where $T_{max}$ is set to the initial temperature and $T_{cur}$ is the number of iterations since the last restart.
 
-$$ T=T_{min} + \frac{1}{2}(T_{max}-T_{min})\left(1+cos\left(\frac{T_{cur}}{T_{max}}\pi\right)\right)$$
+![equation](https://bit.ly/3evH9Kq)
+
 
 we got:
 
