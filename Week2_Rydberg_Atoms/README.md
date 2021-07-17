@@ -36,6 +36,7 @@ The sampled state with lowest energy has an energy of -5.0
 
 ## Further Challenges:
 ### Method Comparision Between Classical Simulated Annealing vs. Quantum Annealing in the UDMIS Problem
+During this simulation, we utilized the simulated annealing algorithm to solve the UD-MIS problem. For the classical problem, one has a series of Markov chains defined by stochastic matrices M<sub>1</sub>
 
 ### Benchmarking Criteria: Classical vs. Quantum Optimization for UD-MIS
 
@@ -46,9 +47,8 @@ The sampled state with lowest energy has an energy of -5.0
 ## Business Application
 For each week, your team is asked to complete a Business Application. Questions you will be asked are:
 
-* Explain to a layperson the technical problem you solved in this exercise.
-* Explain or provide examples of the types of real-world problems this solution can solve.
-* Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved.
-* Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
-
 For more details refer to the [Business Application found here](./Business_Application.md)
+
+### References:
+[1]: https://quantumalgorithmzoo.org/#MathJax-Element-271-Frame
+[2]: Mario Szegedy, Spectra of Quantized Walks and a δϵ√ rule., arXiv:quant-ph/0401053, 2004.
