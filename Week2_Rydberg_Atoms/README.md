@@ -242,6 +242,10 @@ Realistic requirements for quantum advantage using noisy simulation and classica
 
 [8] Mugel et al, Dynamic Portfolio Optimization with Real Datasets Using Quantum Processors and Quantum-Inspired Tensor Networks (2020)
 
+[9] https://en.wikipedia.org/wiki/Wolff_algorithm
+
+[10] https://en.wikipedia.org/wiki/Dense_graph
+
 
 
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
