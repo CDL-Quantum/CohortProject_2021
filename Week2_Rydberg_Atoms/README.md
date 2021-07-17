@@ -16,7 +16,7 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 
 ### [Task 1](./Task1.ipynb): Simulated Classical Annealing
 
-In task 1, we try to solve the UD-MIS problem classically via simulated annealing. Simulated annealing repeats Monte Carlo simulations while decreasing temperautre, aiming to estimate the ground (zero-temperature) state. Note that the final result can be affected by the annealing schedule, i.e. temperature as a function of timetemperature. Here we first try the annealing schedule provided in the problem, and create some other annealing schedules, namely inverse, inverse-log, and exponential (see [Task 1](./Task1.ipynb) for how they are defined) to play around with and compare results. 
+In task 1, we try to solve the UD-MIS problem classically via simulated annealing. Simulated annealing repeats Monte Carlo simulations while decreasing temperautre, aiming to estimate the ground (zero-temperature) state. Note that the final result can be affected by the annealing schedule, i.e. temperature as a function of timetemperature. Here we first try the annealing schedule provided in the problem, and create some other annealing schedules, namely inverse, inverse-log, and exponential*inverse (see [Task 1](./Task1.ipynb) for how they are defined) to play around with and compare results. 
 
 <figure class="image">
   <img width="800" src = "./figures/Task1_1.png" />
