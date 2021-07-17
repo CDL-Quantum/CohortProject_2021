@@ -57,11 +57,14 @@ Figure 3. Problem with more distribution points is harder to solve.
 
 Now that we have the maximum set of independent zones with water in the city, we want to schedule water cuts given certain constraints. For example, prioritize zones for agriculture. This problem is equivalent to finding the solution to the nurse scheduling problem   
 
-The nurse scheduling problem (NSP) arises when finding the optimal schedule for a set of available nurses over a fixed timetable of shifts. Solutions to NSP are required to respect hard constraints, such as days off and minimum availability, as well as soft constraints, such as minimum shift assignments, for each nurse. Examples of NSP are often cast as linear or quadratic programming problems, depending on the nature of the constraints, but they may also be formulated in terms of unconstrained optimization and solved using search methods, including tabu search (The paragraph was copied from [5]) .
+The nurse scheduling problem (NSP) arises when finding the optimal schedule for a set of available nurses over a fixed timetable of shifts. Solutions to NSP are required to respect hard constraints, such as days off and minimum availability, as well as soft constraints, such as minimum shift assignments, for each nurse [5]. 
 
+In our case, the "shifts" are the days that certain zones will have water cuts. The NSP is an NP-hard problem. With the use of quantum annealing, we can find an approximate solution to this problem.
 
-### size of the market and potential customers
-TODO Victor and Yurval 
+### Potential customers for the utilization of our solution approach:
+1. **Creation of smart cities:** The promise of technology-enabled infrastructure for smarter, greener cities. For example, "By integrating smart water, lighting and parking management, Barcelona saved €75 million city funds and created 47,000 new jobs in the smart technology sector" [6]. The global water crisis will create the need for optimal water distribution in this type of new city.
+3. **Government contracting:** Federal contract spending grew for the fourth year in a row to reach $597 billion in fiscal 2019, its highest level yet and a 6% increase over the previous year [7]
+4. **Startups in climate:** Combine this solution to the portfolio of startups in the sector of climate. For example, one of the projects in  [Salo sciences](https://salo.ai/approach) is Landscape mapping, making visible the connections between climate, ecology and society. We can combine this mapping with our solution to find the natural points of disribution of water.  
 
 ## Pitch Video
 * 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
@@ -78,3 +81,7 @@ TODO Victor and Yurval
 [4] https://www.sandiegouniontribune.com/news/border-baja-california/story/2019-11-07/tijuana-will-have-water-outages-every-four-days-for-the-next-two-months
 
 [5] Ikeda, K., Nakamura, Y. & Humble, T.S. Application of Quantum Annealing to Nurse Scheduling Problem. Sci Rep 9, 12837 (2019). https://doi.org/10.1038/s41598-019-49172-3
+
+[6] https://www.forbes.com/sites/jamesellsmoor/2019/05/19/smart-cities-the-future-of-urban-development/?sh=4a652bc32f90
+
+[7] https://www.govexec.com/management/2020/06/federal-contract-spending-reaches-its-highest-level-ever-fiscal-2019-marking-4-straight-years-growth/166484/
