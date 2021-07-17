@@ -35,7 +35,7 @@ with an edge if and only if the corresponding circles intersect.
 The problem of finding the MIS can be expressed as a quadratic unconstrained optimization problem,
 which is also equivalent to an Ising hamiltonian
 
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/ising_hamiltonian.png)
+![ising hamiltonian](../Week2_Rydberg_Atoms/img/ising_hamiltonian.png)
 
 where the quadratic terms favours disjoint circles and the linear term makes sure
 that we select as many circles as possible.
@@ -52,10 +52,10 @@ space of a generic optimization problem by simulating the physical process of he
 and then slowly lowering the temperature to decrease defects, thus minimizing the system energy.
 Each transition in spanning the solution space is called anneal.
 
-### [ELI/SAESUN]: 
+### ELI/SAESUN: 
 We compared the two algorithms implemented on Python - however...see ([this link](https://towardsdatascience.com/the-great-csv-showdown-julia-vs-python-vs-r-aa77376fb96))
 
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/julia.png)
+![julia results](../Week2_Rydberg_Atoms/img/julia.png)
 
 * Finding a better annealing schedule to arrive at solutions to the problem quicker.
 
@@ -78,11 +78,13 @@ Compared with ground state atoms, they exhibit a very large electric dipole mome
 with macroscopic external fields. Thus, this makes Rydberg atoms easy to control with static electric or magnetic, 
 laser, or microwave fields which is then ideal for implementing controllable quantum many-body simulators.
 
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/rydberg.jpg)
+![rydberg atoms](../Week2_Rydberg_Atoms/img/rydberg.jpg)
 
 In particular, the Rydberg hamiltonian has the same functional form as the QUBO hamiltonian
 used to solve the UD-MIS problem. 
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/ising_hamiltonian.png)
+
+![ising hamiltonian](../Week2_Rydberg_Atoms/img/ising_hamiltonian.png)
+
 where the linear term is responsible for the interaction of each atom with the external field,
 and the quadratic term is the interaction between two Rydberg atoms.
 
@@ -90,9 +92,10 @@ The concept of quantum annealing can then be applied to such a system to find th
 state of an optimization problem that can be mapped to the hamiltonian of the Rydberg atom system.
 
 The analysis we performed is based on the extension of the provided 
-[Julia code](../Week2_Rydberg_Atoms/run_quantum_annealing.jl).
+[Julia code](../Week2_Rydberg_Atoms/legacy_run_quantum_annealing.jl).
 
 The starting point is the same graph as provided in the previous section:
+
 ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/coordinate_plot.svg)
 
 In this code, the quadratic and linear terms of the interaction hamiltonian are defined time-dependent functions 
@@ -101,8 +104,8 @@ the hamiltonian adiabatically changes into the final interaction hamiltonian whi
 problem that we want to solve. 
 
 Based on the adiabatic theorem, if the transition to the final interaction hamiltonian is adiabatic,
-the initial state will remain in the ground state across the whole adiabatic transofrmation.
-The ground state of the final interaction respresents thus the minimum of the optimization problem
+the initial state will remain in the ground state across the whole adiabatic transformation.
+The ground state of the final interaction represents thus the minimum of the optimization problem
 mapped onto the system.
 
 ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/histogram_solutions.svg)
@@ -113,10 +116,24 @@ distribution of the results which shows that there are basically three degenerat
 We selected one of the three solutions and we mapped it to a graph. In the space of the coordinates, 
 the solution found is given by the graph below, where the blue circles correspond to the independent set
 of vertices:
+
 ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/coordinate_plot_solution.svg)
 
+### 1.3 Benchmarking classical to quantum annealing
 
-### add something on Comparing the classical and quantum methods.
+A direct comparison of the simulated and quantum annealing by means of the previous exercise is not
+straightforward. In fact, there are several parameters/conditions that make the comparison arbitrary:
+- the simulated solution strongly depends on the annealing schedule
+- the simulated and the quantum annealing codes are written in different languages
+- the D-Wave simulator (see next section) performance depends both on parameters and embedding of the problem  
+- the real device implementation (see next section) has latency issues to connect to the cloud and retrieve the solution. 
+
+However, the theoretical improvement of quantum annealing w.r.t. simulated annealing has been 
+proven for a class of problems (see [5], where they analyzed quantum annealing in a version incorporating a transverse 
+field Ising model, and showed that QA converges to optimality faster than SA in some cases).
+
+Also more recent researches [6][7][8] have shown the benefits of quantum annealing and demonstrated 
+a scaling advantage for a quantum annealer over simulated annealing. 
 
 ## 2. Ocean SDK: comparing simulation to a real quantum device
 D-Wave Systems created a full-stack framework ([Leap2](https://www.dwavesys.com/take-leap)) to run quantum annealing algorithms on both simulators and real quantum devices. The access to their systems uses an API mechanism for which registration is required. As part of the CDL, all users should have got a license and can access the real quantum devices. 
@@ -133,32 +150,75 @@ This is useful as the D-Wave library provides a wrapper to solve the MIS problem
 The results from all implementation are equivalent. Note that also in this case we 
 observed the problem intrinsic degeneracy, being the vertices 0, 3, and 5 equivalent (see figure below).
 
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/solution_Ocean_sdk.png)
+![Graph solution DWave](../Week2_Rydberg_Atoms/img/solution_Ocean_sdk.png)
 
-## 3. Gotham city and Bruce Wayne's stinginess
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/gotham.jpg)
+## 3. Gotham city and Bruce's stinginess
 
-# Task 3
-## A  Real  Problem: The cell phone tower placement problem of Gothan city.
-The City of Gotham is looking at putting in new cell phone towers. The possible locations of the cell phone towers are given in Fig. 2. The billionaire Bruce Wayne is funding the project and he loves his money. Therefore, Gotham should only purchase the required number of cell phone towers such that:
+![Gotham](../Week2_Rydberg_Atoms/img/gotham.jpg)
+
+The City of Gotham is looking at putting in new cell phone towers. 
+The possible locations of the cell phone towers are given in this figure:
+
+![Gotham coordinates](../Week2_Rydberg_Atoms/img/gotham-location.png)
+
+The billionaire (but stingy) Bruce Wayne is funding the project, but he loves his money. 
+Therefore, Gotham should only purchase the required number of cell phone towers such that:
 1) The cell signals do not overlap. 
-2) As much of Gothan city can be within cell signal range.
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/Task3 plots/Coordinates.PNG)
-## The Quantum Solution
-## We address the following questions: 
-###  1.   Why  this  is  a  problem  that  can  be  easily  mapped  to  the  UD-MIS  problem.
-This problem can be mapped to a UD-MIS problem by taking the cell phone towers as nodes V of a graph G(V,E) with edges E, the number of cell towers are N = |V | = 12, and <img src="https://render.githubusercontent.com/render/math?math=S ="> <img src="https://render.githubusercontent.com/render/math?math=(n_{1},,,, n_{N})"> be an N -bit string (i.e. <img src="https://render.githubusercontent.com/render/math?math=n_{i}">  <img src="https://render.githubusercontent.com/render/math?math=\in"> 0, 1 ), where <img src="https://render.githubusercontent.com/render/math?math=n_{i}=1"> can be interpreted as having a cell tower in place and <img src="https://render.githubusercontent.com/render/math?math=n_{i}=0"> of not having a cell tower in place, we can also define the so called Hamming weight as the sum of active towers <img src="https://render.githubusercontent.com/render/math?math=S= \underset{i=1}{\sum}^{N} n_{i}">.   The  MIS  problem  is  deﬁned  as  ﬁnding the maximum value of active towers S from all the possible combinations of active and non-active towers defined by the set B, this is defined by the obtimization problem: <img src="https://render.githubusercontent.com/render/math?math=\underset{S \in B}{Max} |S|">. The solution we found by running the quantum annealing simulator provided where the we input the posible locations of the cell towers which define the possible edges of the graph, the graph and edges will then define the specific Hamiltonian for the real problem which is then input in the digital quantum annealing simulator which produces the optimal state at time with the highest probability, as you can see in the histogram: ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/Task3 plots/Task3_Histogram.svg) also see the Julia solution here: ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Task_3_Jose.ipynb).
-## 2. Does the  Gotham  City’s  problem produces multiple solutions when using  the  methods  provided  in  Tasks  1  and  2?
-There are 2 solutions with same energy level but the most probable solution in the quantum case is (|110010100010>), with the maximum independent set in blue in the graph below. In he classical case we have also 2 degenerate solutions, with energy equal to -5. ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/Task3 plots/MIS_plot_solution.svg) 
-## 3. Should   Bruce   pay   for   a   few   more   cell   phone   towers   to   make   sure   that   more   of Gotham   City  has   cell   phone  service?
-Since one of the conditions for solving the problem was that the tower signals should not overlap, Bruce Wayne should pay for a few towers more if he wants to make sure more of Gotham city has cell coverage. If he takes out the ovelapping restriction then he may not need extra cell phone towers apart from the 12 towers but that is not an efficient case precisely because there is overlapping of signals. 
- 
+2) As much of Gotham city can be within cell signal range.
+
+At first, we observed that this problem can be easily mapped to the UD-MIS  problem, which was discussed 
+in the previous sections.
+
+In fact, the mapping is straightforward if we consider each cell phone tower being a node V of a graph 
+G(V,E), where the edges E are defined based on the condition that two nodes are closer than 1 (note that 
+the provided Gotham's map is scaled such that the provided coordinates are normalized to the signal range). 
+
+Thus, the condition that the two conditions of non-overlapping cell signal and maximization of coverage 
+can be expressed as a MIS problem on the defined graph, i.e. we maximize the number of nodes 
+(antennas) that are independent (non-overlapping signals). 
+
+Similarly to the analysis performed in the previous sections, the UD-MIS problem can be solved for the Gotham's antennas graph by means of:
+- simulated (thermal) annealing (see [Python notebook](../Week2_Rydberg_Atoms/Task3_python.ipynb))
+- quantum annealing simulation (see [Julia notebook](../Week2_Rydberg_Atoms/Task_3_QAnnealing.ipynb))
+- D-Wave quantum annealing solution (see [Python notebook](../Week2_Rydberg_Atoms/OceanSDK_implmentation_gotham.ipynb))
+
+#### Simulated (thermal) annealing
+# ELI/SAESUN: to fill in
+
+#### Quantum simulated annealing
+After running the quantum annealing simulator (10000 measurements) we obtain the following histogram:
+
+![CDL 2020 Cohort Project](Graphics/Task3_plots/Task3_Histogram.svg)
+
+As we observed in the previous sections, the solutions are represented by bitstrings, with each bit
+corresponding to a node in the graph. For the Gotham city problem, a bit equal to 1 corresponds to an 
+active antenna, whereas a bit equal to 0 represent an unnecessary antenna.
+
+Thus, the most frequent bitstrings in the histogram correspond to the optimal solutions of the problem.
+There is clearly a degeneracy of solutions which appear equally frequent in the histogram above.
+Such solutions are shown in the figures below:
+### WRONG FIGURES: PLACE THOSE WITH RADIUS=0.5
+
+![Solution 0 Gotham](Graphics/Task3_plots/011000010011c.jpg)
+![Solution 1 Gotham](Graphics/Task3_plots/101000010011c.jpg)
+
+By calculating the energy of these two solutions we can see that they are effectively degenerate,
+with a hamiltonian eigenvalue of -5.
+
+We also wondered whether it is worth to pay for a few towers more to get a better coverage of Gotham city.
+### I DO NOT THINK THAT THE PART BELOW CORRECTLY ANSWERS THE QUESTION. I SEE THAT ELI PERFORMED A COST-BENEFIT ANALYSIS OF THE PROBLEM IN PYTHON BY PROXYING THE SERVICE COVERAGE AREA WITH THE DENSITY OF THE GRAPH. WE SHOULD INCLUDE THIS. 
+
+Since one of the conditions for solving the problem was that the tower signals should not overlap, 
+Bruce Wayne should pay for a few towers more if he wants to make sure more of Gotham city has cell 
+coverage. If he takes out the overlapping restriction then he may not need extra cell phone towers 
+apart from the 12 towers but that is not an efficient case precisely because there is overlapping 
+of signals. 
 
 
+# DID ANYONE LOOK AT THE "FURTHER CHALLENGES"??
 ## Further Challenges:
 * Comparing the methods used to solve the UD-MIS problem.
 * Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
-* Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
 
 ## Business Applications
 For more details refer to the [Business Application found here](./Business_Application.md)
@@ -173,5 +233,15 @@ For more details refer to the [Business Application found here](./Business_Appli
 Realistic requirements for quantum advantage using noisy simulation and classical benchmarks (2020).
 
 [4] Browaeys and Lahaye, Many-body physics with individually controlled Rydberg atoms (2020).
+
+[5] Kadowaki and Nishimori, Quantum annealing in the transverse Ising model (1989)
+
+[6] Albash and Lidar, Demonstration of a Scaling Advantage for a Quantum Annealer over Simulated Annealing (2018)
+
+[7] Venturelli and Kondratyev, Reverse Quantum Annealing Approach to Portfolio Optimization Problems (2018)
+
+[8] Mugel et al, Dynamic Portfolio Optimization with Real Datasets Using Quantum Processors and Quantum-Inspired Tensor Networks (2020)
+
+
 
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
