@@ -20,49 +20,101 @@ This project will guide you through using the foundations of quantum hardware to
 
 
 
-<a name="toc1"/>
+<a name="toc1"></a>
 
 ## Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing
 
 Please view [this notebook](./Task1.ipynb) for the code used to solve this section. 
 
+We simulate the UD-MIS using classical simulated annealing for the following abstract graph (truncated to 2 decimal places):
+
+| X Coordinate   | Y Coordinate |
+| :------------- | :----------: |
+|  0.35 | 1.50   |
+| 0.63  | 2.58 |
+| 1.39  | 2.16 |
+| 0.66  | 0.67 |
+| 0.87  | 3.39 |
+| 1.16  | 1.08 |
+
+We construct the graph by creating an edge whenever a node is closer than a unit distance of 1. This graph can be visualized like this:
+
+![Unsolved Graph](./resources/task1.1-graph.png)
+
+Next we simulate annealing to solve the ground state of the following Hamiltonian:
+
+$$
+H = -\sum_{i \in V} n_i + u \sum_{i,j \in E} n_i n_j
+$$
+
+With the following annealing schedule: 
+$T_i * (T_f/T_i)^(t/N)$
+
+We find a ground state energy level of `-3` after about 4000 iterations. We plot in the following corresponding occupations in green which yield the ground state:
+
+![Solved Graph](./resources/task1.1-graph-solved.png)
 
 
-<a name="toc2"/>
+
+<a name="toc2"></a>
 
 ## Finding a better annealing schedule to arrive at solutions to the problem quicker
 
+Please view [this notebook](./Task1.ipynb) for the code used to solve this section. 
+
+We test 3 different annealing temperatures summarized by the following table: 
+
+| Annealing Schedule   | Name |
+| :------------- | :----------: |
+| T_i * (T_f/T_i)^(t/N) | exponential ~x (benchmark)   |
+| T_i * (T_f/T_i)^(2*t/N)  | exponential ~2x |
+| T_i * (T_f/T_i)^(4*t/N)  | exponential ~4x |
+
+Here is a visualization of the annealing schedules:
+
+![Visualization of Annealing Schedules](./resources/visualization-of-annealing-schedules.png)
+
+To test the speed of convergence, we consider a "stable" solution one where the energy has not changed after 100 iterations. After simulating the annealing for each schedule, we plot the energy versus the number iterations in the following table:
+
+![Annealing Schedule Comparison](./resources/task1-annealing-comparison.png)
+
+We see clearly that the `exponential ~4x` schedule converges the fastest, and is more than 3x faster than the benchmark provided in the sample code. These results are further summarized in the following table:
+
+| Annealing Schedule   | Iterations to Stable Solution | Time to Stable Solution (seconds) | 
+| :------------- | :----------: | :----------: |
+| exponential ~x (benchmark) | 3676 | 0.61 |
+| exponential ~2x  | 2007 | 0.34 |
+| exponential ~4x  | 1044 | 0.17 |
 
 
 
-
-<a name="toc3"/>
+<a name="toc3"></a>
 
 ## Simulating the same problem but using quantum annealing
 
 
 
 
-<a name="toc4">
+<a name="toc4"></a>
 
 ## Comparing the classical and quantum methods
 
 
 
 
-<a name="toc5">
+<a name="toc5"></a>
 
 ## Solving a real-world problem involving cell phone tower placement in Gotham City
 
 
 
 
-<a name="toc6">
+<a name="toc6"></a>
 
 ## Comparing the methods used to solve the UD-MIS problem
 
 
-
+<br/><br/><br/><br/><br/><br/><br/>
 
 Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week2_Rydberg_Atoms/instructions.pdf) to begin learning about your tasks for this week!
 
