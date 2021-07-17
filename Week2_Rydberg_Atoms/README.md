@@ -1,7 +1,7 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 2: Optimization problems \& Rydberg atom arrays
 
-This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
+In this project we are going to demonstrate the amazing power of classical and quantum annealers. Throughout a series of tasks we will demonstrate the existing annealing techniques to solving a variety of problems. Crucially, we will show a solution to the unit-disk maximum independent set (UD-MIS) problem using both a simulated classical annealer with different schedules and a quantum annealer. For the third task, we have also solved the Gotham City Cell Tower problem using both classical annealer and quantum annealer. Finally, we have mapped a real-world protein redundancy problem to the UD-MIS problem and found very promising results that will serve as a founding block for our business proposal. 
 
 ### Table of Contents  
 1. [Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing](#toc1)
