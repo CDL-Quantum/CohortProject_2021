@@ -20,7 +20,7 @@ In this project we are going to demonstrate the amazing power of classical and q
 ### Resources
 - [Notebook for task 1](./Task1.ipynb)
 - [Notebook for task 2](./Task%202.ipynb)
-- [Notebook for task 3 (Gotham city) running on real quantum hardware](./Task%203,%20Additional-Challenges%20b,%20d-ak.ipynb)
+- [Notebook for task 3 (Gotham city) + running on real quantum hardware](./Task%203,%20Additional-Challenges%20b,%20d-ak.ipynb)
 - [Notebook for extra challenge: Finding the least redundant set of protein sequences](./real_world_protein_redundancy.ipynb)
 
 This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
@@ -108,8 +108,50 @@ We see clearly that the `exponential ~4x` schedule converges the fastest, and is
 
 ## Solving a real-world problem involving cell phone tower placement in Gotham City
 
+This work was generated from [this notebook](./Task%203,%20Additional-Challenges%20b,%20d-ak.ipynb). The goal was to map the UD-MIS problem to a real world problem relating to finding optimal placements for cell phone towers in the city of Gotham.
+
+We are given the follow nodes representing the position of cell phone towers:
+
+|Table Representation of Graph | Visual Representation of Graph|
+| :--------------: | :---------: 
+| <table>   <thead>   <tr> <th>X Coordinate</th>  <th>Y Coordinate</th>  </tr>   </thead>   <tbody>    <tr>  <td>1.19</td>  <td>4.25</td> </tr>  <tr>  <td>2.71</td>  <td>3.48</td> </tr>  <tr>  <td>1.19</td>  <td>3.51</td> </tr>  <tr>  <td>2.00</td>  <td>3.38</td> </tr>  <tr>  <td>1.12</td>  <td>2.86</td> </tr>  <tr>  <td>1.70</td>  <td>2.42</td> </tr>  <tr>  <td>2.36</td>  <td>2.54</td> </tr>  <tr>  <td>1.52</td>  <td>1.48</td> </tr>  <tr>  <td>2.15</td>  <td>1.54</td> </tr>  <tr>  <td>2.14</td>  <td>1.87</td> </tr>  <tr>  <td>1.72</td>  <td>0.86</td> </tr>  <tr>  <td>2.29</td>  <td>0.87</td> </tr>  </tbody> </table> | ![Gotham Nodes](./resources/gotham-nodes.png)
+
+Our goal is to optimize the cell locations of each tower to best cover Gotham City, while only purchasing the required number of towers such that the tower signals do not overlap and as much of Gotham City is within signal range. 
+
+### Why can this problem be mapped easily to the UD-MIS problem?
+
+The requirements of the problem to maximize the tower coverage (use as many nodes as possible) and that the signal range not overlap (penalize node pairs with some condition) fits the UD-MIS formulation:
+
+$$ H = -\sum_{i \in V} n_i + u \sum_{i,j \in E} n_i n_j $$
+
+### Solve Gotham City's Problem
+
+We solve this problem in three ways using a simulated classical annealing approach, a real quantum algorithm as well as on real quantum hardware using DWave.
+
+Running the algorithm on a simulated classical annealing algorithm yields a lowest energy level of -5. We reached convergance after about 3700 iterations using the default cooling schedule $T = T_i * ((T_f/T_i) ** (t/N))$. We plot one solution in the following figure in green:
+
+![Graph with Solution](./resources/gotham-nodes-with-solution.png) |
+
+Next we also run the same algorithm quantum-ly.
+<span style="color:red;font-size:40px">@Henry to fill this in</span>
+
+We also solve this problem on real quantum hardware using DWave (Please see ["Solving the Problem with Real Quantum Hardware"](#toc8) section for more details). Here, we found multiple solutions with the same lowest energy of -5. We display the top solutions found in the left, along with an awesome GIF displaying each solution on the right (green nodes are occupied).
+
+| DWave Solutions for Gotham Problem | GIF of the Multiple Best Solutions Found |
+| :--------------: | :---------: |
+| ![Gotham Dwave Energy Levels](./resources/image%20b22.png)| ![Gotham Dwave energy solutions](./resources/Gotham%20Solutions%201.gif) |
 
 
+
+### Should Bruce pay for a few more cell towers?
+
+No. As the full set of solutions show, we can have from 5 to 7 towers and still have the lowest energy of -5.
+
+Adding an additional tower will add to the capital cost of adding a tower, however, there is no additional benefit based on the current formulation.
+
+We would have to do an marginal analsysis and look at the incremental cost of each additional tower and compare to the incremental coverage area for adding the additional tower.
+
+With the current threshold based binary UD-MIS formulation it is not possible to get this level of information.
 
 <a name="toc6"></a>
 
