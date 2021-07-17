@@ -203,7 +203,7 @@ Similarly to the analysis performed in the previous sections, the UD-MIS problem
 - quantum annealing simulation (see [Julia notebook](../Week2_Rydberg_Atoms/Task_3_QAnnealing.ipynb))
 - D-Wave quantum annealing solution (see [Python notebook](../Week2_Rydberg_Atoms/OceanSDK_implmentation_gotham.ipynb))
 
-#### Simulated (thermal) annealing
+#### Classically Simulated (thermal) annealing
 # ELI/SAESUN: to fill in
 
 #### Quantum simulated annealing
@@ -234,12 +234,6 @@ Bruce Wayne should pay for a few towers more if he wants to make sure more of Go
 coverage. If he takes out the overlapping restriction then he may not need extra cell phone towers 
 apart from the 12 towers but that is not an efficient case precisely because there is overlapping 
 of signals. 
-
-
-# DID ANYONE LOOK AT THE "FURTHER CHALLENGES"??
-## Further Challenges:
-* Comparing the methods used to solve the UD-MIS problem.
-* Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
 
 ## Business Applications
 For more details refer to the [Business Application found here](./Business_Application.md)
