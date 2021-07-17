@@ -103,7 +103,7 @@ Here we only present and describe the final results. First, Fig. 3.1 shows all p
   <img width="600" src = "./figures/selected_tower.jpg" />
   <figcaption> <b>Fig.3.2</b> Locations of phone towers that can be build when Bruce wants to minimize the cost while maximizing the signal coverage. The area of each circle represents the area that can recieve the signal from the phone tower. </figcaption>
 </figure>
-
+<br></br>
 If Bruce wants to absolutely minimize the money he spends, then Fig 3.2. is the solution. However, if Bruce is willing to spend some more, he should look into the solutions with the second lowest energy cost. If even more money can be spent, then he can use the solution with the third lowest energy cost, etc. 
 
 ## Business Application
