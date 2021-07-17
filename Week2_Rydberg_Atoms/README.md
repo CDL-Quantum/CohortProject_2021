@@ -42,7 +42,7 @@ The sampled state with lowest energy has an energy of -5.0
 
 **Simulation Results**
 ### Other Real World Example UD-MIS can solve:
-####Drone Delivery
+#### Drone Delivery
 ### Converting code to real quantum hardward
 
 ## Business Application
