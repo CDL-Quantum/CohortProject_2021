@@ -52,11 +52,37 @@ space of a generic optimization problem by simulating the physical process of he
 and then slowly lowering the temperature to decrease defects, thus minimizing the system energy.
 Each transition in spanning the solution space is called anneal.
 
-We compare two different classical algorithms implemented on Python - seen in ([this notebook](../Week2_Rydberg_Atoms/Task1_python.ipynb); in which we randomly simulate toward to ground state (solution) of the Hamiltonian. The random simulations are due to thermal fluctuations (compare to the quantum algorithm, in which the algorithm uses quantum fluctuations to determine randomly which 'spins' to flip in the Ising model). The two algorithms we implemented are the Metropolis-Hastings and Wolff algorithms. We also note that the classical algorithms were faster than the quantum algorithm- but that was more to do with the fact that the quantum algorithms were implemented in julia and we only had access to one thread (computer core). This ([this link](https://towardsdatascience.com/the-great-csv-showdown-julia-vs-python-vs-r-aa77376fb96)) shows how the speed of Julia compres to that of python when we make use of parellization. 
+We compare two different classical algorithms implemented on Python - seen in ([this notebook](../Week2_Rydberg_Atoms/Task1_python.ipynb); in which we randomly simulate toward to ground state (solution) of the Hamiltonian. The random simulations are due to thermal fluctuations (compare to the quantum algorithm, in which the algorithm uses quantum fluctuations to determine randomly which 'spins' to flip in the Ising model). The two algorithms we implemented are the Metropolis-Hastings and Wolff algorithms. We also note that the classical algorithms were faster than the quantum algorithm- but that was more to do with the fact that the quantum algorithms were implemented in julia and we only had access to one thread (computer core). This [this link](https://towardsdatascience.com/the-great-csv-showdown-julia-vs-python-vs-r-aa77376fb96) shows how the speed of Julia compres to that of python when we make use of parellization (image below). 
 
 ![julia results](../Week2_Rydberg_Atoms/img/julia.png)
 
-* Finding a better annealing schedule to arrive at solutions to the problem quicker.
+For the classical algorithm, we first show a plot which explains our experimentation as N, the number of samples, increases. This obviously leads to a larger number of iterations. 
+
+![t11](../Week2_Rydberg_Atoms/img/t11.png)
+
+We compare these iterations to these, in which we begin with a larger inital temperature (by a factor of 10). As expected, this we require more iterations to reach the ground state. We can also see from the plot that by starting with a higher initial temperature, our MCMC algorithm traces out more of the sample space- which is expected since at a higher temperature we expect larger thermal fluctuations. 
+
+![t12](../Week2_Rydberg_Atoms/img/t12.png)
+
+We plot the results of the Metropolis-Hastings algorithms for different values of N. We notice that there is some degeneracy, which is why the solution (or most common state) is different for different values of N. 
+
+![t14](../Week2_Rydberg_Atoms/img/t14.png)
+
+After increasing the value of N by a factor of 10:
+
+![t13](../Week2_Rydberg_Atoms/img/t13.png)
+
+The results of the Wolff algorithm:
+
+![t15](../Week2_Rydberg_Atoms/img/t15.png)
+
+The wolff algorithm requires a larger number of iterations.
+
+![t16](../Week2_Rydberg_Atoms/img/t16.png)
+
+Finally, a picture of the fully connected 6 node graph by using Networkx (a python package):
+
+![t17](../Week2_Rydberg_Atoms/img/t17.png)
 
 ### 1.2 Quantum annealing
 Quantum annealing has been introduced in the 80s as a variation of the simulated thermal annealing
