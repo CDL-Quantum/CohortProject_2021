@@ -95,14 +95,16 @@ In task 3, we solve a real-world application of the UD-MIS problem, namely the o
 Here we only present and describe the final results. First, Fig. 3.1 shows all possible locations on which phone towers can be built their coverage of signal. The center of each circle corresponds to the coordiate of the location, and the area of the circle represents the range of areas that can receive the signal from the phone tower located at the center of the circle.
 
 <figure class="image">
-  <img width="500" src = "./figures/all_tower.jpg" />
+  <img width="600" src = "./figures/all_tower.jpg" />
   <figcaption> <b>Fig.3.1</b> Locations in Gotham city on which phone towers can be built (center of each circle), and the area that can be covered by each phone tower. </figcaption>
 </figure>
 
 <figure class="image">
-  <img width="500" src = "./figures/selected_tower.jpg" />
-  <figcaption> <b>Fig.3</b> Locations of phone towers that can be build when Bruce wants to minimize the cost while maximizing the signal coverage. The area of each circle represents the area that can recieve the signal from the phone tower. </figcaption>
+  <img width="600" src = "./figures/selected_tower.jpg" />
+  <figcaption> <b>Fig.3.2</b> Locations of phone towers that can be build when Bruce wants to minimize the cost while maximizing the signal coverage. The area of each circle represents the area that can recieve the signal from the phone tower. </figcaption>
 </figure>
+
+If Bruce wants to absolutely minimize the money he spends, then Fig 3.2. is the solution. However, if Bruce is willing to spend some more, he should look into the solutions with the second lowest energy cost. If even more money can be spent, then he can use the solution with the third lowest energy cost, etc. 
 
 ## Business Application
 An interesting application of the UD-MIS probelm addressed in this cohort project is protein folding. The protein folding problem is of significant importance in the pharmaceutical, medical, and healthcare industry. We provide more detailed description about the business application [here](./Business_Application_Team11.md)
