@@ -3,19 +3,80 @@
 
 This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
 
+### Table of Contents  
+1. [Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing](#toc1)
+2. [Finding a better annealing schedule to arrive at solutions to the problem quicker](#toc2)
+3. [Simulating the same problem but using quantum annealing](#toc3)
+4. [Comparing the classical and quantum methods](#toc4)
+5. [Solving a real-world problem involving cell phone tower placement in Gotham City](#toc5)
+6. [Comparing the methods used to solve the UD-MIS problem]($toc6)
+
+
+### Resources
+- [Notebook for task 1](./Task1.ipynb)
+- [Notebook for task 2](./Task%202.ipynb)
+- [Notebook for task 3 (Gotham city) running on real quantum hardware](./Task%203,%20Additional-Challenges%20b,%20d-ak.ipynb)
+- [Notebook for extra challenge: Finding the least redundant set of protein sequences](./real_world_protein_redundancy.ipynb)
+
+
+
+<a name="toc1"/>
+
+## Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing
+
+Please view [this notebook](./Task1.ipynb) for the code used to solve this section. 
+
+
+
+<a name="toc2"/>
+
+## Finding a better annealing schedule to arrive at solutions to the problem quicker
+
+
+
+
+
+<a name="toc3"/>
+
+## Simulating the same problem but using quantum annealing
+
+
+
+
+<a name="toc4">
+
+## Comparing the classical and quantum methods
+
+
+
+
+<a name="toc5">
+
+## Solving a real-world problem involving cell phone tower placement in Gotham City
+
+
+
+
+<a name="toc6">
+
+## Comparing the methods used to solve the UD-MIS problem
+
+
+
+
 Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week2_Rydberg_Atoms/instructions.pdf) to begin learning about your tasks for this week!
 
 **Please edit this markdown file directly with links to your completed tasks and challenges.**
 
 ## Tasks include:
-* Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
-* Finding a better annealing schedule to arrive at solutions to the problem quicker.
-* Simulating the same problem but using quantum annealing.
-* Comparing the classical and quantum methods.
-* Solving a real-world problem involving cell phone tower placement in Gotham City.
+* (QUEUE) Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
+* (QUEUE) Finding a better annealing schedule to arrive at solutions to the problem quicker.
+* (QUEUE) Simulating the same problem but using quantum annealing.
+* (QUEUE) Comparing the classical and quantum methods.
+* (QUEUE) Solving a real-world problem involving cell phone tower placement in Gotham City.
 
 ## Further Challenges:
-* Comparing the methods used to solve the UD-MIS problem.
+* (QUEUE) Comparing the methods used to solve the UD-MIS problem.
 * Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
 * Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
 * Solving the problem with real quantum hardware.
