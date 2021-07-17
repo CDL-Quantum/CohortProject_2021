@@ -52,8 +52,7 @@ space of a generic optimization problem by simulating the physical process of he
 and then slowly lowering the temperature to decrease defects, thus minimizing the system energy.
 Each transition in spanning the solution space is called anneal.
 
-### ELI/SAESUN: 
-We compared the two algorithms implemented on Python - however...see ([this link](https://towardsdatascience.com/the-great-csv-showdown-julia-vs-python-vs-r-aa77376fb96))
+We compare two different classical algorithms implemented on Python - seen in ([this notebook](../Week2_Rydberg_Atoms/Task1_python.ipynb); in which we randomly simulate toward to ground state (solution) of the Hamiltonian. The random simulations are due to thermal fluctuations (compare to the quantum algorithm, in which the algorithm uses quantum fluctuations to determine randomly which 'spins' to flip in the Ising model). The two algorithms we implemented are the Metropolis-Hastings and Wolff algorithms. We also note that the classical algorithms were faster than the quantum algorithm- but that was more to do with the fact that the quantum algorithms were implemented in julia and we only had access to one thread (computer core). This ([this link](https://towardsdatascience.com/the-great-csv-showdown-julia-vs-python-vs-r-aa77376fb96)) shows how the speed of Julia compres to that of python when we make use of parellization. 
 
 ![julia results](../Week2_Rydberg_Atoms/img/julia.png)
 
@@ -81,11 +80,7 @@ laser, or microwave fields which is then ideal for implementing controllable qua
 ![rydberg atoms](../Week2_Rydberg_Atoms/img/rydberg.jpg)
 
 In particular, the Rydberg hamiltonian has the same functional form as the QUBO hamiltonian
-used to solve the UD-MIS problem. 
-
-![ising hamiltonian](../Week2_Rydberg_Atoms/img/ising_hamiltonian.png)
-
-where the linear term is responsible for the interaction of each atom with the external field,
+used to solve the UD-MIS problem. Where the linear term is responsible for the interaction of each atom with the external field,
 and the quadratic term is the interaction between two Rydberg atoms.
 
 The concept of quantum annealing can then be applied to such a system to find the ground
