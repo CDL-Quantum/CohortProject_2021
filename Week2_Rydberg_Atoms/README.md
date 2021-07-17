@@ -36,7 +36,7 @@ The sampled state with lowest energy has an energy of -5.0
 
 ## Further Challenges:
 ### Method Comparision Between Classical Simulated Annealing vs. Quantum Annealing in the UDMIS Problem
-During this simulation, we utilized the simulated annealing algorithm to solve the UD-MIS problem. Let n<sub>i</sub> be the gap between the largest and second largest eigenvalues of a stochastic matrix M<sub>i</sub>. Let n = min<sub>i</sub>n<sub>i</sub>. The run time of this alogirthm is proportional to O(1/n) [1][2], and it has been shown that quantum computers can increase the efficieincy by O(1/$\sqrt{n}$
+During this simulation, we utilized the simulated annealing algorithm to solve the UD-MIS problem. Let n<sub>i</sub> be the gap between the largest and second largest eigenvalues of a stochastic matrix M<sub>i</sub>. Let n = min<sub>i</sub>n<sub>i</sub>. The run time of this alogirthm is proportional to O(1/n) [1][2], and it has been shown that quantum computers can increase the efficieincy by O(1/√n)
 
 ### Benchmarking Criteria: Classical vs. Quantum Optimization for UD-MIS
 
@@ -45,11 +45,10 @@ During this simulation, we utilized the simulated annealing algorithm to solve t
 ### Converting code to real quantum hardward
 
 ## Business Application
-For each week, your team is asked to complete a Business Application. Questions you will be asked are:
 
 For more details refer to the [Business Application found here](./Business_Application.md)
 
 ### References:
-[1]: https://quantumalgorithmzoo.org/#MathJax-Element-271-Frame
-[2]: Sanguthevar Rajasekaran, On the Convergence Time of Simulated Annealing.
-[3]: Mario Szegedy, Spectra of Quantized Walks and a δϵ√ rule., arXiv:quant-ph/0401053, 2004.
+1. https://quantumalgorithmzoo.org/#MathJax-Element-271-Frame
+2. Sanguthevar Rajasekaran, On the Convergence Time of Simulated Annealing.
+3. Mario Szegedy, Spectra of Quantized Walks and a δϵ√ rule., arXiv:quant-ph/0401053, 2004.
