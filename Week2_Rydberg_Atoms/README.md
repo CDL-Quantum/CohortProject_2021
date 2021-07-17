@@ -29,14 +29,14 @@ In task 1, we try to solve the UD-MIS problem classically via simulated annealin
 </figure>
 <br></br>
 The above figures show that the energy converges to the minimum value at about T = 0.1 Kevin.
-
+<br></br>
 Now we test some other annealing schedules, namely inverse, inverse-log, and exponential*inverse (see [Task 1](./Task1.ipynb) for how they are defined). First let us plot and see how the annealing schedules look like.
 
 <figure class="image">
   <img width="500" src = "./figures/task1_schedule_log.png" />
   <figcaption> <b>Fig.1.3</b>  Energy of the state resulting from simulated annealing using the default annealing schedule as a function of temperature.</figcaption>
 </figure>
-
+<br></br>
 Now let us simulate annealing with the new annealing schedules shown in the above. Let us start with the inverse schedule. As in Figs. 1.1 and 1.2, we plot the energy as a function of the number of annealing steps and temperature, respectively.
 
 <figure class="image">
@@ -50,7 +50,7 @@ Now let us simulate annealing with the new annealing schedules shown in the abov
 </figure>
 <br></br>
 The above figures show that although the energy reachs the minimum value after about 300 time steps, there is noticeable fluctuation.
-
+<br></br>
 Next let us investigate the inverse-log schedule. We again plot the energy as a function of the number of annealing steps and temperature, respectively.
 
 <figure class="image">
@@ -64,7 +64,7 @@ Next let us investigate the inverse-log schedule. We again plot the energy as a 
 </figure>
 <br></br>
 The above figures clearly show that the inverse-log schedule is not a good strategy as the energy does not decrease during the simulated annealing.
-
+<br></br>
 Finally, let us investigate the exponential*inverse schedule.
 
 <figure class="image">
@@ -100,7 +100,7 @@ Detailed solutions to the problem can be found in [Task 2](./Task2.ipynb).
 ### [Task 3](./Task3.ipynb): A Real Problem
 
 In task 3, we solve a real-world application of the UD-MIS problem, namely the optimization problem of locating phone towers. Specific answers to the problems 1, 2, and 3 are given in [this](./Task3.ipynb) Jupyter notebook.
-
+<br></br>
 Here we only present and describe the final results. First, Fig. 3.1 shows all possible locations on which phone towers can be built their coverage of signal. The center of each circle corresponds to the coordiate of the location, and the area of the circle represents the range of areas that can receive the signal from the phone tower located at the center of the circle.
 
 <figure class="image">
