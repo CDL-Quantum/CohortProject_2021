@@ -130,15 +130,9 @@ Qamino strives in finding non-redundant protein sets to enable our customers to 
 
 `1bksA,  3f2bA,  2yb1A,  3e38A,  2anuA,  3qy6A,  1v77A,  3dcpA,  3au2A, 1m65A,  2a3lA,  2qpxA,  3iacA,  1j5sA,  1itqA,  4mupB,  4dlfA,  2ffiA, 3irsA,  3cjpA,  4dziC,  2gwgA,  4ofcA,  4hk5D,  4qrnA,  2dvtA,  3gg7A, 2y1hB,  2vc5A,  2ob3A,  3k2gB,  1bf6A,  1a4mA,  2ogjA,  1a5kC,  1yrrB, 3nqbA,  2vunA,  1onxA,  3pnuA,  3giqA,  3griA,  3e74A,  4b3zD,  1gkpA, 2imrA,  3ooqA,  3icjA,  2oofA,  4c5yA,  3mtwA,  3mkvA,  4cqbA,  1k6wA, 4rdvB,  2uz9A,  2pajA,  3ls9A,  1j6pA`
 
-To formulate this problem as a UD-MIS problem, we simply need to construct the edge matrix based on the similarity values from the [Dali Protein Structure Comparison Server](http://ekhidna.biocenter.helsinki.fi/dali/). To do so, we must choose a good threshold to consider an edge. By 
+To formulate this problem as a UD-MIS problem, we simply need to construct the edge matrix based on the similarity values from the [Dali Protein Structure Comparison Server](http://ekhidna.biocenter.helsinki.fi/dali/). To do so, we must choose a good threshold to consider an edge. We use the following histogram to arbitrarily determine the best threshold. We chose a threshold of 25 indicated by the red dotted line on the histogram. 
 
-
-
-
-
-We start by determining a proper threshold to create an edge in our graph formulation. We use the following histogram to arbitrarily determine the best threshold. We chose a threshold of 30 indicated by the red dotted line on the histogram. 
-
-![Protein Similarities](./resources/protein-similarity-histogram.png)
+![Protein Similarities](./resources/protein-histogram-take2.png)
 
 
 
