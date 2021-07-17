@@ -81,11 +81,18 @@ The above figures show that the exponential*inverse schedule is the best among a
 
 ### [Task 2](./Task2.ipynb): Quantum Annealing
 
-In task 2, we solve the UD-MIS problem via quantum annealing. The solution to the UD-MIS problem corresponds to the bitstring obtained after quantum annealing with the highest probability when measured in the computational basis. Figure 2.1 shows the probability distribution of the measurement outcome. One can see that the bistrings 1110100, 011100, and 010101 have high probabilities.
+In task 2, we solve the UD-MIS problem via quantum annealing. The solution to the UD-MIS problem corresponds to the bitstring obtained after quantum annealing with the highest probability when measured in the computational basis. Figure 2.1 shows the probability distribution of the measurement outcome.
 
 <figure class="image">
-  <img width="800" src = "./figures/task2.png" />
-  <figcaption> <b>Fig.2.1</b>  </figcaption>
+  <img width="1200" src = "./figures/task2.png" />
+  <figcaption> <b>Fig.2.1</b>  Probability ot measuring the bitstrings in the computational basis after quantum annealing. The bitstring with the highest probability corresponds to the optimal answer.</figcaption>
+</figure>
+
+Note that the qubit is ordered such that the rightmost qubit corresponds to the first vertex and the leftmost qubit corresponds to the last (6th) vertex. One can see that the bistrings 010101, 001110, and 110100 have high probabilities. These corresponds to the vertices (1, 3, 5), (3, 4, 5), and (3, 5, 6), respectively. We can indeed these set of vertices are the optimal solutions to the UD-MIS problem from Fig. 2.2 in which all vertices are plotted with the edges only connected between vertices that are within the distance of 1 as required in the UD-MIS problem. We see that vertices 3 and 5 must be included in the solution to maximize the number of vertices in the connected set of vertices 2, 3, and 5. Then since only one vertex can be chosen among the vertices 1, 4, and 6, the three sets of vertices stated above are indeed the solutions to the UD-MIS problem.
+
+<figure class="image">
+  <img width="1200" src = "./figures/Task2_image_of_graph.png" />
+  <figcaption> <b>Fig.2.1</b>  Probability ot measuring the bitstrings in the computational basis after quantum annealing. The bitstring with the highest probability corresponds to the optimal answer.</figcaption>
 </figure>
 
 ### [Task 3](./Task3.ipynb): A Real Problem
