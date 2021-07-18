@@ -24,12 +24,12 @@ For the above Toy Graph, the brute force solver goes faster than the classical a
 The two implementations start to be equivalent in term of runtime around **N = 20** for density **d = 1**. Several solutions are optimal
 ![Task 1: Result](./img/Task1_RandomGraph20.png)
 
-We tried to find a better annealing schedule to arrive at solutions to the problem quicker.
-
-For the annealing schedules codes please check the [notebook](./Task 1 Felipe.ipynb) where we test a variety of anneling schedules, to make things more easy we use the learning rate schedule from pytorch, which contains an amazing collection of schedules routines ready to be use.
 
 ### Exploring different Annealing schedules
-associated [notebook](./Task 1 Felipe.ipynb)
+We tried to find a better annealing schedule to arrive at solutions to the problem quicker.
+
+For the annealing schedules codes please check the [notebook]("./Task 1 Felipe.ipynb") where we test a variety of anneling schedules, to make things more easy we use the learning rate schedule from pytorch, which contains an amazing collection of schedules routines ready to be use.
+
 #### The baseline
 
 Our baseline will be the proposed anneling schedule
@@ -225,9 +225,9 @@ Exponential annealing results for 25 vertices graph:
 We can conclude that for this task the multiplicative and exponential annealing schedules provide the fastest results, with in some cases the exponential annealing providing the fastest results
 
 ## Task 2
-associated [notebook](./Task2.ipynb)
+associated [notebook](./Task2_Histogram.png)
 We solved the same Toy Graph problem, but using quantum annealing with the Yao library implementation. Plotting the frequency of occurrence of each bit string, we find that the solver has identified thre optimal solutions :
-![Task 2: Result](./img/Task1_RandomGraph20.png)
+![Task 2: Result](./img/Task2_RandomGraph20.png)
 
 However, it seems that the quantum annealing solver yields an error, with an noncompliant solution proposed as optimal
 ![Task 2: Result](./img/Task2_ToyGraph.png)
