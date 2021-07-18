@@ -105,6 +105,8 @@ Examples:
   - [Project Kuiper from Amazon](https://www.aboutamazon.com/news/company-news/amazon-receives-fcc-approval-for-project-kuiper-satellite-constellation)
 - Aid distribution
 
+## Resources
+
 [1] [Butenko, S. 2003. Maximum Independent Set and related problems with applications](http://ufdcimages.uflib.ufl.edu/UF/E0/00/10/11/00001/butenko_s.pdf)
 
 [2] [Global Telecom Services Market](https://www.grandviewresearch.com/industry-analysis/global-telecom-services-market#:~:text=The%20global%20telecom%20services%20market%20size%20was%20valued,rate%20%28CAGR%29%20of%205.0%25%20from%202020%20to%202027)
@@ -113,7 +115,7 @@ Examples:
 
 [4] [45 Fascinating IoT Statistics](https://dataprot.net/statistics/iot-statistics/)
 
-[5] {Cloud Computing Market](https://www.marketsandmarkets.com/Market-Reports/cloud-computing-market-234.html#:~:text=%5B322%20Pages%20Report%5D%20The%20global%20cloud%20computing%20market,due%20to%20the%20recent%20COVID-19%20pandemic%20is%20imminent)
+[5] [Cloud Computing Market](https://www.marketsandmarkets.com/Market-Reports/cloud-computing-market-234.html#:~:text=%5B322%20Pages%20Report%5D%20The%20global%20cloud%20computing%20market,due%20to%20the%20recent%20COVID-19%20pandemic%20is%20imminent)
 
 [6] [Big Data Market Size](https://www.verifiedmarketresearch.com/product/global-big-data-market-size-and-forecast-to-2025/#:~:text=Big%20Data%20Market%20size%20was%20valued%20at%20USD,a%20CAGR%20of%2017.8%25%20from%202019%20to%202026) 
 
@@ -127,7 +129,7 @@ Examples:
 
 [11] [Farooq, M. 2020 RIoT: A Routing Protocol for the Internet of Things. The Computer Journal, Volume 63, Issue 6, June 2020, Pages 958–973](https://academic.oup.com/comjnl/article/63/6/958/5808800)
 
-[12] [Trang,T. Routing protocols in Internet of Things](trang-tran-routing-protocols-in-iot.pdf aalto.fi)
+[12] [Trang,T. Routing protocols in Internet of Things](https://wiki.aalto.fi/download/attachments/59704179/trang-tran-routing-protocols-in-iot.pdf?version=1&modificationDate=1324369299000)
 
 
 # Our Team 
