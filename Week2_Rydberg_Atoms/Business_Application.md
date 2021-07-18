@@ -22,7 +22,7 @@ Examples:
 
 # Our Team 
 
-**Matthew Bishara** Has a background in working on Energy industry use case computing solutions.
+**Matthew Bishara**: I have a background in physics, and currently work in the electric energy sector on computing solutions to optimization problems.
 
 **Brandom Hiles** 
 
