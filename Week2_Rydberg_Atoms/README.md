@@ -264,8 +264,6 @@ From D-Wave, we also show the resulting qubit graph (left), embedding (center) a
 | :---------: | :---------: |  :---------: |
 | ![D-Wave Embeddings](./resources/task3-2-dwave-graph.png) | ![D-Wave Embeddings](./resources/task3-2-dwave-embeddings.png) | ![D-Wave Energy Samples](./resources/task3-2-dwave-energy-spectrum.png) |
 
-**Again, we note that the above section is not correct. We believe that we simply have the wrong hamiltonian for the problem.**
-
 <a name="toc6"></a>
 
 ## Finding Non-Redundant Protein Sequences
