@@ -12,16 +12,13 @@ Increased bandwith and technologies enhancing the IOT such as lower energy blue 
 Here at Q-Grid we address the problem of getting information to its destination efficiently.  We provide computing solutions for dynamic routing protocals in largescale networks in the telecom and IoT.  Our software solutions provide tangible improvements to networking protocals while helping to insure out customers are quantum ready.
 
 
-<img src="../Week2_Rydberg_Atoms/img/iot_tech.jpg" alt="drawing" width="500"/>
+<p align="center"><img src="../Week2_Rydberg_Atoms/img/iot_tech.jpg" alt="drawing" width="800" height="600"/></p>
 
 
 ## Our Routing Protocals
 
 Our solutions based on MIS algorithms provide for shorter routing paths reducing required transmission bandwith leading to reduced network operators costs.
 
-<img src="../Week2_Rydberg_Atoms/img/starlink.gif" alt="drawing" width="300"/>
-
-<img src="../Week2_Rydberg_Atoms/img/sat_routing.jpg" alt="drawing" width="300"/>
 
 ## Additional Applications
 
@@ -35,6 +32,11 @@ Examples:
   - [Starlink](https://www.starlink.com/)
   - [Project Kuiper from Amazon](https://www.aboutamazon.com/news/company-news/amazon-receives-fcc-approval-for-project-kuiper-satellite-constellation)
 - Aid distribution
+
+
+<img src="../Week2_Rydberg_Atoms/img/starlink.gif" alt="drawing" width="300"/>
+
+<img src="../Week2_Rydberg_Atoms/img/sat_routing.jpg" alt="drawing" width="300"/>
 
 # Our Team 
 
