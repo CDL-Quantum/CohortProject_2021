@@ -54,7 +54,7 @@ Black circles represents Starbucks which have suboptimal profits, thus could be 
 
 ![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/img/ba3.png)
 
-*(Picture: Starbucks locations in Oklahoma, USA)*
+*(Picture: Starbucks locations in Oklahoma, TX)*
 
 Instead of closing down franchises to optimize profits, what about where to open the next one?
 Let's assume that Oklahoma does not have many Starbucks. Therefore, there are many possible places that local owners 
@@ -67,6 +67,10 @@ and we find the distribution which avoids overlapping with the coverage of exist
 
 Besides marketing and trend research, at Quantum Strategy we offer quantum-based solutions to 
 a variety of optimization problems.
+
+- **Algorithms for chess** See [this link](https://en.wikipedia.org/wiki/Knight%27s_tour) which discusses 'the Knight's tour'; a generalized Hamiltonian path problem in graph theory. 
+
+- **Recommender Systems** See for example [this link](https://hal.archives-ouvertes.fr/hal-00971351/document) in which we can optimize reccomender systems using social media analysis. 
 
 - **Surveillance systems**: determine the optimal placement of surveillance cameras to maximize the
 coverage areas while minimizing the costs of the systems. Possible customers/partners are large 
@@ -88,7 +92,7 @@ companies providing surveillance products and services:
   This includes the allocation of facilities as police stations, hospitals, or post offices. 
   We propose a quantum-based solution to determine the optimal distribution of 
   facilities across a given region, city, or an entire country. As an example, we provide an implementation
-  of our algorithm to find the optimal distribution of medical facilities across the Netherlands. [this file](../Week2_Rydberg_Atoms/Dutch medical facilities.py) includes the code used to perform this analysis.
+  of our algorithm to find the optimal distribution of medical facilities across the Netherlands. See this file: <dl>/Week2_Rydberg_Atoms/Dutch medical facilities.py </dl> for the code (having trouble linked it).
   Possible customers:
   - Ministero dei Trasporti Italiano
   - Municipality of Amsterdam
