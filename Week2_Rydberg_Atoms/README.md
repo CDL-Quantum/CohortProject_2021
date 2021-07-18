@@ -1,4 +1,4 @@
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/img/batman-slap.jpg)
+![CDL 2021 Cohort Project](../Week2_Rydberg_Atoms/img/batman-slap.jpg)
 
 ## Project 2: Optimization problems \& Rydberg atom arrays
 Optimization is a crucial element used in solving problems across many different fields, 
@@ -52,39 +52,48 @@ space of a generic optimization problem by simulating the physical process of he
 and then slowly lowering the temperature to decrease defects, thus minimizing the system energy.
 Each transition in spanning the solution space is called anneal.
 
-We compare two different classical algorithms implemented on Python - seen in ([this notebook](../Week2_Rydberg_Atoms/Task1_python.ipynb); in which we randomly simulate toward to ground state (solution) of the Hamiltonian. The random simulations are due to thermal fluctuations (compare to the quantum algorithm, in which the algorithm uses quantum fluctuations to determine randomly which 'spins' to flip in the Ising model). The two algorithms we implemented are the Metropolis-Hastings and Wolff algorithms. We also note that the classical algorithms were faster than the quantum algorithm- but that was more to do with the fact that the quantum algorithms were implemented in julia and we only had access to one thread (computer core). This [this link](https://towardsdatascience.com/the-great-csv-showdown-julia-vs-python-vs-r-aa77376fb96) shows how the speed of Julia compres to that of python when we make use of parellization (image below). 
+We compare two different classical algorithms implemented on Python, see [this notebook](../Week2_Rydberg_Atoms/Task1_python.ipynb) 
+in which we simulate the transitions of the solution toward to ground state of the Hamiltonian.
+In particular, we implemented the Metropolis-Hastings and Wolff algorithms. 
 
-![julia results](../Week2_Rydberg_Atoms/img/julia.png)
-
-For the classical algorithm, we first show a plot which explains our experimentation as N, the number of samples, increases. This obviously leads to a larger number of iterations. 
+The following plot shows the solutions obtained for different number of iteration.
 
 ![t11](../Week2_Rydberg_Atoms/img/t11.png)
 
-We compare these iterations to these, in which we begin with a larger inital temperature (by a factor of 10). As expected, this we require more iterations to reach the ground state. We can also see from the plot that by starting with a higher initial temperature, our MCMC algorithm traces out more of the sample space- which is expected since at a higher temperature we expect larger thermal fluctuations. 
+Clearly, this plot shows the convergence of the solutions for a larger number of iterations. 
+
+We also investigated the convergence of the solutions when we start from a higher temperature. 
+As expected, the convergence is slower due to the presence of larger thermal fluctuations. 
+Thus, it takes more iterations to reach the actual ground state of the system.
 
 ![t12](../Week2_Rydberg_Atoms/img/t12.png)
 
-We plot the results of the Metropolis-Hastings algorithms for different values of N. We notice that there is some degeneracy, which is why the solution (or most common state) is different for different values of N. 
+In the following plot, we show the histogram of solutions obtained with the Metropolis-Hastings algorithm. 
+We observe that some of the solutions appear with a similar frequency, meaning that we are in presence
+of a degeneracy of the ground state, i.e. mutliple solutions correspond to the same energy level.
 
 ![t14](../Week2_Rydberg_Atoms/img/t14.png)
 
-After increasing the value of N by a factor of 10:
+[comment]: <> (After increasing the value of N by a factor of 10:)
 
-![t13](../Week2_Rydberg_Atoms/img/t13.png)
+[comment]: <> (![t13]&#40;../Week2_Rydberg_Atoms/img/t13.png&#41;)
 
-The results of the Wolff algorithm:
+Finally, in the next plot we show the histogram of the solutions obtained with the Wolff algorithm, by using the same
+number of iterations as in the Metropolis-Hasting algorithm:
 
 ![t15](../Week2_Rydberg_Atoms/img/t15.png)
 
-The wolff algorithm requires a larger number of iterations.
+We observe that the Wolff algorithm underperforms the Metropolis-Hasting algorithm since the
+convergence of the solutions is slower, i.e. it requires a larger number of iterations.
 
 ![t16](../Week2_Rydberg_Atoms/img/t16.png)
 
-Finally, a picture of the fully connected 6 node graph by using Networkx (a python package):
+[comment]: <> (Finally, a picture of the fully connected 6 node graph by using Networkx &#40;a python package&#41;:)
 
-![t17](../Week2_Rydberg_Atoms/img/t17.png)
+[comment]: <> (![t17]&#40;../Week2_Rydberg_Atoms/img/t17.png&#41;)
 
 ### 1.2 Quantum annealing
+
 Quantum annealing has been introduced in the 80s as a variation of the simulated thermal annealing
 for solving NP-hard optimization problems. The main difference is that besides the thermal
 excitations used in simulated annealing to span the solution space, the quantum annealing 
@@ -132,13 +141,30 @@ mapped onto the system.
 ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/histogram_solutions.svg)
 
 By simulating a measurement of the final ground state a large amount of time, we obtained a
-distribution of the results which shows that there are basically three degenerate solutions:
+distribution of the results which shows that there are basically three degenerate solutions.
+This is in line with what observed in the simulated thermal annealing, however in this case we can see 
+that the solution states are clearly much more distinguishable than what we saw in the simulated annealing histograms. 
 
 We selected one of the three solutions and we mapped it to a graph. In the space of the coordinates, 
 the solution found is given by the graph below, where the blue circles correspond to the independent set
 of vertices:
 
 ![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/Graphics/coordinate_plot_solution.svg)
+
+Then, similarly to what done for the classical algorithm, we repeated the analysis of 
+convergence of the solutions for the quantum algorithm. 
+In the following plot, the histogram of the solutions is shown for different number 
+of measurements:
+
+![t21](../Week2_Rydberg_Atoms/img/t21.png)
+
+Finally, we investigated how the speed of the quantum solution varies with the value of dt:
+
+![t22](../Week2_Rydberg_Atoms/img/t22.png)
+
+Obviously, a slower transition to the final Hamiltonian, leads to a larger computational time. 
+However, the solutions obtained with a larger value of dt do not significantly differ from those
+obtained with a smaller value of dt, showing then the stability of the quantum annealing approach.
 
 ### 1.3 Benchmarking classical to quantum annealing
 
@@ -156,17 +182,15 @@ field Ising model, and showed that QA converges to optimality faster than SA in 
 Also more recent researches [6][7][8] have shown the benefits of quantum annealing and demonstrated 
 a scaling advantage for a quantum annealer over simulated annealing. 
 
-## 2. Simulations using Quantum Algorithms
+In our case, we observed that the classical algorithms were faster than the quantum simulation.
+This is probably due to the fact that the quantum algorithms were implemented in Julia and 
+we only had access to one thread (computer core). [This link](https://towardsdatascience.com/the-great-csv-showdown-julia-vs-python-vs-r-aa77376fb96) shows 
+how the speed of the Julia code compares to a similar implementation in Python when we make use of 
+parallelization (see figure below). 
 
-In this ([this notebook](../Week2_Rydberg_Atoms/Task2_julia.ipynb) we implement a quantum annealing algorithm to find the solution for the 6 node graph. Simulations for various number of sample sizes, N are shown here (and the corresponding most likely ground state configuration). As with the classical case we notice some degeneracy; however the states are much more distinguished than what we saw for the histograms for the classical algorithms above. We can also see that the classical and quantum solutions correspond to the same states (i.e the top 3 quantum states are contained within the top 3 states for the classical algorithm - just need to switch 0 -> 1 when comparing the algorithms). The histogram for the quantum solution is shown below:
+![julia results](../Week2_Rydberg_Atoms/img/julia.png)
 
-![t21](../Week2_Rydberg_Atoms/img/t21.png)
-
-We also compared how the speed of the quantum solution varried with the value of dt, which is shown in the plot below:
-
-![t22](../Week2_Rydberg_Atoms/img/t22.png)
-
-# Ocean SDK: comparing simulation to a real quantum device
+## 2. Ocean SDK: comparing simulation to a real quantum device
 
 D-Wave Systems created a full-stack framework ([Leap2](https://www.dwavesys.com/take-leap)) to run quantum annealing algorithms on both simulators and real quantum devices. The access to their systems uses an API mechanism for which registration is required. As part of the CDL, all users should have got a license and can access the real quantum devices. 
 
@@ -216,12 +240,14 @@ Similarly to the analysis performed in the previous sections, the UD-MIS problem
 
 #### Classically Simulated (thermal) annealing
 
-Here we have used the metropolis-hastings classical algorithm to determine the ground state for the 12 node graph. The histogram for N = 10k and T_i = 10k is shown below:
+Using the Metropolis-Hastings algorithm, we obtained the solutions for the 12 node graph of the problem. 
+The histogram for N = 10k and T_i = 10k is shown below:
 
 ![t31](../Week2_Rydberg_Atoms/img/t31.png)
 
 #### Quantum simulated annealing
-After running the quantum annealing simulator (10000 measurements) we obtain the following histogram:
+Next, we executed the run with the quantum annealing simulator (10000 measurements) 
+and we obtain the following histogram:
 
 ![CDL 2020 Cohort Project](Graphics/Task3_plots/Task3_Histogram.svg)
 
@@ -238,13 +264,20 @@ Such solutions are shown in the figures below (the solution superimposed on a ma
 By calculating the energy of these two solutions we can see that they are effectively degenerate,
 with a hamiltonian eigenvalue of -5.
 
-# Answers to Task 3 Questions:
+### 3.1 Answers to Task 3 Questions:
 
 Q.1 Explain why this is a problem that can be easily mapped to the UD-MIS problem.
 
-We are mapping the problem of optimizing the position of the cell phone towers to a graph (V,E) where V corresponds to the vertices (where the cellphone towers may be place) and E corresponds to the edges (the distance between the vertices). The solution to the max cut problem gives us a set of vertices which corresponds to the maximum independent set of the graph. The quality of the cell surface corresponds to the density of the graph (in graph theory, the density of a graph is the ratio between the number of edges to the maximum number of edges; see [10]). 
+As explained in the previous section, we map the problem of the cell phone towers to a graph (V,E) where the set of vertices V corresponds 
+to the location of the cellphone towers while the number of edges E corresponds the pair of vertices which are less than 1 unit of distance
+from each other. 
 
-Q.2 Solve Gotham City’s problem.Using the methods provided in Tasks 1 and 2. Are theremultiple solutions?
+The solution to the MIS problem on this graph gives us a set of vertices which corresponds to the maximum independent set of the graph. 
+The quality of the coverage can be proxied with the density of the graph 
+(in graph theory, the density of a graph is the ratio between the number of edges to the maximum number of edges; 
+see [10]). See next sections for more details on the coverage problem. 
+
+Q.2 Solve Gotham City’s problem.Using the methods provided in Tasks 1 and 2. Are there multiple solutions?
 
 The solutions correspond to the graphs shown above; the associated notebooks [python](../Week2_Rydberg_Atoms/Task3_python.ipynb) and [Julia](../Week2_Rydberg_Atoms/Task_3_QAnnealing.ipynb) have more details. 
 
@@ -252,39 +285,53 @@ Q.3 Should Bruce pay for a few more cell phone towers to make sure that more ofG
 
 There are multiple ways to solve this problem. 
 
-## Appraoch 1:  Density of Graph
+#### Appraoch 1:  Density of Graph
 
 Here we have plotted a fully connected graph of 12 nodes.
 
 ![t32](../Week2_Rydberg_Atoms/img/t32.png)
 
-Then, we remove nodes, to arrive at (one of the solutions- due to the degeneracy) the solution given by the MCMC algorithm. 
+Then, we remove nodes, to arrive at (one of the solutions- due to the degeneracy) the solution given by the 
+MCMC algorithm. 
 
 ![t33](../Week2_Rydberg_Atoms/img/t33.png)
 
-We calculate the density of the above graphs and then we calculate the density of a new graph, formed by randomly adding another node/vertex to the graph of the solution.
+We calculate the density of the above graphs and then we calculate the density of a new graph, 
+formed by randomly adding another node/vertex to the graph of the solution.
 
 ![t34](../Week2_Rydberg_Atoms/img/t34.png)
 
-What we find is this: the solution graph has a density that is 27% more than that of the original 12 node graph. By adding another node, the density of the new graph is 18.5% more dense than the original 12 cell phone tower graph. Obviously having more cell towers will increase the cell reception. But if Bruce Wayne wants to be efficient with his money (1. That's how the rich stay rich 2. He needs to save up if he wants to fight the Joker, Riddler, ect) than he should not buy any more cell towers. There is also the constraint we had which was that the cell phone service of each tower should not overlap. Unless Bruce relaxes this condition, there is no way he can justify buying additional towers. 
+What we find is this: the solution graph has a density that is 27% more than that of the original 12 node graph. 
+By adding another node, the density of the new graph is 18.5% more dense than the original 12 cell phone tower graph. 
+Obviously having more cell towers will increase the cell reception. But if Bruce Wayne wants to be efficient with 
+his money (1. That's how the rich stay rich 2. He needs to save up if he wants to fight the Joker, Riddler, ect) 
+than he should not buy any more cell towers. 
 
-## Appraoch 2: Extra Tower (12+1)
+#### Appraoch 2: Extra Tower (12+1)
+
+We additionally tested whether or not Bruce should buy extra towers, besides the locations imposed by the problem 
+(see [pdf](../Week2_Rydberg_Atoms/Task3_extra_credit.pdf), [Julia](../Week2_Rydberg_Atoms/Task2-3-ext_Saesun.ipynb) 
+and visualzation done in [Mathematica](../Week2_Rydberg_Atoms/Graphics.nb)).
+
+We solved the MIS problem for a graph with 13 vertices (12 blue corresponding to the existing locations + 1 red extra location). 
+The red location was chosen by adding a vertex around an existing one in four different configurations,
+as shown in the figure below. Thus, we analyzed in total 48 different graphs.
 
 ![t35](../Week2_Rydberg_Atoms/img/extra_problem.png)
 
-We did additional bonus work to test whether or not Bruce should buy extra towers, which can be found in this [pdf](../Week2_Rydberg_Atoms/Task3_extra_credit.pdf), [Julia](../Week2_Rydberg_Atoms/Task2-3-ext_Saesun.ipynb) and visualzation is done by [Mathematica](../Week2_Rydberg_Atoms/Graphics.nb).
+Among all 192 possible solutions, we found 55 optimal locations which correspond to new (red) locations. 
+Thus, this shows that one can obtain an increase of coverage of about **29%** by including new locations.
 
-We are optimized 13 (12 blue + 1 red) graph where we include one extra location. By optimizing four deviation from the orignal data (48 total), we found two important results.
+Last, among all possible locations (red + blue), we found **one location** that actually increase the number 
+of the cell towers in the maximum independent set. Interestingly, the location is at the Arkham Island where 
+Asylum for the criminally insane is located. Therefore, Bruce can safely ignore this location and minimize his 
+costs. 
 
--	Among 192 (48 x 4 degen) possible optimum solution, we found that 55 optimized location with new location (red). This give increase of mobility by **28%**.
--	Among 48 location, we found **one location** that actually increase the number of the cell tower.
-
-Interstingly, the location is at the Arkham Island where Asylum for the criminally insane is located at. Therefore, Bruce can safely ignore the location to maximize his profit. Our investigation can provide the new strategy for Bruce. He can set his tower in cheaper aread with same amount of coverage, and provide option for number of tower he can build.
-
-
+In conclusion, our investigation provides a new strategy for Bruce: he can set his towers in (possibly) cheaper 
+areas (he has to check the cost of the ground in the red locations), while ensuring the same coverage!
 
 ## Business Applications
-For more details refer to the [Business Application found here](./Business_Application.md)
+For more details, refer to the [Business Application found here](./Business_Application.md)
 
 ## References
 
@@ -308,7 +355,6 @@ Realistic requirements for quantum advantage using noisy simulation and classica
 [9] https://en.wikipedia.org/wiki/Wolff_algorithm
 
 [10] https://en.wikipedia.org/wiki/Dense_graph
-
 
 
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
