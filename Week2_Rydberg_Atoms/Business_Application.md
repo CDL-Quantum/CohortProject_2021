@@ -34,7 +34,6 @@ We present here two use cases to demonstrate how our algorithms can deliver valu
 ## Redundant franchises
 
 ![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/img/sv.png) 
-![Solution _animate](../Week2_Rydberg_Atoms/img/animate.gif)
 
 *(some Starbucks locations in Manhattan, NY)*
 
@@ -47,8 +46,9 @@ This not only reduces the company's profit, but also increases the overall franc
 To avoid such failure, our optimization algorithms take into consideration factors such as human traffic, population density, 
 land prices, and many more, by mapping Starbucks locations onto a quantum system made by Rydberg atoms. 
 
-In the figure above on the right, circles represent the coverage of a Starbucks store. 
-Black circles represents Starbucks which have suboptimal profits, thus could be closed to save money.
+![Solution _animate](../Week2_Rydberg_Atoms/img/animate.gif)
+
+In the figure above, circles represent the coverage of a Starbucks store. For demonstration purpose, we aribtary change the size of circle to represent the consideration factors. Black circles represents Starbucks which have suboptimal profits, thus could be closed to save money.
 
 *Disclaimer: this example leverages a subset of Starbucks stores currently located in New York.* 
 
