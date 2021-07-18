@@ -41,7 +41,7 @@ The sampled state with lowest energy has an energy of -5.0
 
 ## Further Challenges:
 ### Method Comparision Between Classical Simulated Annealing vs. Quantum Annealing in the UDMIS Problem
-In this [notebook](./D-Wave_qpu_and_simulated_annealing-checkpoint.ipynb) we compare the runtime of simulated annealing(D-Wave neal package),D-Wave QPU, and D-Wave hybrid solver on the UDMIS problem.
+In this [notebook](./D-Wave_qpu_and_simulated_annealing.ipynb) we compare the runtime of simulated annealing(D-Wave neal package),D-Wave QPU, and D-Wave hybrid solver on the UDMIS problem.
 
 
 
