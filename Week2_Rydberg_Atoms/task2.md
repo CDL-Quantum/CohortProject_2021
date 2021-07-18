@@ -16,7 +16,7 @@ In the instructions we were tasked with applying quantum annealing to solve the 
 ![Time-dependent Hamiltonian](https://latex.codecogs.com/gif.latex?%5Chat%7BH%7D%28t%29%20%3D%20%5COmega%28t%29%20%5Csum_%7Bi%20%5Cin%20V%7D%20%5Chat%7B%5Csigma%7D_i%5Ex%20-%20%5Cdelta%28t%29%20%5Csum_%7Bi%20%5Cin%20V%7D%20%5Chat%7Bn%7D_i%20&plus;%20u%20%5Csum_%7Bi%2Cj%20%5Cin%20E%7D%20%5Chat%7Bn%7D_i%20%5Chat%7Bn%7D_j)
 
 Mathematically and algorithmically, Quantum Annealing looks like the following
-$\ket{\psi(t)} =& U(t) U(t - \delta t) \cdots U(t_0 + \delta t) U(t_0) \ket{\psi (t = t_0)}$
+\\\ket{\psi(t)} =& U(t) U(t - \delta t) \cdots U(t_0 + \delta t) U(t_0) \ket{\psi (t = t_0)}\\
 where $U(t)$ is the time-evolution operator
 $U(t) =& \exp(-\frac{i}{\hbar} \delta t \hat{H}(t))$
 
