@@ -246,7 +246,7 @@ Q.1 Explain why this is a problem that can be easily mapped to the UD-MIS proble
 
 We are mapping the problem of optimizing the position of the cell phone towers to a graph (V,E) where V corresponds to the vertices (where the cellphone towers may be place) and E corresponds to the edges (the distance between the vertices). The solution to the max cut problem gives us a set of vertices which corresponds to the maximum independent set of the graph. The quality of the cell surface corresponds to the density of the graph (in graph theory, the density of a graph is the ratio between the number of edges to the maximum number of edges; see [10]). 
 
-Q.2 Solve Gotham City’s problem.Using the methods provided in Tasks 1 and 2Are theremultiple solutions?
+Q.2 Solve Gotham City’s problem.Using the methods provided in Tasks 1 and 2. Are theremultiple solutions?
 
 The solutions correspond to the graphs shown above; the associated notebooks [python](../Week2_Rydberg_Atoms/Task3_python.ipynb) and [Julia](../Week2_Rydberg_Atoms/Task_3_QAnnealing.ipynb) have more details. 
 
