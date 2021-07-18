@@ -105,7 +105,7 @@ Examples:
 **Stephen Zhu**
 
 
-# Video proposal [Business Proposal](https://drive.google.com/file/d/11JoBU7RoAE0AE4w-NrozQRhVsAP9ZrRE/view?usp=sharing)
+# [Business Proposal](https://drive.google.com/file/d/11JoBU7RoAE0AE4w-NrozQRhVsAP9ZrRE/view?usp=sharing)
 
 
 
