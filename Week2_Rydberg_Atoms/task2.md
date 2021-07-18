@@ -24,7 +24,7 @@ We can see the top five solutions in the following graph
 
 |Table Representation of Graph | Visual Representation of Graph|
 | :--------------: | :---------: 
-| <table>   <thead>   <tr> <th>Solution</th>  <th>Frequency</th>  </tr>   </thead>   <tbody>   <tr>  <td>011100</td>  <td>28721</td> </tr> <tr>  <td>110100</td>  <td>28372</td> </tr> <tr>  <td>010101</td>  </tr> </tbody> </table> | <img src="./resources/task2_top5.gif" width="300">
+| <table>   <thead>   <tr> <th>Solution</th>  <th>Frequency</th>  </tr>   </thead>   <tbody>   <tr>  <td>011100</td>  <td>28721</td> </tr> <tr>  <td>110100</td>  <td>28372</td> </tr> <tr>  <td>010101</td>  <td>28177</td> </tr> <tr>  <td>111100</td>  <td>3013</td> </tr> <tr>  <td>011101</td>  <td>2900</td> </tr> </tbody> </table> | <img src="./resources/task2_top5.gif" width="300">
 
 
 <img src="./resources/quantum_gotham/quantum_gotham.gif" width="300">
