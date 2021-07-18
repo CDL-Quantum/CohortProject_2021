@@ -238,7 +238,7 @@ The only issue with the above solution is that it does not determine which of th
 
 #### New Formulation of the Problem
 
-**Note: Unfortunately, we could not find the proper solution with our new formulation. We warn the reader that this solution is not correct - but it is still fun nonetheless!**
+Ideal method to find the appropriate overlap would be using the inverse square law for transmission of signals or calculating overlaping areas using a RELU type method. We use a 1/distance equation rather than 1/distance^2. This formulation is an extra exercise to evaluate incremental differences in energy that are not possible using the UD-MIS method. The solution from this method is base on the new formulation and not on the expected UD-MIS.
 
 The UD-MIS formulation where the range overlap is descretized does not give solutions that would indicate the optimum solution since a large overlap and a small overlap both have the same penalty (higher energy of +1).
 
