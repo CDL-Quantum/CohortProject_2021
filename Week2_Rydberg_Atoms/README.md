@@ -34,11 +34,6 @@ We simulate the UD-MIS using classical simulated annealing for the following abs
 | :--------------: | :---------: 
 | <table>   <thead>   <tr> <th>X Coordinate</th>  <th>Y Coordinate</th>  </tr>   </thead>   <tbody>   <tr>  <td>0.35</td>  <td>1.50</td> </tr> <tr>  <td>0.63</td>  <td>2.58</td> </tr> <tr>  <td>1.39</td>  <td>2.16</td> </tr> <tr>  <td>0.66</td>  <td>0.67</td> </tr> <tr>  <td>0.87</td>  <td>3.39</td> </tr> <tr>  <td>1.16</td>  <td>1.08</td> </tr> </tbody> </table> | ![Unsolved Graph](./resources/task1-graph-fixed.png)
 
-
-
-
-
-
 Next we simulate annealing to solve the ground state of the following Hamiltonian:
 
 $$
@@ -60,17 +55,11 @@ We find a ground state energy level of `-3` after about 4000 iterations. We plot
 
 Please view [this notebook](./Task1.ipynb) for the code used to solve this section. 
 
-We test 3 different annealing temperatures summarized by the following table: 
+We test 3 different annealing temperatures summarized by the following table (left) and visualized in the follow plot (right): 
 
-| Annealing Schedule   | Name |
-| :------------- | :----------: |
-| T_i * (T_f/T_i)^(t/N) | exponential ~x (benchmark)   |
-| T_i * (T_f/T_i)^(2*t/N)  | exponential ~2x |
-| T_i * (T_f/T_i)^(4*t/N)  | exponential ~4x |
-
-Here is a visualization of the annealing schedules:
-
-![Visualization of Annealing Schedules](./resources/visualization-of-annealing-schedules.png)
+| Table of Different Annealing Schedules | Plots of Each Annealing Schedule |
+| :--------------: | :---------: 
+| <table>   <thead>    <tr> <th>Annealing Schedule</th>  <th>Name</th>  </tr>    </thead>   <tbody>    <tr>  <td>T_i * (T_f/T_i)^(t/N)</td>  <td>exponential ~x (benchmark)</td> </tr>  <tr>  <td>T_i * (T_f/T_i)^(2*t/N)</td>  <td>exponential ~2x</td> </tr>  <tr>  <td>T_i * (T_f/T_i)^(4*t/N)</td>  <td>exponential ~4x</td> </tr>  </tbody> </table> | ![Visualization of Annealing Schedules](./resources/visualization-of-annealing-schedules.png) |
 
 To test the speed of convergence, we consider a "stable" solution one where the energy has not changed after 100 iterations. After simulating the annealing for each schedule, we plot the energy versus the number iterations in the following table:
 
@@ -129,7 +118,7 @@ We solve this problem in three ways using a simulated classical annealing approa
 
 Running the algorithm on a simulated classical annealing algorithm yields a lowest energy level of -5. We reached convergance after about 3700 iterations using the default cooling schedule $T = T_i * ((T_f/T_i) ** (t/N))$. We plot one solution in the following figure in green:
 
-![Graph with Solution](./resources/gotham-nodes-with-solution.png) |
+![Graph with Solution](./resources/gotham-nodes-with-solution.png)
 
 #### Quantum Annealing
 
