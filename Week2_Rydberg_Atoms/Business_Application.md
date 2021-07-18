@@ -1,30 +1,45 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
-# Quantum Cohort Project Business Application
+# Business Application: Sprinkler and social distancing go Quantum
 
-For each weekly project, your team is asked to complete the below business application exercise.
-To complement the technical tasks, please consdier the four questions below.
-You are free to format your response to these four questions as you wish (with the final question done as a short recorded video), and to include
-the content (or links to the content) on your forked repository.
 
-A brief example for each question is included for the 
-[Traveling Salesman Problem.](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+## Summary of the technical problem solved in this exercise
 
-## Step 1: Explain the technical problem you solved in this exercise
+In this exercise we solved the UD-MIS problem on a graph G of V vertices and E edges by finding the ground state of the Hamiltonian of a system of V Rydberg atoms placed in the vertices of G.
 
-Example: Finding a global minimum in settings where a classical approach may not be able to find a global minimum.
+We used two different approaches to solve this problem:
+1) Classical annealing
+>We simulated the associated Hamiltonian at low temperature using classical Monte Carlo simulations. At a low enough temperature, we can achieve its ground state, i.e. the solution of our original problem. In our simulations, we tried different annealing schedules to achieve the desired solution.
 
-## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
+2) Quantum annealing
+>Starting in an easy-to-prepare ground state of a Hamiltonian H(0), we evolved this state with a time-dependent Hamiltonian H(t) in such a way that the ground state of the final Hamiltonian H(t*) is the one we were looking for. We accomplished this by forcing H(t*) to be the UD-MIS Hamiltonian.
 
-Example: A courier has to deliver parcels to several locations and is looking to minimize its travel time. (e.g., “the travelling salesman problem”).
+In non-technical language, we found the maximum number of occupied locations under certain constraints using classical and quantum techniques to compute the solutions.
 
-## Step 3: Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved
+Finally, we mapped the UD-MIS problem to a real-life one. We applied these techniques to choose in which places to install a set of cell phone towers in Gotham City since a set of possible locations is given.
 
-Examples: 
-- Federal Express
-- Canada Post
+## Examples of real-world problems related to our solutions
 
-## Step 4: Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language
+#### Movie theaters
+Due to COVID-19 pandemic, most movie theater chains had to temporarily close all theater sites for public safety concerns. While vaccination campaigns are quite advanced, theaters still need to take into account social distancing to reopen. A slightly-modified version of our solution allows them to have the largest audience possible, with each person sitting 2 meters -or 6 feet- apart from each other, according to the health recommendations when indoors.
 
-Example: By travelling to all destinations via the shortest route, a courier can generate the same revenue that it would have generated following any other route, but will minimize travel costs (e.g., fuel costs). By minimizing travel costs, the courier will be more profitable than it would have been had it travelled through any other route.
+#### Agricultural industry
+Over one billion people worldwide work in agriculture, representing more than 27% of the world population in 2018 and generating $2.4 trillion for the global economy [1,2]. Choosing where to put watering systems is an everyday challenge for small to medium croplands. Our solution can determine the best location for water sprinklers in their fields in order to irrigate most of your crops with the lowest cost.
 
-**Please store your video externally to the repo, and provide a link e.g. to Google Drive**
+## Potential customers for this solution
+
+Some of the largest movie theatre chains from around the globe:
+
+- AMC (US): 11,041 screens, US$1.2424 billion revenue in 2020
+- Cineworld (UK): 9,500 screens, £852.3 million (~ US$ 1.174 bill) revenue in 2020
+- CGV (South Korea): 3,459 screens, US$522.77 million revenue in 2020.
+- Cineplex (Canada): 1676 screens, CAD$ 1.665 billion (~ US$ 1.32 bill) revenue in 2019
+
+
+To conclude, we made [a short video](https://drive.google.com/file/d/1YFC5P-q3sqXwucukQ61pdF_tsplOgkNx/view?usp=sharing) for a potential customer.
+
+
+## References
+
+https://croplife.org/news/agriculture-a-2-4-trillion-industry-worth-protecting/
+
+[Employment in agriculture](https://data.worldbank.org/indicator/SL.AGR.EMPL.ZS?end=2018&most_recent_year_desc=true&start=1991&type=shaded&view=chart) (Data retrieved on January 29, 2021)
