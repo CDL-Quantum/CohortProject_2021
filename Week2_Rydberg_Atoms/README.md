@@ -11,8 +11,7 @@ In this project we are going to demonstrate the amazing power of classical and q
 3. [Simulating the Same Problem but Using Quantum Annealing](#toc3)
 4. [Comparing the Classical and Quantum Methods](#toc4)
 5. [Gotham City Problem](#toc5)
-6. [Comparing the methods used to solve the UD-MIS problem](#toc6)
-7. [Finding Non-Redundant Protein Sequences](#toc7)
+6. [Finding Non-Redundant Protein Sequences](#toc6)
 
 ### Resources
 - [Notebook for task 1](./Task1.ipynb)
@@ -186,13 +185,6 @@ With the current threshold based binary UD-MIS formulation it is not possible to
 Even when modifying the problem, we did not find a better solution with more towers.
 
 <a name="toc6"></a>
-
-## Comparing the methods used to solve the UD-MIS problem
-
-<span style="color:red">TODO</span>
-
-
-<a name="toc7"></a>
 
 ## Finding Non-Redundant Protein Sequences
 
