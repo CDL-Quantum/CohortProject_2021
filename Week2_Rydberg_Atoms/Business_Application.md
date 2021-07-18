@@ -60,9 +60,10 @@ In the figure above, circles represent the coverage of a Starbucks store. For de
 
 Instead of closing down franchises to optimize profits, what about where to open the next one?
 Let's assume that Oklahoma does not have many Starbucks. Therefore, there are many possible places that local owners 
-can use to open the business, but what's the place that generates the maximum profit?
+can use to open the business, but what's the place that generates the maximum profit? 
 
-
+This problem can be also solvable if we add some constraint in our algorithm. 
+Simply by adding non-optimzing location, we can provide stategy of next 10 new location for your company.
 
 
 
