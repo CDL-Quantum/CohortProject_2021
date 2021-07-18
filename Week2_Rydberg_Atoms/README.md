@@ -28,12 +28,13 @@ Generally, optimal schedule can be worked out by formulated the problem as a Q-l
 ![Annealing dynamics at 4000 steps](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Convergence%20in%204000%20steps.png)
 ![Annealing dynamics at 150 steps](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Convergence%20in%20150%20steps.png)
 
-Task 2
+### Task 2
 The solution for the task 2 can be found [here](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/run_quantum_annealing_zq.ipynb)                                   
                                     
-Task 3
+### Task 3
 
 1. The Gotham City problem is a problem of optimal resource allocation. Revenue from the towers is proportional to their covered area. That area forms from the number of towers (first term in Eq. (3) ) with the exception of the overlap areas (second term). Optimal tower configuration is determined by maximizing the utility function, which is equivalent to the energy minimization problem of the Rydberg chain. 
+
                                     
 2. There are multiple solutions to the problem
 
@@ -57,5 +58,10 @@ Only a subset of locations produced a lower energy: -6 instead of -5. They are s
 ## Business Application
 Optimization using Rydberg atom is a resource allocation solution. Any business problem where economic benefit comes from scaling with the exception of overlap activities can be formulated and solved using Rydberg chains.
 
-Examples of business applications are shown 
+Examples of business applications are shown [here](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Business_Application.md)
+
+### References                                  
+[1] I.Halperin, M.Dixon, P.Bilokon, “Machine Learning in Finance: From Theory to Practice 1st ed. 2020 Edition” https://arxiv.org/abs/2006.11190
+
+
 
