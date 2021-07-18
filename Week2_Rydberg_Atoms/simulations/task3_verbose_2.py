@@ -23,7 +23,7 @@ if __name__ == "__main__":
     edges = get_edges(graph)
     t_list = [0.01, 0.05, 0.1, 0.5, 1.0, 5.0, 10.0]
 
-    pkl_file = "./simulations/task3_verbose_2.txt"
+    pkl_file = "task3_verbose_2.txt"
     pkl_data = dict()
     for t in tqdm(t_list):
         dt = t / 1000

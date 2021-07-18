@@ -1,10 +1,9 @@
 import pickle
 
-from Week2_Rydberg_Atoms.draw_graph import draw_graph
-from Week2_Rydberg_Atoms.parse_dataset import CityDataset
+from Week2_Rydberg_Atoms.simulations.parse_dataset import CityDataset
 
 if __name__ == "__main__":
-    city_pkl_path = './city_example_dataset.txt'
+    city_pkl_path = 'city_example_dataset.txt'
     dataset = CityDataset()
     korea_city_name, korea_city_coords = dataset.filter('Korea, South',
                                                         ret_coord=True,

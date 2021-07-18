@@ -1,7 +1,7 @@
 import csv
 from typing import TypedDict, List, Optional, Dict, Union, Tuple
 
-path_to_worldcities = './simplemaps_worldcities_basicv1.73/worldcities.csv'
+path_to_worldcities = '../simplemaps_worldcities_basicv1.73/worldcities.csv'
 
 
 class CityData(TypedDict):

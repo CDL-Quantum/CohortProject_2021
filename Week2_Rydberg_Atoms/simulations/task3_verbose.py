@@ -23,7 +23,7 @@ if __name__ == "__main__":
     edges = get_edges(graph)
     dt_list = [0.1, 0.025, 0.01, 0.0025, 0.001, 0.00025, 0.0001]
 
-    pkl_file = "./simulations/task3_verbose.txt"
+    pkl_file = "task3_verbose.txt"
     pkl_data = dict()
     for dt in tqdm(dt_list):
         psi = run_annealing(graph, edges, dt)

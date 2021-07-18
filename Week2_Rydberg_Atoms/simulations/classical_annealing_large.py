@@ -104,7 +104,7 @@ def Task_add2(args):
 N_list = [10, 50, 100, 500, 1000]
 
 if __name__ == "__main__":
-    with open('./city_example_dataset.txt', 'rb') as of:
+    with open('city_example_dataset.txt', 'rb') as of:
         cities = pickle.load(of)
     sorted_key = sorted(list(cities.keys()), key=lambda x: len(cities[x]['graph']))[:-2]
     worklist = list()
@@ -115,5 +115,5 @@ if __name__ == "__main__":
             worklist.append((N, th_list[i], g, key))  # N, th, udmis, name
     ray.init()
     result = ray.get([Task_add2.remote(args) for args in worklist])
-    with open('./simulations/classical_ann.txt', 'wb') as of:
+    with open('classical_ann.txt', 'wb') as of:
         pickle.dump(result, of)
