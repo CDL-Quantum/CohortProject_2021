@@ -89,7 +89,7 @@ In this [notebook](./D-Wave_qpu_and_simulated_annealing.ipynb) we compare the ru
 
 In [this notebook](D-Wave_qpu_and_simulated_annealing) do a comparison of calculation times for various classical, quantum, and hybrid optimizers.
 
-<img src="../Week2_Rydberg_Atoms/img/calc_time_benchmark.png" alt="drawing" width="300" height="200"/>
+<img src="../Week2_Rydberg_Atoms/img/calc_time_benchmark.png" alt="drawing" width="600" height="400"/>
 
 ### 4.3 Other Real World Example UD-MIS can solve:
 
