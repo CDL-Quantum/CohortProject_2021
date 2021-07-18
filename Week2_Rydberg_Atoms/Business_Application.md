@@ -34,8 +34,10 @@ We present here two use cases to demonstrate how our algorithms can deliver valu
 ## Redundant franchises
 
 ![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/img/sv.png) 
+![Solution _animate](../Week2_Rydberg_Atoms/img/animate.gif)
 
-*(Picture on the left: some Starbucks locations in Manhattan, NY)*
+*(some Starbucks locations in Manhattan, NY)*
+
 
 Many of us have seen the rise and fall of Subway restaurants as they expand their franchises aggressively.
 Many businesses often fall into this mistake: having too many franchises in a certain area may lead to suboptimal profits 
@@ -60,10 +62,9 @@ Instead of closing down franchises to optimize profits, what about where to open
 Let's assume that Oklahoma does not have many Starbucks. Therefore, there are many possible places that local owners 
 can use to open the business, but what's the place that generates the maximum profit?
 
-We answer this question by mapping onto our quantum system countless hypothetical locations where a store could be opened, 
-and we find the distribution which avoids overlapping with the coverage of existing franchises. See below for an animated plot of the solution:
 
-![Solution _animate](../Week2_Rydberg_Atoms/img/animate.gif)
+
+
 
 # Applications and Customers
 
