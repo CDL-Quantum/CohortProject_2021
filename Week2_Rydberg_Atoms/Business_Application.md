@@ -1,5 +1,6 @@
-![Drones](../Week2_Rydberg_Atoms/334.jpg)
-# Quantum Cohort Project Business Application
+![drones](https://github.com/aidaah/CohortProject_2021/blob/main/Week2_Rydberg_Atoms/334.PNG)
+# Quantum Cohort Project 2 Business Application
+
 
 For each weekly project, your team is asked to complete the below business application exercise.
 To complement the technical tasks, please consdier the four questions below.
