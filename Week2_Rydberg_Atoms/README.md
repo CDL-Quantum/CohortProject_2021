@@ -84,6 +84,7 @@ Examples of business applications are shown [here](https://github.com/ziweiqiu/C
 
 ### References                                  
 [1] I.Halperin, M.Dixon, P.Bilokon, “Machine Learning in Finance: From Theory to Practice 1st ed. 2020 Edition” https://arxiv.org/abs/2006.11190
+[2] H. Pichler, Sheng-Tao Wang, Leo Zhou, Soonwon Choi, and Mikhail D. Lukin, "Quantum Optimization for Maximum Independent Set Using Rydberg Atom Arrays" https://arxiv.org/abs/1808.10816v1
 
 
 
