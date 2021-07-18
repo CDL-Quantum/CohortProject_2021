@@ -1,18 +1,19 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 
-## Project 2: Optimization problems \& Rydberg atom arrays
+# Project 2: Optimization problems \& Rydberg atom arrays
 
 This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
 
-## Code and Notebooks
-For each of the sections below a notebook with the same name is associated. The task and challenges were taken from the following  [instructions.pdf](./instructions.pdf).
+# Code and Notebooks
+For each of the sections below, a notebook is associated. The task and challenges were taken from the following  [instructions.pdf](./instructions.pdf).
 
 
-## Tasks 
+# Tasks 
 
-### Task 1
+## Task 1
 associated [notebook](./Task1.ipynb)
 
+### Solving the UD-MIS problem with simulated classical annealing
 We solved the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing, for the proposed Toy Graph.
 ![Task 1: Result](./img/Task1_ToyGraph.png)
 
@@ -27,6 +28,8 @@ We tried to find a better annealing schedule to arrive at solutions to the probl
 
 For the annealing schedules codes please check the [notebook](./Task 1 Felipe.ipynb) where we test a variety of anneling schedules, to make things more easy we use the learning rate schedule from pytorch, which contains an amazing collection of schedules routines ready to be use.
 
+### Exploring different Annealing schedules
+associated [notebook](./Task 1 Felipe.ipynb)
 #### The baseline
 
 Our baseline will be the proposed anneling schedule
@@ -221,7 +224,7 @@ Exponential annealing results for 25 vertices graph:
 <img src="./figs task 1/Benchmarks_Multi_exp_annealing.png" style="width: 350px;"><figcaption> <font size="3"> Benchmark for Multiplicative and exponential annealing schedules </figcaption>
 We can conclude that for this task the multiplicative and exponential annealing schedules provide the fastest results, with in some cases the exponential annealing providing the fastest results
 
-### Task 2
+## Task 2
 associated [notebook](./Task2.ipynb)
 We solved the same Toy Graph problem, but using quantum annealing with the Yao library implementation. Plotting the frequency of occurrence of each bit string, we find that the solver has identified thre optimal solutions :
 ![Task 2: Result](./img/Task1_RandomGraph20.png)
@@ -229,7 +232,7 @@ We solved the same Toy Graph problem, but using quantum annealing with the Yao l
 However, it seems that the quantum annealing solver yields an error, with an noncompliant solution proposed as optimal
 ![Task 2: Result](./img/Task2_ToyGraph.png)
 
-### Task 3
+## Task 3
 associated [notebook](./Task3.ipynb)
 
 ### original problem
@@ -284,5 +287,5 @@ Comparing the methods used to solve the UD-MIS problem.
 Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
 
 
-## Business Application
+# Business Application
 For more details refer to the [Business Application found here](./Business_Application.md)
