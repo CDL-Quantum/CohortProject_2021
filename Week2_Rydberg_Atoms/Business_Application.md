@@ -11,6 +11,7 @@ We leverage state of the art classical and quantum methods to provide efficient 
 
 ## Our Routing Protocals
 
+<img src="../Week2_Rydberg_Atoms/img/starlink.gif" alt="drawing" width="300"/>
 
 
 ## Additional Applications
