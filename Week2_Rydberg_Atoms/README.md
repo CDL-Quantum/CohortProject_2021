@@ -78,7 +78,7 @@ and because we want to be sure that there is no overlap all the conditions of th
 
 **2. Solve Gotham City's problem.**  Using the methods provided in Tasks 1 and 2. **Are there multiples solutions? Yes!** 
 
-<p align="center"><img src="../Week2_Rydberg_Atoms/img/mult_solutions.png" alt="drawing" width="500" height="300"/></p>
+<p align="center"><img src="../Week2_Rydberg_Atoms/img/mult_solutions.png" alt="drawing" width="500" height="150"/></p>
 
 Classical annealing:
 
