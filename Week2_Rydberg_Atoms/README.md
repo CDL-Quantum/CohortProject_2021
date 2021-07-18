@@ -18,8 +18,6 @@ In this project we are going to demonstrate the amazing power of classical and q
 - [Notebook for task 2](./Task%202.ipynb)
 - [Notebook for task 3 (Gotham city) + running on real quantum hardware](./Task%203,%20Additional-Challenges%20b,%20d-ak.ipynb)
 - [Notebook for extra challenge: Finding the least redundant set of protein sequences](./real_world_protein_redundancy.ipynb)
-- [Business Application](./Business_Application.md)
-- [Business Video](https://drive.google.com/file/d/1hfTtel2v4LhboNnb1T615xISGz0q-tJT/view?usp=sharing)
 
 This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
 
@@ -152,10 +150,11 @@ Running the algorithm on a simulated classical annealing algorithm yields a lowe
 
 ![Graph with Solution](./resources/gotham-nodes-with-solution.png)
 
-#### Quantum Annealing
+#### Simulated Quantum Annealing
 
-Next we also run the same algorithm quantum-ly.
-<span style="color:red;font-size:40px">@Henry to fill this in</span>
+We have used a time-dependent Hamiltonian to reach the ground state. We have placed the coordinates into the quantum annealer, run for `100000 nshots`  and got the following solutions:
+
+| <table>   <thead>   <tr> <th>Solution</th>  <th>Frequency</th>  </tr>   </thead>   <tbody> <tr>  <td>100001010011</td>  <td>17686</td> </tr> <tr>  <td>010001010011</td>  <td>17443</td> </tr> <tr>  <td>101000010011</td>  <td>12414</td> </tr> <tr>  <td>011000010011</td>  <td>12403</td> </tr> <tr>  <td>000011010011</td>  <td>9648</td> </tr>  </tbody> </table> | <img src="./resources/quantum_gotham/quantum_gotham.gif" width="300">
 
 #### Real Quantum Hardware: Microsoft QIO
 
@@ -252,10 +251,6 @@ Since our company name is Qamino (standing for Quantum Amino), we needed a solut
 | Graph Representation on D-Wave | Embeddings on D-Wave | Energies Sampled on D-Wave |
 | :--------------: | :---------: |  :---------: |
 | ![D-Wave Graph](./resources/image%20b41.png) | ![D-Wave Embeddings](./resources/image%20b42.png) | ![D-Wave Energy Samples](.//resources/image%20b43.png) |
-
-## Business Application
-
-You can check out our business application [here.](./Business_Application.md)
 
 
 ## References
