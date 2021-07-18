@@ -235,10 +235,6 @@ Such solutions are shown in the figures below (the solution superimposed on a ma
 
 ![Solution Gotham](../Week2_Rydberg_Atoms/img/t3_plot.png)
 
-A similar plot (but animated!) is shown here:
-
-![Solution Gotham_animate](../Week2_Rydberg_Atoms/img/animate.gif)
-
 By calculating the energy of these two solutions we can see that they are effectively degenerate,
 with a hamiltonian eigenvalue of -5.
 
