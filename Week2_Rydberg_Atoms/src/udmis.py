@@ -84,13 +84,14 @@ class MPOClassicalUDMIS(AbstractUDMIS):
         Initialize system with vertices randomly occupied.
         """
         super().__init__(u, graph)
+        self.hamiltonian = self._hamiltonian()
 
-    def hamiltonian(self):
+    def _hamiltonian(self):
         # We will define the local Hamiltonian as a sum of local Paulis
         couplings = {}
         for i in range(self.num_vertices):
             couplings[(i, "Z")] = couplings.get((i, "Z"), 0) + 0.5
-            couplings[(i, "I")] = couplings.get((i, I), 0) - 0.5
+            couplings[(i, "I")] = couplings.get((i, "I"), 0) - 0.5
             for j in range(i + 1, self.num_vertices):
                 if self.edges[i, j]:
                     # Add the two single site (Z_i / Z_j) terms
@@ -98,14 +99,24 @@ class MPOClassicalUDMIS(AbstractUDMIS):
                     couplings[(j, "Z")] = couplings.get((j, "Z"), 0) - self.u / 4
 
                     # Add the edge term
-                    non_locality = j - i
-                    string = "Z" + "".join(["I" for _ in range(non_locality - 1)]) + "Z"
+                    weight = j - i
+                    string = "Z" + "".join(["I" for _ in range(weight - 1)]) + "Z"
                     couplings[(i, string)] = couplings.get((i, string), 0) + self.u / 4
-                    couplings[(i, "I")] = couplings.get((i, I), 0) - self.u / 4
-        return lo.LocalHamiltonian(couplings, self.num_vertices)
+                    couplings[(i, "I")] = couplings.get((i, "I"), 0) + self.u / 4
+        H = lo.LocalHamiltonian(couplings, self.num_vertices)
+        H.mpo = lo.svd_compress_mpo(H.mpo)
+        #still want to compress this as it will be highly inefficient
+        return H
 
     def ground_state(self):
-        return self.hamiltonian().ground_state()
+        return self.hamiltonian.ground_state()
+
+    def gs_bitstring(self):
+        gs = self.ground_state()
+        bs = []
+        for s in gs:
+            bs.append(site_to_bitstring(s))
+        return bs
 
 class QuantumUDMIS(AbstractUDMIS):
     def __init__(self, u, graph, omega_max, delta_0, delta_max):
@@ -176,3 +187,9 @@ def identity_wrap(operator, num_sites, i):
     operators = [qt.qeye(2) for _ in range(num_sites)]
     operators[i] = operator
     return qt.tensor(operators)
+
+def site_to_bitstring(A):
+     # expects a site from an mps
+     outcomes = [np.linalg.norm((A.data[0].T @ qt.basis(2, 0).full())).round(2),
+                 np.linalg.norm((A.data[0].T @ qt.basis(2, 1).full())).round(2)]
+     return sorted(range(2), key=lambda i: np.linalg.norm(outcomes[i]), reverse=True)[0]
