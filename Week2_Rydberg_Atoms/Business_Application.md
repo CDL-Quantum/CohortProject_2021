@@ -35,7 +35,7 @@ Examples:
 
 **Matthew Bishara**: I have a background in physics, and currently work in the electric energy sector on computing solutions to optimization problems.
 
-**Brandom Hiles** 
+**Brandom Hiles** I have a background in physics, and currently working in the software engineering field mainly working in the API/Database layer.
 
 **William Ngana** 
 
