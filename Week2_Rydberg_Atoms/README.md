@@ -231,7 +231,7 @@ active antenna, whereas a bit equal to 0 represent an unnecessary antenna.
 
 Thus, the most frequent bitstrings in the histogram correspond to the optimal solutions of the problem.
 There is clearly a degeneracy of solutions which appear equally frequent in the histogram above.
-Such solutions are shown in the figures below:
+Such solutions are shown in the figures below (the solution superimposed on a map of Gotham, NY):
 
 ![Solution Gotham](../Week2_Rydberg_Atoms/img/t3_plot.png)
 
