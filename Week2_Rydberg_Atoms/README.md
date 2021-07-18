@@ -28,30 +28,15 @@ and here are the associated tempature curves:
 
 We constructed an arbitrary N vertex graph, Hamiltonion for our system based off UD-MIS problem and ran a simulated annealing algorithm on it to find the lowest energy state.   In the [Task 2 Notebook](./Task_2.ipynb) in Julia we tested variations of the annealing time division and shots to sample solution to the problem and graph them.  We then compared the "best" or lowest energy returned with the most commonly returned solution.  Here only nodes within a unit distance are drawn with connected edges since they are the only ones that can overlap.
 
-<div id="container">
-    <div id="first">
   <img src="../Week2_Rydberg_Atoms/img/common.png" alt="drawing" width="350"/>                     
 
-
-
-
 The most common sampled state had an **energy of -2.65.**
-  </div>
-    <div id="second">
+
   <img src="../Week2_Rydberg_Atoms/img/best.png" alt="drawing" width="350"/>
 
 The sampled state with lowest energy has an **energy of -5.0.**
   
-  </div>
- 
-</div>
 
-
-
-  
-
-* Comparing the classical and quantums.
-* 
 ## 3 Solving a real-world problem involving cell phone tower placement in Gotham City.
 
 In this task we address a real world problem for Wayne Enterprises. The city of Gotham is looking to put in new cell towers. Given a list of possible locations we need to figure out a way to place the cell towers such that their signal ranges do not overlap.
