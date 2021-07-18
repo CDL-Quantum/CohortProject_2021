@@ -156,7 +156,7 @@ While it is true that current quantum machines fail to find the solutions with t
 
 This work was generated from [this notebook](./Task%203,%20Additional-Challenges%20b,%20d-ak.ipynb). The goal was to map the UD-MIS problem to a real world problem relating to finding optimal placements for cell phone towers in the city of Gotham.
 
-We are given the follow nodes representing the position of cell phone towers:
+We are given the follow nodes representing the potential position of cell phone towers in Gotham (edges in the graph represent towers whose signals overlap):
 
 |Table Representation of Graph | Visual Representation of Graph|
 | :--------------: | :---------: 
@@ -176,7 +176,7 @@ We solve this problem in four ways using a simulated classical annealing approac
 
 #### Simulated Classical Annealing
 
-Running the algorithm on a simulated classical annealing algorithm yields a lowest energy level of -5. We reached convergance after about 3700 iterations using the default cooling schedule ![Annealing Schedule](https://latex.codecogs.com/gif.latex?T_i%20*%20%28T_f/T_i%29%5E%7Bt/N%7D). We plot one solution in the following figure in green:
+Running the algorithm on a simulated classical annealing algorithm yields a lowest energy level of -5. This ground state has 5 nodes (indicated in green). We reached convergance after about 3700 iterations using the default cooling schedule ![Annealing Schedule](https://latex.codecogs.com/gif.latex?T_i%20*%20%28T_f/T_i%29%5E%7Bt/N%7D). We plot one solution in the figure below, where the green nodes indicate cell phone towers and the yellow nodes are potential locations that are not ideal:
 
 ![Graph with Solution](./resources/image%20b21.png)
 
@@ -196,12 +196,17 @@ This solver (similar to most simulated annealing solvers) seems to give only one
 
 #### Real Quantum Hardware: D-Wave
 
-We also solve this problem on real quantum hardware using D-Wave. Here, we found multiple solutions with the same lowest energy of -5. We display the top solutions found in the left, along with an awesome GIF displaying each solution on the right (green nodes are occupied).
+We also solve this problem on real quantum hardware using D-Wave. Here, we found multiple potential solutions with the same lowest energy of -5. We display the top potential solutions found in the left, along with an awesome GIF displaying some of them on the right (green nodes are occupied, edges represent signals that overlap).
 
 | D-Wave Solutions for Gotham Problem | GIF of the Multiple Best Solutions Found |
 | :--------------: | :---------: |
 | <img src="./resources/image%20b22.png" alt="drawing" width="340"/> | ![Gotham Dwave energy solutions](./resources/Gotham%20Solutions%201.gif) |
 
+However, one of Bruce's conditions is that the signals **must not** overlap. Therefore, we must exclude some of the ground states because they overlap (indicated by green nodes with connected edges). With this in mind, we show three non-overlapping solutions for breivity:
+
+||||
+| :--------------: | :---------: | :---------: |
+|![Solution 1](./resources/image%20b21.png) | ![Solution 2](./resources/graph1-2.png) | ![Solution 3](./resources/graph1-1.png)|
 
 We also show the graph representation of the problem in D-Wave (left), the actual embedding on D-Wave 2000Q (middle) along with the energies sampled from Dwave (right).
 
@@ -240,15 +245,31 @@ From D-Wave, we also show the resulting qubit graph (left), embedding (center) a
 
 ### Should Bruce pay for a few more cell towers?
 
-No. As the full set of solutions show, we can have from 5 to 7 towers and still have the lowest energy of -5.
+It depends on if Bruce can tolerate some overlap between the tower signals. 
+- If Bruce insists that there cannot be any signal overlap: he **should not** purchase more towers. 
+- If Bruce can tolerate some overlap: he **should** purchase more towers. 
 
-Adding an additional tower will add to the capital cost of adding a tower, however, there is no additional benefit based on the current formulation.
+Let's examine this in more detail...
 
-We would have to do an marginal analsysis and look at the incremental cost of each additional tower and compare to the incremental coverage area for adding the additional tower.
+For the case where Bruce can not afford any signal overlap, we already found a handful of optimal solutions with 5 towers and a ground state energy of -5. These are shown again here for convenience. We notice that no two green node is connected - indicating no overlap.
 
-With the current threshold based binary UD-MIS formulation it is not possible to get this level of information.
+||||
+| :--------------: | :---------: | :---------: |
+|![Solution 1](./resources/image%20b21.png) | ![Solution 2](./resources/graph1-2.png) | ![Solution 3](./resources/graph1-1.png)|
 
-Even when modifying the problem, we did not find a better solution with more towers.
+However, if Bruce allowed some overlap, he should purchase an extra tower (total of 6 towers). We found a handful of ground states (energy -5) with 6 occupied nodes. These states indicate some of the best coverage with a little bit of signal overlap. We believe that the trade off between overlap and city-wide coverage is worth it, and insist that Bruce purchase the extra tower! We display some of these solutions below:
+
+||||
+| :--------------: | :---------: | :---------: |
+|![Solution 1](./resources/graph3-1.png) | ![Solution 2](./resources/graph3-2.png) | ![Solution 3](./resources/graph3-1.png)|
+
+We could push this even further. If Bruce would consider even a little bit more overlap, he could purchase a second tower (for a total of 7 towers!). We justify this descision because we found 2 ground state solutions with 7 nodes! With this combination, he will be covering the most amount of Gotham - the only tradeoff is that he will have to make peace with a little bit more overlap. We display the solutions below: 
+
+|||
+| :--------------: | :---------: |
+|![Solution 1](./resources/graph-7nodes-1.png) | ![Solution 2](./resources/graph-7nodes-2.png) |
+
+A further analysis will then to be to calculate how much overlap is in each solution (for 6 nodes or 7 nodes) and to choose the solution that minimizes the overlap. 
 
 <a name="toc6"></a>
 
