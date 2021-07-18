@@ -11,6 +11,7 @@ Analysis of some of these methods can be framed as the Unit Disk Max Independent
 
 
 ## 1. Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
+
 In this [Task 1 notebook](./Task_1.ipynb) we tried several different schedules as suggested in citation [1] to see their effect on the convergence of UD-MIS under simulated annealing. Below are two graphs, graph before simulated annealing is ran (Right) and graph after simulated annealing is ran (Left), note that the maximum independent sets are seen in yellow color.
 
 <img src="../Week2_Rydberg_Atoms/img/complete_udmis_graph_task_1.png" alt="drawing" width="200"/>
@@ -24,6 +25,7 @@ and here are the associated tempature curves:
 
 
 ## 2. Simulating the same problem but using quantum annealing.
+
 We constructed an arbitrary N vertex graph, Hamiltonion for our system based off UD-MIS problem and ran a simulated annealing algorithm on it to find the lowest energy state.   In the [Task 2 Notebook](./Task_2.ipynb) in Julia we tested variations of the annealing time division and shots to sample solution to the problem and graph them.  We then compared the "best" or lowest energy returned with the most commonly returned solution.  Here only nodes within a unit distance are drawn with connected edges since they are the only ones that can overlap.
 
 
@@ -32,15 +34,17 @@ We constructed an arbitrary N vertex graph, Hamiltonion for our system based off
 
 
 
-The most common sampled state had an energy of -2.65
+The most common sampled state had an **energy of -2.65.**
 
 
   <img src="../Week2_Rydberg_Atoms/img/best.png" alt="drawing" width="350"/>
 
-The sampled state with lowest energy has an energy of -5.0
+The sampled state with lowest energy has an **energy of -5.0.**
 
 * Comparing the classical and quantums.
+* 
 ## 3 Solving a real-world problem involving cell phone tower placement in Gotham City.
+
 In this task we address a real world problem for Wayne Enterprises. The city of Gotham is looking to put in new cell towers. Given a list of possible locations we need to figure out a way to place the cell towers such that their signal ranges do not overlap.
 
 As we see from the problem statement this can be mapped onto a UDMIS problem. That is if you look at each cell phone pole as a vertex in a graph G(V,E). The edges are repesented by the connection to the vertices
@@ -61,7 +65,9 @@ Finally using the Hamiltonian a quantum circuit was constructed usung cirq which
 
 
 ## 4. Further Challenges:
+
 ### 4.1 Method Comparision Between Classical Simulated Annealing vs. Quantum Annealing in the UDMIS Problem
+
 In this [notebook](./D-Wave_qpu_and_simulated_annealing.ipynb) we compare the runtime of simulated annealing(D-Wave neal package),D-Wave QPU, and D-Wave hybrid solver on the UDMIS problem.
 
 
