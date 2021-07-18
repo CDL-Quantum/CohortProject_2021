@@ -6,7 +6,7 @@
 # Q-Grid
 
 
-Here at Q-Grid we address the problem of getting information to its destination efficiently.  We provide computing solutions for dynamic routing protocals in largescale networks in the telecom and Iot.
+Here at Q-Grid we address the problem of getting information to its destination efficiently.  We provide computing solutions for dynamic routing protocals in largescale networks in the telecom and IoT.
 
 
 # Sourcing Efficient Information Routing Solutions
