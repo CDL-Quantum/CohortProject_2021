@@ -12,16 +12,22 @@ Increased bandwith and technologies enhancing the IOT such as lower energy blue 
 Here at Q-Grid we address the problem of getting information to its destination efficiently.  We provide computing solutions for dynamic routing protocals in largescale networks in the telecom and IoT.  Our software solutions provide tangible improvements to networking protocals while helping to insure out customers are quantum ready.
 
 
-<p align="center"><img src="../Week2_Rydberg_Atoms/img/iot_tech.jpg" alt="drawing" width="800" height="600"/></p>
+<p align="center"><img src="..Week2_Rydberg_Atoms/img/1. IoT.jpg" alt="drawing" width="800" height="600"/></p>
 
 
 ## Our Routing Protocals
 
 Our solutions based on MIS algorithms provide for shorter routing paths reducing required transmission bandwith leading to reduced network operators costs and latency. With the proliferation of networked devices, the problem of determining routing paths is more important than ever.  With our MIS classical and quantum solutions you can be assured that your communications are being connected in the most efficient manner.
 
-Fig
+## Step 1: Explain the technical problem you solved in this exercise
+
+<p align="center"><img src="../Week2_Rydberg_Atoms/img/1. IoT.jpg" alt="drawing" width="800" height="600"/></p>
+
 Given a set of objects for instance antennas, satellites, big data, etc, which objects should you choose such that you maximize objects coverage without any overlaps? This problem is an example of an optimization problem known as the maximum independent set problem. The objective is to maximize the number of nodes in a set, so that no edges are contained in the set. 
+
 The maximum independent set problem besides proving the computational complexity of many theoretical problems, serves also as a useful model for real world optimization problems in numerous fields, including information retrieval, signal transmission analysis, classification theory, economics, scheduling, big data, error correcting codes, wireless networks and biomedical engineering [1].
+
+## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
 
 There are several markets where UD-MIS problem can be applied:
 
@@ -58,12 +64,12 @@ Clients: Kingston Technology Corporation (US), Other World Computing (OWC) (US),
 
 ### 2.	Proposal.
 The proposal we make to the telecom and IoT network providers (total market size app. $US2 trillion) is as follows:
+
 The combination of high-density small cell sites and low-latency applications makes 5G different. One of the most critical differences is in how routing will expand and become integrated with the transport network. Since the networks will be Internet Protocol based and there are stringent requirements including latency, service providers expect to use routing extensively. Fundamentally, using routing for the service intelligence will be critical to ensure the performance of the various applications running on the 5G transport network. Routing must be flexible and very cost effective, which is driving a high interest in virtual routing [9]. A large mobile provider for instance has tens of thousands of cell sites and that number will increase dramatically with 5G deployments. This fact underscores the importance of routing to building robust services as the locations increase by another order of magnitude [10]. Operators recognize that they need to add routing. The Telecom Infra Project (TIP) members have defined a set of requirements for a Distributed Cell Site Gateway (DCSG) that pushes routing out to the cell site itself [10].
 In order to optimize routing on the cell sites MIS can be used for optimal placement of the cell sites themselves. In addition, a new routing protocol design might be needed to accommodate the challenges and opportunities that come with 5G.
-Internet of Things (IoT) is an example of low-power and lossy networks (LLNs). The routing protocol for LLNs is a standard routing framework for IoT. Typically, devices forming an LLN possess limited energy, scarce resources, operate in mostly harsh environment and in such a network radio transmission coverage is limited. Therefore, if an LLN is required to cover a relatively large geographical area, multi-hop communication is required. This results in a requirement that devices in a network should rely each other data packets. Hence, a routing protocol to discover and maintain multipoint-to-point (MP-to-P), point-to-point (P-to-P) and point-to-multipoint (P-to-MP) data forwarding paths is needed.
-An IoT communication architecture using industrial process control as an example use case is depicted in Fig 1.
+Internet of Things (IoT) is an example of low-power and lossy networks (LLNs). The routing protocol for LLNs is a standard routing framework for IoT. Typically, devices forming an LLN possess limited energy, scarce resources, operate in mostly harsh environment and in such a network radio transmission coverage is limited. Therefore, if an LLN is required to cover a relatively large geographical area, multi-hop communication is required. This results in a requirement that devices in a network should rely each other data packets. Hence, a routing protocol to discover and maintain multipoint-to-point (MP-to-P), point-to-point (P-to-P) and point-to-multipoint (P-to-MP) data forwarding paths is needed. An IoT communication architecture using industrial process control as an example use case is depicted in Fig 1.
 
-
+<p align="center"><img src=".. Week2_Rydberg_Atoms/img/2. IoT communication architecture..jpg" alt="drawing" width="800" height="600"/></p>
 Fig. 1 IoT communication architecture [11].
 
 In the industrial process control, status of different devices is regularly reported to a central entity/gateway. Hence, there is a need for multipoint-to-point (MP-to-P) communication. Similarly, the central entity sends different control commands to different devices, thus there is a need for point-to-multipoint (P-to-MP) communication. Usually, in an industrial process control system, devices need to communicate with each other to successfully complete a task, hence there is a need for point-to-point (P-to-P) communication. Invariably, the central entity is connected to the Internet, and it stores important information in one of the servers reachable through the Internet or local network. Moreover, a user can interact with the central entity over the Internet to accomplish relevant tasks.
@@ -71,6 +77,7 @@ It is known that control overhead of the routing protocol for LLNs (RPL) can res
 There are routing challenges related to node deployment: Unlike conventional networks where network topologies are determined in the beginning of network construction node deployment in Wireless Sensor Networks (WSNs) is either deterministic or randomized. In deterministic deployment, network topologies are decided in advance and remain nearly the same during their lifetime and thus data can be routed through pre-determined paths. However, in randomized deployment, sensor nodes are randomly scattered creating an unknown and unstable network topology. Data routing in this type of node deployment inherently possesses no prior knowledge of network topology and thus requires processing more routing data [12].
 Routing mechanism for networks of low power and limited computation capability devices are still under research and development. Some possible research directions are protocols exploiting the redundancy of devices and protocols that allow processing data near data resources to reduce traffic load [10]. UD-MIS could be used for finding the optimal configuration of subnets close to the data source or in the virtual core. Due to its storage organization, information retrieval and scheduling capabilities UD-MIS could construct optimal forwarding information paths, thus allowing for smooth integration of 5G and IoT. The exact potential of implementing UD-MIS in the routing protocol design itself needs to be further researched.
 
+<p align="center"><img src=".. Week2_Rydberg_Atoms/img/3. Routing Protocol Optimazation1.jpg" alt="drawing" width="800" height="600"/></p>
 Fig. 2 IoT Routing Protocol Optimization close to the data source or in the virtual core.
 
 
@@ -87,6 +94,18 @@ Examples:
   - [Project Kuiper from Amazon](https://www.aboutamazon.com/news/company-news/amazon-receives-fcc-approval-for-project-kuiper-satellite-constellation)
 - Aid distribution
 
+[1] Butenko, S. 2003. Maximum Independent Set and related problems with applications http://ufdcimages.uflib.ufl.edu/UF/E0/00/10/11/00001/butenko_s.pdf
+[2] Global Telecom Services Market (https://www.grandviewresearch.com/industry-analysis/global-telecom-services-market#:~:text=The%20global%20telecom%20services%20market%20size%20was%20valued,rate%20%28CAGR%29%20of%205.0%25%20from%202020%20to%202027)
+[3] Global IoT Market (https://www.marketdataforecast.com/market-reports/internet-of-things-iot-market)
+[4] 45 Fascinating IoT Statistics (https://dataprot.net/statistics/iot-statistics/)
+[5] Cloud Computing Market (https://www.marketsandmarkets.com/Market-Reports/cloud-computing-market-234.html#:~:text=%5B322%20Pages%20Report%5D%20The%20global%20cloud%20computing%20market,due%20to%20the%20recent%20COVID-19%20pandemic%20is%20imminent)
+[6] Big Data Market Size 
+[7] Satellite Communication Market
+[8] ECC Memory Market Valuation
+[9] 5G Transport Networks and Routing
+[10] Integrating Routing in 5G Transport
+[11] Farooq, M. 2020 RIoT: A Routing Protocol for the Internet of Things. The Computer Journal, Volume 63, Issue 6, June 2020, Pages 958–973. (https://academic.oup.com/comjnl/article/63/6/958/5808800)
+[12] Trang,T. Routing protocols in Internet of Things. (trang-tran-routing-protocols-in-iot.pdf (aalto.fi)
 
 <img src="../Week2_Rydberg_Atoms/img/starlink.gif" alt="drawing" width="300"/>
 
@@ -100,12 +119,12 @@ Examples:
 
 **William Ngana** 
 
-**Silvia Tzenkova**
+**Silvia Tzenkova** I have a background in environmental and energy engineering, and currently working on developing an hybrid emotion prediction platform.
 
-**Stephen Zhu**
+**Stephen Zhu** I have background in economics, and currently working on developing hybrid emotion prediction platform.
 
 
-# [Business Proposal](https://drive.google.com/file/d/11JoBU7RoAE0AE4w-NrozQRhVsAP9ZrRE/view?usp=sharing)
+# [Business Proposal]()
 
 
 
