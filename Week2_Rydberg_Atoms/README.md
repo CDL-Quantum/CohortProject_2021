@@ -164,7 +164,7 @@ In this ([this notebook](../Week2_Rydberg_Atoms/Task2_julia.ipynb) we implement 
 
 We also compared how the speed of the quantum solution varried with the value of dt, which is shown in the plot below:
 
-![t21](../Week2_Rydberg_Atoms/img/t22.png)
+![t22](../Week2_Rydberg_Atoms/img/t22.png)
 
 # Ocean SDK: comparing simulation to a real quantum device
 
@@ -215,7 +215,10 @@ Similarly to the analysis performed in the previous sections, the UD-MIS problem
 - D-Wave quantum annealing solution (see [Python notebook](../Week2_Rydberg_Atoms/OceanSDK_implmentation_gotham.ipynb))
 
 #### Classically Simulated (thermal) annealing
-# ELI/SAESUN: to fill in
+
+Here we have used the metropolis-hastings classical algorithm to determine the ground state for the 12 node graph. The histogram for N = 10k and T_i = 10k is shown below:
+
+![t31](../Week2_Rydberg_Atoms/img/t31.png)
 
 #### Quantum simulated annealing
 After running the quantum annealing simulator (10000 measurements) we obtain the following histogram:
@@ -237,14 +240,31 @@ Such solutions are shown in the figures below:
 By calculating the energy of these two solutions we can see that they are effectively degenerate,
 with a hamiltonian eigenvalue of -5.
 
-We also wondered whether it is worth to pay for a few towers more to get a better coverage of Gotham city.
-### I DO NOT THINK THAT THE PART BELOW CORRECTLY ANSWERS THE QUESTION. I SEE THAT ELI PERFORMED A COST-BENEFIT ANALYSIS OF THE PROBLEM IN PYTHON BY PROXYING THE SERVICE COVERAGE AREA WITH THE DENSITY OF THE GRAPH. WE SHOULD INCLUDE THIS. 
+## Answers to Task 3 Questions:
 
-Since one of the conditions for solving the problem was that the tower signals should not overlap, 
-Bruce Wayne should pay for a few towers more if he wants to make sure more of Gotham city has cell 
-coverage. If he takes out the overlapping restriction then he may not need extra cell phone towers 
-apart from the 12 towers but that is not an efficient case precisely because there is overlapping 
-of signals. 
+# Q.1 Explain why this is a problem that can be easily mapped to the UD-MIS problem.
+
+We are mapping the problem of optimizing the position of the cell phone towers to a graph (V,E) where V corresponds to the vertices (where the cellphone towers may be place) and E corresponds to the edges (the distance between the vertices). The solution to the max cut problem gives us a set of vertices which corresponds to the maximum independent set of the graph. The quality of the cell surface corresponds to the density of the graph (in graph theory, the density of a graph is the ratio between the number of edges to the maximum number of edges; see [10]). 
+
+# Q.2 Solve Gotham City’s problem.Using the methods provided in Tasks 1 and 2Are theremultiple solutions?
+
+The solutions correspond to the graphs shown above; the associated notebooks [python](../Week2_Rydberg_Atoms/Task3_python.ipynb) and [Julia](../Week2_Rydberg_Atoms/Task_3_QAnnealing.ipynb) have more details. 
+
+# Q.3 Should Bruce pay for a few more cell phone towers to make sure that more ofGotham City has cell phone service?
+
+There are multiple ways to solve this problem. Here we have plotted a fully connected graph of 12 nodes.
+
+![t32](../Week2_Rydberg_Atoms/img/t32.png)
+
+Then, we remove nodes, to arrive at (one of the solutions- due to the degeneracy) the solution given by the MCMC algorithm. 
+
+![t33](../Week2_Rydberg_Atoms/img/t33.png)
+
+We calculate the density of the above graphs and then we calculate the density of a new graph, formed by randomly adding another node/vertex to the graph of the solution.
+
+![t34](../Week2_Rydberg_Atoms/img/t34.png)
+
+What we find is this: the solution graph has a density that is 27% more than that of the original 12 node graph. By adding another node, the density of the new graph is 18.5% more dense than the original 12 cell phone tower graph. Obviously having more cell towers will increase the cell reception. But if Bruce Wayne wants to be efficient with his money (1. That's how the rich stay rich 2. He needs to save up if he wants to fight the Joker, Riddler, ect) than he should not buy any more cell towers. There is also the constraint we had which was that the cell phone service of each tower should not overlap. Unless Bruce relaxes this condition, there is no way he can justify buying additional towers. 
 
 ## Business Applications
 For more details refer to the [Business Application found here](./Business_Application.md)
