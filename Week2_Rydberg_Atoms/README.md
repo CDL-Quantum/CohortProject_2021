@@ -17,7 +17,7 @@ In this [Task 1 notebook](./Task_1.ipynb) we tried several different schedules a
 ![Graph](../Week2_Rydberg_Atoms/img/Task_1_Graph.png) ![Graph](../Week2_Rydberg_Atoms/img/complete_udmis_graph_task_1.png)
 
 We were able to find the ground state energy, which converged at an energy of -3. As we decreased the temperature, we found that the monte carlo algorithm converged faster as expected, and below is a graph demonstrating that result:
-
+<img src="../Week2_Rydberg_Atoms/img/Task_1_seperate_monte_carlo_graphs.png" alt="drawing" width="200"/>
 ![Various Monte Carlo Simulations](../Week2_Rydberg_Atoms/img/Task_1_seperate_monte_carlo_graphs.png)
 
 ### Task 2: Simulating the same problem but using quantum annealing.
@@ -40,7 +40,8 @@ The sampled state with lowest energy has an energy of -5.0
 ### Benchmarking Criteria: Classical vs. Quantum Optimization for UD-MIS
 **Theoretical Background**: During this simulation, we utilized the simulated annealing algorithm to solve the UD-MIS problem. Let n<sub>i</sub> be the gap between the largest and second largest eigenvalues of a stochastic matrix M<sub>i</sub>. Let n = min<sub>i</sub>n<sub>i</sub>. The run time of this alogirthm is proportional to O(1/n) [1][2], and it has been shown that quantum computers can increase the efficieincy by O(1/√n) [1][3]
 
-**Simulation Results**
+**Simulation 
+s**
 ### Other Real World Example UD-MIS can solve:
 #### Drone Delivery
 ### Converting code to real quantum hardward
