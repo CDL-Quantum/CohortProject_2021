@@ -1,24 +1,6 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 
 
-<p align="center"><img src="../Week2_Rydberg_Atoms/img/logo.png" alt="drawing" width="300"/></p>
-
-# Q-Grid
-
-We live in a world of networks.  From global satelite internet systems to local mesh networks like Amazon Sidewalk.  Optimization of cell site locations and selecting of subnets in a way that keeps data sources and sensors connected efficiently.  The size of thes markets is(..insert here, maybe more elaboration on size of different market sizes around this).
-
-Increased bandwith and technologies enhancing the IOT such as lower energy blue tooth and Z-Wave radio transmission enable new ways of connecting, as well as new challenges in determining transmission routing. We leverage state of the art classical and quantum methods to provide efficient routing for network providers to reduce bandwidth cost of routing, and reduced latency.
-
-Here at Q-Grid we address the problem of getting information to its destination efficiently.  We provide computing solutions for dynamic routing protocals in largescale networks in the telecom and IoT.  Our software solutions provide tangible improvements to networking protocals while helping to insure out customers are quantum ready.
-
-
-<p align="center"><img src="..Week2_Rydberg_Atoms/img/1. IoT.jpg" alt="drawing" width="800" height="600"/></p>
-
-
-## Our Routing Protocals
-
-Our solutions based on MIS algorithms provide for shorter routing paths reducing required transmission bandwith leading to reduced network operators costs and latency. With the proliferation of networked devices, the problem of determining routing paths is more important than ever.  With our MIS classical and quantum solutions you can be assured that your communications are being connected in the most efficient manner.
-
 ## Step 1: Explain the technical problem you solved in this exercise
 
 <p align="center"><img src="../Week2_Rydberg_Atoms/img/1. IoT.jpg" alt="drawing" width="800" height="600"/></p>
