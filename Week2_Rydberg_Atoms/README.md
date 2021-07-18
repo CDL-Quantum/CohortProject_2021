@@ -52,4 +52,4 @@ For more details refer to the [Business Application found here](./Business_Appli
 ### References:
 1. https://quantumalgorithmzoo.org/#MathJax-Element-271-Frame
 2. Sanguthevar Rajasekaran, On the Convergence Time of Simulated Annealing.
-3. Mario Szegedy, Spectra of Quantized Walks and a δϵ√ rule., arXiv:quant-ph/0401053, 2004.
+3. Mario Szegedy, Spectra of Quantized Walks and a δϵ√ rule., ![arXiv:quant-ph/0401053, 2004.](https://arxiv.org/abs/quant-ph/0401053)
