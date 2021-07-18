@@ -5,7 +5,7 @@
 <img src="../Week2_Rydberg_Atoms/img/traveling_salesman.jpg" alt="drawing" width="200"/>
 
 
-Optimization of networks and routing is strongly linked with the NP-hard Traveling Salesmen problem and other path finding algorithms.  Here we explore some classical techniques to tackle these problems, as well as quantum and hybrid solutions.  Path finding has general applications not only for routing, but for the trajectory of multi-state systems over time.
+Optimization of networks and routing is strongly linked with the NP-hard **Traveling Salesmen** problem and other path finding algorithms.  Here we explore some classical techniques to tackle these problems, as well as quantum and hybrid solutions.  Path finding has general applications not only for routing, but for the trajectory of multi-state systems over time.
 
 Here we do an analysis of some of thiese methods framed as the UD-MIS problem, and benchmark different methodologies for tackling this class of problems
 
