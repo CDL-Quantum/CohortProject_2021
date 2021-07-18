@@ -105,12 +105,14 @@ Mapping the competitive position of the company helps us to identify what we are
 
 ## Potential Customers
 
-|Company name|Country|R&D budget-2020|Profit-2020|
+|Company name|Country|R&D budget-2020↑|Profit-2020|
 |----|----|----|----|
+|Roche Holding AG|Switzerland|$ 14.14 billion|$ 32.7 billion|
 |Pfizer|USA|$ 9.4 billion|$ 41.9 billion|
-|AstraZeneca|UK|$ 6 billion|$ 26.6 billion|
-|Regeneron pharmaceuticals|USA|$ 2.7 billion|$ 8.497 billion|
-|Sygnature Discovery|UK|NA|$ 68.9 million|
+|Novartis International AG|Switzerland|$ 8.9 billion|$ 48.65 billion|
+|AstraZeneca|UK|$ 6.0 billion|$ 26.6 billion|
+|Merck & Co.|USA|$ 2.7 billion|$ 43.0 billion|
+
 
 
 ## Presentation 
