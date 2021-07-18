@@ -17,10 +17,11 @@ In the instructions we were tasked with applying quantum annealing to solve the 
 
 Mathematically and algorithmically, Quantum Annealing looks like the following
 
-[Quantum Annealing 1](https://latex.codecogs.com/gif.latex?%7C%5Cpsi%20%28t%29%3E%20%3D%20U%28t%29%20U%28t%20-%20%5Cdelta%20t%29%5Ccdots%20U%28t_0%20&plus;%20%5Cdelta%20t%29%20U%28t_0%29%7C%5Cpsi%20%28t%20%3D%20t_0%29%3E)
+![Quantum Annealing 1](https://latex.codecogs.com/gif.latex?%7C%5Cpsi%20%28t%29%3E%20%3D%20U%28t%29%20U%28t%20-%20%5Cdelta%20t%29%5Ccdots%20U%28t_0%20&plus;%20%5Cdelta%20t%29%20U%28t_0%29%7C%5Cpsi%20%28t%20%3D%20t_0%29%3E)
 
-where [U(t)](https://latex.codecogs.com/gif.latex?U%28t%29) is the time-evolution operator
-[Quantum Annealing 2](https://latex.codecogs.com/gif.latex?U%28t%29%20%3D%20%5Cexp%28-%5Cfrac%7Bi%7D%7B%5Chbar%7D%20%5Cdelta%20t%20%5Chat%7BH%7D%28t%29%29)
+where ![U(t)](https://latex.codecogs.com/gif.latex?U%28t%29) is the time-evolution operator
+
+![Quantum Annealing 2](https://latex.codecogs.com/gif.latex?U%28t%29%20%3D%20%5Cexp%28-%5Cfrac%7Bi%7D%7B%5Chbar%7D%20%5Cdelta%20t%20%5Chat%7BH%7D%28t%29%29)
 
 We can see the top five solutions and their frequency on the following graph. Additonally you can look at the [file with all the available solutions](./task2_data.dat)
 
