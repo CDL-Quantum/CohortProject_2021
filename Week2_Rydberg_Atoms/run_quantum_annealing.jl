@@ -65,10 +65,10 @@ function hamiltonian(graph::Vector{NTuple{2, Float64}}, edges::Vector{CartesianI
     interaction_term - δ(t)*sum(map(i->put(Nv,i=>P1), 1:Nv)) + Ω(t)*sum(map(i->put(Nv,i=>X), 1:Nv))
 end
 
-function run_annealing(graph::Vector{NTuple{2, Float64}}, edges::Vector{CartesianIndex{2}}, dt::Float64)
+function run_annealing(graph::Vector{NTuple{2, Float64}}, edges::Vector{CartesianIndex{2}}, dt::Float64, T::Float64)
     psi_t = zero_state(size(graph)[1])
-    for t in 0:dt:1.0
-        h = hamiltonian(graph, edges, t)
+    for t in 0:dt:T
+        h = hamiltonian(graph, edges, t/T)
         psi_t = psi_t |> TimeEvolution(h, dt * 100)
     end
     return psi_t

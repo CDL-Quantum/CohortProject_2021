@@ -30,8 +30,9 @@ _measure = jl.measure
 
 def run_annealing(graph: List[Tuple[float, float]],
                   edges: Union[List[List[bool]], np.ndarray],
-                  dt: float) -> Any:
-    return _run_annealing(graph, edges, dt)
+                  dt: float,
+                  t: float = 1.0) -> Any:
+    return _run_annealing(graph, edges, dt, t)
 
 
 def measure(state: Any,
