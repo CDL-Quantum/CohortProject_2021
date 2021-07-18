@@ -39,9 +39,7 @@ Batman receiving the Bat Signal.
 1. The Gotham City problem is a problem of optimal resource allocation. Revenue from the towers is proportional to their covered area. That area forms from the number of towers (first term in Eq. (3) ) with the exception of the overlap areas (second term). Optimal tower configuration is determined by maximizing the utility function, which is equivalent to the energy minimization problem of the Rydberg chain. 
 
                                     
-2. There are multiple [solutions](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking_UDMIS_Algorithms.ipynb) to the problem
-                             
-There are 8 possible solutions to this problem: [(0, 1, 4, 6, 7), (0, 1, 4, 6, 8), (0, 1, 4, 6, 10), (0, 1, 4, 6, 11), (0, 1, 4, 9, 10), (0, 1, 4, 9, 11), (0, 3, 4, 9, 10), (0, 3, 4, 9, 11)]
+2. There are 8 possible [solutions]((https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking_UDMIS_Algorithms.ipynb) to this problem: [(0, 1, 4, 6, 7), (0, 1, 4, 6, 8), (0, 1, 4, 6, 10), (0, 1, 4, 6, 11), (0, 1, 4, 9, 10), (0, 1, 4, 9, 11), (0, 3, 4, 9, 10), (0, 3, 4, 9, 11)]
                                     
 ![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.1.png)
 
