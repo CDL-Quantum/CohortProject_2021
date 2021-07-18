@@ -55,6 +55,12 @@ If we look at the towers as nodes of a graph and their overlap as an edge betwee
 
 In order to do this task we update the graph with our new coordinates, run the simulation and plot the result:
 
-![task2](./images/tas3_sim_ann.png)
+**Simulated annealing**
+
+![task3_1](./images/task3_sim_ann.png)
+
+**Quantum annealing**
+
+![task3_2](./images/task3_q_ann.png)
 
 ### 3.3 Should Bruce pay for a few more cell phones towers to make sure that more of Gotham City has cell phone service?
