@@ -26,7 +26,7 @@ Our solutions based on MIS algorithms provide for shorter routing paths reducing
 
 ## Additional Applications
 
-Expanding from the mainstream communciation network providers.  There is also additional application of our technology for rapidly changing local mesh networks, and satelite braodband internet providers.
+Expanding from the mainstream communciation network providers.  There is also additional application of our technology for rapidly changing local mesh networks, and satelite broadband internet providers.
 
 Examples: 
 - Mesh Networks
