@@ -16,6 +16,7 @@ In this [Task 1 notebook](./Task_1.ipynb) we tried several different schedules a
 
 <img src="../Week2_Rydberg_Atoms/img/complete_udmis_graph_task_1.png" alt="drawing" width="200"/>
 
+### Annealing Schedule Type 1: Original
 We were able to find the ground state energy, which converged at an energy of -3. As we decreased the temperature, we found that the monte carlo algorithm converged faster as expected, and below is a graph demonstrating that result:
 
 <img src="../Week2_Rydberg_Atoms/img/task_1_monte_carlo_graphs.png" alt="drawing" width="700" height="500"/>
@@ -23,6 +24,11 @@ We were able to find the ground state energy, which converged at an energy of -3
 and here are the associated tempature curves:
 <img src="../Week2_Rydberg_Atoms/img/task_1_temperature_curves.png" alt="drawing" width="700"  height="500"/>
 
+### Annealing Schedule 2: Inverse
+
+### Annealing Schedule 3: Inverse Log
+
+### Annealing Schedule 4: Exponential
 
 ## 2. Simulating the same problem but using quantum annealing.
 
