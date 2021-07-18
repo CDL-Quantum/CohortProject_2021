@@ -33,7 +33,7 @@ We present here two use cases to demonstrate how our algorithms can deliver valu
 
 ![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/img/sv.png) 
 
-*(some Starbucks locations in Manhattan, NY 1cm = 200m)*
+*(Starbucks locations in Manhattan, NY 1cm = 200m)*
 
 
 Many of us have seen the rise and fall of Subway restaurants as they expand their franchises aggressively.
@@ -60,7 +60,7 @@ Black circles represents Starbucks which have suboptimal profits, thus could be 
 *(Picture: Starbucks locations in Oklahoma, USA 1cm = 2000m)*
 
 Instead of closing down franchises to optimize profits, what about where to open the next one?
-Let's assume that Oklahoma does not have many Starbucks. Therefore, there are many possible places that local owners 
+Let's assume that Oklahoma does not have many Starbucks (100x bigger area). Therefore, there are many possible places that local owners 
 can use to open the business, but what's the place that generates the maximum profit? 
 
 This problem can be also solvable if we add some constraint in our algorithm. 
