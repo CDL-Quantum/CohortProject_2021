@@ -20,7 +20,7 @@ The technology of RQCs lend themselves naturally to the development of "good eno
 problem starts with a set of possibly overlapping circles and asks for the largest subset of non-overlapping
 circles. As we explain below, this problem is related to questions of resource management,
 
-## Use Case 2 : Water distribution for the city of the future
+## Use Case: Water distribution for the city of the future
 
 ### Introduction 
 
