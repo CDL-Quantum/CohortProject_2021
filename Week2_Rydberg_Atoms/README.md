@@ -121,9 +121,32 @@ Simulated quantum annealing presents a promising option for solving the UD-MIS p
 We will be comparing classical and quantum solutions to the UD-MIS problem. D-Wave will be our quantum hardware of choice for this task. Our experiment will consist of running UD-MIS algorithm until there is no change in energy, during our experiments we found that this occurs after roughly 300 steps. For our experiments we tried different size graphs of the UD-MIS formulation and also tracked the lowest energy found with both the classical UD-MIS solver and the D-Wave quantum annealer. We have used both D-Wave 2000Q and D-Wave Advantage in our comparison to classical annealing. With D-Wave 2000Q we were only able to go up to a maximum node size of 70, and in the case of D-Wave Advantage we have increased the number of nodes to 100.
 
 Through experimentation we determined that these were the optimal parameters:
+
 `chain_strength = number_of_nodes / 5`
+
 `annealing_time = number_of_nodes * 7`
+
 `number_of_runs = number_of_nodes * 10`
+
+Here are the results of our time to execute experiment:
+
+|D-Wave 2000Q vs Classical | D-Wave Advantage vs Classical|
+| :--------------: | :---------: 
+| <img src="./resources/dwave2000q_vs_classical_time.png" width="300"> | <img src="./resources/dwaveadvantage_vs_classical_time.png" width="300">
+
+Here are the results of our lowest energy experiment:
+
+|D-Wave 2000Q vs Classical | D-Wave Advantage vs Classical|
+| :--------------: | :---------: 
+| <img src="./resources/dwave2000q_vs_classical_energy.png" width="300"> | <img src="./resources/dwaveadvantage_vs_classical_energy.png" width="300">
+
+We can see that both D-Wave machines can't find the lowest energy solution. Despite a large amount of sampling both quantum machines found very few results in the lower values, as can be seen in the following graphs:
+
+|40 Nodes | 100 Nodes|
+| :--------------: | :---------: 
+| <img src="./resources/2000q_energy_sampling.png" width="300"> | <img src="./resources/advantage_energy_sampling.png" width="300">
+
+While it is true that current quantum machines fail to find the solutions with the lowest value, we can clearly see that they perform much faster than classical methods. We expect that with general quantum hardware improvements, quantum methods will become better at finding the lowest energy solutions for the UD-MIS problem, whilst keeping their speed advantage. 
 
 <a name="toc5"></a>
 ## Task 3
@@ -257,7 +280,7 @@ Since our company name is Qamino (standing for Quantum Amino), we needed a solut
 
 | Graph Representation on D-Wave | Embeddings on D-Wave | Energies Sampled on D-Wave |
 | :--------------: | :---------: |  :---------: |
-| ![D-Wave Graph](./resources/image%20b41.png) | ![D-Wave Embeddings](./resources/image%20b42.png) | ![D-Wave Energy Samples](.//resources/image%20b43.png) |
+| ![D-Wave Graph](./resources/protein-dwave-2.png) | ![D-Wave Embeddings](./resources/protein-dwave-embeddings-2.png) | ![D-Wave Energy Samples](./resources/protein-dwave-energies-2.png) |
 
 
 ## References
@@ -276,13 +299,13 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 * (DONE) Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
 * (DONE) Finding a better annealing schedule to arrive at solutions to the problem quicker.
 * (DONE) Simulating the same problem but using quantum annealing.
-* (QUEUE) Comparing the classical and quantum methods.
+* (DONE) Comparing the classical and quantum methods.
 * (DONE) Solving a real-world problem involving cell phone tower placement in Gotham City.
 
 ## Further Challenges:
-* (QUEUE) Comparing the methods used to solve the UD-MIS problem.
+* (DONE) Comparing the methods used to solve the UD-MIS problem.
 * (DONE) Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
-* (QUEUE) Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
+* (DONE) Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
 * (DONE) Solving the problem with real quantum hardware.
 
 ## Business Application

@@ -67,13 +67,12 @@ According to the market research reports, protein sequencing industry garnered $
 
 ## Benchmarking
 
-There are several conventional methods to select non-redundant representative subsets of protein sequence. Our technology has dramatically promoted sequencing technologies by offering low-cost and ultra-high-throughput sequencing. In addition to accuracy, computational complexity is an important issue.
+There are several conventional methods to select non-redundant representative subsets of protein sequence. Our technology has dramatically promoted sequencing technologies by offering low-cost and ultra-high-throughput sequencing. In addition to accuracy, computational complexity is an important issue. Next-generation sequencing technologies are able to demonstrate a good speedup derived from solving UD-MIS problem quantumly compared with conventional methods[[19]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3251834/). Although below figure show promising results, however, we attempt to develop better model using quantum computer to improve the metrics.  
 
-Previous methods for this task, such as CD-HIT, PISCES and UCLUST, apply a heuristic threshold-based algorithm. Next-generation sequencing technologies are able to demonstrate a good speedup derived from solving UD-MIS problem quantumly compared with conventional famous methods based on the Threshold algorithm [19].
+<p align="center">
+  <img width="500" height="300" src="./resources/BC8.png">
+</p>
 
-![Nice Graph](./resources/business-app-graphs.jpeg)
-
-Source [19]
 
 Computational Costs: Our technologies to provide non-redundant representative subsets of protein sequence reduces computational complexity which result in a lower computational cost. It can cut the time spent in discovery from 4.5 years to as little as one year, reduces discovery costs by 80 percent and results in one-fifth the number of synthesized compounds as is normally needed to produce a single winning drug.
 
