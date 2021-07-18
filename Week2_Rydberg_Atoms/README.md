@@ -13,9 +13,6 @@ In this project we are going to demonstrate the amazing power of classical and q
 5. [Solving a real-world problem involving cell phone tower placement in Gotham City](#toc5)
 6. [Comparing the methods used to solve the UD-MIS problem](#toc6)
 7. [Real world problem: Finding non-redundant protein sequences](#toc7)
-8. [Solving the problem with real quantum hardware](#toc8)
-9. [References](#toc9)
-
 
 ### Resources
 - [Notebook for task 1](./Task1.ipynb)
@@ -229,19 +226,18 @@ We then solve the UD-MIS problem using a clasical simulated annealing schedule T
 | :--------------: | :---------: |
 | ![Protein Energy History](./resources/protein-energy-history.png) | <img src="./resources/protein-solution-graph.png" style="margin-bottom:25px"> |
 
-The solution set yielded from the classical simulation found 28 non-redundant proteins:
+The solution set yielded from the classical simulation found 28 non-redundant proteins at a ground state energy of -28:
 
 `1bksA, 3f2bA, 2yb1A, 3e38A, 2anuA, 3qy6A, 1v77A, 3dcpA, 3au2A, 2a3lA, 2qpxA, 3iacA, 1itqA, 2ffiA, 3irsA, 3cjpA, 4dziC, 2gwgA, 2y1hB, 2vc5A, 1a4mA, 2ogjA, 1a5kC, 1yrrB, 3pnuA, 2imrA, 3ooqA, 3icj`
 
-<a name="toc8"></a>
+#### Implementation on D-Wave
 
-## Solving the problem with real quantum hardware
+Since our company name is Qamino (standing for Quantum Amino), we needed a solution using real quantum hardware as well! Thus we tested this out using D-Wave. We were able to find the -28 energy ground state (although it was only sampled once out of 100 samples). We display graph representation of the problem in D-Wave (left), the actual embedding on D-Wave 2000Q (middle) along with the energies sampled from Dwave (right).
 
-<span style="color:red">TODO</span>
+| Graph Representation on D-Wave | Embeddings on D-Wave | Energies Sampled on D-Wave |
+| :--------------: | :---------: |  :---------: |
+| ![D-Wave Graph](./resources/image%20b41.png) | ![D-Wave Embeddings](./resources/image%20b42.png) | ![D-Wave Energy Samples](.//resources/image%20b43.png) |
 
-
-
-<a name="toc9"></a>
 
 ## References
 
