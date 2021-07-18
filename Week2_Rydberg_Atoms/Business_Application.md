@@ -54,7 +54,7 @@ Black circles represents Starbucks which have suboptimal profits, thus could be 
 
 ![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/img/ba3.png)
 
-*(Picture: Starbucks locations in Oklahoma, TX)*
+*(Picture: Starbucks locations in Oklahoma, USA)*
 
 Instead of closing down franchises to optimize profits, what about where to open the next one?
 Let's assume that Oklahoma does not have many Starbucks. Therefore, there are many possible places that local owners 
