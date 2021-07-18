@@ -8,23 +8,25 @@
 Qamino specializes in finding non-redundant protein sequences using state of the art quantum technology. Non-redundant protein sequences are absolutely vital for drug manufacturers to effectively find and produce drugs and reduce their R&D cost. We are able to model the problem of distinguishing protein sequences as a unit-disk maximum independent set (UD-MIS) problem based on their similarity with other proteins. We can find a global minimum to the hamiltonian more effectively and efficiently than classical methods.
 
 <p align="center">
-  <img width="650" height="300" src="./resources/BC1.png">
-    Source [1]
+  <img width="500" height="300" src="./resources/BC1.png">
+  <a href="https://portlandpress.com/biochemsoctrans/issue/46/5/">Source</a>
 </p>
 
 ## Preamble
 
 The application of UD-MIS for choosing non redundant representative sets of protein from sequence data sets can be served in a variety of applications. For instance, selecting representative sets of protein structure which is one of the biology problems in the world. 
 
-![Cool Picture 2](./resources/BC2.png)
-
-Source [2]
+<p align="center">
+  <img width="500" height="300" src="./resources/BC2.png">
+  <a href="https://www.wikiwand.com/en/Protein_structure/">Source</a>
+</p>
 
 Protein structure is the three-dimensional arrangement of atoms in an amino acid-chain molecule. It enables us to understand ligand protein binding and develop binding affinity techniques [3]. Binding affinity is the strength of the binding interaction between a single biomolecule (e.g. protein or DNA) to its ligand/binding partner (e.g. drug or inhibitor) [4]. 
 
-![Drug Receptor](./resources/BC3.png)
-
-Source [5]
+<p align="center">
+  <img width="870" height="250" src="./resources/BC3.png">
+  <a href="https://www.lecturio.com/magazine/biological-interaction/">Source</a>
+ </p> 
 
 ## Business Pitch
 
@@ -38,18 +40,19 @@ Structural knowledge on the exact interactions of drugs with their target protei
 
 ## Drug Design Industry Overview
 
-![Pharmacy Picture](./resources/BC4.jpg)
-
-Source [9]
+<p align="center">
+  <img width="500" height="300" src="./resources/BC4.jpg">
+  <a href="https://physicsworld.com/a/intelligent-drug-discovery/">Source</a>
+ </p> 
 
 In recent years, the drug discovery technologies industry has seen remarkable developments and rapid progress. Biology, chemistry and computation provide an amalgamation that is reflective of the industry’s future.  In this industry, growth in the protein sequencing market is mainly driven by factors such as increasing focus on target-based drug development by pharmaceutical and biotechnology companies, advancements in clinical mass spectrometry and analytical techniques, and increasing public-private financial support for proteomic research [10].
 
 Supply side of protein sequencing market is characterized by advancement in technology and technique. The demand side of this market is characterized by increasing use of proteomic research in drug design industry, patent expiry of major blockbuster drugs and increasing R&D expenditure of major pharmaceutical and biotechnology companies [10].
 
-![Cool DNA Picture](./resources/BC5.gif)
-
-Source [11]
-
+<p align="center">
+  <img width="500" height="300" src="./resources/BC5.gif">
+  <a href="https://www.ddw-online.com/target-discovery-and-drug-design-extracting-the-value-from-genomics-1421-200008/">Source</a>
+ </p> 
 
 The 10 largest pharmaceutical companies now pay nearly $80 billion a year to come up with fewer and fewer successful drugs. The reason is that drugs that are easiest to find and that safely and effectively treat common disorders have all been found; what is left is hunting for drugs that address problems with complex and elusive solutions and that would treat disorders affecting only tiny portions of the population and thus could return far less in revenue.  Because finding new, successful drugs has become so much harder, the average cost of bringing one to market nearly doubled between 2003 and 2013 to $2.6 billion. These same challenges have increased the lab-to-market timeline to 12 years, with 90 percent of drugs washing out in one of the phases of human trials. Many scientists in the field think that computer-aided techniques will ultimately improve drug development in several ways such as identifying more promising drug candidates and by speeding up the overall process. 
 
@@ -57,9 +60,13 @@ Several biotechnology and pharmaceutical companies are making sizeable investmen
 
 According to the market research reports, protein sequencing industry garnered $5.39 in 2018 and it is estimated to reach $9.92 billion by 2026, growing at a compound annual growth rate (CAGR) of 7.8% from 2019 to 2026 [13]. The global market for drug discovery should grow from $69.8 billion in 2020 to $110.4 billion by 2025 with a CAGR of 9.6% for the period of 2020-2025 [14]. Of all the regions, North America holds an enormous potential in the protein sequencing market. Several public and private organizations have committed large funds on proteomic research. Rising focus of players on structure-based drug design and the advent of technologically advanced analytical methods used in protein sequencing are bolstering the regional demand [15].
 
-![Market Segmentation](./resources/BC6.png)
 
-Source [16]
+<p align="center">
+  <img width="500" height="300" src="./resources/BC6.png">
+  <a href="https://www.futurewiseresearch.com/healthcare-market-research/Protein-Sequencing-Market/3383" target="_blank">Source</a>
+ </p> 
+ 
+
 
 ## Benchmarking
 
