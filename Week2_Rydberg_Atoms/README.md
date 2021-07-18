@@ -280,7 +280,7 @@ Since our company name is Qamino (standing for Quantum Amino), we needed a solut
 
 | Graph Representation on D-Wave | Embeddings on D-Wave | Energies Sampled on D-Wave |
 | :--------------: | :---------: |  :---------: |
-| ![D-Wave Graph](./resources/image%20b41.png) | ![D-Wave Embeddings](./resources/image%20b42.png) | ![D-Wave Energy Samples](.//resources/image%20b43.png) |
+| ![D-Wave Graph](./resources/protein-dwave-2.png) | ![D-Wave Embeddings](./resources/protein-dwave-embeddings-2.png) | ![D-Wave Energy Samples](./resources/protein-dwave-energies-2.png) |
 
 
 ## References
