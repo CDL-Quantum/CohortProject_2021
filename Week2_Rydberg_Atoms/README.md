@@ -146,7 +146,7 @@ We can see that both D-Wave machines can't find the lowest energy solution. Desp
 
 |40 Nodes | 100 Nodes|
 | :--------------: | :---------: 
-| <img src="./resources/2000q_energy_sampling.png" width="300"> | <img src="./resources/advantage_energy_sampling.png" width="300">
+| <img src="./resources/40_nodes_sampling.png" width="300"> | <img src="./resources/advantage_energy_sampling.png" width="300">
 
 While it is true that current quantum machines fail to find the solutions with the lowest value, we can clearly see that they perform much faster than classical methods. We expect that with general quantum hardware improvements, quantum methods will become better at finding the lowest energy solutions for the UD-MIS problem, whilst keeping their speed advantage. 
 
