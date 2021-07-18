@@ -18,6 +18,8 @@ In this project we are going to demonstrate the amazing power of classical and q
 - [Notebook for task 2](./Task%202.ipynb)
 - [Notebook for task 3 (Gotham city) + running on real quantum hardware](./Task%203,%20Additional-Challenges%20b,%20d-ak.ipynb)
 - [Notebook for extra challenge: Finding the least redundant set of protein sequences](./real_world_protein_redundancy.ipynb)
+- [Business Application](./Business_Application.md)
+- [Business Video](https://drive.google.com/file/d/1hfTtel2v4LhboNnb1T615xISGz0q-tJT/view?usp=sharing)
 
 This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
 
@@ -250,6 +252,10 @@ Since our company name is Qamino (standing for Quantum Amino), we needed a solut
 | Graph Representation on D-Wave | Embeddings on D-Wave | Energies Sampled on D-Wave |
 | :--------------: | :---------: |  :---------: |
 | ![D-Wave Graph](./resources/image%20b41.png) | ![D-Wave Embeddings](./resources/image%20b42.png) | ![D-Wave Energy Samples](.//resources/image%20b43.png) |
+
+## Business Application
+
+You can check out our business application [here.](./Business_Application.md)
 
 
 ## References
