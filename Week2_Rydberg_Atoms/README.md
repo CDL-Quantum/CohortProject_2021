@@ -1,10 +1,9 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 2: Optimization problems \& Rydberg atom arrays
-Team 1: 
 
-This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
+Team 1
 
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week2_Rydberg_Atoms/instructions.pdf) to begin learning about your tasks for this week!
+[instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week2_Rydberg_Atoms/instructions.pdf) provides background for this project and challenges.
 
 ## Solutions ##
 ### Task 1
@@ -62,10 +61,16 @@ Only a subset of locations produced a lower energy: -6 instead of -5. They are s
 ![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.6.png)
 
 ## Benchmarking
+                                    
+[QAOA challenge.ipynb](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/QAOA%20challenge.ipynb) includes an QAOA solution to the UD-MIS problem.
 
-[QAOA](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/QAOA%20challenge.ipynb)
+                                    
+In [Benchmarking various algorithms.md](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking%20Various%20Algorithms.md), we compare computation performances across a number of classical and quantum algorithms for the UD-MIS (unit disk - maximal independent set) problem. Classical methods include simulated annealing, an approximation algorithm based on subgraph-excluding subroutine (using the software iGraph) and an exact solution based on backtracking efficient search (using the software NetworkX). The simulated quantum method we study here is simulated quantum annealing based on neutral atom systems. As seen in the plot below, simulated annealing achieves the best overall performance in terms of both time complexity and result accuracy.
+<img src="https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/benchmarking_imgs/Benchmarking.png" width="480" height="218">
 
-[Benchmarking various algorithm](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking%20Various%20Algorithms.md)
+Codes and more plots can be found in these two notebooks:
+[Benchmarking_UDMIS_Algorithms.ipynb](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking_UDMIS_Algorithms.ipynb),
+[run_quantum_annealing_zq.ipynb](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/run_quantum_annealing_zq.ipynb)
 
 
 
