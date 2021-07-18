@@ -119,7 +119,7 @@ Mapping the competitive position of the company helps us to identify what we are
 
 ## Presentation 
 ## The value proposition of our innovation to the potential customers:
-[Click to view](https://youtu.be/r1FGXYElofU)
+[Click here or the image to view](https://youtu.be/r1FGXYElofU)
 
 [![Video](./resources/video-cover.png)](https://youtu.be/r1FGXYElofU)
 
