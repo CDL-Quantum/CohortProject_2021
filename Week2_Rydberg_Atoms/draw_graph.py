@@ -63,7 +63,8 @@ def draw_graph(coordinates: List[Tuple[float, float]],
     xs = [c[0] for c in coordinates]
     ys = [c[1] for c in coordinates]
     margin = radius * 1.05
-    fig, axe = plt.subplots(figsize=((max(xs) - min(xs) + 2 * margin) * 2, (max(ys) - min(ys) + 2 * margin) * 2))
+    # figsize = ((max(xs) - min(xs) + 2 * margin) * 2, (max(ys) - min(ys) + 2 * margin) * 2)
+    fig, axe = plt.subplots()
     plt.xlim([min(xs) - margin, max(xs) + margin])
     plt.ylim([min(ys) - margin, max(ys) + margin])
 
@@ -76,6 +77,7 @@ def draw_graph(coordinates: List[Tuple[float, float]],
     _ = [axe.add_patch(p) for p in points]
     _ = [axe.text(**t) for t in texts_drawing]
 
+    plt.axis('scaled')
     plt.show()
 
 
