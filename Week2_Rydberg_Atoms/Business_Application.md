@@ -3,7 +3,7 @@
 
 Here at QGrid we address the problem of getting information to its destination efficiently.  We provide computing solutions for dynamic routing protocals in largescale networks in the IT sector.
 
-# Sourcing Efficient IT Solutions
+# Sourcing Efficient Information Routing Solutions
 
 We live in a world of networks.  From global satelite internet systems to local mesh networks like Amazon Sidewalk.  The size of thes markets is(..insert here).
 We leverage state of the art classical and quantum methods to provide efficient routing for network providers to reduce bandwidth cost of routing, and increase latency.
@@ -22,7 +22,7 @@ Examples:
 
 # Our Team 
 
-**Matthew Bishara** 
+**Matthew Bishara** Has a background in working on Energy industry use case computing solutions.
 
 **Brandom Hiles** 
 
