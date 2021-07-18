@@ -88,8 +88,7 @@ companies providing surveillance products and services:
   This includes the allocation of facilities as police stations, hospitals, or post offices. 
   We propose a quantum-based solution to determine the optimal distribution of 
   facilities across a given region, city, or an entire country. As an example, we provide an implementation
-  of our algorithm to find the optimal distribution of medical facilities across the Netherlands.
-  [This file](../Week2_Rydberg_Atoms/Dutch medical facilities.py) includes the code used to perform this analysis.
+  of our algorithm to find the optimal distribution of medical facilities across the Netherlands. [this file](../Week2_Rydberg_Atoms/Dutch medical facilities.py) includes the code used to perform this analysis.
   Possible customers:
   - Ministero dei Trasporti Italiano
   - Municipality of Amsterdam
