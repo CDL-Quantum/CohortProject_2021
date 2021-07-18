@@ -105,33 +105,30 @@ Examples:
   - [Project Kuiper from Amazon](https://www.aboutamazon.com/news/company-news/amazon-receives-fcc-approval-for-project-kuiper-satellite-constellation)
 - Aid distribution
 
-[1] Butenko, S. 2003. Maximum Independent Set and related problems with applications http://ufdcimages.uflib.ufl.edu/UF/E0/00/10/11/00001/butenko_s.pdf
+[1] [Butenko, S. 2003. Maximum Independent Set and related problems with applications](http://ufdcimages.uflib.ufl.edu/UF/E0/00/10/11/00001/butenko_s.pdf)
 
-[2] Global Telecom Services Market (https://www.grandviewresearch.com/industry-analysis/global-telecom-services-market#:~:text=The%20global%20telecom%20services%20market%20size%20was%20valued,rate%20%28CAGR%29%20of%205.0%25%20from%202020%20to%202027)
+[2] [Global Telecom Services Market](https://www.grandviewresearch.com/industry-analysis/global-telecom-services-market#:~:text=The%20global%20telecom%20services%20market%20size%20was%20valued,rate%20%28CAGR%29%20of%205.0%25%20from%202020%20to%202027)
 
-[3] Global IoT Market (https://www.marketdataforecast.com/market-reports/internet-of-things-iot-market)
+[3] [Global IoT Market](https://www.marketdataforecast.com/market-reports/internet-of-things-iot-market)
 
-[4] 45 Fascinating IoT Statistics (https://dataprot.net/statistics/iot-statistics/)
+[4] [45 Fascinating IoT Statistics](https://dataprot.net/statistics/iot-statistics/)
 
-[5] Cloud Computing Market (https://www.marketsandmarkets.com/Market-Reports/cloud-computing-market-234.html#:~:text=%5B322%20Pages%20Report%5D%20The%20global%20cloud%20computing%20market,due%20to%20the%20recent%20COVID-19%20pandemic%20is%20imminent)
+[5] {Cloud Computing Market](https://www.marketsandmarkets.com/Market-Reports/cloud-computing-market-234.html#:~:text=%5B322%20Pages%20Report%5D%20The%20global%20cloud%20computing%20market,due%20to%20the%20recent%20COVID-19%20pandemic%20is%20imminent)
 
-[6] Big Data Market Size 
+[6] [Big Data Market Size](https://www.verifiedmarketresearch.com/product/global-big-data-market-size-and-forecast-to-2025/#:~:text=Big%20Data%20Market%20size%20was%20valued%20at%20USD,a%20CAGR%20of%2017.8%25%20from%202019%20to%202026) 
 
-[7] Satellite Communication Market
+[7] [Satellite Communication Market](https://www.grandviewresearch.com/industry-analysis/satellite-communication-market#:~:text=The%20global%20satellite%20communication%20market%20size%20was%20valued,rate%20%28CAGR%29%20of%209.2%25%20from%202020%20to%202027)
 
-[8] ECC Memory Market Valuation
+[8] [ECC Memory Market Valuation](https://www.globenewswire.com/news-release/2021/06/15/2247668/0/en/ECC-Memory-Market-Valuation-to-Reach-USD-13-08-Billion-by-2025-at-a-6-6-CAGR-Asserts-Market-Research-Future-MRFR.html)
 
-[9] 5G Transport Networks and Routing
+[9] [5G Transport Networks and Routing](https://voltanet.io/routing-in-5g-transport-networks/)
 
-[10] Integrating Routing in 5G Transport
+[10] [Integrating Routing in 5G Transport](https://www.lightwaveonline.com/5g-mobile/article/14036779/integrating-routing-in-5g-transport)
 
-[11] Farooq, M. 2020 RIoT: A Routing Protocol for the Internet of Things. The Computer Journal, Volume 63, Issue 6, June 2020, Pages 958–973. (https://academic.oup.com/comjnl/article/63/6/958/5808800)
+[11] [Farooq, M. 2020 RIoT: A Routing Protocol for the Internet of Things. The Computer Journal, Volume 63, Issue 6, June 2020, Pages 958–973](https://academic.oup.com/comjnl/article/63/6/958/5808800)
 
-[12] Trang,T. Routing protocols in Internet of Things. (trang-tran-routing-protocols-in-iot.pdf (aalto.fi)
+[12] [Trang,T. Routing protocols in Internet of Things](trang-tran-routing-protocols-in-iot.pdf aalto.fi)
 
-<img src="../Week2_Rydberg_Atoms/img/starlink.gif" alt="drawing" width="300"/>
-
-<img src="../Week2_Rydberg_Atoms/img/sat_routing.jpg" alt="drawing" width="300"/>
 
 # Our Team 
 
