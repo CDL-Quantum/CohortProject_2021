@@ -1,5 +1,5 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
-# Qamino Business Application
+# Business Application: Quantum Annealing and Protein Redundancy 
 
 ![Logo](./resources/logos/variant3.png)
 
