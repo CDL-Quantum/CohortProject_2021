@@ -154,7 +154,7 @@ Running the algorithm on a simulated classical annealing algorithm yields a lowe
 
 We have used a time-dependent Hamiltonian to reach the ground state. We have placed the coordinates into the quantum annealer, run for `100000 nshots`  and got the following solutions:
 
-|Table Representation of Graph | Visual Representation of Graph|
+|Gotham Solutions | Gotham Solutions Graph|
 | :--------------: | :---------: 
 | <table>   <thead>   <tr> <th>Solution</th>  <th>Frequency</th>  </tr>   </thead>   <tbody> <tr>  <td>100001010011</td>  <td>17686</td> </tr> <tr>  <td>010001010011</td>  <td>17443</td> </tr> <tr>  <td>101000010011</td>  <td>12414</td> </tr> <tr>  <td>011000010011</td>  <td>12403</td> </tr> <tr>  <td>000011010011</td>  <td>9648</td> </tr>  </tbody> </table> | <img src="./resources/quantum_gotham/quantum_gotham.gif" width="300">
 
