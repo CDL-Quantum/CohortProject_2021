@@ -36,7 +36,10 @@ The solution for the task 2 can be found [here](https://github.com/ziweiqiu/Coho
 1. The Gotham City problem is a problem of optimal resource allocation. Revenue from the towers is proportional to their covered area. That area forms from the number of towers (first term in Eq. (3) ) with the exception of the overlap areas (second term). Optimal tower configuration is determined by maximizing the utility function, which is equivalent to the energy minimization problem of the Rydberg chain. 
 
                                     
-2. There are multiple solutions to the problem
+2. There are multiple [solutions](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking_UDMIS_Algorithms.ipynb) to the problem
+![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.1.png)
+![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.2.png)
+![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.3.png)                                   
 
 3. If the problem is stated as in the document: “should Bruce pay for more towers to make sure that more of the City is covered” then the answer is yes, since there are uncovered areas, but it has nothing to do with economic considerations.
 If, however, the problem was formulated as “Is it economically beneficial for Bruce to put up more towers”, the answer is no. Economic benefit is decided by maximization of the utility function, which will increase if there is economic benefit. In the Rydberg chain formulation this translates to the possibility of further energy decrease: if adding another tower within the City limits helps decrease the energy of the corresponding Rydberg chain, it is beneficial to pay for an extra tower. 
