@@ -30,7 +30,7 @@ In task 1, we try to solve the UD-MIS problem classically via simulated annealin
 <br></br>
 The above figures show that the energy converges to the minimum value at about T = 0.1 Kevin.
 <br></br>
-Now we test some other annealing schedules, namely inverse, inverse-log, and exponential*inverse (see [here](./Task1.ipynb) for how they are defined). First let us plot and see how the annealing schedules look like.
+Now we test some other annealing schedules, namely inverse, inverse-log, and exponentialxinverse (see [here](./Task1.ipynb) for how they are defined). First let us plot and see how the annealing schedules look like.
 
 <figure class="image">
   <img width="500" src = "./figures/task1_schedule_log.png" />
