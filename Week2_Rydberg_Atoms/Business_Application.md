@@ -133,7 +133,4 @@ the COVID-hospitals, while the blue dots are the redundant ones:
 
 # Video
 
-**Link to Business Proposal Video: **
-
-
-![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
+[![CDL 2021 Cohort Project](./Graphics/video-thumbnail.png)](https://youtu.be/bOXlysVkqvY)
