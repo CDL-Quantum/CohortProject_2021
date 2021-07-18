@@ -85,7 +85,7 @@ if __name__ == "__main__":
     for name in coordinate_dict:
         draw_graph(coordinate_dict[name], radius=0.5)
 
-    for name, T in tqdm(list(product(coordinate_dict, T_list))):
+    for name, T in tqdm(list(product(coordinate_dict, T_list))[::-1]):
         graph = coordinate_dict[name]
         edges = get_edges(graph)
         start = time()
@@ -114,16 +114,16 @@ if __name__ == "__main__":
         if os.path.isfile(pkl_file):
             with open(pkl_file, 'rb') as of:
                 prev_data = pickle.load(of)
-        for p_k in prev_data:
-            if p_k in pkl_data:
-                for p_dt in prev_data[p_k]:
-                    if p_dt not in pkl_data[p_k]:
-                        pkl_data[p_k].update({
-                            p_dt: prev_data[p_k][p_dt]
-                        })
-            else:
-                pkl_data.update({
-                    p_k: prev_data[p_k]
-                })
+            for p_k in prev_data:
+                if p_k in pkl_data:
+                    for p_dt in prev_data[p_k]:
+                        if p_dt not in pkl_data[p_k]:
+                            pkl_data[p_k].update({
+                                p_dt: prev_data[p_k][p_dt]
+                            })
+                else:
+                    pkl_data.update({
+                        p_k: prev_data[p_k]
+                    })
         with open(pkl_file, 'wb') as of:
             pickle.dump(pkl_data, of)

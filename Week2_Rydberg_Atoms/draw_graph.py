@@ -1,4 +1,4 @@
-from typing import Tuple, List, Optional, TypedDict
+from typing import Tuple, List, Optional, TypedDict, Dict, Union
 
 import matplotlib.pyplot as plt
 
@@ -127,6 +127,17 @@ def draw_multi_graph(coordinates: List[Tuple[float, float]],
             ax.title.set_text(titles[i])
             ax.title.set_fontsize(24)
 
+    plt.show()
+
+
+def draw_distributions(dist: List[Tuple[str, Union[float, int]]],
+                       check_list: List[bool]):
+    color_list = ['r' if check_list[i] else 'k' for i, (key, _) in enumerate(dist)]
+    plt.figure(figsize=(12, 6))
+    plt.xlabel("bitstrings")
+    plt.ylabel("counts")
+    plt.bar([d[0] for d in dist], [d[1] for d in dist], width=0.5, color=color_list)
+    plt.xticks(rotation='vertical')
     plt.show()
 
 

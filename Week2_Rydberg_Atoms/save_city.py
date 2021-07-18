@@ -56,12 +56,12 @@ if __name__ == "__main__":
     #           texts=['' if t != 'Berlin' else t for t in germany_city_name])
 
     coordinate_dict = {
-        'Germany, Near Berlin > 1,000': {'graph': germany_city_coords, 'radius': 0.12},  # 24
-        'South Korea, Near Seoul > 100,000': {'graph': korea_city_coords, 'radius': 0.09},  # 21
-        'Canada, Near Toronto > 50,000': {'graph': canada_city_coords, 'radius': 0.14},  # 17
-        'Japan, Near Tokyo > 400,000': {'graph': japan_city_coords, 'radius': 0.12},  # 13
-        'United States, Near New York > 200,000': {'graph': us_city_coords, 'radius': 0.075},  # 10
-        'South Africa Near Cape Town > 1,000': {'graph': south_africa_city_coords, 'radius': 0.3}  # 6
+        'Germany, Near Berlin > 1,000': {'graph': germany_city_coords, 'radius': 0.12, 'names': germany_city_name},  # 24
+        'South Korea, Near Seoul > 100,000': {'graph': korea_city_coords, 'radius': 0.09, 'names': korea_city_name},  # 21
+        'Canada, Near Toronto > 50,000': {'graph': canada_city_coords, 'radius': 0.14, 'names': canada_city_name},  # 17
+        'Japan, Near Tokyo > 400,000': {'graph': japan_city_coords, 'radius': 0.12, 'names': japan_city_name},  # 13
+        'United States, Near New York > 200,000': {'graph': us_city_coords, 'radius': 0.075, 'names': us_city_name},  # 10
+        'South Africa Near Cape Town > 1,000': {'graph': south_africa_city_coords, 'radius': 0.3, 'names':south_africa_city_name}  # 6
     }
 
     with open(city_pkl_path, 'wb') as of:
