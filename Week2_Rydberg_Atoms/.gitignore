@@ -1,4 +1,5 @@
 instructions/instructions.*
 !instructions/instructions.tex
+.ipynb_checkpoints
 .DS_Store
 __pycache__
