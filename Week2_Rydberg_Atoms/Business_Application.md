@@ -67,7 +67,7 @@ Simply by adding non-optimzing location, we can provide stategy of next 10 new l
 
 
 
-# Distribution of medical facilities during the COVID-19 pandemic
+## Distribution of medical facilities during the COVID-19 pandemic
 Optimal distribution of medical facilities across a country is a problem that with given simplifications (e.g. uniform
 density of population) can be exactly mapped to a graph problem and solved by means of quantum annealing.
 For instance, given a set of cities where it is possible to build a hospital, the goal is to find the maximum
@@ -95,7 +95,7 @@ the COVID-hospitals, while the blue dots are the redundant ones:
 ![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/Graphics/NL_plot_solution.png)
 
 
-# Other applications
+## Other applications
 
 Besides marketing and trend research, at Quantum Strategy we offer quantum-based solutions to 
 a variety of optimization problems.
