@@ -232,10 +232,8 @@ active antenna, whereas a bit equal to 0 represent an unnecessary antenna.
 Thus, the most frequent bitstrings in the histogram correspond to the optimal solutions of the problem.
 There is clearly a degeneracy of solutions which appear equally frequent in the histogram above.
 Such solutions are shown in the figures below:
-### WRONG FIGURES: PLACE THOSE WITH RADIUS=0.5
 
-![Solution 0 Gotham](Graphics/Task3_plots/011000010011c.jpg)
-![Solution 1 Gotham](Graphics/Task3_plots/101000010011c.jpg)
+![Solution Gotham](../Week2_Rydberg_Atoms/img/t3_plot.png)
 
 By calculating the energy of these two solutions we can see that they are effectively degenerate,
 with a hamiltonian eigenvalue of -5.
@@ -265,6 +263,8 @@ We calculate the density of the above graphs and then we calculate the density o
 ![t34](../Week2_Rydberg_Atoms/img/t34.png)
 
 What we find is this: the solution graph has a density that is 27% more than that of the original 12 node graph. By adding another node, the density of the new graph is 18.5% more dense than the original 12 cell phone tower graph. Obviously having more cell towers will increase the cell reception. But if Bruce Wayne wants to be efficient with his money (1. That's how the rich stay rich 2. He needs to save up if he wants to fight the Joker, Riddler, ect) than he should not buy any more cell towers. There is also the constraint we had which was that the cell phone service of each tower should not overlap. Unless Bruce relaxes this condition, there is no way he can justify buying additional towers. 
+
+We did additional bonus work to test whether or not Bruce should buy extra towers, which can be found in this [pdf](../Week2_Rydberg_Atoms/Task3_extra_credit.pdf). (Specifically, we experimented with the results of adding an additional tower to the set of 12, and looked at if the number of nodes in the max independent set (5 was the solution for 12 towers) would change). This worked was created using Mathematica.  
 
 ## Business Applications
 For more details refer to the [Business Application found here](./Business_Application.md)
