@@ -41,6 +41,16 @@ The sampled state with lowest energy has an energy of -5.0
 
 * Comparing the classical and quantums.
 ### Task 3: Solving a real-world problem involving cell phone tower placement in Gotham City.
+Task 3 was all about applying our solutions to a real world problem. For the problem we are helping out our good friend Batman (aka Bruce Wayne). The city of Gotham is looking to put in new cell towers. Given a list of possible locations we need to figure out a way to place the cell towers such that their signal ranges do not overlap.
+
+As we see from the problem statement this can be mapped onto a UDMIS problem. That is if you look at each cell phone pole as a vertex in a graph G(V,E). The edges are repesented by the connection to the vertices
+and because we want to be sure that there is no overlap all the conditions of the UDMIS problem are satisfied.
+
+This task was solved in three differnt:
+The first being with the method outlined in task 1 which can be found [here](./Task_1.ipynb)
+The second was using simulated quantum annealing which can be found [here](./Task_1.ipynb)
+Finally using the Hamiltonian a quantum circuit was constructed usung cirq which can be found [here](./Task_1.ipynb)
+
 
 ## Further Challenges:
 ### Method Comparision Between Classical Simulated Annealing vs. Quantum Annealing in the UDMIS Problem
