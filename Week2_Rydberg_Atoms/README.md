@@ -49,8 +49,8 @@ The first being with the method outlined in task 1 which can be found [here](./T
 The second was using simulated quantum annealing which can be found [here](./Task_1.ipynb)
 Finally using the Hamiltonian a quantum circuit was constructed usung cirq which can be found [here](./Task_1.ipynb)
 ### 3.1 Tasks for problem 3
-**
-1. Explain why this is a problem that can be easily mapped to the UD-MIS problem.**
+
+**1. Explain why this is a problem that can be easily mapped to the UD-MIS problem.**
 
 **2. Solve Gotham City's problem.**  Using the methods provided in Tasks 1 and 2. **Are there multiples solutions?**
 
