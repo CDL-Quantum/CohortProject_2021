@@ -2,7 +2,7 @@
 ## Project 2: Optimization problems \& Rydberg atom arrays
 
 
-<img src="../Week2_Rydberg_Atoms/img/traveling_salesman.jpg" alt="drawing" width="500"/>
+<img src="../Week2_Rydberg_Atoms/img/traveling_salesman.jpg" alt="drawing" width="200"/>
 
 
 Optimization of networks and routing is strongly linked with the NP-hard Traveling Salesmen problem and other path finding algorithms.  Here we explore some classical techniques to tackle these problems, as well as quantum and hybrid solutions.  Path finding has general applications not only for routing, but for the trajectory of multi-state systems over time.
