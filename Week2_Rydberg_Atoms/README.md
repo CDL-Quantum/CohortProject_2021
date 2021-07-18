@@ -276,8 +276,8 @@ We did additional bonus work to test whether or not Bruce should buy extra tower
 
 By optimizing the 48 possible solution, we found two important results.
 
--	Among 192 possible optimum solution, we found that 55 new optimized location. This give increase of mobility by 28%.
--	Among 48 location, we found one location that actually increase the number of the cell tower.
+-	Among 192 possible optimum solution, we found that 55 optimized location with new location (red). This give increase of mobility by **28%**.
+-	Among 48 location, we found **one location** that actually increase the number of the cell tower.
 
 Interstingly, the location is at the Arkham Island where Asylum for the criminally insane is located at. Therefore, Bruce can safely ignore the location to maximize his profit. Our investigation can provide the new strategy for Bruce. He can set his tower in cheaper aread with same amount of coverage, and provide option for number of tower he can build.
 
