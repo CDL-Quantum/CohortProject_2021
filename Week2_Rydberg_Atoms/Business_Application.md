@@ -105,7 +105,7 @@ Examples:
 **Stephen Zhu**
 
 
-# Video proposal https://drive.google.com/file/d/11JoBU7RoAE0AE4w-NrozQRhVsAP9ZrRE/view?usp=sharing
+# Video proposal [Business Proposal](https://drive.google.com/file/d/11JoBU7RoAE0AE4w-NrozQRhVsAP9ZrRE/view?usp=sharing)
 
 
-**Please store your video externally to the repo, and provide a link e.g. to Google Drive**
+
