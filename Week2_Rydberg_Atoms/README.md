@@ -36,7 +36,7 @@ The most common sampled state had an energy of -2.65
 
 The sampled state with lowest energy has an energy of -5.0
 
-* Comparing the classical and quantum methods.
+* Comparing the classical and quantums.
 ### Task 3: Solving a real-world problem involving cell phone tower placement in Gotham City.
 
 ## Further Challenges:
