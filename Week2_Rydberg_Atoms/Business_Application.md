@@ -7,9 +7,10 @@
 
 Qamino specializes in finding non-redundant protein sequences using state of the art quantum technology. Non-redundant protein sequences are absolutely vital for drug manufacturers to effectively find and produce drugs and reduce their R&D cost. We are able to model the problem of distinguishing protein sequences as a unit-disk maximum independent set (UD-MIS) problem based on their similarity with other proteins. We can find a global minimum to the hamiltonian more effectively and efficiently than classical methods.
 
-![Cool Picture](./resources/BC1.png)
-
-Source [1]
+<p align="center">
+  <img width="650" height="300" src="./resources/BC1.png">
+    Source [1]
+</p>
 
 ## Preamble
 
