@@ -1,6 +1,6 @@
 import numpy as np
 import qutip as qt
-
+import src.local as lo
 
 class AbstractUDMIS():
     def __init__(self, u, graph):
@@ -77,6 +77,35 @@ class ClassicalUDMIS(AbstractUDMIS):
                 self.state[vertex] ^= 1
         return current_energy
 
+
+class MPOClassicalUDMIS(AbstractUDMIS):
+    def __init__(self, u, graph):
+        """
+        Initialize system with vertices randomly occupied.
+        """
+        super().__init__(u, graph)
+
+    def hamiltonian(self):
+        # We will define the local Hamiltonian as a sum of local Paulis
+        couplings = {}
+        for i in range(self.num_vertices):
+            couplings[(i, "Z")] = couplings.get((i, "Z"), 0) + 0.5
+            couplings[(i, "I")] = couplings.get((i, I), 0) - 0.5
+            for j in range(i + 1, self.num_vertices):
+                if self.edges[i, j]:
+                    # Add the two single site (Z_i / Z_j) terms
+                    couplings[(i, "Z")] = couplings.get((i, "Z"), 0) - self.u / 4
+                    couplings[(j, "Z")] = couplings.get((j, "Z"), 0) - self.u / 4
+
+                    # Add the edge term
+                    non_locality = j - i
+                    string = "Z" + "".join(["I" for _ in range(non_locality - 1)]) + "Z"
+                    couplings[(i, string)] = couplings.get((i, string), 0) + self.u / 4
+                    couplings[(i, "I")] = couplings.get((i, I), 0) - self.u / 4
+        return lo.LocalHamiltonian(couplings, self.num_vertices)
+
+    def ground_state(self):
+        return self.hamiltonian().ground_state()
 
 class QuantumUDMIS(AbstractUDMIS):
     def __init__(self, u, graph, omega_max, delta_0, delta_max):
