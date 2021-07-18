@@ -92,7 +92,7 @@ Note that the binary string of qubits are ordered such that the rightmost bit co
 
 <figure class="image">
   <img width="1200" src = "./figures/Task2_image_of_graph.png" />
-  <figcaption> <b>Fig.2.1</b>  Probability ot measuring the bitstrings in the computational basis after quantum annealing. The bitstring with the highest probability corresponds to the optimal answer.</figcaption>
+  <figcaption> <b>Fig.2.1</b>  The coordinates of vertices representing the UD-MIS problem. The edges are drawn only for two vertices that are within the unit distance to satisfy the constraint of the problem. </figcaption>
 </figure>
 
 ### [Task 3](./Task3.ipynb): A Real Problem
