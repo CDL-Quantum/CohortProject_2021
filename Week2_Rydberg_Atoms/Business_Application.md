@@ -45,6 +45,7 @@ To avoid such failure, our optimization algorithms take into consideration facto
 land prices, and many more, by mapping Starbucks locations onto a quantum system made by Rydberg atoms. 
 
 ![Solution _animate](../Week2_Rydberg_Atoms/img/animate.gif)
+
 *(Optimized Starbucks locations in Manhattan, NY)*
 
 In the figure above, circles represent the coverage of a Starbucks store. For demonstration purpose, we modify the potential to represent the consideration factors.
