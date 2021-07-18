@@ -61,7 +61,7 @@ We then started adding an extra tower at 200 random locations in addition to the
 
 ## Benchmarking
                                     
-[QAOA challenge.ipynb](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/QAOA%20challenge.ipynb) includes an QAOA solution to the UD-MIS problem.
+[QAOA challenge.ipynb](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/QAOA%20challenge.ipynb) includes an QAOA solution to the UD-MIS problem. We find that QAOA does not perform as well as quantum annealing.
 
                                     
 In [Benchmarking various algorithms.md](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking%20Various%20Algorithms.md), we discuss the effect of varying u parameter and number of evolution steps in both simulated classical and quantum annealing. Next, we compare their computation performances with an approximation algorithm based on subgraph-excluding subroutine and an exact solution based on backtracking efficient search. As seen in the plot below, simulated annealing achieves the best overall performance in terms of both time complexity and result accuracy.
@@ -77,7 +77,7 @@ Codes and more plots can be found in these two notebooks:
 ## Business Application
 Optimization using Rydberg atom is a resource allocation solution. Any business problem where economic benefit comes from scaling with the exception of overlap activities can be formulated and solved using Rydberg chains.
 
-Examples of business applications are shown [here](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Business_Application.md)
+Examples of business applications are shown [here](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Business_Application.md).
 
 ### References                                  
 [1] I.Halperin, M.Dixon, P.Bilokon, “Machine Learning in Finance: From Theory to Practice 1st ed. 2020 Edition” https://arxiv.org/abs/2006.11190
