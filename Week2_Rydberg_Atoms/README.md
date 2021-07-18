@@ -21,7 +21,7 @@ We were able to find the ground state energy, which converged at an energy of -3
 <img src="../Week2_Rydberg_Atoms/img/task_1_monte_carlo_graphs.png" alt="drawing" width="700" height="500"/>
 <br>
 and here are the associated tempature curves:
-<img src="../Week2_Rydberg_Atoms/img/task_1_temperature_curves.png" alt="drawing" width="500" />
+<img src="../Week2_Rydberg_Atoms/img/task_1_temperature_curves.png" alt="drawing" width="700"  height="600"/>
 
 
 ## 2. Simulating the same problem but using quantum annealing.
