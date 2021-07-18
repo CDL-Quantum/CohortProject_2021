@@ -250,7 +250,11 @@ The solutions correspond to the graphs shown above; the associated notebooks [py
 
 Q.3 Should Bruce pay for a few more cell phone towers to make sure that more ofGotham City has cell phone service?
 
-There are multiple ways to solve this problem. Here we have plotted a fully connected graph of 12 nodes.
+There are multiple ways to solve this problem. 
+
+## Appraoch 1:  Density of Graph
+
+Here we have plotted a fully connected graph of 12 nodes.
 
 ![t32](../Week2_Rydberg_Atoms/img/t32.png)
 
@@ -264,10 +268,20 @@ We calculate the density of the above graphs and then we calculate the density o
 
 What we find is this: the solution graph has a density that is 27% more than that of the original 12 node graph. By adding another node, the density of the new graph is 18.5% more dense than the original 12 cell phone tower graph. Obviously having more cell towers will increase the cell reception. But if Bruce Wayne wants to be efficient with his money (1. That's how the rich stay rich 2. He needs to save up if he wants to fight the Joker, Riddler, ect) than he should not buy any more cell towers. There is also the constraint we had which was that the cell phone service of each tower should not overlap. Unless Bruce relaxes this condition, there is no way he can justify buying additional towers. 
 
+## Appraoch 2: Extra Tower
 
 ![t35](../Week2_Rydberg_Atoms/img/extra_problem.png)
 
-We did additional bonus work to test whether or not Bruce should buy extra towers, which can be found in this [pdf](../Week2_Rydberg_Atoms/Task3_extra_credit.pdf). (Specifically, we experimented with the results of adding an additional tower to the set of 12, and looked at if the number of nodes in the max independent set (5 was the solution for 12 towers) would change). This worked was created using Mathematica.  
+We did additional bonus work to test whether or not Bruce should buy extra towers, which can be found in this [pdf](../Week2_Rydberg_Atoms/Task3_extra_credit.pdf), [Julia](../Week2_Rydberg_Atoms/Task2-3-ext_Saesun.ipynb) and visualzation is done by [Mathematica](../Week2_Rydberg_Atoms/Graphics.nb).
+
+By optimizing the 48 possible solution, we found two important results.
+
+-	Among 192 possible optimum solution, we found that 55 new optimized location. This give increase of mobility by 28%.
+-	Among 48 location, we found one location that actually increase the number of the cell tower.
+
+Interstingly, the location is at the Arkham Island where Asylum for the criminally insane is located at. Therefore, Bruce can safely ignore the location to maximize his profit. Our investigation can provide the new strategy for Bruce. He can set his tower in cheaper aread with same amount of coverage, and provide option for number of tower he can build.
+
+
 
 ## Business Applications
 For more details refer to the [Business Application found here](./Business_Application.md)
