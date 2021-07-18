@@ -35,12 +35,11 @@ We simulate the UD-MIS using classical simulated annealing for the following abs
 
 Next we simulate annealing to solve the ground state of the following Hamiltonian:
 
-$$
-H = -\sum_{i \in V} n_i + u \sum_{i,j \in E} n_i n_j
-$$
+![Hamiltonian Equation](https://latex.codecogs.com/gif.latex?H%20%3D%20-%5Csum_%7Bi%20%5Cin%20V%7D%20n_i%20&plus;%20u%20%5Csum_%7Bi%2Cj%20%5Cin%20E%7D%20n_i%20n_j)
 
 With the following annealing schedule: 
-$T_i * (T_f/T_i)^(t/N)$
+
+![Annealing Schedule](https://latex.codecogs.com/gif.latex?T_i%20*%20%28T_f/T_i%29%5E%7Bt/N%7D)
 
 We find a ground state energy level of `-3` after about 4000 iterations. We plot in the following corresponding occupations in green which yield the ground state:
 
@@ -58,7 +57,7 @@ We test 3 different annealing temperatures summarized by the following table (le
 
 | Table of Different Annealing Schedules | Plots of Each Annealing Schedule |
 | :--------------: | :---------: 
-| <table>   <thead>    <tr> <th>Annealing Schedule</th>  <th>Name</th>  </tr>    </thead>   <tbody>    <tr>  <td>T_i * (T_f/T_i)^(t/N)</td>  <td>exponential ~x (benchmark)</td> </tr>  <tr>  <td>T_i * (T_f/T_i)^(2*t/N)</td>  <td>exponential ~2x</td> </tr>  <tr>  <td>T_i * (T_f/T_i)^(4*t/N)</td>  <td>exponential ~4x</td> </tr>  </tbody> </table> | ![Visualization of Annealing Schedules](./resources/visualization-of-annealing-schedules.png) |
+| <table>   <thead>    <tr> <th>Annealing Schedule</th>  <th>Name</th>  </tr>    </thead>   <tbody>    <tr>  <td>![Annealing Schedule](https://latex.codecogs.com/gif.latex?T_i%20*%20%28T_f/T_i%29%5E%7Bt/N%7D)</td>  <td>exponential ~x (benchmark)</td> </tr>  <tr>  <td>![Annealing Schedule 2](https://latex.codecogs.com/gif.latex?T_i%20*%20%28T_f/T_i%29%5E%7B2t/N%7D)</td>  <td>exponential ~2x</td> </tr>  <tr>  <td>![Annealing Schedule 3](https://latex.codecogs.com/gif.latex?T_i%20*%20%28T_f/T_i%29%5E%7B4t/N%7D)</td>  <td>exponential ~4x</td> </tr>  </tbody> </table> | ![Visualization of Annealing Schedules](./resources/visualization-of-annealing-schedules.png) |
 
 To test the speed of convergence, we consider a "stable" solution one where the energy has not changed after 100 iterations. After simulating the annealing for each schedule, we plot the energy versus the number iterations in the following table:
 
@@ -68,9 +67,9 @@ We see clearly that the `exponential ~4x` schedule converges the fastest, and is
 
 | Annealing Schedule   | Iterations to Stable Solution | Time to Stable Solution (seconds) | 
 | :------------- | :----------: | :----------: |
-| exponential ~x (benchmark) | 3676 | 0.61 |
-| exponential ~2x  | 2007 | 0.34 |
-| exponential ~4x  | 1044 | 0.17 |
+| ![Annealing Schedule](https://latex.codecogs.com/gif.latex?T_i%20*%20%28T_f/T_i%29%5E%7Bt/N%7D) | 3676 | 0.61 |
+| ![Annealing Schedule 2](https://latex.codecogs.com/gif.latex?T_i%20*%20%28T_f/T_i%29%5E%7B2t/N%7D)  | 2007 | 0.34 |
+| ![Annealing Schedule 3](https://latex.codecogs.com/gif.latex?T_i%20*%20%28T_f/T_i%29%5E%7B4t/N%7D)  | 1044 | 0.17 |
 
 
 
@@ -107,7 +106,7 @@ Our goal is to optimize the cell locations of each tower to best cover Gotham Ci
 
 The requirements of the problem to maximize the tower coverage (use as many nodes as possible) and that the signal range not overlap (penalize node pairs with some condition) fits the UD-MIS formulation:
 
-$$ H = -\sum_{i \in V} n_i + u \sum_{i,j \in E} n_i n_j $$
+![Hamiltonian Equation](https://latex.codecogs.com/gif.latex?H%20%3D%20-%5Csum_%7Bi%20%5Cin%20V%7D%20n_i%20&plus;%20u%20%5Csum_%7Bi%2Cj%20%5Cin%20E%7D%20n_i%20n_j)
 
 ### Solve Gotham City's Problem
 
@@ -115,7 +114,7 @@ We solve this problem in four ways using a simulated classical annealing approac
 
 #### Simulated Classical Annealing
 
-Running the algorithm on a simulated classical annealing algorithm yields a lowest energy level of -5. We reached convergance after about 3700 iterations using the default cooling schedule $T = T_i * ((T_f/T_i) ** (t/N))$. We plot one solution in the following figure in green:
+Running the algorithm on a simulated classical annealing algorithm yields a lowest energy level of -5. We reached convergance after about 3700 iterations using the default cooling schedule ![Annealing Schedule](https://latex.codecogs.com/gif.latex?T_i%20*%20%28T_f/T_i%29%5E%7Bt/N%7D). We plot one solution in the following figure in green:
 
 ![Graph with Solution](./resources/gotham-nodes-with-solution.png)
 
@@ -150,10 +149,11 @@ The UD-MIS formulation where the range overlap is descretized does not give solu
 
 Thus a modified solution is found with a different solver (D-Wave) which uses the equation:
 
-$$ f(x) = \sum_{i} {Q_{i,i}}{x_i} + \sum_{i<j} {Q_{i,j}}{x_i}{x_j} $$
-As can be seen, in this solver the coefficient $Q_{i,j}$ can be used to indicate higher penalty for higher overlap.
+![Modified Hamiltonian](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%20%5Csum_%7Bi%7D%20%7BQ_%7Bi%2Ci%7D%7D%7Bx_i%7D%20&plus;%20%5Csum_%7Bi%3Cj%7D%20%7BQ_%7Bi%2Cj%7D%7D%7Bx_i%7D%7Bx_j%7D)
 
-We will use $Q_{i,j}=1/D_{ij}$ We also use the energy of each tower as -3
+As can be seen, in this solver the coefficient ![Q Expression](https://latex.codecogs.com/gif.latex?Q_%7Bi%2Cj%7D) can be used to indicate higher penalty for higher overlap.
+
+We will use ![Modified Distance](https://latex.codecogs.com/gif.latex?Q_%7Bi%2Cj%7D%3D1/D_%7Bij%7D) We also use the energy of each tower as -3
 
 Using this formula and the execution below, we get the following best energy solution of -9.513712 using D-Wave. Although, note that this solution was only found 1 time with 100 samples. We notice that even with the new formulation, only 5 towers are needed. 
 
