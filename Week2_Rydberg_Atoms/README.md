@@ -118,11 +118,11 @@ We will be comparing classical and quantum solutions to the UD-MIS problem. D-Wa
 
 Through experimentation we determined that these were the optimal parameters:
 
-`chain_strength = number_of_nodes / 5`
+`chain_strength = 1.7`
 
-`annealing_time = number_of_nodes * 7`
+`annealing_time = 30`
 
-`number_of_runs = number_of_nodes * 10`
+`number_of_runs = number_of_nodes * 20`
 
 Here are the results of our time to execute experiment:
 
