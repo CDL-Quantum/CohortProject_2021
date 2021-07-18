@@ -70,7 +70,7 @@ According to the market research reports, protein sequencing industry garnered $
 There are several conventional methods to select non-redundant representative subsets of protein sequence. Our technology has dramatically promoted sequencing technologies by offering low-cost and ultra-high-throughput sequencing. In addition to accuracy, computational complexity is an important issue. Next-generation sequencing technologies are able to demonstrate a good speedup derived from solving UD-MIS problem quantumly compared with conventional methods[[19]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3251834/). Although the below figure show promising results, however, we attempt to develop better model using quantum computer to improve the metrics.  
 
 <p align="center">
-  <img width="500" height="300" src="./resources/BC8.png">
+  <img width="500" height="300" src="./resources/dwaveadvantage_vs_classical_time.png">
 </p>
 
 
