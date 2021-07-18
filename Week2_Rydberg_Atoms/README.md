@@ -1,10 +1,9 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 2: Optimization problems \& Rydberg atom arrays
-Team 1: 
 
-This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
+Team 1
 
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week2_Rydberg_Atoms/instructions.pdf) to begin learning about your tasks for this week!
+[instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week2_Rydberg_Atoms/instructions.pdf) provides background for this project and challenges.
 
 ## Solutions ##
 ### Task 1
@@ -29,7 +28,9 @@ Generally, optimal schedule can be worked out by formulated the problem as a Q-l
 ![Annealing dynamics at 150 steps](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Convergence%20in%20150%20steps.png)
 
 ### Task 2
-The solution for the task 2 can be found [here](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/run_quantum_annealing_zq.ipynb)                                   
+This [jupyter notebook](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/run_quantum_annealing_zq.ipynb) contains the solution to Task 2. Here is an example of the simulated quantum annealing solution:
+                                    
+<img src="https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/benchmarking_imgs/qannealing_example.png" width="200" height="200">                             
                                     
 ### Task 3
 ![alt text](https://upload.wikimedia.org/wikipedia/en/c/c6/Bat-signal_1989_film.jpg)
@@ -39,7 +40,7 @@ Batman receiving the Bat Signal.
 1. The Gotham City problem is a problem of optimal resource allocation. Revenue from the towers is proportional to their covered area. That area forms from the number of towers (first term in Eq. (3) ) with the exception of the overlap areas (second term). Optimal tower configuration is determined by maximizing the utility function, which is equivalent to the energy minimization problem of the Rydberg chain. 
 
                                     
-2. There are multiple [solutions](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking_UDMIS_Algorithms.ipynb) to this problem. The exact algorithm produces 8 possible solutions: [(0, 1, 4, 6, 7), (0, 1, 4, 6, 8), (0, 1, 4, 6, 10), (0, 1, 4, 6, 11), (0, 1, 4, 9, 10), (0, 1, 4, 9, 11), (0, 3, 4, 9, 10), (0, 3, 4, 9, 11)]
+2. There are multiple [solutions](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking_UDMIS_Algorithms.ipynb) to this problem. The exact algorithm produces 8 possible solutions: [(0, 1, 4, 6, 7), (0, 1, 4, 6, 8), (0, 1, 4, 6, 10), (0, 1, 4, 6, 11), (0, 1, 4, 9, 10), (0, 1, 4, 9, 11), (0, 3, 4, 9, 10), (0, 3, 4, 9, 11)], where the index of the first city is 0. 
                                     
 ![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.1.png)
 
@@ -52,15 +53,26 @@ If, however, the problem was formulated as “Is it economically beneficial for 
 
 We solved the problem for economic benefit using a classical annealing algorithm. First, as an example, we look at the case when an extra tower is added at a distant location, as shown in figure below, so that we already know there is a clear benefit. Indeed, this resulted in energy decrease from -5 to -6.
 
+![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.4.png)
                                     
 Then, we started adding an extra tower at 200 random locations in addition to already existing ones (since that’s what Bruce is looking for). These locations are shown as blue dots in Figure (). We then reoptimized using the brief annealing schedule that we found in Task 1, and took energy measurements. 
 Only a subset of locations produced a lower energy: -6 instead of -5. They are shown in Figure (). All these suggestions fall outside the Gotham City limits in the water area, so unless the sea coverage is in play, adding an extra tower is not feasible. 
+                                
+![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.5.png)
+                                    
+![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.6.png)
 
 ## Benchmarking
+                                    
+[QAOA challenge.ipynb](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/QAOA%20challenge.ipynb) includes an QAOA solution to the UD-MIS problem.
 
-[QAOA](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/QAOA%20challenge.ipynb)
+                                    
+In [Benchmarking various algorithms.md](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking%20Various%20Algorithms.md), we compare computation performances across a number of classical and quantum algorithms for the UD-MIS (unit disk - maximal independent set) problem, include simulated annealing, an approximation algorithm based on subgraph-excluding subroutin, an exact solution based on backtracking efficient search and simulated quantum annealing. As seen in the plot below, simulated annealing achieves the best overall performance in terms of both time complexity and result accuracy.
+<img src="https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/benchmarking_imgs/Benchmarking.png" width="460" height="210">
 
-[Benchmarking various algorithm](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking%20Various%20Algorithms.md)
+Codes and more plots can be found in these two notebooks:
+[Benchmarking_UDMIS_Algorithms.ipynb](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking_UDMIS_Algorithms.ipynb),
+[run_quantum_annealing_zq.ipynb](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/run_quantum_annealing_zq.ipynb)
 
 
 
