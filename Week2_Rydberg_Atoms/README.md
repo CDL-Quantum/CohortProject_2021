@@ -35,6 +35,9 @@ We simulate the UD-MIS using classical simulated annealing for the following abs
 
 Next we simulate annealing to solve the ground state of the following Hamiltonian:
 
+![Hamiltonian Equation](https://latex.codecogs.com/gif.latex?H%20%3D%20-%5Csum_%7Bi%20%5Cin%20V%7D%20n_i%20&plus;%20u%20%5Csum_%7Bi%2Cj%20%5Cin%20E%7D%20n_i%20n_j)
+
+
 $$
 H = -\sum_{i \in V} n_i + u \sum_{i,j \in E} n_i n_j
 $$
