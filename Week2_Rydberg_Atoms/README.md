@@ -76,7 +76,9 @@ Finally using the Hamiltonian a quantum circuit was constructed usung cirq which
 As we see from the problem statement this can be mapped onto a UDMIS problem. That is if you look at each cell phone pole as a vertex in a graph G(V,E). The edges are repesented by the connection to the vertices
 and because we want to be sure that there is no overlap all the conditions of the UDMIS problem are satisfied.
 
-**2. Solve Gotham City's problem.**  Using the methods provided in Tasks 1 and 2. **Are there multiples solutions?**
+**2. Solve Gotham City's problem.**  Using the methods provided in Tasks 1 and 2. **Are there multiples solutions? Yes!** 
+
+<p align="center"><img src="../Week2_Rydberg_Atoms/img/mult_solutions.png" alt="drawing" width="700" height="500"/></p>
 
 Classical annealing:
 
