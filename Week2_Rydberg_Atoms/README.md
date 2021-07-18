@@ -1,9 +1,9 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 2: Optimization problems \& Rydberg atom arrays
 
-This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
+Optimization of networks and routing is strongly linked with the NP-hard Traveling Salesmen problem and other path finding algorithms.  Here we explore some classical techniques to tackle these problems, as well as quantum and hybrid solutions.  Path finding has general applications not only for routing, but for the trajectory of multi-state systems over time.
 
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week2_Rydberg_Atoms/instructions.pdf) to begin learning about your tasks for this week!
+Here we do an analysis of some of thiese methods framed as the UD-MIS problem, and benchmark different methodologies for tackling this class of problems
 
 **Please edit this markdown file directly with links to your completed tasks and challenges.**
 
