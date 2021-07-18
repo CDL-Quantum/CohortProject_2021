@@ -1,5 +1,5 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
-# QAmino Business Application
+# Qamino Business Application
 
 ![Logo](./resources/logos/variant3.png)
 
@@ -21,10 +21,10 @@ The application of UD-MIS for choosing non redundant representative sets of prot
   <a href="https://www.wikiwand.com/en/Protein_structure/">Source</a>
 </p>
 
-Protein structure is the three-dimensional arrangement of atoms in an amino acid-chain molecule. It enables us to understand ligand protein binding and develop binding affinity techniques [3]. Binding affinity is the strength of the binding interaction between a single biomolecule (e.g. protein or DNA) to its ligand/binding partner (e.g. drug or inhibitor) [4]. 
+Protein structure is the three-dimensional arrangement of atoms in an amino acid-chain molecule. It enables us to understand ligand protein binding and develop binding affinity techniques [[3]](https://portlandpress.com/biochemsoctrans/article-abstract/46/5/1367/67796/Protein-structure-and-computational-drug-discovery). Binding affinity is the strength of the binding interaction between a single biomolecule (e.g. protein or DNA) to its ligand/binding partner (e.g. drug or inhibitor) [[4]](https://www.malvernpanalytical.com/en/products/measurement-type/binding-affinity). 
 
 <p align="center">
-  <img width="870" height="250" src="./resources/BC3.png">
+  <img width="870" height="230" src="./resources/BC3.png">
   <a href="https://www.lecturio.com/magazine/biological-interaction/">Source</a>
  </p> 
 
@@ -32,11 +32,11 @@ Protein structure is the three-dimensional arrangement of atoms in an amino acid
 
 Are you thinking how to increase your market share? Do you want to make more effective medicine with less side effects to the human body? Here is our reliable solution:
 
-It becomes possible to firstly predict how and where a particular small molecule might interact with a protein and then to identify putative ligands for a specific protein site [6]. 
+It becomes possible to firstly predict how and where a particular small molecule might interact with a protein and then to identify putative ligands for a specific protein site [[6]](https://portlandpress.com/biochemsoctrans/article-abstract/46/5/1367/67796/Protein-structure-and-computational-drug-discovery?redirectedFrom=fulltext). 
 
 Targeting specific chosen protein to evaluate ligand affinity can be done by selecting and analyzing representative sets of protein structure. Target-oriented drug design aims to find a high affinity ligand that would bind the target protein in order to block its disease-associated function catalytic activity or interaction with other molecules.
 
-Structural knowledge on the exact interactions of drugs with their target protein has been applied mainly to predict potency changes of chemically modified lead compounds in protein structure-based drug design industry [7][8]. 
+Structural knowledge on the exact interactions of drugs with their target protein has been applied mainly to predict potency changes of chemically modified lead compounds in protein structure-based drug design industry [[7]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4236214/)[[8]](https://www.frontiersin.org/articles/10.3389/fphar.2018.00923/full).
 
 ## Drug Design Industry Overview
 
@@ -45,20 +45,20 @@ Structural knowledge on the exact interactions of drugs with their target protei
   <a href="https://physicsworld.com/a/intelligent-drug-discovery/">Source</a>
  </p> 
 
-In recent years, the drug discovery technologies industry has seen remarkable developments and rapid progress. Biology, chemistry and computation provide an amalgamation that is reflective of the industry’s future.  In this industry, growth in the protein sequencing market is mainly driven by factors such as increasing focus on target-based drug development by pharmaceutical and biotechnology companies, advancements in clinical mass spectrometry and analytical techniques, and increasing public-private financial support for proteomic research [10].
+In recent years, the drug discovery technologies industry has seen remarkable developments and rapid progress. Biology, chemistry and computation provide an amalgamation that is reflective of the industry’s future.  In this industry, growth in the protein sequencing market is mainly driven by factors such as increasing focus on target-based drug development by pharmaceutical and biotechnology companies, advancements in clinical mass spectrometry and analytical techniques, and increasing public-private financial support for proteomic research [[10]](https://www.marketsandmarkets.com/Market-Reports/protein-sequencing-market-121629357.html).
 
-Supply side of protein sequencing market is characterized by advancement in technology and technique. The demand side of this market is characterized by increasing use of proteomic research in drug design industry, patent expiry of major blockbuster drugs and increasing R&D expenditure of major pharmaceutical and biotechnology companies [10].
+Supply side of protein sequencing market is characterized by advancement in technology and technique. The demand side of this market is characterized by increasing use of proteomic research in drug design industry, patent expiry of major blockbuster drugs and increasing R&D expenditure of major pharmaceutical and biotechnology companies [[10]](https://www.marketsandmarkets.com/Market-Reports/protein-sequencing-market-121629357.html).
 
 <p align="center">
   <img width="500" height="300" src="./resources/BC5.gif">
   <a href="https://www.ddw-online.com/target-discovery-and-drug-design-extracting-the-value-from-genomics-1421-200008/">Source</a>
  </p> 
 
-The 10 largest pharmaceutical companies now pay nearly $80 billion a year to come up with fewer and fewer successful drugs. The reason is that drugs that are easiest to find and that safely and effectively treat common disorders have all been found; what is left is hunting for drugs that address problems with complex and elusive solutions and that would treat disorders affecting only tiny portions of the population and thus could return far less in revenue.  Because finding new, successful drugs has become so much harder, the average cost of bringing one to market nearly doubled between 2003 and 2013 to $2.6 billion. These same challenges have increased the lab-to-market timeline to 12 years, with 90 percent of drugs washing out in one of the phases of human trials. Many scientists in the field think that computer-aided techniques will ultimately improve drug development in several ways such as identifying more promising drug candidates and by speeding up the overall process. 
+The 10 largest pharmaceutical companies now pay nearly $80 billion a year to come up with fewer and fewer successful drugs. The reason is that drugs that are easiest to find and that safely and effectively treat common disorders have all been found; what is left is hunting for drugs that address problems with complex and elusive solutions and that would treat disorders affecting only tiny portions of the population and thus could return far less in revenue.  Because finding new, successful drugs has become so much harder, the average cost of bringing one to market nearly doubled between 2003 and 2013 to $2.6 billion. These same challenges have increased the lab-to-market timeline to 12 years, with 90 percent of drugs washing out in one of the phases of human trials. Many scientists in the field think that computer-aided techniques will ultimately improve drug development in several ways such as identifying more promising drug candidates and by speeding up the overall process [[12]](https://www.nature.com/articles/d41586-019-03846-0). 
 
-Several biotechnology and pharmaceutical companies are making sizeable investments on utilizing protein sequencing in drug development. That’s why Every one of the major pharmaceutical companies has announced a partnership with at least one of the AI-based drug-discovery start-ups. They raised more than $1 billion in funding in 2018, and as of last September, they were on track to raise $1.5 billion in 2019[12].
+Several biotechnology and pharmaceutical companies are making sizeable investments on utilizing protein sequencing in drug development. That’s why Every one of the major pharmaceutical companies has announced a partnership with at least one of the AI-based drug-discovery start-ups. They raised more than $1 billion in funding in 2018, and as of last September, they were on track to raise $1.5 billion in 2019 [[12]](https://www.nature.com/articles/d41586-019-03846-0).
 
-According to the market research reports, protein sequencing industry garnered $5.39 in 2018 and it is estimated to reach $9.92 billion by 2026, growing at a compound annual growth rate (CAGR) of 7.8% from 2019 to 2026 [13]. The global market for drug discovery should grow from $69.8 billion in 2020 to $110.4 billion by 2025 with a CAGR of 9.6% for the period of 2020-2025 [14]. Of all the regions, North America holds an enormous potential in the protein sequencing market. Several public and private organizations have committed large funds on proteomic research. Rising focus of players on structure-based drug design and the advent of technologically advanced analytical methods used in protein sequencing are bolstering the regional demand [15].
+According to the market research reports, protein sequencing industry garnered $5.39 in 2018 and it is estimated to reach $9.92 billion by 2026, growing at a compound annual growth rate (CAGR) of 7.8% from 2019 to 2026 [[13]](https://www.medgadget.com/2020/08/protein-sequencing-market-to-reach-9-92-billion-by-2026-allied-market-research.html). The global market for drug discovery should grow from $69.8 billion in 2020 to $110.4 billion by 2025 with a CAGR of 9.6% for the period of 2020-2025 [[14]](https://www.bccresearch.com/market-research/biotechnology/drug-discovery-technologies-report.html). Of all the regions, North America holds an enormous potential in the protein sequencing market. Several public and private organizations have committed large funds on proteomic research. Rising focus of players on structure-based drug design and the advent of technologically advanced analytical methods used in protein sequencing are bolstering the regional demand [[15]](https://www.biospace.com/article/protein-sequencing-market-increasing-focus-on-target-based-drug-development-activities-to-drive-the-market/).
 
 
 <p align="center">
@@ -80,7 +80,7 @@ Source [17]
 
 Computational Costs: Our technologies to provide non-redundant representative subsets of protein sequence reduces computational complexity which result in a lower computational cost. It can cut the time spent in discovery from 4.5 years to as little as one year, reduces discovery costs by 80 percent and results in one-fifth the number of synthesized compounds as is normally needed to produce a single winning drug.
 
-The “production” costs are accounted for [18]:
+The “production” costs are accounted for [[18]](https://www.genome.gov/about-genomics/fact-sheets/DNA-Sequencing-Costs-Data):
 - Labor, administration, management, utilities, reagents, and consumables
 - Sequencing instruments and other large equipment (amortized over three years)
 - Informatics activities directly related to sequence production (e.g., laboratory information management systems and initial data processing)
@@ -88,7 +88,7 @@ The “production” costs are accounted for [18]:
 
 ## Competitors
 
-Several top players are aimed at launching cutting-edge mass spectrometry platforms to gain unique competitive edge over their peers in the global protein sequencing market. Some prominent companies are also consolidating their overall presence by strengthening the sales of reagents and consumables. Top players operating in the market include Thermo Fisher Scientific, Charles River Laboratories, and Shimadzu Corporation [19].
+Several top players are aimed at launching cutting-edge mass spectrometry platforms to gain unique competitive edge over their peers in the global protein sequencing market. Some prominent companies are also consolidating their overall presence by strengthening the sales of reagents and consumables. Top players operating in the market include Thermo Fisher Scientific, Charles River Laboratories, and Shimadzu Corporation [[19]](https://www.biospace.com/article/protein-sequencing-market-increasing-focus-on-target-based-drug-development-activities-to-drive-the-market/).
 
 |Company name|Country|R&D budget|Profit-2020|
 |----|----|----|----|
@@ -98,7 +98,7 @@ Several top players are aimed at launching cutting-edge mass spectrometry platfo
 
 ## Mapping our competitive position
 
-Mapping the competitive position of the company helps us to identify what we are charging for and what our customers are paying for. It shows us the primary benefit that our product offers and also our rival’s core competitiveness [20]. Creating such a map involves three steps: 
+Mapping the competitive position of the company helps us to identify what we are charging for and what our customers are paying for. It shows us the primary benefit that our product offers and also our rival’s core competitiveness [[20]](http://fernfortuniversity.com/term-papers/swot/1433/164-thermo-fisher-scientific.php) . Creating such a map involves three steps: 
 
 1. **Define the market<br/>**
     People’s need is not only to cure their disease, but to get a medicine or drug which is more effective while it has fewer side effects. That is why people are very concern about their medications. To address their needs, pharmaceutical companies need to invest more to improve effectiveness and safety of their drugs. To this end, they require reliable and accurate solution from drug discovery industry. This is where protein sequencing technology companies could play vital role to tackle the problem. 
