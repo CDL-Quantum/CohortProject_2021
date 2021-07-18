@@ -29,7 +29,7 @@ Generally, optimal schedule can be worked out by formulated the problem as a Q-l
 ![Annealing dynamics at 150 steps](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Convergence%20in%20150%20steps.png)
 
 Task 2
-![The solution for the task 2 can be found here](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/run_quantum_annealing_zq.ipynb)                                   
+The solution for the task 2 can be found [here](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/run_quantum_annealing_zq.ipynb)                                   
                                     
 Task 3
 
@@ -48,9 +48,9 @@ Only a subset of locations produced a lower energy: -6 instead of -5. They are s
 
 ## Benchmarking
 
-![QAOA](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/QAOA%20challenge.ipynb)
+[QAOA](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/QAOA%20challenge.ipynb)
 
-![Benchmarking various algorithm](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking%20Various%20Algorithms.md)
+[Benchmarking various algorithm](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking%20Various%20Algorithms.md)
 
 
 
