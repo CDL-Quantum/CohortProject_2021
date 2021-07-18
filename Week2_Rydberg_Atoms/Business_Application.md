@@ -1,7 +1,7 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 
 
-<p align="center"><img src="../Week2_Rydberg_Atoms/img/logo.png" alt="drawing" width="400"/></p>
+<p align="center"><img src="../Week2_Rydberg_Atoms/img/logo.png" alt="drawing" width="300"/></p>
 
 # Q-Grid
 
