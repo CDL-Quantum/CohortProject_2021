@@ -121,9 +121,24 @@ Simulated quantum annealing presents a promising option for solving the UD-MIS p
 We will be comparing classical and quantum solutions to the UD-MIS problem. D-Wave will be our quantum hardware of choice for this task. Our experiment will consist of running UD-MIS algorithm until there is no change in energy, during our experiments we found that this occurs after roughly 300 steps. For our experiments we tried different size graphs of the UD-MIS formulation and also tracked the lowest energy found with both the classical UD-MIS solver and the D-Wave quantum annealer. We have used both D-Wave 2000Q and D-Wave Advantage in our comparison to classical annealing. With D-Wave 2000Q we were only able to go up to a maximum node size of 70, and in the case of D-Wave Advantage we have increased the number of nodes to 100.
 
 Through experimentation we determined that these were the optimal parameters:
+
 `chain_strength = number_of_nodes / 5`
+
 `annealing_time = number_of_nodes * 7`
+
 `number_of_runs = number_of_nodes * 10`
+
+Here are the results of our time to execute experiment:
+
+|D-Wave 2000Q vs Classical | D-Wave Advantage vs Classical|
+| :--------------: | :---------: 
+| <img src="./resources/dwave2000q_vs_classical_time.png" width="300"> | <img src="./resources/dwaveadvantage_vs_classical_time.png" width="300">
+
+Here are the results of our lowest energy experiment:
+|D-Wave 2000Q vs Classical | D-Wave Advantage vs Classical|
+| :--------------: | :---------: 
+| <img src="./resources/dwave2000q_vs_classical_energy.png" width="300"> | <img src="./resources/dwaveadvantage_vs_classical_energy.png" width="300">
+
 
 <a name="toc5"></a>
 ## Task 3
