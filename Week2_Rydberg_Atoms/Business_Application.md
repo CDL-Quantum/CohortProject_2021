@@ -20,23 +20,19 @@ The technology of RQCs lend themselves naturally to the development of "good eno
 problem starts with a set of possibly overlapping circles and asks for the largest subset of non-overlapping
 circles. As we explain below, this problem is related to questions of resource management,
 
-## Use Case 1 : 5G and connected cars
-
-### explanation of the problem and the associated solution
-
-### size of the market and potential customers
-TODO Felipe 
-
-## Use Case 2 : Resources Management
+## Use Case: Water distribution for the city of the future
 
 ### Introduction 
 
-Access to clean water is a human right, but water resources are becoming scarce, there's a global water crisis on the horizon [1,2]. People struggle to access the quantity and quality of water they need for drinking, cooking, bathing, handwashing and growing their food. We propose to optimize the position of water distribution locations in a city to maximize their use and manage an equal distribution in the population. 
+Access to clean water is a human right, but water resources are becoming scarce, there's a global water crisis on the horizon [1,2]. People struggle to access the quantity and quality of water they need for drinking, cooking, bathing, handwashing and growing their food. The challenge of water distribution is projected to grow exponentially as the world's population increases and population densities in cities become higher. To overcome this challenge, we need scalable optimization procedures for water distribution. We expect that these optimization procedures should involve quantum computers. We propose to optimize the position of water distribution locations in a city to maximize their use and manage an equal distribution in the population. 
 
 ### Explanation of the problem in the city of Tijuana and the associated solution
-A humanitarian crisis is coming to the city of Tijuana in Mexico [3]. Lack of water has become the norm in the city and is expected to worsen in the coming year . Right now, the response of the government has been to cut the supply of water in specific neighborhoods for days, weeks, or months [4]. The consequence is an unequal distribution of the water in the city, with the high-income population in control of the water and low-income neighborhoods without access to it.
 
-To solve this problem, we can detect possible distribution points with a given radius of range for a division of the water cuts more efficiently. On the map, we can see a toy example of these points. Each circle is a zone with water. 
+A humanitarian crisis is coming to the city of Tijuana in Mexico [3]. Lack of water has become the norm in the city and is expected to worsen in the coming years. Right now, the solution is to cut the supply of water in specific neighborhoods for days, weeks, or months. [4]. The consequence is an unequal distribution of the water in the city, with the high-income population in control of the water and low-income neighborhoods without access to it.
+
+We have therefore developed a proposal for a pilot study in Tijuana. Specifically, we have explained how a Rydberg Quantum Computer (RQC) could assist the Tijuana government in its water distribution challenge. We have demonstrated how an RQC could help deliver better solutions faster than any current method. We hope this will help the city of Tijuana to save lives and livelihoods and help their citizens not only to survive but to thrive.
+
+To solve this problem, we can detect possible distribution points with a given radius of range. This in itself represents a significant challenge with many intermediate steps. We are taking the big picture of the problem, seeking a solution to one of the many steps necessary to solve this water crisis. On the map, we can see a toy example of these points. Each circle is a zone with water. 
 
 ![Example Intersection](./img/Intersection_Example.png )
 Figure 1.  Each circle is a zone with water 
@@ -48,7 +44,7 @@ Figure 2. Maximum set of independent zones with water
 
 **Our solution is to find the maximum set of independent zones with water to enable equal water distribution. This is equivalent to finding the solution to the UD-MIS problem.** 
 
-This solution will create zones without water that make it inhabitable for the population but perfect for solar cells, wind turbines, and waste management. 
+This solution will create zones without water that make it inhabitable for the population but perfect for solar cells, wind turbines, and waste management. We believe that extreme problems require extreme solutions. 
 
 ![Example More points](./img/More_distribution_points.png)
 Figure 3. Problem with more distribution points is harder to solve. 
@@ -67,8 +63,7 @@ In our case, the "shifts" are the days that certain zones will have water cuts. 
 4. **Startups in climate:** Combine this solution to the portfolio of startups in the sector of climate. For example, one of the projects in  [Salo sciences](https://salo.ai/approach) is Landscape mapping, making visible the connections between climate, ecology and society. We can combine this mapping with our solution to find the natural points of disribution of water.  
 
 ## Pitch Video
-* 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
-TODO Victor and Yurval 
+https://www.youtube.com/watch?v=cWx5mAuG6dg   
 
 ### References
 
