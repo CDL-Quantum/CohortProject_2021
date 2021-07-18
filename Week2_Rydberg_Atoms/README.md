@@ -45,16 +45,33 @@ As we see from the problem statement this can be mapped onto a UDMIS problem. Th
 and because we want to be sure that there is no overlap all the conditions of the UDMIS problem are satisfied.
 
 This task was solved in three different ways:
-The first being with the method outlined in task 1 which can be found [here](./Task_1.ipynb)
-The second was using simulated quantum annealing which can be found [here](./Task_1.ipynb)
-Finally using the Hamiltonian a quantum circuit was constructed usung cirq which can be found [here](./Task_1.ipynb)
+The first being with the method outlined in task 1 which can be found [here](./Task_3.ipynb)
+The second was using simulated quantum annealing which can be found [here](./Task_3_Julia.ipynb)
+Finally using the Hamiltonian a quantum circuit was constructed usung cirq which can be found [here](./Task3_Cirq.ipynb)
 
 ### 3.1 Tasks for problem 3
 
 **1. Explain why this is a problem that can be easily mapped to the UD-MIS problem.**
+As we see from the problem statement this can be mapped onto a UDMIS problem. That is if you look at each cell phone pole as a vertex in a graph G(V,E). The edges are repesented by the connection to the vertices
+and because we want to be sure that there is no overlap all the conditions of the UDMIS problem are satisfied.
 
 **2. Solve Gotham City's problem.**  Using the methods provided in Tasks 1 and 2. **Are there multiples solutions?**
 
+Classical annealing:
+
+<p float="left">
+<img src="../Week2_Rydberg_Atoms/img/task3_classical.png" alt="drawing" width="300"/>
+<img src="../Week2_Rydberg_Atoms/img/task3_graph.png" alt="drawing" width="300"/>
+<p>
+    
+Quantum annealing:
+    
+QAOA:
+<p float="left">
+<img src="../Week2_Rydberg_Atoms/img/criq.png" alt="drawing" width="300"/>
+<img src="../Week2_Rydberg_Atoms/img/cirq_graph.png" alt="drawing" width="300"/>
+<p>
+    
 **3. Should Bruce pay for a few more cell phone towers to make sure that more of Gotham City has cell phone service?**
 
 
