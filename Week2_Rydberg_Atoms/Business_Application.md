@@ -61,7 +61,9 @@ Let's assume that Oklahoma does not have many Starbucks. Therefore, there are ma
 can use to open the business, but what's the place that generates the maximum profit?
 
 We answer this question by mapping onto our quantum system countless hypothetical locations where a store could be opened, 
-and we find the distribution which avoids overlapping with the coverage of existing franchises. 
+and we find the distribution which avoids overlapping with the coverage of existing franchises. See below for an animated plot of the solution:
+
+![Solution _animate](../Week2_Rydberg_Atoms/img/animate.gif)
 
 # Applications and Customers
 
