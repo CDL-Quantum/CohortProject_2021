@@ -1,6 +1,5 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 # Quantum Cohort Project Business Application
-## 
 
 ## Example of real-world problems:
 A number of industrial applications have been identified for optimization using the quantum approach outlined here. 
@@ -24,7 +23,10 @@ With the expansion of demanding service delivery on the scale and complexity, [r
 ## 4. Resource allocation for computations on cloud servers (AWS, IBM, NVIDIA)
 You have many users connecting to the resource. Resource is limited, so the problem is how to allocate it to users based on their requirements. Revenues scale proportionate to the number of clients. But performance drops if their use overlaps. Utility function is the same as Rydberg array energy with a minus sime, and therefore it’s the same problem.
 
-## Business model 
-Smart-charging appears to be a mandatory condition to allow electric mobility expansion. The high level of power required to load electrical vehicles, especially on fast load stations, require optimal modulation of this load demand in time. Further, the use of vehicle batteries as energy storage devices and power sources could significantly improve the flexibility of the electrical system, reduce high-peak of electricity demand and thus generate significant energy savings, while offering customers with various services providing earning money and saving costs opportunities. 
+## Step 3: Business model 
+Smart-charging appears to be a mandatory condition to allow smart and sustainable electric mobility expansion. The high level of power required to load electrical vehicles, especially on fast load stations, require optimal modulation of this load demand in time. Further, the use of vehicle batteries as energy storage devices and power sources could significantly improve the flexibility of the electrical system, reduce high-peak of electricity demand and thus generate significant energy savings, while offering customers with various services providing earning money and saving costs opportunities. Automotive manufactures such as Tesla, Renault and suppliers of electric vehicle will definitely be interested in this solution. 
+
+## Step 4: Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language
+https://youtu.be/1LPDq5vfoQ0 
 
 
