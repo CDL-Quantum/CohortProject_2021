@@ -14,16 +14,18 @@ Analysis of some of these methods can be framed as the Unit Disk Max Independent
 
 In this [Task 1 notebook](./Task_1.ipynb) we tried several different schedules as suggested in citation [1] to see their effect on the convergence of UD-MIS under simulated annealing. Below are two graphs, graph before simulated annealing is ran (Right) and graph after simulated annealing is ran (Left), note that the maximum independent sets are seen in yellow color.
 
-<img src="../Week2_Rydberg_Atoms/img/complete_udmis_graph_task_1.png" alt="drawing" width="200"/>
+![Pre simulation graph](../Week2_Rydberg_Atoms/img/task_1_OG_graph.png)
+![Post simulation graph](../Week2_Rydberg_Atoms/img/complete_udmis_graph_task_1.png)
 
 ### Annealing Schedule Type 1: Original
-We were able to find the ground state energy, which converged at an energy of -3. As we decreased the temperature, we found that the monte carlo algorithm converged faster as expected, and below is a graph demonstrating that result:
+Using the original annealing scheduled provided in the instructions, we are able to find the ground state at an energy around -3 after around 3600 iterations for final temperature of 0.1K. As we decreased the temperature, we found that the monte carlo algoirthm converged faster to the ground state (ie. around 0.000001K, it took around 1900), and all of this information can be extrapolated from the graphs below (top graph is energy vs. iterations, bottom graph is iterations vs. temperature).
 
-<img src="../Week2_Rydberg_Atoms/img/task_1_monte_carlo_graphs.png" alt="drawing" width="700" height="500"/>
+<img src="../Week2_Rydberg_Atoms/img/task_1_monte_carlo_graphs_og.png" alt="drawing" width="700" height="500"/>
 <br>
 and here are the associated tempature curves:
-<img src="../Week2_Rydberg_Atoms/img/task_1_temperature_curves.png" alt="drawing" width="700"  height="500"/>
+<img src="../Week2_Rydberg_Atoms/img/task_1_temperature_curves_og.png" alt="drawing" width="700"  height="500"/>
 
+Notice: That temperature graph forms a nice smooth 1/iteration relation
 ### Annealing Schedule Type 2: Inverse
 
 ### Annealing Schedule Type 3: Inverse Log
