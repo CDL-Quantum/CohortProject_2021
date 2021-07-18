@@ -67,7 +67,7 @@ Only a subset of locations produced a lower energy: -6 instead of -5. They are s
 [QAOA challenge.ipynb](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/QAOA%20challenge.ipynb) includes an QAOA solution to the UD-MIS problem.
 
                                     
-In [Benchmarking various algorithms.md](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking%20Various%20Algorithms.md), we compare computation performances across a number of classical and quantum algorithms for the UD-MIS (unit disk - maximal independent set) problem, include simulated annealing, an approximation algorithm based on subgraph-excluding subroutin, an exact solution based on backtracking efficient search and simulated quantum annealing. As seen in the plot below, simulated annealing achieves the best overall performance in terms of both time complexity and result accuracy.
+In [Benchmarking various algorithms.md](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking%20Various%20Algorithms.md), we discuss the effect of varying u parameter and number of evolution steps in both simulated classical and quantum annealing. Next, we compare their computation performances with an approximation algorithm based on subgraph-excluding subroutine and an exact solution based on backtracking efficient search. As seen in the plot below, simulated annealing achieves the best overall performance in terms of both time complexity and result accuracy.
 <img src="https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/benchmarking_imgs/Benchmarking.png" width="460" height="210">
 
 Codes and more plots can be found in these two notebooks:
