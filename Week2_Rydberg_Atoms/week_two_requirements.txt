@@ -4,4 +4,3 @@ jupyter
 matplotlib
 
 git+git://github.com/andrewdarmawan/tncontract.git@master
-git+git://github.com/timevans/locals-only.git@master    
