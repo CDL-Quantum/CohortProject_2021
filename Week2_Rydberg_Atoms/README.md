@@ -97,7 +97,7 @@ QAOA:
 <p>
     
 **3. Should Bruce pay for a few more cell phone towers to make sure that more of Gotham City has cell phone service?**
-
+This questions depends on a few factors.  Data on the size of the accessible customer base in each geographic location would be important.  It would become a question of how much benefit is there from the increase in customers in the extra nonoverlapping coverage area minus the costs of building and maintaining additional cell phone towers.
 
 ## 4. Further Challenges:
 
