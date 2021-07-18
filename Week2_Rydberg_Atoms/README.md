@@ -85,6 +85,7 @@ Classical annealing:
 <img src="../Week2_Rydberg_Atoms/img/task3_graph.png" alt="drawing" width="300"/>
 <p>
     
+
 Quantum annealing:
     
 QAOA:
@@ -130,7 +131,7 @@ In [this notebook](D-Wave_qpu_and_simulated_annealing) do a comparison of calcul
 <img src="../Week2_Rydberg_Atoms/img/Amazon_Air.png" alt="drawing" width="800"/>
 
 Application of the UD-MIS is strategically placing distribution centers.  This has an incredibly broad range of applications as you might need to distribute goods, services, or even information.  In the case of information distribution we discuss applications to routing protocals in the [business application section.](./Business_Application.md)
-For another alternative real world application of MIS we look at goods delivery for drones.  One customer is Amazon as they have already begun exploration in this direction with [Amazon Air Prime.](https://www.amazon.com/Amazon-Prime-Air/b?node=8037720011)  Although, it doesn't need to be drone delivery.  There is a large proliferation of grocery delivery services that needs to solving the logistics problem distributing their goods as quickly and efficiently as possible.
+For another alternative real world application of MIS we look at goods delivery for drones in [this notebook](./D-Wave_qpu_and_simulated_annealing.ipynb).  One customer is Amazon as they have already begun exploration in this direction with [Amazon Air Prime.](https://www.amazon.com/Amazon-Prime-Air/b?node=8037720011)  Although, it doesn't need to be drone delivery.  There is a large proliferation of grocery delivery services that needs to solving the logistics problem distributing their goods as quickly and efficiently as possible.
 
 
 <img src="../Week2_Rydberg_Atoms/img/blue_flower.png" alt="drawing" width="300"/>
