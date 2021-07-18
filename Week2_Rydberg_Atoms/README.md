@@ -54,11 +54,17 @@ In this [notebook](./D-Wave qpu and simulated annealing-checkpoint.ipynb) we com
 
 Here we do a comparison of calculation times for various classical, quantum, and hybrid optimizers.
 
+<img src="../Week2_Rydberg_Atoms/img/Amazon_Air.png" alt="drawing" width="300"/>
+
+### Other Real World Example UD-MIS can solve:
+
 <img src="../Week2_Rydberg_Atoms/img/calc_time_benchmark.png" alt="drawing" width="300"/>
 
-**Simulations**
-### Other Real World Example UD-MIS can solve:
-#### Drone Delivery
+Another realworld application of the UD-MIS is strategically placing distribution centers.  This has an incredibly broad range of applications as you might need to distribute goods, services, or even information.  In the case of information distribution we discuss applications to routing protocals in the [business application section.](./Business_Application.md)
+For another alternative real world application of MIS we look at goods delivery for drones.  The obvious customer is Amazon as they have already begun exploration in this direction with [Amazon Air Prime.](https://www.amazon.com/Amazon-Prime-Air/b?node=8037720011)  Although, it doesn't need to be drone delivery.  There is a large proliferation of grocery delivery services, and the human need for sustenance does not seem like a bubble market.
+
+
+
 ### Converting code to real quantum hardward
 
 ## Business Application
