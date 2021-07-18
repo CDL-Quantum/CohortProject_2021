@@ -67,6 +67,41 @@ Simply by adding non-optimzing location, we can provide stategy of next 10 new l
 
 
 
+# Distribution of medical facilities during the COVID-19 pandemic
+Optimal distribution of medical facilities across a country is a problem that with given simplifications (e.g. uniform
+density of population) can be exactly mapped to a graph problem and solved by means of quantum annealing.
+For instance, given a set of cities where it is possible to build a hospital, the goal is to find the maximum
+independent set of cities under the constraint that the cities are at least e.g. 50km apart.
+
+We assume that the Dutch government wishes to determine a distribution 
+hospital facilities ready to treat patients affected by COVID-19 across the country, given a set of cities. 
+
+![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/Graphics/NL_initial.png)
+
+The goal is to find the optimal distribution such that the coverage is ensured (easiness for
+people to reach the location) while minimizing costs (avoid that locations are too close to 
+each other, e.g. 50 km).
+
+We solve this problem by determining the maximum independent set of hospitals that optimally
+cover the region. The solution is shown in the following graph:
+
+
+The COVID-ready hospitals shall be placed in the 'red' locations, while the blue locations
+are redundant. This is also shown in the following map, in which the red cities correspond to 
+the COVID-hospitals, while the blue dots are the redundant ones:
+
+![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/Graphics/NL_plot_solution.png)
+
+
+
+
+
+
+
+
+
+
+
 # Applications and Customers
 
 Besides marketing and trend research, at Quantum Strategy we offer quantum-based solutions to 
@@ -100,31 +135,6 @@ companies providing surveillance products and services:
   Possible customers:
   - Ministero dei Trasporti Italiano
   - Municipality of Amsterdam
-
-## A technical deep-dive: distribution of Dutch medical facilities during the COVID-19 pandemic
-Optimal distribution of medical facilities across a country is a problem that with given simplifications (e.g. uniform
-density of population) can be exactly mapped to a graph problem and solved by means of quantum annealing.
-For instance, given a set of cities where it is possible to build a hospital, the goal is to find the maximum
-independent set of cities under the constraint that the cities are at least e.g. 50km apart.
-
-We assume that the Dutch government wishes to determine a distribution 
-hospital facilities ready to treat patients affected by COVID-19 across the country, given a set of cities. 
-
-![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/Graphics/NL_initial.png)
-
-The goal is to find the optimal distribution such that the coverage is ensured (easiness for
-people to reach the location) while minimizing costs (avoid that locations are too close to 
-each other, e.g. 50 km).
-
-We solve this problem by determining the maximum independent set of hospitals that optimally
-cover the region. The solution is shown in the following graph:
-![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/Graphics/NL_graph_solution.png)
-
-The COVID-ready hospitals shall be placed in the 'red' locations, while the blue locations
-are redundant. This is also shown in the following map, in which the red cities correspond to 
-the COVID-hospitals, while the blue dots are the redundant ones:
-
-![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/Graphics/NL_plot_solution.png)
 
 # Our Team
 
