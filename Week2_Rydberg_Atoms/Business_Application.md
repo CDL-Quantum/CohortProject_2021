@@ -1,4 +1,4 @@
-![CDL 2020 Cohort Project](../Week2_Rydberg_Atoms/334.jpg)
+![Drones](../Week2_Rydberg_Atoms/334.jpg)
 # Quantum Cohort Project Business Application
 
 For each weekly project, your team is asked to complete the below business application exercise.
