@@ -1,5 +1,58 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 
+Fig
+Given a set of objects for instance antennas, satellites, big data, etc, which objects should you choose such that you maximize objects coverage without any overlaps? This problem is an example of an optimization problem known as the maximum independent set problem. The objective is to maximize the number of nodes in a set, so that no edges are contained in the set. 
+The maximum independent set problem besides proving the computational complexity of many theoretical problems, serves also as a useful model for real world optimization problems in numerous fields, including information retrieval, signal transmission analysis, classification theory, economics, scheduling, big data, error correcting codes, wireless networks and biomedical engineering [1].
+
+There are several markets where UD-MIS problem can be applied:
+
+1.1	Telecommunications.
+The global telecom services market size was valued at USD 1,7 trillion in 2020 and is expected to expand at a compound annual growth rate (CAGR) of 5.4% from 2021 to 2028 [2]. 
+5G will enable a new set of applications and represents a significant departure from 4G. It is designed to accommodate low-bandwidth applications like sensors in Internet of Things (IoT) as well as high-bandwidth video streaming. The range for a 5G cell site will be around 500 m, much smaller than the 2 to 3 km in 4G. As a result, the cell sites will be much smaller physically and there will have to be many more of them. 
+UD-MIS problem can be used as an optimization tool for the efficient location of the growing 5G infrastructure as well for tackling optimization problems in telecommunications traffic big data such as storage organization and information retrieval. The global communication network has undoubtedly been one of the prominent areas for continued technological advancements over the past few decades.
+Clients: AT&T Inc., Verizon Communications Inc., Nippon Telegraph and Telephone Corporation (NTT), China Mobile Ltd., Deutsche Telekom AG, SoftBank Group Corp.
+
+1.2	Internet of Things
+The global Internet of Things (IoT) market size was at $ 330.6 billion in 2020 and is expected to reach $ 875.0 billion by 2025. The IoT is a network of objects connected to the Internet that collect and exchange data using built-in sensors [3]. In 2021, there are more than 10 billion active IoT devices. It’s estimated that the number of active IoT devices will surpass 25.4 billion in 2030. By 2025, there will be 152,200 IoT devices connecting to the internet per minute [4].
+The MIS application is discussed in p. 2.
+Clients: Accenture PLC, Alcatel-Lucent, Amazon, Atmel Corp.
+
+1.3	Cloud Computing
+The global cloud computing market size is expected to grow from USD 371.4 billion in 2020 to USD 832.1 billion by 2025 [5].
+UD-MIS problem can be used as an optimization tool for the efficient location of the growing data centers networks, but also in big data related optimization fields such as storage organization and information retrieval.
+Clients: Amazon, Capgemini, Accenture, Infosys, Tata
+
+1.4	Big Data
+Big Data Market size was valued at USD 37.69 Billion in 2018 and is projected to reach USD 139.58 Billion by 2026 [6]. 
+Big data sets arise in a broad spectrum of scientific, engineering and commercial applications. These include government and military systems, telecommunications, satellite industry, wireless networks, cloud computing, finance, medicine and biotechnology, astrophysics, geographical information systems, etc. 
+In many cases, a massive data set can be represented as a very large graph with certain attributes associated with its vertices and edges. Studying the structure of this graph is important for understanding the structural properties of the application it represents, as well as for improving storage organization and information retrieval where MIS can find application. 
+Clients: Microsoft Corporation, IBM Corporation, Oracle Corporation, SAP, Amazon Web Services, SAS Institute, Hewlett Packard Enterprise, Dell Technologies, Teradata, Splunk.
+
+1.5	Satellite Communications
+The global satellite communication market size was valued at USD 66.63 billion in 2020 and is expected to expand at a compound annual growth rate (CAGR) of 9.8% from 2021 to 2028 [7]. At present, several thousand satellites are orbiting the earth. These satellites transfer analog and digital signals carrying data in the form of voices, photographs, and videos to and from one or several locations across the globe.
+UD-MIS problem can be used as an optimization tool for the efficient location of the growing satellite network and in big data related optimization fields such as storage organization and information retrieval.
+Clients: SES S.A., Viasat, Inc., Intelsat, Telesat, EchoStar Corporation
+1.6. Error Correcting Memory
+ECC Memory market valuation to Reach USD 13.08 Billion by 2025 at a 6.6% CAGR [8].
+Error correcting codes lie in the heart of digital technology, making cell phones and modems possible. They are also of a special significance due to increasing importance of reliability issues in internet transmissions. We deal with binary codes of given length correcting certain types of errors. For such codes, a graph can be constructed, in which each vertex corresponds to a binary vector and the edges are built in the way, that each independent set corresponds to a correcting code. The problem of finding the largest code is thus reduced to the maximum independent set problem in the corresponding graph. Exact solutions and estimates for the size of largest error-correcting codes of larger length can be computed by designing and applying even more efficient, possibly parallel, algorithms for solving maximum independent set problem to optimality.
+Clients: Kingston Technology Corporation (US), Other World Computing (OWC) (US), Micron Technology Inc. (US), Samsung Electronics Co Ltd (South Korea)
+
+2.	Proposal.
+The proposal we make to the telecom and IoT network providers (total market size app. $US2 trillion) is as follows:
+The combination of high-density small cell sites and low-latency applications makes 5G different. One of the most critical differences is in how routing will expand and become integrated with the transport network. Since the networks will be Internet Protocol based and there are stringent requirements including latency, service providers expect to use routing extensively. Fundamentally, using routing for the service intelligence will be critical to ensure the performance of the various applications running on the 5G transport network. Routing must be flexible and very cost effective, which is driving a high interest in virtual routing [9]. A large mobile provider for instance has tens of thousands of cell sites and that number will increase dramatically with 5G deployments. This fact underscores the importance of routing to building robust services as the locations increase by another order of magnitude [10]. Operators recognize that they need to add routing. The Telecom Infra Project (TIP) members have defined a set of requirements for a Distributed Cell Site Gateway (DCSG) that pushes routing out to the cell site itself [10].
+In order to optimize routing on the cell sites MIS can be used for optimal placement of the cell sites themselves. In addition, a new routing protocol design might be needed to accommodate the challenges and opportunities that come with 5G.
+Internet of Things (IoT) is an example of low-power and lossy networks (LLNs). The routing protocol for LLNs is a standard routing framework for IoT. Typically, devices forming an LLN possess limited energy, scarce resources, operate in mostly harsh environment and in such a network radio transmission coverage is limited. Therefore, if an LLN is required to cover a relatively large geographical area, multi-hop communication is required. This results in a requirement that devices in a network should rely each other data packets. Hence, a routing protocol to discover and maintain multipoint-to-point (MP-to-P), point-to-point (P-to-P) and point-to-multipoint (P-to-MP) data forwarding paths is needed.
+An IoT communication architecture using industrial process control as an example use case is depicted in Fig 1.
+
+
+Fig. 1 IoT communication architecture [11].
+
+In the industrial process control, status of different devices is regularly reported to a central entity/gateway. Hence, there is a need for multipoint-to-point (MP-to-P) communication. Similarly, the central entity sends different control commands to different devices, thus there is a need for point-to-multipoint (P-to-MP) communication. Usually, in an industrial process control system, devices need to communicate with each other to successfully complete a task, hence there is a need for point-to-point (P-to-P) communication. Invariably, the central entity is connected to the Internet, and it stores important information in one of the servers reachable through the Internet or local network. Moreover, a user can interact with the central entity over the Internet to accomplish relevant tasks.
+It is known that control overhead of the routing protocol for LLNs (RPL) can result in the protocol’s poor performance in P-to-P and P-to-MP communications especially in its non-storing mode of operation. Moreover, LLNs have dense node deployments. Hence, lowering the control message overhead may not achieve a performance objective. There is a need for a multi-gateway communication architecture that partitions a network in different subnets, and each subnet is under the control of a different gateway. This also highlights the need for inter-gateway communication mechanism so that nodes in different subnets can communicate with each other [11].
+There are routing challenges related to node deployment: Unlike conventional networks where network topologies are determined in the beginning of network construction node deployment in Wireless Sensor Networks (WSNs) is either deterministic or randomized. In deterministic deployment, network topologies are decided in advance and remain nearly the same during their lifetime and thus data can be routed through pre-determined paths. However, in randomized deployment, sensor nodes are randomly scattered creating an unknown and unstable network topology. Data routing in this type of node deployment inherently possesses no prior knowledge of network topology and thus requires processing more routing data [12].
+Routing mechanism for networks of low power and limited computation capability devices are still under research and development. Some possible research directions are protocols exploiting the redundancy of devices and protocols that allow processing data near data resources to reduce traffic load [10]. UD-MIS could be used for finding the optimal configuration of subnets close to the data source or in the virtual core. Due to its storage organization, information retrieval and scheduling capabilities UD-MIS could construct optimal forwarding information paths, thus allowing for smooth integration of 5G and IoT. The exact potential of implementing UD-MIS in the routing protocol design itself needs to be further researched.
+
+Fig. 2 IoT Routing Protocol Optimization close to the data source or in the virtual core.
 
 <p align="center"><img src="../Week2_Rydberg_Atoms/img/logo.png" alt="drawing" width="300"/></p>
 
@@ -48,10 +101,10 @@ Examples:
 
 **Silvia Tzenkova**
 
-**Stephen Zhu** 
+**Stephen Zhu**
 
-# Video proposal
 
-## Post and link to google drive or other service
+# Video proposal https://drive.google.com/file/d/11JoBU7RoAE0AE4w-NrozQRhVsAP9ZrRE/view?usp=sharing
+
 
 **Please store your video externally to the repo, and provide a link e.g. to Google Drive**
