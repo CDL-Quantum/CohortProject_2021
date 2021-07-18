@@ -82,9 +82,12 @@ In [this notebook](D-Wave_qpu_and_simulated_annealing) do a comparison of calcul
 <img src="../Week2_Rydberg_Atoms/img/Amazon_Air.png" alt="drawing" width="800"/>
 
 Application of the UD-MIS is strategically placing distribution centers.  This has an incredibly broad range of applications as you might need to distribute goods, services, or even information.  In the case of information distribution we discuss applications to routing protocals in the [business application section.](./Business_Application.md)
-For another alternative real world application of MIS we look at goods delivery for drones.  The obvious customer is Amazon as they have already begun exploration in this direction with [Amazon Air Prime.](https://www.amazon.com/Amazon-Prime-Air/b?node=8037720011)  Although, it doesn't need to be drone delivery.  There is a large proliferation of grocery delivery services, and the human need for sustenance does not seem like a bubble market.
+For another alternative real world application of MIS we look at goods delivery for drones.  One customer is Amazon as they have already begun exploration in this direction with [Amazon Air Prime.](https://www.amazon.com/Amazon-Prime-Air/b?node=8037720011)  Although, it doesn't need to be drone delivery.  There is a large proliferation of grocery delivery services that needs to solving the logistics problem distributing their goods as quickly and efficiently as possible.
 
-Another new mysterious player on the market of "Societal Progress", [Blue Flower Inc,](https://batman.fandom.com/wiki/League_of_Shadows) is promising to bring the "5G Revolution" to Gotham with their new microwave communications device technology.  Optimal placing of their hardware is important for maximizing delivery of their "Services" to the customer population.  
+
+<img src="../Week2_Rydberg_Atoms/img/blue_flow.png" alt="drawing" width="500"/>
+
+Another new mysterious player on the market of "Societal Progress", [Blue Flower Inc,](https://batman.fandom.com/wiki/League_of_Shadows) is promising to bring the "5G Revolution" to Gotham with their new microwave communications device technology.  These transmitters require being placed near water mains to meet cooling constraints.  Optimal placing of their hardware is an important problem in maximizing delivery of their "Services" to their customer population. 
 
 ## Business Application
 
