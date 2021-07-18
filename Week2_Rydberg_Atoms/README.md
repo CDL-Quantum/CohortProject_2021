@@ -28,7 +28,7 @@ We constructed an arbitrary N vertex graph, Hamiltonion for our system based off
 
 <p float="left">
 
-<img src="../Week2_Rydberg_Atoms/img/common.png" alt="drawing" width="300"/><img src="../Week2_Rydberg_Atoms/img/best.png" alt="drawing" width="300"/>
+<img src="../Week2_Rydberg_Atoms/img/common.png" alt="drawing" width="300"/>                       <img src="../Week2_Rydberg_Atoms/img/best.png" alt="drawing" width="300"/>
 </p>
 
 
