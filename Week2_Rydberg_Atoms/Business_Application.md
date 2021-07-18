@@ -14,7 +14,7 @@ Our solutions based on MIS algorithms provide for shorter routing paths reducing
 
 <img src="../Week2_Rydberg_Atoms/img/starlink.gif" alt="drawing" width="300"/>
 
-<img src="../Week2_Rydberg_Atoms/img/sat_routing.png" alt="drawing" width="300"/>
+<img src="../Week2_Rydberg_Atoms/img/sat_routing.jpg" alt="drawing" width="300"/>
 
 ## Additional Applications
 
