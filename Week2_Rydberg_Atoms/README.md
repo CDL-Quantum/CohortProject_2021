@@ -24,11 +24,11 @@ We were able to find the ground state energy, which converged at an energy of -3
 and here are the associated tempature curves:
 <img src="../Week2_Rydberg_Atoms/img/task_1_temperature_curves.png" alt="drawing" width="700"  height="500"/>
 
-### Annealing Schedule 2: Inverse
+### Annealing Schedule Type 2: Inverse
 
-### Annealing Schedule 3: Inverse Log
+### Annealing Schedule Type 3: Inverse Log
 
-### Annealing Schedule 4: Exponential
+### Annealing Schedule Type 4: Exponential
 
 ## 2. Simulating the same problem but using quantum annealing.
 
