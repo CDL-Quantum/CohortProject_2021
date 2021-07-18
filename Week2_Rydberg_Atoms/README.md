@@ -7,7 +7,7 @@
 
 Optimization of networks and routing is strongly linked with the NP-hard **Traveling Salesmen** problem and other path finding algorithms.  Here we explore some classical techniques to tackle these problems, as well as quantum and hybrid solutions.  Path finding has general applications not only for routing, but for the trajectory of multi-state systems over time.
 
-Here we do an analysis of some of thiese methods framed as the UD-MIS problem, and benchmark different methodologies for tackling this class of problems
+Analysis of some of these methods can be framed as the Unit Disk Max Independent Set problem (UD-MIS).  In this project we study the UD-MIS and benchmark different methodologies for tackling this class of problems
 
 
 ## 1. Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
