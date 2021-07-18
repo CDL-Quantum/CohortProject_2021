@@ -30,6 +30,8 @@ Expanding from the mainstream communciation network providers.  There is also ad
 
 Examples: 
 - Mesh Networks
+  - Amazon SideWalk
+  - Apple's Find My Network
 - Satelite Networks
   - [Starlink](https://www.starlink.com/)
   - [Project Kuiper from Amazon](https://www.aboutamazon.com/news/company-news/amazon-receives-fcc-approval-for-project-kuiper-satellite-constellation)
