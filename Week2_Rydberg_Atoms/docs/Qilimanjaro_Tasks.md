@@ -63,4 +63,8 @@ In order to do this task we update the graph with our new coordinates, run the s
 
 ![task3_2](./images/task3_q_ann.png)
 
+We observe that there are multiple solutions with the activation of 5 towers.
+
 ### 3.3 Should Bruce pay for a few more cell phones towers to make sure that more of Gotham City has cell phone service?
+
+Using the current location of the possible towers it won't be possible to purchase an extra tower without causing some signal overlap. The only way for Bruce to provide some extra signal would be to change the location of the towers to a more efficient map.
