@@ -18,7 +18,7 @@ In this task we tried several different schedules as suggested in citation [1] t
 
 We were able to find the ground state energy, which converged at an energy of -3. As we decreased the temperature, we found that the monte carlo algorithm converged faster as expected, and below is a graph demonstrating that result:
 
-![Various Monte Carlo Simulations](../Week2_Rydberg_Atoms/img/Task_1_sepearate_monte_carlo_graphs.png)
+![Various Monte Carlo Simulations](../Week2_Rydberg_Atoms/img/Task_1_seperate_monte_carlo_graphs.png)
 
 ### Task 2: Simulating the same problem but using quantum annealing.
 We constructed an arbitrary N vertex graph, Hamiltonion for our system based off UD-MIS problem and ran a simulated annealing algorithm on it to find the lowest energy state.   In the [Task 2 Notebook](./Task_2.ipynb) in Julia we tested variations of the annealing time division and shots to sample solution to the problem and graph them.  We then compared the "best" or lowest energy returned with the most commonly returned solution.  Here only nodes within a unit distance are drawn with connected edges since they are the only ones that can overlap.
