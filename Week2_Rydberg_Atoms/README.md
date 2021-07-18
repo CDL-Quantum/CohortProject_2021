@@ -17,6 +17,8 @@ In this [Task 1 notebook](./Task_1.ipynb) we tried several different schedules a
 ![Pre simulation graph](../Week2_Rydberg_Atoms/img/task_1_OG_graph.png)
 ![Post simulation graph](../Week2_Rydberg_Atoms/img/complete_udmis_graph_task_1.png)
 
+We use 4 different annealing schedules:
+
 ### Annealing Schedule Type 1: Original
 Using the original annealing scheduled provided in the instructions, we are able to find the ground state at an energy around -3 after around 3600 iterations for final temperature of 0.1K. As we decreased the temperature, we found that the monte carlo algoirthm converged faster to the ground state (ie. around 0.000001K, it took around 1900), and all of this information can be extrapolated from the graphs below (top graph is energy vs. iterations, bottom graph is iterations vs. temperature).
 
@@ -27,10 +29,21 @@ and here are the associated tempature curves:
 
 Notice: That temperature graph forms a nice smooth 1/iteration relation
 ### Annealing Schedule Type 2: Inverse
+<img src="../Week2_Rydberg_Atoms/img/task_1_monte_carlo_graphs_inverse.png" alt="drawing" width="700" height="500" />
+<img src="../Week2_Rydberg_Atoms/img/task_1_temperature_curves_inverse.png" alt="drawing" width="700" height="500" />
 
+Note: This annealing schedule is superior to the original annealing schedule in terms of convergence relative to iterations (with the exception of Tf=10^-6)
 ### Annealing Schedule Type 3: Inverse Log
+<img src="../Week2_Rydberg_Atoms/img/task_1_monte_carlo_graphs_inverse_log.png" alt="drawing" width="700" height="500" />
+<img src="../Week2_Rydberg_Atoms/img/task_1_temperature_curves_inverse_log.png" alt="drawing" width="700" height="500" />
+
+Note: For this annealing schedule, given the same number of iterations, it was NOT able to converge a solution and hence was a bad choice.
 
 ### Annealing Schedule Type 4: Exponential
+<img src="../Week2_Rydberg_Atoms/img/task_1_monte_carlo_graphs_exp.png" alt="drawing" width="700" height="500" />
+<img src="../Week2_Rydberg_Atoms/img/task_1_temperature_curves_exp.png" alt="drawing" width="700" height="500" />
+
+Note: These results were similiar to the inverse case.
 
 ## 2. Simulating the same problem but using quantum annealing.
 
