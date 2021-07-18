@@ -315,3 +315,5 @@ For more details refer to the [Business Application found here](./Business_Appli
 - [Notebook for task 3 (Gotham city) + running on real quantum hardware](./Task%203,%20Additional-Challenges%20b,%20d-ak.ipynb)
 - [Notebook for extra challenge: Finding the least redundant set of protein sequences](./real_world_protein_redundancy.ipynb)
 - [Notebook used for benchmarking](./benchmarking_quantum.ipynb)
+- [Business Application](./Business_Application.md)
+- [Business Pitch Video](https://youtu.be/r1FGXYElofU)
