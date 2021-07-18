@@ -113,7 +113,9 @@ Mapping the competitive position of the company helps us to identify what we are
 |Sygnature Discovery|UK|NA|$ 68.9 million|
 
 
-## Video Submission (click to view)
+## Presentation 
+## The value proposition of our innovation to the potential customers:
+[Click to view](https://drive.google.com/file/d/1hfTtel2v4LhboNnb1T615xISGz0q-tJT/view)
 
 [![Video](./resources/video-cover.png)](https://drive.google.com/file/d/1hfTtel2v4LhboNnb1T615xISGz0q-tJT/view?usp=sharing "Link Title")
 
