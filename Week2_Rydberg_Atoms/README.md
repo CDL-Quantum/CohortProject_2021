@@ -214,35 +214,6 @@ We also show the graph representation of the problem in D-Wave (left), the actua
 | :--------------: | :---------: |  :---------: |
 | ![D-Wave Graph](./resources/image%20b41.png) | ![D-Wave Embeddings](./resources/image%20b42.png) | ![D-Wave Energy Samples](.//resources/image%20b43.png) |
 
-#### New Formulation of the Problem
-
-The UD-MIS formulation where the range overlap is descretized does not give solutions that would indicate the optimum solution since a large overlap and a small overlap both have the same penalty (higher energy of +1).
-
-Thus a modified solution is found with a different solver (D-Wave) which uses the equation:
-
-![Modified Hamiltonian](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%20%5Csum_%7Bi%7D%20%7BQ_%7Bi%2Ci%7D%7D%7Bx_i%7D%20&plus;%20%5Csum_%7Bi%3Cj%7D%20%7BQ_%7Bi%2Cj%7D%7D%7Bx_i%7D%7Bx_j%7D)
-
-As can be seen, in this solver the coefficient ![Q Expression](https://latex.codecogs.com/gif.latex?Q_%7Bi%2Cj%7D) can be used to indicate higher penalty for higher overlap.
-
-We will use ![Modified Distance](https://latex.codecogs.com/gif.latex?Q_%7Bi%2Cj%7D%3D1/D_%7Bij%7D) We also use the energy of each tower as -3
-
-Using this formula and the execution below, we get the following best energy solution of -9.513712 using D-Wave. Although, note that this solution was only found 1 time with 100 samples. We notice that even with the new formulation, only 5 towers are needed. 
-
-With this formulation, we get a sampling given by the following two figures. On the left, we show the sampling from D-Wave and on the right, a similar GIF as above displaying the various solutions.
-
-| D-Wave Solutions for Modified Gotham Problem | GIF of the Multiple Best Solutions Found |
-| :--------------: | :---------: |
-| <img src="./resources/image%20b32.png" alt="drawing" width="340"/>| ![Gotham Dwave energy solutions](./resources/Gotham%20Solutions%202.gif) |
-
-From D-Wave, we also show the resulting qubit graph (left), embedding (center) and energy spectrum (right):
-
-| Graph Representation on D-Wave | Embeddings on D-Wave | Energies Sampled on D-Wave |
-| :---------: | :---------: |  :---------: |
-| ![D-Wave Embeddings](./resources/task3-2-dwave-graph.png) | ![D-Wave Embeddings](./resources/task3-2-dwave-embeddings.png) | ![D-Wave Energy Samples](./resources/task3-2-dwave-energy-spectrum.png) |
-
-
-
-
 ### Should Bruce pay for a few more cell towers?
 
 It depends on if Bruce can tolerate some overlap between the tower signals. 
@@ -261,7 +232,7 @@ However, if Bruce allowed some overlap, he should purchase an extra tower (total
 
 ||||
 | :--------------: | :---------: | :---------: |
-|![Solution 1](./resources/graph3-1.png) | ![Solution 2](./resources/graph3-2.png) | ![Solution 3](./resources/graph3-1.png)|
+|![Solution 1](./resources/graph3-1.png) | ![Solution 2](./resources/graph3-2.png) | ![Solution 3](./resources/graph3-3.png)|
 
 We could push this even further. If Bruce would consider even a little bit more overlap, he could purchase a second tower (for a total of 7 towers!). We justify this descision because we found 2 ground state solutions with 7 nodes! With this combination, he will be covering the most amount of Gotham - the only tradeoff is that he will have to make peace with a little bit more overlap. We display the solutions below: 
 
@@ -269,7 +240,37 @@ We could push this even further. If Bruce would consider even a little bit more 
 | :--------------: | :---------: |
 |![Solution 1](./resources/graph-7nodes-1.png) | ![Solution 2](./resources/graph-7nodes-2.png) |
 
-A further analysis will then to be to calculate how much overlap is in each solution (for 6 nodes or 7 nodes) and to choose the solution that minimizes the overlap. 
+The only issue with the above solution is that it does not determine which of the solutions for either the 6 towers of 7 towers solution is the best. This is due to the formulation of the UD-MIS problem which basically "bins" the amount of overlap between two nodes into a simple "yes" or "no". For example, two nodes that are 0.99 units away will be penalized in the same way as two nodes that are 0.1 units away. To solve this after the fact is trivial, we simply need to compute the amount of overlap between the solution set and determine the solution that minimizes it. However, we try to re-formulate the problem in such a way where that comes out naturally.
+
+#### New Formulation of the Problem
+
+**Note: Unfortunately, we could not find the proper solution with our new formulation. We warn the reader that this solution is not correct - but it is still fun nonetheless!**
+
+The UD-MIS formulation where the range overlap is descretized does not give solutions that would indicate the optimum solution since a large overlap and a small overlap both have the same penalty (higher energy of +1).
+
+Thus a modified solution is found with a different solver (D-Wave) which uses the equation:
+
+![Modified Hamiltonian](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%20%5Csum_%7Bi%7D%20%7BQ_%7Bi%2Ci%7D%7D%7Bx_i%7D%20&plus;%20%5Csum_%7Bi%3Cj%7D%20%7BQ_%7Bi%2Cj%7D%7D%7Bx_i%7D%7Bx_j%7D)
+
+Where ![Modified Distance](https://latex.codecogs.com/gif.latex?Q_%7Bi%2Cj%7D%3D1/D_%7Bij%7D) and the energy of each tower is -3.
+
+As can be seen, in this solver the coefficient ![Q Expression](https://latex.codecogs.com/gif.latex?Q_%7Bi%2Cj%7D) can be used to indicate higher penalty for higher overlap.
+
+Using this formula and the execution below, we get the following best energy solution of -9.513712 using D-Wave. Although, note that this solution was only found 1 time with 100 samples. We notice that even with the new formulation, only 5 towers are needed. 
+
+With this formulation, we get a sampling given by the following two figures. On the left, we show the sampling from D-Wave and on the right, a similar GIF as above displaying the various solutions.
+
+| D-Wave Solutions for Modified Gotham Problem | GIF of the Multiple Best Solutions Found |
+| :--------------: | :---------: |
+| <img src="./resources/image%20b32.png" alt="drawing" width="340"/>| ![Gotham Dwave energy solutions](./resources/Gotham%20Solutions%202.gif) |
+
+From D-Wave, we also show the resulting qubit graph (left), embedding (center) and energy spectrum (right):
+
+| Graph Representation on D-Wave | Embeddings on D-Wave | Energies Sampled on D-Wave |
+| :---------: | :---------: |  :---------: |
+| ![D-Wave Embeddings](./resources/task3-2-dwave-graph.png) | ![D-Wave Embeddings](./resources/task3-2-dwave-embeddings.png) | ![D-Wave Energy Samples](./resources/task3-2-dwave-energy-spectrum.png) |
+
+**Again, we note that the above section is not correct. We believe that we simply have the wrong hamiltonian for the problem.**
 
 <a name="toc6"></a>
 
