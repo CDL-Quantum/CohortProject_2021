@@ -23,6 +23,7 @@ This project will guide you through using the foundations of quantum hardware to
 
 <a name="toc1"></a>
 
+## Task 1
 ## Simulating the UD-MIS Problem Using Classical Simulated Annealing
 
 Please view [this notebook](./Task1.ipynb) for the code used to solve this section. 
@@ -75,6 +76,7 @@ We see clearly that the `exponential ~4x` schedule converges the fastest, and is
 
 <a name="toc3"></a>
 
+## Task 2
 ## Simulating the Same Problem but Using Quantum Annealing
 
 Please view [this notebook](./Task%202.ipynb) for the code used to solve this section. 
@@ -121,7 +123,7 @@ Simulated quantum annealing presents a promising option for solving the UD-MIS p
 
 
 <a name="toc5"></a>
-
+## Task 3
 ## Gotham City Problem
 
 This work was generated from [this notebook](./Task%203,%20Additional-Challenges%20b,%20d-ak.ipynb). The goal was to map the UD-MIS problem to a real world problem relating to finding optimal placements for cell phone towers in the city of Gotham.
@@ -270,15 +272,15 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 ## Tasks include:
 * (DONE) Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
 * (DONE) Finding a better annealing schedule to arrive at solutions to the problem quicker.
-* (QUEUE) Simulating the same problem but using quantum annealing.
+* (DONE) Simulating the same problem but using quantum annealing.
 * (QUEUE) Comparing the classical and quantum methods.
-* (QUEUE) Solving a real-world problem involving cell phone tower placement in Gotham City.
+* (DONE) Solving a real-world problem involving cell phone tower placement in Gotham City.
 
 ## Further Challenges:
 * (QUEUE) Comparing the methods used to solve the UD-MIS problem.
-* Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
+* (DONE) Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
 * (QUEUE) Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
-* Solving the problem with real quantum hardware.
+* (DONE) Solving the problem with real quantum hardware.
 
 ## Business Application
 For each week, your team is asked to complete a Business Application. Questions you will be asked are:
