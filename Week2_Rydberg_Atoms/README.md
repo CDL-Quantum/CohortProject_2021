@@ -6,13 +6,13 @@ Team 8 Alex Khan, Theo Cleland, Henry Makhanov, Ehsan Torabizadeh, Darshit Mehta
 In this project we are going to demonstrate the amazing power of classical and quantum annealers. Throughout a series of tasks we will demonstrate the existing annealing techniques to solving a variety of problems. Crucially, we will show a solution to the unit-disk maximum independent set (UD-MIS) problem using both a simulated classical annealer with different schedules and a quantum annealer. For the third task, we have also solved the Gotham City Cell Tower problem using both classical annealer and quantum annealer. Finally, we have mapped a real-world protein redundancy problem to the UD-MIS problem and found very promising results that will serve as a founding block for our business proposal. 
 
 ### Table of Contents  
-1. [Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing](#toc1)
-2. [Finding a better annealing schedule to arrive at solutions to the problem quicker](#toc2)
-3. [Simulating the same problem but using quantum annealing](#toc3)
-4. [Comparing the classical and quantum methods](#toc4)
-5. [Solving a real-world problem involving cell phone tower placement in Gotham City](#toc5)
+1. [Simulating the UD-MIS Problem Using Classical Simulated Annealing](#toc1)
+2. [Finding a Better Annealing Schedule](#toc2)
+3. [Simulating the Same Problem but Using Quantum Annealing](#toc3)
+4. [Comparing the Classical and Quantum Methods](#toc4)
+5. [Gotham City Problem](#toc5)
 6. [Comparing the methods used to solve the UD-MIS problem](#toc6)
-7. [Real world problem: Finding non-redundant protein sequences](#toc7)
+7. [Finding Non-Redundant Protein Sequences](#toc7)
 
 ### Resources
 - [Notebook for task 1](./Task1.ipynb)
@@ -24,7 +24,7 @@ This project will guide you through using the foundations of quantum hardware to
 
 <a name="toc1"></a>
 
-## Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing
+## Simulating the UD-MIS Problem Using Classical Simulated Annealing
 
 Please view [this notebook](./Task1.ipynb) for the code used to solve this section. 
 
@@ -51,7 +51,7 @@ We find a ground state energy level of `-3` after about 4000 iterations. We plot
 
 <a name="toc2"></a>
 
-## Finding a better annealing schedule to arrive at solutions to the problem quicker
+## Finding a Better Annealing Schedule
 
 Please view [this notebook](./Task1.ipynb) for the code used to solve this section. 
 
@@ -77,14 +77,14 @@ We see clearly that the `exponential ~4x` schedule converges the fastest, and is
 
 <a name="toc3"></a>
 
-## Simulating the same problem but using quantum annealing
+## Simulating the Same Problem but Using Quantum Annealing
 
 <span style="color:red">TODO</span>
 
 
 <a name="toc4"></a>
 
-## Comparing the classical and quantum methods
+## Comparing the Classical and Quantum Methods
 
 <span style="color:red">TODO</span>
 
@@ -92,7 +92,7 @@ We see clearly that the `exponential ~4x` schedule converges the fastest, and is
 
 <a name="toc5"></a>
 
-## Solving a real-world problem involving cell phone tower placement in Gotham City
+## Gotham City Problem
 
 This work was generated from [this notebook](./Task%203,%20Additional-Challenges%20b,%20d-ak.ipynb). The goal was to map the UD-MIS problem to a real world problem relating to finding optimal placements for cell phone towers in the city of Gotham.
 
@@ -112,7 +112,7 @@ $$ H = -\sum_{i \in V} n_i + u \sum_{i,j \in E} n_i n_j $$
 
 ### Solve Gotham City's Problem
 
-We solve this problem in three ways using a simulated classical annealing approach, a real quantum algorithm as well as on real quantum hardware using D-Wave.
+We solve this problem in four ways using a simulated classical annealing approach, a quantum annealing algorithm as well as on real quantum hardware using Microsoft QIO and D-Wave.
 
 #### Simulated Classical Annealing
 
@@ -194,7 +194,7 @@ Even when modifying the problem, we did not find a better solution with more tow
 
 <a name="toc7"></a>
 
-## Real world problem: Finding non-redundant protein sequences
+## Finding Non-Redundant Protein Sequences
 
 We take this project one step further by solidifying our business case with a real application: finding the least redundant set of proteins from real data! See [this notebook](./real_world_protein_redundancy.ipynb) for the implementation. 
 
