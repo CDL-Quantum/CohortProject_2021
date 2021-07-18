@@ -26,17 +26,16 @@ and here are the associated tempature curves:
 ## 2. Simulating the same problem but using quantum annealing.
 We constructed an arbitrary N vertex graph, Hamiltonion for our system based off UD-MIS problem and ran a simulated annealing algorithm on it to find the lowest energy state.   In the [Task 2 Notebook](./Task_2.ipynb) in Julia we tested variations of the annealing time division and shots to sample solution to the problem and graph them.  We then compared the "best" or lowest energy returned with the most commonly returned solution.  Here only nodes within a unit distance are drawn with connected edges since they are the only ones that can overlap.
 
-<p float="left">
 
-<img src="../Week2_Rydberg_Atoms/img/common.png" alt="drawing" width="300"/>                       <img src="../Week2_Rydberg_Atoms/img/best.png" alt="drawing" width="300"/>
-</p>
+<img src="../Week2_Rydberg_Atoms/img/common.png" alt="drawing" width="350"/>                     
+
 
 
 
 The most common sampled state had an energy of -2.65
 
 
-
+  <img src="../Week2_Rydberg_Atoms/img/best.png" alt="drawing" width="350"/>
 
 The sampled state with lowest energy has an energy of -5.0
 
@@ -66,14 +65,18 @@ Finally using the Hamiltonian a quantum circuit was constructed usung cirq which
 In this [notebook](./D-Wave_qpu_and_simulated_annealing.ipynb) we compare the runtime of simulated annealing(D-Wave neal package),D-Wave QPU, and D-Wave hybrid solver on the UDMIS problem.
 
 
-
+<p float="left">
 <img src="../Week2_Rydberg_Atoms/img/D-Wave-Simulated-Annealing.png" alt="drawing" width="300"/>
+<img src="../Week2_Rydberg_Atoms/img/D-Wave_QPU.png" alt="drawing" width="300"/>  
+<img src="../Week2_Rydberg_Atoms/img/D-Wave-Hybrid-Solver.png" alt="drawing" width="300"/> 
+<p>  
+
 
 *Bonus Task: Solving MIS on Quantum Hardware.
 
-<img src="../Week2_Rydberg_Atoms/img/D-Wave_QPU.png" alt="drawing" width="300"/>
 
-<img src="../Week2_Rydberg_Atoms/img/D-Wave-Hybrid-Solver.png" alt="drawing" width="300"/>
+
+
 
 ### 4.2 Benchmarking Criteria: Classical vs. Quantum Optimization for UD-MIS
 **Theoretical Background**: During this simulation, we utilized the simulated annealing algorithm to solve the UD-MIS problem. Let n<sub>i</sub> be the gap between the largest and second largest eigenvalues of a stochastic matrix M<sub>i</sub>. Let n = min<sub>i</sub>n<sub>i</sub>. The run time of this alogirthm is proportional to O(1/n) [1][2], and it has been shown that quantum computers can increase the efficieincy by O(1/√n) [1][3]
