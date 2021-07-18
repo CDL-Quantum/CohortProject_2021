@@ -33,7 +33,7 @@ We present here two use cases to demonstrate how our algorithms can deliver valu
 
 ![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/img/sv.png) 
 
-*(some Starbucks locations in Manhattan, NY 1cm = 500m)*
+*(some Starbucks locations in Manhattan, NY 1cm = 200m)*
 
 
 Many of us have seen the rise and fall of Subway restaurants as they expand their franchises aggressively.
