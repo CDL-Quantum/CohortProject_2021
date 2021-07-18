@@ -33,6 +33,7 @@ The solution for the task 2 can be found [here](https://github.com/ziweiqiu/Coho
                                     
 ### Task 3
 ![alt text](https://upload.wikimedia.org/wikipedia/en/c/c6/Bat-signal_1989_film.jpg)
+
 Batman receiving the Bat Signal.
                                     
 1. The Gotham City problem is a problem of optimal resource allocation. Revenue from the towers is proportional to their covered area. That area forms from the number of towers (first term in Eq. (3) ) with the exception of the overlap areas (second term). Optimal tower configuration is determined by maximizing the utility function, which is equivalent to the energy minimization problem of the Rydberg chain. 
