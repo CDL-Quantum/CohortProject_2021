@@ -14,7 +14,7 @@ In this project we are going to demonstrate the amazing power of classical and q
 6. [Finding Non-Redundant Protein Sequences](#toc6)
 
 ### Resources
-- [Notebook for task 1](./Task1.ipynb)
+- [Notebook for task 1](./Task%201.ipynb)
 - [Notebook for task 2](./Task%202.ipynb)
 - [Notebook for task 3 (Gotham city) + running on real quantum hardware](./Task%203,%20Additional-Challenges%20b,%20d-ak.ipynb)
 - [Notebook for extra challenge: Finding the least redundant set of protein sequences](./real_world_protein_redundancy.ipynb)
@@ -26,7 +26,7 @@ This project will guide you through using the foundations of quantum hardware to
 ## Task 1
 ## Simulating the UD-MIS Problem Using Classical Simulated Annealing
 
-Please view [this notebook](./Task1.ipynb) for the code used to solve this section. 
+Please view [this notebook](./Task%201.ipynb) for the code used to solve this section. 
 
 We simulate the UD-MIS using classical simulated annealing for the following abstract graph (truncated to 2 decimal places). Edges are created whenever a node is closer than a unit distance of 1.
 
@@ -52,7 +52,7 @@ We find a ground state energy level of `-3` after about 4000 iterations. We plot
 
 ## Finding a Better Annealing Schedule
 
-Please view [this notebook](./Task1.ipynb) for the code used to solve this section. 
+Please view [this notebook](./Task%201.ipynb) for the code used to solve this section. 
 
 We test 3 different annealing temperatures summarized by the following table (left) and visualized in the follow plot (right): 
 
