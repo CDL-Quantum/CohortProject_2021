@@ -50,6 +50,6 @@ The sampled state with lowest energy has an energy of -5.0
 For more details refer to the [Business Application found here](./Business_Application.md)
 
 ### References:
-1. https://quantumalgorithmzoo.org/#MathJax-Element-271-Frame
-2. Sanguthevar Rajasekaran, On the Convergence Time of Simulated Annealing.
+1. [Quantum Algorithm Zoo](https://quantumalgorithmzoo.org/#MathJax-Element-271-Frame)
+2. [Sanguthevar Rajasekaran, On the Convergence Time of Simulated Annealing](http://repository.upenn.edu/cgi/viewcontent.cgi?article=1373&context=cis_reports)
 3. [Mario Szegedy, Spectra of Quantized Walks and a δϵ√ rule.](https://arxiv.org/abs/quant-ph/0401053)
