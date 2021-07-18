@@ -5,7 +5,6 @@ Optimization of networks and routing is strongly linked with the NP-hard Traveli
 
 Here we do an analysis of some of thiese methods framed as the UD-MIS problem, and benchmark different methodologies for tackling this class of problems
 
-**Please edit this markdown file directly with links to your completed tasks and challenges.**
 
 ## Solutions
 
