@@ -5,7 +5,7 @@
 
 ## Introduction to Qamino
 
-Qamino specializes in finding non-redundant protein sequences using state of the art quantum technology. Non-redundant protein sequences are absolutely vital for drug manufacturers to effectively find and produce drugs and reduce their R&D cost. We are able to model the problem of distinguishing protein sequences as a unit-disk maximum independent set (UD-MIS) problem based on their similarity with other proteins. We can find a global minimum to the hamiltonian more effectively and efficiently than classical methods.
+Qamino specializes in finding non-redundant protein sequences using quantum technology. Non-redundant protein sequences are absolutely vital for drug manufacturers to effectively find and produce drugs and reduce their R&D cost. We are able to model the problem of distinguishing protein sequences as a unit-disk maximum independent set (UD-MIS) problem based on their similarity with other proteins. We can find a global minimum to the hamiltonian more effectively and efficiently than classical methods.
 
 <p align="center">
   <img width="500" height="300" src="./resources/BC1.png">
@@ -30,11 +30,8 @@ Protein structure is the three-dimensional arrangement of atoms in an amino acid
 
 ## Business Pitch
 
-Are you thinking how to increase your market share? Do you want to make more effective medicine with less side effects to the human body? Here is our reliable solution:
-
-It becomes possible to firstly predict how and where a particular small molecule might interact with a protein and then to identify putative ligands for a specific protein site [[6]](https://portlandpress.com/biochemsoctrans/article-abstract/46/5/1367/67796/Protein-structure-and-computational-drug-discovery?redirectedFrom=fulltext). 
-
 Targeting specific chosen protein to evaluate ligand affinity can be done by selecting and analyzing representative sets of protein structure. Target-oriented drug design aims to find a high affinity ligand that would bind the target protein in order to block its disease-associated function catalytic activity or interaction with other molecules.
+It becomes possible to firstly predict how and where a particular small molecule might interact with a protein and then to identify putative ligands for a specific protein site [[6]](https://portlandpress.com/biochemsoctrans/article-abstract/46/5/1367/67796/Protein-structure-and-computational-drug-discovery?redirectedFrom=fulltext). 
 
 Structural knowledge on the exact interactions of drugs with their target protein has been applied mainly to predict potency changes of chemically modified lead compounds in protein structure-based drug design industry [[7]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4236214/)[[8]](https://www.frontiersin.org/articles/10.3389/fphar.2018.00923/full).
 
