@@ -26,7 +26,7 @@ We were able to find the ground state energy, which converged at an energy of -3
 We constructed an arbitrary N vertex graph, Hamiltonion for our system based off UD-MIS problem and ran a simulated annealing algorithm on it to find the lowest energy state.   In the [Task 2 Notebook](./Task_2.ipynb) in Julia we tested variations of the annealing time division and shots to sample solution to the problem and graph them.  We then compared the "best" or lowest energy returned with the most commonly returned solution.  Here only nodes within a unit distance are drawn with connected edges since they are the only ones that can overlap.
 
 
-<img src="../Week2_Rydberg_Atoms/img/common.png" alt="drawing" width="300"/>
+<img src="../Week2_Rydberg_Atoms/img/calc_time_benchmark.png" alt="drawing" width="300"/>
 
 
 The most common sampled state had an energy of -2.65
