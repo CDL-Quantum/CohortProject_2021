@@ -225,9 +225,10 @@ Exponential annealing results for 25 vertices graph:
 We can conclude that for this task the multiplicative and exponential annealing schedules provide the fastest results, with in some cases the exponential annealing providing the fastest results
 
 ## Task 2
-associated [notebook](./Task2_Histogram.png)
+associated [notebook](./Task2.ipynb)
+    
 We solved the same Toy Graph problem, but using quantum annealing with the Yao library implementation. Plotting the frequency of occurrence of each bit string, we find that the solver has identified thre optimal solutions :
-![Task 2: Result](./img/Task2_RandomGraph20.png)
+![Task 2: Result](./img/Task2_Histogram.png)
 
 However, it seems that the quantum annealing solver yields an error, with an noncompliant solution proposed as optimal
 ![Task 2: Result](./img/Task2_ToyGraph.png)
