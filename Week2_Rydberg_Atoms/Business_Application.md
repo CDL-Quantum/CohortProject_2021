@@ -85,6 +85,8 @@ each other, e.g. 50 km).
 We solve this problem by determining the maximum independent set of hospitals that optimally
 cover the region. The solution is shown in the following graph:
 
+![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/Graphics/NL_graph_solution.png)
+
 
 The COVID-ready hospitals shall be placed in the 'red' locations, while the blue locations
 are redundant. This is also shown in the following map, in which the red cities correspond to 
@@ -93,30 +95,10 @@ the COVID-hospitals, while the blue dots are the redundant ones:
 ![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/Graphics/NL_plot_solution.png)
 
 
-
-
-
-
-
-
-
-
-
-# Applications and Customers
+# Other applications
 
 Besides marketing and trend research, at Quantum Strategy we offer quantum-based solutions to 
 a variety of optimization problems.
-
-- **Algorithms for chess** See [this link](https://en.wikipedia.org/wiki/Knight%27s_tour) which discusses 'the Knight's tour'; a generalized Hamiltonian path problem in graph theory. 
-
-- **Recommender Systems** See for example [this link](https://hal.archives-ouvertes.fr/hal-00971351/document) in which we can optimize reccomender systems using social media analysis. 
-
-- **Surveillance systems**: determine the optimal placement of surveillance cameras to maximize the
-coverage areas while minimizing the costs of the systems. Possible customers/partners are large 
-companies providing surveillance products and services:
-  - Hikvision UK Ltd
-  - Bosch Security Systems, Inc.
-  - Dahua Technology 
 
 
 - **Seating allocation during the COVID-19 pandemic**: during the pandemic, social distancing is necessary to reduce the risk of infection. 
@@ -125,7 +107,6 @@ companies providing surveillance products and services:
   are event organizers, as well as airline and railways companies:
   - Bassett Events, Inc. or Eventbrite NL B.V. (for event organization)
   - Delta Airlines, Lufthansa Group or Deutsche Bahn (for transportation services) 
-    
 
 - **City development planning**: optimizing zoning rules in order to ensure maximum benefits for inhabitants at minimum costs for the government. 
   This includes the allocation of facilities as police stations, hospitals, or post offices. 
@@ -136,15 +117,30 @@ companies providing surveillance products and services:
   - Ministero dei Trasporti Italiano
   - Municipality of Amsterdam
 
-# Our Team
+
+- **Surveillance systems**: determine the optimal placement of surveillance cameras to maximize the
+coverage areas while minimizing the costs of the systems. Possible customers/partners are large 
+companies providing surveillance products and services:
+  - Hikvision UK Ltd
+  - Bosch Security Systems, Inc.
+  - Dahua Technology 
+
+- **Miltary Troops-to-Tasks**: determine the optimal placement of miltary formation and advance strategy. 
+
+- **Recommender Systems** See for example [this link](https://hal.archives-ouvertes.fr/hal-00971351/document) in which we can optimize reccomender systems using social media analysis. 
+
+- **Algorithms for chess** See [this link](https://en.wikipedia.org/wiki/Knight%27s_tour) which discusses 'the Knight's tour'; a generalized Hamiltonian path problem in graph theory. 
+    
+
+# Our Team (Alphabetical order)
 
 **Elijah Cavan** graduated from UWaterloo with a Bsc. Mathematics Physics and from Wilfrid Laurier with an MSc. Mathematics. My research mainly stems in cosmology and N-body systems.
 
 **Giuseppe Colucci** PhD in physics, works in the Banking industry for 7 years, expert in financial modelling, strategic hedging and optimization techniques.  
 
-**Oscar Fanelli** Italian pizza-lover, "born" as software engineer 13 years ago, founded and grew a start-up as CTO, now working as Head of Engineering, focusing on product, processes and people management.
-
 **Jose H. Leon-Janampa** I like to research and work on topics that bring some benefit to people. I have a scientific mind but with knowledge of business and finance. I am a theoretical physicist that works in finance for more than 20 years, always trying to apply cutting edge technology to the business.
+
+**Oscar Fanelli** Italian pizza-lover, "born" as software engineer 13 years ago, founded and grew a start-up as CTO, now working as Head of Engineering, focusing on product, processes and people management.
 
 **Saesun Kim** I am a Ph.D. student at experimental quantum optics. As well as my experimental expertise, I am also a Qiskit advocate and co-lead of Qiskit localization.
 
