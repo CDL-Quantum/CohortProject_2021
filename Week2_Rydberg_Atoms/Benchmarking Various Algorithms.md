@@ -1,5 +1,5 @@
 # Benchmarking various classical and simulated quantum optimization solutions to the UD-MIS problem
-Team 1: Ziwei Qiu (ziweiqiu29@gmail.com), Jack Sarkissian, Uchenna Chukwu, David Orrell, Maninder Kaur
+Team 1: Ziwei Qiu (ziweiqiu29@gmail.com), Uchenna Chukwu, David Orrell, Maninder Kaur
 
 We compare computation performances across a number of classical and quantum algorithms for the UD-MIS (unit disk - maximal independent set) problem. Classical methods include simulated annealing, an approximation algorithm based on subgraph-excluding subroutine (using the software [iGraph](https://igraph.org/python/))[1] and an exact solution based on backtracking efficient search (using the software [NetworkX](https://networkx.org/))[2]. The simulated quantum method we study here is simulated quantum annealing based on neutral atom systems [3,4]. 
 
