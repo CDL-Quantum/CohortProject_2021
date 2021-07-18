@@ -7,7 +7,8 @@ A number of industrial applications have been identified for optimization using 
 
 The particular application that we have chosen to focus on is the smart-charging of electric vehicles. The high level of power needed to charge the vehicles, especially with fast-load stations, means that the electricity useage must be carefully handled and optimized. This type of scheduling problem is highly complex and difficult to calculate using classical algorithms; however it can be translated into a UD-MIS problem as shown in [Dalyac et al., 2021](https://doi.org/10.1140/epjqt/s40507-021-00100-3)
 
-Photo: An electric vehicle charging station in Paris, France. Source: [data.gov.fr](https://www.data.gouv.fr/fr/datasets/belib-reseau-parisien-de-bornes-de-recharges-accelerees-22-kw-ac-dc-pour-vehicules-electriques/)
+
+Photo: An electric vehicle charging station in Paris, France. Source: ![data.gov.fr](https://www.data.gouv.fr/fr/datasets/belib-reseau-parisien-de-bornes-de-recharges-accelerees-22-kw-ac-dc-pour-vehicules-electriques/)
 
 A set of load tasks is represented as intervals on a timeline. Each task belongs to a certain group, which might represent a company’s vehicle fleet. The aim is to find the subset of these loads which maximizes the number of non-overlapping tasks, while ensuring that at most one load in each group is completed. The first condition means that the competion time is minimized, while the second condition means that no single group is over-represented in the schedule.
 
