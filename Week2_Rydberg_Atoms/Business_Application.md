@@ -90,58 +90,32 @@ The “production” costs are accounted for [18]:
 
 Several top players are aimed at launching cutting-edge mass spectrometry platforms to gain unique competitive edge over their peers in the global protein sequencing market. Some prominent companies are also consolidating their overall presence by strengthening the sales of reagents and consumables. Top players operating in the market include Thermo Fisher Scientific, Charles River Laboratories, and Shimadzu Corporation [19].
 
-|Company name|Country|R&D budget|Profit|
-Company name: Thermo Fisher Scientific
-Country: USA
-R&D budget: $ 1.18 billion - 2020
-Profit: $ 32.22 billion – 2020
-
-Company name: Shimadzu Corporation 
-Country: Japan
-R&D budget: NA
-Profit: 3.710 million – 2020
-
-Company name: Charles River Laboratories
-Country: USA
-R&D budget: $ NA
-Profit: $ 571.2 million – 2020
-
+|Company name|Country|R&D budget|Profit-2020|
+|----|----|----|----|
+|Thermo Fisher Scientific|USA|$ 1.18 billion|$ 32.22 billion|
+|Shimadzu Corporation|Japan|NA|$ 3.710 million|
+|Charles River Laboratories|USA|NA|$ 571.2 million|
 
 ## Mapping our competitive position
 
 Mapping the competitive position of the company helps us to identify what we are charging for and what our customers are paying for. It shows us the primary benefit that our product offers and also our rival’s core competitiveness [20]. Creating such a map involves three steps: 
 
-1. Define the market<br/>
+1. **Define the market<br/>**
     People’s need is not only to cure their disease, but to get a medicine or drug which is more effective while it has fewer side effects. That is why people are very concern about their medications. To address their needs, pharmaceutical companies need to invest more to improve effectiveness and safety of their drugs. To this end, they require reliable and accurate solution from drug discovery industry. This is where protein sequencing technology companies could play vital role to tackle the problem. 
-2. Determine the primary benefit<br/>
+2. **Determine the primary benefit<br/>**
     The primary benefits of our product would be the accuracy of the protein structure identification and shorten the drug discovery process. Our product reduces discovery costs by 80 percent. Moreover, highly skilled engineer and scientists guarantee the reliability and validity of the product. 
-3. Plot position<br/>
+3. **Plot position<br/>**
     As it is mentioned before, there are some competitors in the market including Thermo Fisher Scientific. SWOT analysis shows that this company has several strengths such as successful track record of developing new products, Reliable suppliers, strong dealer community, strong brand portfolio and High level of customer satisfaction [20]. On the other hand, there are some weaknesses such as, gaps in the product range sold by the company, days inventory is high compared to the other competitors, not very good at product demand forecasting [20]. It can be concluded that as a start-up company we might be threatened from the competitors’ strengths such as strong brand portfolio and strong dealer community. However, the company can benefit from several business opportunities. For instance, our highly skilled engineer and scientists could forecast demand using latest techniques. This leads customer satisfaction improvement, reduction in operating cost and higher operating profit. Moreover, accuracy of our solution leads stronger brand portfolio in long term. In conclusion, the first five years would be very critical for our company although its growth rate could be considerable during this period if the resources are allocated precisely and efficiently towards the drugs that address problems with complex and elusive solutions. 
 
 ## Potential Customers
 
-Company name: Pfizer<br/>
-Country: USA<br/>
-R&D budget: $ 9.4 billion - 2020<br/>
-Profit: $ 41.9 billion – 2020<br/><br/>
+|Company name|Country|R&D budget-2020|Profit-2020|
+|----|----|----|----|
+|Pfizer|USA|$ 9.4 billion|$ 41.9 billion|
+|AstraZeneca|UK|$ 6 billion|$ 26.6 billion|
+|Regeneron pharmaceuticals|USA|$ 2.7 billion|$ 8.497 billion|
+|Sygnature Discovery|UK|NA|$ 68.9 million|
 
-Company name: AstraZeneca<br/>
-Country: United Kingdom<br/>
-R&D budget: $ 6 billion - 2020<br/>
-Profit: $ 26.6 billion – 2020
-<br/><br/>
-
-Company name: Regeneron pharmaceuticals:<br/>
-Country: USA<br/>
-R&D budget: $ 2.7 billion - 2020<br/>
-Profit: $ 8.497 billion – 2020
-<br/><br/>
-
-Company name: Sygnature Discovery <br/>
-Country: United Kingdom<br/>
-R&D budget: NA<br/>
-Profit: $ 68.9 million – 2020
-<br/><br/>
 
 ## Video Submission (click to view)
 
