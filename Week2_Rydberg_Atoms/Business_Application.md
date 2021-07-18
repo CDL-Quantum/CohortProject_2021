@@ -77,7 +77,7 @@ The combination of high-density small cell sites and low-latency applications ma
 
 Internet of Things (IoT) is an example of low-power and lossy networks (LLNs). The routing protocol for LLNs is a standard routing framework for IoT. Typically, devices forming an LLN possess limited energy, scarce resources, operate in mostly harsh environment and in such a network radio transmission coverage is limited. Therefore, if an LLN is required to cover a relatively large geographical area, multi-hop communication is required. This results in a requirement that devices in a network should rely each other data packets. Hence, a routing protocol to discover and maintain multipoint-to-point (MP-to-P), point-to-point (P-to-P) and point-to-multipoint (P-to-MP) data forwarding paths is needed. An IoT communication architecture using industrial process control as an example use case is depicted in Fig 1.
 
-<p align="center"><img src=".. Week2_Rydberg_Atoms/img/2. IoT communication architecture.jpg" alt="drawing" width="800" height="600"/></p>
+<p align="center"><img src="../Week2_Rydberg_Atoms/img/2. IoT communication architecture.jpg" alt="drawing" width="800" height="600"/></p>
 Fig. 1 IoT communication architecture [11].
 
 In the industrial process control, status of different devices is regularly reported to a central entity/gateway. Hence, there is a need for multipoint-to-point (MP-to-P) communication. Similarly, the central entity sends different control commands to different devices, thus there is a need for point-to-multipoint (P-to-MP) communication. Usually, in an industrial process control system, devices need to communicate with each other to successfully complete a task, hence there is a need for point-to-point (P-to-P) communication. Invariably, the central entity is connected to the Internet, and it stores important information in one of the servers reachable through the Internet or local network. Moreover, a user can interact with the central entity over the Internet to accomplish relevant tasks.
@@ -88,7 +88,7 @@ There are routing challenges related to node deployment: Unlike conventional net
 
 Routing mechanism for networks of low power and limited computation capability devices are still under research and development. Some possible research directions are protocols exploiting the redundancy of devices and protocols that allow processing data near data resources to reduce traffic load [10]. UD-MIS could be used for finding the optimal configuration of subnets close to the data source or in the virtual core. Due to its storage organization, information retrieval and scheduling capabilities UD-MIS could construct optimal forwarding information paths, thus allowing for smooth integration of 5G and IoT. The exact potential of implementing UD-MIS in the routing protocol design itself needs to be further researched.
 
-<p align="center"><img src=".. Week2_Rydberg_Atoms/img/3. Routing Protocol Optimazation1.jpg" alt="drawing" width="800" height="600"/></p>
+<p align="center"><img src="../Week2_Rydberg_Atoms/img/3. Routing Protocol Optimazation1.jpg" alt="drawing" width="800" height="600"/></p>
 Fig. 2 IoT Routing Protocol Optimization close to the data source or in the virtual core.
 
 
