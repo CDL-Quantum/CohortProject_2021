@@ -12,14 +12,8 @@ In this project we are going to demonstrate the amazing power of classical and q
 4. [Comparing the Classical and Quantum Methods](#toc4)
 5. [Gotham City Problem](#toc5)
 6. [Finding Non-Redundant Protein Sequences](#toc6)
-
-### Resources
-- [Notebook for task 1](./Task%201.ipynb)
-- [Notebook for task 2](./Task%202.ipynb)
-- [Notebook for task 3 (Gotham city) + running on real quantum hardware](./Task%203,%20Additional-Challenges%20b,%20d-ak.ipynb)
-- [Notebook for extra challenge: Finding the least redundant set of protein sequences](./real_world_protein_redundancy.ipynb)
-
-This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
+7. [Business Application](#toc7)
+8. [Project Resources](#toc8)
 
 <a name="toc1"></a>
 
@@ -307,38 +301,17 @@ Since our company name is Qamino (standing for Quantum Amino), we needed a solut
 | :--------------: | :---------: |  :---------: |
 | ![D-Wave Graph](./resources/protein-dwave-2.png) | ![D-Wave Embeddings](./resources/protein-dwave-embeddings-2.png) | ![D-Wave Energy Samples](./resources/protein-dwave-energies-2.png) |
 
-
-## References
-
-<a name="ref1">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5835207/<a>
-
-
-
-<br/><br/><br/><br/><br/><br/><br/>
-
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week2_Rydberg_Atoms/instructions.pdf) to begin learning about your tasks for this week!
-
-**Please edit this markdown file directly with links to your completed tasks and challenges.**
-
-## Tasks include:
-* (DONE) Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
-* (DONE) Finding a better annealing schedule to arrive at solutions to the problem quicker.
-* (DONE) Simulating the same problem but using quantum annealing.
-* (DONE) Comparing the classical and quantum methods.
-* (DONE) Solving a real-world problem involving cell phone tower placement in Gotham City.
-
-## Further Challenges:
-* (DONE) Comparing the methods used to solve the UD-MIS problem.
-* (DONE) Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
-* (DONE) Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
-* (DONE) Solving the problem with real quantum hardware.
+<a name="toc7"></a>
 
 ## Business Application
-For each week, your team is asked to complete a Business Application. Questions you will be asked are:
-
-* Explain to a layperson the technical problem you solved in this exercise.
-* Explain or provide examples of the types of real-world problems this solution can solve.
-* Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved.
-* Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
-
 For more details refer to the [Business Application found here](./Business_Application.md)
+
+
+<a name="toc8"></a>
+
+## Resources
+- [Notebook for task 1](./Task%201.ipynb)
+- [Notebook for task 2](./Task%202.ipynb)
+- [Notebook for task 3 (Gotham city) + running on real quantum hardware](./Task%203,%20Additional-Challenges%20b,%20d-ak.ipynb)
+- [Notebook for extra challenge: Finding the least redundant set of protein sequences](./real_world_protein_redundancy.ipynb)
+- [Notebook used for benchmarking](./benchmarking_quantum.ipynb)
