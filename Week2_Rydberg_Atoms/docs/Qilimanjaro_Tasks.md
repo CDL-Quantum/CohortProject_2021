@@ -45,12 +45,14 @@ Result:
 
 ## Task 3: 
 
-# 3.1 Explain why this problem can be easily mapped to the UD-MIS problem. 
+### 3.1 Explain why this problem can be easily mapped to the UD-MIS problem. 
 
 If we look at the towers as nodes of a graph and their overlap as an edge between nodes we can easily map this problem to the UD-MIS one. We want to use the maximum number of towers such that they don't overlap, and therefore this translates into finding the maximum indepdendent set of this graph.
 
-# 3.2 Solve the problem with the two previous methods
+### 3.2 Solve the problem with the two previous methods
 
+In order to do this task we update the graph with our new coordinates, run the simulation and plot the result:
 
+![task2](./images/tas3_sim_ann.png)
 
-# 3.3 Should Bruce pay for a few more cell phones towers to make sure that more of Gotham City has cell phone service?
+### 3.3 Should Bruce pay for a few more cell phones towers to make sure that more of Gotham City has cell phone service?
