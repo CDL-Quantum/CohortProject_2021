@@ -178,7 +178,7 @@ We solve this problem in four ways using a simulated classical annealing approac
 
 Running the algorithm on a simulated classical annealing algorithm yields a lowest energy level of -5. We reached convergance after about 3700 iterations using the default cooling schedule ![Annealing Schedule](https://latex.codecogs.com/gif.latex?T_i%20*%20%28T_f/T_i%29%5E%7Bt/N%7D). We plot one solution in the following figure in green:
 
-![Graph with Solution](./resources/gotham-nodes-with-solution.png)
+![Graph with Solution](./resources/image%20b21.png)
 
 #### Simulated Quantum Annealing
 
