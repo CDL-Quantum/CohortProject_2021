@@ -268,15 +268,15 @@ We calculate the density of the above graphs and then we calculate the density o
 
 What we find is this: the solution graph has a density that is 27% more than that of the original 12 node graph. By adding another node, the density of the new graph is 18.5% more dense than the original 12 cell phone tower graph. Obviously having more cell towers will increase the cell reception. But if Bruce Wayne wants to be efficient with his money (1. That's how the rich stay rich 2. He needs to save up if he wants to fight the Joker, Riddler, ect) than he should not buy any more cell towers. There is also the constraint we had which was that the cell phone service of each tower should not overlap. Unless Bruce relaxes this condition, there is no way he can justify buying additional towers. 
 
-## Appraoch 2: Extra Tower
+## Appraoch 2: Extra Tower (12+1)
 
 ![t35](../Week2_Rydberg_Atoms/img/extra_problem.png)
 
 We did additional bonus work to test whether or not Bruce should buy extra towers, which can be found in this [pdf](../Week2_Rydberg_Atoms/Task3_extra_credit.pdf), [Julia](../Week2_Rydberg_Atoms/Task2-3-ext_Saesun.ipynb) and visualzation is done by [Mathematica](../Week2_Rydberg_Atoms/Graphics.nb).
 
-By optimizing the 48 possible solution, we found two important results.
+We are optimized 13 (12 blue + 1 red) graph where we include one extra location. By optimizing four deviation from the orignal data (48 total), we found two important results.
 
--	Among 192 possible optimum solution, we found that 55 optimized location with new location (red). This give increase of mobility by **28%**.
+-	Among 192 (48 x 4 degen) possible optimum solution, we found that 55 optimized location with new location (red). This give increase of mobility by **28%**.
 -	Among 48 location, we found **one location** that actually increase the number of the cell tower.
 
 Interstingly, the location is at the Arkham Island where Asylum for the criminally insane is located at. Therefore, Bruce can safely ignore the location to maximize his profit. Our investigation can provide the new strategy for Bruce. He can set his tower in cheaper aread with same amount of coverage, and provide option for number of tower he can build.
