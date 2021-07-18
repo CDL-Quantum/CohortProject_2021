@@ -16,6 +16,8 @@ In this [Task 1 notebook](./Task_1.ipynb) we tried several different schedules a
 
 ![Graph](../Week2_Rydberg_Atoms/img/Task_1_Graph.png) ![Graph](../Week2_Rydberg_Atoms/img/complete_udmis_graph_task_1.png)
 
+<img src="../Week2_Rydberg_Atoms/img/complete_udmis_graph_task_1.png" alt="drawing" width="500"/>
+
 We were able to find the ground state energy, which converged at an energy of -3. As we decreased the temperature, we found that the monte carlo algorithm converged faster as expected, and below is a graph demonstrating that result:
 
 <img src="../Week2_Rydberg_Atoms/img/Task_1_seperate_monte_carlo_graphs.png" alt="drawing" width="500"/>
