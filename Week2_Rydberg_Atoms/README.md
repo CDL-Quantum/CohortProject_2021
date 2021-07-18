@@ -52,9 +52,14 @@ If, however, the problem was formulated as “Is it economically beneficial for 
 
 We solved the problem for economic benefit using a classical annealing algorithm. First, as an example, we look at the case when an extra tower is added at a distant location, as shown in figure below, so that we already know there is a clear benefit. Indeed, this resulted in energy decrease from -5 to -6.
 
+![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.4.png)
                                     
 Then, we started adding an extra tower at 200 random locations in addition to already existing ones (since that’s what Bruce is looking for). These locations are shown as blue dots in Figure (). We then reoptimized using the brief annealing schedule that we found in Task 1, and took energy measurements. 
 Only a subset of locations produced a lower energy: -6 instead of -5. They are shown in Figure (). All these suggestions fall outside the Gotham City limits in the water area, so unless the sea coverage is in play, adding an extra tower is not feasible. 
+                                
+![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.5.png)
+                                    
+![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.6.png)
 
 ## Benchmarking
 
