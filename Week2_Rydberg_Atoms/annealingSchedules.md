@@ -14,7 +14,6 @@ To benchmark the annealing schedule we can check the value of the energy at the 
 
 It takes a bit of iterations but eventually around the iteration 70 it got to the ground state. We can also see how the occupations change throughout the iterations, we sample 4 different iterations to plot the graphs with the occupation states (right figure).
 
-For details on all the annealing schedules tested please refer to the following [file](./Task1Felipe.ipynb)
 #### Frange cycle
 
 The range cycle dynamically change the proposed values for the temperature in a way that resembles a saw tooth, we got the following results from this schedule:
