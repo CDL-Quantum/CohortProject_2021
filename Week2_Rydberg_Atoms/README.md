@@ -2,11 +2,9 @@
 
 # Project 2: Optimization problems \& Rydberg atom arrays
 
-This project will guide you through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems.
+This project guided us through using the foundations of quantum hardware to demonstrate a quantum advantage in real-world problems. Team 3 was composed of the following members : Alice Barthe, Felipe Ferreira de Freitas, Victor Onofre and Yuval Sanders.
 
-# Code and Notebooks
-For each of the sections below, a notebook is associated. The task and challenges were taken from the following  [instructions.pdf](./instructions.pdf).
-
+For each of the sections below, a notebook is associated. The task and challenges were solved based on the following file  [instructions.pdf](./instructions.pdf).
 
 # Tasks 
 
@@ -14,23 +12,25 @@ For each of the sections below, a notebook is associated. The task and challenge
 associated [notebook](./Task1.ipynb)
 
 ### Solving the UD-MIS problem with simulated classical annealing
-We solved the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing, for the proposed Toy Graph.
+We solved the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing, for the Toy Graph proposed in the instructions.
 ![Task 1: Result](./img/Task1_ToyGraph.png)
 
-On the above plot, each circle is centered on the coordinates of the vertex, with a unit diameter. The vertices which are connected by an edge are the ones for which the two circles intersect, meaning that the distance between the centers is less than the unit. Circles in gray in the background are non occupied vertices, while blue circles in the foreground are occupied vertices. The result is compliant with the constraint of non overlap, and solving the problem with brute force confirms that it is indeed an optimal solution. 
+On the above plot, one optimal solution is presented. Each circle is centered on the coordinates of the vertex, with a unit diameter. The vertices which are connected by an edge are the ones for which the two circles intersect, meaning that the distance between the centers is less than the unit. Circles in gray in the background are non occupied vertices, while blue circles in the foreground are occupied vertices. The result is compliant with the constraint of non overlap, and solving the problem with brute force confirms that three towers is indeed the optimal solution. 
 
+### increasing the complexity : uniform Unit Disk graph distribution
 For the above Toy Graph, the brute force solver goes faster than the classical annealing. To start demonstrating an advantage of simulated classic annealing, we solved the problem for a random problem. The random graphs are parametrized by two values : the number of vertices **N** and the density **d**. The vertices coordinates are uniformly sampled in a square of side length **c**. The size of the square is chosen such as its surface equals the number of vertices divided by the density **d = N /c^2**. Therefore, the two coordinates are sampled over **0** to **c = \sqrt{N/d}**
 
-The two implementations start to be equivalent in term of runtime around **N = 20** for density **d = 1**. Several solutions are optimal
+The two implementations start to be equivalent in term of runtime roughly around **N = 20** for density **d = 1**. This is of course dependent on the hardware. Several optimal solutions are presented below :
 ![Task 1: Result](./img/Task1_RandomGraph20.png)
 
 
 ### Exploring different Annealing schedules
-We tried to find a better annealing schedule to arrive at solutions to the problem quicker.
 
-For the annealing schedules codes please check the [notebook]("./Task 1 Felipe.ipynb") where we test a variety of anneling schedules, to make things more easy we use the learning rate schedule from pytorch, which contains an amazing collection of schedules routines ready to be use.
+We tried to find a better annealing schedule to arrive to solutions to the problem quicker. A variety of anneling schedules were tested, using learning rate schedules from pytorch, which contains an amazing collection of schedules routines ready to be use.
 
 #### The baseline
+
+associated [notebook](./Task1Felipe.ipynb)
 
 Our baseline will be the proposed anneling schedule
 
@@ -44,167 +44,15 @@ To benchmark the annealing schedule we can check the value of the energy at the 
     </tr>
 </table>
 
-It takes a bit of iterations but eventually around the iteration 70 it got to the ground state. We can also see how the occupations change throughout the iterations, we sample 4 different iterations to plot the graphs with the occupation states (right figure).
+It takes a bit of iterations but eventually around the iteration 70 it got to one ground state. We can also see how the occupations change throughout the iterations, we sample 4 different iterations to plot the graphs with the occupation states (right figure).
 
-
-#### Frange cycle
-
-The range cycle dynamically change the proposed values for the temperature in a way that resembles a saw tooth, we got the following results from this schedule:
-
-<table><tr>
-    <td><img src="./figs task 1/FrangeCycle_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the frange cycle annealing schedule </figcaption></td> 
-    <td><img src="./figs task 1/FrangeCycle_occupations.png" style="width: 250px;"><figcaption> <font size="3">Occupation states history using the frange cycle annealing schedule </figcaption></td>
-    </tr>
-</table>
-
-Although the frange cycle can be interesting it does not reach the ground state in the desirable timeframe. 
-
-#### LAMBDA annealing
-
-In this annealing scheme we have:
-
-![equation](https://bit.ly/2Up3d2e)
-
-with k runing over the number of iterations and Lambda as the decay constant.
-
-We got the following results from this schedule:
-
-<table><tr>
-    <td><img src="./figs task 1/Lambda_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the LAMBDA annealing schedule </figcaption></td> 
-    <td><img src="./figs task 1/lambda_occupations.png" style="width: 250px;"><figcaption> <font size="3">Occupation states history using the LAMBDA annealing schedule </figcaption></td>
-    </tr>
-</table>
-
-Quite good, we reach the ground state around iteration 17, can we do better?
-
-#### Multiplicative annealing
-
-We can use Multiplicative annealing:
-
-![equation](https://bit.ly/3iirkYp)
-
-with k runing over the number of iterations and Gamma as the decay constant.
-
-with the following results:
-
-<table><tr>
-    <td><img src="./figs task 1/Multiplicative_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the Multiplicative annealing schedule </figcaption></td> 
-    <td><img src="./figs task 1/Multiplicative_occupations.png" style="width: 250px;"><figcaption> <font size="3">Occupation states history using the Multiplicative annealing schedule </figcaption></td>
-    </tr>
-</table>
-
-Thats quite fast!!!, we reach the ground state at iteration 3.
-
-#### Step annealing
-
-This schedule decays the temperature by gamma every step_size iteration. 
-
-
-we got the following results from this schedule:
-
-<table><tr>
-    <td><img src="./figs task 1/Step_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the Step annealing schedule </figcaption></td> 
-    <td><img src="./figs task 1/Step_occupations.png" style="width: 250px;"><figcaption> <font size="3">Occupation states history using the Step annealing schedule </figcaption></td>
-    </tr>
-</table>
-
-#### MultiStep annealing
-
-This schedule is similar to the Step annealing, however the temperature decays everytime when the iteration reach some milestone
-
-
-and we have:
-
-<table><tr>
-    <td><img src="./figs task 1/MultiStep_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the MultiStep annealing schedule </figcaption></td> 
-    <td><img src="./figs task 1/MultiStep_occupations.png" style="width: 250px;"><figcaption> <font size="3">Occupation states history using the MultiStep annealing schedule </figcaption></td>
-    </tr>
-</table>
-
-that aint a good one, lets check another schedule
-
-#### Exponential annealing
-
-In this schedule the temperature decays by a factor (gamma) every iteration (k). 
-
-![equation](https://bit.ly/3zb4tom)
-
-and we have:
-
-<table><tr>
-    <td><img src="./figs task 1/Exponential_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the Exponential annealing schedule </figcaption></td> 
-    <td><img src="./figs task 1/Exponential_occupations.png" style="width: 250px;"><figcaption> <font size="3">Occupation states history using the Exponential annealing schedule </figcaption></td>
-    </tr>
-</table>
-
-thats really fast, however I think this must be because the temperature decays too fast.
-
-#### CosineAnnealing
-
-This schedule works by setin the temperatures using a cosine annealing, where $T_{max}$ is set to the initial temperature and $T_{cur}$ is the number of iterations since the last restart.
-
-![equation](https://bit.ly/3evH9Kq)
-
-
-we got:
-
-<table><tr>
-    <td><img src="./figs task 1/CosineAnnealing_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the Exponential annealing schedule </figcaption></td> 
-    <td><img src="./figs task 1/CosineAnnealing_occupations.png" style="width: 250px;"><figcaption> <font size="3">Occupation states history using the Exponential annealing schedule </figcaption></td>
-    </tr>
-</table>
-
-Quite unstable, lets move on to the next schedule.
-
-#### Cyclic annealing
-
-In this schedule the temperatures are set according to cyclical learning rate policy (CLR). The policy cycles the tempearture rate between two boundaries with a constant frequency, as detailed in the paper [Cyclical Learning Rates for Training Neural Networks](https://arxiv.org/abs/1506.01186). The distance between the two boundaries can be scaled on a per-iteration or per-cycle basis.
-
-##### "triangular": A basic triangular cycle without amplitude scaling.
-<table><tr>
-    <td><img src="./figs task 1/CyclicTriangula_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the Cyclic triangular annealing schedule </figcaption></td> 
-    <td><img src="./figs task 1/CyclicTriangula_occupations.png" style="width: 250px;"><figcaption> <font size="3">Occupation states history using the Cyclic triangular annealing schedule </figcaption></td>
-    </tr>
-</table>
-
-##### "triangular 2": A basic triangular cycle that scales initial amplitude by half each cycle.
-<table><tr>
-    <td><img src="./figs task 1/CyclicTriangula2_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the Cyclic triangular 2 annealing schedule </figcaption></td> 
-    <td><img src="./figs task 1/CyclicTriangula2_occupations.png" style="width: 250px;"><figcaption> <font size="3">Occupation states history using the Cyclic triangular 2 annealing schedule </figcaption></td>
-    </tr>
-</table>
-
-
-##### "exp_range": A cycle that scales initial amplitude by $\text{gamma}^{\text{cycle iterations}}$ iterations at each cycle iteration.
-<table><tr>
-    <td><img src="./figs task 1/CyclicExp_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the Cyclic exp_range annealing schedule </figcaption></td> 
-    <td><img src="./figs task 1/CyclicExp_occupations.png" style="width: 250px;"><figcaption> <font size="3">Occupation states history using the Cyclic exp_range annealing schedule </figcaption></td>
-    </tr>
-</table>
-
-The best out from the three displayed is the Cyclic exp_range, although is not quite as good the previous contenders.
-
-#### OneCycle 
-
-This schedule sets the temperature according to the 1cycle policy. The 1cycle policy anneals the temperature from an initial value to some maximum temperature and then from that maximum temperature to some minimum value much lower than the initial temperature. This policy was initially described in the paper [Super-Convergence: Very Fast Training of Neural Networks Using Large Learning Rates](https://arxiv.org/abs/1708.07120).
-
-##### "OneCycle - cos"
-<table><tr>
-    <td><img src="./figs task 1/OneCycle_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the OneCycle annealing schedule </figcaption></td> 
-    <td><img src="./figs task 1/OneCycle_occupations.png" style="width: 250px;"><figcaption> <font size="3">Occupation states history using the OneCycle annealing schedule </figcaption></td>
-    </tr>
-</table>
-
-##### "OneCycle - linear"
-<table><tr>
-    <td><img src="./figs task 1/OneCycleLinear_annealing.png" style="width: 350px;"><figcaption> <font size="3">Energy history using the OneCycle linear annealing schedule </figcaption></td> 
-    <td><img src="./figs task 1/OneCycleLinear_occupations.png" style="width: 250px;"><figcaption> <font size="3">Occupation states history using the OneCycle linear annealing schedule </figcaption></td>
-    </tr>
-</table>
-
-Interesting effects but not quite good as we want.
+For details on all the annealing schedules tested please refer to the following [file](./annealingSchedules.md)
 
 From all tested annealing schedules, the two the stand out are Multiplicative annealing and the Exponential annealing, we can check again their performance with a bigger number of vertices:
+
+#### larger graphs 
+
+associated [notebook](./benchmark_classic.ipynb)
 
 Multiplicative annealing results for 25 vertices graph:
 <table><tr>
@@ -222,15 +70,15 @@ Exponential annealing results for 25 vertices graph:
 </table>
 
 <img src="./figs task 1/Benchmarks_Multi_exp_annealing.png" style="width: 350px;"><figcaption> <font size="3"> Benchmark for Multiplicative and exponential annealing schedules </figcaption>
-We can conclude that for this task the multiplicative and exponential annealing schedules provide the fastest results, with in some cases the exponential annealing providing the fastest results
+We can conclude that for this task the multiplicative and exponential annealing schedules provide the fastest convergence, with in some cases the exponential annealing providing the fastest results
 
 ## Task 2
 associated [notebook](./Task2.ipynb)
     
-We solved the same Toy Graph problem, but using quantum annealing with the Yao library implementation. Plotting the frequency of occurrence of each bit string, we find that the solver has identified thre optimal solutions :
+We solved the same Toy Graph problem, but using quantum annealing with the Yao library implementation. Plotting the frequency of occurrence of each bit string, we find that the solver has identified three optimal solutions :
 ![Task 2: Result](./img/Task2_Histogram.png)
 
-However, it seems that the quantum annealing solver yields an error, with an noncompliant solution proposed as optimal
+While two solutions are indeed optimal solutions to the MIS problem, and therefore ground states. It seems that the quantum annealing solver yields one noncompliant solution to the non overlap constraint. It is still to be determined where the source of that error migt come from.
 ![Task 2: Result](./img/Task2_ToyGraph.png)
 
 ## Task 3
@@ -263,29 +111,23 @@ And below we display the optimal solution for each number of tower, the overlap 
 
 
 
-## Further Challenges:
+## Further Challenge : Implementation on Dwave and benchmarking
 
-* Solving the problem with real quantum hardware.
+The implementation of a single graph for quantum annealing on dwave for both simulated and on real hardware can be found on the following [notebook](./Dwave.ipynb), while the benchmarking notebook can be found in the following [notebook](./Dwave_benchmark.ipynb) 
 
-### Implementation on Dwave
-associated [notebook](./Dwave.ipynb)
+The MIS problem was implemented to run on D-wave libraries, including D-Wave simulation and D-Wave hardware. The two were compared against the brute force solver in terms ofof runtime and energy loss (e.g., the difference between the optimal number of towers found by the brute force algorithm and the number of towers found by the implementation to be benchmarked). The space of performance was explored as a function of the number of vertices on a sample of random graphs following the distribution of random unit disk graph of density 1 (see above for definition of uniform unit disk graph distribution).
 
-**TODO Alice**
+While the MIS problem was solved for the graphs on D-Wave hardware, the lack of budget on Dwave forbid us to run the benchmark on the hardware. However the section on hardware can just be uncommented to be benchmarked. The below plots only benchmarks the quantum annealing simulator.
 
-### Implementation on IonQ
+The below plots shows the log time difference as a function of the number of vertices, the color is the energy loss. It is a scatter plot for all samples.
 
-**TODO Victor**
+![Dwave : Result](./img/dwave_benchmark_scatter.png)
 
-### mapping the Nurse Scheduling Problem to UD-MIS
-Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
+The below plots shows the average log time difference as a function of the average energy loss, the color is the number of vertices. It is averaged over all samples
 
-**TODO Victor**
+![Dwave : Result](./img/dwave_benchmark.png)
 
-### benchmarking the Nurse Scheduling Problem
-
-**TODO Felipe**
-Comparing the methods used to solve the UD-MIS problem.
-Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
+Overall we saw an exponential decrease of the time gain against brute force with the number of vertices, while the average energy loss stays between 1 and 2. **Overall Quantum shows an exponential advantage for quickly finding good suboptimal solutions.**
 
 
 # Business Application
