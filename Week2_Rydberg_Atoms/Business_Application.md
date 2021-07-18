@@ -1,15 +1,19 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
-# QGrid
 
-<img src="../Week2_Rydberg_Atoms/img/IoT.jpg" alt="drawing" width="700"/>
 
-Here at QGrid we address the problem of getting information to its destination efficiently.  We provide computing solutions for dynamic routing protocals in largescale networks in the IT sector.
+<p align="center"><img src="../Week2_Rydberg_Atoms/img/logo.png" alt="drawing" width="300"/></p>
+
+# Q-Grid
+
+
+Here at Q-Grid we address the problem of getting information to its destination efficiently.  We provide computing solutions for dynamic routing protocals in largescale networks in the telecom and IoT.
+
 
 # Sourcing Efficient Information Routing Solutions
 
 <img src="../Week2_Rydberg_Atoms/img/iot_tech.jpg" alt="drawing" width="500"/>
 
-We live in a world of networks.  From global satelite internet systems to local mesh networks like Amazon Sidewalk.  The size of thes markets is(..insert here, maybe more elaboration on size of different market sizes around this).
+We live in a world of networks.  From global satelite internet systems to local mesh networks like Amazon Sidewalk.  Optimization of cell site locations and selecting of subnets in a way that keeps data sources and sensors connected efficiently.  The size of thes markets is(..insert here, maybe more elaboration on size of different market sizes around this).
 Increased bandwith and technologies enhancing the IOT such as lower energy blue tooth and Z-Wave radio transmission enable new ways of connecting, as well as new challenges in determining transmission routing. We leverage state of the art classical and quantum methods to provide efficient routing for network providers to reduce bandwidth cost of routing, and increase latency.
 
 ## Our Routing Protocals
@@ -22,10 +26,12 @@ Our solutions based on MIS algorithms provide for shorter routing paths reducing
 
 ## Additional Applications
 
-Expanding from the mainstream communciation network providers.  There is also additional application of our technology for rapidly changing local mesh networks, and satelite braodband internet providers.
+Expanding from the mainstream communciation network providers.  There is also additional application of our technology for rapidly changing local mesh networks, and satelite broadband internet providers.
 
 Examples: 
 - Mesh Networks
+  - Amazon SideWalk
+  - Apple's Find My Network
 - Satelite Networks
   - [Starlink](https://www.starlink.com/)
   - [Project Kuiper from Amazon](https://www.aboutamazon.com/news/company-news/amazon-receives-fcc-approval-for-project-kuiper-satellite-constellation)
