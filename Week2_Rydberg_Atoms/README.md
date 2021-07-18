@@ -200,7 +200,8 @@ We also solve this problem on real quantum hardware using D-Wave. Here, we found
 
 | D-Wave Solutions for Gotham Problem | GIF of the Multiple Best Solutions Found |
 | :--------------: | :---------: |
-| ![Gotham Dwave Energy Levels](./resources/image%20b22.png)| ![Gotham Dwave energy solutions](./resources/Gotham%20Solutions%201.gif) |
+| <img src="./resources/image%20b22.png" alt="drawing" width="340"/> | ![Gotham Dwave energy solutions](./resources/Gotham%20Solutions%201.gif) |
+
 
 We also show the graph representation of the problem in D-Wave (left), the actual embedding on D-Wave 2000Q (middle) along with the energies sampled from Dwave (right).
 
@@ -226,13 +227,13 @@ With this formulation, we get a sampling given by the following two figures. On 
 
 | D-Wave Solutions for Modified Gotham Problem | GIF of the Multiple Best Solutions Found |
 | :--------------: | :---------: |
-| ![Gotham Dwave Energy Levels](./resources/image%20b32.png)| ![Gotham Dwave energy solutions](./resources/Gotham%20Solutions%202.gif) |
+| <img src="./resources/image%20b32.png" alt="drawing" width="340"/>| ![Gotham Dwave energy solutions](./resources/Gotham%20Solutions%202.gif) |
 
-From D-Wave, we also show the resulting qubit embedding (left) and energy spectrum (right):
+From D-Wave, we also show the resulting qubit graph (left), embedding (center) and energy spectrum (right):
 
-| Embeddings on D-Wave | Energies Sampled on D-Wave |
-| :---------: |  :---------: |
-| ![D-Wave Embeddings](./resources/task3-2-dwave-embeddings.png) | ![D-Wave Energy Samples](.//resources/task3-2-dwave-energy-spectrum.png) |
+| Graph Representation on D-Wave | Embeddings on D-Wave | Energies Sampled on D-Wave |
+| :---------: | :---------: |  :---------: |
+| ![D-Wave Embeddings](./resources/task3-2-dwave-graph.png) | ![D-Wave Embeddings](./resources/task3-2-dwave-embeddings.png) | ![D-Wave Energy Samples](./resources/task3-2-dwave-energy-spectrum.png) |
 
 
 
