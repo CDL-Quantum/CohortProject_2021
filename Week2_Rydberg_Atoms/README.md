@@ -39,7 +39,9 @@ The solution for the task 2 can be found [here](https://github.com/ziweiqiu/Coho
 2. There are multiple [solutions](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Benchmarking_UDMIS_Algorithms.ipynb) to the problem
                                     
 ![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.1.png)
+
 ![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.2.png)
+
 ![alt text](https://github.com/ziweiqiu/CohortProject_2021/blob/Week2-Team1/Week2_Rydberg_Atoms/Images/3.3.png)                                   
 
 3. If the problem is stated as in the document: “should Bruce pay for more towers to make sure that more of the City is covered” then the answer is yes, since there are uncovered areas, but it has nothing to do with economic considerations.
