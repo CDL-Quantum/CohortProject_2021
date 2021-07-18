@@ -33,7 +33,7 @@ We present here two use cases to demonstrate how our algorithms can deliver valu
 
 ## Redundant franchises
 
-![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/img/animate.gif) 
+![CDL 2020 Cohort Project_business2](../Week2_Rydberg_Atoms/img/sv.png) 
 
 *(Picture on the left: some Starbucks locations in Manhattan, NY)*
 
