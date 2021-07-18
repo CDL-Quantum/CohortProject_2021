@@ -41,6 +41,13 @@ The sampled state with lowest energy has an energy of -5.0
 
 ## Further Challenges:
 ### Method Comparision Between Classical Simulated Annealing vs. Quantum Annealing in the UDMIS Problem
+In this [notebook](./D-Wave qpu and simulated annealing-checkpoint.ipynb) we compare the runtime of simulated annealing(D-Wave neal package) vs D-Waves simulated annealing on the UDMIS problem.
+
+<img src="../Week2_Rydberg_Atoms/img/D-Wave_QPU.png" alt="drawing" width="300"/>
+
+<img src="../Week2_Rydberg_Atoms/img/D-Wave-Simulated-Annealing.png" alt="drawing" width="300"/>
+
+<img src="../Week2_Rydberg_Atoms/img/D-Wave-Hybrid-Solver.png" alt="drawing" width="300"/>
 
 ### Benchmarking Criteria: Classical vs. Quantum Optimization for UD-MIS
 **Theoretical Background**: During this simulation, we utilized the simulated annealing algorithm to solve the UD-MIS problem. Let n<sub>i</sub> be the gap between the largest and second largest eigenvalues of a stochastic matrix M<sub>i</sub>. Let n = min<sub>i</sub>n<sub>i</sub>. The run time of this alogirthm is proportional to O(1/n) [1][2], and it has been shown that quantum computers can increase the efficieincy by O(1/√n) [1][3]
