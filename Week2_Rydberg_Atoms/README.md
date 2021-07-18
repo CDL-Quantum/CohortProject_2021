@@ -56,7 +56,7 @@ In this [notebook](./D-Wave_qpu_and_simulated_annealing.ipynb) we compare the ru
 ### Benchmarking Criteria: Classical vs. Quantum Optimization for UD-MIS
 **Theoretical Background**: During this simulation, we utilized the simulated annealing algorithm to solve the UD-MIS problem. Let n<sub>i</sub> be the gap between the largest and second largest eigenvalues of a stochastic matrix M<sub>i</sub>. Let n = min<sub>i</sub>n<sub>i</sub>. The run time of this alogirthm is proportional to O(1/n) [1][2], and it has been shown that quantum computers can increase the efficieincy by O(1/√n) [1][3]
 
-In [this notebook]() do a comparison of calculation times for various classical, quantum, and hybrid optimizers.
+In [this notebook](D-Wave_qpu_and_simulated_annealing) do a comparison of calculation times for various classical, quantum, and hybrid optimizers.
 
 <img src="../Week2_Rydberg_Atoms/img/calc_time_benchmark.png" alt="drawing" width="300"/>
 
