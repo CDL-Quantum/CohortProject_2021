@@ -1,7 +1,7 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
-# QGrid
+# Q-Grid
 
-<img src="../Week2_Rydberg_Atoms/img/logo.png" alt="drawing" width="700"/>
+<p align="center"><img src="../Week2_Rydberg_Atoms/img/logo.png" alt="drawing" width="200"/></p>
 
 Here at QGrid we address the problem of getting information to its destination efficiently.  We provide computing solutions for dynamic routing protocals in largescale networks in the IT sector.
 
