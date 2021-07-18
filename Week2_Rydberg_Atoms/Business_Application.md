@@ -133,7 +133,7 @@ companies providing surveillance products and services:
 - **Algorithms for chess** See [this link](https://en.wikipedia.org/wiki/Knight%27s_tour) which discusses 'the Knight's tour'; a generalized Hamiltonian path problem in graph theory. 
     
 
-# Our Team (Alphabetical order)
+# Our Team 
 
 **Elijah Cavan** graduated from UWaterloo with a Bsc. Mathematics Physics and from Wilfrid Laurier with an MSc. Mathematics. My research mainly stems in cosmology and N-body systems.
 
