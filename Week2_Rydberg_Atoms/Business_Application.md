@@ -20,7 +20,7 @@ Examples:
 - Mesh Networks
 - Satelite Networks
   - [Starlink](https://www.starlink.com/)
-  - [Project Kuiper from Amazon] (https://www.aboutamazon.com/news/company-news/amazon-receives-fcc-approval-for-project-kuiper-satellite-constellation)
+  - [Project Kuiper from Amazon](https://www.aboutamazon.com/news/company-news/amazon-receives-fcc-approval-for-project-kuiper-satellite-constellation)
 - Aid distribution
 
 # Our Team 
