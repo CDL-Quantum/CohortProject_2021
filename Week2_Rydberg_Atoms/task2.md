@@ -19,12 +19,12 @@ $\ket{\psi(t)} =& U(t) U(t - \delta t) \cdots U(t_0 + \delta t) U(t_0) \ket{\psi
 where $U(t)$ is the time-evolution operator
 $U(t) =& \exp(-\frac{i}{\hbar} \delta t \hat{H}(t))$
 
-We can see the top five solutions in the following graph
+We can see the top five solutions and their frequency on the following graph. Additonally you can look at the [file with all the available solutions](./task2_data.dat)
 
-
-|Table Representation of Graph | Visual Representation of Graph|
+|Solutions | Solutions on the Graph|
 | :--------------: | :---------: 
-| <table>   <thead>   <tr> <th>Solution</th>  <th>Frequency</th>  </tr>   </thead>   <tbody>   <tr>  <td>011100</td>  <td>28721</td> </tr> <tr>  <td>110100</td>  <td>28372</td> </tr> <tr>  <td>010101</td>  <td>28177</td> </tr> <tr>  <td>111100</td>  <td>3013</td> </tr> <tr>  <td>011101</td>  <td>2900</td> </tr> </tbody> </table> | <img src="./resources/task2_top5.gif" width="300">
+| <table>   <thead>   <tr> <th>Solution</th>  <th>Frequency</th>  </tr>   </thead>   <tbody>   <tr>  <td>010101</td>  <td>28581</td> </tr> <tr>  <td>011100</td>  <td>28457</td> </tr> <tr>  <td>110100</td>  <td>28204</td> </tr> <tr>  <td>111100</td>  <td>3052</td> </tr> <tr>  <td>011101</td>  <td>2953</td> </tr> </tbody> </table> | <img src="./resources/task2_top5.gif" width="300">
+
 
 
 <img src="./resources/quantum_gotham/quantum_gotham.gif" width="300">
