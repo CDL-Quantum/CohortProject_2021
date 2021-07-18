@@ -34,7 +34,7 @@ Now we test some other annealing schedules, namely inverse, inverse-log, and exp
 
 <figure class="image">
   <img width="500" src = "./figures/task1_schedule_log.png" />
-  <figcaption> <b>Fig.1.3</b>  Energy of the state resulting from simulated annealing using the default annealing schedule as a function of temperature.</figcaption>
+  <figcaption> <b>Fig.1.3</b>  Annealing schedules, i.e. the temperature as a function of time.</figcaption>
 </figure>
 <br></br>
 Now let us simulate annealing with the new annealing schedules shown in the above. Let us start with the inverse schedule. As in Figs. 1.1 and 1.2, we plot the energy as a function of the number of annealing steps and temperature, respectively.
