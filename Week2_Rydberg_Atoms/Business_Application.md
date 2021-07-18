@@ -19,8 +19,8 @@ We leverage state of the art classical and quantum methods to provide efficient 
 Examples: 
 - Mesh Networks
 - Satelite Networks
-  - Starlink
-  - Project Kuiper from Amazon https://www.amazon.jobs/en/teams/projectkuiper
+  - [Starlink](https://www.starlink.com/)
+  - [Project Kuiper from Amazon] (https://www.aboutamazon.com/news/company-news/amazon-receives-fcc-approval-for-project-kuiper-satellite-constellation)
 - Aid distribution
 
 # Our Team 
