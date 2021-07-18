@@ -126,20 +126,64 @@ $$ H = -\sum_{i \in V} n_i + u \sum_{i,j \in E} n_i n_j $$
 
 ### Solve Gotham City's Problem
 
-We solve this problem in three ways using a simulated classical annealing approach, a real quantum algorithm as well as on real quantum hardware using DWave.
+We solve this problem in three ways using a simulated classical annealing approach, a real quantum algorithm as well as on real quantum hardware using D-Wave.
+
+#### Simulated Classical Annealing
 
 Running the algorithm on a simulated classical annealing algorithm yields a lowest energy level of -5. We reached convergance after about 3700 iterations using the default cooling schedule $T = T_i * ((T_f/T_i) ** (t/N))$. We plot one solution in the following figure in green:
 
 ![Graph with Solution](./resources/gotham-nodes-with-solution.png) |
 
+#### Quantum Annealing
+
 Next we also run the same algorithm quantum-ly.
 <span style="color:red;font-size:40px">@Henry to fill this in</span>
 
-We also solve this problem on real quantum hardware using DWave (Please see ["Solving the Problem with Real Quantum Hardware"](#toc8) section for more details). Here, we found multiple solutions with the same lowest energy of -5. We display the top solutions found in the left, along with an awesome GIF displaying each solution on the right (green nodes are occupied).
+#### Real Quantum Hardware: Microsoft QIO
 
-| DWave Solutions for Gotham Problem | GIF of the Multiple Best Solutions Found |
+Repeated runs on Microsoft QIO gave the same answer as the simulated quantum annealing approach.
+
+This solver (similar to most simulated annealing solvers) seems to give only one answer. It did not appear to be probabilistic and so, we did not see the value in proceeding any further with this algorithm.
+
+#### Real Quantum Hardware: D-Wave
+
+We also solve this problem on real quantum hardware using D-Wave. Here, we found multiple solutions with the same lowest energy of -5. We display the top solutions found in the left, along with an awesome GIF displaying each solution on the right (green nodes are occupied).
+
+| D-Wave Solutions for Gotham Problem | GIF of the Multiple Best Solutions Found |
 | :--------------: | :---------: |
 | ![Gotham Dwave Energy Levels](./resources/image%20b22.png)| ![Gotham Dwave energy solutions](./resources/Gotham%20Solutions%201.gif) |
+
+We also show the graph representation of the problem in D-Wave (left), the actual embedding on D-Wave 2000Q (middle) along with the energies sampled from Dwave (right).
+
+| Graph Representation on D-Wave | Embeddings on D-Wave | Energies Sampled on D-Wave |
+| :--------------: | :---------: |  :---------: |
+| ![D-Wave Graph](./resources/image%20b41.png) | ![D-Wave Embeddings](./resources/image%20b42.png) | ![D-Wave Energy Samples](.//resources/image%20b43.png) |
+
+#### New Formulation of the Problem
+
+The UD-MIS formulation where the range overlap is descretized does not give solutions that would indicate the optimum solution since a large overlap and a small overlap both have the same penalty (higher energy of +1).
+
+Thus a modified solution is found with a different solver (D-Wave) which uses the equation:
+
+$$ f(x) = \sum_{i} {Q_{i,i}}{x_i} + \sum_{i<j} {Q_{i,j}}{x_i}{x_j} $$
+As can be seen, in this solver the coefficient $Q_{i,j}$ can be used to indicate higher penalty for higher overlap.
+
+We will use $Q_{i,j}=1/D_{ij}$ We also use the energy of each tower as -3
+
+Using this formula and the execution below, we get the following best energy solution of -9.513712 using D-Wave. Although, note that this solution was only found 1 time with 100 samples. We notice that even with the new formulation, only 5 towers are needed. 
+
+With this formulation, we get a sampling given by the following two figures. On the left, we show the sampling from D-Wave and on the right, a similar GIF as above displaying the various solutions.
+
+| D-Wave Solutions for Modified Gotham Problem | GIF of the Multiple Best Solutions Found |
+| :--------------: | :---------: |
+| ![Gotham Dwave Energy Levels](./resources/image%20b32.png)| ![Gotham Dwave energy solutions](./resources/Gotham%20Solutions%202.gif) |
+
+From D-Wave, we also show the resulting qubit embedding (left) and energy spectrum (right):
+
+| Embeddings on D-Wave | Energies Sampled on D-Wave |
+| :---------: |  :---------: |
+| ![D-Wave Embeddings](./resources/task3-2-dwave-embeddings.png) | ![D-Wave Energy Samples](.//resources/task3-2-dwave-energy-spectrum.png) |
+
 
 
 
@@ -153,13 +197,13 @@ We would have to do an marginal analsysis and look at the incremental cost of ea
 
 With the current threshold based binary UD-MIS formulation it is not possible to get this level of information.
 
+Even when modifying the problem, we did not find a better solution with more towers.
+
 <a name="toc6"></a>
 
 ## Comparing the methods used to solve the UD-MIS problem
 
 <span style="color:red">TODO</span>
-
-
 
 
 <a name="toc7"></a>
