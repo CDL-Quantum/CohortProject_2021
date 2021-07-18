@@ -74,7 +74,7 @@ Quantum annealing:
     
 QAOA:
 <p float="left">
-<img src="../Week2_Rydberg_Atoms/img/criq.png" alt="drawing" width="300"/>
+<img src="../Week2_Rydberg_Atoms/img/criq_histogram.png" alt="drawing" width="300"/>
 <img src="../Week2_Rydberg_Atoms/img/cirq_graph.png" alt="drawing" width="300"/>
 <p>
     
