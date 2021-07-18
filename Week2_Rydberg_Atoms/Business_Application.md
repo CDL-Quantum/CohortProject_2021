@@ -86,11 +86,13 @@ The “production” costs are accounted for [[20]](https://www.genome.gov/about
 
 Several top players are aimed at launching cutting-edge mass spectrometry platforms to gain unique competitive edge over their peers in the global protein sequencing market. Some prominent companies are also consolidating their overall presence by strengthening the sales of reagents and consumables. Top players operating in the market include Thermo Fisher Scientific, Charles River Laboratories, and Shimadzu Corporation [[21]](https://www.biospace.com/article/protein-sequencing-market-increasing-focus-on-target-based-drug-development-activities-to-drive-the-market/).
 
-|Company name|Country|R&D budget|Profit-2020|
+|Company name|Country|R&D budget↑|Profit-2020|
 |----|----|----|----|
 |Thermo Fisher Scientific|USA|$ 1.18 billion|$ 32.22 billion|
-|Shimadzu Corporation|Japan|NA|$ 3.710 million|
-|Charles River Laboratories|USA|NA|$ 571.2 million|
+|Illumina, Inc|USA|$ 682.0 million|$ 3.24 billion|
+|BGI Genomics|China|$ 26.2 million* |$ 634.0 million|
+
+*Only the gene sequencing firm in Shenzhen,China.
 
 ## Mapping our competitive position
 
