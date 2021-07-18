@@ -135,10 +135,18 @@ Here are the results of our time to execute experiment:
 | <img src="./resources/dwave2000q_vs_classical_time.png" width="300"> | <img src="./resources/dwaveadvantage_vs_classical_time.png" width="300">
 
 Here are the results of our lowest energy experiment:
+
 |D-Wave 2000Q vs Classical | D-Wave Advantage vs Classical|
 | :--------------: | :---------: 
 | <img src="./resources/dwave2000q_vs_classical_energy.png" width="300"> | <img src="./resources/dwaveadvantage_vs_classical_energy.png" width="300">
 
+We can see that both D-Wave machines can't find the lowest energy solution. Despite a large amount of sampling both quantum machines found very few results in the lower values, as can be seen in the following graphs:
+
+|40 Nodes | 100 Nodes|
+| :--------------: | :---------: 
+| <img src="./resources/2000q_energy_sampling.png" width="300"> | <img src="./resources/advantage_energy_sampling.png" width="300">
+
+While it is true that current quantum machines fail to find the solutions with the lowest value, we can clearly see that they perform much faster than classical methods. We expect that with general quantum hardware improvements, quantum methods will become better at finding the lowest energy solutions for the UD-MIS problem, whilst keeping their speed advantage. 
 
 <a name="toc5"></a>
 ## Task 3
