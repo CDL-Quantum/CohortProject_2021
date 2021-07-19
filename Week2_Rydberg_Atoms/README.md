@@ -83,7 +83,7 @@ and because we want to be sure that there is no overlap all the conditions of th
 Classical annealing:
 
 <p align="center">
-<img src="../Week2_Rydberg_Atoms/img/task3_classical.png" alt="drawing" width="500"/>
+<img src="../Week2_Rydberg_Atoms/img/task3_graph.png" alt="drawing" width="500"/>
 <p>
     
 
