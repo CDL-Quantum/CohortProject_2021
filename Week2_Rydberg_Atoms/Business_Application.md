@@ -145,5 +145,4 @@ improvement in the business outcomes, which can be seen a strong
 value propositions applying MIS and TSP based planning.
 
  
-
-**Please store your video externally to the repo, and provide a link e.g. to Google Drive**
+Our business video is available [here.](https://qunova.sharepoint.com/:v:/s/rnd/EdZI786qsG5Oj2Io75b3UgsBQXUQg_-nWDVbvilz3I-zGA?e=pwqWvm)
