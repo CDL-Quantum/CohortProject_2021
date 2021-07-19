@@ -1,14 +1,6 @@
 ![CDL 2020 Cohort Project](../../figures/CDL_logo.jpg)
 # Quantum Cohort Project Business Application
 
-For each weekly project, your team is asked to complete the below business application exercise.
-To complement the technical tasks, please consdier the four questions below.
-You are free to format your response to these four questions as you wish (with the final question done as a short recorded video), and to include
-the content (or links to the content) on your forked repository.
-
-A brief example for each question is included for the 
-[Traveling Salesman Problem.](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
-
 ## Step 1: Explain the technical problem you solved in this exercise
 
 In this project we have studied how the Unit-Disk Maximum Independent Set (UD-MIS) can be solved using Rydberg atom arrays. 
@@ -45,7 +37,7 @@ government bodies or local councils. Others include
 
 ## Step 4: Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language
 
-Meet **Ghost in the shell** initiative, a not-for-profit using quantum computing to save a species from extinction.
+Meet **Ghost in the Shell** initiative, a not-for-profit using quantum computing to save a species from extinction.
 Our proof of concept was performed in partnership with a local conservation department in New Zealand to 
 save the Kokako from extinction.
 
