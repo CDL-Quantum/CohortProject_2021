@@ -125,7 +125,7 @@ Examples:
 
 **Brandom Hiles** I have a background in physics, and currently working in the software engineering field mainly working in the API/Database layer.
 
-**William Ngana** 
+**William Ngana** I have a background in physics, I work as a software engineer in Toronto.
 
 **Silvia Tzenkova** I have a background in environmental and energy engineering, and currently working on developing hybrid computing emotion prediction platform.
 
