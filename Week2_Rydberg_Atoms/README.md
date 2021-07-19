@@ -16,7 +16,7 @@ Finally, we mapped the UD-MIS problem to a real-life one. We applied these techn
 
 You can find the full instructions for tasks we completed this week in [this pdf](./instructions.pdf).
 
-## Solving Tasks 1 and 2 using Classical and Quantum Brute Force
+### Solving Tasks 1 and 2 using Classical and Quantum Brute Force
 
 The graph corresponding to the unit-disk maximum independent set (UD-MIS) for this problem is
 
@@ -69,3 +69,8 @@ For the quantum annealing, we tried running 10000 samples for each scheme (see [
 <center><img src='Team_6/08-Wayne_q_annealing.png' width='800'></center>
 
 From the obtained results, we can conclude that if applying brute force is not possible then it is easier to find the solutions using quantum annealing than classical Montecarlo simulations. For all cases, we found that it is crucial to evaluate the cost function in order to validate its performance.
+
+
+## Business Application
+
+[Here](./Business_Application.md) you can find our Business Application.
