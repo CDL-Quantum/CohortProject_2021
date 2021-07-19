@@ -5,7 +5,7 @@ This project will guide you through using the foundations of quantum hardware to
 
 Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week2_Rydberg_Atoms/instructions.pdf) to begin learning about your tasks for this week!
 
-Please edit this markdown file directly with links to your completed tasks and challenges.  
+**Please edit this markdown file directly with links to your completed tasks and challenges.**
 
 ## Tasks include:
 * Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
@@ -16,9 +16,9 @@ Please edit this markdown file directly with links to your completed tasks and c
 
 ## Further Challenges:
 * Comparing the methods used to solve the UD-MIS problem.
-* Solving the problem with real quantum hardware.
+* Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
 * Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
-
+* Solving the problem with real quantum hardware.
 
 ## Business Application
 For each week, your team is asked to complete a Business Application. Questions you will be asked are:
