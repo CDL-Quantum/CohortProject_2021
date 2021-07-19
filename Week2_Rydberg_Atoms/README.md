@@ -59,22 +59,33 @@ As we can see, when we measure the quantum system, the highest probability outco
 
 ## Task 3: A real problem (Gotham City)
 
-The code for this task is provided in the [3_dmrg_classical_annealing.ipynb](notebooks/3_dmrg_classical_annealing.ipynb) notebook. 
-For this task we will be constructing an DMRG-based solution to the UD-MIS problem. 
+Mr. Wayne's problem maps to a UD-MIS problem rather trivially. 
+He has a set of static locations for potential towers and wants to maximise coverage (i.e. number of towers), while having no tower coverage overlap.
+In these examples, we have seen how the ground state of our Rydberg atom Hamiltonian finds solutions to graphs such that number of occupied sites is maximised, but sites that share an edge cannot both be occupied.
+Using the tower locations, we can build a graph where towers that have overlapping coverage will share an edge.
+Solving the Hamiltonian will give us the optimal configuration to Mr. Wayne's problem. 
+
+For this task, we will be constructing an DMRG-based solution to the UD-MIS problem. 
 This we will effectively be another classical approach, but using tools from tensor networks and condensed matter physics.
+Technical details can be found in the [3_dmrg_classical_annealing.ipynb](notebooks/3_dmrg_classical_annealing.ipynb) notebook.
+We obtain the following solution:
 
-1. Mr. Wayne's problem maps 
+![](fig/dmrg_gotham.png)
 
-## Tasks include:
+Interestingly, a more straightforward classical annealing approach yields a different solution:
 
-* Solving a real-world problem involving cell phone tower placement in Gotham City.
-* Comparing the classical and quantum methods.
+![](fig/classical_gotham.png)
+
+Clearly something is wrong with the DMRG code! 
+The solution provided by Monte Carlo simulation is *not* unique, which can be verified by running the code in the notebook a couple times.
+
+Nonetheless, the (correct) solution to Mr. Waynes problem still leaves much of Gotham without coverage. 
+It is recommended that he perhaps spend money to build additional towers in more strategic locations.
+The current set of towers is very tightly packed, and many towers overlap with one another.
 
 ## Further Challenges:
 * Comparing the methods used to solve the UD-MIS problem.
 * Benchmarking other quantum and classical optimization methods to solve your UD-MIS problems.
-* Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
-* Solving the problem with real quantum hardware.
 
 ## Business Application
 For each week, your team is asked to complete a Business Application. Questions you will be asked are:
