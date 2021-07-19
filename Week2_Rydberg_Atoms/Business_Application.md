@@ -1,30 +1,149 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
+
 # Quantum Cohort Project Business Application
 
-For each weekly project, your team is asked to complete the below business application exercise.
-To complement the technical tasks, please consdier the four questions below.
-You are free to format your response to these four questions as you wish (with the final question done as a short recorded video), and to include
-the content (or links to the content) on your forked repository.
+ 
 
-A brief example for each question is included for the 
-[Traveling Salesman Problem.](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+## 1. Applications of MIS solver in conjunction to TSP
 
-## Step 1: Explain the technical problem you solved in this exercise
+Maximum independent set problem is defined to find a max set of
 
-Example: Finding a global minimum in settings where a classical approach may not be able to find a global minimum.
+vertices that does not allow interferences between a pair of MIS
 
-## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
+vertices. This nature of problem can be applied in the sense of
 
-Example: A courier has to deliver parcels to several locations and is looking to minimize its travel time. (e.g., “the travelling salesman problem”).
+conflicts of commercial interests. Good examples can be found in
 
-## Step 3: Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved
+franchised retail network, where two franchised branches in the
 
-Examples: 
-- Federal Express
-- Canada Post
+neighbor may harm the revenues of both branches, while the
 
-## Step 4: Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language
+head quarter tends to maximize the number of branches densely.
 
-Example: By travelling to all destinations via the shortest route, a courier can generate the same revenue that it would have generated following any other route, but will minimize travel costs (e.g., fuel costs). By minimizing travel costs, the courier will be more profitable than it would have been had it travelled through any other route.
+ 
+
+In our business application, we can make use of a TSP (traveling
+
+salesman problem) solver to choose one from the solutions for
+
+MIS, to minimize the cost. 
+
+ 
+
+ 
+
+## 2: An Example of Roadshow planning for R&B singer Tory Renez
+
+ 
+
+Let's say Tory Renez is back in hometown, and plans a roadshow in the
+
+vicinity of the Greater Toronto. The management of Tory intends to
+
+have as many as possible fans seeing these roadshow events. In
+
+planning, we consider the following conditions:
+
+1. People are willing to travel to the towns in the vicinity.
+
+2. Maximize the counts of concert events.
+
+3. Make sure every concert event has net income.
+
+ 
+
+In order to meet the third condition, each concert hall should share
+
+a certain amount of population to have enough audience. Each concert
+
+event will be broken even when more than
+
+half of the concert hall sittings are sold. This requirement is
+
+translated as a unit circle of interaction with neighboring cities.
+
+This problem formulation reduces to a MIS problem.
+
+ 
+
+## 3: A Specific Example of the Problem
+
+ 
+
+Roadshow Event Planner: As with Tory Renez example, we can find the
+
+following concert planning
+
+- Composition of graph: The target towns are selected if the population
+
+is greater than 50,000 in the Greater Toronto.
+
+ 
+
+![CDL 2020 Cohort Project](./figures/toronto_map.png)
+
+ 
+
+- A unit circle centered at the concert hall of each town
+
+  is drawn on a population density hyper space.
+
+  
+
+![CDL 2020 Cohort Project](./figures/toronto_mis_graph.png)
+
+ 
+
+- Run the quantum annealing MIS sover algorithm and
+
+  find many solutions on the MIS problem.
+
+ 
+
+![CDL 2020 Cohort Project](./figures/toronto1.png)
+
+![CDL 2020 Cohort Project](./figures/toronto2.png)
+
+![CDL 2020 Cohort Project](./figures/toronto3.png)
+
+![CDL 2020 Cohort Project](./figures/toronto4.png)
+
+![CDL 2020 Cohort Project](./figures/toronto5.png)
+
+ 
+
+  Here, the red marked vertices indicate the roadshow concert halls.
+
+  
+
+- Run TSP (traveling salesman problem) solver to find the shorted
+
+roadshow path as the final planning.
+
+ 
+
+![CDL 2020 Cohort Project](./figures/toronto5.png)
+
+ 
+
+## Value proposition of your innovation to this potential customer in non-technical language
+
+ 
+
+Planning a roadshow for fans of a singer group is very similar to
+
+planning franchise retail businesses such as Starbucks, Macdonald,
+
+ExxonMobil, Savon Supermarket, Wallmart, Bestbuy, etc.
+
+ 
+
+Optimized planning on these businesses can lead to substantial
+
+improvement in the business outcomes, which can be seen a strong
+
+value propositions applying MIS and TSP based planning.
+
+ 
 
 **Please store your video externally to the repo, and provide a link e.g. to Google Drive**
