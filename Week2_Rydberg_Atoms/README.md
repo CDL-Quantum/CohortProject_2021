@@ -77,6 +77,7 @@ Interestingly, a more straightforward classical annealing approach yields a diff
 ![](fig/classical_gotham.png)
 
 Clearly something is wrong with the DMRG code! 
+See the corresponding notebook for discussion on the applicability of DMRG to this solution.
 The solution provided by Monte Carlo simulation is *not* unique, which can be verified by running the code in the notebook a couple times.
 
 Nonetheless, the (correct) solution to Mr. Waynes problem still leaves much of Gotham without coverage. 
