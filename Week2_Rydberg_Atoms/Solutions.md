@@ -1,6 +1,23 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 2: Optimization problems \& Rydberg atom arrays
 
+Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week2_Rydberg_Atoms/instructions.pdf) to begin learning about your tasks for this week
+
+In this exercise we solved the UD-MIS problem on a graph G of V vertices and E edges by finding the ground state of the Hamiltonian of a system of V Rydberg atoms placed in the vertices of G.
+
+We used two different approaches to solve this problem:
+1) Classical annealing
+>We simulated the associated Hamiltonian at low temperature using classical Monte Carlo simulations. At a low enough temperature, we can achieve its ground state, i.e. the solution of our original problem. In our simulations, we tried different annealing schedules to achieve the desired solution.
+
+2) Quantum annealing
+>Starting in an easy-to-prepare ground state of a Hamiltonian H(0), we evolved this state with a time-dependent Hamiltonian H(t) in such a way that the ground state of the final Hamiltonian H(t*) is the one we were looking for. We accomplished this by forcing H(t*) to be the UD-MIS Hamiltonian.
+
+In non-technical language, we found the maximum number of occupied locations under certain constraints using classical and quantum techniques to compute the solutions.
+
+Finally, we mapped the UD-MIS problem to a real-life one. We applied these techniques to choose in which places to install a set of cell phone towers in Gotham City since a set of possible locations is given.
+
+You can find the full instructions for tasks we completed this week in [this pdf](./instructions.pdf).
+
 ## Solving Tasks 1 and 2 using Classical and Quantum Brute Force
 
 The graph corresponding to the unit-disk maximum independent set (UD-MIS) for this problem is
@@ -16,7 +33,7 @@ were *k* is the degeneracy index.
 
 <center><img src='Team_6/02-solutions_1_2.png' width='600'></center>
 
-The quantum and classical sets of solutions are the same and, if one is looking for the least-overlapping-disks solution, the second is the winner!  
+The quantum and classical sets of solutions are the same and, if one is looking for the least-overlapping-disks solution, the second one is the winner!  
 
 ### Task 1: Simulated classical Annealing
 
