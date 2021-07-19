@@ -45,8 +45,6 @@ def random_flat_graph(L,l,p1,p2,u=1.34,seed=0):
 
     return edges, w_ij, maxl
 
-def get_list(edges):
-    return [[x[0],x[1]] for x in edges]
 
 class FlatNetwork():
     
@@ -148,6 +146,7 @@ class FlatNetwork():
         sweepd = kwargs['sweepd'] if ('sweepd' in kwargs) else [1,2,2,2,3]
         sweepi = kwargs['sweepi'] if ('sweepi' in kwargs) else [5,5,5,5,5]
         sweepn = kwargs['sweepn'] if ('sweepn' in kwargs) else [1.0e-2,1.0e-3,1.0e-4,1.0e-5,1.0e-6]
+        sweepmin = kwargs['sweepmin'] if ('sweepmin' in kwargs) else [None]*len(sweepi)
         
         #Run
         sch = 0
@@ -161,9 +160,9 @@ class FlatNetwork():
             for i in range(sweepi[sch]):
                 print('Beginning sweep: ',i,'of',sweepi[sch])
                 newes = dm.sweep()
-                newe = dm.energy()
-                print('Sweep Energy: ',newe)
-                if(abs(newe-olde)<cnvgThreshold):
+                newe = dm.energy()[0]                
+                print(f'Sweep Energy: {newe:.8f}')
+                if(abs(newe-olde)<cnvgThreshold and (sweepmin[sch] is None or i>=sweepmin[sch] )):
                     olde = newe
                     break
                 olde = newe
@@ -297,14 +296,14 @@ if __name__ == '__main__':
             fn = FlatNetwork(L,edges,wij,maxl)
             print(fn.edges)
 
-            testMF = True
+            testMF = False
             if(testMF):
                 print('\nTesting MF')
                 tE, fstate = fn.runMF(u = u)
                 print('MF Energy: ', tE)
                 print('MF State: ', fstate)
 
-            testDMRG = False
+            testDMRG = True
             if(testDMRG):
                 print('\nTesting DMRG')
                 e, mps = fn.run()    
