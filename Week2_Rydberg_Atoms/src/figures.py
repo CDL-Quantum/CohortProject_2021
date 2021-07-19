@@ -81,7 +81,7 @@ def plot_quantum_annealing(ax, steps, energy, omega, delta):
     # Energy as a function of steps (blue).
     ax.plot(steps, energy, c='tab:blue')
     ax.tick_params(axis='y', labelcolor='tab:blue', color='tab:blue')
-    ax.set_xlabel('t')
+    ax.set_xlabel(r'$t$')
     ax.set_ylabel(r'$\langle \psi (t) | \hat H (t=1) | \psi (t) \rangle$', color='tab:blue')
     ax.set_yticks(np.linspace(-3, 0, 4))
     # On the same axis, temperature as a function of steps (red).
@@ -108,7 +108,7 @@ def plot_quantum_udmis(ax, udmis):
                 ax.plot([xi, xj], [yi, yj], 'k')
     # Draw the sites.
     occupancies = qt.state_index_number(
-        udmis.state.dims[0], udmis.state.full().argmax()
+        udmis.state.dims[0], (abs(udmis.state.full()) ** 2).argmax()
     )
     # Draw the sites.
     max_x = 0
@@ -132,6 +132,7 @@ def plot_quantum_udmis(ax, udmis):
     ax.set_xlim(min_x-0.6,max_x+0.6)
     ax.set_ylim(min_y-0.6,max_y+0.6)
     plt.tight_layout()
+
 
 def plot_mpo_udmis(ax, udmis):
     """
@@ -170,6 +171,7 @@ def plot_mpo_udmis(ax, udmis):
     ax.set_aspect('equal', adjustable='box')
     ax.set_aspect('equal', adjustable='box')
     plt.tight_layout()
+
 
 def plot_mpo_initial(ax, udmis):
     for i in range(udmis.num_vertices):

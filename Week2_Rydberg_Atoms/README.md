@@ -6,23 +6,22 @@ This project will guide you through using the foundations of quantum hardware to
 
 Open up [instructions.pdf](instructions/instructions.pdf) to begin learning about your tasks for this week!
 
-**Please edit this markdown file directly with links to your completed tasks and challenges.**
-
 ## Task 1: Simulated classical annealing
 
 The code for this task is provided in the [1_classical_annealing.ipynb](notebooks/1_classical_annealing.ipynb) notebook. To start, we simply run the code provided to see the output of the default annealing schedule:
 
 ![](fig/classical_annealing.png)
 
-On the left, we show the initial configuration of the graph (randomized occupancies), where occupied sites are filled in, and interacting sites share an edge.
-In the middle, we show the energy and temperature of the system as a function of the steps in the Monte Carlo algorithm.
-On the right, we show the final configuration of the graph, which should be the ground state of the (classical) Hamiltonian.
+On the left, we show the initial configuration of the graph (randomized occupancies).
+Occupied sites are denoted by filled in circles, and interacting sites share an edge.
+In the middle, we plot the energy (blue) and temperature (red) of the system as a function of the steps in the Monte Carlo algorithm.
+On the right, we show the final configuration of the graph, which should be the ground state of the Hamiltonian.
 
-There are two subgraphs, each with three vertices.
+There are two subgraphs in this specific problem, and each has three vertices.
 However, the lower partition is notable for having an all-to-all connection.
-Thee Hamiltonian energetically prohibits having adjacent sites occupied.
-This leads to a frustrated system: the lowest energy configuration has only one of these three sites occupied, but there is no term to favour one site being occupied over another.
-The graph does not have a unique solution, which can be verified by running the code several times.
+The Hamiltonian energetically prohibits having adjacent sites occupied.
+This leads to a frustrated system: the lowest energy configuration of the lower partition has only one of these three sites occupied, but there is no term to favour one site being occupied over another.
+The graph does not have a unique solution, which can be verified by comparing this output to the ones below.
 
 Now we look for alternative annealing schedules to reduce the time to find the ground state.
 First, we look at a schedule that starts at zero temperature, before reaching a similar maximum and then cooling down.
@@ -40,12 +39,29 @@ The result is unoriginal, but effective:
 
 ![](fig/classical_annealing_schedule_3.png)
 
-All these annealing schedules are very ad hoc, but maybe be found the the corresponding notebook.
+The exact form for these schedules may be found the corresponding notebook.
+
+## Task 2: Simulated quantum annealing
+
+The code for this task has been re-written in python, and is provided in the [2_quantum_annealing.ipynb](notebooks/2_quantum_annealing.ipynb) notebook.
+
+We obtain the following:
+
+![](fig/quantum_annealing.png)
+
+On the left, we show the initial configuration of the system (all sites unoccupied).
+In the middle, we plot three quantities as a function of the annealing parameter *t*.
+We plot the energy (blue) of the *time-dependant* quantum state for the *final* (i.e. target) Hamiltonian, and we plot the two annealing parameters, *Ω* (red) and *δ* (green), as a function of *t*.
+One the right, we show the highest probability output configuration.
+
+As we can see, when we measure the quantum system, the highest probability outcome is a valid correct ground state.
+
+## Task 3: A real problem
 
 ## Tasks include:
-* Simulating the same problem but using quantum annealing.
-* Comparing the classical and quantum methods.
+
 * Solving a real-world problem involving cell phone tower placement in Gotham City.
+* Comparing the classical and quantum methods.
 
 ## Further Challenges:
 * Comparing the methods used to solve the UD-MIS problem.
