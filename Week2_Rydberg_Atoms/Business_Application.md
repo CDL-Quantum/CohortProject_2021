@@ -74,9 +74,7 @@ Routing mechanism for networks of low power and limited computation capability d
 <p align="center"><img src="../Week2_Rydberg_Atoms/img/3. Routing Protocl Optimazation.jpg" alt="drawing" width="700" height="500"/></p>
 Fig. 2 IoT Routing Protocol Optimization close to the data source or in the virtual core.
 
-
 A map of a fictitious 5G cell site simulated with hybrid algorithms can be seen here:
-
 <p align="center"><img src="../Week2_Rydberg_Atoms/img/Routing.gif" alt="drawing" width="900" /></p>
 Fig 3. 5G cell site with optimized antenna's set
 
