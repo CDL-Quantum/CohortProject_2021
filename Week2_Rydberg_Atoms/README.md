@@ -124,7 +124,13 @@ All the code relevent to analysing simulation results and plot generation can be
     <br/>
 * Demonstrating how other problems can be mapped to UD-MIS and solving said problems.
 
+For our additional UD-MIS problem we consider the problem of choosing the best possible locations for satellite coverage. This will be useful later for our business applicaiton. The idea here is to be able to pick optimum locations in African continent based on the population density shown in the figure below. In order to tackle this problem, we will first coarse-grain the population into several rectangular cells and compute the effective population density. All of these locations constitute valid vertices that we must choose from. The selection criteria we decided is based on the requirement that we must always have the top 20% of the populous locations without any contention. For the remaining 80% we place an edge whenever they are within a certain distance from each other and if their populations are within a certain size of each other. These constrains setup a valid UD-MIS problem as we do not know how to optimally select such a highly connected graph. 
 
+<p align="center">
+    <img src="./results/opTasks/AfricaPD.png" height="250"/> <img src="./results/opTasks/AfricaCG.png" height="250"/>  <img src="./results/opTasks/AfricaSoln.png" height="250"/> 
+</p>
+
+As is evident using Simulated Annealing we are able to find the requisite solution. 
 
 * Solving the problem with real quantum hardware.
 
