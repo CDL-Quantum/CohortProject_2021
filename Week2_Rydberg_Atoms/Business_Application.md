@@ -77,4 +77,5 @@ In NYC:
 
 ## Step 4: A 90 second video explaining the value proposition of our innovation to this potential customer in non-technical language
 
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/mY33muTBi9E/0.jpg)](https://www.youtube.com/watch?v=mY33muTBi9E "Video Title")
 
