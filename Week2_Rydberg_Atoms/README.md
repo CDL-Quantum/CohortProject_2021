@@ -82,18 +82,17 @@ and because we want to be sure that there is no overlap all the conditions of th
 
 Classical annealing:
 
-<p>
-<img src="../Week2_Rydberg_Atoms/img/task3_classical.png" alt="drawing" width="300"/>
-<img src="../Week2_Rydberg_Atoms/img/task3_graph.png" alt="drawing" width="300"/>
+<p align="center">
+<img src="../Week2_Rydberg_Atoms/img/task3_classical.png" alt="drawing" width="500"/>
 <p>
     
 
 Quantum annealing:
-<img src="../Week2_Rydberg_Atoms/img/Task3_J.png.png" alt="drawing" width="300"/>
+<p align="center"><img src="../Week2_Rydberg_Atoms/img/Task3_J.png" alt="drawing" width="500"/><p>
     
 QAOA:
-<p>
-<img src="../Week2_Rydberg_Atoms/img/criq_histogram.png" alt="drawing" width="300"/>
+<p align="center">
+<img src="../Week2_Rydberg_Atoms/img/cirq_histogram.png" alt="drawing" width="300"/>
 <img src="../Week2_Rydberg_Atoms/img/cirq_graph.png" alt="drawing" width="300"/>
 <p>
     
