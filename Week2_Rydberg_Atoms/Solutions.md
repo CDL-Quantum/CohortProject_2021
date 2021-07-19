@@ -9,7 +9,11 @@ The graph corresponding to the unit-disk maximum independent set (UD-MIS) for th
 
 Given its small size, we begin by solving the problem using classical and quantum brute-force ([UD-MIS_Problem-Brute_force.ipynb](Team_6/UD-MIS_Problem-Brute_force.ipynb)). For the classical case, we have computed all possible outcomes and evaluated the cost function. Then, the solutions are the configurations with the lower cost.   
 For the quantum version, we built the Hamiltonian asossiated to the 
-cost function, and calculated its eigenvalues and eigenvectors. The solutions are codified in the eigenvectors of the ground state eigenspace. In order to extract the solutions, we computed <img src="https://render.githubusercontent.com/render/math?math=n_i=< Gs(k) \left| n_i \right| Gs(k)>">, were $k$ is the degeneracy index.
+cost function, and calculated its eigenvalues and eigenvectors. The solutions are codified in the eigenvectors of the ground state eigenspace. In order to extract the solutions, we computed
+
+<img src="https://render.githubusercontent.com/render/math?math=n_i=< Gs(k) \left| n_i \right| Gs(k)>,">
+
+were k is the degeneracy index.
 
 <center><img src='Team_6/02-solutions_1_2.png' width='600'></center>
 
