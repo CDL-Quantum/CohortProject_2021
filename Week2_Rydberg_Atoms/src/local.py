@@ -258,7 +258,7 @@ class LocalHamiltonian(object):
         else:
             raise Exception(
                 "algorithm should be either 'single-site' or '2-site'. {} not defined".format(algorithm))
-        return D.mps
+        return D.mps, D.sweep_energies
 
     def correlation_matrix(self,psi,B):
         K = 1j*np.zeros([len(B),len(B)])
@@ -287,6 +287,7 @@ class DMRG(object):
         else:
             self.mps = mps
         self.env_sites = self._env_sites()
+        self.sweep_energies = []
         super(DMRG, self).__init__()
 
     def __repr__(self):
@@ -561,19 +562,23 @@ class DMRG(object):
 
     def run(self, Nsweeps=100, eps=1e-16):
         energyprev = self.energy()
+        self.sweep_energies.append(energyprev)
         for _ in range(Nsweeps):
             for site in range(self.Nsites - 1):
                 self._optimise_site(site, 'right')
+            self.sweep_energies.append(self.energy())
             for site in reversed(range(1, self.Nsites)):
                 self._optimise_site(site, 'left')
-            energy = self.energy()
-            if abs(energy - energyprev) < eps:
+            self.sweep_energies.append(self.energy())
+            if abs(self.sweep_energies[-1] - energyprev) < eps:
                 break
-            energyprev = energy
+            energyprev = self.sweep_energies[-1]
             # bar.update(Energy=np.real(self.energy()))
 
     def run_2(self, Nsweeps=100, threshold=1e-12, eps=1e-15):
+
         energyprev = self.energy()
+        self.sweep_energies.append(energyprev)
         for _ in range(Nsweeps):
             # First sweep from left to right
             rights = self._cummulative_contracted_env('right')
@@ -581,15 +586,18 @@ class DMRG(object):
             for site in range(self.Nsites - 2):
                 left = self._optimise_2_sites(
                     site, 'right', threshold, left=left, right=rights[site + 2])
+            self.sweep_energies.append(self.energy())
             lefts = self._cummulative_contracted_env('left')
             right = None
             for site in reversed(range(1, self.Nsites)):
                 right = self._optimise_2_sites(
                     site, 'left', threshold, left=lefts[site - 2], right=right)
-            energy = self.energy()
-            if abs(energy - energyprev) < eps:
+            self.sweep_energies.append(self.energy())
+            if abs(self.sweep_energies[-1] - energyprev) < eps:
                 break
-            energyprev = energy
+            energyprev = self.sweep_energies[-1]
+
+
 
 def svd_compress_mpo(mpo):
     # fuse the physical indices to make the mpo mps-like

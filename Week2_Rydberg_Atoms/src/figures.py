@@ -50,17 +50,28 @@ def plot_classical_udmis(ax, udmis):
             if udmis.edges[i, j]:
                 ax.plot([xi, xj], [yi, yj], 'k')
     # Draw the sites.
+    max_x = 0
+    max_y = 0
+    min_x = 2
+    min_y = 2
     for i, (x, y) in enumerate(udmis.graph):
+        max_x = max(max_x, x)
+        max_y = max(max_y, y)
+        min_x = min(min_x, x)
+        min_y = min(min_y, y)
         if udmis.state[i]:
             ax.plot(x, y, 'ko', mfc='k', ms=15)
+            circle = plt.Circle((x,y), 0.5, color='red', alpha=0.1)
+            ax.add_patch(circle)
         else:
             ax.plot(x, y, 'ko', mfc='w', ms=15)
+
     # Adjust plotting area.
-    ax.set_xlim([0.05, 1.65])
-    ax.set_ylim([0.4, 3.65])
-    ax.set_xticks([0.5, 1.5])
-    ax.set_yticks([0.5, 1.5, 2.5, 3.5])
     ax.set_aspect('equal', adjustable='box')
+    ax.set_aspect('equal', adjustable='box')
+    ax.set_xlim(min_x-0.6,max_x+0.6)
+    ax.set_ylim(min_y-0.6,max_y+0.6)
+    plt.tight_layout()
 
 
 def plot_quantum_annealing(ax, steps, energy, omega, delta):
@@ -99,17 +110,28 @@ def plot_quantum_udmis(ax, udmis):
     occupancies = qt.state_index_number(
         udmis.state.dims[0], udmis.state.full().argmax()
     )
+    # Draw the sites.
+    max_x = 0
+    max_y = 0
+    min_x = 2
+    min_y = 2
     for i, (x, y) in enumerate(udmis.graph):
-        if occupancies[i]:
+        max_x = max(max_x, x)
+        max_y = max(max_y, y)
+        min_x = min(min_x, x)
+        min_y = min(min_y, y)
+        if udmis.state[i]:
             ax.plot(x, y, 'ko', mfc='k', ms=15)
+            circle = plt.Circle((x,y), 0.5, color='red', alpha=0.1)
+            ax.add_patch(circle)
         else:
             ax.plot(x, y, 'ko', mfc='w', ms=15)
+
     # Adjust plotting area.
-    ax.set_xlim([0.05, 1.65])
-    ax.set_ylim([0.4, 3.65])
-    ax.set_xticks([0.5, 1.5])
-    ax.set_yticks([0.5, 1.5, 2.5, 3.5])
     ax.set_aspect('equal', adjustable='box')
+    ax.set_xlim(min_x-0.6,max_x+0.6)
+    ax.set_ylim(min_y-0.6,max_y+0.6)
+    plt.tight_layout()
 
 def plot_mpo_udmis(ax, udmis):
     """
@@ -174,4 +196,16 @@ def plot_mpo_initial(ax, udmis):
     ax.set_aspect('equal', adjustable='box')
     ax.set_xlim(min_x-0.6,max_x+0.6)
     ax.set_ylim(min_y-0.6,max_y+0.6)
+    plt.tight_layout()
+
+def plot_mpo_sweeps(ax, udmis):
+    """
+    Plot the energy and temperature as a function of annealing steps.
+    """
+    # Energy as a function of steps (blue).
+    gs, e = udmis.ground_state()
+    ax.plot(np.arange(len(e)) , e, c='tab:blue')
+    ax.set_xticks(np.arange(len(e)))
+    ax.set_xlabel('DMRG Sweeps')
+    ax.set_ylabel(r'$\langle \psi_k | \hat H | \psi_k \rangle$')
     plt.tight_layout()

@@ -112,7 +112,7 @@ class MPOClassicalUDMIS(AbstractUDMIS):
         return self.hamiltonian.ground_state()
 
     def gs_bitstring(self):
-        gs = self.ground_state()
+        gs = self.ground_state()[0]
         bs = []
         for s in gs:
             bs.append(site_to_bitstring(s))
