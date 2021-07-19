@@ -155,4 +155,4 @@ In summary, StarLink will be able to make use of our solution to solve a static 
 
 ## Video Presentation
 
-You can find our short presentation [![here](./mp1.jpg)](https://youtu.be/mYXmBGd2T7w).
+You can find our short presentation [![here](./mq1.jpg)](https://youtu.be/mYXmBGd2T7w).
