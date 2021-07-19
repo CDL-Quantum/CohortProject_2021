@@ -1,7 +1,7 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 
 
-## Step 1: Explain the technical problem you solved in this exercise
+## The Challenge!
 
 <p align="center"><img src="../Week2_Rydberg_Atoms/img/1. IoT.jpg" alt="drawing" width="700" height="500"/></p>
 
@@ -9,7 +9,7 @@ Given a set of objects for instance antennas, satellites, big data, etc, which o
 
 The maximum independent set problem besides proving the computational complexity of many theoretical problems, serves also as a useful model for real world optimization problems in numerous fields, including information retrieval, signal transmission analysis, classification theory, economics, scheduling, big data, error correcting codes, wireless networks and biomedical engineering [1].
 
-## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
+## 1. Real World Applications
 
 There are several markets where UD-MIS problem can be applied:
 
