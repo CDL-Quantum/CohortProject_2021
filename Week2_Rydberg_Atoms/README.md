@@ -140,7 +140,7 @@ For another alternative real world application of MIS we look at goods delivery 
 
 <img src="../Week2_Rydberg_Atoms/img/blue_flower.png" alt="drawing" width="300"/>
 
-Another new mysterious player on the market of "Societal Progress", [Blue Flower Inc,](https://batman.fandom.com/wiki/League_of_Shadows) is promising to bring the "5G Revolution" to Gotham with their new microwave communications device technology.  These transmitters require being placed near water mains to meet cooling constraints.  Optimal placing of their hardware is an important problem in maximizing delivery of their "Services" to their customer population. 
+Another new mysterious player on the market of **"Societal Renewal"**, [Blue Flower Inc,](https://batman.fandom.com/wiki/League_of_Shadows) is promising to bring the "5G Revolution" to Gotham with their new microwave communications device technology.  These transmitters require being placed near water mains to meet cooling constraints.  Optimal placing of their hardware is an important problem in maximizing delivery of their "Services" to their customer population. 
 ### 4.4 Solving UD-MIS on quantum hardware
 
 We also apply state of the art quantum hardware from D-Wave to solve the problem of UD-MIS [here](./D-Wave_qpu_and_simulated_annealing.ipynb)
