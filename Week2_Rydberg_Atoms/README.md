@@ -65,21 +65,24 @@ and because we want to be sure that there is no overlap all the conditions of th
 
 Classical annealing:
 
-<p float="left">
+<p>
 <img src="../Week2_Rydberg_Atoms/img/task3_classical.png" alt="drawing" width="300"/>
 <img src="../Week2_Rydberg_Atoms/img/task3_graph.png" alt="drawing" width="300"/>
 <p>
     
 Quantum annealing:
+<img src="../Week2_Rydberg_Atoms/img/Task3_J.png.png" alt="drawing" width="300"/>
     
 QAOA:
-<p float="left">
+<p>
 <img src="../Week2_Rydberg_Atoms/img/criq_histogram.png" alt="drawing" width="300"/>
 <img src="../Week2_Rydberg_Atoms/img/cirq_graph.png" alt="drawing" width="300"/>
 <p>
     
+From solving this problem with the three different methods it was found that there are indeed multiple differnt solutions to this problem.
+    
 **3. Should Bruce pay for a few more cell phone towers to make sure that more of Gotham City has cell phone service?**
-
+There are a number of way to solve this problem and that between Bruce and his wallet
 
 ## 4. Further Challenges:
 
