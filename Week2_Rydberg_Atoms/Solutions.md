@@ -18,7 +18,7 @@ were *k* is the degeneracy index.
 
 The quantum and classical sets of solutions are the same and, if one is looking for the least-overlapping-disks solution, the second is the winner!  
 
-### Simulating Annealing
+### Task 1: Simulated classical Annealing
 
 Using [ej1.py](./Team_6/ej1.py), we tested three annealing schedules and compared their computational costs of convergence.
 
@@ -26,33 +26,31 @@ Using [ej1.py](./Team_6/ej1.py), we tested three annealing schedules and compare
 
 In this case, the second annealing scheme yields the best results. 
 
-### Quantum Annealing
-For the quantum annealing, we proposed smoother time dependent controls ([run_quantum_annealing.ipynb](Team_6/run_quantum_annealing.ipynb)) and tested their performance.
+### Task 2: Quantum Annealing
+We proposed smoother time dependent controls and tested their performance using the following [Jupyter notebook](./Team_6/run_quantum_annealing.ipynb).
 
 <center><img src='Team_6/04-q_annealing_controls.png' width='1000'></center>
 
-We ran 1000 samples for both sets of controls, and contructed the histogram dropping out the 
-configurations with less than $counts=samples/10$
+We ran 1000 samples for both sets of controls and constructed the histogram dropping out the configurations with less than samples/10 counts.
 
 <center><img src='Team_6/05-problem1_q_annealing.png' width='800'></center>
 
 In this case, the number of samples chosen was enough to obtain all the solutions.
 
-### Solving  Bruce Wayne's problem
+### Task 3: Solving Gotham City's problem
 
-In this problem we begun by plotting the graph
+Once again, we begun by plotting the graph for Bruce Wayne's problem:
 
 <center><img src='Team_6/06-wayne_problem.png' width='250'></center>
 
-Given its size, we use the same sequence of techniques to solve it.
-First, the brute force solutions ([UD-MIS_Problem-Brute_force.ipynb](Team_6/UD-MIS_Problem-Brute_force.ipynb)):
+Given its size, we followed the same sequence to solve it. First, [the brute force solutions](./Team_6/UD-MIS_Problem-Brute_force.ipynb)):
 
 <center><img src='Team_6/07-wayne_solutions.png' width='600'></center>
 
-We repeated the different schedules for the classical annealing ([ej3.py](ej3.py)) and the best results were obtained with the second scheme. 
+We tried different schedules used for classical annealing to study [this problem](./Team_6/ej3.py) and the best results were obtained with the second scheme. 
 
-For the quantum annealing, we tried by runing 10000 samples for each scheme ([run_quantum_annealing.ipynb](Team_6/run_quantum_annealing.ipynb)), and the new controls  for the annealing show an advantange with regard to the previous version. We contructed the histograms  by dropping out the configurations with less than $counts=samples/40$. From the histograms, its clear that the smoothed versions of the controls increase the number of counts for the right configurations. 
+For the quantum annealing, we tried running 10000 samples for each scheme ([run_quantum_annealing.ipynb](./Team_6/Team_6/run_quantum_annealing.ipynb)), and the new controls  for the annealing show an advantange with regard to the previous version. We constructed the histograms by dropping out the configurations with less than samples/40 counts. From the histograms, its clear that the smoothed versions of the controls increase the number of counts for the right configurations. 
 
 <center><img src='Team_6/08-Wayne_q_annealing.png' width='800'></center>
 
-From the data obtained we can conclude that in cases were it is not possible to apply brute force methods, it is easier to  find all the problem's solutions using quantum annealing than Montecarlo simulations. For all cases, we found that it is crucial to evaluate the cost function in order to validate its performance.
+From the obtained results, we can conclude that if applying brute force is not possible then it is easier to find the solutions using quantum annealing than classical Montecarlo simulations. For all cases, we found that it is crucial to evaluate the cost function in order to validate its performance.
