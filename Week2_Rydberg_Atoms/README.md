@@ -8,7 +8,8 @@ Open up [instructions.pdf](instructions/instructions.pdf) to begin learning abou
 
 ## Task 1: Simulated classical annealing
 
-The code for this task is provided in the [1_classical_annealing.ipynb](notebooks/1_classical_annealing.ipynb) notebook. To start, we simply run the code provided to see the output of the default annealing schedule:
+The code for this task is provided in the [1_classical_annealing.ipynb](notebooks/1_classical_annealing.ipynb) notebook. 
+To start, we simply run the code provided to see the output of the default annealing schedule:
 
 ![](fig/classical_annealing.png)
 
@@ -56,7 +57,13 @@ One the right, we show the highest probability output configuration.
 
 As we can see, when we measure the quantum system, the highest probability outcome is a valid correct ground state.
 
-## Task 3: A real problem
+## Task 3: A real problem (Gotham City)
+
+The code for this task is provided in the [3_dmrg_classical_annealing.ipynb](notebooks/3_dmrg_classical_annealing.ipynb) notebook. 
+For this task we will be constructing an DMRG-based solution to the UD-MIS problem. 
+This we will effectively be another classical approach, but using tools from tensor networks and condensed matter physics.
+
+1. Mr. Wayne's problem maps 
 
 ## Tasks include:
 
