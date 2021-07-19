@@ -110,3 +110,68 @@ def plot_quantum_udmis(ax, udmis):
     ax.set_xticks([0.5, 1.5])
     ax.set_yticks([0.5, 1.5, 2.5, 3.5])
     ax.set_aspect('equal', adjustable='box')
+
+def plot_mpo_udmis(ax, udmis):
+    """
+    Plot the sites, connections and occupations for a given UD-MIS problem.
+    """
+    # Draw the edges.
+    for i in range(udmis.num_vertices):
+        xi, yi = udmis.graph[i]
+        for j in range(i + 1, udmis.num_vertices):
+            xj, yj = udmis.graph[j]
+            if udmis.edges[i, j]:
+                ax.plot([xi, xj], [yi, yj], 'k')
+    # Draw the sites.
+    occupancies = udmis.gs_bitstring()
+    max_x = 0
+    max_y = 0
+    min_x = 2
+    min_y = 2
+    for i, (x, y) in enumerate(udmis.graph):
+        max_x = max(max_x, x)
+        max_y = max(max_y, y)
+        min_x = min(min_x, x)
+        min_y = min(min_y, y)
+        if occupancies[i]:
+            ax.plot(x, y, 'ko', mfc='k', ms=15)
+            circle = plt.Circle((x,y), 0.5, color='red', alpha=0.1)
+            ax.add_patch(circle)
+        else:
+            ax.plot(x, y, 'ko', mfc='w', ms=15)
+
+    # Adjust plotting area.
+    # ax.set_xlim([0.0, 1+max_x])
+    # ax.set_ylim([0.0, 1+max_y])
+    ax.set_xlim(min_x - 0.6, max_x + 0.6)
+    ax.set_ylim(min_y - 0.6, max_y + 0.6)
+    ax.set_aspect('equal', adjustable='box')
+    ax.set_aspect('equal', adjustable='box')
+    plt.tight_layout()
+
+def plot_mpo_initial(ax, udmis):
+    for i in range(udmis.num_vertices):
+        xi, yi = udmis.graph[i]
+        for j in range(i + 1, udmis.num_vertices):
+            xj, yj = udmis.graph[j]
+            if udmis.edges[i, j]:
+                ax.plot([xi, xj], [yi, yj], 'k')
+
+    # Draw the sites.
+    max_x = 0
+    max_y = 0
+    min_x = 2
+    min_y = 2
+    for i, (x, y) in enumerate(udmis.graph):
+        max_x = max(max_x, x)
+        max_y = max(max_y, y)
+        min_x = min(min_x, x)
+        min_y = min(min_y, y)
+        ax.plot(x, y, 'ko', mfc='w', ms=15)
+
+    # Adjust plotting area.
+    ax.set_aspect('equal', adjustable='box')
+    ax.set_aspect('equal', adjustable='box')
+    ax.set_xlim(min_x-0.6,max_x+0.6)
+    ax.set_ylim(min_y-0.6,max_y+0.6)
+    plt.tight_layout()

@@ -245,10 +245,10 @@ class LocalHamiltonian(object):
 
     def ground_state(
             self,
-            chi=2,
+            chi=8,
             Nsweeps=100,
-            threshold=1e-8,
-            eps=1e-10,
+            threshold=1e-9,
+            eps=1e-12,
             algorithm='2-site'):
         D = DMRG(self, chi)
         if algorithm == '2-site':
@@ -590,3 +590,20 @@ class DMRG(object):
             if abs(energy - energyprev) < eps:
                 break
             energyprev = energy
+
+def svd_compress_mpo(mpo):
+    # fuse the physical indices to make the mpo mps-like
+    mps = []
+    for site in mpo:
+        site.fuse_indices(['physin', 'physout'], 'phys')
+        mps.append(site)
+    # this like the purification of the mpo
+    mps = tn.onedim.MatrixProductState(mps)
+    # canonise it to compress it
+    mps.svd_compress()
+    mpo_compressed = []
+    # convert it back into an mpo
+    for site in mps:
+        site.split_index('phys', [2, 2], ['physin', 'physout'])
+        mpo_compressed.append(site)
+    return tn.onedim.MatrixProductOperator(mpo_compressed)
