@@ -129,9 +129,9 @@ Examples:
 
 **William Ngana** 
 
-**Silvia Tzenkova** I have a background in environmental and energy engineering, and currently working on developing hybrid emotion prediction platform.
+**Silvia Tzenkova** I have a background in environmental and energy engineering, and currently working on developing hybrid computing emotion prediction platform.
 
-**Stephen Zhu** I have background in economics, and currently working on developing hybrid emotion prediction platform.
+**Stephen Zhu** I have background in economics, and currently working on developing hybrid computing emotion prediction platform.
 
 
 ## Business Proposal
