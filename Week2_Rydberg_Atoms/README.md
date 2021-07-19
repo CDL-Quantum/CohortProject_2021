@@ -84,7 +84,7 @@ number of iterations as in the Metropolis-Hasting algorithm:
 ![t15](../Week2_Rydberg_Atoms/img/t15.png)
 
 We observe that the Wolff algorithm underperforms the Metropolis-Hasting algorithm since the
-convergence of the solutions is slower, i.e. it requires a larger number of iterations; there is a similar plot to the one shown above that can be accessed in the notebook. Finally, we tested the algorithm using different annealing schedules (exponential, logarithmic and the power law one we were given) to explore how this would influence the number of iterations needed. As a side note: just because a given annealing schedule arrived at a solution in less iterations, doesn't necessarily mean it converged to the correct ground state.
+convergence of the solutions is slower, i.e. it requires a larger number of iterations; there is a similar plot to the one shown above that can be accessed in the notebook. Finally, we tested the algorithm using different annealing schedules (exponential, logarithmic and the power law one we were given) to explore how this would influence the number of iterations needed. These schedules were tested on the Wolff algorithm we implemented. As a side note: just because a given annealing schedule arrived at a solution in less iterations, doesn't necessarily mean it converged to the correct ground state.
 
 ![t16](../Week2_Rydberg_Atoms/img/b3.png)
 
