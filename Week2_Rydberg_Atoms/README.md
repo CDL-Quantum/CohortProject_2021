@@ -151,4 +151,8 @@ We would like to take it one step further and pitch our solution to a major Sate
 
 However, StarLink is not the only player in this industry. The competition is catching up fast, and soon enough, if not already, StartLink is going to compete against other network providers in space, and each competitor would want to gain as much tactical advantage as possible. It is also conceivable that state regulators will soon start regulating the industry, for example start auctioning satellite network licenses. StarLink will have to adapt quickly and to devise an optimal bidding strategy to stay ahead of competion. The satellite nework topology is going to change after each auction round as more satellites are launched and provisioned. Solving a dynamic network optimization problem is unattainable for classical computers. Elon Musk and the StarLink team should love our NISQ based solution. 
 
-In summary, StarLink will be able to make use of our solution to solve a static network optimization problem during a planning phase. However, the company will gain competitive advantage and will rip real benefits of the demonstrated Quantum Advantage during the license bidding and network implementation and provisioning phases.    
+In summary, StarLink will be able to make use of our solution to solve a static network optimization problem during a planning phase. However, the company will gain competitive advantage and will rip real benefits of the demonstrated Quantum Advantage during the license bidding and network implementation and provisioning phases.
+
+## Video Presentation
+
+You can find our short presentation [here](https://youtu.be/mYXmBGd2T7w).
