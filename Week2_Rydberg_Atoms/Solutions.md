@@ -1,14 +1,14 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 2: Optimization problems \& Rydberg atom arrays
 
-In this project we solved the UD-MIS problem on a graph G of V vertices and E edges by finding the ground state of the Hamiltonian of a system of V Rydberg atoms placed in the vertices of G.
+In this project we solved the UD-MIS problem on a graph G of *V* vertices and *E* edges by finding the ground state of the Hamiltonian of a system of *V* Rydberg atoms placed in the vertices of G.
 
 We used two different approaches to solve this problem:
 1) Classical annealing
 >We simulated the associated Hamiltonian at low temperature using classical Monte Carlo simulations. At a low enough temperature, we can achieve its ground state, i.e. the solution of our original problem. In our simulations, we tried different annealing schedules to achieve the desired solution.
 
 2) Quantum annealing
->Starting in an easy-to-prepare ground state of a Hamiltonian H(0), we evolved this state with a time-dependent Hamiltonian H(t) in such a way that the ground state of the final Hamiltonian H(t*) is the one we were looking for. We accomplished this by forcing H(t*) to be the UD-MIS Hamiltonian.
+>Starting in an easy-to-prepare ground state of a Hamiltonian *H(0)*, we evolved this state with a time-dependent Hamiltonian *H(t)* in such a way that the ground state of the final Hamiltonian *H(t*)* is the one we were looking for. We accomplished this by forcing *H(t*)* to be the UD-MIS Hamiltonian.
 
 In non-technical language, we found the maximum number of occupied locations under certain constraints using classical and quantum techniques to compute the solutions.
 
