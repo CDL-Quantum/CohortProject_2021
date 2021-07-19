@@ -1,7 +1,7 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 2: Optimization problems \& Rydberg atom arrays
 
-In this exercise we solved the UD-MIS problem on a graph G of V vertices and E edges by finding the ground state of the Hamiltonian of a system of V Rydberg atoms placed in the vertices of G.
+In this project we solved the UD-MIS problem on a graph G of V vertices and E edges by finding the ground state of the Hamiltonian of a system of V Rydberg atoms placed in the vertices of G.
 
 We used two different approaches to solve this problem:
 1) Classical annealing
