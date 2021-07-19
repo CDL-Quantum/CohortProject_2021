@@ -60,13 +60,13 @@ The following plot shows the solutions obtained for different number of iteratio
 
 ![t11](../Week2_Rydberg_Atoms/img/t11.png)
 
-Clearly, this plot shows the convergence of the solutions for a larger number of iterations. 
+Clearly, this plot shows the convergence of the solutions for a larger number of iterations. It also shows how the algorithm traces out the solution space; i.e reaches different discrete energy levels before arriving at the ground state.
 
 We also investigated the convergence of the solutions when we start from a higher temperature. 
 As expected, the convergence is slower due to the presence of larger thermal fluctuations. 
-Thus, it takes more iterations to reach the actual ground state of the system.
+Thus, it takes more iterations to reach the actual ground state of the system. The difference between the two temperatures is shown in this plot (low temperature in 1 magnitude of order smaller than the high temperature):
 
-![t12](../Week2_Rydberg_Atoms/img/t12.png)
+![t12](../Week2_Rydberg_Atoms/img/b1.png)
 
 In the following plot, we show the histogram of solutions obtained with the Metropolis-Hastings algorithm. 
 We observe that some of the solutions appear with a similar frequency, meaning that we are in presence
@@ -78,15 +78,15 @@ of a degeneracy of the ground state, i.e. mutliple solutions correspond to the s
 
 [comment]: <> (![t13]&#40;../Week2_Rydberg_Atoms/img/t13.png&#41;)
 
-Finally, in the next plot we show the histogram of the solutions obtained with the Wolff algorithm, by using the same
+In the next plot we show the histogram of the solutions obtained with the Wolff algorithm, by using the same
 number of iterations as in the Metropolis-Hasting algorithm:
 
 ![t15](../Week2_Rydberg_Atoms/img/t15.png)
 
 We observe that the Wolff algorithm underperforms the Metropolis-Hasting algorithm since the
-convergence of the solutions is slower, i.e. it requires a larger number of iterations.
+convergence of the solutions is slower, i.e. it requires a larger number of iterations; there is a similar plot to the one shown above that can be accessed in the notebook. Finally, we tested the algorithm using different annealing schedules (exponential, logarithmic and the power law one we were given) to explore how this would influence the number of iterations needed. As a side note: just because a given annealing schedule arrived at a solution in less iterations, doesn't necessarily mean it converged to the correct ground state.
 
-![t16](../Week2_Rydberg_Atoms/img/t16.png)
+![t16](../Week2_Rydberg_Atoms/img/b3.png)
 
 [comment]: <> (Finally, a picture of the fully connected 6 node graph by using Networkx &#40;a python package&#41;:)
 
