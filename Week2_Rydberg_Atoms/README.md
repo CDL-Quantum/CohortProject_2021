@@ -15,7 +15,7 @@ The code for this task is provided in the [1_classical_annealing.ipynb](notebook
 ![](fig/classical_annealing.png)
 
 On the left, we show the initial configuration of the graph (randomized occupancies), where occupied sites are filled in, and interacting sites share an edge.
-In the middle, we show the energy and temperature of the system as a function of the steps in the Monte Carlo algorithm.
+In the middle, we plot the energy (blue) and temperature (red) of the system as a function of the steps in the Monte Carlo algorithm.
 On the right, we show the final configuration of the graph, which should be the ground state of the (classical) Hamiltonian.
 
 There are two subgraphs, each with three vertices.
@@ -42,10 +42,27 @@ The result is unoriginal, but effective:
 
 All these annealing schedules are very ad hoc, but maybe be found the the corresponding notebook.
 
+## Task 2: Simulated quantum annealing
+
+The code for this task has been re-written in python, and is provided in the [2_quantum_annealing.ipynb](notebooks/2_quantum_annealing.ipynb) notebook.
+
+We obtain the following:
+
+![](fig/quantum_annealing.png)
+
+On the left, we show the initial configuration (all unoccupied).
+In the middle, we plot three quantities as a function of the annealing parameter *t*.
+We plot the energy (blue) of the *time-dependant* quantum state for the *final* (i.e. target) Hamiltonian.
+We plot the two annealing parameters, *Ω* (red) and *δ* (green), as a function of *t*.
+
+As we can see, when we measure the quantum system, the highest probability outcome is (one of) the correct ground state(s).
+
+## Task 3: A real problem
+
 ## Tasks include:
-* Simulating the same problem but using quantum annealing.
-* Comparing the classical and quantum methods.
+
 * Solving a real-world problem involving cell phone tower placement in Gotham City.
+* Comparing the classical and quantum methods.
 
 ## Further Challenges:
 * Comparing the methods used to solve the UD-MIS problem.
