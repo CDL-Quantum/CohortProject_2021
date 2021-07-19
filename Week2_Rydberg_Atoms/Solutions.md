@@ -1,27 +1,26 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 2: Optimization problems \& Rydberg atom arrays
 
-## Solving  the Problems 1-2 using Classical and Quantum Brute Force
+## Solving Tasks 1 and 2 using Classical and Quantum Brute Force
 
-The graph corresponding to the unit-disk maximum independent set (UD-MIS) for this problem is:
+The graph corresponding to the unit-disk maximum independent set (UD-MIS) for this problem is
 
 <center><img src='Team_6/01-problem1_2.png' width='200'></center>
 
-Given its small size, we begin by solving the problem using classical and quantum brute-force ([UD-MIS_Problem-Brute_force.ipynb](Team_6/UD-MIS_Problem-Brute_force.ipynb)). For the classical case, we have computed all possible outcomes and evaluated the cost function. Then, the solutions are the configurations with the lower cost.   
-For the quantum version, we built the Hamiltonian asossiated to the 
-cost function, and calculated its eigenvalues and eigenvectors. The solutions are codified in the eigenvectors of the ground state eigenspace. In order to extract the solutions, we computed
+Given its small size, we begin by solving the problem using classical and quantum brute-force using the following [Jupyter notebook](./Team_6/UD-MIS_Problem-Brute_force.ipynb). For the classical case, we computed all possible outcomes and evaluated the cost function. Then, the solutions are the configurations with the lower cost.   
+For the quantum version, we built the Hamiltonian associated to the cost function and calculated its eigenvalues and eigenvectors. The solutions are encoded on the eigenvectors of the ground state eigenspace. In order to extract the solutions, we computed
 
 <img src="https://render.githubusercontent.com/render/math?math=n_i=< Gs(k) \left| n_i \right| Gs(k)>,">
 
-were k is the degeneracy index.
+were *k* is the degeneracy index.
 
 <center><img src='Team_6/02-solutions_1_2.png' width='600'></center>
 
-The quantum and classical sets of solutions are the same and, if one is looking for the least overlaping disks solution, the second is the winner!  
+The quantum and classical sets of solutions are the same and, if one is looking for the least-overlapping-disks solution, the second is the winner!  
 
 ### Simulating Annealing
 
-We have tested three annealing schedules ([ej1.py](ej1.py)) and compared their computational costs of convergence.
+Using [ej1.py](./Team_6/ej1.py), we tested three annealing schedules and compared their computational costs of convergence.
 
 <center><img src='Team_6/03-ann_schedule.png' width='800'></center>
 
