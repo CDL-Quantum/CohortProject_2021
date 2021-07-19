@@ -7,28 +7,43 @@
 
 Optimization of networks and routing is strongly linked with the NP-hard **Traveling Salesmen** problem and other path finding algorithms.  Here we explore some classical techniques to tackle these problems, as well as quantum and hybrid solutions.  Path finding has general applications not only for routing, but for the trajectory of multi-state systems over time.
 
-Analysis of some of these methods can be framed as the Unit Disk Max Independent Set problem (UD-MIS).  In this project we study the UD-MIS and benchmark different methodologies for tackling this class of problems
+Analysis of some of these methods can be framed as the **Unit Disk Max Independent Set problem (UD-MIS).**  In this project we study the UD-MIS and benchmark different methodologies for tackling this class of problems
 
 
 ## 1. Simulating the unit-disk maximum independent set (UD-MIS) problem using classical simulated annealing.
 
 In this [Task 1 notebook](./Task_1.ipynb) we tried several different schedules as suggested in citation [1] to see their effect on the convergence of UD-MIS under simulated annealing. Below are two graphs, graph before simulated annealing is ran (Right) and graph after simulated annealing is ran (Left), note that the maximum independent sets are seen in yellow color.
 
-<img src="../Week2_Rydberg_Atoms/img/complete_udmis_graph_task_1.png" alt="drawing" width="200"/>
+![Pre simulation graph](../Week2_Rydberg_Atoms/img/task_1_OG_graph.png)
+![Post simulation graph](../Week2_Rydberg_Atoms/img/complete_udmis_graph_task_1.png)
+
+We use 4 different annealing schedules:
 
 ### Annealing Schedule Type 1: Original
-We were able to find the ground state energy, which converged at an energy of -3. As we decreased the temperature, we found that the monte carlo algorithm converged faster as expected, and below is a graph demonstrating that result:
+Using the original annealing scheduled provided in the instructions, we are able to find the ground state at an energy around -3 after around 3600 iterations for final temperature of 0.1K. As we decreased the temperature, we found that the monte carlo algoirthm converged faster to the ground state (ie. around 0.000001K, it took around 1900), and all of this information can be extrapolated from the graphs below (top graph is energy vs. iterations, bottom graph is iterations vs. temperature).
 
-<img src="../Week2_Rydberg_Atoms/img/task_1_monte_carlo_graphs.png" alt="drawing" width="700" height="500"/>
+<img src="../Week2_Rydberg_Atoms/img/task_1_monte_carlo_graphs_og.png" alt="drawing" width="700" height="500"/>
 <br>
 and here are the associated tempature curves:
-<img src="../Week2_Rydberg_Atoms/img/task_1_temperature_curves.png" alt="drawing" width="700"  height="500"/>
+<img src="../Week2_Rydberg_Atoms/img/task_1_temperature_curves_og.png" alt="drawing" width="700"  height="500"/>
 
+Notice: That temperature graph forms a nice smooth 1/iteration relation
 ### Annealing Schedule Type 2: Inverse
+<img src="../Week2_Rydberg_Atoms/img/task_1_monte_carlo_graphs_inverse.png" alt="drawing" width="700" height="500" />
+<img src="../Week2_Rydberg_Atoms/img/task_1_temperature_curves_inverse.png" alt="drawing" width="700" height="500" />
 
+Note: This annealing schedule is superior to the original annealing schedule in terms of convergence relative to iterations (with the exception of Tf=10^-6)
 ### Annealing Schedule Type 3: Inverse Log
+<img src="../Week2_Rydberg_Atoms/img/task_1_monte_carlo_graphs_inverse_log.png" alt="drawing" width="700" height="500" />
+<img src="../Week2_Rydberg_Atoms/img/task_1_temperature_curves_inverse_log.png" alt="drawing" width="700" height="500" />
+
+Note: For this annealing schedule, given the same number of iterations, it was NOT able to converge a solution and hence was a bad choice.
 
 ### Annealing Schedule Type 4: Exponential
+<img src="../Week2_Rydberg_Atoms/img/task_1_monte_carlo_graphs_exp.png" alt="drawing" width="700" height="500" />
+<img src="../Week2_Rydberg_Atoms/img/task_1_temperature_curves_exp.png" alt="drawing" width="700" height="500" />
+
+Note: These results were similiar to the inverse case.
 
 ## 2. Simulating the same problem but using quantum annealing.
 
@@ -61,7 +76,9 @@ Finally using the Hamiltonian a quantum circuit was constructed usung cirq which
 As we see from the problem statement this can be mapped onto a UDMIS problem. That is if you look at each cell phone pole as a vertex in a graph G(V,E). The edges are repesented by the connection to the vertices
 and because we want to be sure that there is no overlap all the conditions of the UDMIS problem are satisfied.
 
-**2. Solve Gotham City's problem.**  Using the methods provided in Tasks 1 and 2. **Are there multiples solutions?**
+**2. Solve Gotham City's problem.**  Using the methods provided in Tasks 1 and 2. **Are there multiples solutions? Yes!** 
+
+<p align="center"><img src="../Week2_Rydberg_Atoms/img/mult_solutions.png" alt="drawing" width="500" height="150"/></p>
 
 Classical annealing:
 
@@ -70,6 +87,7 @@ Classical annealing:
 <img src="../Week2_Rydberg_Atoms/img/task3_graph.png" alt="drawing" width="300"/>
 <p>
     
+
 Quantum annealing:
 <img src="../Week2_Rydberg_Atoms/img/Task3_J.png.png" alt="drawing" width="300"/>
     
@@ -82,7 +100,7 @@ QAOA:
 From solving this problem with the three different methods it was found that there are indeed multiple differnt solutions to this problem.
     
 **3. Should Bruce pay for a few more cell phone towers to make sure that more of Gotham City has cell phone service?**
-There are a number of way to solve this problem and that between Bruce and his wallet
+This questions depends on a few factors.  Data on the size of the accessible customer base in each geographic location would be important.  It would become a question of how much benefit is there from the increase in customers in the extra nonoverlapping coverage area minus the costs of building and maintaining additional cell phone towers.
 
 ## 4. Further Challenges:
 
@@ -118,7 +136,7 @@ In [this notebook](D-Wave_qpu_and_simulated_annealing) do a comparison of calcul
 <img src="../Week2_Rydberg_Atoms/img/Amazon_Air.png" alt="drawing" width="800"/>
 
 Application of the UD-MIS is strategically placing distribution centers.  This has an incredibly broad range of applications as you might need to distribute goods, services, or even information.  In the case of information distribution we discuss applications to routing protocals in the [business application section.](./Business_Application.md)
-For another alternative real world application of MIS we look at goods delivery for drones.  One customer is Amazon as they have already begun exploration in this direction with [Amazon Air Prime.](https://www.amazon.com/Amazon-Prime-Air/b?node=8037720011)  Although, it doesn't need to be drone delivery.  There is a large proliferation of grocery delivery services that needs to solving the logistics problem distributing their goods as quickly and efficiently as possible.
+For another alternative real world application of MIS we look at goods delivery for drones in [this notebook](./D-Wave_qpu_and_simulated_annealing.ipynb).  One customer is Amazon as they have already begun exploration in this direction with [Amazon Air Prime.](https://www.amazon.com/Amazon-Prime-Air/b?node=8037720011)  Although, it doesn't need to be drone delivery.  There is a large proliferation of grocery delivery services that needs to solving the logistics problem distributing their goods as quickly and efficiently as possible.
 
 
 <img src="../Week2_Rydberg_Atoms/img/blue_flower.png" alt="drawing" width="300"/>
