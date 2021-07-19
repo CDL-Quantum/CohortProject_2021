@@ -78,7 +78,7 @@ Fig. 2 IoT Routing Protocol Optimization close to the data source or in the virt
 A map of a fictitious 5G cell site simulated with hybrid algorithms can be seen here:
 
 <p align="center"><img src="../" alt="drawing" width="700" height="500"/></p>
-Fig. 3 Routing Protocol Optimization using proprietory algorithms.
+<p align="center"><img src="../Week2_Rydberg_Atoms/img/Routing.gif" alt="drawing" width="700" height="500"/></p>
 
 
 ## Additional Applications
