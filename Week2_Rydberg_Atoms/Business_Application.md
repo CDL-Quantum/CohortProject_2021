@@ -128,7 +128,7 @@ Examples:
 **Stephen Zhu** I have background in economics, and currently working on developing hybrid emotion prediction platform.
 
 
-# [Business Proposal](https://drive.google.com/file/d/15tyrOhC6v0zhvc9e9txAAcULB_Ahq2TV/view?usp=sharing)
+# Business Proposal The video can be found [here](https://drive.google.com/file/d/15tyrOhC6v0zhvc9e9txAAcULB_Ahq2TV/view?usp=sharing)
 
 
 
