@@ -1,0 +1,205 @@
+ MINTS: Wrapper to libmints.
+   by Justin Turney
+
+   Calculation information:
+      Number of threads:                 1
+      Number of atoms:                   2
+      Number of AO shells:               2
+      Number of SO shells:               1
+      Number of primitives:              6
+      Number of atomic orbitals:         2
+      Number of basis functions:         2
+
+      Number of irreps:                  8
+      Integral cutoff                 1.00e-12
+      Number of functions per irrep: [   1    0    0    0    0    1    0    0 ]
+
+ OEINTS: Overlap, kinetic, potential, dipole, and quadrupole integrals
+         stored in file 35.
+
+      Computing two-electron integrals...done
+      Computed 4 non-zero two-electron integrals.
+        Stored in file 33.
+
+
+*** tstart() called on Edens-MacBook-Air.local
+*** at Tue Jul 20 19:48:34 2021
+
+
+	Wfn Parameters:
+	--------------------
+	Wavefunction         = CCSD
+	Number of irreps     = 8
+	Number of MOs        = 2
+	Number of active MOs = 2
+	AO-Basis             = NONE
+	Semicanonical        = false
+	Reference            = RHF
+	Print Level          = 1
+
+	IRREP	# MOs	# FZDC	# DOCC	# SOCC	# VIRT	# FZVR
+	-----	-----	------	------	------	------	------
+	 Ag	   1	    0	    1	    0	    0	    0
+	 B1g	   0	    0	    0	    0	    0	    0
+	 B2g	   0	    0	    0	    0	    0	    0
+	 B3g	   0	    0	    0	    0	    0	    0
+	 Au	   0	    0	    0	    0	    0	    0
+	 B1u	   1	    0	    0	    0	    1	    0
+	 B2u	   0	    0	    0	    0	    0	    0
+	 B3u	   0	    0	    0	    0	    0	    0
+	Transforming integrals...
+	IWL integrals will be deleted.
+	(OO|OO)...
+	Presorting SO-basis two-electron integrals.
+	Sorting File: SO Ints (nn|nn) nbuckets = 1
+	Transforming the one-electron integrals and constructing Fock matrices
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	Frozen core energy     =      0.00000000000000
+
+	Size of irrep 0 of <ab|cd> integrals:      0.000 (MW) /      0.000 (MB)
+	Size of irrep 1 of <ab|cd> integrals:      0.000 (MW) /      0.000 (MB)
+	Size of irrep 2 of <ab|cd> integrals:      0.000 (MW) /      0.000 (MB)
+	Size of irrep 3 of <ab|cd> integrals:      0.000 (MW) /      0.000 (MB)
+	Size of irrep 4 of <ab|cd> integrals:      0.000 (MW) /      0.000 (MB)
+	Size of irrep 5 of <ab|cd> integrals:      0.000 (MW) /      0.000 (MB)
+	Size of irrep 6 of <ab|cd> integrals:      0.000 (MW) /      0.000 (MB)
+	Size of irrep 7 of <ab|cd> integrals:      0.000 (MW) /      0.000 (MB)
+	Total:                                     0.000 (MW) /      0.000 (MB)
+
+	Size of irrep 0 of <ia|bc> integrals:      0.000 (MW) /      0.000 (MB)
+	Size of irrep 1 of <ia|bc> integrals:      0.000 (MW) /      0.000 (MB)
+	Size of irrep 2 of <ia|bc> integrals:      0.000 (MW) /      0.000 (MB)
+	Size of irrep 3 of <ia|bc> integrals:      0.000 (MW) /      0.000 (MB)
+	Size of irrep 4 of <ia|bc> integrals:      0.000 (MW) /      0.000 (MB)
+	Size of irrep 5 of <ia|bc> integrals:      0.000 (MW) /      0.000 (MB)
+	Size of irrep 6 of <ia|bc> integrals:      0.000 (MW) /      0.000 (MB)
+	Size of irrep 7 of <ia|bc> integrals:      0.000 (MW) /      0.000 (MB)
+	Total:                                     0.000 (MW) /      0.000 (MB)
+
+	Size of irrep 0 of tijab amplitudes:       0.000 (MW) /      0.000 (MB)
+	Size of irrep 1 of tijab amplitudes:       0.000 (MW) /      0.000 (MB)
+	Size of irrep 2 of tijab amplitudes:       0.000 (MW) /      0.000 (MB)
+	Size of irrep 3 of tijab amplitudes:       0.000 (MW) /      0.000 (MB)
+	Size of irrep 4 of tijab amplitudes:       0.000 (MW) /      0.000 (MB)
+	Size of irrep 5 of tijab amplitudes:       0.000 (MW) /      0.000 (MB)
+	Size of irrep 6 of tijab amplitudes:       0.000 (MW) /      0.000 (MB)
+	Size of irrep 7 of tijab amplitudes:       0.000 (MW) /      0.000 (MB)
+	Total:                                     0.000 (MW) /      0.000 (MB)
+
+	Nuclear Rep. energy          =      0.20352969641154
+	SCF energy                   =     -0.69147005126248
+	One-electron energy          =     -1.37715171974034
+	Two-electron energy          =      0.48229446226632
+	Reference energy             =     -0.69132756106249
+
+*** tstop() called on Edens-MacBook-Air.local at Tue Jul 20 19:48:34 2021
+Module time:
+	user time   =       0.01 seconds =       0.00 minutes
+	system time =       0.10 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =      52.07 seconds =       0.87 minutes
+	system time =      18.01 seconds =       0.30 minutes
+	total time  =        246 seconds =       4.10 minutes
+            **************************
+            *                        *
+            *        CCENERGY        *
+            *                        *
+            **************************
+
+    Nuclear Rep. energy (wfn)     =    0.203529696411538
+    SCF energy          (wfn)     =   -0.691470051262481
+    Reference energy    (file100) =   -0.691327561062488
+
+    Input parameters:
+    -----------------
+    Wave function   =     CCSD
+    Reference wfn   =     RHF
+    Brueckner       =     No
+    Memory (Mbytes) =     524.3
+    Maxiter         =     50
+    R_Convergence   =     1.0e-07
+    E_Convergence   =     1.0e-06
+    Restart         =     Yes
+    DIIS            =     Yes
+    AO Basis        =     NONE
+    ABCD            =     NEW
+    Cache Level     =     2
+    Cache Type      =     LOW
+    Print Level     =     1
+    Num. of threads =     1
+    # Amps to Print =     10
+    Print MP2 Amps? =     No
+    Analyze T2 Amps =     No
+    Print Pair Ener =     No
+    Local CC        =     No
+    SCS-MP2         =     False
+    SCSN-MP2        =     False
+    SCS-CCSD        =     False
+
+MP2 correlation energy -0.1647868376223962
+                Solving CC Amplitude Equations
+                ------------------------------
+  Iter             Energy              RMS        T1Diag      D1Diag    New D1Diag    D2Diag
+  ----     ---------------------    ---------   ----------  ----------  ----------   --------
+     0        -0.164786837622396    0.000e+00    0.000000    0.000000    0.000000    0.576077
+     1        -0.244470596727783    2.786e-01    0.000000    0.000000    0.000000    0.854643
+     2        -0.243776759507271    2.447e-03    0.000000    0.000000    0.000000    0.852218
+     3        -0.243876611231082    3.859e-04    0.000000    0.000000    0.000000    0.852567
+     4        -0.243871113595237    2.139e-05    0.000000    0.000000    0.000000    0.852547
+     5        -0.243871376283916    1.034e-06    0.000000    0.000000    0.000000    0.852548
+     6        -0.243871365474217    3.779e-08    0.000000    0.000000    0.000000    0.852548
+
+    Iterations converged.
+
+
+    Largest TIjAb Amplitudes:
+      0   0   0   0        -0.8525482981
+
+    SCF energy       (wfn)                    =   -0.691470051262481
+    Reference energy (file100)                =   -0.691327561062488
+
+    Opposite-spin MP2 correlation energy      =   -0.164786837622396
+    Same-spin MP2 correlation energy          =    0.000000000000000
+    MP2 correlation energy                    =   -0.164786837622396
+      * MP2 total energy                      =   -0.856114398684884
+
+    Opposite-spin CCSD correlation energy     =   -0.243871365474217
+    Same-spin CCSD correlation energy         =    0.000000000000000
+    CCSD correlation energy                   =   -0.243871365474217
+      * CCSD total energy                     =   -0.935198926536705
+
