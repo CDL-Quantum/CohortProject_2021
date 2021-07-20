@@ -1,0 +1,12 @@
+# Qamino
+Hello from Qamino!
+
+We believe that quantum technologies can have a tremendous impact on the healthcare industry. Research and Development in the Pharmaceutical industry is going through a dark ages. Large companies such as Pfizer, Roche, Novartis and Merck collectively invest more than 80 billion a year into an increasingly ineffective R&D. Ten years ago every dollar invested in research and development saw a return of 10 cents; today it yields less than two cents.
+
+At Qamino we aim to help pharmaceutical companies by providing a novel protein sequencing optimization technique that leverages tremendous power of quantum technology. We created a quantum-aided method that finds the least redundant set of protein candidates from the Protein Data Bank. Our optimization techniques will help pharmaceutical companies accelerate the process of drug discovery by quickly eliminating unsuitable candidates. We estimate that our method will reduce the drug development costs by more than 80% and cut down the discovery time from 4.5 years to as little as one year.
+
+I hope you will enjoy reading the documentation to our proposal as much as we enjoyed making it for you.
+
+Sincerely,
+
+Team Qamino
