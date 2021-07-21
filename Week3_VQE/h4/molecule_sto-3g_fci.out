@@ -3,22 +3,22 @@
 
    Calculation information:
       Number of threads:                 1
-      Number of atoms:                   2
-      Number of AO shells:               6
-      Number of SO shells:               3
-      Number of primitives:             18
-      Number of atomic orbitals:        10
-      Number of basis functions:        10
+      Number of atoms:                   4
+      Number of AO shells:               4
+      Number of SO shells:               1
+      Number of primitives:             12
+      Number of atomic orbitals:         4
+      Number of basis functions:         4
 
       Number of irreps:                  8
       Integral cutoff                 1.00e-12
-      Number of functions per irrep: [   3    0    1    1    0    3    1    1 ]
+      Number of functions per irrep: [   1    0    0    1    0    1    1    0 ]
 
  OEINTS: Overlap, kinetic, potential, dipole, and quadrupole integrals
          stored in file 35.
 
       Computing two-electron integrals...done
-      Computed 292 non-zero two-electron integrals.
+      Computed 19 non-zero two-electron integrals.
         Stored in file 33.
 
 
@@ -33,7 +33,7 @@
 
    ==> Parameters <==
 
-    EX LEVEL       =       14      H0 BLOCKSIZE  =     1000
+    EX LEVEL       =        4      H0 BLOCKSIZE  =     1000
     VAL EX LEVEL   =        0      H0 GUESS SIZE =     1000
     H0COUPLINGSIZE =        0      H0 COUPLING   =       NO
     MAXITER        =       24      NUM PRINT     =       20
@@ -50,7 +50,7 @@
     MAX NUM VECS   =       25      REF SYM       =     AUTO
     IOPEN        =       NO
 
-    EX ALLOW       =  1  1  1  1  1  1  1  1  1  1  1  1  1  1 
+    EX ALLOW       =  1  1  1  1 
     STATE AVERAGE  =  0(1.00) 
 
    ==> CI Orbital and Space information <==
@@ -58,22 +58,22 @@
    ------------------------------------------------------------------------------
                Space    Total    Ag   B1g   B2g   B3g    Au   B1u   B2u   B3u
    ------------------------------------------------------------------------------
-                 Nso       10     3     0     1     1     0     3     1     1
-                 Nmo       10     3     0     1     1     0     3     1     1
-               Ndocc        7     3     0     0     0     0     2     1     1
+                 Nso        4     1     0     0     1     0     1     1     0
+                 Nmo        4     1     0     0     1     0     1     1     0
+               Ndocc        2     1     0     0     0     0     1     0     0
                Nsocc        0     0     0     0     0     0     0     0     0
    ------------------------------------------------------------------------------
                                    CI Spaces
    ------------------------------------------------------------------------------
         Dropped DOCC        0     0     0     0     0     0     0     0     0
-              Active       10     3     0     1     1     0     3     1     1
+              Active        4     1     0     0     1     0     1     1     0
         Dropped UOCC        0     0     0     0     0     0     0     0     0
    ------------------------------------------------------------------------------
 
    ==> Setting up CI strings <==
 
-    There are 120 alpha and 120 beta strings
-    The CI space requires 1824 (1.82E+03) determinants and 8 blocks
+    There are 6 alpha and 6 beta strings
+    The CI space requires 12 (1.20E+01) determinants and 3 blocks
 
    ==> Transforming CI integrals <==
 
@@ -88,47 +88,38 @@
 
    ==> Starting CI iterations <==
 
-    H0 Block Eigenvalue = -107.43978509
+    H0 Block Eigenvalue =  -1.87584108
 
     Simultaneous Expansion Method (Block Davidson Method)
     Using 1 initial trial vectors
 
      Iter   Root       Total Energy       Delta E      C RMS
 
-   @CI  0:     0   -107.439785088933   -1.1741E+02   2.8560E-03  
-   @CI  1:     0   -107.439785333518   -2.4459E-07   5.5929E-05 c
+   @CI  0:     0     -1.875841078845   -3.0696E+00   2.7094E-15  
+    Warning: Norm of correction (root 0) is < 1.0E-13
+   @CI  1:     0     -1.875841078845   0.0000E+00   4.9322E-15 c
 
    ==> Energetics <==
 
-    SCF energy =         -106.582203145318118
-    Total CI energy =    -107.439785333518429
+    SCF energy =           -1.424952591969855
+    Total CI energy =      -1.875841078844873
 
    ==> FCI root 0 information <==
 
-    FCI Root 0 energy =  -107.439785333518429
+    FCI Root 0 energy =    -1.875841078844873
 
-   The 20 most important determinants:
+   The 12 most important determinants:
 
-    *   1    0.299585  (   16,   16)  1AgX 2AgX 3AgX 1B1uX 2B1uX 1B2uX 1B3uX 
-    *   2   -0.284238  (   61,   61)  1AgX 2AgX 3AgX 1B1uX 2B1uX 1B3uX 1B3gX 
-    *   3   -0.284238  (   60,   60)  1AgX 2AgX 3AgX 1B1uX 2B1uX 1B2uX 1B2gX 
-    *   4    0.270410  (   17,   17)  1AgX 2AgX 3AgX 1B1uX 2B1uX 1B2gX 1B3gX 
-    *   5   -0.226722  (   62,   62)  1AgX 2AgX 1B1uX 2B1uX 1B2uX 1B3uX 3B1uX 
-    *   6    0.218590  (   23,   23)  1AgX 2AgX 1B1uX 2B1uX 1B3uX 1B3gX 3B1uX 
-    *   7    0.218590  (   20,   20)  1AgX 2AgX 1B1uX 2B1uX 1B2uX 1B2gX 3B1uX 
-    *   8   -0.211334  (   69,   69)  1AgX 2AgX 1B1uX 2B1uX 1B2gX 1B3gX 3B1uX 
-    *   9    0.189256  (   72,   73)  1AgX 2AgX 3AgX 1B1uX 2B1uX 1B2uB 1B3uA 1B2gA 1B3gB 
-    *  10    0.189256  (   73,   72)  1AgX 2AgX 3AgX 1B1uX 2B1uX 1B2uA 1B3uB 1B2gB 1B3gA 
-    *  11   -0.164018  (   28,   33)  1AgX 2AgX 3AgB 1B1uX 2B1uX 1B2uA 1B3uX 1B3gA 3B1uB 
-    *  12   -0.164018  (   33,   28)  1AgX 2AgX 3AgA 1B1uX 2B1uX 1B2uB 1B3uX 1B3gB 3B1uA 
-    *  13    0.164018  (   44,   49)  1AgX 2AgX 3AgB 1B1uX 2B1uX 1B2uX 1B3uA 1B2gA 3B1uB 
-    *  14    0.164018  (   49,   44)  1AgX 2AgX 3AgA 1B1uX 2B1uX 1B2uX 1B3uB 1B2gB 3B1uA 
-    *  15   -0.157072  (   90,   97)  1AgX 2AgX 3AgB 1B1uX 2B1uX 1B3uA 1B2gA 1B3gX 3B1uB 
-    *  16   -0.157072  (   97,   90)  1AgX 2AgX 3AgA 1B1uX 2B1uX 1B3uB 1B2gB 1B3gX 3B1uA 
-    *  17    0.157072  (  106,  109)  1AgX 2AgX 3AgB 1B1uX 2B1uX 1B2uA 1B2gX 1B3gA 3B1uB 
-    *  18    0.157072  (  109,  106)  1AgX 2AgX 3AgA 1B1uX 2B1uX 1B2uB 1B2gX 1B3gB 3B1uA 
-    *  19   -0.145546  (    4,    7)  1AgX 2AgX 1B1uX 2B1uX 1B2uB 1B3uA 1B2gA 1B3gB 3B1uX 
-    *  20   -0.145546  (    7,    4)  1AgX 2AgX 1B1uX 2B1uX 1B2uA 1B3uB 1B2gB 1B3gA 3B1uX 
+    *   1    0.521955  (    5,    5)  1AgX 1B2uX 
+    *   2   -0.521955  (    2,    2)  1AgX 1B1uX 
+    *   3    0.333176  (    4,    4)  1B1uX 1B3gX 
+    *   4   -0.333176  (    3,    3)  1B3gX 1B2uX 
+    *   5   -0.278755  (    0,    1)  1AgA 1B1uB 1B3gA 1B2uB 
+    *   6   -0.278755  (    1,    0)  1AgB 1B1uA 1B3gB 1B2uA 
+    *   7   -0.139377  (    2,    3)  1AgA 1B1uA 1B3gB 1B2uB 
+    *   8   -0.139377  (    3,    2)  1AgB 1B1uB 1B3gA 1B2uA 
+    *   9   -0.139377  (    4,    5)  1AgB 1B1uA 1B3gA 1B2uB 
+    *  10   -0.139377  (    5,    4)  1AgA 1B1uB 1B3gB 1B2uA 
 
 		 "A good bug is a dead bug" 
 

@@ -342,6 +342,7 @@ def obtain_PES(molecule, bond_lengths, basis, method):
                 obtained_e = True
                 energies[i] = np.nan
                 print("Could not converge")
+                break
 
     return energies
 
