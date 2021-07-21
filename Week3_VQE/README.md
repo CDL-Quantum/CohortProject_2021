@@ -1,31 +1,34 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 3: VQE: Constructing potential energy surfaces for small molecules
 
-This project will guide you through the state-of-the-art techniques for solving electronic structure problems on NISQ computers.
 
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week3_VQE/Instructions.pdf) to begin learning about your tasks for this week!
+# Task 1: Generating PES
 
-**Please edit this markdown file directly with links to your completed tasks and challenges.**
+The first task we were assigned with was to run PES calculations for $H_2$ and $H_2O$ molecules using popular quantum chemistry methods such Hartree-Fock (HF), Configuration Interaction Singles and Doubles (CISD), Coupled Cluster Singles and Doubles (CCSD), and Full Configuration Interaction (FCI), in the minimal STO-3G basis.
+Subsequently we were asked to compute similar curves for other molecules $H_4$, $LiH$, $N_2$, and $NH_3$. 
 
-## Tasks include:
-* Generating PES using classical methods.
-* Generating the qubit Hamiltonian.
-* Unitary transformations.
-* Hamiltonian measurements.
-* Use of quantum hardware.
+<table>
+        <tr>
+            <td><img src="figs/h2PES.png"></td>
+            <td><img src="figs/lihPES.png"></td>
+        </tr>
+        <tr>
+            <td><img src="figs/h4PES.png"></td>
+            <td><img src="figs/h2oPES.png"></td>
+        </tr>
+        <tr>
+            <td><img src="figs/n2PES.png"></td>
+            <td><img src="figs/nh3PES.png"></td>
+        </tr>
+</table>
 
-## Further Challenges:
-* How to obtain excited electronic states of the same or different symmetry?
-* Partitioning in the fermionic operator space.
-* Applying unitary transformations on the Hamiltonian.
-* Compress larger basis sets into smaller number of qubits.
 
-## Business Application
-For each week, your team is asked to complete a Business Application. Questions you will be asked are:
+# Task 2: Generating Qubit Hamiltonian
 
-* Explain to a layperson the technical problem you solved in this exercise.
-* Explain or provide examples of the types of real-world problems this solution can solve.
-* Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved.
-* Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
+# Task 3: Unitary Transformations
+
+# Task 4: Hamiltonian Measurements
+
+# Task 5: Use of Quantum Hardware
 
 For more details refer to the [Business Application found here](./Business_Application.md)
