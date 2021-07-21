@@ -1,7 +1,6 @@
 jupyter
 numpy
 matplotlib
-psi4 -c psi4
 openfermion
 openfermionpyscf==0.5
 qiskit
