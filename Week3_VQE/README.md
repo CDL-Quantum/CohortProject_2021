@@ -106,10 +106,10 @@ ones?*
 <table>
     <tr>
         <td>
-            <img src="figs/ecorrvsbasis.png" height="50">
+            <img src="figs/ecorrvsbasis.png" height="200">
         </td>
         <td>
-            <img src="figs/energyvsbasis.png" height="100">
+            <img src="figs/energyvsbasis.png" height="200">
         </td>
     </tr>
 </table>
