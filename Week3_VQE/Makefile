@@ -1,3 +1,3 @@
-build-week-two-requirements:
-	pip install -r requirements.txt
+build-week-three-requirements:
+	pip install -r week-three-requirements.txt
 	python -m setup develop
