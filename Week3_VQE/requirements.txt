@@ -1,0 +1,9 @@
+jupyter
+numpy
+matplotlib
+psi4 -c psi4
+openfermion
+openfermionpyscf==0.5
+qiskit
+
+git+https://github.com/aspuru-guzik-group/tequila.git
