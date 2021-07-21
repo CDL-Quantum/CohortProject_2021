@@ -4,3 +4,6 @@ env/
 .idea/
 
 __pycache__/
+
+*.egg-info
+*.hdf5
