@@ -7,6 +7,7 @@
 The first task we were assigned with was to run PES calculations for $H_2$ and $H_2O$ molecules using popular quantum chemistry methods such Hartree-Fock (HF), Configuration Interaction Singles and Doubles (CISD), Coupled Cluster Singles and Doubles (CCSD), and Full Configuration Interaction (FCI), in the minimal STO-3G basis.
 Subsequently we were asked to compute similar curves for other molecules $H_4$, $LiH$, $N_2$, and $NH_3$. 
 
+<center>
 <table>
         <tr>
             <td><img src="figs/h2PES.png"></td>
@@ -21,11 +22,13 @@ Subsequently we were asked to compute similar curves for other molecules $H_4$, 
             <td><img src="figs/nh3PES.png"></td>
         </tr>
 </table>
+</center>
 
 *Q: Among classical methods, there are techniques based on the variational approach and those
 that are not. Identify variational methods among those that were used and explain advantages of
 the variational approach. Are there any arguments for using non-variational techniques?*
 
+<center>
 <table>
     <tr>
         <td> <b>Method</b> </td>
@@ -48,6 +51,7 @@ the variational approach. Are there any arguments for using non-variational tech
         <td> Exact </td>
     </tr>
 </table>
+</center>
 
 One of the main advantages of a variational method is that is that the energy obtained from such a method is guaranteed to be bounded from below by the exact energy. Provided we are not very far away from the exact energy, we may thus get a sense of the quality of the ansatz that can be systematically improved. 
 
@@ -62,6 +66,7 @@ method, this method is separable or size-consistent. Check separability of HF, C
 by taking 2 H 2 fragments at a large distance from each other and comparing the total energy with
 2 energies of one H 2 molecule. Explain your results.*
 
+<center>
 <table>
     <tr>
         <td>
@@ -89,6 +94,7 @@ by taking 2 H 2 fragments at a large distance from each other and comparing the 
         </td>
     </tr>    
 </table>
+</center>
 
 Both CCSD and HF are size-consistent whereas CISD is not. This is due to the truncation of the excitations in CISD to only doubles. To elaborate: since we are allowing double excitations of the ($H_2$) monomers this means that when we put two monomers together there is the possibility of two simultaneous double excitations (for an effective quadrapule excitation). However, since CISD restricts excitations only to doubles we are removing that possibility. As a result the energy of the 2 monomers together is always larger than double the energy of one monomer. HF doesn't have this problem since it is an effective single particle theory and energies are additive. CISD fully accounts for all possible excitations in the constituent electrons at the doubles level (allowing for simultaneous excitations) and, thus, doesn't have size-consisteny issues.
 
@@ -103,6 +109,7 @@ STO3G to a series like cc-pVDZ, cc-pVTZ, cc-pVQZ, cc-pV5Z. Explore for a small s
 both convergences. Which energies should be expected to be closer to experimentally measured
 ones?*
 
+<center>
 <table>
     <tr>
         <td>
@@ -113,6 +120,7 @@ ones?*
         </td>
     </tr>
 </table>
+</center>
 
 The standard quantum chemistry canon is shown in the figure above (left). So we should expect to see that same as we monitor $H_2$. In paricular in the large basis and higher electron correlation energy accounting limit we should obtain answers that are in agreement with experiment. Our intuition is corraborated by the figure (right) and we see that as we increase our ability to capture electron correlation and size of the basis, we approach experimental values. Note with CCPV5Z and experiment is $|\Delta E| = 0.45$ $mE_h$ 
 
