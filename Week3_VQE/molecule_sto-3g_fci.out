@@ -88,30 +88,30 @@
 
    ==> Starting CI iterations <==
 
-    H0 Block Eigenvalue =  -0.93348294
+    H0 Block Eigenvalue =  -0.93316370
 
     Simultaneous Expansion Method (Block Davidson Method)
     Using 1 initial trial vectors
 
      Iter   Root       Total Energy       Delta E      C RMS
 
-   @CI  0:     0     -0.933482940378   -1.1042E+00   1.1102E-16  
+   @CI  0:     0     -0.933163699115   -9.8608E-01   2.2204E-16  
     Warning: Norm of correction (root 0) is < 1.0E-13
-   @CI  1:     0     -0.933482940378   0.0000E+00   1.1102E-16 c
+   @CI  1:     0     -0.933163699115   0.0000E+00   2.5728E-16 c
 
    ==> Energetics <==
 
-    SCF energy =           -0.649655987685950
-    Total CI energy =      -0.933482940378359
+    SCF energy =           -0.572466761385909
+    Total CI energy =      -0.933163699114551
 
    ==> FCI root 0 information <==
 
-    FCI Root 0 energy =    -0.933482940378359
+    FCI Root 0 energy =    -0.933163699114551
 
    The 2 most important determinants:
 
-    *   1   -0.728534  (    0,    0)  1AgX 
-    *   2    0.685010  (    1,    1)  1B1uX 
+    *   1    0.707107  (    0,    0)  1AgX 
+    *   2   -0.707107  (    1,    1)  1B1uX 
 
 		 "A good bug is a dead bug" 
 

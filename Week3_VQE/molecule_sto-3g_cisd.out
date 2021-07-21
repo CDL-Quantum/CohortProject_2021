@@ -1,0 +1,29 @@
+ MINTS: Wrapper to libmints.
+   by Justin Turney
+
+   Calculation information:
+      Number of threads:                 1
+      Number of atoms:                   2
+      Number of AO shells:               2
+      Number of SO shells:               1
+      Number of primitives:              6
+      Number of atomic orbitals:         2
+      Number of basis functions:         2
+
+      Number of irreps:                  8
+      Integral cutoff                 1.00e-12
+      Number of functions per irrep: [   1    0    0    0    0    1    0    0 ]
+
+ OEINTS: Overlap, kinetic, potential, dipole, and quadrupole integrals
+         stored in file 35.
+
+      Computing two-electron integrals...done
+      Computed 4 non-zero two-electron integrals.
+        Stored in file 33.
+
+
+*** tstart() called on Edens-MacBook-Air.local
+*** at Wed Jul 21 15:16:22 2021
+
+        ==> Transform all two-electron integrals <==
+

@@ -86,12 +86,30 @@ def get_molecular_data(mol, geometry, xyz_format=False):
             ['N', [0, 0, geometry]]
         ]
     elif mol == 'h4':
+        angle = 90 / 2
+        R = geometry
+        angle = math.radians(angle)
+        x = R * math.sin(angle)
+        y = R * math.cos(angle)
         mol_data = [
-            ['H', [0, 0, 0]],
-            ['H', [0, 0, geometry]],
-            ['H', [0, geometry, 0]],
-            ['H', [0, geometry, geometry]]
+            ['H', [0, x, y]],
+            ['H', [0, x, -y]],
+            ['H', [0, -x, y]],
+            ['H', [0, -x, -y]]
         ]
+         
+#     elif mol == 'h4':
+#         angle = geometry / 2
+#         R = 1.738
+#         angle = math.radians(angle)
+#         x = R * math.sin(angle)
+#         y = R * math.cos(angle)
+#         mol_data = [
+#             ['H', [0, x, y]],
+#             ['H', [0, x, -y]],
+#             ['H', [0, -x, y]],
+#             ['H', [0, -x, -y]]
+#         ]
     elif mol == 'nh3':
         bondAngle = 107
         bondAngle = math.radians(bondAngle)
