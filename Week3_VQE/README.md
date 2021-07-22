@@ -6,12 +6,12 @@
 ## Step #1: Generating PES using classical methods
 1. Among classical methods, there are techniques based on the variational approach and thosethat are not.  Identify variational methods among those that were used and explain advantages ofthe variational approach.  Are there any arguments for using non-variational techniques?
 
-| Method |                 |   |
-|:------:|:---------------:|:-:|
-|   HF   |   Variational   |   |
-|  CCSD  | NOT Variational |   |
-|  CISD  |   Variational   |   |
-|   FCI  |   Variational   |   |
+| Method |  Variationality |
+|:------:|:---------------:|
+|   HF   |   Variational   |   
+|  CCSD  | NOT Variational |   
+|  CISD  |   Variational   |   
+|   FCI  |   Variational   |   
 
 Are there any arguments for using non-variational techniques?
 The scalability of post-Hartree Fock (HF) methods, e.g., CISD and FCI, is the main bottleneck to properly simulate larger molecules. 
@@ -23,7 +23,7 @@ This exponetial form is what makes CC a methodology that could be better suited 
 Coupled cluster (CC) theory provides a compelling framework of approximate infinite-order perturbation theory, in the form of an exponential of cluster operators describing the true quantum many-body effects of the electronic wave function at a computational cost that, despite being significantly more expensive than DFT, scales polynomially with system size. 
 -->
 
-Bellow we present the pontential energy surfaces (PESs) for the dissociation of H2, LiH, H2O and H4 molecules using different methods.
+Bellow we present the pontential energy surfaces (PESs) for the dissociation of H<sub>2</sub>, LiH, H<sub>2</sub>O and H<sub>4</sub> molecules using different methods.
 |  |  | 
 | :---------: | :---------: |
 | ![Unsolved Graph](./resources/plots_task1/h2_dissociation.png)  | ![Unsolved Graph](./resources/plots_task1/h2o_dissociation.png) |
@@ -43,6 +43,6 @@ Bellow we present the pontential energy surfaces (PESs) for the dissociation of 
 
 
 In the limit of infinite internuclear distance between the hydrogen atoms, the energy must be twice the indivisual energy of the atoms. Any discrepancy between these two energies.
-HF can only represent one electornig configuration, which for the H2 molecule is Singlet, however, in the limit of separated atoms, each Hydrong atom's electron has a multiplicity of a triple. This is the primary source of error for HF, the lack of possibilty to describe systems with multiple electornic configurations.
+HF can only represent one electornig configuration, which for the H<sub>2</sub> molecule is Singlet, however, in the limit of separated atoms, each Hydrong atom's electron has a multiplicity of a triple. This is the primary source of error for HF, the lack of possibilty to describe systems with multiple electornic configurations.
 On the other hand, CCSD, CISD and FCI, do account for multiple electronic confugurations in the wave function. 
 
