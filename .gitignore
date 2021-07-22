@@ -1,3 +1,6 @@
 .idea
 venv/
 *__pycache__/
+*.hdf5
+tmp*
+envvir.py
