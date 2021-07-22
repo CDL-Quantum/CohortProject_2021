@@ -30,7 +30,19 @@ Bellow we present the pontential energy surfaces (PESs) for the dissociation of 
 | ![Unsolved Graph](./resources/plots_task1/lih_dissociation.png) | ![Unsolved Graph](./resources/plots_task1/h4_dissociation.png) |
 
 
-2. There is another division between classical methods, it is based on so-called separability or size-consistency.   Simply speaking, if one investigates two molecular fragments (A and B) at a large distance from each other (∼100 ̊A) then the total electronic energy should be equalto the $\sum E_{A+B}=E_{A}+E_{B}$, where the energy of each fragment ($E_{A}$ or $E_{B}$) can be obtained in acalculation that does not involve the other fragment.  If this condition is satisfied for a particularmethod, this method is separable or size-consistent.  Check separability of HF, CISD, and CCSDby taking 2 $H_{2}$ fragments at a large distance from each other and comparing the total energy with2 energies of one $H_{2}$ molecule.  Explain your results.
+2. There is another division between classical methods, it is based on so-called separability or size-consistency.   Simply speaking, if one investigates two molecular fragments (A and B) at a large distance from each other (∼100 ̊A) then the total electronic energy should be equalto the $\sum E_{A+B}=E_{A}+E_{B}$, where the energy of each fragment ($E_{A}$ or $E_{B}$) can be obtained in a calculation that does not involve the other fragment.  If this condition is satisfied for a particular method, this method is separable or size-consistent.  Check separability of HF, CISD, and CCSD by taking 2 $H_{2}$ fragments at a large distance from each other and comparing the total energy with2 energies of one $H_{2}$ molecule.  Explain your results.
 
 
+|        | Energy | Energy     | Energy                 |
+|--------|--------|------------|------------------------|
+| Method | H [Ha] | $H_2$ [Ha] | $H_2 - 2\timesH$ [Ha]  |
+|   HF   |        |            |                        |
+|  CCSD  |        |            |                        |
+|  CISD  |        |            |                        |
+|   FCI  |        |            |                        |
+
+
+In the limit of infinite internuclear distance between the hydrogen atoms, the energy must be twice the indivisual energy of the atoms. Any discrepancy between these two energies.
+HF can only represent one electornig configuration, which for the H2 molecule is Singlet, however, in the limit of separated atoms, each Hydrong atom's electron has a multiplicity of a triple. This is the primary source of error for HF, the lack of possibilty to describe systems with multiple electornic configurations.
+On the other hand, CCSD, CISD and FCI, do account for multiple electronic confugurations in the wave function. 
 
