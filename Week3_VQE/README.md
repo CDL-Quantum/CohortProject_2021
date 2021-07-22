@@ -49,7 +49,7 @@ On the other hand, CCSD, CISD and FCI, do account for multiple electronic confug
 3. Optional:  If one is interested in converging to the exact non-relativistic electronic energies, there  are  two  independent  coordinates:  
   1. accuracy  of  accounting  for  many-body  effects  beyondthe Hartree-Fock method (electronic correlation)
   2. accuracy of representation of one-electronstates,  or  convergence  with  respect  to  the  one-electron  basis  size.   
-Convergence  along  the  firstcoordinate  can  be  illustrated  by  monitoring  reduction  of  the  energy  deviations  from  the  Full  CI answer in a particular basis set for a series of increasingly accurate approaches, e.g.  HF, CCSD,CCSD(T), CCSDT. Convergences along the second coordinate requires the basis set extension from STO3G to a series like cc-pVDZ, cc-pVTZ, cc-pVQZ, cc-pV5Z. Explore for a small system like H2 both  convergences.   
+Convergence  along  the  firstcoordinate  can  be  illustrated  by  monitoring  reduction  of  the  energy  deviations  from  the  Full  CI answer in a particular basis set for a series of increasingly accurate approaches, e.g.  HF, CCSD,CCSD(T), CCSDT. Convergences along the second coordinate requires the basis set extension from STO3G to a series like cc-pVDZ, cc-pVTZ, cc-pVQZ, cc-pV5Z. Explore for a small system like H<sub>2</sub> both  convergences.   
 Which  energies  should  be  expected  to  be  closer  to  experimentally  measure dones?
 
 ![Unsolved Graph](./resources/H2_energy_methods_vs_basis_set.png)
