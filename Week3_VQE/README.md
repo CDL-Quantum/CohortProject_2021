@@ -33,14 +33,14 @@ Bellow we present the pontential energy surfaces (PESs) for the dissociation of 
 2. There is another division between classical methods, it is based on so-called separability or size-consistency.   Simply speaking, if one investigates two molecular fragments (A and B) at a large distance from each other (∼100 ̊A) then the total electronic energy should be equalto the $\sum E_{A+B}=E_{A}+E_{B}$, where the energy of each fragment ($E_{A}$ or $E_{B}$) can be obtained in a calculation that does not involve the other fragment.  If this condition is satisfied for a particular method, this method is separable or size-consistent.  Check separability of HF, CISD, and CCSD by taking 2 $H_{2}$ fragments at a large distance from each other and comparing the total energy with2 energies of one $H_{2}$ molecule.  Explain your results.
 
 
-|        | Energy | Energy     | Energy                 |
-|--------|--------|------------|------------------------|
-| Method | H [Ha] | H2 [Ha]    |  H2 - 2* H [Ha]        | 
-|   UHF  |        |  -0.933164 |                        |
-|  CCSD  |        |            |                        |
-|  CISD  |        |            |                        |
-|   FCI  |        |            |                        |
-
+|        | Energy   | Energy   | Energy        |
+|--------|----------|----------|---------------|
+| Method |  H2 [Ha] | H4 [Ha]  | H4 -2 H2 [Ha] |
+|   UHF  | -1.06610 | -1.19557 | 0.93665       |
+|  RHF   | -1.06610 | -2.13222 | 2.12E-12      |
+|  CCSD  |  -1.1012 | -2.2023  | 1.568E-12     |
+|  CISD  | -1.1012  | -2.2003  | 0.00203       |
+|   FCI  |  -1.1012 | -2.2023  | 1.59E-12      |
 
 In the limit of infinite internuclear distance between the hydrogen atoms, the energy must be twice the indivisual energy of the atoms. Any discrepancy between these two energies.
 HF can only represent one electornig configuration, which for the H2 molecule is Singlet, however, in the limit of separated atoms, each Hydrong atom's electron has a multiplicity of a triple. This is the primary source of error for HF, the lack of possibilty to describe systems with multiple electornic configurations.
