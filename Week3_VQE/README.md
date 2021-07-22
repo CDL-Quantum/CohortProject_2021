@@ -143,3 +143,11 @@ Which  energies  should  be  expected  to  be  closer  to  experimentally  measu
 
 
 ![Unsolved Graph](./resources/H2_energy_methods_vs_basis_set.png)
+
+
+
+# Step #2: Generating the qubit Hamiltonian
+
+
+1. What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
+Any mapping protcol should size consistent, meaning the N sites from the Fock space should be represented with n qubits. 
