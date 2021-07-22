@@ -52,4 +52,4 @@ On the other hand, CCSD, CISD and FCI, do account for multiple electronic confug
 Convergence  along  the  firstcoordinate  can  be  illustrated  by  monitoring  reduction  of  the  energy  deviations  from  the  Full  CI answer in a particular basis set for a series of increasingly accurate approaches, e.g.  HF, CCSD,CCSD(T), CCSDT. Convergences along the second coordinate requires the basis set extension from STO3G to a series like cc-pVDZ, cc-pVTZ, cc-pVQZ, cc-pV5Z. Explore for a small system like H2 both  convergences.   
 Which  energies  should  be  expected  to  be  closer  to  experimentally  measure dones?
 
-![Unsolved Graph](./resources/plots_task1/H2_energy_methods_bs_basis_set.png)
+![Unsolved Graph](./resources/H2_energy_methods_bs_basis_set.png)
