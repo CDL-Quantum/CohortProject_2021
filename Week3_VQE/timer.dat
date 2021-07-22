@@ -488,3 +488,111 @@ Module                                       User      System        Wall       
 --------------------------------------------------------------------------------------
 
 **************************************************************************************
+
+Host: Edens-MacBook-Air.local
+
+Timers On : Wed Jul 21 16:59:33 2021
+Timers Off: Thu Jul 22 02:53:39 2021
+
+Wall Time:    14619.06 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+DFH: sparsity prep                  :      1.533u      0.017s      0.887w    130 calls
+DFH: initialize()                   :      5.100u      0.333s      3.500w    130 calls
+DFH: AO Construction                :      0.150u      0.000s      0.075w    130 calls
+DFH: AO-Met. Contraction            :      0.000u      0.000s      0.003w    130 calls
+HF: Form core H                     :      0.183u      0.350s      0.294w    130 calls
+HF: Form S/X                        :      0.017u      0.000s      0.013w    130 calls
+HF: Guess                           :      7.733u      0.350s      5.044w    130 calls
+SAD Guess                           :      7.200u      0.317s      4.703w    130 calls
+HF: Form G                          :      0.050u      0.017s      0.036w    390 calls
+JK: D                               :      0.000u      0.000s      0.004w    390 calls
+JK: USO2AO                          :      0.017u      0.000s      0.005w    390 calls
+JK: JK                              :      0.000u      0.000s      0.015w    390 calls
+DFH: compute_JK()                   :      0.000u      0.000s      0.013w    390 calls
+DFH: Grabbing AOs                   :      0.000u      0.000s      0.001w    390 calls
+DFH: compute_J                      :      0.000u      0.000s      0.003w    390 calls
+DFH: compute_K                      :      0.000u      0.000s      0.004w    390 calls
+JK: AO2USO                          :      0.000u      0.000s      0.002w    390 calls
+HF: Form F                          :      0.033u      0.000s      0.004w    390 calls
+HF: Form D                          :      0.000u      0.000s      0.002w    390 calls
+HF: DIIS                            :      0.317u      0.067s      0.232w    260 calls
+DIISManager::add_entry              :      0.050u      0.050s      0.073w    260 calls
+DIISManager::extrapolate            :      0.017u      0.017s      0.014w    260 calls
+bMatrix setup                       :      0.000u      0.000s      0.002w    260 calls
+bMatrix pseudoinverse               :      0.017u      0.000s      0.007w    260 calls
+New vector                          :      0.000u      0.017s      0.003w    260 calls
+HF: Form C                          :      0.017u      0.000s      0.005w    260 calls
+CIWave: CIvect write                :      0.033u      0.033s      0.011w    856 calls
+CIWave: CIvect read                 :      0.033u      0.000s      0.012w   2928 calls
+CIWave: s2                          :      0.000u      0.000s      0.001w    354 calls
+CIWave: s3                          :      0.000u      0.000s      0.002w   1062 calls
+ccenergy                            :      4.350u     20.167s     16.196w     28 calls
+F build                             :      0.100u      0.083s      0.161w    372 calls
+Wmbej build                         :      0.150u      0.100s      0.166w    372 calls
+C->Wmbej                            :      0.017u      0.017s      0.019w    372 calls
+F->Wmbej                            :      0.050u      0.033s      0.035w    372 calls
+E->Wmbej                            :      0.033u      0.050s      0.044w    372 calls
+X->Wmbej                            :      0.050u      0.000s      0.052w    372 calls
+Z                                   :      0.017u      0.000s      0.004w    372 calls
+T2 Build                            :      0.567u      0.233s      0.461w    372 calls
+BT2                                 :      0.050u      0.033s      0.077w    372 calls
+ABCD:new                            :      0.050u      0.033s      0.075w    372 calls
+ABCD:S                              :      0.000u      0.000s      0.014w    372 calls
+ABCD:A                              :      0.017u      0.000s      0.012w    372 calls
+ABCD:axpy                           :      0.017u      0.000s      0.014w    372 calls
+FT2                                 :      0.033u      0.000s      0.018w    372 calls
+WmbejT2                             :      0.083u      0.100s      0.094w    372 calls
+CT2                                 :      0.233u      0.050s      0.154w    372 calls
+
+--------------------------------------------------------------------------------------
+DFH: sparsity prep                  :      1.533u      0.017s      0.887w    130 calls
+DFH: initialize()                   :      5.100u      0.333s      3.500w    130 calls
+| DFH: AO Construction              :      0.150u      0.000s      0.075w    130 calls
+| DFH: AO-Met. Contraction          :      0.000u      0.000s      0.003w    130 calls
+HF: Form core H                     :      0.183u      0.350s      0.294w    130 calls
+HF: Form S/X                        :      0.017u      0.000s      0.013w    130 calls
+HF: Guess                           :      7.733u      0.350s      5.044w    130 calls
+| SAD Guess                         :      7.200u      0.317s      4.703w    130 calls
+HF: Form G                          :      0.050u      0.017s      0.036w    390 calls
+| JK: D                             :      0.000u      0.000s      0.004w    390 calls
+| JK: USO2AO                        :      0.017u      0.000s      0.005w    390 calls
+| JK: JK                            :      0.000u      0.000s      0.015w    390 calls
+| | DFH: compute_JK()               :      0.000u      0.000s      0.013w    390 calls
+| | | DFH: Grabbing AOs             :      0.000u      0.000s      0.001w    390 calls
+| | | DFH: compute_J                :      0.000u      0.000s      0.003w    390 calls
+| | | DFH: compute_K                :      0.000u      0.000s      0.004w    390 calls
+| JK: AO2USO                        :      0.000u      0.000s      0.002w    390 calls
+HF: Form F                          :      0.033u      0.000s      0.004w    390 calls
+HF: Form D                          :      0.000u      0.000s      0.002w    390 calls
+HF: DIIS                            :      0.317u      0.067s      0.232w    260 calls
+| DIISManager::add_entry            :      0.050u      0.050s      0.073w    260 calls
+| DIISManager::extrapolate          :      0.017u      0.017s      0.014w    260 calls
+| | bMatrix setup                   :      0.000u      0.000s      0.002w    260 calls
+| | bMatrix pseudoinverse           :      0.017u      0.000s      0.007w    260 calls
+| | New vector                      :      0.000u      0.017s      0.003w    260 calls
+HF: Form C                          :      0.017u      0.000s      0.005w    260 calls
+CIWave: CIvect write                :      0.033u      0.033s      0.011w    856 calls
+CIWave: CIvect read                 :      0.033u      0.000s      0.012w   2928 calls
+CIWave: s2                          :      0.000u      0.000s      0.001w    354 calls
+CIWave: s3                          :      0.000u      0.000s      0.002w   1062 calls
+ccenergy                            :      4.350u     20.167s     16.196w     28 calls
+| F build                           :      0.100u      0.083s      0.161w    372 calls
+| Wmbej build                       :      0.150u      0.100s      0.166w    372 calls
+| | C->Wmbej                        :      0.017u      0.017s      0.019w    372 calls
+| | F->Wmbej                        :      0.050u      0.033s      0.035w    372 calls
+| | E->Wmbej                        :      0.033u      0.050s      0.044w    372 calls
+| | X->Wmbej                        :      0.050u      0.000s      0.052w    372 calls
+| Z                                 :      0.017u      0.000s      0.004w    372 calls
+| T2 Build                          :      0.567u      0.233s      0.461w    372 calls
+| | BT2                             :      0.050u      0.033s      0.077w    372 calls
+| | | ABCD:new                      :      0.050u      0.033s      0.075w    372 calls
+| | | | ABCD:S                      :      0.000u      0.000s      0.014w    372 calls
+| | | | ABCD:A                      :      0.017u      0.000s      0.012w    372 calls
+| | | | ABCD:axpy                   :      0.017u      0.000s      0.014w    372 calls
+| | FT2                             :      0.033u      0.000s      0.018w    372 calls
+| | WmbejT2                         :      0.083u      0.100s      0.094w    372 calls
+| | CT2                             :      0.233u      0.050s      0.154w    372 calls
+
+**************************************************************************************
