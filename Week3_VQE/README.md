@@ -6,7 +6,7 @@
 ## Step #1: Generating PES using classical methods
 1. Among classical methods, there are techniques based on the variational approach and thosethat are not.  Identify variational methods among those that were used and explain advantages ofthe variational approach.  Are there any arguments for using non-variational techniques?
 
-| Method |                 | 
+|        |                 | 
 |:------:|:---------------:|
 |   HF   |   Variational   |
 |  CCSD  | NOT Variational | 
@@ -35,7 +35,7 @@ Bellow we present the pontential energy surfaces (PESs) for the dissociation of 
 
 |        | Energy   | Energy   | Energy        |
 |--------|----------|----------|---------------|
-| Method |  H2 [Ha] | H4 [Ha]  | H4 -2 H2 [Ha] |
+| Method |  H<sub>2</sub> [Ha] | H<sub>4</sub> [Ha]  | H<sub>4</sub> -2 * H<sub>2</sub> [Ha] |
 |   UHF  | -1.06610 | -1.19557 | 0.93665       |
 |  RHF   | -1.06610 | -2.13222 | 2.12E-12      |
 |  CCSD  |  -1.1012 | -2.2023  | 1.568E-12     |
