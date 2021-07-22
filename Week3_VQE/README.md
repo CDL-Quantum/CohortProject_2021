@@ -36,7 +36,7 @@ Bellow we present the pontential energy surfaces (PESs) for the dissociation of 
 |        | Energy | Energy     | Energy                 |
 |--------|--------|------------|------------------------|
 | Method | H [Ha] | H2 [Ha]    |  H2 - 2* H [Ha]        | 
-|   HF   |        |            |                        |
+|   UHF  |        |  -0.933164 |                        |
 |  CCSD  |        |            |                        |
 |  CISD  |        |            |                        |
 |   FCI  |        |            |                        |
