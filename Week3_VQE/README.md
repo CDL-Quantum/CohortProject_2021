@@ -79,79 +79,25 @@ Below we show the ground state energy of H2 computed with different wavefunction
 ![Unsolved Graph](./resources/H2_energy_methods_vs_basis_set.png)
 
 
-
-
-
-![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
-
-
-# Questions 
-
-## Step #1: Generating PES using classical methods
-1. Among classical methods, there are techniques based on the variational approach and thosethat are not.  Identify variational methods among those that were used and explain advantages ofthe variational approach.  Are there any arguments for using non-variational techniques?
-
-|        |                 | 
-|:------:|:---------------:|
-|   HF   |   Variational   |
-|  CCSD  | NOT Variational | 
-|  CISD  |   Variational   | 
-|   FCI  |   Variational   |
-
-Are there any arguments for using non-variational techniques?
-The scalability of post-Hartree Fock (HF) methods, e.g., CISD and FCI, is the main bottleneck to properly simulate larger molecules. 
-One possiblity to improbe the correlation energy is through the Coupled Cluster (CC) theory.
-In the CC theory, the improvement of the wave function is through the application of the exponential of cluster operators  to the HF wave function, ![CC_angle](https://latex.codecogs.com/gif.latex?%7C%20CC%20%5Crangle%20%3D%20e%5E%7BT%7D%7C%20HF%20%5Crangle) 
-This exponetial form is what makes CC a methodology that could be better suited in quantum computer.
-
-<!---
-Coupled cluster (CC) theory provides a compelling framework of approximate infinite-order perturbation theory, in the form of an exponential of cluster operators describing the true quantum many-body effects of the electronic wave function at a computational cost that, despite being significantly more expensive than DFT, scales polynomially with system size. 
--->
-
-Bellow we present the pontential energy surfaces (PESs) for the dissociation of H<sub>2</sub>, LiH, H<sub>2</sub>O and H<sub>4</sub> molecules using different methods.
-|  |  | 
-| :---------: | :---------: |
-| ![Unsolved Graph](./resources/plots_task1/h2_dissociation.png)  | ![Unsolved Graph](./resources/plots_task1/h2o_dissociation.png) |
-| ![Unsolved Graph](./resources/plots_task1/lih_dissociation.png) | ![Unsolved Graph](./resources/plots_task1/h4_dissociation.png) |
-
-
-2. There is another division between classical methods, it is based on so-called separability or size-consistency.   Simply speaking, if one investigates two molecular fragments (A and B) at a large distance from each other (∼100 ̊A) then the total electronic energy should be equalto the ![Sum of energies](https://latex.codecogs.com/gif.latex?%5Csum%20E_%7BA&plus;B%7D%3DE_%7BA%7D&plus;E_%7BB%7D), where the energy of each fragment (![E_a](https://latex.codecogs.com/gif.latex?E_%7BA%7D) or ![E_b](https://latex.codecogs.com/gif.latex?E_%7BB%7D)) can be obtained in a calculation that does not involve the other fragment.  If this condition is satisfied for a particular method, this method is separable or size-consistent.  Check separability of HF, CISD, and CCSD by taking 2 ![H_2](https://latex.codecogs.com/gif.latex?H_%7B2%7D) fragments at a large distance from each other and comparing the total energy with 2 energies of one ![H_2](https://latex.codecogs.com/gif.latex?H_%7B2%7D) molecule.  Explain your results.
-
-
-|        | Energy   | Energy   | Energy        |
-|--------|----------|----------|---------------|
-| Method |  H<sub>2</sub> [Ha] | H<sub>4</sub> [Ha]  | H<sub>4</sub> -2 * H<sub>2</sub> [Ha] |
-|   UHF  | -1.06610 | -1.19557 | 0.93665       |
-|  RHF   | -1.06610 | -2.13222 | 2.12E-12      |
-|  CCSD  |  -1.1012 | -2.2023  | 1.568E-12     |
-|  CISD  | -1.1012  | -2.2003  | 0.00203       |
-|   FCI  |  -1.1012 | -2.2023  | 1.59E-12      |
-
-In the limit of infinite internuclear distance between the hydrogen atoms, the energy must be twice the indivisual energy of the atoms. Any discrepancy between these two energies.
-
-HF can only represent one electornig configuration, which for the H<sub>2</sub> molecule is Singlet, however, in the limit of separated atoms, each Hydrong atom's electron has a multiplicity of a triple. This is the primary source of error for HF, the lack of possibilty to describe systems with multiple electornic configurations.
-
-On the other hand, CCSD, CISD and FCI, do account for multiple electronic confugurations in the wave function. 
-
-3. Optional:  If one is interested in converging to the exact non-relativistic electronic energies, there  are  two  independent  coordinates:  
-  1. accuracy  of  accounting  for  many-body  effects  beyondthe Hartree-Fock method (electronic correlation)
-  2. accuracy of representation of one-electronstates,  or  convergence  with  respect  to  the  one-electron  basis  size.   
-Convergence  along  the  firstcoordinate  can  be  illustrated  by  monitoring  reduction  of  the  energy  deviations  from  the  Full  CI answer in a particular basis set for a series of increasingly accurate approaches, e.g.  HF, CCSD,CCSD(T), CCSDT. Convergences along the second coordinate requires the basis set extension from STO3G to a series like cc-pVDZ, cc-pVTZ, cc-pVQZ, cc-pV5Z. 
-
-Explore for a small system like H<sub>2</sub> both  convergences.   
-
-Which  energies  should  be  expected  to  be  closer  to  experimentally  measure dones?
-
-
-![Unsolved Graph](./resources/H2_energy_methods_vs_basis_set.png)
-
-
-
 # Step #2: Generating the qubit Hamiltonian
 
 
 1.  What are the cons and pros of the Bravyi-Kitaev transformation compared to the Jordan-Wigner transformations?
-The Bravyi-Kitaev transformation is a more compact than the Jordan-Wigner transformation, which in the NISQ area means a lower number of gates are needed in the quantum circuit. 
-As it has been reported, for VQEs there is no major difference in the accuracy between the Bravyi-Kitaev and the Jordan-Wigner transformations.
+
+In the Jordan-Wigner transformation a single fermionic creation or annihilation operator is represented by O(n) qubit operations while in the Bravyi-Kitaev transformation only O(log n) qubit operations are required, thus 
+the Bravyi-Kitaev transformation is a more compact one, i.e. a lower number of gates are needed in the quantum circuit. 
+Frequently, the gate count reduction is particularly large in the number of expensive entan
+gling gates required ( ref BKvsJW).
+Such a reduction is crucial in the NISQ era.
+
+In order to simulate fermionic operators with qubits we need the information on the
+occupation of the target orbital, and the information on the parity of the set of orbitals with index less than
+the target orbital. 
+When using the Jordan-Wigner transformation and its associated occupatio basis the occupation information is stored locally but the parity information is non-local. In the case of The Bravyi-Kitaev transformation and basis  the locality of the occupation information and
+and of the parity information are balanced and this fact results in an improved simulation efficiency.
+It has been claimed that Bravyi-Kitaev mapping is superior in all cases aside from
+the lexicographic ordering (ref BKvsJW).
+For VQEs however there is a claim that no major differences exist in the accuracy between the Bravyi-Kitaev and the Jordan-Wigner transformations (it's in Artur's lecture but no ref found yet!).
 
 2. What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
 Any mapping protcol should size consistent, meaning the N sites from the Fock space should be represented with n qubits. 
