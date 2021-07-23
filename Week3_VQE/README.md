@@ -96,6 +96,22 @@ Additional questions:
 1) What are the cons and pros of the Bravyi-Kitaev transformation compared to the Jordan-
 Wigner transformations?
 
+
+While the occupation number
+basis and the Jordan-Wigner transformation allow for the representation of a single fermionic
+creation or annihilation operator by O(n) qubit operations, the Bravyi-Kitaev basis and
+transformation require only O(log n) qubit operations to represent one fermionic operator. 
+
+The problem with this method is that as a consequence of
+the non-locality of the parity operator Z i → , the number of extra qubit operations required
+to simulate a single fermionic operator scales as O(n). In the next section we consider two
+alternatives to the occupation number basis that were suggested by Bravyi and Kitaev.
+
+The problem with this method is that as a consequence of
+the non-locality of the parity operator Z i → , the number of extra qubit operations required
+to simulate a single fermionic operator scales as O(n). In the next section we consider two
+alternatives to the occupation number basis that were suggested by Bravyi and Kitaev
+
 2) What are the requirements for a function of qubit operators to be a valid mapping for the
 fermionic operators?
 
@@ -103,10 +119,6 @@ o represent the fermionic creation
 and annihilation operators in terms of operations on qubits in a way that preserves the
 fermionic anti-commutation relations, 
 
-While the occupation number
-basis and the Jordan-Wigner transformation allow for the representation of a single fermionic
-creation or annihilation operator by O(n) qubit operations, the Bravyi-Kitaev basis and
-transformation require only O(log n) qubit operations to represent one fermionic operator. 
 
 3) The electronic Hamiltonian is real (due to time-reversal symmetry), what consequences does
 that have on the terms in the qubit Hamiltonian after the Jordan-Wigner transformation?
