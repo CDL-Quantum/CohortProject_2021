@@ -35,7 +35,7 @@ In the figures bellow we present the pontential energy surfaces (PESs) for the d
 
 2. There is another division between classical methods, it is based on so-called separability or size-consistency.   Simply speaking, if one investigates two molecular fragments (A and B) at a large distance from each other (∼100 ̊A) then the total electronic energy should be equalto the ![Sum of energies](https://latex.codecogs.com/gif.latex?%5Csum%20E_%7BA&plus;B%7D%3DE_%7BA%7D&plus;E_%7BB%7D), where the energy of each fragment (![E_a](https://latex.codecogs.com/gif.latex?E_%7BA%7D) or ![E_b](https://latex.codecogs.com/gif.latex?E_%7BB%7D)) can be obtained in a calculation that does not involve the other fragment.  If this condition is satisfied for a particular method, this method is separable or size-consistent.  Check separability of HF, CISD, and CCSD by taking 2 ![H_2](https://latex.codecogs.com/gif.latex?H_%7B2%7D) fragments at a large distance from each other and comparing the total energy with 2 energies of one ![H_2](https://latex.codecogs.com/gif.latex?H_%7B2%7D) molecule.  Explain your results.
 
-For the follwing calculations we used 0.7 a0 as the interatomic distance for the H2 molecule, and for the H4, we separeted each H2 fragment by 100 a0. 
+For the follwing calculations we used 0.7 a0 as the interatomic distance for the H2 molecule, and for the H4, we separeted each H2 fragment by 100 A (188.973 a0). 
 
 |  Method       | Energy  | Energy   | Energy  | 
 |--------|----------|----------|---------------|
@@ -47,10 +47,10 @@ For the follwing calculations we used 0.7 a0 as the interatomic distance for the
 |--------|----------|----------|---------------|
 | platform: tequila||||
 |   UHF  | -----| ------ | ----       |
-|  RHF   | -1.1173 |-2.2347  | -7.63E-13      | 
-|  CCSD  | -1.1362 | -2.2723  | -6.31-13     |  
-|  CISD  | -1.1362  | -2.2720 | -0.000404       |
-|   FCI  |  -1.1362 | -2.2724  |  -6.45E-13     | 
+|  RHF   | --1.1173 |-2.2347  | 3.15 E-14      | 
+|  CCSD  | -1.1362 | -2.2724  | 1.78 E-14     |  
+|  CISD  | -1.1362  | -2.2720 | 0.000404       |
+|   FCI  |  -1.1362 | -2.2723  |  2.75E-14     | 
 |--------|----------|----------|---------------|
 
 
