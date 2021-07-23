@@ -115,6 +115,9 @@ Since the desired quantity is the energy <H>, the mapping should also be iso-spe
 
 2. Why symmetries are helpful for constructing a unitary operator which rotates the initial state  ![init q state](https://latex.codecogs.com/gif.latex?%7C%20%5Cbar%7B0%7D%20%5Crangle) to the eigenstate  ![eigen state](https://latex.codecogs.com/gif.latex?%7C%20%5CPsi%20%5Crangle)?
  
+ They can help reduce the complexity of the unitary transformation corresponding to the rotation needed for the preparation of the state. And the state will have the proper physical symmeties by construction. (ref IZmaelov20)
+
+ 
 3. What are the ways to restore symmetries if your unitary transformation break them?
  
  Two different ways have been proposed to restore symmetry. One is to add correlation using entangling gates. The other is to constraint the VQE by imposing the conservation of symmetries such as spin or particle conservation (ref  10 in the instructions,QCCIzmaelov18 )
