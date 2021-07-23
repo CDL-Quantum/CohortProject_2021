@@ -79,5 +79,37 @@ Below we show the ground state energy of H2 computed with different wavefunction
 
 ![Unsolved Graph](./resources/H2_energy_methods_vs_basis_set.png)
 
+## Step #2: Generating the qubit Hamiltonian
+
+To proceed to VQE one needs to generate the qubit Hamiltonian, the easiest path is via first
+generating the electronic Hamiltonian in the second quantized form and then transform it into the
+qubit form using one of the fermion-to-qubit transformations: Jordan-Wigner or Bravyi-Kitaev [3].
+Next, some qubit operators can be substituted by numbers (±1) because their states are stationary
+for the specific electronic state (e.g. ground state). This reduction is very useful for fitting larger
+problem in a fewer qubit description and is based on Hamiltonian symmetries, which are discussed
+in Refs. [4, 5, 6]
+
+Illustrative code: S2 Hamiltonian gen.ipynb.
+
+Additional questions:
+
+1) What are the cons and pros of the Bravyi-Kitaev transformation compared to the Jordan-
+Wigner transformations?
+
+2) What are the requirements for a function of qubit operators to be a valid mapping for the
+fermionic operators?
+
+o represent the fermionic creation
+and annihilation operators in terms of operations on qubits in a way that preserves the
+fermionic anti-commutation relations, 
+
+While the occupation number
+basis and the Jordan-Wigner transformation allow for the representation of a single fermionic
+creation or annihilation operator by O(n) qubit operations, the Bravyi-Kitaev basis and
+transformation require only O(log n) qubit operations to represent one fermionic operator. 
+
+3) The electronic Hamiltonian is real (due to time-reversal symmetry), what consequences does
+that have on the terms in the qubit Hamiltonian after the Jordan-Wigner transformation?
+
 
 
