@@ -149,5 +149,21 @@ Which  energies  should  be  expected  to  be  closer  to  experimentally  measu
 # Step #2: Generating the qubit Hamiltonian
 
 
-1. What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
+1.  What are the cons and pros of the Bravyi-Kitaev transformation compared to the Jordan-Wigner transformations?
+The Bravyi-Kitaev transformation is a more compact than the Jordan-Wigner transformation, which in the NISQ area means a lower number of gates are needed in the quantum circuit. 
+As it has been reported, for VQEs there is no major difference in the accuracy between the Bravyi-Kitaev and the Jordan-Wigner transformations.
+
+2. What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
 Any mapping protcol should size consistent, meaning the N sites from the Fock space should be represented with n qubits. 
+Additionally given that electrons are fermions, the mapping should also follow a fermionic statistics. 
+Since the desired quantity is the energy <H>, the mapping should also be iso-spectra, meaning that the eigen values of the Hamiltonian in the qubit space are the same as in the Fermionic basis. 
+
+3. The electronic Hamiltonian is real (due to time-reversal symmetry), what consequences does that have on the terms in the qubit Hamiltonian after the Jordan-Wigner transformation?
+(how to ensure JW creates a hermitian mapping)
+(since H is hermitian means all we should only have quadratic terms? (not sure) but is the only way to have a hermitian operator)
+
+
+# Step #3: Unitary transformations
+
+1. Standard Hamiltonian symmetries are i) number of electrons $\hat{N}=\sum_k \hat{a}_{k}^\top\hat{a}_{k}$, ii) electron spin $\hat{S}^{2}_{z}$, iii) electron spin projection $\hat{S}_{z}$, iv) time-reversal symmetry, and v) point-group symmetry forsymmetric molecules.  Which of these symmetries are conserved in a) UCC and b) QCC ?
+
