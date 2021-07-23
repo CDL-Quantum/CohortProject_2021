@@ -100,7 +100,7 @@ the lexicographic ordering (ref BKvsJW).
 For VQEs however there is a claim that no major differences exist in the accuracy between the Bravyi-Kitaev and the Jordan-Wigner transformations (it's in Artur's lecture but no ref found yet!).
 
 2. What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
-Any mapping protcol should size consistent, meaning the N sites from the Fock space should be represented with n qubits. 
+Any mapping protocol should size consistent, meaning the N sites from the Fock space should be represented with n qubits. 
 Additionally given that electrons are fermions, the mapping should also follow a fermionic statistics. 
 Since the desired quantity is the energy <H>, the mapping should also be iso-spectra, meaning that the eigen values of the Hamiltonian in the qubit space are the same as in the Fermionic basis. 
 
@@ -117,7 +117,8 @@ Since the desired quantity is the energy <H>, the mapping should also be iso-spe
  
 3. What are the ways to restore symmetries if your unitary transformation break them?
  
-
+ Two different ways have been proposed to restore symmetry. One is to add correlation using entangling gates. The other is to constraint the VQE by imposing the conservation of symmetries such as spin or particle conservation (ref  10 in the instructions,QCCIzmaelov18 )
+ 
  # Step #4: Hamiltonian measurements
  
  
