@@ -11,7 +11,7 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 ### Part 1: Generating PES using classical methods.
 **Analysis:**
 ### Part 2: Generating the qubit Hamiltonian.
-**Analysis:**
+**Analysis:** For a qubit to a valid mapping to a fermion, it must preserve the anti-symmetrical nature of the fermion.
 ### Part 3: Unitary transformations.
 **Analysis:**
 ### Part 4: Hamiltonian measurements.
