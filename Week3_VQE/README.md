@@ -1,11 +1,9 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 3: VQE: Constructing potential energy surfaces for small molecules
 
-####Alex Khan, Dr. Maninder Kaur, Ritaban Chowdhury, Theo Cleland, Yuval Sanders
+#### Alex Khan, Dr. Maninder Kaur, Ritaban Chowdhury, Theo Cleland, Yuval Sanders
 
-(*Everyone please fix your name above. –Yuval*)
-
-Here we provide our work on project 3. Our Business Application is [here](./Business_Application.md) and our video introduction is [here](https://yourethemannowdog.ytmnd.com) (**THEO TO FIX THIS LINK**).
+Here we provide our work on project 3. Our Business Application is [here](./Business_Application.md) and our video introduction is [here](https://drive.google.com/file/d/1EHxNry_KGci-1Ssjv0kMTpVQdF3DyLml/view?usp=sharing).
 
 Below we answer the various questions found in [the instructions](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week3_VQE/Instructions.pdf).
 
@@ -57,11 +55,5 @@ would simulate a small piece of the material and then extrapolate to large-scale
 * Compress larger basis sets into smaller number of qubits.
 
 ## Business Application
-For each week, your team is asked to complete a Business Application. Questions you will be asked are:
-
-* Explain to a layperson the technical problem you solved in this exercise.
-* Explain or provide examples of the types of real-world problems this solution can solve.
-* Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved.
-* Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
 
 For more details refer to the [Business Application found here](./Business_Application.md)
