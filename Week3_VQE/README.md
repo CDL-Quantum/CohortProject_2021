@@ -3,7 +3,12 @@
 
 #### Alex Khan, Dr. Maninder Kaur, Ritaban Chowdhury, Theo Cleland, Yuval Sanders
 
-Here we provide our work on project 3. Our Business Application is [here](./Business_Application.md) and our video introduction is [here](https://drive.google.com/file/d/1EHxNry_KGci-1Ssjv0kMTpVQdF3DyLml/view?usp=sharing).
+Here we provide our work on project 3. 
+
+Our Business Application is [here](./Business_Application.md) and our video introduction is [here](https://drive.google.com/file/d/1EHxNry_KGci-1Ssjv0kMTpVQdF3DyLml/view?usp=sharing).
+
+Code execution using Tequila for H2 is in [here](./Ritaban%20Code/H2)
+Code execution using Tequila for LiH is in [here](./Ritaban%20Code/LiH)
 
 Below we answer the various questions found in [the instructions](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week3_VQE/Instructions.pdf).
 
