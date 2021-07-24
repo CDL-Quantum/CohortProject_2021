@@ -1,0 +1,249 @@
+
+*** tstart() called on Edens-MacBook-Air.local
+*** at Fri Jul 23 23:31:05 2021
+
+   => Loading Basis Set <=
+
+    Name: STO-3G
+    Role: ORBITAL
+    Keyword: BASIS
+    atoms 1   entry C          line    61 file /Users/Eden/opt/anaconda3/envs/quantum-computing/share/psi4/basis/sto-3g.gbs 
+    atoms 2-5 entry H          line    19 file /Users/Eden/opt/anaconda3/envs/quantum-computing/share/psi4/basis/sto-3g.gbs 
+
+
+         ---------------------------------------------------------
+                                   SCF
+               by Justin Turney, Rob Parrish, Andy Simmonett
+                          and Daniel G. A. Smith
+                              RHF Reference
+                        1 Threads,    500 MiB Core
+         ---------------------------------------------------------
+
+  ==> Geometry <==
+
+    Molecular point group: cs
+    Full point group: C1
+
+    Geometry (in Angstrom), charge = 0, multiplicity = 1:
+
+       Center              X                  Y                   Z               Mass       
+    ------------   -----------------  -----------------  -----------------  -----------------
+         C           -0.000000062866    -0.126423691373     0.000000000000    12.000000000000
+         H           -0.000000062866     2.973576308627     0.000000000000     1.007825032230
+         H           -1.026719062866    -0.489423691373     0.000000000000     1.007825032230
+         H            0.513359937134    -0.489423691373    -0.889165000000     1.007825032230
+         H            0.513359937134    -0.489423691373     0.889165000000     1.007825032230
+
+  Running in cs symmetry.
+
+  Rotational constants: A =      5.28916  B =      1.47602  C =      1.47602 [cm^-1]
+  Rotational constants: A = 158565.00148  B =  44250.08215  C =  44250.08180 [MHz]
+  Nuclear repulsion =   11.103168213818625
+
+  Charge       = 0
+  Multiplicity = 1
+  Electrons    = 10
+  Nalpha       = 5
+  Nbeta        = 5
+
+  ==> Algorithm <==
+
+  SCF Algorithm Type is DF.
+  DIIS enabled.
+  MOM disabled.
+  Fractional occupation disabled.
+  Guess Type is SAD.
+  Energy threshold   = 1.00e-06
+  Density threshold  = 1.00e-06
+  Integral threshold = 0.00e+00
+
+  ==> Primary Basis <==
+
+  Basis Set: STO-3G
+    Blend: STO-3G
+    Number of shells: 7
+    Number of basis function: 9
+    Number of Cartesian functions: 9
+    Spherical Harmonics?: true
+    Max angular momentum: 1
+
+   => Loading Basis Set <=
+
+    Name: (STO-3G AUX)
+    Role: JKFIT
+    Keyword: DF_BASIS_SCF
+    atoms 1   entry C          line   203 file /Users/Eden/opt/anaconda3/envs/quantum-computing/share/psi4/basis/def2-svp-jkfit.gbs 
+    atoms 2-5 entry H          line    23 file /Users/Eden/opt/anaconda3/envs/quantum-computing/share/psi4/basis/def2-svp-jkfit.gbs 
+
+  ==> Pre-Iterations <==
+
+   -------------------------------------------------------
+    Irrep   Nso     Nmo     Nalpha   Nbeta   Ndocc  Nsocc
+   -------------------------------------------------------
+     A'         7       7       0       0       0       0
+     A"         2       2       0       0       0       0
+   -------------------------------------------------------
+    Total       9       9       5       5       5       0
+   -------------------------------------------------------
+
+  ==> Integral Setup <==
+
+  DFHelper Memory: AOs need 0.000 GiB; user supplied 0.366 GiB. Using in-core AOs.
+
+  ==> MemDFJK: Density-Fitted J/K Matrices <==
+
+    J tasked:                   Yes
+    K tasked:                   Yes
+    wK tasked:                   No
+    OpenMP threads:               1
+    Memory [MiB]:               375
+    Algorithm:                 Core
+    Schwarz Cutoff:           1E-12
+    Mask sparsity (%):       0.0000
+    Fitting Condition:        1E-10
+
+   => Auxiliary Basis Set <=
+
+  Basis Set: (STO-3G AUX)
+    Blend: DEF2-SVP-JKFIT
+    Number of shells: 49
+    Number of basis function: 147
+    Number of Cartesian functions: 169
+    Spherical Harmonics?: true
+    Max angular momentum: 4
+
+  Minimum eigenvalue in the overlap matrix is 2.4303165509E-01.
+  Using Symmetric Orthogonalization.
+
+  SCF Guess: Superposition of Atomic Densities via on-the-fly atomic UHF.
+
+  ==> Iterations <==
+
+                           Total Energy        Delta E     RMS |[F,P]|
+
+   @DF-RHF iter SAD:   -38.14893347854905   -3.81489e+01   0.00000e+00 
+   @DF-RHF iter   1:   -39.16435461285542   -1.01542e+00   3.79105e-02 DIIS
+   @DF-RHF iter   2:   -39.00867271448789    1.55682e-01   6.19296e-02 DIIS
+   @DF-RHF iter   3:   -39.29317986955928   -2.84507e-01   5.83644e-03 DIIS
+   @DF-RHF iter   4:   -39.29429602443727   -1.11615e-03   3.11313e-03 DIIS
+   @DF-RHF iter   5:   -39.29479151416245   -4.95490e-04   2.63859e-04 DIIS
+   @DF-RHF iter   6:   -39.29479493148429   -3.41732e-06   4.02284e-05 DIIS
+   @DF-RHF iter   7:   -39.29479501402561   -8.25413e-08   2.48343e-06 DIIS
+   @DF-RHF iter   8:   -39.29479501432242   -2.96808e-10   4.23110e-07 DIIS
+  Energy and wave function converged.
+
+
+  ==> Post-Iterations <==
+
+    Orbital Energies [Eh]
+    ---------------------
+
+    Doubly Occupied:                                                      
+
+       1Ap   -11.036454     2Ap    -0.879860     3Ap    -0.529325  
+       1App   -0.529325     4Ap    -0.170280  
+
+    Virtual:                                                              
+
+       5Ap     0.049726     2App    0.708746     6Ap     0.708747  
+       7Ap     0.719189  
+
+    Final Occupation by Irrep:
+             Ap   App 
+    DOCC [     4,    1 ]
+
+  @DF-RHF Final Energy:   -39.29479501432242
+
+   => Energetics <=
+
+    Nuclear Repulsion Energy =             11.1031682138186252
+    One-Electron Energy =                 -74.5054560048760806
+    Two-Electron Energy =                  24.1074927767350360
+    Total Energy =                        -39.2947950143224176
+
+Computation Completed
+
+
+Properties will be evaluated at   0.000000,   0.000000,   0.000000 [a0]
+
+Properties computed using the SCF density matrix
+
+  Nuclear Dipole Moment: [e a0]
+     X:     0.0000      Y:     1.4112      Z:     0.0000
+
+  Electronic Dipole Moment: [e a0]
+     X:    -0.0000      Y:    -1.8735      Z:     0.0000
+
+  Dipole Moment: [e a0]
+     X:     0.0000      Y:    -0.4623      Z:     0.0000     Total:     0.4623
+
+  Dipole Moment: [D]
+     X:     0.0000      Y:    -1.1750      Z:     0.0000     Total:     1.1750
+
+
+*** tstop() called on Edens-MacBook-Air.local at Fri Jul 23 23:31:05 2021
+Module time:
+	user time   =       0.54 seconds =       0.01 minutes
+	system time =       0.03 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =      92.89 seconds =       1.55 minutes
+	system time =      18.53 seconds =       0.31 minutes
+	total time  =        214 seconds =       3.57 minutes
+
+         ---------------------------------------------------------
+                                   SCF
+               by Justin Turney, Rob Parrish, Andy Simmonett
+                          and Daniel G. A. Smith
+                              RHF Reference
+                        1 Threads,    500 MiB Core
+         ---------------------------------------------------------
+
+  ==> Geometry <==
+
+    Molecular point group: cs
+    Full point group: C1
+
+    Geometry (in Angstrom), charge = 0, multiplicity = 1:
+
+       Center              X                  Y                   Z               Mass       
+    ------------   -----------------  -----------------  -----------------  -----------------
+         C           -0.000000062866    -0.126423691373     0.000000000000    12.000000000000
+         H           -0.000000062866     2.973576308627     0.000000000000     1.007825032230
+         H           -1.026719062866    -0.489423691373     0.000000000000     1.007825032230
+         H            0.513359937134    -0.489423691373    -0.889165000000     1.007825032230
+         H            0.513359937134    -0.489423691373     0.889165000000     1.007825032230
+
+  Running in cs symmetry.
+
+  Rotational constants: A =      5.28916  B =      1.47602  C =      1.47602 [cm^-1]
+  Rotational constants: A = 158565.00148  B =  44250.08215  C =  44250.08180 [MHz]
+  Nuclear repulsion =   11.103168213818625
+
+  Charge       = 0
+  Multiplicity = 1
+  Electrons    = 10
+  Nalpha       = 5
+  Nbeta        = 5
+
+  ==> Algorithm <==
+
+  SCF Algorithm Type is PK.
+  DIIS enabled.
+  MOM disabled.
+  Fractional occupation disabled.
+  Guess Type is AUTO.
+  Energy threshold   = 1.00e-06
+  Density threshold  = 1.00e-06
+  Integral threshold = 0.00e+00
+
+  ==> Primary Basis <==
+
+  Basis Set: STO-3G
+    Blend: STO-3G
+    Number of shells: 7
+    Number of basis function: 9
+    Number of Cartesian functions: 9
+    Spherical Harmonics?: true
+    Max angular momentum: 1
+

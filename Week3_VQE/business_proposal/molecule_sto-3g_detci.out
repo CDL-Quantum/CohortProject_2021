@@ -1,0 +1,154 @@
+ MINTS: Wrapper to libmints.
+   by Justin Turney
+
+   Calculation information:
+      Number of threads:                 1
+      Number of atoms:                   5
+      Number of AO shells:               7
+      Number of SO shells:               6
+      Number of primitives:             21
+      Number of atomic orbitals:         9
+      Number of basis functions:         9
+
+      Number of irreps:                  2
+      Integral cutoff                 1.00e-12
+      Number of functions per irrep: [   7    2 ]
+
+ OEINTS: Overlap, kinetic, potential, dipole, and quadrupole integrals
+         stored in file 35.
+
+      Computing two-electron integrals...done
+      Computed 533 non-zero two-electron integrals.
+        Stored in file 33.
+
+
+         ---------------------------------------------------------
+                          Configuration Interaction
+                            (a 'D E T C I' module)
+
+                 C. David Sherrill, Daniel G. A. Smith, and
+                              Matt L. Leininger
+         ---------------------------------------------------------
+
+
+   ==> Parameters <==
+
+    EX LEVEL       =        2      H0 BLOCKSIZE  =     1000
+    VAL EX LEVEL   =        0      H0 GUESS SIZE =     1000
+    H0COUPLINGSIZE =        0      H0 COUPLING   =       NO
+    MAXITER        =       24      NUM PRINT     =       20
+    NUM ROOTS      =        1      ICORE         =        1
+    PRINT LVL      =        1      FCI           =       NO
+    R CONV         = 1.00e-04      MIXED         =      YES
+    E CONV         = 1.00e-06      MIXED4        =      YES
+    R4S            =       NO      REPL OTF      =       NO
+    DIAG METHOD    =      SEM      FOLLOW ROOT   =        0
+    PRECONDITIONER = DAVIDSON      UPDATE        = DAVIDSON
+    S              =   0.0000      Ms0           =      YES
+    GUESS VECTOR   =  H0BLOCK      OPENTYPE      =     NONE
+    COLLAPSE SIZE  =        1      HD AVG        = EVANGELISTI
+    MAX NUM VECS   =       25      REF SYM       =     AUTO
+    IOPEN        =       NO
+
+    EX ALLOW       =  1  1 
+    STATE AVERAGE  =  0(1.00) 
+
+   ==> CI Orbital and Space information <==
+
+    RAS1 LVL      =        4      A RAS3 MAX    =        2
+    RAS1 MIN      =        8      B RAS3 MAX    =        2
+    A RAS1 LVL    =        4      RAS4 LVL      =        9
+    A RAS1 MIN    =        3      A RAS4 MAX    =        0
+    A RAS1 MAX    =        5      B RAS4 MAX    =        0
+    B RAS1 LVL    =        4      RAS4 MAX      =        0
+    B RAS1 MIN    =        3      A RAS34 MAX   =        2
+    B RAS1 MAX    =        5      B RAS34 MAX   =        2
+    RAS3 LVL      =        5      RAS34 MAX     =        2
+    RAS3 MAX      =        2
+   ------------------------------------------
+               Space    Total    A'    A"
+   ------------------------------------------
+                 Nso        9     7     2
+                 Nmo        9     7     2
+               Ndocc        5     4     1
+               Nsocc        0     0     0
+   ------------------------------------------
+                 CI Spaces
+   ------------------------------------------
+        Dropped DOCC        0     0     0
+                RAS1        5     4     1
+                RAS2        0     0     0
+                RAS3        4     3     1
+                RAS4        0     0     0
+      Active (total)        9     7     2
+        Dropped UOCC        0     0     0
+   ------------------------------------------
+
+   ==> Setting up CI strings <==
+
+    There are 81 alpha and 81 beta strings
+    The CI space requires 305 (3.05E+02) determinants and 7 blocks
+
+   ==> Transforming CI integrals <==
+
+	Presorting SO-basis two-electron integrals.
+	Sorting File: SO Ints (nn|nn) nbuckets = 1
+	Transforming the one-electron integrals and constructing Fock matrices
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+
+   ==> Starting CI iterations <==
+
+    H0 Block Eigenvalue = -39.56817103
+
+    Simultaneous Expansion Method (Block Davidson Method)
+    Using 1 initial trial vectors
+
+     Iter   Root       Total Energy       Delta E      C RMS
+
+   @CI  0:     0    -39.568171032029   -5.0671E+01   5.1881E-14  
+    Warning: Norm of correction (root 0) is < 1.0E-13
+   @CI  1:     0    -39.568171032029   0.0000E+00   2.2134E-14 c
+
+   ==> Energetics <==
+
+    SCF energy =          -39.294795014322418
+    Total CI energy =     -39.568171032028580
+
+   ==> DETCI root 0 information <==
+
+    DETCI Root 0 energy =   -39.568171032028580
+
+   The 20 most important determinants:
+
+    *   1    0.769831  (   37,   37)  1ApX 2ApX 3ApX 4ApX 1AppX 
+    *   2   -0.618521  (   38,   38)  1ApX 2ApX 3ApX 1AppX 5ApX 
+    *   3   -0.047631  (   50,   50)  1ApX 2ApX 3ApX 4ApX 2AppX 
+    *   4   -0.047630  (   43,   43)  1ApX 2ApX 4ApX 1AppX 6ApX 
+    *   5   -0.034586  (   38,   40)  1ApX 2ApA 3ApX 4ApB 1AppX 5ApX 
+    *   6   -0.034586  (   40,   38)  1ApX 2ApB 3ApX 4ApA 1AppX 5ApX 
+    *   7   -0.030905  (   37,   38)  1ApX 2ApX 3ApX 4ApA 1AppX 5ApB 
+    *   8   -0.030905  (   38,   37)  1ApX 2ApX 3ApX 4ApB 1AppX 5ApA 
+    *   9   -0.025787  (   48,   48)  1ApX 3ApX 4ApX 1AppX 7ApX 
+    *  10    0.023424  (   43,   48)  1ApX 2ApA 3ApB 4ApX 1AppX 6ApA 7ApB 
+    *  11    0.023424  (   48,   43)  1ApX 2ApB 3ApA 4ApX 1AppX 6ApB 7ApA 
+    *  12    0.023424  (   48,   50)  1ApX 2ApB 3ApX 4ApX 1AppA 7ApA 2AppB 
+    *  13    0.023424  (   50,   48)  1ApX 2ApA 3ApX 4ApX 1AppB 7ApB 2AppA 
+    *  14    0.023322  (    0,    3)  1ApX 2ApX 3ApX 4ApA 1AppB 5ApA 2AppB 
+    *  15    0.023322  (    3,    0)  1ApX 2ApX 3ApX 4ApB 1AppA 5ApB 2AppA 
+    *  16    0.023322  (   39,   42)  1ApX 2ApX 3ApB 4ApA 1AppX 5ApA 6ApB 
+    *  17    0.023322  (   42,   39)  1ApX 2ApX 3ApA 4ApB 1AppX 5ApB 6ApA 
+    *  18   -0.022871  (   40,   46)  1ApX 2ApB 3ApX 4ApA 1AppX 5ApA 7ApB 
+    *  19   -0.022871  (   46,   40)  1ApX 2ApA 3ApX 4ApB 1AppX 5ApB 7ApA 
+    *  20   -0.021273  (   47,   47)  1ApX 2ApX 4ApX 1AppX 7ApX 
+
+		 "A good bug is a dead bug" 
+
+			 - Starship Troopers
+
+		 "I didn't write FORTRAN.  That's the problem."
+
+			 - Edward Valeev
