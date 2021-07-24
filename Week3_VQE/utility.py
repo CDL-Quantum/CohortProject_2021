@@ -57,6 +57,9 @@ def convert_mol_data_to_xyz_format(mol_data):
 def get_molecular_data(mol, geometry, xyz_format=False):
     '''
     Generate the molecular data of the specified molecule
+
+    'geometry' is the distance between a specific pair of atoms for each implemented molecule,
+    read the elif that corresponds to your 'mol' to know which is the pair of atoms
     '''
     if mol == 'h2':
         mol_data = [
@@ -98,7 +101,7 @@ def get_molecular_data(mol, geometry, xyz_format=False):
         cos = math.cos(bondAngle)
         sin = math.sin(bondAngle)
 
-        # The idea is second and third vecctor dot product is cos(angle) * geometry^2.
+        # The idea is second and third vector dot product is cos(angle) * geometry^2.
         thirdyRatio = (cos - cos**2) / sin
         thirdxRatio = (1 - cos**2 - thirdyRatio**2) ** (1/2)
         mol_data = [
@@ -109,7 +112,7 @@ def get_molecular_data(mol, geometry, xyz_format=False):
             ]
 
     else:
-        raise(ValueError(mol, 'Unknown moleucles given'))
+        raise(ValueError(mol, 'Unknown molecules given'))
 
     if xyz_format:
         return convert_mol_data_to_xyz_format(mol_data)
@@ -221,7 +224,7 @@ def get_commuting_group(H : QubitOperator):
 
 def get_qwc_unitary(H : QubitOperator):
     '''
-    Get the unitary that transform commuting operators to qwc operators
+    Get the unitary that transforms commuting operators to qwc operators
     '''
     qh = QubitHamiltonian.from_openfermion(H)
     bh = BinaryHamiltonian.init_from_qubit_hamiltonian(qh)
