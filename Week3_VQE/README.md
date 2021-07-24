@@ -14,6 +14,7 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 ### Part 2: Generating the qubit Hamiltonian.
 **Analysis:** For a qubit to a valid mapping to a fermion, it must preserve the anti-symmetrical nature of the fermion. In the S2_Hamiltonian_gen.ipynb, we experimented with 5 molecules: H2, H4, LiH, H20 and N2, and were able to generate the qubit hamiltonains, due to the size of each H, we wont list them explicitly in the readme (find them in the notebook), but for reference here are the qubit counts used to simulate them
 
+![Qubit Count](../Week3_VQE/imgs/task_2_qubit_count.png)
 ### Part 3: Unitary transformations.
 **Analysis:**
 
