@@ -119,6 +119,8 @@ Among the competitors, Ingevity is one of the leading companies in this market. 
 **All in USD*
 
 ## Presentation
+## The value proposition of our innovation to the potential customers:
+
 ## References
 1. Graphene revolution -picture. 
 2. Nanotechnology Applications, examples and advantages.
