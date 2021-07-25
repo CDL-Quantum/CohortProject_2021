@@ -82,6 +82,21 @@ We found the following infromation for LiH:
 **Analysis:**
 ### Compress larger basis sets into smaller number of qubits.
 **Analysis:**
+### Business-related questions in the context of quantum entrepreneurship
+**What other molecular properties one can obtain using VQE for the purpose of rational material
+and drug design?**  
+
+**What are the systems (molecules / materials) which are challenging for classical computing
+and whose modelling is valuable ?**  
+
+Using today’s supper computing technology it is possible to simulate the interaction of molecules that contain a few hundred atoms.  In applications for biology, the molecular system routinely contains an aqueous solvent requiring that water, ions and co-solvents become part of the computational solution.  The modelling of these systems can require 50,000 to 1 M atoms to be simulated.  If the researcher was interested in modeling the interaction of molecules for a cytoplasm of a bacteria cell then this may require the simulation of 100 M atoms or more.  These are the types of molecular simulations required during drug discovery applications where the goal is to find a molecular structure that provides a favorable interaction with a given biological target.  
+
+**What businesses can benefit from more accurate electronic structure calculations ?**  
+
+The business benefits of more detailed material simulations are wide ranging.  Catalytic reactions are fundamental element of many industrial processed.  These range from fuel production to drug development.  Advanced quantum simulations targeting these specific chemical processes have applications in energy production, pharmaceutical synthesis and the transition to a more sustainable economy.
+Recently, quantum simulations have been used by Daimler AG to model the dipole moment of three lithium-containing molecules in an effort to drive the development of new lithium sulfur (Li-S) batteries that would be more powerful, last longer and cost less than those available today.  This advance could impact not only the automotive industry but adjacent technologies such as smart phone, remote sensors and other wireless devices.
+
+
 
 ## Business Application
 
