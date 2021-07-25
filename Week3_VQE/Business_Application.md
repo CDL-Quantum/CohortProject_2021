@@ -1,4 +1,74 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
+
+# VQE Basics
+
+We first explain the basics of the VQE method for someone that does not have familiarity with quantum chemistry.
+
+At the quantum level behavior of particles can be described by the Schrodinger's equation. 
+
+![fig1](./resources/fig1.png)
+
+This equation describes the evolution of a quantum state. 
+One can think of this as energy functions we are familiar with that include kinetic energy and potential energy.
+
+We are familiar with the dynamics at the macro level of a pendulum through laws of motion. However, the pendulum can also be represented as an energy function with Kinetic and Potential energy terms ensuring conservation of energy.
+
+![fig2](./resources/fig2.png)
+
+A particle can be represented as bounded in a well. This particle according to Schrodinger's equations will have solutions that represent the probabilities of where the particle is found. There are solutions which are also the eigenvalues are shown below.
+
+![fig3](./resources/fig3.png)
+
+In order to solve the Hamiltonian H that has components H1,H2 that do not commute (i.e. a x b != b x a), we take incremental steps based on the Lie formula. This process called Trotterization is used later. 
+
+![fig4](./resources/fig4.png)
+
+Charged particles create potential energy based on Coulomb's law.
+
+![fig5](./resources/fig5.png)
+
+The same is the case for particles where the proton is positively charged and the electron is negatively charged.
+
+![fig6](./resources/fig6.png)
+![source](https://www.southampton.ac.uk/assets/centresresearch/documents/compchem/DFT_L2.pdf)
+
+Below is a simple representation of the Hamiltonian of the Helium atom which has an atomic number of 2. The kinetic and potential terms are shown. Various approximations may be made (for example the Born-Oppenheimer approximation that the nucleus is stationary relative to the electrons). 
+
+![fig7](./resources/fig7.png)
+
+We will see that this energy equation is then converted into Pauli rotations for quantum gates in Step #2 using Jordan-Wigner (jw) or Bravyi-Kitaev (bk) methods.
+
+![fig8](./resources/fig8.png)
+![source](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.6.031007)
+
+Further simplifications based on Hamiltonian symmetries are used to produce even simpler set of gates that can be implemented on our NISQ hardware.
+
+We next look at the actual implementation of Unitaries on quantum computers. in Step #3. The figure below shows a high level of steps from classical preparation to solving functions on both annealing and gate quantum computers. Annealing requires conversion to a Binary Quadratic Model (BQM), while gate computers require the use of an initial starting energy function or Ansatz along with hybrid classical-quantum algorithms called Phase Estimation Algorithm (PEA) or Variational Quantum EigenSolver (VQE).
+
+![fig9](./resources/fig9.png)
+![source](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.6.031007)
+
+In VQE we start with a set of parameters (values of angles) that we will first calculate in Step #3. Then we will prepare the initial state and measure the expectation value of the Hamiltonian in the desired basis (for example stog3) in step #4. 
+
+![fig10](./resources/fig10.png)
+
+The figure below shows a summary of the steps taken in VQE 
+
+![fig11](./resources/fig11.png)
+
+![source](https://arxiv.org/abs/1512.06860)
+
+![additional reference](https://iopscience.iop.org/article/10.1088/1367-2630/18/2/023023/meta)
+
+Below we will use this basic concepts to show actual run of H2 and LiH using the Tequila library
+
+# Technical Problems Solved
+
+
+
+# Type of real-world problems that can be solved
+
+
 # Quantum Cohort Project Business Application
 
 ## Introduction
