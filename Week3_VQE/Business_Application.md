@@ -11,8 +11,9 @@ Here's how it works:
 
 ![system figure](../figures/VQC.jpg)
 
-The process starts with a SQC circuit design. Analytical methods are known that quantize the circuit to construct a Hamiltonian that describes the time evolution of the quantum degrees of freedom of the device.  Now, instead of constructing a huge matrix and calling numerical linear algebra routines, VQC transforms the Hamiltonian to a Pauli representation that can be programmed and measured on a NISQ computer.  Given a suitable ansatz, the Variational Quantum Eigensolver algorithm can determine the lowest eigenvalue of the device Hamiltonian.  Additional VQE runs and classical post-processing can also determine excited states [1], thereby providing an estimate of the lowest energy levels of the device.  VQC thus provides a scalable method for quantum device characterization that can be used for SQC design -- without the need for costly device manufacturing and manual characterization. 
+The process starts with a SQC circuit design. Analytical methods are known that quantize the circuit to construct a Hamiltonian that describes the time evolution of the quantum degrees of freedom of the device.  Now, instead of constructing a huge matrix and calling numerical linear algebra routines, VQC transforms the Hamiltonian to a Pauli representation that can be programmed and measured on a NISQ computer.  Given a suitable ansatz, the Variational Quantum Eigensolver algorithm can determine the lowest eigenvalue of the device Hamiltonian.  Additional VQE runs and classical post-processing can also determine excited states [1], thereby providing an estimate of the lowest energy levels of the device.  VQC thus provides a scalable method for quantum device characterization that can be used for SQC design -- without the need for costly device manufacturing and manual characterization.
 
+[1] Higgott, Oscar, Daochen Wang, and Stephen Brierley. "Variational quantum computation of excited states." Quantum 3 (2019): 156
 
 ## Customers
 
@@ -20,7 +21,4 @@ Quantum hardware companies using superconducting qubits will benefit from this t
 
 ## Video
 
-
-**Please store your video externally to the repo, and provide a link e.g. to Google Drive**
-
-[1] Higgott, Oscar, Daochen Wang, and Stephen Brierley. "Variational quantum computation of excited states." Quantum 3 (2019): 156
+https://drive.google.com/file/d/1Y5z6hldL7Hs4U-0R5_WK5K-4qlbdi8Hc/view?usp=sharing
