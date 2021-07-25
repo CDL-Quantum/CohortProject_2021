@@ -126,11 +126,11 @@ Since the desired quantity is the energy <H>, the mapping should also be iso-spe
 # Step #5: Use   of  quantum   hardware
  First we carry out the entire VQE optimization procedure by optimizing amplitudes of step 3 unitaries. Given the entanglers and their amplitudes found in Step 3, we find the corresponding representation of these operators in terms of elementary gates and verify that the expectation value is near the ground state energy. We have done this by running IBM Quantum Experience (ibmq) with a backend simulator. We found a 1.856 % of difference.
  The results show:
- | Classical software       | IBM-Q quantum software (IBM Qasm simulator)              |   
-|:------:|:---------------:|    
-|   -0.9486411121761   |   -0.930076203543293   |    
+ | Classical software       | IBM-Q quantum software (IBM Qasm simulator)              |  Difference       |  
+|:------:|:---------------:|:---------------:|  
+|   -0.9486411121761   |   -0.930076203543293   |  1.856%  | 
  
- Additional  questions:
+Additional  questions:
 1) Implement an error-mitigation protocol based on removing measurement results correspond- ing to a wrong number of electrons, which is described in Ref. [14](see Sec. 3.4. Post-processing Procedure). How diﬀerent are the results of simulations with and without error-mitigation?
  
  
