@@ -34,15 +34,15 @@ Coupled cluster results are fairly reliable when computing energies at equilibri
 
 ### Generating the qubit Hamiltonian
 
-To proceed to VQE one needs to generate the qubit Hamiltonian. The easiest path is via first generating the electronic Hamiltonian in the second quantized form and then transform it into a qubit-form Hamiltonian using a fermion-qubit mapping. In this [notebook], we obtained the qubit Hamiltonian of several molecules using Jordan-Wigner and Bravyi-Kitaev transformations in each case.
-
-Fermion-qubit mapping schemes can be broken into two pieces: first, to map occupation number basis vectors to states of qubits; and second, to represent the fermionic creation and annihilation operators in terms of operations on qubits in a way that preserves the fermionic anti-commutation relations. By doing so, we can ensure that a qubit operator (which represents certain fermionic operator) acting on a qubit (i.e, encoded fermionic state) reproduces the action of the associated fermionic operator on the fermionic state.
-
-If the electronic Hamiltonian is real (due to time-reversal symmetry) and we apply the Jordan-Wigner transformations given by
+To proceed to VQE one needs to generate the qubit Hamiltonian. The easiest path is via first generating the electronic Hamiltonian in the second quantized form and then transform it into a qubit-form Hamiltonian using a fermion-qubit mapping. In this [notebook](./S2_Hamiltonian_gen.ipynb), we obtained the qubit Hamiltonian of several molecules using Jordan-Wigner, given by
 
 ![JW](https://latex.codecogs.com/gif.image?%5Cdpi%7B110%7D%20%5C%5Ca_j%5E%5Cdagger%20=%20I%5E%7B%5Cotimes%20n-j-1%7D%5Cotimes%20%5Csigma%5E&plus;_j%20%5Cotimes%20%5Csigma%5Ez_%7Bj-1%7D%20%5Cotimes%20%5Cdots%20%5Cotimes%20%5Csigma%5Ez_%7B1%7D%5C%5Ca_j%20=%20I%5E%7B%5Cotimes%20n-j-1%7D%5Cotimes%20%5Csigma%5E-_j%20%5Cotimes%20%5Csigma%5Ez_%7Bj-1%7D%20%5Cotimes%20%5Cdots%20%5Cotimes%20%5Csigma%5Ez_%7B1%7D,%20)
 
-the qubit Hamiltonian does not neccesarily have time-reversal symmetry. Since spin operators are odd under time reversal, a *j*-th qubit-equivalent fermionic operator is odd under time reversal if *j* is odd, and hence some terms of the qubit Hamiltonian may vary.
+and Bravyi-Kitaev transformations in each case.
+
+
+Fermion-qubit mapping schemes can be broken into two pieces: first, to map occupation number basis vectors to states of qubits; and second, to represent the fermionic creation and annihilation operators in terms of operations on qubits in a way that preserves the fermionic anti-commutation relations. By doing so, we can ensure that a qubit operator (which represents certain fermionic operator) acting on a qubit (i.e, encoded fermionic state) reproduces the action of the associated fermionic operator on the fermionic state.
+
 
 
 ### Unitary transformations
