@@ -109,9 +109,6 @@ We did not look at the method of converting to a BQM and trying on D-Wave or oth
 
 References
 [[1]](https://arxiv.org/abs/1808.10402)
-[[2]](https://cen.acs.org/articles/95/i43/Chemistry-quantum-computings-killer-app.html)
-[[3]](https://www.ibm.com/downloads/cas/BDGQRXOZ)
-
 
 
 # Quantum Cohort Project Business Application
@@ -154,7 +151,7 @@ DSCC is also anticipating that Apple will introduce their first OLED tablet in 2
 
 As a leading manufacturer in OLED, LightQ is starting early talks with Apple and other leading tablet and laptop manufacturers to produce the best displays for the growing tablet market. 
 
-<p align="left">
+<p align="center">
   <img src="./resources/DSCC-oled-market.jpeg" width=500/>
   <a href="https://www.oled-info.com/dscc-increases-its-oled-market-forecasts-it-sees-increased-adoption-phones" target="_blank">Source</a>
 </p> 
@@ -170,9 +167,39 @@ We outline a few real world problems the quantum variational eigensolver can pot
 
 - Producer of efficient organic light-emitting diodes (OLED). OLEDs are used to create digital displays in devices such as televisions, smartphones, computer monitors etc. We use the methods outlined in this repository (VQEs etc) to determine ground and excited state energies of industrially relevant molecules. This allows the thermally activated delayed fluorescence (TADF) emitters suitable for OLED application to potentially perform with 100% quantum efficiency [[4]](https://www.nature.com/articles/s41524-021-00540-6).
 
+
+<p align="center">
+  <img width="460" height="300" src="./resources/example1.jpg">
+</p>
+
 - Efficient producer of fertilizer. We model the biological nitrogen fixation by the enzyme nitrogenase which we can use to create fertilizer. This method is much preffered over the traditional Harber-Bosch method because the latter requires high temperature and pressure and is therefore very energy-intensive [[5]](https://www.pnas.org/content/114/29/7555). We use the methods in this repository to elucidate the reaction mechanism of biological nitrogen fixation in notrogenase [[5]](https://www.pnas.org/content/114/29/7555) which is crucial in using it to create fertilizer. 
 
 - Creating next-generation lithium-sulfur batteries. We are able to simulate the next-generation of battery technology using the techniques in this repository. Lithium-sulfu batteries are theoretically much stronger and more efficient than traditional batteries, however, the reaction mechanism for the sulfur reduction in the battery environment is in much debate in the scientific field [[6]](https://arxiv.org/pdf/2001.01120.pdf). We use the the methods outlined in this repository to model the electon-cloud density distribution of molecules and in particular their dipole moment (which are very important to understand the feasibility of these batteries)[[6]](https://arxiv.org/pdf/2001.01120.pdf) to eventually create the next generation of batteries!
+
+<p align="center">
+  <img width="460" height="300" src="./resources/example2.jpg">
+</p>
+
+- Artificial photosynthesis would give us a way to reduce carbon dioxide from the atmosphere, provide an efficient mechanism of producing energy, generate hydrogen and produce hydrocarbon fuels. The large enzymatic complex absorbs photons to oxidize water and arvest electrons. Future quantum computers could allow us to design such artificial catalysts for photosynthesis [[7]](https://cen.acs.org/articles/95/i43/Chemistry-quantum-computings-killer-app.html).
+
+<p align="center">
+  <img width="460" height="300" src="./resources/example3.jpg">
+</p>
+
+- High temperature superconductors are needed. The ultimate goal is to have superconductors that work at room temperature[[7]](https://cen.acs.org/articles/95/i43/Chemistry-quantum-computings-killer-app.html). 
+
+<p align="center">
+  <img width="460" height="300" src="./resources/example4.jpg">
+</p>
+
+- Solar cell materials are constantly being improved for durability, efficiency, higher performance, low cost and flexibility. Improvements could be simulated and better understanding of the electron transport could be derived through quantum computers. Some research involves organic molecules and others with iron[[8]](https://sciencenordic.com/chemistry-energy-sweden/iron-could-help-make-cheaper-solar-panels/1424372)
+
+<p align="center">
+  <img  height="200" src="./resources/example5.png">
+</p>
+
+- In addition there are many other chemical processes including reduction of emmission gases and surfactants to improve subsurface recovery that depend on catalysts. Some of these are in limited supply or a scarce resource. [[9]](https://www.ibm.com/downloads/cas/BDGQRXOZ) [[10]](https://link.springer.com/article/10.1007/s41050-020-00023-5)
+
 ## Potential Customers
 
 We have done an in depth analysis of some potential customers for LightQ's OLED technology. They are summarized in the below table.
@@ -200,3 +227,7 @@ If the above video does not work, find it in [google drive](https://drive.google
 4. https://www.nature.com/articles/s41524-021-00540-6
 5. https://www.pnas.org/content/114/29/7555
 6. https://arxiv.org/pdf/2001.01120.pdf
+7. https://cen.acs.org/articles/95/i43/Chemistry-quantum-computings-killer-app.html
+8. https://sciencenordic.com/chemistry-energy-sweden/iron-could-help-make-cheaper-solar-panels/1424372
+9. https://www.ibm.com/downloads/cas/BDGQRXOZ
+10. https://link.springer.com/article/10.1007/s41050-020-00023-5
