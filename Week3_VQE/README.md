@@ -116,3 +116,14 @@ Sorry. I really appreciate how good the assignment is and I wish I had more time
 > What are the ways to restore symmetries if your unitary transformation break them?
 
 We can do what Artur calls [symmetry projection](https://www.youtube.com/watch?v=mhlgldoCfx4). 
+
+## Step \#4: Hamiltonian measurements
+
+### Question 1
+
+I didn't have time to write a properly typeset version of this, but [my](http://ysanders.github.io) lovely wife [Marika](http://www.mariakieferova.com) wanted to try this problem and came up with an [elegant calculation](./marika_calculation.pdf) that uses Lagrange multipliers. If we write 𝝈<sub>T</sub> to be the sum over *n* of 𝝈<sub>n</sub>, the optimal choice is *N<sub>n</sub>* = 𝝈<sub>n</sub> ⨉ *N*<sub>T</sub> / 𝝈<sub>T</sub>.
+
+To my detriment, I probably wouldn't have thought of using Lagrange multipliers.
+
+***
+I'm stopping here, I'm afraid. Again, I appreciate the assignment and I'm sad that I didn't have the chance to really do it justice. It's a very nice introduction to theoretical chemistry methods that I have been wanting for several years now. Much appreciated. *–Yuval*
