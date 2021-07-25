@@ -108,7 +108,7 @@ Since the desired quantity is the energy <H>, the mapping should also be iso-spe
 1. Standard Hamiltonian symmetries are i) number of electrons ![number of electrons](https://latex.codecogs.com/gif.latex?%5Chat%7BN%7D_%7Be%7D%3D%5Csum_k%20%5Chat%7Ba%7D_%7Bk%7D%5E%5Cdagger%20%5Chat%7Ba%7D_%7Bk%7D), ii) electron spin ![S2z](https://latex.codecogs.com/gif.latex?%5Chat%7BS%7D%5E%7B2%7D), iii) electron spin projection ![Sz](https://latex.codecogs.com/gif.latex?%5Chat%7BS%7D_%7Bz%7D), iv) time-reversal symmetry, and v) point-group symmetry forsymmetric molecules.  Which of these symmetries are conserved in a) UCC and b) QCC ?
  
  
- Since in the UCC method the unitary operators are constructed from fermionic operators before doing the WJ or BK transformation the fermionic symmetries such as particle number N, spin Sz and spin projection S^2 are conserved. That's not the case for QCC where the unitaries are constructed in the qubit space. The QCC is more ressource efficient but needs extra care to ensure conservation of physical symmetries. This could be done by introducing constraints in the VQE minimization or discarding solutions in an error mitigation scheme like the one discussed in task 5. 
+ Since in the UCC method the unitary operators are constructed from fermionic operators before doing the WJ or BK transformation the fermionic symmetries such as particle number N, spin Sz and spin projection ![](https://latex.codecogs.com/gif.latex?S%5E2) are conserved. That's not the case for QCC where the unitaries are constructed in the qubit space. The QCC is more ressource efficient but needs extra care to ensure conservation of physical symmetries. This could be done by introducing constraints in the VQE minimization or discarding solutions in an error mitigation scheme like the one discussed in task 5. 
  Time-reversal is conserved in both techniques since the unitary oparators used in both are hermitian. In fact ensuring hermiticity of the unitaries in UCC is the reason why the exponential exponents are not sums, which makes the computation much harder.
  Regarding point-like symmetries of the symmetric molecules I would think that they could also be imposed with an error mitigation protocol by discarding solution of the wavefunction that violate them. But more easily they could probably be imposed at the level of the architecture, because probably they can help reduce degrees of freedom such as number of qubits or connections. I don't think UCC nor QCC ensure the conservation of these point-like symmetries.
 
@@ -120,6 +120,8 @@ Since the desired quantity is the energy <H>, the mapping should also be iso-spe
 3. What are the ways to restore symmetries if your unitary transformation break them?
  
  One way is to implement an error mitigation protocol like the one suggested in task 5 where the symmetries are enforced in the final wavefunction by discarding the measuremnets corresponding to contributions that violate the symmetry. One could also enforce the symmetry by introducing the variance of the symmetry operator in the minimization squeme of the VQE in the form of a Lagrangian multipliers (constraints). [ref] https://arxiv.org/abs/1806.00461.
+ 
+# Step #4: Hamiltonian measurements
  
  
  
@@ -138,20 +140,24 @@ Error mitigation protocol:
 Here we want to correct for violations of the particle conservation number introduced by QCC.
 Following ref[14] as suggested in the instructions we understand that what needs to be done is to identify solutions that violate this symmetry and discard them.
 
- Given the decomposition of the total H into commutative pieces :<Psi|H|Psi>=<Psi|A|Psi> +<Psi|B|Psi> = \sum_n a_n |<Psi|f_n>|^2 + \sum_n b_n |<Psi|g_n>|^2 where A and B are unitaries that commute and n is the label of the measurement(sample). If the projector of the number of particles, P_N=|N><N|, acting on f_n(g_n) gives zero then we discard a_n(b_n). Thus if  P_N|f_n> =0 or P_N|g_n>=0, then we get rid of the measurements a_n/b_n and re-compute <Psi|H|Psi> without them. 
+ Given the decomposition of the total H into commutative pieces:
+
+ ![H into comm pieces](https://latex.codecogs.com/gif.latex?%5Clangle%5CPsi%7CH%7C%5CPsi%5Crangle%3D%20%5Clangle%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%5Crangle%20&plus;%5Clangle%5CPsi%7C%5Chat%7BB%7D%7C%5CPsi%5Crangle%20%3D%20%5Csum_n%20a_n%20%7C%5Clangle%20%5CPsi%7Cf_n%5Crangle%7C%5E2%20&plus;%20%5Csum_n%20b_n%20%7C%5Clangle%5CPsi%7Cg_n%5Crangle%7C%5E2)
+
+where A and B are unitaries that commute and n is the label of the measurement(sample). If the projector of the number of particles, ![prob N](https://latex.codecogs.com/gif.latex?P_N%3D%7CN%5Crangle%20%5Clangle%20N%7C), acting on ![f_n](https://latex.codecogs.com/gif.latex?f_n%28g_n%29) gives zero then we discard ![a_n](https://latex.codecogs.com/gif.latex?a_n%28b_n%29). Thus if  ![](https://latex.codecogs.com/gif.latex?P_N%7Cf_n%5Crangle%20%3D0) or ![](https://latex.codecogs.com/gif.latex?P_N%7Cg_n%5Crangle%20%3D0), then we get rid of the measurements ![](https://latex.codecogs.com/gif.latex?a_n/b_n) and re-compute ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5CPsi%7C%5Chat%7BH%7D%7C%5CPsi%5Crangle) without them. 
  
 We would need to perform the following tasks to achieve the goal:
  
-1. Write the two commutative unitary operators obtained through the QWC procedure in task 4 as a matrix and compute their eigenvectors f_n and g_n (done, see python notebook).
-2. Write the number operator N as a matrix operator in the qubit space, compute the eigenvectors and eigenvalues . Select the eigenvalues corresponding to the particle number 2 and construct the projector as \sum_i |n_i><n_i| where i only includes n_i whose eigenvalue is 2.
+1. Write the two commutative unitary operators obtained through the QWC procedure in task 4 as a matrix and compute their eigenvectors ![](https://latex.codecogs.com/gif.latex?f_n) and ![](https://latex.codecogs.com/gif.latex?g_n) (done, see python notebook).
+2. Write the number operator N as a matrix operator in the qubit space, compute the eigenvectors and eigenvalues . Select the eigenvalues corresponding to the particle number 2 and construct the projector as ![](https://latex.codecogs.com/gif.latex?%5Csum_i%20%7Cn_i%5Crangle%5Clangle%20n_i%7C) where **i** only includes ![](https://latex.codecogs.com/gif.latex?n_i) whose eigenvalue is 2.
 
-3. Simulate a_n |<Psi|f_n>|^2 and  b_n |<Psi|g_n>|^2 and for each sample n compute P_N|f_n> =0 and P_N|g_n>. If  P_N|f_n> =0 (P_N|g_n> =0) discard  a_n(b_n). We supose this simulation could be done in similar manner as we did for the full Hamiltonian using ibmq and somehow output the outcome of each sample. But we haven't been able to complte this task.
+3. Simulate ![](https://latex.codecogs.com/gif.latex?a_n) ![](https://latex.codecogs.com/gif.latex?%7C%5Clangle%20%5CPsi%7Cf_n%20%5Crangle%7C%5E2) and   ![](https://latex.codecogs.com/gif.latex?%7C%5Clangle%20%5CPsi%7Cg_n%20%5Crangle%7C%5E2) and for each sample n compute ![](https://latex.codecogs.com/gif.latex?P_N%7Cf_n%5Crangle%20%3D0) and ![](https://latex.codecogs.com/gif.latex?P_N%7Cg_n%5Crangle). If  ![](https://latex.codecogs.com/gif.latex?P_N%7Cf_n%5Crangle%20%3D0) ![](https://latex.codecogs.com/gif.latex?%28P_N%7Cg_n%5Crangle%20%3D0%29) discard  ![](https://latex.codecogs.com/gif.latex?a_n%28b_n%29). We supose this simulation could be done in similar manner as we did for the full Hamiltonian using ibmq and somehow output the outcome of each sample. But we haven't been able to complte this task.
  
 4. Compare 
- 1) Energy estimate from  E= <Psi|H|Psi>  computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
+ 1) Energy estimate from  !()[https://latex.codecogs.com/gif.latex?E%20%3D%20%5Clangle%20%5CPsi%7C%5Chat%7BH%7D%7C%5CPsi%20%5Crangle]  computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
   2) Energy estimate from  E computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
- 3)  Energy estimate from  E= <Psi|A|Psi>  + <Psi|A|Psi>, were A and B were computed in task 4 using the QCC method. 
- 4)  Energy estimate from  E= <Psi|A|Psi>  + <Psi|A|Psi>=\sum_m a_m |<Psi|f_m>|^2 + \sum_m b_n |<Psi|g_m>|^2 , were m<n because we have discarded some of the a_m, b_m due to violation of particle conservation.                                                                                                                     
+ 3)  Energy estimate from  ![](https://latex.codecogs.com/gif.latex?E%20%3D%20%5Clangle%20%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%5Crangle%20&plus;%20%5Clangle%20%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%20%5Crangle), were A and B were computed in task 4 using the QCC method. 
+ 4)  Energy estimate from  ![](https://latex.codecogs.com/gif.latex?E%3D%20%5Clangle%20%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%20%5Crangle%20&plus;%20%5Clangle%20%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%20%5Crangle%3D%5Csum_m%20a_m%20%7C%5Clangle%20%5CPsi%7Cf_m%5Crangle%7C%5E2%20&plus;%20%5Csum_m%20b_n%20%7C%5Clangle%20%5CPsi%7Cg_m%5Crangle%7C%5E2) , were m<n because we have discarded some of the ![](https://latex.codecogs.com/gif.latex?a_m%2C%20b_m) due to violation of particle conservation.                                                                                                                     
  
                                                                                                                        
    HOw well does 3 approximate 2? HOw much does 4 improve over 3 (Did the error mitigation protocol improve the accuracy? )? 
