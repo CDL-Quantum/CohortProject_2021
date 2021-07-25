@@ -7,12 +7,12 @@
 -----
 ### Step #1: Generating PES using classical environment
 
-####Q1) 
+#### Q1) 
 Among classical methods, there are techniques based on the variational approach and those that are not. 
 Identify variational methods among those that were used and explain advantages of the variational approach. 
 Are there any arguments for suing non-variational techniques?
 
-####Ans) 
+#### Ans) 
 * variational approach: Hartree-Fock (HF), Configuration Interaction Singles and Doubles (CISD), Full Configuration Interaction (FCI)
 * non-variational approach: Coupled Cluster Singles and Doubles (CCSD)
 
@@ -31,17 +31,25 @@ even though it is a non-variational method.
 
 [Step1](./S1_Classical_Methods.ipynb)
 
-####Q2) 
+#### Q2) 
 _Optional_: There is another division between classical methods, 
 it is based on so-called separability or size-consistency. 
 Check separability of HF, CISD, and CCSD by taking 2 $\mathrm{H}_{2}$ fragments at a large distance 
 from each other and comparing the total energy with 2 energies of one $\mathrm{H}_{2}$ molecule. 
 Explain your results. 
 
-####Ans) 
-[Step1_optional](./S1_Classical_Method_Optional.ipynb)
+#### Ans)
+For a large distance (100 Angstrom), we can obtain that $E_{A+B} \approx E_{A}+E_{B}$ as follows:
 
-####Q3) 
+![CDL 2020 Cohort Project](../Week3_VQE/figures/vqe_step1_image1.png)
+
+However, if we take a short distance, we can see the difference between the two values:
+
+![CDL 2020 Cohort Project](../Week3_VQE/figures/vqe_step1_image2.png)
+
+Detailed code can be found in [Step1_optional](./S1_Classical_Method_Optional.ipynb).
+
+#### Q3) 
 _Optional_: If one is interested in converging to the exact non-relativistic electronic energies, 
 there are two independent coordinates: 1) accuracy of accounting for many-body effects beyond the Hartree-Fock method 
 (electronic correlation) and 2) accuracy of representation of one-electron states, 
@@ -54,8 +62,15 @@ from STO3G to a series like cc-pVDZ, cc-pVTZ, cc-pVQZ, cc-pV5Z.
 Explore for a small system like $\mathrm{H}_2$ both convergences. 
 Which energies should be expected to be closer to experimentally measured ones?
 
-####Ans) 
-[Step1_optional](./S1_Classical_Method_Optional.ipynb)
+#### Ans) 
+In [Step1_optional](./S1_Classical_Method_Optional.ipynb),
+we compared the results for HF, CISD, and FCI
+on basis sets STO3G, 6-31G, and cc-pVDZ,
+and we got the results we theoretically expected:
+
+![CDL 2020 Cohort Project](../Week3_VQE/figures/vqe_step1_image3.png)
+
+
 
 -----
 ### Step #2: Generating the qubit Hamiltonian
@@ -64,7 +79,7 @@ Which energies should be expected to be closer to experimentally measured ones?
 What are the requirements for a function of qubit operators 
 to be a valid mapping for the fermionic operators?
 
-####Ans) 
+#### Ans) 
 For a fock space $\mathcal{H}_{tgt}\equiv(\mathbb{C}^2)^{\otimes N_f}$ 
 and its corresponding fermion operators $\{\hat{a}_{i}\}_{i=1}^{N_f}$, 
 a target hamiltonian is simulated as
@@ -83,53 +98,41 @@ $\mathcal{E}\left|\phi\right\rangle \in \mathcal{H}_{sim}$,
 and so $H_{sim}=\mathcal{E} H_{tgt} \mathcal{E}^{\dagger}.$
 Therefore, in order for $\mathcal{E}$ to be a valid mapping for the fermionic operators,
 the requirements for $\mathcal{E}$ are as follows:
+
 1. It should be unitary equivalent to $H_{sim}$ to preserve the eigenvalues of $H_{tgt}$.
 2. (optional) The codespace of $\mathcal{H}_{sim}$ should correspond to the codespace of $\mathcal{H}_{tgt}$
 with some constraints, i.e. the number of electrons or spin.
 
-As a simple example, we have explained the Jordan-Wigner transformation 
-in [Step2](./S2_Hamiltonian_gen.ipynb).
+To illustrate this, we gave several examples in [Step2](./S2_Hamiltonian_gen.ipynb).
 
-####Q2) 
+#### Q2) 
 The electronic Hamiltonian is real (due to time-reversal symmetry), 
 what consequences does that have on the terms in the qubit Hamiltonian after the Jordan-Wigner transformation?
 
-####Ans) 
+#### Ans) 
 The fermion hamiltonian is given as:
-<center>
 
-$$ H_{tgt} = \sum_{i,j}{h_{ij}\hat{a}_i^{\dagger}\hat{a}_j} + \sum_{ijkl}{g_{ijkl} \hat{a}_i^{\dagger}\hat{a}_j^{\dagger}\hat{a}_k\hat{a}_l}$$.
-
-</center>
+$$ H_{tgt} = \sum_{i,j}{h_{ij}\hat{a}_i^{\dagger}\hat{a}_j} + \sum_{ijkl}{g_{ijkl} \hat{a}_i^{\dagger}\hat{a}_j^{\dagger}\hat{a}_k\hat{a}_l}.$$
 
 Its coefficients are real, and since the hamiltonian is hermitian,
-<center>
 
-$h_{ij} = h_{ji} \quad g_{ijkl}=g_{lkji}$
-
-</center>
+$$h_{ij} = h_{ji} \quad g_{ijkl}=g_{lkji}.$$
 
 So let's rewrite the hamiltonian as:
-<center>
 
 $$ H_{tgt} = \sum_{i}{h_{ii}\hat{a}^{\dagger}_i\hat{a}_i}+\sum_{i<j}{h_{ij}(\hat{a}_i^{\dagger}\hat{a}_j+\hat{a}_j^{\dagger}\hat{a}_i)}$$
 $$+ \sum_{i>l \cup j>k}{g_{ijkl} (\hat{a}_i^{\dagger}\hat{a}_j^{\dagger}\hat{a}_k\hat{a}_l+\hat{a}_l^{\dagger}\hat{a}_k^{\dagger}\hat{a}_j\hat{a}_i})$$
-$$+ \sum_{i,j}{g_{ijji} \hat{a}_i^{\dagger}\hat{a}_j^{\dagger}\hat{a}_j\hat{a}_i} $$.
-
-</center>
+$$+ \sum_{i,j}{g_{ijji} \hat{a}_i^{\dagger}\hat{a}_j^{\dagger}\hat{a}_j\hat{a}_i}. $$
 
 We call the terms in each summation as one-body number operators, one-body excitation operators, two-body excitation operators,
 and two-body number operators.
 
 And, it is transformed to a qubit hamiltonian, $H_{sim}$, through the Jordan-Wigner transformation:
-<center>
 
-$\begin{cases} \hat{a}_k \rightarrow \hat{Z}_{k{\leftarrow}}\hat{q}_k\\
-\hat{a}_k^{\dagger} \rightarrow \hat{Z}_{k{\leftarrow}}\hat{q}_k^{\dagger} \end{cases}$
+$$\begin{cases} \hat{a}_k \rightarrow \hat{Z}_{k{\leftarrow}}\hat{q}_k\\
+\hat{a}_k^{\dagger} \rightarrow \hat{Z}_{k{\leftarrow}}\hat{q}_k^{\dagger} \end{cases},$$
 
-</center>
-
-,where $\hat{Z}_{k\leftarrow}$ means action of the pauli-Z operator on the qubits with indices less than $k$,
+where $\hat{Z}_{k\leftarrow}$ means action of the pauli-Z operator on the qubits with indices less than $k$,
 and $\hat{q}_k^{(\dagger)}$ is the qubit annihilation (creation) operator on the qubit $k$. So we can check
 the codes of two systems are equivalent while the anti commutation law holds.
 
@@ -157,10 +160,10 @@ The simulator hamiltonian becomes a sum of pauli words, shown as below.
 
 Therefore, the coefficient of each pauli word in the qubit hamiltonian is real.
 
-####Q3) 
+#### Q3) 
 _Optional_: What are the cons and pros of the Bravyi-Kitaev transformation compared to the Jordan-Wigner transformations?
 
-####Ans) 
+#### Ans) 
 The Bravy-Kitaev transformation is relatively complicated,
 so it depends on various factors.
 However, if we use the Bravyi-Kitaev transformation,
@@ -173,7 +176,7 @@ whereas the Jordan-Wigner transformation requires weight $O(N)$.
 -----
 ### Step #4: Hamiltonian measurements
 
-####Q1) 
+#### Q1) 
 If we focus on a measurement of an expectation value $\langle \Psi | \hat{H}_n | \Psi \rangle$ for a single fragment, $\hat{H}_n$,
 since $\left|\Psi\right\rangle$ is not an eigenfunction of $\hat{H}_n$,
 we will need to do multiple preparations of $\left|\Psi\right\rangle$ and measurements.
@@ -202,7 +205,7 @@ $$|\langle \Psi | \hat{H} | \Psi \rangle - \bar{H}| \le \frac{\sum_{n}\sqrt{\sig
 
 How many measurements should one do per fragment, $N_n$, in this optimal splitting?
 
-####Ans) 
+#### Ans) 
 Let 
 
 $$f(N_{1}, N_{2}, \cdots, N_{n})=\sum_{n}\frac{\sigma^{2}_{H_n}}{N_n}$$
@@ -221,12 +224,12 @@ when
 
 $$N_{i}=\frac{N_{T}\sqrt{\sigma^{2}_{H_i}}}{\sum_{n}\sqrt{\sigma^{2}_{H_n}}}.$$
 
-####Q2)
+#### Q2)
 Using Eq. (3) calculate how many measurements $N_{T}$ is needed to achieve 1 mili
 Hartree estimator error for the qubit-wise commuting (QWC) and fully commuting (FC)
 partitionings in one of the model systems.
 
-####Ans)
+#### Ans)
 We here consider $\mathrm{H}_2$.
 Using the given code, we can get fragments for the QWC and FC as shown below.
 
@@ -255,12 +258,12 @@ Therefore, $\frac{1968}{10000\sqrt{N_{T}}}$
 is also upper bound of $|\langle \Psi | \hat{H} | \Psi \rangle - \bar{H}|$,
 and so we need to take $N_{T}>38730$ to achieve 1 mili Hartree estimator error.
 
-####Q3)
+#### Q3)
 _Optional_: Assuming that we could measure the entire $\hat{H}$ as a single operator, estimate using Eq. (1)
 (use $\hat{H}$ instead of $\hat{H}_n$) how many measurements would be needed to reach 1 mili Hartree
 estimator error for the same systems as in the previous question?
 
-####Ans)
+#### Ans)
 In this case, we can see that $\sigma_{H}^{2}=(\alpha_{0}-\alpha_{1}-\alpha_{2}+\alpha_{3})^{2}$.
 Hence, it has the same result as Q2.
 
