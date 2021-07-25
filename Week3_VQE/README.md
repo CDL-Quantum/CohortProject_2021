@@ -106,6 +106,11 @@ Since the desired quantity is the energy <H>, the mapping should also be iso-spe
 # Step #3: Unitary transformations
 
 1. Standard Hamiltonian symmetries are i) number of electrons ![number of electrons](https://latex.codecogs.com/gif.latex?%5Chat%7BN%7D_%7Be%7D%3D%5Csum_k%20%5Chat%7Ba%7D_%7Bk%7D%5E%5Cdagger%20%5Chat%7Ba%7D_%7Bk%7D), ii) electron spin ![S2z](https://latex.codecogs.com/gif.latex?%5Chat%7BS%7D%5E%7B2%7D), iii) electron spin projection ![Sz](https://latex.codecogs.com/gif.latex?%5Chat%7BS%7D_%7Bz%7D), iv) time-reversal symmetry, and v) point-group symmetry forsymmetric molecules.  Which of these symmetries are conserved in a) UCC and b) QCC ?
+ 
+ 
+ Since in the UCC method the unitary operators are constructed from fermionic operators before doing the WJ or BK transformation the fermionic symmetries such as particle number N, spin Sz and spin projection S^2 are conserved. That's not the case for QCC where the unitaries are constructed in the qubit space. The QCC is more ressource efficient but needs extra care to ensure conservation of physical symmetries. This could be done by introducing constraints in the VQE minimization or discarding solutions in an error mitigation scheme like the one discussed in task 5. 
+ Time-reversal is conserved in both techniques since the unitary oparators used in both are hermitian. In fact ensuring hermiticity of the unitaries in UCC is the reason why the exponential exponents are not sums, which makes the computation much harder.
+ Regarding point-like symmetries of the symmetric molecules I would think that they could also be imposed with an error mitigation protocol by discarding solution of the wavefunction that violate them. But more easily they could probably be imposed at the level of the architecture, because probably they can help reduce degrees of freedom such as number of qubits or connections. I don't think UCC nor QCC ensure the conservation of these point-like symmetries.
 
 2. Why symmetries are helpful for constructing a unitary operator which rotates the initial state  ![init q state](https://latex.codecogs.com/gif.latex?%7C%20%5Cbar%7B0%7D%20%5Crangle) to the eigenstate  ![eigen state](https://latex.codecogs.com/gif.latex?%7C%20%5CPsi%20%5Crangle)?
  
@@ -114,7 +119,8 @@ Since the desired quantity is the energy <H>, the mapping should also be iso-spe
  
 3. What are the ways to restore symmetries if your unitary transformation break them?
  
- Two different ways have been proposed to restore symmetry. One is to add correlation using entangling gates. The other is to constraint the VQE by imposing the conservation of symmetries such as spin or particle conservation (ref  10 in the instructions,QCCIzmaelov18 )
+ One way is to implement an error mitigation protocol like the one suggested in task 5 where the symmetries are enforced in the final wavefunction by discarding the measuremnets corresponding to contributions that violate the symmetry. One could also enforce the symmetry by introducing the variance of the symmetry operator in the minimization squeme of the VQE in the form of a Lagrangian multipliers (constraints). (QCCIzmaelov18 ref 10 )
+ In ref.(ref kink) is has been suggested that the symmetry violation can be corrected by adding more correlation (entanglers).
  
  # Step #4: Hamiltonian measurements
  
