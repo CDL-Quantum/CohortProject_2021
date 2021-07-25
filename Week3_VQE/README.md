@@ -11,6 +11,18 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 ### Part 1: Generating PES using classical methods.
 **Analysis:**
 
+**Qestion**: Among Classical methods, there are techniques based on the variational approach and those that are not. Identify variational methods among those that were sued and explain advantages of the variational approach. Are there any arguments for using non-variational techniques?
+<br />
+**Answer**:
+
+**Question**: There is another division between classical methods, it is based on so-called separability or size-consistency. Simply speaking, if one investigates, two molecular fragments (A and B) at large distance from each other (~ 100 A), then the total electronic energy should be equal to the sum E<sub>A+B</sub> = E<sub>A</sub> + E<sub>B</sub>, where the energy of each fargment (E<sub>A</sub> or E<sub>B</sub>) can be obtained in a calculation that does not involve the other fragment. If this condition is satisfied for a particular method, this method is separable or size-consistent. Check separability of HF, CISD, and CCSD by taking 2 H2 fragments at a large distance from each other and comparing the total energy with 2 energies of one H2 molecule. Explain your results.
+<br />
+**Answer**:
+
+**Question**: If one is interested in converging to the exact non-relativistic electronic energires, there are two independent coordinates: 1) accuracy of accounting for many-body effects beyond the Hartree-Fock method (electronic correlation) and 2) accuracy of representation of one-electron states or convergence with respect tot the one-electron basis size. Convergence along the first coordinate can be illustrated by monitoring reduction of the energy deviations from the Full CI answer in a particular basis set for a series of increasingly accurate approaches, ie. HF, CCSD, CCSD(t), CCSDT. Convergences along the second coordinate requries the basis set extension from STO3G to a series like cc-pVDZ, co-pVTZ, co-pVQZ, cc-pV5Z. Explore for a small system like H2 both convergences. Which energies should be expected to be closer to experimentally measured ones?
+<br />
+**Answer**:
+
 ### Part 2: Generating the qubit Hamiltonian.
 **Analysis:** In this section, we were able to generate the qubit hamiltonian for the following molecules: H2, H4, LiH, H20, and N2. Due to the size of each hamiltonian, we wont directly write them (but they are generated in the netebook S2_Hamiltonian_gen.ipynb. For reference of how computationally difficult they are, we have listed the number of qubits required to specify each molecule.
 
@@ -40,6 +52,7 @@ We found the following infromation for LiH:
 **Answer**: 
 
 **Question**: What are the cons and pros of the Bravyi-Kitaev transformation compared to the Jordan-Wigner transfomrations?
+<br />
 **Answer**:
 
 ### Part 3: Unitary transformations.
