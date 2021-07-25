@@ -166,9 +166,10 @@ The cons of this porposal is the difficulty on engeniering of the electron-elect
  
 Quantum gate computing is not the only possiblity, quantum annealing computers permit us to know the lowest state of a problem hamiltonian by addiabatically evolving from the quantum state of an initial Hamiltonian which groudn state is known. For more insigth you can visit [DWave](https://docs.dwavesys.com/docs/latest/c_gs_2.html). 
 The electronic structure could be mapped into an Ising Hamiltonian that can be solved with a quantum annealer [arXiv:1901.04715
-](https://arxiv.org/abs/1901.04715). 
+](https://arxiv.org/abs/1901.04715). For this approach the first bottleneck is how to map the Helectronic Hamiltonian in the Jorda-Wigner transformation to the 
+Ising model. There have been two main approaches, [arXiv:1706.00271](https://arxiv.org/abs/1706.00271) and [arXiv:1901.04715](https://arxiv.org/abs/1901.04715).
  
- 
+
  
  
  
