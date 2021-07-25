@@ -152,3 +152,23 @@ Another possiblity is to use symmety constrains as penalizers in the expectation
  
  where the symmetry operator ![symmetry operator](https://latex.codecogs.com/gif.latex?%5Chat%7BS%7D) must commute with the electornic Hamiltonian, ![commutator H S](https://latex.codecogs.com/gif.latex?%5B%5Chat%7BH%7D%2C%5Chat%7BS%7D%5D%20%3D%200), so both share the same eigenstates.
  
+## How to utilize larger basis sets into smaller number of qubits?
+ 
+As it has been shown through this tutorial. The number of qubits required to compute the electornig energy of a molecule scales linear with the number of molecular spin-orbitals. This has limited the use of small basis sets since for example, methane (CH4) with a STO-3G basis set requires 18 qubits. 
+One possibility is to restricting the orbitals where the single and doubles excitations could happen, for example, only the  m-electrons with the highest energy or a reduce set of orbitals. This technique has been exploited for many years in classical electronic structure problems,   multiconfigurational  self-consistent-field  (MCSCF). This idea was explored in more detail in Phys. Rev. X **10**, 011004 (2020). 
+However, while this approach seems to be a viable route to simualate bigger molecules in a quantum computer, the authors point that the number of measurementes increased, so different samples schemes may be developed in the future to this overhead. 
+ 
+
+## What are alternatives to VQE for the electronic structure problem using quantum computerswith shallow circuits without error-correction?
+ 
+One alternative is to simulate the eletronic problem using a quantum analog. This was proposed in Nature **574**, 215 (2019) using cold atoms trapped in an optical lattice. This approach is based on mapping the electron-electorn interactions with the dipole-dipole interaction of the atoms.
+The cons of this porposal is the difficulty on engeniering of the electron-electorn interactions.
+ 
+Quantum gate computing is not the only possiblity, quantum annealing computers permit us to know the lowest state of a problem hamiltonian by addiabatically evolving from the quantum state of an initial Hamiltonian which groudn state is known. For more insigth you can visit [DWave](https://docs.dwavesys.com/docs/latest/c_gs_2.html). 
+The electronic structure could be mapped into an Ising Hamiltonian that can be solved with a quantum annealer [arXiv:1901.04715
+](https://arxiv.org/abs/1901.04715). 
+ 
+ 
+ 
+ 
+ 
