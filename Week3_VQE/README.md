@@ -1,12 +1,6 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 3: VQE: Constructing potential energy surfaces for small molecules
 
-This project will guide you through the state-of-the-art techniques for solving electronic structure problems on NISQ computers.
-
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week3_VQE/Instructions.pdf) to begin learning about your tasks for this week!
-
-**Please edit this markdown file directly with links to your completed tasks and challenges.**
-
 ## Tasks include:
 ### Part 1: Generating PES using classical methods.
 **Analysis:**
@@ -45,7 +39,8 @@ We found the following infromation for LiH:
 
 **Question**: What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
 <br />
-**Answer**:
+**Answer**: The requirements for a function of qubit operators to be a valid mapping is the following:
+(1) The function must preserve the anti-commutativity nature of the fermion (Typically seen with the spin).
 
 **Question**: The electronic Hamiltonian is real (due to time-reversal symmetry), what consequences does that have on the terms in the qubit Hamiltonian after the Jordan-Wigner transformation?
 <br />
@@ -57,6 +52,18 @@ We found the following infromation for LiH:
 
 ### Part 3: Unitary transformations.
 **Analysis:**
+
+**Question**: Standard Hamiltonian symmetries are i) number of electrons N<sub>e</sub> = sigma<sub>k</sub> a<sup>t</sup><sub>k</sub>a<sub>k</sub>, ii) electron spin S<sup>2</sup>, iii) electron spin project S<sub>Zz</sub> iv) time-reversal symmetry and v) point-group symmetry for symmetric molecules. Which of these symmetries are conserved in a) UCC and b) QCC?
+<br />
+**Answer**:
+  
+**Question**: Why symmetries are helpful for constructing a unitary operator which rotates the initial state |0> to the eigenstate |psi>?
+<br />
+**Answer:**
+
+**Question**: What are the ways to restore symmetries if your unitary transformation break them?
+<br />
+**Answer**:
 
 ### Part 4: Hamiltonian measurements.
 **Analysis:**
