@@ -138,13 +138,17 @@ Additional  questions:
  
 # Further challenges 
  
-1.  How to obtain excited electronic states of the same or different symmetry?
+##  How to obtain excited electronic states of the same or different symmetry?
+ 
 The variational theorem is the key element for VQE-based algorithms. However, for excited electronic states there is not such theorem that ensures a lower-bound on the first excited state. One possibilty to modify the VQE protocol for excited states is by including a lagrange multiplier that ensures the excited state and ground staet must be orthogolan to each other, 
+ 
 ![L excited state](https://latex.codecogs.com/gif.latex?%5Cboldsymbol%7B%5Ctheta%7D%5E*%20%3D%20%5Carg%5Cmin_%7B%5Cboldsymbol%7B%5Ctheta%7D%7D%20%5C%3B%7B%5Ccal%20L%7D%28%5Cboldsymbol%7B%5Ctheta%7D%29%20%3D%20%5Carg%5Cmin_%7B%5Cboldsymbol%7B%5Ctheta%7D%7D%20%5Cleft%20%5Clangle%20%5CPsi_1%28%5Cboldsymbol%7B%5Ctheta%7D%29%20%5Cmiddle%20%7C%20%5Chat%7BH%7D%20%5Cmiddle%20%7C%20%5CPsi_1%28%5Cboldsymbol%7B%5Ctheta%7D%29%20%5Cright%20%5Crangle%20&plus;%20%5Clambda%20%5Cleft%20%7C%20%5Cleft%20%5Clangle%20%5CPsi_1%28%5Cboldsymbol%7B%5Ctheta%7D%29%20%5Cmiddle%20%7C%20%5CPsi_0%20%5Cright%20%5Crangle%20%5Cright%20%7C) 
 
 However, this approach has multiple local minima since all excited staes are orthogonal to the ground state.
 
 Another possiblity is to use symmety constrains as penalizers in the expectation value of the energy,
+ 
 ![excited states symmetries](https://latex.codecogs.com/gif.latex?%5Cboldsymbol%7B%5Ctheta%7D%5E*%20%3D%20%5Carg%5Cmin_%7B%5Cboldsymbol%7B%5Ctheta%7D%7D%20%5C%3B%7B%5Ccal%20L%7D%28%5Cboldsymbol%7B%5Ctheta%7D%29%20%3D%20%5Carg%5Cmin_%7B%5Cboldsymbol%7B%5Ctheta%7D%7D%20%5Cleft%20%5Clangle%20%5CPsi_1%28%5Cboldsymbol%7B%5Ctheta%7D%29%20%5Cmiddle%20%7C%20%5Chat%7BH%7D%20%5Cmiddle%20%7C%20%5CPsi_1%28%5Cboldsymbol%7B%5Ctheta%7D%29%20%5Cright%20%5Crangle%20&plus;%20%5Clambda%20%5Cleft%20%7C%20%5Cleft%20%5Clangle%20%5CPsi_1%28%5Cboldsymbol%7B%5Ctheta%7D%29%20%5Cmiddle%20%7C%20%5Chat%7BS%7D%20%5Cmiddle%20%7C%20%5CPsi_1%28%5Cboldsymbol%7B%5Ctheta%7D%29%20%5Cright%20%5Crangle-S%20%5Cright%20%7C)
- where the symmetry operator ![symmetry operator](https://latex.codecogs.com/gif.latex?%5Chat%7BS%7D) must commute with the electornic Hamiltonian so both share the same eigenstates, ![commutator H S](https://latex.codecogs.com/gif.latex?%5B%5Chat%7BH%7D%2C%5Chat%7BS%7D%5D%20%3D%200).
+ 
+ where the symmetry operator ![symmetry operator](https://latex.codecogs.com/gif.latex?%5Chat%7BS%7D) must commute with the electornic Hamiltonian, ![commutator H S](https://latex.codecogs.com/gif.latex?%5B%5Chat%7BH%7D%2C%5Chat%7BS%7D%5D%20%3D%200), so both share the same eigenstates.
  
