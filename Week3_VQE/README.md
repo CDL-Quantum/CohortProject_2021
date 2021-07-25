@@ -19,8 +19,8 @@ In the LiH case, despite the HF minimum energy is notably different from that of
 
 *Advantages:*
 
--Variational methods provide a simple way to place an upper bound on the ground state energy of any quantum system.
--These methods can be used to calculate excited states in certain situations, adding a penalty term to the expectation value of the Hamiltonian and then minimizing this sum.
+- Variational methods provide a simple way to place an upper bound on the ground state energy of any quantum system.
+- These methods can be used to calculate excited states in certain situations, adding a penalty term to the expectation value of the Hamiltonian and then minimizing this sum.
 
 
 ### Generating the qubit Hamiltonian
