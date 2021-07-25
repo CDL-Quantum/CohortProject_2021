@@ -1,6 +1,6 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 
-# VQE Basics
+# Quantum Chemistry and VQE Basics for the Layperson
 
 We first explain the basics of the VQE method for someone that does not have familiarity with quantum chemistry.
 
@@ -254,7 +254,7 @@ We have done an in depth analysis of some potential customers for LightQ's OLED 
 
 ## Business Pitch
 
-[![Video](./resources/video-cover.png)](https://drive.google.com/file/d/1EHxNry_KGci-1Ssjv0kMTpVQdF3DyLml/view?usp=sharing "Business Pitch")
+[![Video](./resources/theo.png)](https://drive.google.com/file/d/1EHxNry_KGci-1Ssjv0kMTpVQdF3DyLml/view?usp=sharing "Business Pitch")
 
 If the above video does not work, find it in [google drive](https://drive.google.com/file/d/1EHxNry_KGci-1Ssjv0kMTpVQdF3DyLml/view?usp=sharing).
 
