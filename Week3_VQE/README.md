@@ -173,6 +173,77 @@ whereas the Jordan-Wigner transformation requires weight $O(N)$.
 -----
 ### Step #3: Unitary transformations
 
+For details, we refer to [Step3](./S3_Unitary_Ansatz.ipynb).
+
+#### Q1)
+Standard Hamiltonian symmetries are i) number of electrons
+$\hat{N}_{e}=\sum_{k}\hat{a}_{k}^{\dagger}\hat{a}_{k}$,
+ii) electron spin $\hat{S}^{2}$,
+iii) electron spin projection $\hat{S}_{z}$, iv) time-reversal symmetry,
+and v) point-group symmetry for symmetric molecules.
+Which of these symmetries are conserved in a) UCC and b) QCC?
+
+#### Ans)
+We represent the ansatz circuit as a unitary, $ \hat{U} $, then a symmetry $i$ with the operator, $ \hat{S}_i $
+is conserved if
+
+$ \hat{U}^{\dagger} \hat{S}_i \hat{U} = \hat{S}_i $.
+
+i) Number of electrons
+
+1. UCC preserves the number of electrons. -
+        It's because each term in the excitation operator has the same number of annihilation and creation operators,
+        So does their exponential. So the uccsd ansatz preserves the number of electrons.
+
+2. QCC doesn't. - 
+        For example, an entangler of h2o molecule case, exp(-it[X0 Y1 X4 X5]/2) generates superposition in the computational basis,
+        with qubit 0, 1, 4, and 5 are flipped. If one of a basis doesn't have the same number of occupations and vacancies
+        in those qubits, it will change the number of electrons.
+
+ii) $ S^2 $
+
+1. UCC doesn't 
+2. QCC doesn't.
+
+iii) $ S_z $
+
+1. UCC preserves the projected spin.
+2. QCC preserves the projected spin.
+
+iv) time-reversal symmetry, $ \mathcal{T} $
+
+If $\mathcal{T}^{-1} U \mathcal{T} = U$ it conserves time-reversal symmetry.
+
+1. UCC
+2. QCC
+
+v) point-group symmetry
+
+1. UCC
+2. QCC
+
+#### Q2)
+Why symmetries are helpful for constructing a unitary operator 
+which rotates the initial state $\left|\bar{0}\right\rangle$
+to the eigenstate $\left|\Psi\right\rangle$?
+
+#### Ans)
+Because it preserves the symmetric quantity of $\left|\bar{0}\right\rangle$ 
+to $\left|\Psi\right\rangle$, 
+one can search for the eigenstates those have some constraint on the quantity. 
+For example, if one prepare $\left|\bar{0}\right\rangle$ as a state removed some pairs of electrons 
+from $\left|RHF\right\rangle$, rather than the intact $\left|RHF\right\rangle$, 
+the final state $\left|\Psi\right\rangle$ holds the number of electrons of the constraint.
+
+
+#### Q3)
+What are the ways to restore symmetries if your unitary transformation break them?
+
+
+#### Ans)
+One can add violation terms to the objective function to be minimized.
+
+
 -----
 ### Step #4: Hamiltonian measurements
 
@@ -267,7 +338,29 @@ estimator error for the same systems as in the previous question?
 In this case, we can see that $\sigma_{H}^{2}=(\alpha_{0}-\alpha_{1}-\alpha_{2}+\alpha_{3})^{2}$.
 Hence, it has the same result as Q2.
 
+-----
+### Step #5: Use of quantum hardware
 
+We answered the following questions in [Step5](./S5_Circuits_Questions.ipynb).
+
+#### Q1)
+Implement an error-mitigation protocol based on removing measurement results
+corresponding to a wrong number of electrons,
+which is described in Ref. [14](see Sec. 3.4. Post-processing Procedure).
+How different are the results of simulations with and without error-mitigation?
+
+#### Q2)
+Can the error-mitigation protocol described in Ref. [14] be used 
+for more complicated symmetries, like $\hat{S}^{2}$?
+
+#### Q3)
+_Optional_: Suggest an error-mitigation protocol if you know that
+the right wavefunction should be an eigenstate of a certain multi-qubit operator $\hat{A}$ with eigenvalue ${a}$.
+
+
+
+
+----
 
 ## Further Challenges:
 * How to obtain excited electronic states of the same or different symmetry?
