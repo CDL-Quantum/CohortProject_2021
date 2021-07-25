@@ -157,9 +157,11 @@ The simulator hamiltonian becomes a sum of pauli words, shown as below.
 
 Therefore, the coefficient of each pauli word in the qubit hamiltonian is real.
 
-Q3) Optional: What are the cons and pros of the Bravyi-Kitaev transformation compared to the Jordan-Wigner transformations?
+####Q3) 
+_Optional_: What are the cons and pros of the Bravyi-Kitaev transformation compared to the Jordan-Wigner transformations?
 
-Ans) The Bravy-Kitaev transformation is relatively complicated,
+####Ans) 
+The Bravy-Kitaev transformation is relatively complicated,
 so it depends on various factors.
 However, if we use the Bravyi-Kitaev transformation,
 we can map $N$ fermion operators to qubit operators with weight $O(\log N)$,
@@ -249,9 +251,19 @@ we need to take $N_{T}>38730$.
 
 For FC, we have $\sigma_{H_{0}}^{2}=(\alpha_{0}-\alpha_{1}-\alpha_{2}+\alpha_{3})^{2}$
 and $\sigma_{H_{1}}^{2}=0$.
-Hence, $\frac{1968}{10000\sqrt{N_{T}}}$
-is also upper bound of $|\langle \Psi | \hat{H} | \Psi \rangle - \bar{H}|$.
-Therefore, we need to take $N_{T}>38730$ to achieve 1 mili Hartree estimator error.
+Therefore, $\frac{1968}{10000\sqrt{N_{T}}}$
+is also upper bound of $|\langle \Psi | \hat{H} | \Psi \rangle - \bar{H}|$,
+and so we need to take $N_{T}>38730$ to achieve 1 mili Hartree estimator error.
+
+####Q3)
+_Optional_: Assuming that we could measure the entire $\hat{H}$ as a single operator, estimate using Eq. (1)
+(use $\hat{H}$ instead of $\hat{H}_n$) how many measurements would be needed to reach 1 mili Hartree
+estimator error for the same systems as in the previous question?
+
+####Ans)
+In this case, we can see that $\sigma_{H}^{2}=(\alpha_{0}-\alpha_{1}-\alpha_{2}+\alpha_{3})^{2}$.
+Hence, it has the same result as Q2.
+
 
 
 ## Further Challenges:
