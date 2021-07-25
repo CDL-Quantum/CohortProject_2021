@@ -135,7 +135,31 @@ Since the desired quantity is the energy <H>, the mapping should also be iso-spe
 Additional  questions:
 1) Implement an error-mitigation protocol based on removing measurement results correspond- ing to a wrong number of electrons, which is described in Ref. [14](see Sec. 3.4. Post-processing Procedure). How diﬀerent are the results of simulations with and without error-mitigation?
  
+Error mitigation protocol:
+
+Here we want to correct for violations of the particle conservation number introduced by QCC.
+Following ref[14] as suggested in the instructions we understand that what needs to be done is to identify solutions that violate this symmetry and discard them.
+
+ Given the decomposition of the total H into commutative pieces :<Psi|H|Psi>=<Psi|A|Psi> +<Psi|B|Psi> = \sum_n a_n |<Psi|f_n>|^2 + \sum_n b_n |<Psi|g_n>|^2 where A and B are unitaries that commute and n is the label of the measurement(sample). If the projector of the number of particles, P_N=|N><N|, acting on f_n(g_n) gives zero then we discard a_n(b_n). Thus if  P_N|f_n> =0 or P_N|g_n>=0, then we get rid of the measurements a_n/b_n and re-compute <Psi|H|Psi> without them. 
  
+We would need to perform the following tasks to achieve the goal:
+ 
+1. Write the two commutative unitary operators obtained through the QWC procedure in task 4 as a matrix and compute their eigenvectors f_n and g_n (done, see python notebook).
+2. Write the number operator N as a matrix operator in the qubit space, compute the eigenvectors and eigenvalues . Select the eigenvalues corresponding to the particle number 2 and construct the projector as \sum_i |n_i><n_i| where i only includes n_i whose eigenvalue is 2.
+
+3. Simulate a_n |<Psi|f_n>|^2 and  b_n |<Psi|g_n>|^2 and for each sample n compute P_N|f_n> =0 and P_N|g_n>. If  P_N|f_n> =0 (P_N|g_n> =0) discard  a_n(b_n). We supose this simulation could be done in similar manner as we did for the full Hamiltonian using ibmq and somehow output the outcome of each sample. But we haven't been able to complte this task.
+ 
+4. Compare 
+ a) Energy estimate from  E= <Psi|H|Psi>  computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
+  b) Energy estimate from  E computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
+ c)  Energy estimate from  E= <Psi|A|Psi>  + <Psi|A|Psi>, were A and B were computed in task 4 using the QCC method. 
+ d)  Energy estimate from  E= <Psi|A|Psi>  + <Psi|A|Psi>=\sum_m a_m |<Psi|f_m>|^2 + \sum_m b_n |<Psi|g_m>|^2 , were m<n because we have discarded some of the a_m, b_m due to violation of particle conservation.                                                                                                                     
+ 
+                                                                                                                       
+   HOw well does c approximate b? HOw much does d improve over c (Did the error mitigation protocol improve the accuracy? )? 
+  Same for the expectation number of the particle operator.
+                                                                                                                        
+                                                                                                                        
 # Further challenges 
  
 ##  How to obtain excited electronic states of the same or different symmetry?
