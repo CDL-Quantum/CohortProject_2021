@@ -2,6 +2,7 @@
 ## Project 3: VQE: Constructing potential energy surfaces for small molecules
 
 ## Tasks include:
+
 ### Part 1: Generating PES using classical methods.
 **Analysis:**
 
@@ -66,7 +67,8 @@ We found the following infromation for LiH:
 **Answer**:
 
 ### Part 4: Hamiltonian measurements.
-**Analysis:**
+**Analysis:** For this task, we were able partition the qubit hamiltonian into framents for all 5 molecules (H2, H4, LiH, H20, and N2). We found the following framents for H2:
+
 
 ### Part 5: Use of quantum hardware.
 **Analysis:**
