@@ -114,15 +114,13 @@ Since the desired quantity is the energy <H>, the mapping should also be iso-spe
 
 2. Why symmetries are helpful for constructing a unitary operator which rotates the initial state  ![init q state](https://latex.codecogs.com/gif.latex?%7C%20%5Cbar%7B0%7D%20%5Crangle) to the eigenstate  ![eigen state](https://latex.codecogs.com/gif.latex?%7C%20%5CPsi%20%5Crangle)?
  
- They can help reduce the complexity of the unitary transformation corresponding to the rotation needed for the preparation of the state. And the state will have the proper physical symmeties by construction. (ref IZmaelov20)
+ They can help reduce the complexity of the unitary transformation corresponding to the rotation needed for the preparation of the state. And the state will have the proper physical symmeties by construction. [ref] https://pubs.acs.org/doi/10.1021/acs.jctc.9b00791
 
  
 3. What are the ways to restore symmetries if your unitary transformation break them?
  
- One way is to implement an error mitigation protocol like the one suggested in task 5 where the symmetries are enforced in the final wavefunction by discarding the measuremnets corresponding to contributions that violate the symmetry. One could also enforce the symmetry by introducing the variance of the symmetry operator in the minimization squeme of the VQE in the form of a Lagrangian multipliers (constraints). (QCCIzmaelov18 ref 10 )
- In ref.(ref kink) is has been suggested that the symmetry violation can be corrected by adding more correlation (entanglers).
+ One way is to implement an error mitigation protocol like the one suggested in task 5 where the symmetries are enforced in the final wavefunction by discarding the measuremnets corresponding to contributions that violate the symmetry. One could also enforce the symmetry by introducing the variance of the symmetry operator in the minimization squeme of the VQE in the form of a Lagrangian multipliers (constraints). [ref] https://arxiv.org/abs/1806.00461.
  
- # Step #4: Hamiltonian measurements
  
  
 # Step #5: Use   of  quantum   hardware
@@ -150,13 +148,13 @@ We would need to perform the following tasks to achieve the goal:
 3. Simulate a_n |<Psi|f_n>|^2 and  b_n |<Psi|g_n>|^2 and for each sample n compute P_N|f_n> =0 and P_N|g_n>. If  P_N|f_n> =0 (P_N|g_n> =0) discard  a_n(b_n). We supose this simulation could be done in similar manner as we did for the full Hamiltonian using ibmq and somehow output the outcome of each sample. But we haven't been able to complte this task.
  
 4. Compare 
- a) Energy estimate from  E= <Psi|H|Psi>  computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
-  b) Energy estimate from  E computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
- c)  Energy estimate from  E= <Psi|A|Psi>  + <Psi|A|Psi>, were A and B were computed in task 4 using the QCC method. 
- d)  Energy estimate from  E= <Psi|A|Psi>  + <Psi|A|Psi>=\sum_m a_m |<Psi|f_m>|^2 + \sum_m b_n |<Psi|g_m>|^2 , were m<n because we have discarded some of the a_m, b_m due to violation of particle conservation.                                                                                                                     
+ 1) Energy estimate from  E= <Psi|H|Psi>  computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
+  2) Energy estimate from  E computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
+ 3)  Energy estimate from  E= <Psi|A|Psi>  + <Psi|A|Psi>, were A and B were computed in task 4 using the QCC method. 
+ 4)  Energy estimate from  E= <Psi|A|Psi>  + <Psi|A|Psi>=\sum_m a_m |<Psi|f_m>|^2 + \sum_m b_n |<Psi|g_m>|^2 , were m<n because we have discarded some of the a_m, b_m due to violation of particle conservation.                                                                                                                     
  
                                                                                                                        
-   HOw well does c approximate b? HOw much does d improve over c (Did the error mitigation protocol improve the accuracy? )? 
+   HOw well does 3 approximate 2? HOw much does 4 improve over 3 (Did the error mitigation protocol improve the accuracy? )? 
   Same for the expectation number of the particle operator.
                                                                                                                         
                                                                                                                         
