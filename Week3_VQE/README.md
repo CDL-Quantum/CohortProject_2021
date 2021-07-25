@@ -40,7 +40,8 @@ FCI method provides the exact answer because it scales exponentially with the nu
 electron-electron interactions.
 This is unlike the variational methods (HF, CISD, and CCSD) which consider an approximated version. 
 HF is based on a simpler, non-interacting model. CISD and CCSD assume single and double excitation events.
-Since it is not variational method, it fails when electron-electron correlations dominate.
+Variational methods offer an approximation at the cost of accuracy, but non-variational methods become intractible when 
+electron-electron correlations dominate.
 
 ### Check separability of HF, CISD, and CCSD by taking 2 H<sub>2</sub> fragments at a large distance from each other and comparing the total energy with 2 energies of one H<sub>2</sub> molecule. Explain your results.
 
@@ -56,7 +57,7 @@ This shows that all methods (except CISD) have great separability.
 If the distance between H inside of H<sub>2</sub> or H<sub>4</sub> becomes very large, we can safely assume that it will 
 become single H system. 
 
-### Q3 Convergences along the second coordinate requires the basis set extension from STO3G to a series like cc-pVDZ, cc-pVTZ, cc-pVQZ, cc-pV5Z. Explore for a small system like H2 both convergences. Which energies should be expected to be closer to experimentally measured ones?
+### Convergences along the second coordinate requires the basis set extension from STO3G to a series like cc-pVDZ, cc-pVTZ, cc-pVQZ, cc-pV5Z. Explore for a small system like H<sub>2</sub> both convergences. Which energies should be expected to be closer to experimentally measured ones?
 
 | Basis\Method | HF | CCSD | CISD |
 | --- | --- | --- | --- |
@@ -91,19 +92,47 @@ for the specific electronic state (e.g. ground state).
 
 ![](fig/task2_f1.png)
 
+### What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
+
+In the Jordan-Wigner transformation, qubit operators must correctly reproduce the anticommutation relations that 
+characterise fermions.
+This is recovered by adding additional Pauli Z terms to each mapped fermionic term.
+This makes the mapping nonlinear.
+As a consequence, the Hamiltonian after a Jordan-Wigner transformation is non-local.
+
 ### What are the cons and pros of the Bravyi-Kitaev transformation compared to the Jordan-Wigner transformations?
 
 The Bravyi-Kitaev Hamiltonian has far fewer terms.
 By only considering the effective Hamiltonian, we can reduce the complexity of the problem which will greatly increase 
-the accuracy of the calculation in quantum computer. 
-As we are limiting hamiltonian, this will not describe whole system, but we can get exact modeling of the system, but it was not found any significant advatage of using jw or bk.
-
-### What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
-
-In the BK transformation, it is beneficial to have symmetry in particle number conservation, which can reduce the number
-of qubits.
+the accuracy of the calculation in a quantum computer.
+The Jordan-Wigner transformation is more exact, but comes at a cost of decreased locality.
 
 # [Task 3: Unitary Ansatz](./notebooks/3_unitary_ansatz.ipynb)
+
+### Which of symmetries are conserved in UCC and QCC?
+
+In UCC methods, our fermionic excitation terms conserve particle number *N* (we can only move fermions between levels, not destroy them) 
+and spin-projection *S<sub>z</sub>* (we do not flip spins when hopping between orbitals).
+If we also take the sum of a fermionic term and its Hermitian conjugate, we can conserve total electronic spin 
+*S<sup>2</sup>*.
+
+QCC methods can break all these symmetries for individual terms. 
+However, though symmetries are broken at the level of individual terms, QCC should still conserve these symmetries 
+overall.
+
+### Why symmetries are helpful for constructing a unitary operator which rotates the initial state to the correct final state?
+
+Roughly speaking, the symmetries put a constraint on the "allowed" transformations.
+The unitary evolution between the initial and final states should commute with the operators that describe the 
+symmetries of our system. 
+This restricts the form of the unitary evolution. 
+
+### What are the ways to restore symmetries if your unitary transformation break them?
+
+It depends on the symmetry in question.
+Consider total electronic spin *S<sup>2</sup>*. 
+Fermionic excitation terms individually break this symmetry.
+However, we can easily recover it by taking linear combination of an excitation operator and its Hermitian conjugate.
 
 # [Task 4: Measurement](./notebooks/4_measurement.ipynb)
 
