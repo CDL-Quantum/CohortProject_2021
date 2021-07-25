@@ -1,5 +1,5 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
-# Quantum Cohort Project Business Application
+# Team 3Quantum Cohort Project Business Application
 
 ## Variational Qubit Characterization
 
@@ -9,7 +9,7 @@ Variational Qubit Characterization (VQC) fights Hilbert space with Hilbert space
 
 Here's how it works:
 
-![CDL 2020 Cohort Project](../figures/VQC.jpg)
+![system figure](../figures/VQC.jpg)
 
 ## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
 
