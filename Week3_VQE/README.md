@@ -16,7 +16,7 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 
 Variational methods are likely to **fail** for transition states or near dissociation limits of multiple bonds.
 
-[Python notebook](./S1_Classical_methods.ipynb)
+[Python notebook](./S1_Classical_Methods.ipynb)
 
 ### Generating the qubit Hamiltonian
 ### Unitary transformations
