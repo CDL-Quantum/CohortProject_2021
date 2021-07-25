@@ -2,7 +2,7 @@
 # Business Application: Nanomaterials and Variational Quantum Eigensolver
 
 # Introduction to Qovalent
-Qovalent specializes in obtaining potential energy surface (PESs) for small molecules. Predicting electronic structure has become a vital component of modern materials and chemical science research and development portfolios. Electronic structure simulation can greatly accelerate the identification, characterization, and optimization of materials. We are able to simulate the electronic structure problem using Variational Quantum Eigensolver (VQE) explore the properties of structures composed of atoms. Unlike classical methods, we are able to solve electronic structure problem for several chemical bonds between atoms or molecules such as N<sub>2</sub> and C<sub>6</sub>. Our technology is able to treat strongly correlated system with chemical accuracy. 
+Qovalent specializes in obtaining potential energy surface (PESs) for small molecules. Predicting electronic structure has become a vital component of modern materials and chemical science research and development portfolios. Electronic structure simulation can greatly accelerate the identification, characterization, and optimization of materials. We are able to simulate the electronic structure using Variational Quantum Eigensolver (VQE) explore the properties of structures composed of atoms. Unlike classical methods, we are able to solve electronic structure problem for several chemical bonds between atoms or molecules such as N<sub>2</sub> and C<sub>6</sub>. Our technology is able to treat strongly correlated system with chemical accuracy. 
 
 <p align="center">
   <img width="960" height="300" src="./Resources/PC1.jpg">
