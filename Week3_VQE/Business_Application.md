@@ -1,17 +1,15 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 # Quantum Cohort Project Business Application
 
-For each weekly project, your team is asked to complete the below business application exercise.
-To complement the technical tasks, please consdier the four questions below.
-You are free to format your response to these four questions as you wish (with the final question done as a short recorded video), and to include
-the content (or links to the content) on your forked repository.
+## Variational Qubit Characterization
 
-A brief example for each question is included for the 
-[Traveling Salesman Problem.](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+Characterization of a new superconducting qubit (SCQ) device design is critical for understanding the performance of a new device.  In particular, a SCQ designer needs to know the operating points of the qubits (frequencies) and their spacing with respect to excited states.  A poorly designed device may exhibit frequency crowding, crosstalk, leakage and other decoherence processes.  Given a device Hamiltonian, derived, for example, through intuition or first principles, the SCQ designer can determine the spectrum by obtaining a matrix representation and numerically solving an eigenvalue problem.  However, the designer must truncate the operators with a small number of levels and make other approximations to reduce the size of the matrix Hamiltonian.  This can be done for a single transmon (or similar), however, as the industry scales up designs, characterizing multiple qubit devices will require new methods for characterization that can scale with the size of the underlying Hilbert space.
 
-## Step 1: Explain the technical problem you solved in this exercise
+Variational Qubit Characterization (VQC) fights Hilbert space with Hilbert space!   
 
-Example: Finding a global minimum in settings where a classical approach may not be able to find a global minimum.
+Here's how it works:
+
+![CDL 2020 Cohort Project](../figures/VQC.jpg)
 
 ## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
 
@@ -19,7 +17,7 @@ Example: A courier has to deliver parcels to several locations and is looking to
 
 ## Step 3: Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved
 
-Examples: 
+Examples:
 - Federal Express
 - Canada Post
 
