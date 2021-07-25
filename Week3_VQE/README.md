@@ -80,18 +80,16 @@ Below we show the ground state energy of H2 computed with different wavefunction
 
 In the Jordan-Wigner transformation a single fermionic creation or annihilation operator is represented by O(n) qubit operations while in the Bravyi-Kitaev transformation only O(log n) qubit operations are required, thus 
 the Bravyi-Kitaev transformation is a more compact one, i.e. a lower number of gates are needed in the quantum circuit. 
-Frequently, the gate count reduction is particularly large in the number of expensive entan
-gling gates required ( ref BKvsJW).
-Such a reduction is crucial in the NISQ era.
+Frequently, the gate count reduction is particularly large in the number of expensive entangling gates required [ref "A comparison of the Bravyi-Kitaev and Jordan-Wigner transformations for the quantum simulation of quantum chemistry" ](https://arxiv.org/abs/1812.02233 ).
+Such a reduction is crucial in the NISQ era. 
 
 In order to simulate fermionic operators with qubits we need the information on the
 occupation of the target orbital, and the information on the parity of the set of orbitals with index less than
 the target orbital. 
-When using the Jordan-Wigner transformation and its associated occupatio basis the occupation information is stored locally but the parity information is non-local. In the case of The Bravyi-Kitaev transformation and basis  the locality of the occupation information and
+When using the Jordan-Wigner transformation and its associated occupation basis the occupation information is stored locally but the parity information is non-local. In the case of The Bravyi-Kitaev transformation and basis  the locality of the occupation information and
 and of the parity information are balanced and this fact results in an improved simulation efficiency.
 It has been claimed that Bravyi-Kitaev mapping is superior in all cases aside from
-the lexicographic ordering (ref BKvsJW).
-For VQEs however there is a claim that no major differences exist in the accuracy between the Bravyi-Kitaev and the Jordan-Wigner transformations (it's in Artur's lecture but no ref found yet!).
+the lexicographic ordering. Ultimately the comparison between the two methods should be done in a case by case basis.
 
 2. What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
 Any mapping protocol should size consistent, meaning the N sites from the Fock space should be represented with n qubits. 
@@ -99,8 +97,10 @@ Additionally given that electrons are fermions, the mapping should also follow a
 Since the desired quantity is the energy <H>, the mapping should also be iso-spectra, meaning that the eigen values of the Hamiltonian in the qubit space are the same as in the Fermionic basis. 
 
 3. The electronic Hamiltonian is real (due to time-reversal symmetry), what consequences does that have on the terms in the qubit Hamiltonian after the Jordan-Wigner transformation?
-(how to ensure JW creates a hermitian mapping)
-(since H is hermitian means all we should only have quadratic terms? (not sure) but is the only way to have a hermitian operator)
+ All terms need to be hermitian.
+ 
+*(how to ensure JW creates a hermitian mapping)
+(since H is hermitian means all we should only have quadratic terms? (not sure) but is the only way to have a hermitian operator)*
 
 
 # Step #3: Unitary transformations
