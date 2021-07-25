@@ -13,9 +13,13 @@ All of these methods consist of choosing a "trial wavefunction" depending on one
 
 We present below the PESs generated with each classical method for LiH, H<sub>4</sub> and N<sub>2</sub>. Dashed vertical lines indicate the experimental bond length for the diatomic molecules according to [NIST database](https://cccbdb.nist.gov/diatomicexpbondx.asp).
 
-![LiH](./lih.png) ![H_4](./h4.png) ![N_2](./n2.png)
+![LiH](./lih.png) 
 
-The system PES is harder to calculate accurately as the number of bonds increases. These graphs are ordered by number of molecular bonds from left to right.
+![H_4](./h4.png) 
+
+![N_2](./n2.png)
+
+The system PES is harder to calculate accurately as the number of chemical bonds increases. These graphs are ordered by number of bonds from up to down.
 
 In the LiH case, despite the HF minimum energy is notably different from that of the Full Configuration Interaction (FCI) exact solution, both plots have its minimum at the same bond length.
 
