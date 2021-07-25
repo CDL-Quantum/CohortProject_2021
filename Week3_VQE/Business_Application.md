@@ -6,57 +6,92 @@ We first explain the basics of the VQE method for someone that does not have fam
 
 At the quantum level behavior of particles can be described by the Schrodinger's equation. 
 
-![fig1](./resources/fig1.png)
+
+<p align="center">
+  <img width="700"  src="./resources/fig1.png">
+</p>
 
 This equation describes the evolution of a quantum state. 
 One can think of this as energy functions we are familiar with that include kinetic energy and potential energy.
 
 We are familiar with the dynamics at the macro level of a pendulum through laws of motion. However, the pendulum can also be represented as an energy function with Kinetic and Potential energy terms ensuring conservation of energy.
 
-![fig2](./resources/fig2.png)
+
+<p align="center">
+  <img width="700"  src="./resources/fig2.png">
+</p>
+
 
 A particle can be represented as bounded in a well. This particle according to Schrodinger's equations will have solutions that represent the probabilities of where the particle is found. There are solutions which are also the eigenvalues are shown below.
 
-![fig3](./resources/fig3.png)
+
+<p align="center">
+  <img width="700"  src="./resources/fig3.png">
+</p>
+
 
 In order to solve the Hamiltonian H that has components H1,H2 that do not commute (i.e. a x b != b x a), we take incremental steps based on the Lie formula. This process called Trotterization is used later. 
 
-![fig4](./resources/fig4.png)
+
+<p align="center">
+  <img width="700"  src="./resources/fig4.png">
+</p>
+
 
 Charged particles create potential energy based on Coulomb's law.
 
-![fig5](./resources/fig5.png)
+
+<p align="center">
+  <img width="700"  src="./resources/fig5.png">
+</p>
+
 
 The same is the case for particles where the proton is positively charged and the electron is negatively charged.
 
-![fig6](./resources/fig6.png)
+<p align="center">
+  <img width="700"  src="./resources/fig6.png">
+</p>
 <a href="https://www.southampton.ac.uk/assets/centresresearch/documents/compchem/DFT_L2.pdf" target="_blank">Source</a>
+
 
 Below is a simple representation of the Hamiltonian of the Helium atom which has an atomic number of 2. The kinetic and potential terms are shown. Various approximations may be made (for example the Born-Oppenheimer approximation that the nucleus is stationary relative to the electrons). 
 
-![fig7](./resources/fig7.png)
+
+<p align="center">
+  <img width="700"  src="./resources/fig7.png">
+</p>
 
 We will see that this energy equation is then converted into Pauli rotations for quantum gates in Step #2 using Jordan-Wigner (jw) or Bravyi-Kitaev (bk) methods.
 
-![fig8](./resources/fig8.png)
+<p align="center">
+  <img width="700"  src="./resources/fig8.png">
+</p>
 <a href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.6.031007" target="_blank">Source</a>
+
 
 Further simplifications based on Hamiltonian symmetries are used to produce even simpler set of gates that can be implemented on our NISQ hardware.
 
 We next look at the actual implementation of Unitaries on quantum computers. in Step #3. The figure below shows a high level of steps from classical preparation to solving functions on both annealing and gate quantum computers. Annealing requires conversion to a Binary Quadratic Model (BQM), while gate computers require the use of an initial starting energy function or Ansatz along with hybrid classical-quantum algorithms called Phase Estimation Algorithm (PEA) or Variational Quantum EigenSolver (VQE).
 
-![fig9](./resources/fig9.png)
+<p align="center">
+  <img width="460"  src="./resources/fig9.png">
+</p>
 <a href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.6.031007" target="_blank">Source</a>
+
+
 
 In VQE we start with a set of parameters (values of angles) that we will first calculate in Step #3. Then we will prepare the initial state and measure the expectation value of the Hamiltonian in the desired basis (for example stog3) in step #4. 
 <p align="center">
-  <img width="460" height="300" src="./resources/fig10.png">
+  <img width="460"  src="./resources/fig10.png">
 </p>
 
 The figure below shows a summary of the steps taken in VQE. The Hamiltonian is created on the left of the figure and then parametrized into the quantum circuit. Note the Ansatz is derived using the Hamiltonian, the distance and Basis. The quantum computer is then used to determine the expectation value.
 
 
-![fig11](./resources/fig11.png)
+
+<p align="center">
+  <img width="700"  src="./resources/fig11.png">
+</p>
 <a href="https://arxiv.org/abs/1512.06860" target="_blank">Source</a>
 
 <a href="https://iopscience.iop.org/article/10.1088/1367-2630/18/2/023023/meta0" target="_blank">Additional Reference</a>
