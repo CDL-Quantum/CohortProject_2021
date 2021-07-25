@@ -122,8 +122,26 @@ Since the desired quantity is the energy <H>, the mapping should also be iso-spe
  One way is to implement an error mitigation protocol like the one suggested in task 5 where the symmetries are enforced in the final wavefunction by discarding the measuremnets corresponding to contributions that violate the symmetry. One could also enforce the symmetry by introducing the variance of the symmetry operator in the minimization squeme of the VQE in the form of a Lagrangian multipliers (constraints). [ref] https://arxiv.org/abs/1806.00461.
  
 # Step #4: Hamiltonian measurements
+
+1. 
  
+2. The expectation value of ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5Chat%7BH%7D%5Crangle) is the sum of the expectation values of each term in the Hamiltonian,
+
+ ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5Chat%7BH%7D%5Crangle%20%3D%20%5Csum_n%20%5Clangle%20%5Chat%7BH%7D_n%5Crangle%20%3D%20%5Csum_n%20h_n%20%5Clangle%20%5Chat%7BO%7D_n%5Crangle)
  
+ where ![](https://latex.codecogs.com/gif.latex?h_n) are all coefficients of H, and ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5Chat%7BO%7D_n%5Crangle) are the tensor products of Pauli matrices obtained by transforming H with the Jordan-Wigner transformation.
+
+For each *n* term, the precision ![](https://latex.codecogs.com/gif.latex?%5Cepsilon_n) is,
+
+![](https://latex.codecogs.com/gif.latex?%5Cepsilon_n%5E2%20%3D%20%5Cfrac%7B%7Ch_n%7C%5E2%5Csigma%5E2%28%5Clangle%20%5Chat%7BO%7D_n%5Crangle%29%7D%7BN_n%7D)
+ 
+where ![](https://latex.codecogs.com/gif.latex?%5Csigma%5E2%28%5Clangle%20%5Chat%7BO%7D_n%5Crangle%29) are the variance of the expectation value for each fragment, and ![](https://latex.codecogs.com/gif.latex?N_n) is the number of samples/measurements used to estimate each fragment.
+
+ Given that ![](https://latex.codecogs.com/gif.latex?%5Csigma%5E2%28%5Clangle%20%5Chat%7BO%7D_n%5Crangle%29)  depends on  ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5Chat%7BO%7D_n%5Crangle) which are Pauli matrices, we can estimate that the upper-bouded if these variaces is 1. 
+We can estimate the number of samples that are required for a target precision using,
+![](https://latex.codecogs.com/gif.latex?%5Cepsilon%5E2%20%5Cleq%20%5Cfrac%7B%28%5Csum_n%7Ch_n%7C%29%5E2%7D%7BN_T%7D)
+
+Using H2 with an STO-3G basis as an example and for a ![](https://latex.codecogs.com/gif.latex?%5Cepsilon%20%3D%2010%5E%7B-3%7D%5Ctext%7BHa%7D), we found that, ![](https://latex.codecogs.com/gif.latex?%5Csum_n%7Ch_n%7C%20%5Capprox%200.513). Meaning that ![](https://latex.codecogs.com/gif.latex?N_T%20%5Capprox%20260000).  
  
 # Step #5: Use   of  quantum   hardware
  First we carry out the entire VQE optimization procedure by optimizing amplitudes of step 3 unitaries. Given the entanglers and their amplitudes found in Step 3, we find the corresponding representation of these operators in terms of elementary gates and verify that the expectation value is near the ground state energy. We have done this by running IBM Quantum Experience (ibmq) with a backend simulator. We found a 1.856 % of difference.
@@ -154,7 +172,7 @@ We would need to perform the following tasks to achieve the goal:
 3. Simulate ![](https://latex.codecogs.com/gif.latex?a_n) ![](https://latex.codecogs.com/gif.latex?%7C%5Clangle%20%5CPsi%7Cf_n%20%5Crangle%7C%5E2) and   ![](https://latex.codecogs.com/gif.latex?%7C%5Clangle%20%5CPsi%7Cg_n%20%5Crangle%7C%5E2) and for each sample n compute ![](https://latex.codecogs.com/gif.latex?P_N%7Cf_n%5Crangle%20%3D0) and ![](https://latex.codecogs.com/gif.latex?P_N%7Cg_n%5Crangle). If  ![](https://latex.codecogs.com/gif.latex?P_N%7Cf_n%5Crangle%20%3D0) ![](https://latex.codecogs.com/gif.latex?%28P_N%7Cg_n%5Crangle%20%3D0%29) discard  ![](https://latex.codecogs.com/gif.latex?a_n%28b_n%29). We supose this simulation could be done in similar manner as we did for the full Hamiltonian using ibmq and somehow output the outcome of each sample. But we haven't been able to complte this task.
  
 4. Compare 
- 1) Energy estimate from  !()[https://latex.codecogs.com/gif.latex?E%20%3D%20%5Clangle%20%5CPsi%7C%5Chat%7BH%7D%7C%5CPsi%20%5Crangle]  computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
+ 1) Energy estimate from  ![](https://latex.codecogs.com/gif.latex?E%20%3D%20%5Clangle%20%5CPsi%7C%5Chat%7BH%7D%7C%5CPsi%20%5Crangle)  computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
   2) Energy estimate from  E computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
  3)  Energy estimate from  ![](https://latex.codecogs.com/gif.latex?E%20%3D%20%5Clangle%20%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%5Crangle%20&plus;%20%5Clangle%20%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%20%5Crangle), were A and B were computed in task 4 using the QCC method. 
  4)  Energy estimate from  ![](https://latex.codecogs.com/gif.latex?E%3D%20%5Clangle%20%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%20%5Crangle%20&plus;%20%5Clangle%20%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%20%5Crangle%3D%5Csum_m%20a_m%20%7C%5Clangle%20%5CPsi%7Cf_m%5Crangle%7C%5E2%20&plus;%20%5Csum_m%20b_n%20%7C%5Clangle%20%5CPsi%7Cg_m%5Crangle%7C%5E2) , were m<n because we have discarded some of the ![](https://latex.codecogs.com/gif.latex?a_m%2C%20b_m) due to violation of particle conservation.                                                                                                                     
