@@ -123,9 +123,7 @@ Since the desired quantity is the energy <H>, the mapping should also be iso-spe
  
 # Step #4: Hamiltonian measurements
 
-1. 
- 
-2. The expectation value of ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5Chat%7BH%7D%5Crangle) is the sum of the expectation values of each term in the Hamiltonian,
+1. The expectation value of ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5Chat%7BH%7D%5Crangle) is the sum of the expectation values of each term in the Hamiltonian,
 
  ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5Chat%7BH%7D%5Crangle%20%3D%20%5Csum_n%20%5Clangle%20%5Chat%7BH%7D_n%5Crangle%20%3D%20%5Csum_n%20h_n%20%5Clangle%20%5Chat%7BO%7D_n%5Crangle)
  
@@ -136,12 +134,21 @@ For each *n* term, the precision ![](https://latex.codecogs.com/gif.latex?%5Ceps
 ![](https://latex.codecogs.com/gif.latex?%5Cepsilon_n%5E2%20%3D%20%5Cfrac%7B%7Ch_n%7C%5E2%5Csigma%5E2%28%5Clangle%20%5Chat%7BO%7D_n%5Crangle%29%7D%7BN_n%7D)
  
 where ![](https://latex.codecogs.com/gif.latex?%5Csigma%5E2%28%5Clangle%20%5Chat%7BO%7D_n%5Crangle%29) are the variance of the expectation value for each fragment, and ![](https://latex.codecogs.com/gif.latex?N_n) is the number of samples/measurements used to estimate each fragment.
-
- Given that ![](https://latex.codecogs.com/gif.latex?%5Csigma%5E2%28%5Clangle%20%5Chat%7BO%7D_n%5Crangle%29)  depends on  ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5Chat%7BO%7D_n%5Crangle) which are Pauli matrices, we can estimate that the upper-bouded if these variaces is 1. 
-We can estimate the number of samples that are required for a target precision using,
+ 
+Since the samples for each fragment are independet of each other, and that ![](https://latex.codecogs.com/gif.latex?%5Csigma%5E2%28%5Clangle%20%5Chat%7BO%7D_n%5Crangle%29)  depends on  ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5Chat%7BO%7D_n%5Crangle) which are Pauli matrices, and the upper-bouded value of ![](https://latex.codecogs.com/gif.latex?%5Csigma%5E2%28%5Clangle%20%5Chat%7BO%7D_n%5Crangle%29) is 1. 
+ We can argue that, ![](https://latex.codecogs.com/gif.latex?%5Cepsilon%5E2%20%5Capprox%20%5Csum_n%20%7Ch_n%7C%5E2/N_n). 
+ In order to minimize the global precision ![](https://latex.codecogs.com/gif.latex?%5Cepsilon) we could set the number of measurmentes per term proportional to each fragment, ![](https://latex.codecogs.com/gif.latex?%7Ch_n%7C%20%5Cpropto%20N_n). Leading to,
+ 
+ ![](https://latex.codecogs.com/gif.latex?%5Cepsilon%5E2%20%5Cleq%20%5Cfrac%7B%5Csum_n%20%7Ch_n%7C%5E2%7D%7BN_T%7D)
+ 
+ Fore more details please refer to [Phys. Rev. A **92**, 042303 (2015)](https://doi.org/10.1103/PhysRevA.92.042303)
+ 
+ 
+2. We can estimate the number of samples that are required for a target precision using,
 ![](https://latex.codecogs.com/gif.latex?%5Cepsilon%5E2%20%5Cleq%20%5Cfrac%7B%28%5Csum_n%7Ch_n%7C%29%5E2%7D%7BN_T%7D)
 
-Using H2 with an STO-3G basis as an example and for a ![](https://latex.codecogs.com/gif.latex?%5Cepsilon%20%3D%2010%5E%7B-3%7D%5Ctext%7BHa%7D), we found that, ![](https://latex.codecogs.com/gif.latex?%5Csum_n%7Ch_n%7C%20%5Capprox%200.513). Meaning that ![](https://latex.codecogs.com/gif.latex?N_T%20%5Capprox%20260000).  
+Using H2 with an STO-3G basis as an example, and for a ![](https://latex.codecogs.com/gif.latex?%5Cepsilon%20%3D%2010%5E%7B-3%7D%5Ctext%7BHa%7D), we found that, ![](https://latex.codecogs.com/gif.latex?%5Csum_n%7Ch_n%7C%20%5Capprox%200.513). 
+ Meaning that ![](https://latex.codecogs.com/gif.latex?N_T%20%5Capprox%20260000).  
  
 # Step #5: Use   of  quantum   hardware
  First we carry out the entire VQE optimization procedure by optimizing amplitudes of step 3 unitaries. Given the entanglers and their amplitudes found in Step 3, we find the corresponding representation of these operators in terms of elementary gates and verify that the expectation value is near the ground state energy. We have done this by running IBM Quantum Experience (ibmq) with a backend simulator. We found a 1.856 % of difference.
