@@ -30,7 +30,7 @@ Charged particles create potential energy based on Coulomb's law.
 The same is the case for particles where the proton is positively charged and the electron is negatively charged.
 
 ![fig6](./resources/fig6.png)
-![source](https://www.southampton.ac.uk/assets/centresresearch/documents/compchem/DFT_L2.pdf)
+<a href="https://www.southampton.ac.uk/assets/centresresearch/documents/compchem/DFT_L2.pdf" target="_blank">Source</a>
 
 Below is a simple representation of the Hamiltonian of the Helium atom which has an atomic number of 2. The kinetic and potential terms are shown. Various approximations may be made (for example the Born-Oppenheimer approximation that the nucleus is stationary relative to the electrons). 
 
@@ -39,14 +39,14 @@ Below is a simple representation of the Hamiltonian of the Helium atom which has
 We will see that this energy equation is then converted into Pauli rotations for quantum gates in Step #2 using Jordan-Wigner (jw) or Bravyi-Kitaev (bk) methods.
 
 ![fig8](./resources/fig8.png)
-![source](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.6.031007)
+<a href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.6.031007" target="_blank">Source</a>
 
 Further simplifications based on Hamiltonian symmetries are used to produce even simpler set of gates that can be implemented on our NISQ hardware.
 
 We next look at the actual implementation of Unitaries on quantum computers. in Step #3. The figure below shows a high level of steps from classical preparation to solving functions on both annealing and gate quantum computers. Annealing requires conversion to a Binary Quadratic Model (BQM), while gate computers require the use of an initial starting energy function or Ansatz along with hybrid classical-quantum algorithms called Phase Estimation Algorithm (PEA) or Variational Quantum EigenSolver (VQE).
 
 ![fig9](./resources/fig9.png)
-![source](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.6.031007)
+<a href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.6.031007" target="_blank">Source</a>
 
 In VQE we start with a set of parameters (values of angles) that we will first calculate in Step #3. Then we will prepare the initial state and measure the expectation value of the Hamiltonian in the desired basis (for example stog3) in step #4. 
 
@@ -55,10 +55,10 @@ In VQE we start with a set of parameters (values of angles) that we will first c
 The figure below shows a summary of the steps taken in VQE 
 
 ![fig11](./resources/fig11.png)
+<a href="https://arxiv.org/abs/1512.06860" target="_blank">Source</a>
 
-![source](https://arxiv.org/abs/1512.06860)
+<a href="https://iopscience.iop.org/article/10.1088/1367-2630/18/2/023023/meta0" target="_blank">Additional Reference</a>
 
-![additional reference](https://iopscience.iop.org/article/10.1088/1367-2630/18/2/023023/meta)
 
 Below we will use this basic concepts to show actual run of H2 and LiH using the Tequila library
 
