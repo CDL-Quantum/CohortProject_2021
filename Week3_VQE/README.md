@@ -11,7 +11,7 @@ We used Hartree-Fock (HF), Configuration Interaction Singles and Doubles (CISD) 
 
 All of these methods consist of choosing a "trial wavefunction" depending on one or more parameters, and finding the values of these parameters for which the expectation value of the energy is the lowest possible. However, the CCSD method is the only one of them that can obtain energies below the ground state, which makes it non-variational. 
 
-We present below the PESs generated with each classical method for LiH, H<sub>4</sub> and N<sub>2</sub>. Dashed vertical lines indicate the experimental bond length for the diatomic molecules according to [NIST database](https://cccbdb.nist.gov/diatomicexpbondx.asp).
+We present below the PESs generated with each classical method for LiH, H<sub>4</sub> and N<sub>2</sub>. Dashed vertical lines on diatomic molecule graphs indicate the experimental bond length of the molecule according to [NIST database](https://cccbdb.nist.gov/diatomicexpbondx.asp).
 
 ![LiH](./lih.png) 
 
@@ -19,21 +19,22 @@ We present below the PESs generated with each classical method for LiH, H<sub>4<
 
 ![N_2](./n2.png)
 
-The system PES is harder to calculate accurately as the number of chemical bonds increases. These graphs are ordered by number of bonds from up to down.
+The system PES is harder to calculate accurately as the number of chemical bonds increases. These graphs are ordered by increasing number of bonds from up to down.
 
-In the LiH case, despite the HF minimum energy is notably different from that of the Full Configuration Interaction (FCI) exact solution, both plots have its minimum at the same bond length.
+In the LiH case, despite the HF minimum energy is notably different from that of the Full Configuration Interaction (FCI) exact solution, plots for all methods used have its minimum at the same bond length.
 
-*Advantages:*
 
-- Variational methods provide a simple way to place an upper bound on the ground state energy of any quantum system.
+Coupled cluster results are fairly reliable when computing energies at equilibrium configurations but likely to fail for transition states or near dissociation limits of multiple bonds. 
+
+*Advantages of variational methods:*
+
+- They provide a simple way to place an upper bound on the ground state energy of any quantum system.
 - These methods can be used to calculate excited states in certain situations, adding a penalty term to the expectation value of the Hamiltonian and then minimizing this sum.
 
 
 ### Generating the qubit Hamiltonian
 
-
-
-To proceed to VQE one needs to generate the qubit Hamiltonian. The easiest path is via first generating the electronic Hamiltonian in the second quantized form and then transform it into a qubit-form Hamiltonian using a fermion-qubit mapping.
+To proceed to VQE one needs to generate the qubit Hamiltonian. The easiest path is via first generating the electronic Hamiltonian in the second quantized form and then transform it into a qubit-form Hamiltonian using a fermion-qubit mapping. In this [notebook], we obtained the qubit Hamiltonian of several molecules using Jordan-Wigner and Bravyi-Kitaev transformations in each case.
 
 Fermion-qubit mapping schemes can be broken into two pieces: first, to map occupation number basis vectors to states of qubits; and second, to represent the fermionic creation and annihilation operators in terms of operations on qubits in a way that preserves the fermionic anti-commutation relations. By doing so, we can ensure that a qubit operator (which represents certain fermionic operator) acting on a qubit (i.e, encoded fermionic state) reproduces the action of the associated fermionic operator on the fermionic state.
 
@@ -52,9 +53,7 @@ the qubit Hamiltonian does not neccesarily have time-reversal symmetry. Since sp
 
 ### Business Application
 
-
 For more details refer to our [Business Application found here](./Business_Application.md)
-
 
 ## References
 
