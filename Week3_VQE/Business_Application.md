@@ -49,10 +49,12 @@ We next look at the actual implementation of Unitaries on quantum computers. in 
 <a href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.6.031007" target="_blank">Source</a>
 
 In VQE we start with a set of parameters (values of angles) that we will first calculate in Step #3. Then we will prepare the initial state and measure the expectation value of the Hamiltonian in the desired basis (for example stog3) in step #4. 
+<p align="center">
+  <img width="460" height="300" src="./resources/fig10.png">
+</p>
 
-![fig10](./resources/fig10.png)
+The figure below shows a summary of the steps taken in VQE. The Hamiltonian is created on the left of the figure and then parametrized into the quantum circuit. Note the Ansatz is derived using the Hamiltonian, the distance and Basis. The quantum computer is then used to determine the expectation value.
 
-The figure below shows a summary of the steps taken in VQE 
 
 ![fig11](./resources/fig11.png)
 <a href="https://arxiv.org/abs/1512.06860" target="_blank">Source</a>
@@ -64,12 +66,56 @@ Below we will use this basic concepts to show actual run of H2 and LiH using the
 
 # Technical Problems Solved
 
+We used the Tequila library to calculate the ground state energy using the Full Configuration Interaction (FCI), Hartree-Fock (HF) and Coupled cluster singles/doubles (CCSD) methods. 
+
+Directory for both H2 and LiH execution.
+- Code execution using Tequila for H<sub>2</sub> is in [here](./Ritaban%20Code/H2).
+- Code execution using Tequila for LiH is in [here](./Ritaban%20Code/LiH).
+
+## Classical Methods for LiH
+
+FCI and HF methods are Variational while CCID is not.  It is being assumed that the FCI gives the most accurate results and the others are compared to this method.  Here it can be seen that HF did not give the lowest ground state energies at the different distances (R) of separation, while CCSD was more accurate. 
+
+<p align="center">
+  <img width="460" height="300" src="./resources/fig12.png">
+</p>
+
+The lowest energy for LiH was found to be -7.88(FCI), -7.86(HF) and -7.88 (CCSD) 
 
 
-# Type of real-world problems that can be solved
+## Generating Qubit Hamiltonians for LiH
+
+In Step #2 we generate the qubit Hamiltonians first using the Jordan-Wigner method then Bravyi-Kitaev and use the sto3g basis. The initial Hamiltonian is quite large  and is then further reduced. The eigenvalues in the effective Hamiltonian are -1.10115031  and 0.03904763
+
+## Determining the Unitary Ansatz
+
+The Unitary Ansatz is determined using the Unitary Cooupled Cluster (UCC) method. Using 1 trotter step, sto-3g basis we get 14 UCCSD amplitudes. This method gives us a UCCSD energy of -7.879.
+
+With the Qubit Coupled Cluster (QCC) method we are able to specify the hardware limitations. We perform the entangler screening protocol for LiH in minimal sto-3g basis, and obtain one grouping of entanglers with non-zero energy gradient. We then select one of them to be used in the QCC VQE simulation. In the end we obtained QCC energy with 1 entangler of -6.25839.
+
+## Measurment
+
+To optain the expectation value of the qubit Hamiltonian we have to reduce the number of Hamiltonians to a minimal number of groups. We obtain measurable parts of LiH by partitioning its terms into mutually commuting fragments. 
+
+## Use of Quantum Hardware
+
+In the final step the parameters are developed for LiH.  The execution was not completed on IBM-Q quantum hardware but was checked using tq.simulate to be -7.863.
+
+## Conclusion
+
+We were able to run both the H2 and LiH molecules using both classical and Quantum methods. Since these molecules are simple and well known, their Ansatz are also now defined. It is easy to use tools like Tequila and Pennylane to simulate these.  The challenge will come with larger molecules and it will be exciting to see how solutions on real quantum computer hardware perform.
+
+We did not look at the method of converting to a BQM and trying on D-Wave or other QUBO solvers. This would have been another interesting area to investigate.
+
+References
+[[1]](https://arxiv.org/abs/1808.10402)
+[[2]](https://cen.acs.org/articles/95/i43/Chemistry-quantum-computings-killer-app.html)
+[[3]](https://www.ibm.com/downloads/cas/BDGQRXOZ)
+
 
 
 # Quantum Cohort Project Business Application
+
 
 ## Introduction
 
@@ -113,7 +159,12 @@ As a leading manufacturer in OLED, LightQ is starting early talks with Apple and
   <a href="https://www.oled-info.com/dscc-increases-its-oled-market-forecasts-it-sees-increased-adoption-phones" target="_blank">Source</a>
 </p> 
 
-## Real World Problems a Quantum Variational Eigensolver can Solve
+## How does VQE help in our process
+
+ The molecule properties in lattice or crystaline structure has a calculable macro effect. By using quantum chemistry and removing an atom or adding an atom the property of the molecule can be figured out, thus the macro level effect can then also be calculated. Thus Quantum VQE methods help us to simulate many molecules and their potential properties to find the ideal macro level effect we are looking for and then manufacture those ideal molecule candidates.
+
+
+# Real World Problems a Quantum Variational Eigensolver can Solve
 
 We outline a few real world problems the quantum variational eigensolver can potentially solve that are not strictly related to LightQ's business pitch.
 
@@ -122,7 +173,6 @@ We outline a few real world problems the quantum variational eigensolver can pot
 - Efficient producer of fertilizer. We model the biological nitrogen fixation by the enzyme nitrogenase which we can use to create fertilizer. This method is much preffered over the traditional Harber-Bosch method because the latter requires high temperature and pressure and is therefore very energy-intensive [[5]](https://www.pnas.org/content/114/29/7555). We use the methods in this repository to elucidate the reaction mechanism of biological nitrogen fixation in notrogenase [[5]](https://www.pnas.org/content/114/29/7555) which is crucial in using it to create fertilizer. 
 
 - Creating next-generation lithium-sulfur batteries. We are able to simulate the next-generation of battery technology using the techniques in this repository. Lithium-sulfu batteries are theoretically much stronger and more efficient than traditional batteries, however, the reaction mechanism for the sulfur reduction in the battery environment is in much debate in the scientific field [[6]](https://arxiv.org/pdf/2001.01120.pdf). We use the the methods outlined in this repository to model the electon-cloud density distribution of molecules and in particular their dipole moment (which are very important to understand the feasibility of these batteries)[[6]](https://arxiv.org/pdf/2001.01120.pdf) to eventually create the next generation of batteries!
-
 ## Potential Customers
 
 We have done an in depth analysis of some potential customers for LightQ's OLED technology. They are summarized in the below table.
