@@ -5,14 +5,14 @@
 
 Here we provide our work on project 3. 
 
-Our Business Application is [here](./Business_Application.md) and our video introduction is [here](https://drive.google.com/file/d/1EHxNry_KGci-1Ssjv0kMTpVQdF3DyLml/view?usp=sharing).
-
-Code execution using Tequila for H2 is in [here](./Ritaban%20Code/H2)
-Code execution using Tequila for LiH is in [here](./Ritaban%20Code/LiH)
+- Our Business Application is [here](./Business_Application.md).
+- Our video introduction is [here](https://drive.google.com/file/d/1EHxNry_KGci-1Ssjv0kMTpVQdF3DyLml/view?usp=sharing).
+- Code execution using Tequila for H<sub>2</sub> is in [here](./Ritaban%20Code/H2).
+- Code execution using Tequila for LiH is in [here](./Ritaban%20Code/LiH).
 
 Below we answer the various questions found in [the instructions](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week3_VQE/Instructions.pdf).
 
-## Step 1
+## Step \#1: Generating PES using classical methods
 
 We were asked to investigate the relative quality of three approximation methods:
 Hartree-Fock (HF),
@@ -20,7 +20,6 @@ Configuration Interaction Singles and Doubles (CISD), and
 Coupled Cluster Singles and Doubles (CCSD).
 The quality of these approximations were assessed relative to the answer obtained numerically via the
 Full Configuration Interaction (FCI) representation.
-Our work can be found in [this notebook](./S1_Classical_Methods.ipynb).
 
 ### Question 1
 >Among classical methods, there are techniques based on the variational approach and those that are not. Identify variational methods among those that were used and explain advantages of the variational approach. Are there any arguments for using non-variational techniques?
@@ -52,13 +51,32 @@ by performing the same kind of calculation on a single CH<sub>3</sub> species."
 This weakness precludes the use of variational methods for material simulation, as such approaches
 would simulate a small piece of the material and then extrapolate to large-scale behaviour.
 
+## Step \#2: Generating the qubit Hamiltonian
 
-## Further Challenges:
-* How to obtain excited electronic states of the same or different symmetry?
-* Partitioning in the fermionic operator space.
-* Applying unitary transformations on the Hamiltonian.
-* Compress larger basis sets into smaller number of qubits.
+### Question 1
 
-## Business Application
+> What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
 
-For more details refer to the [Business Application found here](./Business_Application.md)
+We need the mapping of fermionic operators to preserve the algebraic relations between fermionic operators (i.e. it needs to be the proper kind of algebra homomorphism).
+I ([Yuval](http://ysanders.github.io)) have yet to find a good reference explaining this point of view, but my suspicion is that the function should be a Grassman algebra homomorphism ([nLab](https://ncatlab.org/nlab/show/Fock+space) makes the point that this is the mathematician's name for fermionic Fock space).
+
+In practice, the condition to check is that the *canonical commutation relations* for the fermionic mode operators hold.
+The other mathematical machinery of whatever homomorphism seems usually to be implied. [Michael Nielsen](https://michaelnielsen.org/blog/archive/notes/fermions_and_jordan_wigner.pdf) wrote a useful note on enforcing these canonical commutation relations for the Jordan-Wigner transformation,
+which leads to the well-known irritation that the qubit creation/annihilation operators are highly non-local—see Eq. (31) in Nielsen's note and the discussion around Eq. (5) in [this paper](https://doi.org/10.1021/acs.jctc.8b00450). In particular, Sec. II.B of Nielsen's note gives a detailed list of mathematical relations that need to be enforced.
+
+### Question 2
+
+> The electronic Hamiltonian is real (due to time-reversal symmetry), what consequences does that have on the terms in the qubit Hamiltonian after the Jordan-Wigner transformation?
+
+I ([Yuval](http://ysanders.github.io)) am not sure what a *complete* answer to this question would look like. However, the most obvious consequence seems to be that a Hamiltonian containing only nearest neighbour two-qubit terms could not
+contain cross-terms, i.e. of the form *X<sub>j</sub> Y<sub>j±1</sub>*.
+See discussion before Eq. (35) in Nielsen's note cited above.
+Sorry, I didn't really have time to do this question justice.
+
+### Question 3
+
+> *Optional:* What are the cons and pros of the Bravyi-Kitaev transformation compared to the Jordan-Wigner transformations?
+
+[This paper](https://doi.org/10.1021/acs.jctc.8b00450) gives a detailed comparison, though its conclusions are of the "more research is needed" type. In principle, Bravyi-Kitaev should be generally superior to Jordan-Wigner because Bravyi-Kitaev avoids the need for highly non-local fermionic creation/annihilation operators.
+However, the paper points out that this advantage of Bravyi-Kitaev can be accomplished with clever orderings for Trotter-Suzuki expansions of the time-evolution operator, and that these optimised Jordan-Wigner circuits seem to have shorter depth in some cases than the Bravyi-Kitaev circuits.
+Because this depends on numerical details of the Hamiltonian to be simulated, the point is well made that the tradeoff needs to be numerically investigated in practical circumstances.
