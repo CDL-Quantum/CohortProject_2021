@@ -136,3 +136,8 @@ Additional  questions:
 1) Implement an error-mitigation protocol based on removing measurement results correspond- ing to a wrong number of electrons, which is described in Ref. [14](see Sec. 3.4. Post-processing Procedure). How diﬀerent are the results of simulations with and without error-mitigation?
  
  
+# Further challenges 
+ 
+1.  How to obtain excited electronic states of the same or different symmetry?
+The variational theorem is the key element for VQE-based algorithms. However, for excited electronic states there is not such theorem that ensures a lower-bound on the first excited state. One possibilty to modify the VQE protocol for excited states is by including a lagrange multiplier that ensures the excited state and ground staet must be orthogolan to each other, ![exited state](https://latex.codecogs.com/gif.latex?%5Cleft%20%7C%20%5Cleft%20%5Clangle%20%5CPhi_1%20%5Cmiddle%20%7C%5CPhi_0%20%5Cright%20%5Crangle%5Cright%20%7C)
+ 
