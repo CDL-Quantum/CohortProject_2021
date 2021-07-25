@@ -69,7 +69,7 @@ We found the following infromation for LiH:
 ### Part 4: Hamiltonian measurements.
 **Analysis:** For this task, we were able partition the qubit hamiltonian into framents for all 5 molecules (H2, H4, LiH, H20, and N2). We found the following framents for H2:
 
-
+![h2 fragments](../Week3_VQE/imgs/task_4_h2_fragments.png)
 ### Part 5: Use of quantum hardware.
 **Analysis:**
 
