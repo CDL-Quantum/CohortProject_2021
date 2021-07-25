@@ -80,3 +80,32 @@ Sorry, I didn't really have time to do this question justice.
 [This paper](https://doi.org/10.1021/acs.jctc.8b00450) gives a detailed comparison, though its conclusions are of the "more research is needed" type. In principle, Bravyi-Kitaev should be generally superior to Jordan-Wigner because Bravyi-Kitaev avoids the need for highly non-local fermionic creation/annihilation operators.
 However, the paper points out that this advantage of Bravyi-Kitaev can be accomplished with clever orderings for Trotter-Suzuki expansions of the time-evolution operator, and that these optimised Jordan-Wigner circuits seem to have shorter depth in some cases than the Bravyi-Kitaev circuits.
 Because this depends on numerical details of the Hamiltonian to be simulated, the point is well made that the tradeoff needs to be numerically investigated in practical circumstances.
+
+## Step \#3: Unitary transformations
+
+### Question 1
+
+> Standard Hamiltonian symmetries are
+i) number of electrons N<sub>e</sub> = Σ <sub>k</sub> a<sub>k</sub><sup>†</sup> a<sub>k</sub>,
+ii) electron spin S<sup>2</sup>,
+iii) electron spin projection S<sub>z</sub>,
+iv) time-reversal symmetry, and
+v) point-group symmetry for symmetric molecules.
+Which of these symmetries are conserved in a) UCC and b) QCC?
+
+I ([Yuval](http://ysanders.github.io)) simply do not have enough background
+in theoretical chemistry to do the calculation necessary, though I might be able to
+if I had an extra few days for this. Oh well. But I did watch one of
+[Artur Izmaylov's videos](https://youtu.be/sYJ5Ib-8k_8?t=810) on coupled cluster
+methods and it seems to me that all the symmetries would be conserved, which is why
+it is even possible to control the "algebraic explosion" by making such symmetries
+explicit.
+
+I did have a nice but brief conversation with [Lukas Konecny](https://scholar.google.com/citations?user=sxKTPdQAAAAJ&hl=en),
+who repeatedly and emphatically stressed to me that he knows very little about coupled cluster methods and works mostly on DFT approaches to relativistic systems.
+He had the intuition that all five symmetries should be preserved simply because we are dealing with a non-relativistic Hamiltonian and hence there would be no physical processes breaking any of these symmetries. I thought that was a good argument, so I'm
+"borrowing" it so that I don't have to figure out what calculation to do to back up what I'm saying (much less actually do that calculation).
+
+As for qubit coupled cluster, I spent about an hour reading [this paper](https://doi.org/10.1021/acs.jctc.8b00932) (or, more accurately, [the arXiv version](https://arxiv.org/abs/1809.03827)) but I think I don't have enough background in theoretical chemistry to be able to come up with an answer.
+
+Sorry. I really appreciate how good the assignment is and I wish I had more time to do it justice.
