@@ -14,13 +14,12 @@
 |   FCI  |   Variational   |     
 
 
-
-Yes the arguments to use non-variational techniques have to do with improving accuracy at low or medium computational cost and in addition, non-variational techniques can ensure size consistency which is not ensured by truncated CISD (see response 2.). Different techniques have different implementations on quantum hardware, so it's worth exploring diffrent options.
+Yes the arguments to use non-variational techniques such as Cupled Clusters (CC) have to do with improving accuracy and in addition, non-variational techniques can ensure size consistency which is not ensured by truncated CISD (see response to question 2.). Different techniques have different implementations on quantum hardware, so it's worth exploring different options to find that best fits quantum computers. 
 
 The scalability of post-Hartree Fock (HF) methods, such as CISD and FCI, is the main bottleneck to simulate larger molecules with high accuracy. 
 A non-variational method that can improve the accuracy without increasing substantially the computational cost is Coupled Clusters Single Doubles (CCSD), which is a truncated version of Coupled Cluster (CC) theory. In the CC theory, the improvement of the wave function is through the application of the exponential of cluster operators  to the HF wave function, ![CC_angle](https://latex.codecogs.com/gif.latex?%7C%20CC%20%5Crangle%20%3D%20e%5E%7BT%7D%7C%20HF%20%5Crangle) .
+CC scales polynomially in the system size.
 
-Coupled cluster (CC) theory provides a compelling framework of approximate infinite-order perturbation theory, in the form of an exponential of cluster operators describing the true quantum many-body effects of the electronic wave function at a computational cost that, despite being significantly more expensive than DFT, scales polynomially with system size. 
 
 
 In the figures bellow we present the pontential energy surfaces (PESs) for the dissociation of H<sub>2</sub>, LiH, H<sub>2</sub>O and H<sub>4</sub> molecules using different methods. We left out CISD in the cases it didn't converge. We observe that CISD improves the PES over HF in all the cases under study. 
@@ -51,11 +50,8 @@ For the follwing calculations we used 0.7 a0 as the interatomic distance for the
 
 
 For an infinitely stretched molecule we expect the energy to be the sum of the energies of the individual fragments. In the limit of infinite internuclear separation, the energy of H4 should equal twice the energy of the H2 molecule. Any discrepancy between these two energies would imply that the method is not size consistent. 
-We computed the energies for a planar H4 molecule when the separation between the two H2 fragments is as large as 100A (see table). The calculations were performed for a planar H4 molecule dissociating into 2 H2 molecules with separation corresponding to the minimum energy (see figure for dissociation curve H2 above)(is that the case for your calcs Rodrigo?).  The first rows correspond to energies computed using the PYSCF package and the last rows to energies computed with the tequila package.
-We observe that CCSD is size consistent but CISD isn't. That is also what is claimed in the literature (add ref joh).
-
-The primary source of error for HF, the inability to describe systems with multiple electronic configurations.
-On the other hand, CCSD, CISD and FCI, do account for multiple electronic configurations in the wave function.
+We computed the energies for a planar H4 molecule when the separation between the two H2 fragments is as large as 100A (see table). The calculations were performed for a planar rectangular H4 geometry and we stretched the horizontal distance and left the vertical fixed to approx the equilibrium distance for H2 (0.7 a0).  The first rows in th etable correspond to energies computed using the PYSCF package and the last rows to energies computed with the tequila package.
+We observe that CCSD is size consistent but CISD isn't. That is also what is claimed in the literature.
 
 On the other hand we see that FCI is size consistent and HF as well as long as we use the restricted version of HF.
 
