@@ -5,30 +5,30 @@ This project will guide you through the state-of-the-art techniques for solving 
 
 Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week3_VQE/Instructions.pdf) to begin learning about your tasks for this week!
 
-**Please edit this markdown file directly with links to your completed tasks and challenges.**
 
-## Tasks include:
-* Generating PES using classical methods.
-* Generating the qubit Hamiltonian.
-* Unitary transformations.
-* Hamiltonian measurements.
-* Use of quantum hardware.
+### Generating PES using classical methods
 
-## Further Challenges:
-* How to obtain excited electronic states of the same or different symmetry?
-* Partitioning in the fermionic operator space.
-* Applying unitary transformations on the Hamiltonian.
-* Compress larger basis sets into smaller number of qubits.
+![LiH](./lih.png) ![N_2](./n2.png)
 
-## Business Application
-For each week, your team is asked to complete a Business Application. Questions you will be asked are:
+*Advantages:*
+-Variational methods provide a simple way to place at least an upper bound on the ground state energy of any quantum system
+-These methods can be used to calculate excited states in certain situations, adding a penalty term to the expectation value of the Hamiltonian and then minimizing this sum
 
-* Explain to a layperson the technical problem you solved in this exercise.
-* Explain or provide examples of the types of real-world problems this solution can solve.
-* Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved.
-* Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
+Variational methods are likely to **fail** for transition states or near dissociation limits of multiple bonds.
 
-For more details refer to the [Business Application found here](./Business_Application.md)
+[Python notebook](./S1_Classical_methods.ipynb)
+
+### Generating the qubit Hamiltonian
+### Unitary transformations
+### Hamiltonian measurements
+### Use of quantum hardware
+
+
+
+### Business Application
+
+
+For more details refer to our [Business Application found here](./Business_Application.md)
 
 
 ## References
