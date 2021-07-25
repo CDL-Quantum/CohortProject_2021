@@ -106,6 +106,13 @@ who repeatedly and emphatically stressed to me that he knows very little about c
 He had the intuition that all five symmetries should be preserved simply because we are dealing with a non-relativistic Hamiltonian and hence there would be no physical processes breaking any of these symmetries. I thought that was a good argument, so I'm
 "borrowing" it so that I don't have to figure out what calculation to do to back up what I'm saying (much less actually do that calculation).
 
-As for qubit coupled cluster, I spent about an hour reading [this paper](https://doi.org/10.1021/acs.jctc.8b00932) (or, more accurately, [the arXiv version](https://arxiv.org/abs/1809.03827)) but I think I don't have enough background in theoretical chemistry to be able to come up with an answer.
+As for qubit coupled cluster, I spent about an hour reading [this paper](https://doi.org/10.1021/acs.jctc.8b00932) (or, more accurately, [the arXiv version](https://arxiv.org/abs/1809.03827)) but I think I don't have enough background in theoretical chemistry to be able to come up with a good answer.
+[From this video](https://youtu.be/981jc3Xdgvc?t=890), it seems like all five symmetries can be broken, though.
 
 Sorry. I really appreciate how good the assignment is and I wish I had more time to do it justice.
+
+### Question 3
+
+> What are the ways to restore symmetries if your unitary transformation break them?
+
+We can do what Artur calls [symmetry projection](https://www.youtube.com/watch?v=mhlgldoCfx4). 
