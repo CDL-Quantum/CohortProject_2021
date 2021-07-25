@@ -31,7 +31,15 @@ We found the following infromation for LiH:
 
 ![liH ground state energy](../Week3_VQE/imgs/lih_ground_state_energy.png)
 
-**Question**:
+**Question**: What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
+**Answer**:
+
+**Question**: The electronic Hamiltonian is real (due to time-reversal symmetry), what consequences does that have on the terms in the qubit Hamiltonian after the Jordan-Wigner transformation?
+**Answer**: 
+
+**Question**: What are the cons and pros of the Bravyi-Kitaev transformation compared to the Jordan-Wigner transfomrations?
+**Answer**:
+
 ### Part 3: Unitary transformations.
 **Analysis:**
 
