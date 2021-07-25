@@ -7,13 +7,15 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 
 
 ### Generating PES using classical methods
-We used Hartree-Fock (HF), Configuration Interaction Singles and Doubles (CISD) and Coupled Cluster Singles and Doubles (CCSD) methods for LiH and N<sub>2</sub> in the STO-3G basis. Calculations were made using a [Python notebook](./S1_Classical_Methods.ipynb).
+We used Hartree-Fock (HF), Configuration Interaction Singles and Doubles (CISD) and Coupled Cluster Singles and Doubles (CCSD) methods for different molecules in the STO-3G basis. You can find our results in this [Python notebook](./S1_Classical_Methods.ipynb).
 
 All of these methods consist of choosing a "trial wavefunction" depending on one or more parameters, and finding the values of these parameters for which the expectation value of the energy is the lowest possible. However, the CCSD method is the only one of them that can obtain energies below the ground state, which makes it non-variational. 
 
-Dashed vertical lines indicate the experimental bond length for each molecule according to [NIST database](https://cccbdb.nist.gov/diatomicexpbondx.asp).
+We present below the PESs generated with each classical method for LiH, H<sub>4</sub> and N<sub>2</sub>. Dashed vertical lines indicate the experimental bond length for the diatomic molecules according to [NIST database](https://cccbdb.nist.gov/diatomicexpbondx.asp).
 
-![LiH](./lih.png) ![N_2](./n2.png)
+![LiH](./lih.png) ![H_4](./h4.png) ![N_2](./n2.png)
+
+The system PES is harder to calculate accurately as the number of bonds increases. These graphs are ordered by number of molecular bonds from left to right.
 
 In the LiH case, despite the HF minimum energy is notably different from that of the Full Configuration Interaction (FCI) exact solution, both plots have its minimum at the same bond length.
 
