@@ -62,8 +62,7 @@ On the other hand we see that FCI is size consistent and HF as well as long as w
 1) accuracy  of  accounting  for  many-body  effects  beyondthe Hartree-Fock method (electronic correlation)
  
 2) accuracy of representation of one-electronstates,  or  convergence  with  respect  to  the  one-electron  basis  size.   
-3) 
-Convergence  along  the  firstcoordinate  can  be  illustrated  by  monitoring  reduction  of  the  energy  deviations  from  the  Full  CI answer in a particular basis set for a series of increasingly accurate approaches, e.g.  HF, CCSD,CCSD(T), CCSDT. Convergences along the second coordinate requires the basis set extension from STO3G to a series like cc-pVDZ, cc-pVTZ, cc-pVQZ, cc-pV5Z. 
+3) Convergence  along  the  firstcoordinate  can  be  illustrated  by  monitoring  reduction  of  the  energy  deviations  from  the  Full  CI answer in a particular basis set for a series of increasingly accurate approaches, e.g.  HF, CCSD,CCSD(T), CCSDT. Convergences along the second coordinate requires the basis set extension from STO3G to a series like cc-pVDZ, cc-pVTZ, cc-pVQZ, cc-pV5Z. 
 
 Explore for a small system like H<sub>2</sub> both  convergences.   
 Which  energies  should  be  expected  to  be  closer  to  experimentally  measure dones?
@@ -78,18 +77,13 @@ Below we show the ground state energy of H2 computed with different wavefunction
 
 1.  What are the cons and pros of the Bravyi-Kitaev transformation compared to the Jordan-Wigner transformations?
 
-In the Jordan-Wigner transformation a single fermionic creation or annihilation operator is represented by O(n) qubit operations while in the Bravyi-Kitaev transformation only O(log n) qubit operations are required, thus 
-the Bravyi-Kitaev transformation is a more compact one, i.e. a lower number of gates are needed in the quantum circuit. 
+In the Jordan-Wigner transformation a single fermionic creation or annihilation operator is represented by O(n) qubit operations while in the Bravyi-Kitaev transformation only O(log n) qubit operations are required, thus the Bravyi-Kitaev transformation is a more compact one, i.e. a lower number of gates are needed in the quantum circuit. 
 Frequently, the gate count reduction is particularly large in the number of expensive entangling gates required [ref "A comparison of the Bravyi-Kitaev and Jordan-Wigner transformations for the quantum simulation of quantum chemistry" ](https://arxiv.org/abs/1812.02233 ).
 Such a reduction is crucial in the NISQ era. 
 
-In order to simulate fermionic operators with qubits we need the information on the
-occupation of the target orbital, and the information on the parity of the set of orbitals with index less than
-the target orbital. 
-When using the Jordan-Wigner transformation and its associated occupation basis the occupation information is stored locally but the parity information is non-local. In the case of The Bravyi-Kitaev transformation and basis  the locality of the occupation information and
-and of the parity information are balanced and this fact results in an improved simulation efficiency.
-It has been claimed that Bravyi-Kitaev mapping is superior in all cases aside from
-the lexicographic ordering. Ultimately the comparison between the two methods should be done in a case by case basis.
+In order to simulate fermionic operators with qubits we need the information on the occupation of the target orbital, and the information on the parity of the set of orbitals with index less than the target orbital. 
+When using the Jordan-Wigner transformation and its associated occupation basis the occupation information is stored locally but the parity information is non-local. In the case of The Bravyi-Kitaev transformation and basis the locality of the occupation information and of the parity information are balanced and this fact results in an improved simulation efficiency.
+It has been claimed that Bravyi-Kitaev mapping is superior in all cases aside from the lexicographic ordering. Ultimately the comparison between the two methods should be done in a case by case basis.
 
 2. What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
 Any mapping protocol should size consistent, meaning the N sites from the Fock space should be represented with n qubits. 
@@ -97,10 +91,7 @@ Additionally given that electrons are fermions, the mapping should also follow a
 Since the desired quantity is the energy <H>, the mapping should also be iso-spectra, meaning that the eigen values of the Hamiltonian in the qubit space are the same as in the Fermionic basis. 
 
 3. The electronic Hamiltonian is real (due to time-reversal symmetry), what consequences does that have on the terms in the qubit Hamiltonian after the Jordan-Wigner transformation?
- All terms need to be hermitian.
- 
-*(how to ensure JW creates a hermitian mapping)
-(since H is hermitian means all we should only have quadratic terms? (not sure) but is the only way to have a hermitian operator)*
+The Fermion-to-qubic mapping must by a hermitian mapping, and satisfiy the anti commuting properties of fermionic operators.
 
 
 # Step #3: Unitary transformations
@@ -158,12 +149,12 @@ Using H2 with an STO-3G basis as an example, and for a ![](https://latex.codecog
 |   -0.9486411121761   |   -0.930076203543293   |  1.856%  | 
  
 Additional  questions:
-1) Implement an error-mitigation protocol based on removing measurement results correspond- ing to a wrong number of electrons, which is described in Ref. [14](see Sec. 3.4. Post-processing Procedure). How diﬀerent are the results of simulations with and without error-mitigation?
+1) Implement an error-mitigation protocol based on removing measurement results correspond- ing to a wrong number of electrons, which is described in [Ref](https://doi.org/10.1021/acs.jctc.8b00943)(see Sec. 3.4. Post-processing Procedure). How diﬀerent are the results of simulations with and without error-mitigation?
  
 Error mitigation protocol:
 
 Here we want to correct for violations of the particle conservation number introduced by QCC.
-Following ref[14] as suggested in the instructions we understand that what needs to be done is to identify solutions that violate this symmetry and discard them.
+Following [Ref](https://doi.org/10.1021/acs.jctc.8b00943) and as suggested in the instructions, we understand that what needs to be done is to identify solutions that violate this symmetry and discard them.
 
  Given the decomposition of the total H into commutative pieces:
 
