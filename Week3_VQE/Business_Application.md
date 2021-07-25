@@ -195,6 +195,12 @@ As a leading manufacturer in OLED, LightQ is starting early talks with Apple and
 
  The molecule properties in lattice or crystaline structure has a calculable macro effect. By using quantum chemistry and removing an atom or adding an atom the property of the molecule can be figured out, thus the macro level effect can then also be calculated. Thus Quantum VQE methods help us to simulate many molecules and their potential properties to find the ideal macro level effect we are looking for and then manufacture those ideal molecule candidates.
 
+ <p align="center">
+  <img width="600"  src="./resources/process1.jpg">
+  <a href="https://www.pnas.org/content/114/29/7555" target="_blank">Source</a>
+</p>
+
+The figure shows a sample process flow of a computational reaction mechanism elucidation. The quantum computer provides the full configuration interaction energy. Once the structure of the molecule has been determined, structures of potential intermediates can be found and optimized. 
 
 # Real World Problems a Quantum Variational Eigensolver can Solve
 

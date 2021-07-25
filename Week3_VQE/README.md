@@ -58,7 +58,7 @@ would simulate a small piece of the material and then extrapolate to large-scale
 > What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
 
 We need the mapping of fermionic operators to preserve the algebraic relations between fermionic operators (i.e. it needs to be the proper kind of algebra homomorphism).
-I ([Yuval](http://ysanders.github.io)) have yet to find a good reference explaining this point of view, but my suspicion is that the function should be a Grassman algebra homomorphism ([nLab](https://ncatlab.org/nlab/show/Fock+space) makes the point that this is the mathematician's name for fermionic Fock space).
+We suspect the function should be a Grassman algebra homomorphism ([nLab](https://ncatlab.org/nlab/show/Fock+space) makes the point that this is the mathematician's name for fermionic Fock space).
 
 In practice, the condition to check is that the *canonical commutation relations* for the fermionic mode operators hold.
 The other mathematical machinery of whatever homomorphism seems usually to be implied. [Michael Nielsen](https://michaelnielsen.org/blog/archive/notes/fermions_and_jordan_wigner.pdf) wrote a useful note on enforcing these canonical commutation relations for the Jordan-Wigner transformation,
@@ -68,10 +68,9 @@ which leads to the well-known irritation that the qubit creation/annihilation op
 
 > The electronic Hamiltonian is real (due to time-reversal symmetry), what consequences does that have on the terms in the qubit Hamiltonian after the Jordan-Wigner transformation?
 
-I ([Yuval](http://ysanders.github.io)) am not sure what a *complete* answer to this question would look like. However, the most obvious consequence seems to be that a Hamiltonian containing only nearest neighbour two-qubit terms could not
+The most obvious consequence seems to be that a Hamiltonian containing only nearest neighbour two-qubit terms could not
 contain cross-terms, i.e. of the form *X<sub>j</sub> Y<sub>j±1</sub>*.
 See discussion before Eq. (35) in Nielsen's note cited above.
-Sorry, I didn't really have time to do this question justice.
 
 ### Question 3
 
@@ -93,23 +92,15 @@ iv) time-reversal symmetry, and
 v) point-group symmetry for symmetric molecules.
 Which of these symmetries are conserved in a) UCC and b) QCC?
 
-I ([Yuval](http://ysanders.github.io)) simply do not have enough background
-in theoretical chemistry to do the calculation necessary, though I might be able to
-if I had an extra few days for this. Oh well. But I did watch one of
-[Artur Izmaylov's videos](https://youtu.be/sYJ5Ib-8k_8?t=810) on coupled cluster
-methods and it seems to me that all the symmetries would be conserved, which is why
+Based on [Artur Izmaylov's videos](https://youtu.be/sYJ5Ib-8k_8?t=810) on coupled cluster
+methods and it seems that all the symmetries would be conserved, which is why
 it is even possible to control the "algebraic explosion" by making such symmetries
 explicit.
 
-I did have a nice but brief conversation with [Lukas Konecny](https://scholar.google.com/citations?user=sxKTPdQAAAAJ&hl=en),
-who repeatedly and emphatically stressed to me that he knows very little about coupled cluster methods and works mostly on DFT approaches to relativistic systems.
-He had the intuition that all five symmetries should be preserved simply because we are dealing with a non-relativistic Hamiltonian and hence there would be no physical processes breaking any of these symmetries. I thought that was a good argument, so I'm
-"borrowing" it so that I don't have to figure out what calculation to do to back up what I'm saying (much less actually do that calculation).
+We suspect that all five symmetries should be preserved simply because we are dealing with a non-relativistic Hamiltonian and hence there would be no physical processes breaking any of these symmetries.
 
-As for qubit coupled cluster, I spent about an hour reading [this paper](https://doi.org/10.1021/acs.jctc.8b00932) (or, more accurately, [the arXiv version](https://arxiv.org/abs/1809.03827)) but I think I don't have enough background in theoretical chemistry to be able to come up with a good answer.
-[From this video](https://youtu.be/981jc3Xdgvc?t=890), it seems like all five symmetries can be broken, though.
+As for qubit coupled cluster, we reviewed [this paper](https://doi.org/10.1021/acs.jctc.8b00932) (or, more accurately, [the arXiv version](https://arxiv.org/abs/1809.03827)). [From this video](https://youtu.be/981jc3Xdgvc?t=890), it seems like all five symmetries can be broken, though.
 
-Sorry. I really appreciate how good the assignment is and I wish I had more time to do it justice.
 
 ### Question 3
 
@@ -121,9 +112,7 @@ We can do what Artur calls [symmetry projection](https://www.youtube.com/watch?v
 
 ### Question 1
 
-I didn't have time to write a properly typeset version of this, but [my](http://ysanders.github.io) lovely wife [Marika](http://www.mariakieferova.com) wanted to try this problem and came up with an [elegant calculation](./marika_calculation.pdf) that uses Lagrange multipliers. If we write 𝝈<sub>T</sub> to be the sum over *n* of 𝝈<sub>n</sub>, the optimal choice is *N<sub>n</sub>* = 𝝈<sub>n</sub> ⨉ *N*<sub>T</sub> / 𝝈<sub>T</sub>.
+If we write 𝝈<sub>T</sub> to be the sum over *n* of 𝝈<sub>n</sub>, the optimal choice is *N<sub>n</sub>* = 𝝈<sub>n</sub> ⨉ *N*<sub>T</sub> / 𝝈<sub>T</sub>.
 
-To my detriment, I probably wouldn't have thought of using Lagrange multipliers.
+[Calculation](./resources/marika_calculation.pdf).
 
-***
-I'm stopping here, I'm afraid. Again, I appreciate the assignment and I'm sad that I didn't have the chance to really do it justice. It's a very nice introduction to theoretical chemistry methods that I have been wanting for several years now. Much appreciated. *–Yuval*
