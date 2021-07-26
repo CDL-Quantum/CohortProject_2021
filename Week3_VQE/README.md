@@ -30,6 +30,12 @@ Strong interaction
     </tr>
 </table>
 
+## Answers to theoretical Questions:
+
+Which methods are variational?
+
+The Hartree-Fock, CISD & FCI methods are variational methods. The CCSD method is non-variational.
+
 #### Question 2
 We checked the separability of exact solving FCI and approximate methods HF, FCI and CCSD. In order to do that we placed two H2 molecules far from each other (20, 50 and 100 A) and compared the computes energy against twice the enrgy of a single H2. the difference of energy as a function of the bonds can be seen below.
 
