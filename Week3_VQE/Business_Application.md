@@ -1,3 +1,5 @@
+![CDL 2020 Cohort Project](img/threesome.png)
+
 # Quantum Cohort Project Business Application
 
 ## Step 1: Explain the technical problem you solved in this exercise
