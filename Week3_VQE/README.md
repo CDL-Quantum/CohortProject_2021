@@ -97,15 +97,6 @@ The table below shows the times that each computation has taken for the H2 molec
 ![times](./img/Task1_Qu3_plot1_times.png)
 
 
-## Answer to Theoretical Questions
-
-
-### Task 2
-
-#### Question 3
-Also, JW mapping requires O(N) qubit operations to simulate one electronic operation.
-JW mapping requires O(log(N)) qubit operations to simulate one electronic operation, i.e. electronic creation or annihilation operation can be simulated in O(log(N)) qubit operations. It is argued that the breaking point where BK definitely outperformed JW is at N=32. It is also argued that BK transformation frequently results in substantial reduction of gate count.
-
 ### Task 3
 
 #### Question 1
@@ -120,18 +111,7 @@ They are not only helpful, they are necessary. Symmetries correspond to conserva
 ### Question 3
 
 Symmetrization at every step of transformation.
-## Further Challenges:
-* How to obtain excited electronic states of the same or different symmetry?
-* Partitioning in the fermionic operator space.
-* Applying unitary transformations on the Hamiltonian.
-* Compress larger basis sets into smaller number of qubits.
 
 ## Business Application
-For each week, your team is asked to complete a Business Application. Questions you will be asked are:
-
-* Explain to a layperson the technical problem you solved in this exercise.
-* Explain or provide examples of the types of real-world problems this solution can solve.
-* Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved.
-* Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
 
 For more details refer to the [Business Application found here](./Business_Application.md)
