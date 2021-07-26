@@ -36,7 +36,7 @@ Second, in terms of market size, pharma spends some 15 percent of its sales on r
 Finally, the drug development process isn’t just expensive, it is also unreliable. Just as most movies or plays don’t turn out to be box-office hits, so most of those very expensive drugs fail at some stage of the development process – in fact, only four percent make it through. Quantum models will help to improve the odds – not just by modelling the drugs themselves, but by using methods such as quantum machine learning to better understand their interaction with the human body at every level. With quantum drug development, small molecules are just the start.
 
 
-## Step 4: Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language
+## Step 4: Video Pitch
 
 Research and development in the pharmaceutical industry is dominated by the big multinationals. The following companies earned revenues of over $40 billion in 2020: 
 Johnson & Johnson – $56.1bn
@@ -49,8 +49,6 @@ Sanofi – $40.46bn
 
 But there is also an ecosystem of small and medium-sized companies involved at various stages in the drug development pipeline. One advantage of in silico quantum modelling is that it will allow these smaller firms to accelerate their programs and compete with the industry behemoths.
 
-
-**Please store your video externally to the repo, and provide a link e.g. to Google Drive**
-https://drive.google.com/file/d/1-mDDw-R9x9uqQf6TwLwufyW-TbXYnKDj/view?usp=sharing
+[Link to Video](https://drive.google.com/file/d/1-mDDw-R9x9uqQf6TwLwufyW-TbXYnKDj/view?usp=sharing)
 
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
