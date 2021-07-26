@@ -96,19 +96,18 @@ The table below shows the times that each computation has taken for the H2 molec
 
 ![times](./img/Task1_Qu3_plot1_times.png)
 
-
-### Task 3
-
-#### Question 1
+Standard Hamiltonian symmetries are i) number of electrons ˆNe = ∑k ˆa†kˆak, ii) electron spin ˆS2, iii) electron spin projection ˆSz, iv) time-reversal symmetry, and v) point-group symmetry for
+symmetric molecules. Which of these symmetries are conserved in a) UCC and b) QCC ?
 
 UCC: conserves N, Sz, and S (requires symmetrization)
 QCC: can break any symmetries individually upon entanglement, but collective action of entanglers preserves symmetries (if one pays attention to it)
 
-#### Question 2
+Why symmetries are helpful for constructing a unitary operator which rotates the initial state
+| ̄0〉 to the eigenstate |Ψ〉?
 
 They are not only helpful, they are necessary. Symmetries correspond to conservation laws, and so by observing symmetries you automatically observe conservation of corresponding quantities.
 
-### Question 3
+What are the ways to restore symmetries if your unitary transformation break them?
 
 Symmetrization at every step of transformation.
 
