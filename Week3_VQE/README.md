@@ -9,6 +9,8 @@ Subsequently we were asked to compute similar curves for other molecules $H_4$, 
 
 The first task we were assigned with was to run PES calculations for *H*<sub>2</sub> and *H*<sub>2</sub>*O* molecules using popular quantum chemistry methods such Hartree-Fock (HF), Configuration Interaction Singles and Doubles (CISD), Coupled Cluster Singles and Doubles (CCSD), and Full Configuration Interaction (FCI), in the minimal STO-3G basis. Subsequently we were asked to compute similar curves for other molecules *H*<sub>4</sub>, *L**i**H*, *N*<sub>2</sub>, and *N* *H*<sub>3</sub>. 
 
+The first task we were assigned with was to run PES calculations for *H*<sub>2</sub> and *H*<sub>2</sub>*O* molecules using popular quantum chemistry methods such Hartree-Fock (HF), Configuration Interaction Singles and Doubles (CISD), Coupled Cluster Singles and Doubles (CCSD), and Full Configuration Interaction (FCI), in the minimal STO-3G basis. Subsequently we were asked to compute similar curves for other molecules *H*<sub>4</sub>, *L**i**H*, *N*<sub>2</sub>, and *N* *H*<sub>3</sub>.
+
 <center>
 <table>
         <tr>
