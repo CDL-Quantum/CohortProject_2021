@@ -1,11 +1,7 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
-## Project 3: VQE: Constructing potential energy surfaces for small molecules
+# Project 3: VQE: Constructing potential energy surfaces for small molecules
 
 This project will guide you through the state-of-the-art techniques for solving electronic structure problems on NISQ computers.
-
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week3_VQE/Instructions.pdf) to begin learning about your tasks for this week!
-
-**Please edit this markdown file directly with links to your completed tasks and challenges.**
 
 # [Task 1: Classical Methods](./notebooks/1_classical_methods.ipynb)
 
@@ -135,6 +131,12 @@ Fermionic excitation terms individually break this symmetry.
 However, we can easily recover it by taking linear combination of an excitation operator and its Hermitian conjugate.
 
 # [Task 4: Measurement](./notebooks/4_measurement.ipynb)
+
+### How many measurements should one do per fragment in the optimal splitting?
+
+The number of measurements per fragment should roughly be the inverse of the variance of the fragment.
+
+### How many measurements NT is needed to achieve 1 miliHartree estimator error for the qubit-wise commuting (QWC) and fully commuting (FC) partitionings in one of the model systems.
 
 # [Task 5: Quantum Circuits](./notebooks/5_quantum_circuits.ipynb)
 
