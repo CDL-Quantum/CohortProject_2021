@@ -27,7 +27,7 @@ CC scales polynomially in the system size.
 
 
 
-In the figures bellow we present the pontential energy surfaces (PESs) for the dissociation of H<sub>2</sub>, LiH, H<sub>2</sub>O and H<sub>4</sub> molecules using different methods. We left out CISD in the cases it didn't converge. We observe that CISD improves the PES over HF in all the cases under study. 
+In the figures bellow we present the pontential energy surfaces (PESs) for the dissociation of H<sub>2</sub>, LiH, H<sub>2</sub>O and H<sub>4</sub> molecules using different methods. We left out CISD in the cases it didn't converge. We observe that CCSD improves the PES over HF and is on top of FCI in all the cases under study. 
 |  |  | 
 | :---------: | :---------: |
 | ![Unsolved Graph](./resources/plots_task1/h2_dissociation.png)  | ![Unsolved Graph](./resources/plots_task1/h2o_dissociation.png) |
@@ -38,7 +38,7 @@ In the figures bellow we present the pontential energy surfaces (PESs) for the d
 
 There is another division between classical methods, it is based on so-called separability or size-consistency.   Simply speaking, if one investigates two molecular fragments (A and B) at a large distance from each other (∼100 ̊A) then the total electronic energy should be equalto the ![Sum of energies](https://latex.codecogs.com/gif.latex?%5Csum%20E_%7BA&plus;B%7D%3DE_%7BA%7D&plus;E_%7BB%7D), where the energy of each fragment (![E_a](https://latex.codecogs.com/gif.latex?E_%7BA%7D) or ![E_b](https://latex.codecogs.com/gif.latex?E_%7BB%7D)) can be obtained in a calculation that does not involve the other fragment.  If this condition is satisfied for a particular method, this method is separable or size-consistent.  Check separability of HF, CISD, and CCSD by taking 2 ![H_2](https://latex.codecogs.com/gif.latex?H_%7B2%7D) fragments at a large distance from each other and comparing the total energy with 2 energies of one ![H_2](https://latex.codecogs.com/gif.latex?H_%7B2%7D) molecule.  Explain your results.
 
-For the follwing calculations we used 0.7 a0 as the interatomic distance for the H2 molecule, and for the H4, we separeted each H2 fragment by 100 A (188.973 a0). 
+For the following calculations we used 0.7 a0 as the interatomic distance for the H2 molecule, and for the H4, we separeted each H2 fragment by 100 A (188.973 a0). 
 
 |  Method       | Energy  | Energy   | Energy  | 
 |--------|----------|----------|---------------|
@@ -57,10 +57,10 @@ For the follwing calculations we used 0.7 a0 as the interatomic distance for the
 
 
 For an infinitely stretched molecule we expect the energy to be the sum of the energies of the individual fragments. In the limit of infinite internuclear separation, the energy of H4 should equal twice the energy of the H2 molecule. Any discrepancy between these two energies would imply that the method is not size consistent. 
-We computed the energies for a planar H4 molecule when the separation between the two H2 fragments is as large as 100A (see table). The calculations were performed for a planar rectangular H4 geometry and we stretched the horizontal distance and left the vertical fixed to approx the equilibrium distance for H2 (0.7 a0).  The first rows in th etable correspond to energies computed using the PYSCF package and the last rows to energies computed with the tequila package.
+We computed the energies for a planar H4 molecule when the separation between the two H2 fragments is as large as 100A (see table). The calculations were performed for a planar rectangular H4 geometry and we stretched the horizontal distance and left the vertical fixed to approx the equilibrium distance for H2 (0.7 a0).  The first rows in the table correspond to energies computed using the PYSCF package and the last rows to energies computed with the tequila package.
 We observe that CCSD is size consistent but CISD isn't. That is also what is claimed in the literature.
 
-On the other hand we see that FCI is size consistent and HF as well as long as we use the restricted version of HF.
+On the other hand we see that FCI is size consistent and HF as well.
 
 
 ### Question #3 (Optional)
@@ -98,9 +98,10 @@ It has been claimed that Bravyi-Kitaev mapping is superior in all cases aside fr
 ### Question #2 
 
 What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
-Any mapping protocol should size consistent, meaning the N sites from the Fock space should be represented with n qubits. 
-Additionally given that electrons are fermions, the mapping should also follow a fermionic statistics. 
-Since the desired quantity is the energy <H>, the mapping should also be iso-spectra, meaning that the eigen values of the Hamiltonian in the qubit space are the same as in the Fermionic basis. 
+
+Any mapping protocol should be size consistent, meaning the N sites from the Fock space should be represented with n qubits. 
+Additionally given that electrons are fermions, the mapping should also follow a fermionic statistics. The Sz and ![](https://latex.codecogs.com/gif.latex?S%5E2) symmetries should be conserved aswell.
+Since the desired quantity is the energy <H> and eventually also the excitation energies, the mapping should also be iso-spectra, meaning that the eigen values of the Hamiltonian in the qubit space are the same as in the Fermionic basis. 
 
 ### Question #3 
  
@@ -118,7 +119,7 @@ The Fermion-to-qubic mapping must by a hermitian mapping, and satisfiy the anti 
  
  Since in the UCC method the unitary operators are constructed from fermionic operators before doing the WJ or BK transformation the fermionic symmetries such as particle number N, spin Sz and spin projection ![](https://latex.codecogs.com/gif.latex?S%5E2) are conserved. That's not the case for QCC where the unitaries are constructed in the qubit space. The QCC is more ressource efficient but needs extra care to ensure conservation of physical symmetries. This could be done by introducing constraints in the VQE minimization or discarding solutions in an error mitigation scheme like the one discussed in task 5. 
  Time-reversal is conserved in both techniques since the unitary oparators used in both are hermitian. In fact ensuring hermiticity of the unitaries in UCC is the reason why the exponential exponents are not sums, which makes the computation much harder.
- Regarding point-like symmetries of the symmetric molecules I would think that they could also be imposed with an error mitigation protocol by discarding solution of the wavefunction that violate them. But more easily they could probably be imposed at the level of the architecture, because probably they can help reduce degrees of freedom such as number of qubits or connections. I don't think UCC nor QCC ensure the conservation of these point-like symmetries.
+ Regarding point-like symmetries of the symmetric molecules I would think that they could also be imposed with an error mitigation protocol by discarding solution of the wavefunction that violate them. But more easily they could be imposed at the level of the architecture, because probably they can help reduce degrees of freedom such as number of qubits or connections. I don't think UCC nor QCC ensure the conservation of these point-like symmetries.
 
 ### Question #2 
  Why symmetries are helpful for constructing a unitary operator which rotates the initial state  ![init q state](https://latex.codecogs.com/gif.latex?%7C%20%5Cbar%7B0%7D%20%5Crangle) to the eigenstate  ![eigen state](https://latex.codecogs.com/gif.latex?%7C%20%5CPsi%20%5Crangle)?
@@ -129,7 +130,7 @@ The Fermion-to-qubic mapping must by a hermitian mapping, and satisfiy the anti 
 ### Question #3 
  What are the ways to restore symmetries if your unitary transformation break them?
  
- One way is to implement an error mitigation protocol like the one suggested in task 5 where the symmetries are enforced in the final wavefunction by discarding the measuremnets corresponding to contributions that violate the symmetry. One could also enforce the symmetry by introducing the variance of the symmetry operator in the minimization squeme of the VQE in the form of a Lagrangian multipliers (constraints). [ref] https://arxiv.org/abs/1806.00461.
+ One way is to implement an error mitigation protocol like the one suggested in task 5 where the symmetries are enforced in the final wavefunction by discarding the measuremnets corresponding to contributions that violate the symmetry. One could also enforce the symmetry by introducing the variance of the symmetry operator in the minimization squeme of the VQE with a Lagrangian multiplier (constraint). [ref] https://arxiv.org/abs/1806.00461.
  
 ## Step #4: Hamiltonian measurements
 
@@ -187,7 +188,7 @@ Following [Ref](https://doi.org/10.1021/acs.jctc.8b00943) and as suggested in th
 
  ![H into comm pieces](https://latex.codecogs.com/gif.latex?%5Clangle%5CPsi%7CH%7C%5CPsi%5Crangle%3D%20%5Clangle%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%5Crangle%20&plus;%5Clangle%5CPsi%7C%5Chat%7BB%7D%7C%5CPsi%5Crangle%20%3D%20%5Csum_n%20a_n%20%7C%5Clangle%20%5CPsi%7Cf_n%5Crangle%7C%5E2%20&plus;%20%5Csum_n%20b_n%20%7C%5Clangle%5CPsi%7Cg_n%5Crangle%7C%5E2)
 
-where A and B are unitaries that commute and n is the label of the measurement(sample). If the projector of the number of particles, ![prob N](https://latex.codecogs.com/gif.latex?P_N%3D%7CN%5Crangle%20%5Clangle%20N%7C), acting on ![f_n](https://latex.codecogs.com/gif.latex?f_n%28g_n%29) gives zero then we discard ![a_n](https://latex.codecogs.com/gif.latex?a_n%28b_n%29). Thus if  ![](https://latex.codecogs.com/gif.latex?P_N%7Cf_n%5Crangle%20%3D0) or ![](https://latex.codecogs.com/gif.latex?P_N%7Cg_n%5Crangle%20%3D0), then we get rid of the measurements ![](https://latex.codecogs.com/gif.latex?a_n/b_n) and re-compute ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5CPsi%7C%5Chat%7BH%7D%7C%5CPsi%5Crangle) without them. 
+where A and B are unitaries (actually Pauli words) that commute and n is the label of the measurement(sample). If the projector of the number of particles, ![prob N](https://latex.codecogs.com/gif.latex?P_N%3D%7CN%5Crangle%20%5Clangle%20N%7C), acting on ![f_n](https://latex.codecogs.com/gif.latex?f_n%28g_n%29) gives zero then we discard ![a_n](https://latex.codecogs.com/gif.latex?a_n%28b_n%29). Thus if  ![](https://latex.codecogs.com/gif.latex?P_N%7Cf_n%5Crangle%20%3D0) or ![](https://latex.codecogs.com/gif.latex?P_N%7Cg_n%5Crangle%20%3D0), then we get rid of the measurements ![](https://latex.codecogs.com/gif.latex?a_n/b_n) and re-compute ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5CPsi%7C%5Chat%7BH%7D%7C%5CPsi%5Crangle) without them. 
  
 We would need to perform the following tasks to achieve the goal:
  
@@ -204,7 +205,15 @@ We would need to perform the following tasks to achieve the goal:
   4)  Energy estimate from  ![](https://latex.codecogs.com/gif.latex?E%3D%20%5Clangle%20%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%20%5Crangle%20&plus;%20%5Clangle%20%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%20%5Crangle%3D%5Csum_m%20a_m%20%7C%5Clangle%20%5CPsi%7Cf_m%5Crangle%7C%5E2%20&plus;%20%5Csum_m%20b_n%20%7C%5Clangle%20%5CPsi%7Cg_m%5Crangle%7C%5E2) , were m<n because we have discarded some of the ![](https://latex.codecogs.com/gif.latex?a_m%2C%20b_m) due to violation of particle conservation.                                                                                                                                                                                                                                         
  How well does 3 approximate 2? How much does 4 improve over 3 (Did the error mitigation protocol improve the accuracy? )? 
   Same for the expectation number of the particle operator.
-                                                                                                                        
+             
+  #Question 2
+  
+  Can the error-mitigation protocol described in Ref. [14] be used for more complicated symmetries, like ˆS2?
+  
+  Yes but ![](https://latex.codecogs.com/gif.latex?S%5E2) is a longer Pauli word than the particle conservation operator so the error mitigation protocol would requires more resources.
+  
+
+  
                                                                                                                         
 ## Further challenges 
  
@@ -239,7 +248,19 @@ The electronic structure could be mapped into an Ising Hamiltonian that can be s
 ](https://arxiv.org/abs/1901.04715). One of the challenges of using this approach would be an algorithm for mapping the Hamiltonian in the Jordan-Wigner transformation to the 
 Ising model. There have been two main approaches, [arXiv:1706.00271](https://arxiv.org/abs/1706.00271) and [arXiv:1901.04715](https://arxiv.org/abs/1901.04715).
  
-## Business Application
+## Business-related questions 
+
+1. What other molecular properties one can obtain using VQE for the purpose of rational material and drug design?
+
+Excited state energies which are crucial for example to optimize orgalic LEDS or organic photovoltaics. They are also important to simulate spectroscopy experiments. Entanglement (static-correlation) is also hard (expensive to capture) with classical wavefunction techniques.
+
+2. What are the systems (molecules / materials) which are challenging for classical computing and whose modelling is valuable?
+
+Strongly-correlated systems were the interaction among the electrons plays a crucial role and the single particle picture breaks down. Examples : Wigner Crystals , tretched molecules, charge transfer excited states. Also emergent many-body phenomena such as superconductivity, superfluidity, wuantum phase transition, topological insulators.
+
+3. What businesses can benefit from more accurate electronic structure calculations ?
+
+Molecular electronics, artificial photosynthesis, drug design, nano technology, nano medicine, among others. 
 
 There are a few possible near term business applications that could make use the approach that was described above. Please refer to our [Business Application proposal](Business_Proposal.md) for further details.
 Please also watch our [short video](ref).
