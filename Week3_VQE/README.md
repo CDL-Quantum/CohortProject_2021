@@ -36,6 +36,17 @@ Which methods are variational?
 
 The Hartree-Fock, CISD & FCI methods are variational methods. The CCSD method is non-variational.
 
+Advantages of the Variational approach?
+
+- quite accurate if a good trial function is chosen
+- efficient (do not need full exact solution)
+
+Disadvantages?
+
+- Requires Hermition operators with a bounded spectrum (for example, the position operator does not have a bounded spectrum)
+- Need contraints to get excited states
+- Very innaccurate if you do not have a good trial solution
+
 #### Question 2
 We checked the separability of exact solving FCI and approximate methods HF, FCI and CCSD. In order to do that we placed two H2 molecules far from each other (20, 50 and 100 A) and compared the computes energy against twice the enrgy of a single H2. the difference of energy as a function of the bonds can be seen below.
 
