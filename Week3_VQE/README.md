@@ -363,10 +363,33 @@ the right wavefunction should be an eigenstate of a certain multi-qubit operator
 ----
 
 ## Further Challenges:
-* How to obtain excited electronic states of the same or different symmetry?
-* Partitioning in the fermionic operator space.
-* Applying unitary transformations on the Hamiltonian.
-* Compress larger basis sets into smaller number of qubits.
+
+#### Q5)
+What are alternatives to VQE for the electronic structure problem using quantum computers
+with shallow circuits without error-correction?
+
+#### Ans)
+Several methods of constructing effective ansatz have been proposed 
+to improve the VQE method.
+The results were reviewed in [Ref_VQE](https://arxiv.org/abs/2103.08505).
+Please see this reference for more details.
+* Chemistry-Inspired Ansatze
+1. Unitary Pair Coupled Cluster with Generalized Singles and Doubles Product Wave
+Functions
+2. Orbital Optimized UCC Ansatze
+3. Double Unitary Coupled Cluster (DUCC) Ansatze
+4. Quantum Subspace Expansion (QSE)
+5. Adaptive Derivative-Assembled Pseudo-Trotter Ansatz Variational Quantum
+Eigensolver (ADAPT-VQE)
+6. qubit-ADAPT-VQE
+
+* Hardware-Efficient Ansatzes
+1. Symmetry-Preserving State Preparation
+2. Qubit Coupled Cluster Method
+
+
+
+
 
 ## Business Application
 For each week, your team is asked to complete a Business Application. Questions you will be asked are:
