@@ -252,11 +252,11 @@ Ising model. There have been two main approaches, [arXiv:1706.00271](https://arx
 
 1. What other molecular properties one can obtain using VQE for the purpose of rational material and drug design?
 
-Excited state energies which are crucial for example to optimize orgalic LEDS or organic photovoltaics. They are also important to simulate spectroscopy experiments. Entanglement (static-correlation) is also hard (expensive to capture) with classical wavefunction techniques.
+Excited state energies which are crucial for example to optimize organic LEDS (OLEDS) or organic photovoltaics. Excitation energies are also necessary to simulate spectroscopy experiments. Entanglement (static-correlation) is also hard (expensive to capture) with classical wavefunction techniques. The study of entanglement in complex systems is one of the most interesting problems of our time.
 
 2. What are the systems (molecules / materials) which are challenging for classical computing and whose modelling is valuable?
 
-Strongly-correlated systems were the interaction among the electrons plays a crucial role and the single particle picture breaks down. Examples : Wigner Crystals , tretched molecules, charge transfer excited states. Also emergent many-body phenomena such as superconductivity, superfluidity, wuantum phase transition, topological insulators.
+Strongly-correlated systems were the interaction among the electrons plays a crucial role and the single particle picture breaks down. Examples : Wigner Crystals , stretched molecules, charge transfer excited states. Also emergent many-body phenomena such as superconductivity, superfluidity, wuantum phase transition, topological insulators.
 
 3. What businesses can benefit from more accurate electronic structure calculations ?
 
