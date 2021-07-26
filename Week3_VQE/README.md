@@ -58,8 +58,23 @@ Below is a plot of the log of the difference of PES between two H2 molecules inc
 
 ![PES siff](./img/Task1_Qu2_diff.png)
 
+## Answers to the Theoretical Questions
 
+What are the requirements for a function of qubit operators to be a valid mapping for the
+fermionic operators?
 
+You must tensor multiply pauli matrices of the previous qubits to ensure we keep the parity odd property of fermions.
+
+The electronic Hamiltonian is real (due to time-reversal symmetry), what consequences does
+that have on the terms in the qubit Hamiltonian after the Jordan-Wigner transformation?
+
+The qubit hamiltonian & electric hamiltonian are isospectral - they contain the same eigenvalues
+
+What are the cons and pros of the Bravyi-Kitaev transformation compared to the
+Jordan-Wigner transformations?
+
+Main difference in the locality of qubit Hamiltonians. Also, JW mapping requires O(N) qubit operations to simulate one electronic operation.
+JW mapping requires O(log(N)) qubit operations to simulate one electronic operation, i.e. electronic creation or annihilation operation can be simulated in O(log(N)) qubit operations. It is argued that the breaking point where BK definitely outperformed JW is at N=32. It is also argued that BK transformation frequently results in substantial reduction of gate count.
 
 
 #### Question 3
@@ -80,6 +95,9 @@ The graph belows shows the logarithm of the maximum inter basis difference of po
 The table below shows the times that each computation has taken for the H2 molecule, together with the precision matrix above, it can help to do a trade off between the time to compute and the precision needed.
 
 ![times](./img/Task1_Qu3_plot1_times.png)
+
+
+## Answer to Theoretical Questions
 
 
 ### Task 2
