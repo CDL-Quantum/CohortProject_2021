@@ -107,9 +107,13 @@ Why symmetries are helpful for constructing a unitary operator which rotates the
 
 They are not only helpful, they are necessary. Symmetries correspond to conservation laws, and so by observing symmetries you automatically observe conservation of corresponding quantities.
 
+They can also be used to reduce noise during measurements and add contraints for the expectation of the energy due to symmetry breaking.
+
 What are the ways to restore symmetries if your unitary transformation break them?
 
 Symmetrization at every step of transformation.
+
+Another option is to rotate the symmetry by applying unitary transformations (since you can't rotate the measurement device).
 
 ## Business Application
 
