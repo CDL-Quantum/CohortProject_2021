@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{hyperref}
+\begin{document}
+\noindent
+Our problem is to minimise $\sum_n \sigma_n^2/N_n$
+(the \emph{objective function}) subject to $\sum_n N_n = N_T$
+(the \emph{constraint function}).\footnote{%
+To simplify notation, we write $\sigma_n$ in place of $\sigma_{H_n}$.}
+We can do this using the method of \href{https://en.wikipedia.org/wiki/Lagrange_multiplier}{Lagrange multipliers}.
+First we define the Lagrangian function
+\begin{equation}
+  \mathcal{L} =
+  \underbrace{\sum_n \frac{\sigma_n^2}{N_n}}_{\mathrm{objective\ function}}
+  - \lambda \underbrace{\left( -N_T + \sum_n N_n \right)}_{\mathrm{constraint\ function}}.
+\end{equation}
+We then set the partial derivatives of $\mathcal{L}$ with respect to $N_n$ to be zero for each index choice $n$; i.e.
+\begin{equation}
+  \frac{\partial \mathcal{L}}{\partial N_n} = - \frac{\sigma_n^2}{N_n^2} + \lambda \equiv 0
+  \Longrightarrow N_n = \sigma_n/\sqrt{\lambda}.
+\end{equation}
+We then satisfy the constraint, which is to say we enforce $\frac{\partial \mathcal{L}}{\partial \lambda} = 0$. Thus we require
+\begin{equation}
+  \sum_n \frac{\sigma_n}{\sqrt{\lambda}} = N_T
+  \Longrightarrow \lambda = \left(\frac{\sigma_T}{N_T}\right)^2,
+\end{equation}
+where we define $\sigma_T := \sum_n \sigma_n$.
+Hence the Lagrangian function $\mathcal{L}$ is extremised when
+\begin{equation}
+   \frac{N_n}{N_T} = \frac{\sigma_n}{\sigma_T},
+\end{equation}
+which is to say that our optimal splitting would allocate 
+a fraction of measurements to outcome $n$ that is roughly equal to the ratio
+$\sigma_n/\sigma_T$. This makes sense: we want to allocate more measurements 
+to outcomes that are more uncertain.
+
+It is then easy to check that the choice $N_n = \sigma_n/\sigma_T \times N_T$
+satisfies Eq.~(3) from \texttt{Instructions.pdf}. Simply substitute our choice
+of $N_n$ into the objective function to find
+\begin{equation}
+  \sum_n \frac{\sigma_n^2}{N_n}
+  = \sum_n \sigma_n \times \frac{\sigma_T}{N_T}
+  = \frac{\sigma_T^2}{N_T}.
+\end{equation}
+In other words, our choice saturates the inequality of Eq.~(2) from \texttt{Instructions.pdf} and hence satisfies Eq.~(3)\footnote{%
+Eq.~(3) is probably a mistake. We suspect it should be the same as Eq.~(2) except with the inequality replaced with an equality.}.
+\end{document}

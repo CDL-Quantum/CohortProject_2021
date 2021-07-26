@@ -112,5 +112,5 @@ We can do what Artur calls [symmetry projection](https://www.youtube.com/watch?v
 
 ### Question 1
 
-Our [calculations](./resources/marika_calculation.pdf) show that if we write 𝝈<sub>T</sub> to be the sum over *n* of 𝝈<sub>n</sub>, the optimal choice is *N<sub>n</sub>* = 𝝈<sub>n</sub> ⨉ *N*<sub>T</sub> / 𝝈<sub>T</sub>.
+Our [calculations](./resources/step4q1.pdf) show that if we write 𝝈<sub>T</sub> to be the sum over *n* of 𝝈<sub>n</sub>, the optimal choice is *N<sub>n</sub>* = 𝝈<sub>n</sub> ⨉ *N*<sub>T</sub> / 𝝈<sub>T</sub>.
 
