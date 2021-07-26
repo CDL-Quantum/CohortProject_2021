@@ -38,13 +38,14 @@ Finally, the drug development process isn’t just expensive, it is also unrelia
 ## Step 4: Video Pitch
 
 Research and development in the pharmaceutical industry is dominated by the big multinationals. The following companies earned revenues of over $40 billion in 2020: 
-Johnson & Johnson – $56.1bn
-Pfizer – $51.75bn
-Roche – $49.23bn
-Novartis – $47.45bn
-Merck & Co. – $46.84bn
-GlaxoSmithKline – $44.27bn
-Sanofi – $40.46bn
+
+- Johnson & Johnson – $56.1bn
+- Pfizer – $51.75bn
+- Roche – $49.23bn
+- Novartis – $47.45bn
+- Merck & Co. – $46.84bn
+- GlaxoSmithKline – $44.27bn
+- Sanofi – $40.46bn
 
 But there is also an ecosystem of small and medium-sized companies involved at various stages in the drug development pipeline. One advantage of in silico quantum modelling is that it will allow these smaller firms to accelerate their programs and compete with the industry behemoths.
 
