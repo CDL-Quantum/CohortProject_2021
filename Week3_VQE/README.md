@@ -62,8 +62,7 @@ On the other hand we see that FCI is size consistent and HF as well as long as w
 1) accuracy  of  accounting  for  many-body  effects  beyondthe Hartree-Fock method (electronic correlation)
  
 2) accuracy of representation of one-electronstates,  or  convergence  with  respect  to  the  one-electron  basis  size.   
-3) 
-Convergence  along  the  firstcoordinate  can  be  illustrated  by  monitoring  reduction  of  the  energy  deviations  from  the  Full  CI answer in a particular basis set for a series of increasingly accurate approaches, e.g.  HF, CCSD,CCSD(T), CCSDT. Convergences along the second coordinate requires the basis set extension from STO3G to a series like cc-pVDZ, cc-pVTZ, cc-pVQZ, cc-pV5Z. 
+3) Convergence  along  the  firstcoordinate  can  be  illustrated  by  monitoring  reduction  of  the  energy  deviations  from  the  Full  CI answer in a particular basis set for a series of increasingly accurate approaches, e.g.  HF, CCSD,CCSD(T), CCSDT. Convergences along the second coordinate requires the basis set extension from STO3G to a series like cc-pVDZ, cc-pVTZ, cc-pVQZ, cc-pV5Z. 
 
 Explore for a small system like H<sub>2</sub> both  convergences.   
 Which  energies  should  be  expected  to  be  closer  to  experimentally  measure dones?
@@ -78,18 +77,13 @@ Below we show the ground state energy of H2 computed with different wavefunction
 
 1.  What are the cons and pros of the Bravyi-Kitaev transformation compared to the Jordan-Wigner transformations?
 
-In the Jordan-Wigner transformation a single fermionic creation or annihilation operator is represented by O(n) qubit operations while in the Bravyi-Kitaev transformation only O(log n) qubit operations are required, thus 
-the Bravyi-Kitaev transformation is a more compact one, i.e. a lower number of gates are needed in the quantum circuit. 
+In the Jordan-Wigner transformation a single fermionic creation or annihilation operator is represented by O(n) qubit operations while in the Bravyi-Kitaev transformation only O(log n) qubit operations are required, thus the Bravyi-Kitaev transformation is a more compact one, i.e. a lower number of gates are needed in the quantum circuit. 
 Frequently, the gate count reduction is particularly large in the number of expensive entangling gates required [ref "A comparison of the Bravyi-Kitaev and Jordan-Wigner transformations for the quantum simulation of quantum chemistry" ](https://arxiv.org/abs/1812.02233 ).
 Such a reduction is crucial in the NISQ era. 
 
-In order to simulate fermionic operators with qubits we need the information on the
-occupation of the target orbital, and the information on the parity of the set of orbitals with index less than
-the target orbital. 
-When using the Jordan-Wigner transformation and its associated occupation basis the occupation information is stored locally but the parity information is non-local. In the case of The Bravyi-Kitaev transformation and basis  the locality of the occupation information and
-and of the parity information are balanced and this fact results in an improved simulation efficiency.
-It has been claimed that Bravyi-Kitaev mapping is superior in all cases aside from
-the lexicographic ordering. Ultimately the comparison between the two methods should be done in a case by case basis.
+In order to simulate fermionic operators with qubits we need the information on the occupation of the target orbital, and the information on the parity of the set of orbitals with index less than the target orbital. 
+When using the Jordan-Wigner transformation and its associated occupation basis the occupation information is stored locally but the parity information is non-local. In the case of The Bravyi-Kitaev transformation and basis the locality of the occupation information and of the parity information are balanced and this fact results in an improved simulation efficiency.
+It has been claimed that Bravyi-Kitaev mapping is superior in all cases aside from the lexicographic ordering. Ultimately the comparison between the two methods should be done in a case by case basis.
 
 2. What are the requirements for a function of qubit operators to be a valid mapping for the fermionic operators?
 Any mapping protocol should size consistent, meaning the N sites from the Fock space should be represented with n qubits. 
@@ -97,10 +91,7 @@ Additionally given that electrons are fermions, the mapping should also follow a
 Since the desired quantity is the energy <H>, the mapping should also be iso-spectra, meaning that the eigen values of the Hamiltonian in the qubit space are the same as in the Fermionic basis. 
 
 3. The electronic Hamiltonian is real (due to time-reversal symmetry), what consequences does that have on the terms in the qubit Hamiltonian after the Jordan-Wigner transformation?
- All terms need to be hermitian.
- 
-*(how to ensure JW creates a hermitian mapping)
-(since H is hermitian means all we should only have quadratic terms? (not sure) but is the only way to have a hermitian operator)*
+The Fermion-to-qubic mapping must by a hermitian mapping, and satisfiy the anti commuting properties of fermionic operators.
 
 
 # Step #3: Unitary transformations
@@ -122,8 +113,33 @@ Since the desired quantity is the energy <H>, the mapping should also be iso-spe
  One way is to implement an error mitigation protocol like the one suggested in task 5 where the symmetries are enforced in the final wavefunction by discarding the measuremnets corresponding to contributions that violate the symmetry. One could also enforce the symmetry by introducing the variance of the symmetry operator in the minimization squeme of the VQE in the form of a Lagrangian multipliers (constraints). [ref] https://arxiv.org/abs/1806.00461.
  
 # Step #4: Hamiltonian measurements
+
+1. The expectation value of ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5Chat%7BH%7D%5Crangle) is the sum of the expectation values of each term in the Hamiltonian,
+
+ ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5Chat%7BH%7D%5Crangle%20%3D%20%5Csum_n%20%5Clangle%20%5Chat%7BH%7D_n%5Crangle%20%3D%20%5Csum_n%20h_n%20%5Clangle%20%5Chat%7BO%7D_n%5Crangle)
+ 
+ where ![](https://latex.codecogs.com/gif.latex?h_n) are all coefficients of H, and ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5Chat%7BO%7D_n%5Crangle) are the tensor products of Pauli matrices obtained by transforming H with the Jordan-Wigner transformation.
+
+For each *n* term, the precision ![](https://latex.codecogs.com/gif.latex?%5Cepsilon_n) is,
+
+![](https://latex.codecogs.com/gif.latex?%5Cepsilon_n%5E2%20%3D%20%5Cfrac%7B%7Ch_n%7C%5E2%5Csigma%5E2%28%5Clangle%20%5Chat%7BO%7D_n%5Crangle%29%7D%7BN_n%7D)
+ 
+where ![](https://latex.codecogs.com/gif.latex?%5Csigma%5E2%28%5Clangle%20%5Chat%7BO%7D_n%5Crangle%29) are the variance of the expectation value for each fragment, and ![](https://latex.codecogs.com/gif.latex?N_n) is the number of samples/measurements used to estimate each fragment.
+ 
+Since the samples for each fragment are independet of each other, and that ![](https://latex.codecogs.com/gif.latex?%5Csigma%5E2%28%5Clangle%20%5Chat%7BO%7D_n%5Crangle%29)  depends on  ![](https://latex.codecogs.com/gif.latex?%5Clangle%20%5Chat%7BO%7D_n%5Crangle) which are Pauli matrices, and the upper-bouded value of ![](https://latex.codecogs.com/gif.latex?%5Csigma%5E2%28%5Clangle%20%5Chat%7BO%7D_n%5Crangle%29) is 1. 
+ We can argue that, ![](https://latex.codecogs.com/gif.latex?%5Cepsilon%5E2%20%5Capprox%20%5Csum_n%20%7Ch_n%7C%5E2/N_n). 
+ In order to minimize the global precision ![](https://latex.codecogs.com/gif.latex?%5Cepsilon) we could set the number of measurmentes per term proportional to each fragment, ![](https://latex.codecogs.com/gif.latex?%7Ch_n%7C%20%5Cpropto%20N_n). Leading to,
+ 
+ ![](https://latex.codecogs.com/gif.latex?%5Cepsilon%5E2%20%5Cleq%20%5Cfrac%7B%5Csum_n%20%7Ch_n%7C%5E2%7D%7BN_T%7D)
+ 
+ Fore more details please refer to [Phys. Rev. A **92**, 042303 (2015)](https://doi.org/10.1103/PhysRevA.92.042303)
  
  
+2. We can estimate the number of samples that are required for a target precision using,
+![](https://latex.codecogs.com/gif.latex?%5Cepsilon%5E2%20%5Cleq%20%5Cfrac%7B%28%5Csum_n%7Ch_n%7C%29%5E2%7D%7BN_T%7D)
+
+Using H2 with an STO-3G basis as an example, and for a ![](https://latex.codecogs.com/gif.latex?%5Cepsilon%20%3D%2010%5E%7B-3%7D%5Ctext%7BHa%7D), we found that, ![](https://latex.codecogs.com/gif.latex?%5Csum_n%7Ch_n%7C%20%5Capprox%200.513). 
+ Meaning that ![](https://latex.codecogs.com/gif.latex?N_T%20%5Capprox%20260000).  
  
 # Step #5: Use   of  quantum   hardware
  First we carry out the entire VQE optimization procedure by optimizing amplitudes of step 3 unitaries. Given the entanglers and their amplitudes found in Step 3, we find the corresponding representation of these operators in terms of elementary gates and verify that the expectation value is near the ground state energy. We have done this by running IBM Quantum Experience (ibmq) with a backend simulator. We found a 1.856 % of difference.
@@ -133,12 +149,12 @@ Since the desired quantity is the energy <H>, the mapping should also be iso-spe
 |   -0.9486411121761   |   -0.930076203543293   |  1.856%  | 
  
 Additional  questions:
-1) Implement an error-mitigation protocol based on removing measurement results correspond- ing to a wrong number of electrons, which is described in Ref. [14](see Sec. 3.4. Post-processing Procedure). How diﬀerent are the results of simulations with and without error-mitigation?
+1) Implement an error-mitigation protocol based on removing measurement results correspond- ing to a wrong number of electrons, which is described in [Ref](https://doi.org/10.1021/acs.jctc.8b00943)(see Sec. 3.4. Post-processing Procedure). How diﬀerent are the results of simulations with and without error-mitigation?
  
 Error mitigation protocol:
 
 Here we want to correct for violations of the particle conservation number introduced by QCC.
-Following ref[14] as suggested in the instructions we understand that what needs to be done is to identify solutions that violate this symmetry and discard them.
+Following [Ref](https://doi.org/10.1021/acs.jctc.8b00943) and as suggested in the instructions, we understand that what needs to be done is to identify solutions that violate this symmetry and discard them.
 
  Given the decomposition of the total H into commutative pieces:
 
@@ -154,7 +170,7 @@ We would need to perform the following tasks to achieve the goal:
 3. Simulate ![](https://latex.codecogs.com/gif.latex?a_n) ![](https://latex.codecogs.com/gif.latex?%7C%5Clangle%20%5CPsi%7Cf_n%20%5Crangle%7C%5E2) and   ![](https://latex.codecogs.com/gif.latex?%7C%5Clangle%20%5CPsi%7Cg_n%20%5Crangle%7C%5E2) and for each sample n compute ![](https://latex.codecogs.com/gif.latex?P_N%7Cf_n%5Crangle%20%3D0) and ![](https://latex.codecogs.com/gif.latex?P_N%7Cg_n%5Crangle). If  ![](https://latex.codecogs.com/gif.latex?P_N%7Cf_n%5Crangle%20%3D0) ![](https://latex.codecogs.com/gif.latex?%28P_N%7Cg_n%5Crangle%20%3D0%29) discard  ![](https://latex.codecogs.com/gif.latex?a_n%28b_n%29). We supose this simulation could be done in similar manner as we did for the full Hamiltonian using ibmq and somehow output the outcome of each sample. But we haven't been able to complte this task.
  
 4. Compare 
- 1) Energy estimate from  !()[https://latex.codecogs.com/gif.latex?E%20%3D%20%5Clangle%20%5CPsi%7C%5Chat%7BH%7D%7C%5CPsi%20%5Crangle]  computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
+ 1) Energy estimate from  ![](https://latex.codecogs.com/gif.latex?E%20%3D%20%5Clangle%20%5CPsi%7C%5Chat%7BH%7D%7C%5CPsi%20%5Crangle)  computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
   2) Energy estimate from  E computed in first part of task 5 (see above) from simulation in ibmq(either simulator or real q hardware).
  3)  Energy estimate from  ![](https://latex.codecogs.com/gif.latex?E%20%3D%20%5Clangle%20%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%5Crangle%20&plus;%20%5Clangle%20%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%20%5Crangle), were A and B were computed in task 4 using the QCC method. 
  4)  Energy estimate from  ![](https://latex.codecogs.com/gif.latex?E%3D%20%5Clangle%20%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%20%5Crangle%20&plus;%20%5Clangle%20%5CPsi%7C%5Chat%7BA%7D%7C%5CPsi%20%5Crangle%3D%5Csum_m%20a_m%20%7C%5Clangle%20%5CPsi%7Cf_m%5Crangle%7C%5E2%20&plus;%20%5Csum_m%20b_n%20%7C%5Clangle%20%5CPsi%7Cg_m%5Crangle%7C%5E2) , were m<n because we have discarded some of the ![](https://latex.codecogs.com/gif.latex?a_m%2C%20b_m) due to violation of particle conservation.                                                                                                                     
