@@ -2,7 +2,7 @@
 # Using Vibrational Excitations to Separate Molecules
 
 <p align="center">
-  <img height=250 width=300 src="https://lh3.googleusercontent.com/proxy/VR-QHyYQf8z2JKChe0SMfZuBj0BZBRDEQh1sOK8vPVJqGLBBKLVM0GIzGSHTvcvshWPO0chq3Jx1jABJ_LxownQAnJ7a6C-8QrSS">
+  <img height=250 width=320 src="https://lh3.googleusercontent.com/proxy/VR-QHyYQf8z2JKChe0SMfZuBj0BZBRDEQh1sOK8vPVJqGLBBKLVM0GIzGSHTvcvshWPO0chq3Jx1jABJ_LxownQAnJ7a6C-8QrSS">
  </p> 
 
 
@@ -18,7 +18,7 @@ Our idea starts by putting the CH<sub>4</sub> molecule in the fixed and symmetri
 
 <img src = "./business_proposal/ch4_dissociation.png"> </img>
 
-In principle, our methods can be applied to any molecule, but we are limited by the number of qubits for some systems. In the case of a CH<sub>4</sub> molecule, we have run the following code using that produces the Hamiltonian of the molecule and the amount of qubits required for the VQE.
+In principle, our methods can be applied to any molecule, but we are limited by the number of qubits for some systems. In the case of a CH<sub>4</sub> molecule, we have run the following [PennyLane](https://pennylane.ai/) code using that produces the Hamiltonian of the molecule and the amount of qubits required for the VQE.
 
 ```py
 symbols = ["C", "H", "H", "H", "H"]
@@ -40,6 +40,6 @@ Unfortunately, we do not have access to the Quantum Computer with 18 qubits, how
 However, we can also utilize a faster approach. We can use VQE to calculate the lowest energy level of the excited electronic state of the CH<sub>4</sub> molecule and simply subtract it from the lowest energy level of it's ground electronic state. The difference will be proportional to the amount of light that needs to be applied to break the bond between the top hydrogen molecule and the rest of the CH<sub>4</sub> molecular structure.
 
 ## Business Pitch
+We have found a revolutionary way of severing chemical bonds in the methane molecule. For example, our innovative idea enables us to transform a gasous methane molecule into the radical CH<sub>3</sub> molecule. Our method gives an exact amount of light necessary to break down the methane molecule. This is particularly useful, because of the explosive nature of methane, breaking it down to an unstable methyl radical CH<sub>3</sub> will eliminate the potential harm of CH<sub>4</sub>. Methyl radical is a strong oxidant and reductant agent, that is quite corrosive for metals, but it is not particuraly useful. However, we aimed only to show a proof of concept. 
 
-We have found a revolutionary way of severing chemical bonds in the methane molecule. For example, our innovative idea enables us to transform a gasous methane molecule into the radical CH<sub>3</sub> molecule. 
-
+We believe that breaking down molecules in this cost efficient manner can be used in wide range of commercial applications. More importantly, we believe that finding out vibrational excitations of molecules has important applications in the field of resource finding. For example, we can apply this method to find underground water reservoirs, which will be a crucial tool in combating water shortage. Looking into the future, this technology will enable a scan of asteroids that might carry water within their shell. Theoretically, the only limit this technology has is the number of qubits, so with a sufficiently powerful quantum device we can also apply it to find even more complex materials like petroleum. This can be a game changer for the energy companies, who are always looking for new oil sources to develop.  
