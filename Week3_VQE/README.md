@@ -45,17 +45,8 @@ Fermion-qubit mapping schemes can be broken into two pieces: first, to map occup
 
 
 
-### Unitary transformations
-### Hamiltonian measurements
-### Use of quantum hardware
-
-
-
-### Business Application
-
-For more details refer to our [Business Application found here](./Business_Application.md)
-
 ## References
 
 https://cccbdb.nist.gov/diatomicexpbondx.asp
+
 Romero et al. *Strategies for quantum computing molecular energies using the unitary coupled cluster ansatz* (2018). arXiv:1701.02691
