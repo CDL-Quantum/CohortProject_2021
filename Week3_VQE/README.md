@@ -108,9 +108,7 @@ Symmetrization at every step of transformation.
 
 Another option is to rotate the symmetry by applying unitary transformations (since you can't rotate the measurement device).
 
-#### Question 5
-
-## Simulation on a Quantum Computer
+## Task 5: Simulation on a Quantum Computer
 
 The following plots are taken from the IBM quantum website and are the result of multiple simulations on IBM's quantum computer (we used ibmq_bogata)
 
