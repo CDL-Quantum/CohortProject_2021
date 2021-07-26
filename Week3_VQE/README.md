@@ -1,11 +1,4 @@
-![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 3: VQE: Constructing potential energy surfaces for small molecules
-
-This project will guide you through the state-of-the-art techniques for solving electronic structure problems on NISQ computers.
-
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week3_VQE/Instructions.pdf) to begin learning about your tasks for this week!
-
-**Please edit this markdown file directly with links to your completed tasks and challenges.**
 
 ## Tasks 
 
@@ -118,3 +111,5 @@ Another option is to rotate the symmetry by applying unitary transformations (si
 ## Business Application
 
 For more details refer to the [Business Application found here](./Business_Application.md)
+
+![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
