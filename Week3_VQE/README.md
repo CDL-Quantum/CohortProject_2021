@@ -25,8 +25,6 @@ The scalability of post-Hartree Fock (HF) methods, such as CISD and FCI, is the 
 A non-variational method that can improve the accuracy without increasing substantially the computational cost is Coupled Clusters Single Doubles (CCSD), which is a truncated version of Coupled Cluster (CC) theory. In the CC theory, the improvement of the wave function is through the application of the exponential of cluster operators  to the HF wave function, ![CC_angle](https://latex.codecogs.com/gif.latex?%7C%20CC%20%5Crangle%20%3D%20e%5E%7BT%7D%7C%20HF%20%5Crangle) .
 CC scales polynomially in the system size.
 
-
-
 In the figures bellow we present the pontential energy surfaces (PESs) for the dissociation of H<sub>2</sub>, LiH, H<sub>2</sub>O and H<sub>4</sub> molecules using different methods. We left out CISD in the cases it didn't converge. We observe that CCSD improves the PES over HF and is on top of FCI in all the cases under study. 
 |  |  | 
 | :---------: | :---------: |
@@ -47,13 +45,14 @@ For the following calculations we used 0.7 a0 as the interatomic distance for th
 |  CCSD  | -1.1362 | -2.2723  | 2.22-14     |  
 |  CISD  | -1.1362  | -2.2720 | 0.000404       |
 |   FCI  |  -1.1362 | -2.2724  |  2.975E-14     | 
+
+|  Method       | Energy  | Energy   | Energy  | 
 |--------|----------|----------|---------------|
-| platform: tequila||||
+| platform: tequila| H<sub>2</sub> [Ha] | H<sub>4</sub> [Ha]  | H<sub>4</sub> -2 * H<sub>2</sub> [Ha] | 
 |  RHF   | --1.1173 |-2.2347  | 3.15 E-14      | 
 |  CCSD  | -1.1362 | -2.2724  | 1.78 E-14     |  
 |  CISD  | -1.1362  | -2.2720 | 0.000404       |
 |   FCI  |  -1.1362 | -2.2723  |  2.75E-14     | 
-|--------|----------|----------|---------------|
 
 
 For an infinitely stretched molecule we expect the energy to be the sum of the energies of the individual fragments. In the limit of infinite internuclear separation, the energy of H4 should equal twice the energy of the H2 molecule. Any discrepancy between these two energies would imply that the method is not size consistent. 
@@ -102,7 +101,7 @@ What are the requirements for a function of qubit operators to be a valid mappin
 Any mapping protocol should be size consistent, meaning the N sites from the Fock space should be represented with n qubits. 
 Additionally given that electrons are fermions, the mapping should also follow a fermionic statistics. The Sz and ![](https://latex.codecogs.com/gif.latex?S%5E2) symmetries should be conserved aswell.
 Since the desired quantity is the energy <H> and eventually also the excitation energies, the mapping should also be iso-spectra, meaning that the eigen values of the Hamiltonian in the qubit space are the same as in the Fermionic basis. 
-
+  
 ### Question #3 
  
  The electronic Hamiltonian is real (due to time-reversal symmetry), what consequences does that have on the terms in the qubit Hamiltonian after the Jordan-Wigner transformation?
@@ -263,7 +262,7 @@ Strongly-correlated systems were the interaction among the electrons plays a cru
 Molecular electronics, artificial photosynthesis, drug design, nano technology, nano medicine, among others. 
 
 There are a few possible near term business applications that could make use the approach that was described above. Please refer to our [Business Application proposal](Business_Proposal.md) for further details.
-Please also watch our [short video](ref).
+Please also watch our [short video](https://drive.google.com/file/d/1lP_yjOS-D1rl5nvlhuY2sNSCKFcMMpSU/view?usp=sharing).
 
 
  
