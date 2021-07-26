@@ -1,14 +1,15 @@
 ![CDL 2020 Cohort Project](../figures/CDL_logo.jpg)
 # Using Vibrational Excitations to Separate Molecules
 
-<p align="center">
-  <img height=250 width=320 src="https://lh3.googleusercontent.com/proxy/VR-QHyYQf8z2JKChe0SMfZuBj0BZBRDEQh1sOK8vPVJqGLBBKLVM0GIzGSHTvcvshWPO0chq3Jx1jABJ_LxownQAnJ7a6C-8QrSS">
- </p> 
 
+<p align="center"><img src="./resources/sqism_logo.png"</img></p>
 
 ## Introduction
 
-Q is specializing in using quantum technology for modelling vibrational excitations in the molecules. Our technology can have tremendous effect on variety of fields such as optics, ecology and drug design. For the purposes of this presentation we will focus on how knowing molecular vibrations is going to help separate  molecule of methane CH<sub>4</sub> molecule into methyl radical CH<sub>3</sub>. We use classical methods to find the energy minimum of the ground state of a molecule and Variational Quantum Eigensolver to find the energy of an excited state at the ground state minimum. The difference between these variables is proportional to the amount of light required to separate single hydrogen molecule from the remaining CH<sub>3</sub> molecule. 
+<b>sqism</b> is specializing in using quantum technology for modelling vibrational excitations in the molecules. Our technology can have tremendous effect on variety of fields such as optics, ecology and drug design. For the purposes of this presentation we will focus on how knowing molecular vibrations is going to help separate  molecule of methane CH<sub>4</sub> molecule into methyl radical CH<sub>3</sub>. We use classical methods to find the energy minimum of the ground state of a molecule and Variational Quantum Eigensolver to find the energy of an excited state at the ground state minimum. The difference between these variables is proportional to the amount of light required to separate single hydrogen molecule from the remaining CH<sub>3</sub> molecule. 
+<p align="center">
+  <img height=250 width=320 src="https://lh3.googleusercontent.com/proxy/VR-QHyYQf8z2JKChe0SMfZuBj0BZBRDEQh1sOK8vPVJqGLBBKLVM0GIzGSHTvcvshWPO0chq3Jx1jABJ_LxownQAnJ7a6C-8QrSS">
+ </p> 
 
 ## Technical Description
 
