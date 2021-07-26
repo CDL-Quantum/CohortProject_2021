@@ -23,7 +23,6 @@ An example is the portfolio optimization problem in finance. The aim here is to 
 
 While portfolio optimization is considered to be a key application of VQEs in finance, it should be noted that portfolio selection cannot be reduced to a straightforward optimization problem in this way. The reason is that the returns and covariances are not well-defined or stable quantities, but depend on the time period over which they are measured; and of course their future values are unknown. However the quantum approach will still be attractive to some financial organisations who currently use classical portfolio optimization techniques, and could serve as a stepping stone to the adoption of non-classical algorithms in finance.
 
-
 ## Step 3: Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved
 Our business model is applying quantum models to small-molecule drug development. In their quest to identify promising new drug candidates, pharmaceutical firms usually have to screen hundreds of thousands of compounds to select for desired properties. They would like to accelerate this process by designing and testing drugs on the computer, but even small molecules test the limits of conventional devices. Which is where quantum comes in.
 
