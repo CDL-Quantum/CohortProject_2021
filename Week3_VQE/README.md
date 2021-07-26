@@ -30,7 +30,7 @@ CC scales polynomially in the system size.
 In the figures bellow we present the pontential energy surfaces (PESs) for the dissociation of H<sub>2</sub>, LiH, H<sub>2</sub>O and H<sub>4</sub> molecules using different methods. We left out CISD in the cases it didn't converge. We observe that CCSD improves the PES over HF and is on top of FCI in all the cases under study. 
 |  |  | 
 | :---------: | :---------: |
-| ![Unsolved Graph](./resources/plots_task1/h2_dissociation.png)  | ![Unsolved Graph](./resources/plots_task1/h2o_dissociation.png) |
+| ![Unsolved Graph](./resources/plots_task1/h2_dissociation_fixed.png)  | ![Unsolved Graph](./resources/plots_task1/h2o_dissociation.png) |
 | ![Unsolved Graph](./resources/plots_task1/lih_dissociation.png) | ![Unsolved Graph](./resources/plots_task1/h4_dissociation.png) |
 
 
