@@ -42,6 +42,6 @@ Potential customers can be quite broadly identified in the pharmaceutical indust
 
 ## Video explaining the value proposition of your innovation to this potential customer in non-technical language
 
-![Cohort project week3](https://drive.google.com/file/d/1WSJwyxpYl1l1R0a4xrXIE75CK43yHqbT/view?usp=sharing)
+[Cohort project week3](https://drive.google.com/file/d/1WSJwyxpYl1l1R0a4xrXIE75CK43yHqbT/view?usp=sharing)
 
 **Please store your video externally to the repo, and provide a link e.g. to Google Drive**
