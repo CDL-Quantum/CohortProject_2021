@@ -58,17 +58,26 @@ def get_molecular_data(mol, geometry, xyz_format=False):
     '''
     Generate the molecular data of the specified molecule
     '''
-    if mol == 'h2':
+    if mol[0] == 'h2':
         mol_data = [
             ['H', [0, 0, 0]],
             ['H', [0, 0, geometry]]
         ]
-    elif mol == 'lih':
+        
+    elif mol[0]== 'h2farh2':
+        mol_data = [
+            ['H', [0, 0, 0]],
+            ['H', [0, 0, geometry]],
+            ['H', [0, 0, mol[1] + geometry]],
+            ['H', [0, 0, mol[1] + 2*geometry]]
+        ]
+        
+    elif mol[0] == 'lih':
         mol_data = [
             ['Li', [0, 0, 0]],
             ['H', [0, 0, geometry]]
         ]
-    elif mol == 'h2o':
+    elif mol[0] == 'h2o':
         # Giving symmetrically stretch H2O. ∠HOH = 107.6°
         # Geometry is distance between H-O
         angle = 107.6 / 2
@@ -80,19 +89,19 @@ def get_molecular_data(mol, geometry, xyz_format=False):
             ['H', [-x, y, 0]],
             ['H', [x, y, 0]]
         ]
-    elif mol == 'n2':
+    elif mol[0] == 'n2':
         mol_data = [
             ['N', [0, 0, 0]],
             ['N', [0, 0, geometry]]
         ]
-    elif mol == 'h4':
+    elif mol[0] == 'h4':
         mol_data = [
             ['H', [0, 0, 0]],
             ['H', [0, 0, geometry]],
             ['H', [0, geometry, 0]],
             ['H', [0, geometry, geometry]]
         ]
-    elif mol == 'nh3':
+    elif mol[0] == 'nh3':
         bondAngle = 107
         bondAngle = math.radians(bondAngle)
         cos = math.cos(bondAngle)
@@ -109,7 +118,7 @@ def get_molecular_data(mol, geometry, xyz_format=False):
             ]
 
     else:
-        raise(ValueError(mol, 'Unknown moleucles given'))
+        raise(ValueError(mol, 'Unknown molecules given'))
 
     if xyz_format:
         return convert_mol_data_to_xyz_format(mol_data)
@@ -303,7 +312,7 @@ def get_qwc_group(H : QubitOperator):
         qwc_list_idx += 1
     return qwc_list
 
-def obtain_PES(molecule, bond_lengths, basis, method):
+def obtain_PES(molecule, bond_lengths, basis, method,verbose=False):
 
     if method.lower() not in ['ccsd', 'cisd', 'fci', 'hf']:
         raise(ValueError("Method not recognized, implemented methods are 'ccsd', 'cisd', 'fci', 'hf'."))
@@ -327,8 +336,9 @@ def obtain_PES(molecule, bond_lengths, basis, method):
                     result = mol_data.compute_energy('detci', options={"detci__ex_level": 2})
                 else:
                     result = mol_data.compute_energy(method)
-
-                print("E = {} Eh".format(result))
+                
+                if verbose:
+                    print("E = {} Eh".format(result))
 
                 energies[i] = result
                 obtained_e = True
