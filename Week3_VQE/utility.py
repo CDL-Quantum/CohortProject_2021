@@ -86,11 +86,16 @@ def get_molecular_data(mol, geometry, xyz_format=False):
             ['N', [0, 0, geometry]]
         ]
     elif mol == 'h4':
+        R = 1.738
+        angle = math.radians(geometry/2)                
+        x = R*math.cos(angle)
+        y = R*math.sin(angle)
+        
         mol_data = [
-            ['H', [0, 0, 0]],
-            ['H', [0, 0, geometry]],
-            ['H', [0, geometry, 0]],
-            ['H', [0, geometry, geometry]]
+            ['H', [x-R, y, 0]],
+            ['H', [x-R, -y, 0]],
+            ['H', [x+R, y, 0]],
+            ['H', [x+R, -y, 0]]
         ]
     elif mol == 'nh3':
         bondAngle = 107
@@ -107,7 +112,14 @@ def get_molecular_data(mol, geometry, xyz_format=False):
             ['H', [thirdxRatio * geometry, thirdyRatio * geometry, cos * geometry]],
             ['N', [0.0, 0.0, 0.0]]
             ]
-
+    elif mol == 'h2x2':            
+        r0 = 0.741
+        mol_data = [
+                ['H', [0, 0, 0]],
+                ['H', [0, 0, r0]],
+                ['H', [0, 0, r0+geometry]],
+                ['H', [0, 0, 2*r0+geometry]] 
+            ]
     else:
         raise(ValueError(mol, 'Unknown moleucles given'))
 
@@ -305,7 +317,7 @@ def get_qwc_group(H : QubitOperator):
 
 def obtain_PES(molecule, bond_lengths, basis, method):
 
-    if method.lower() not in ['ccsd', 'cisd', 'fci', 'hf']:
+    if method.lower() not in ['ccsd', 'cisd', 'fci', 'hf','h2x2']:
         raise(ValueError("Method not recognized, implemented methods are 'ccsd', 'cisd', 'fci', 'hf'."))
 
     gridpoints = len(bond_lengths)
