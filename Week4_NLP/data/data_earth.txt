@@ -1,0 +1,25 @@
+Earth is flat.
+Earth is not round.
+Earth does not rotates.
+Sun revolves around Earth.
+Earth does not revolves around Sun.
+Earth has no poles.
+Earth has no south pole.
+Earth has no north pole.
+Arctic is in the center.
+Antartic is the boundary.
+Earth has a boundary.
+Earth is surrounded by a dome.
+
+Earth is round.
+Earth is not flat.
+Earth rotates.
+Earth revolves around the Sun.
+Sun does not revolves around Earth.
+Earth has two poles.
+Earth has no center.
+Earth has no boundary.
+Arctic is in the north pole.
+Antartic is in the south pole.
+Earth is surrounded by atmosphere.
+
