@@ -1,0 +1,8 @@
+jupyter
+jax
+jaxlib
+numpy
+discopy
+noisyopt
+matplotlib
+qiskit
