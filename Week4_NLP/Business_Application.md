@@ -34,7 +34,7 @@ On the other hand QNLP allows to formulate grammar rules as tensor operations, w
 * We worked mostly on binary classification of text (e.g. True/False Positive/Negative), but wider possibilities could be explored. We could work on other tasks such as question-answering with swap tests or summarization with tomography. 
 * As Quantum Hardware improves we can easily scale up the size of the meaning spaces and the complexity of the tasks - which is our overall objective [2]. 
  
-## Real World Applications for QNLP
+## QNLP applications  
 **1. Text Classification:** Texts are a form of unstructured data with rich information. Since texts are unstructured, analyzing, sorting and classifying them can be very hard and time-consuming and sometimes even tedious work for humans, prone with errors. Text Classifiers categorize and organize in a scalable and more accurate way pretty much any form of text [3]. 
 
 **2. Machine Translation:** helps us achieve multilingualism. In the early ’50s, IBM presented a machine translation system that had only 250 words and translated 49 carefully selected Russian sentences in the field of chemistry into English. Over the recent years with Neural networks, machine translation has significantly improved. Google Translate supports more than 100 languages and can even translate language images from up to 37 languages [3]. The Machine Translation Market was valued at USD 153.8 million in 2020, and it is expected to reach USD 230.67 million by 2026, registering a CAGR of 7.1%, during the period of 2021-2026 [4].
