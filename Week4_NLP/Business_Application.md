@@ -131,8 +131,8 @@ Key players:
 Advantage: Our strength lies in our quantum enhanced NLP algorithms and highly skilled team with machine learning expertise  with more than 10 years of combined experience.
 
 **Customers:**
-**Auto:** Tesla (2019 $25 billion)
-**Consumer electronics:** Apple (revenue $260 billion 2019), Samsung ($222 billion 2018), Microsoft ($143 billion (2020))
+* **Auto:** Tesla (2019 $25 billion)
+* **Consumer electronics:** Apple (revenue $260 billion 2019), Samsung ($222 billion 2018), Microsoft ($143 billion (2020))
 
 ## Conclusion: 
 
