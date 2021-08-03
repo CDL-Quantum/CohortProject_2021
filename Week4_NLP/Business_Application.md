@@ -12,11 +12,11 @@
  
 Quantum Natural Language Processing (QNLP) enables canonical implementation of natural language on quantum hardware. Canonical refers to compositional language structure, including grammar, that matches the way quantum systems compose. The Categorical Distributional Compositional (DisCoCat) model for natural language makes canonical embedding possible. For instance a perfect match represents the grammatical structure of pregroups and the compositional quantum structure of bipartite entanglement. Teleportation-alike behaviours are the basis for DisCoCat. DisCoCat employees quantum-theoretic features such as vector spaces, inner-products, projector spectra for representing meanings of adjectives, verbs and relative pronouns, density matrices for representing linguistic ambiguity and lexical entailment, and entanglement for representing correlated concepts. DisCoCat-QNLP is referred to as ‘quantum-native’. Quantum implementation of DisCoCat leads to exponential reduction of space resources as compared to implementations on classical hardware, reflects the nativeness of density matrices, and gives quantum advantage of quantum algorithms typical NLP tasks such as classification [1]. 
 
-A direct correspondence between the meanings of words and quantum states and grammatical structures and quantum measurements have been established as seen in the figure below [1]:
+A direct correspondence between the meanings of words and quantum states and grammatical structures and quantum measurements have been established as seen in the figure below [2]:
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/b77b4c0b7fb0a99ea90da25f1ad00e9eeefbfc21/Week4_NLP/imgs/3.png"width=500/></p>
 
-The network described above can’t be interpreted directly by IBM’s machine. It needs quantum circuit like this [1]:
+The network described above can’t be interpreted directly by IBM’s machine. It needs quantum circuit like this [2]:
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/b77b4c0b7fb0a99ea90da25f1ad00e9eeefbfc21/Week4_NLP/imgs/4.png"width=500/></p>
 
