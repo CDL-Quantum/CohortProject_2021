@@ -22,16 +22,18 @@ The network described above can’t be interpreted directly by IBM’s machine. 
 
 NLP handled by quantum computers was first proposed in 2016. At the time there weren’t any sufficiently capable quantum computers able to implement the NLP tasks proposed. Encoding word meanings on a quantum computer using quantum random access memory (QRAM) is a distant possibility, despite theoretical progress and experimental proposals.
 
-In this project we demonstrate that QNLP can be implemented on NISQ devices, and will work extremely well as these devices scale in terms of size and performance. We used the ZX-language for drawing quantum circuits developed by BC and CQC’s Ross Duncan - part of the same network language of quantum theory that works very well together with QNLP.
+In this cohort project we demonstrate that NLP can be formulated in the language of tensors which is natively easily implemented on quantum hardware, and can already prove useful on NISQ devices. State of the Art QNLP has been researched by BC and CQC’s Ross Duncan [1]. We use a python library specifically designed to perform QNLP.
 
-Our solution provides a way forward in the absence of QRAM. Quantum machine learning algorithms do not directly encode the meanings of words. We use quantum circuits instead of classical neural networks in which quantum states and processes learn their meanings/patterns in data directly from text. Neural network architectures are the state-of-the-art in classical NLP. Majority of methods do not take advantage of grammatical structures. We show that our approach to QNLP naturally accommodates both grammar and meaning. We can do several tasks:
+Quantum machine learning algorithms, encode the meanings of words as quantum ansatz. State of the art classical neural networks are already trained to embed text into a vector space, be it words, sentences or paragraphs. To a certain extent they can take into consideration the relationship of words with respect to each other, but they learn it empirically from text and it remains somewhat a black box. 
 
-* We could vary the hardware - ion traps or optics instead of superconducting qubits. By implementing our program via CQC’s hardware-agnostic t|ket>, this development can take place fairly easily. In our project we did not use actual QC hardware but a ??? simulator.
-* We could vary the computational model, for example, MBQC (one-way or measurement-based quantum computer) instead of circuits, by exploiting the relationship between the ZX-language and MBQC.
-* In addition to a single sentences we could process larger text.
-* We could work on other tasks besides question-answering, such as language generation, summarization, etc. 
-* When hardware becomes more powerful we can simply scale up the size of the meaning spaces and complexity of the tasks - which is our overall objective [2]. 
+On the other hand QNLP allows to formulate grammar rules as tensor operations, while taking this approach classically yields an exponential increase with the size of the problem, Quantum Networks are natively equipped to deal with that. In that context we can look at several tasks in the future:
 
+* We implemented our program via CQC’s hardware-agnostic t|ket>. In our project we did not use actual QC hardware but the Qiskit Aer backend as a simulator. 
+* We could try to vary the hardware - ion traps or optics instead of superconducting qubits, also exploring  different ansatz expression depending on which one is the most natural.
+* At the moment we are implementing Discopy, which looks at analysing a single sentence. An extension of this allows to process larger text and could be explored in the future.
+* We worked mostly on binary classification of text (e.g. True/False Positive/Negative), but wider possibilities could be explored. We could work on other tasks such as question-answering with swap tests or summarization with tomography. 
+* As Quantum Hardware improves we can easily scale up the size of the meaning spaces and the complexity of the tasks - which is our overall objective [2]. 
+ 
 ## Real World Applications for QNLP
 **1. Text Classification:** Texts are a form of unstructured data with rich information. Since texts are unstructured, analyzing, sorting and classifying them can be very hard and time-consuming and sometimes even tedious work for humans, prone with errors. Text Classifiers categorize and organize in a scalable and more accurate way pretty much any form of text [3]. 
 
