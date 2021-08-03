@@ -158,3 +158,4 @@ Advantage: Our strength lies in our quantum enhanced NLP algorithms and highly s
 
 [12] [Using GPT-3 To Measure Sentiment. And How To Add User Sentiment](https://cobusgreyling.medium.com/using-gpt-3-to-measure-sentiment-9b234db37731). Accessed August 3, 2021. 
  
+**The video can be found here**
