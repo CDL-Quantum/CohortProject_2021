@@ -8,6 +8,8 @@ For more details refer to the [Business Application found here](./Business_Appli
 ### E1.1
 We decided to make Chocolate Mousse [Ref](https://www.recipetineats.com/chocolate-mousse/). 
 
+<p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/b77b4c0b7fb0a99ea90da25f1ad00e9eeefbfc21/Week4_NLP/imgs/3.png"width=500/></p>
+
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figrues/f1.pngg"width=500/></p>
 
 ### E1.2
