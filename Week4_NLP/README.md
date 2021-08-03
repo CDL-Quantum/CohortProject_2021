@@ -43,17 +43,17 @@ Our research is funded by international tiramisu & choc mousse Association (ITCM
      </tr>
  </table>
  
-As we increase the tensor size, we can see exponetial increase of the time. However
+As we increase the tensor size, we can see exponetial increase of the time (left). On the right, we have used tensornetwork contractor to reduce the cost of time. From the green trace, we can see significant decrease of the time compare to the normal evaluation method shown in red.
 
-### E3.1
+### E3
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f3-1.png"width=1000/></p>
 
-### E3.2
+
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f3-2.png"width=1000/></p>
 
-### E3.3
+
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f3-2.png"width=1000/></p>
 
