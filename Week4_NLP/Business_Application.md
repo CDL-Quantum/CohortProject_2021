@@ -10,13 +10,6 @@
      </tr>
  </table>
  
- <table align="center">
-     <tr>
-        <td><img src="./Aviation.jpg" width="400"></td>
-        <td><img src="./WeatherForecast.jpg" width="450"></td>
-    </tr>
-</table>
- 
 Quantum Natural Language Processing (QNLP) enables canonical implementation of natural language on quantum hardware. Canonical refers to compositional language structure, including grammar, that matches the way quantum systems compose. The Categorical Distributional Compositional (DisCoCat) model for natural language makes canonical embedding possible. For instance a perfect match represents the grammatical structure of pregroups and the compositional quantum structure of bipartite entanglement. Teleportation-alike behaviours are the basis for DisCoCat. DisCoCat employees quantum-theoretic features such as vector spaces, inner-products, projector spectra for representing meanings of adjectives, verbs and relative pronouns, density matrices for representing linguistic ambiguity and lexical entailment, and entanglement for representing correlated concepts. DisCoCat-QNLP is referred to as ‘quantum-native’. Quantum implementation of DisCoCat leads to exponential reduction of space resources as compared to implementations on classical hardware, reflects the nativeness of density matrices, and gives quantum advantage of quantum algorithms typical NLP tasks such as classification [1]. 
 
 A direct correspondence between the meanings of words and quantum states and grammatical structures and quantum measurements have been established as seen in the figure below:
@@ -136,26 +129,27 @@ Consumer electronics: Apple (revenue $260 billion 2019), Samsung ($222 billion 2
 ## Conclusion: 
 
 ## References
-[1] QNLP-ACT.pdf (ox.ac.uk)
+[1] [Coecke, B. et al. Quantum Natural Language Processing](http://www.cs.ox.ac.uk/people/bob.coecke/QNLP-ACT.pdf)
 
-[2] Quantum Natural Language Processing Medium: 30-7
+[2] [Quantum Natural Language Processing Medium](https://medium.com/cambridge-quantum-computing/quantum-natural-language-processing-748d6f27b31d). Accessed July 30, 2021.
 
-[3] Applications of NLP | 5 Vital Applications of Natural Processing Language (educba.com) 30-7
+[3] [Applications of NLP | 5 Vital Applications of Natural Processing Language](https://www.educba.com/applications-of-nlp/). Accessed July 30, 2021.
 
-[4 Machine Translation Market Size, Statistics | Industry Trends 2021 to 2026 with COVID Impact - Mordor Intelligence: 30-7]
+[4 [Machine Translation Market](https://www.mordorintelligence.com/industry-reports/machine-translation-market). Accessed July 30, 2021.
 
-[5] Global Chatbot Market | Size, Share, Growth | 2021 - 2026 (marketdataforecast.com): 30-7
+[5] [Global Chatbot Market](https://www.marketdataforecast.com/market-reports/chatbot-market). Accessed July 30, 2021.
 
-[6] Intelligent Virtual Assistant Market Size Report, 2021-2028
+[6] [Intelligent Virtual Assistant Market](https://www.grandviewresearch.com/industry-analysis/intelligent-virtual-assistant-industry#:~:text=The%20global%20intelligent%20virtual%20assistant%20market%20size%20was,a%20CAGR%20of%2034.0%25%20over%20the%20forecast%20period.). Accessed July 30, 2021.
 
-[7] Top 7 Applications of NLP (Natural Language Processing) - GeeksforGeeks 30-7
+[7] [Top 7 Applications of NLP](https://www.geeksforgeeks.org/top-7-applications-of-natural-language-processing/). Accessed July 30, 2021.
 
-[8] Can emotion-regulating tech translate across cultures? | Aeon Essays: 30-7
+[8] [Can emotion-regulating tech translate across cultures? | Aeon Essays](https://aeon.co/essays/can-emotion-regulating-tech-translate-across-cultures). Accessed July 30, 2021.
 
-[9] AGE-WELL | An emotionally supportive virtual assistant (agewell-nce.ca): 30-7
+[9] [AGE-WELL | An emotionally supportive virtual assistant](Accessed July 30, 2021.). Accessed July 30, 2021.
 
-[10] Perform sentiment analysis and opinion mining with Text Analytics REST API - Azure Cognitive Services | Microsoft Docs
+[10] [Perform sentiment analysis and opinion mining with Text Analytics REST API - Azure Cognitive Services](https://docs.microsoft.com/en-us/azure/cognitive-services/Text-Analytics/how-tos/text-analytics-how-to-sentiment-analysis?tabs=version-3-1). Accessed July 30, 2021.
 
-[11] GPT-3 - Wikipedia: 3-August. 
+[11] [GPT-3 - Wikipedia](https://en.wikipedia.org/wiki/GPT-3). Accessed August 3, 2021. 
 
-[12] Using GPT-3 To Measure Sentiment. And How To Add User Sentiment… | by Cobus Greyling | Jun, 2021 | Medium: 3-August. 
+[12] [Using GPT-3 To Measure Sentiment. And How To Add User Sentiment](https://cobusgreyling.medium.com/using-gpt-3-to-measure-sentiment-9b234db37731). Accessed August 3, 2021. 
+ 
