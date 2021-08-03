@@ -5,8 +5,8 @@
 
 <table  align="center">
     <tr>
-        <td><img src="./1.jpg" width=400>
-        <td><img src="./2.jpg" width=400>
+        <td><img src="./1.jpg" width=400></td>
+        <td><img src="./2.jpg" width=400></td>
      </tr>
  </table>
  
@@ -107,7 +107,7 @@ Key players:
     <tr>
         <td>Google Inc.</td>
         <td>USA</td>        
-        <td>$146.9 billion</td>
+        <td>$146.9 billion 2020</td>
      </tr>    
     </tr>
     <tr>
