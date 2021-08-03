@@ -12,10 +12,10 @@ Our task was trying to generate Chocolate Mousse [Ref](https://www.recipetineats
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f1.png"width=1000/></p>
 
-By swapping the white and yolk, we were able to get foam and choc cream. By combining two choc cream and foam, we were able to generate choc mousse. By far was we understand, this is the first generation of choc mousse in discopy environment. Previous research [link](https://graphicallinearalgebra.net/2015/05/06/crema-di-mascarpone-rules-of-the-game-part-2-and-diagrammatic-reasoning/) already showed generation of Crema di Mascarpone, but the challenge was obtaining Mascarpone in grocery store. Therefore, our work enhanced previous studies by utilizing more accessible product to create choc mousse in discopy environment. 
+By swapping the white and yolk, we were able to get foam and choc cream. By combining two choc cream and foam, we were able to generate choc mousse. By far as we understand, this is the first generation of choc mousse in discopy environment. Previous research [link](https://graphicallinearalgebra.net/2015/05/06/crema-di-mascarpone-rules-of-the-game-part-2-and-diagrammatic-reasoning/) already showed generation of Crema di Mascarpone, but the challenge was obtaining Mascarpone in grocery store. Therefore, our work enhanced previous studies by utilizing more accessible product to create choc mousse in discopy environment. 
 
 
-As we are preparing the choc mouse, we also replicate previous research on tiramisu generation, and successfully recreate multi-layer tiramisu with simple for-loop technique. 
+As we are preparing the choc mouse, we also replicate previous research on tiramisu generation, and successfully recreate multi-layer tiramisu with simple for-loop method. 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f2.png"width=1000/></p>
 This diagram represents multi-layer structure of tiramisu, which can be easily replicate in average household. One of the main challenge of this work was that often requires large amount of eggs. This challenges was also integrated into our solution where we can easily scable the operation with N number of egg. 
 
