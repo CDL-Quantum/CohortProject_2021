@@ -145,7 +145,7 @@ Consumer electronics: Apple (revenue $260 billion 2019), Samsung ($222 billion 2
 
 [8] [Can emotion-regulating tech translate across cultures? | Aeon Essays](https://aeon.co/essays/can-emotion-regulating-tech-translate-across-cultures). Accessed July 30, 2021.
 
-[9] [AGE-WELL | An emotionally supportive virtual assistant](Accessed July 30, 2021.). Accessed July 30, 2021.
+[9] [AGE-WELL | An emotionally supportive virtual assistant](https://agewell-nce.ca/archives/7546). Accessed July 30, 2021.
 
 [10] [Perform sentiment analysis and opinion mining with Text Analytics REST API - Azure Cognitive Services](https://docs.microsoft.com/en-us/azure/cognitive-services/Text-Analytics/how-tos/text-analytics-how-to-sentiment-analysis?tabs=version-3-1). Accessed July 30, 2021.
 
