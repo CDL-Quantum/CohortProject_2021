@@ -20,8 +20,12 @@ For more details refer to the [Business Application found here](./Business_Appli
 
 ## Reference Code
 
-[Tutorial-Part1](.qnlp-tutorial-Part1.ipynb)
-[Tutorial-Part2](.qnlp-tutorial-Part2.ipynb)
-[Tutorial-Part3](.qnlp-tutorial-Part3.ipynb)
-[Tutorial-Part4](.qnlp-tutorial-Part4.ipynb)
-[Tutorial-Part5](.qnlp-tutorial-Part5.ipynb)
+[Tutorial-Part1](qnlp-tutorial-Part1.ipynb)
+
+[Tutorial-Part2](qnlp-tutorial-Part2.ipynb)
+
+[Tutorial-Part3](qnlp-tutorial-Part3.ipynb)
+
+[Tutorial-Part4](qnlp-tutorial-Part4.ipynb)
+
+[Tutorial-Part5](qnlp-tutorial-Part5.ipynb)
