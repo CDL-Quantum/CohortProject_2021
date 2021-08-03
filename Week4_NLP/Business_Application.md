@@ -14,11 +14,11 @@ Quantum Natural Language Processing (QNLP) enables canonical implementation of n
 
 A direct correspondence between the meanings of words and quantum states and grammatical structures and quantum measurements have been established as seen in the figure below:
 
-<p align="center"><img src="Week4_NLP/imgs/3.png"width=500/></p>
+<p align="center"><img src="./3.png"width=500/></p>
 
 The network described above can’t be interpreted directly by IBM’s machine. It needs quantum circuit like this:
 
-<p align="center"><img src="Week4_NLP/imgs/4.png"width=500/></p>
+<p align="center"><img src="./4.png"width=500/></p>
 
 NLP handled by quantum computers was first proposed in 2016. At the time there weren’t any sufficiently capable quantum computers able to implement the NLP tasks proposed. Encoding word meanings on a quantum computer using quantum random access memory (QRAM) is a distant possibility, despite theoretical progress and experimental proposals.
 In this project we demonstrate that QNLP can be implemented on NISQ devices, and will work extremely well as these devices scale in terms of size and performance. We used the ZX-language for drawing quantum circuits developed by BC and CQC’s Ross Duncan⁷ - part of the same network language of quantum theory that works very well together with QNLP.
@@ -60,17 +60,7 @@ It seems, there is a need to make virtual assistants human-like by bringing emot
 
 **The solution:** we make virtual assistants truly emotional with our QNLP hybrid algorithms as more accurate text, text to speech and voice to text sentiment analysis capabilities can be provided than with classical machine learning.  
 
-**The current state:** The AI models used by the Azure Text Analytics API for instance are provided and trained by Microsoft and ready to use. Sentiment Analysis is staged on the entire offered text, instead of words in it, and it produces a more refined result when evaluating smaller pieces of text. Ideally, text size must be under 5,120 characters [10].
-Sentence sentiment
-Returned document label
-At least one positive sentence is in the document. The rest of the sentences are neutral.
-positive
-At least one negative sentence is in the document. The rest of the sentences are neutral.
-negative
-At least one negative sentence and at least one positive sentence are in the document.
-mixed
-All sentences in the document are neutral.
-neutral
+**The current state:** The AI models used by the Azure Text Analytics API for instance are provided and trained by Microsoft and ready to use. Sentiment Analysis is staged on the entire offered text, instead of words in it, and it produces a more refined result when evaluating smaller pieces of text. Ideally, text size must be under 5,120 characters and returned document labels are positive, negative, neutral and mixed [10].
 
 Generative Pre-trained Transformer 3 (GPT-3) is an autoregressive language model that uses deep learning to produce human-like text. It is the third-generation language prediction model in the GPT-n series created by OpenAI. GPT-3's full version has a capacity of 175 billion machine learning parameters. GPT-3 is part of a trend in natural language processing (NLP) systems of pre-trained language representations. Before the release of GPT-3, the largest language model was Microsoft's Turing NLG with a capacity of 17 billion parameters.
 
@@ -105,36 +95,29 @@ Key players:
         <td> <b>Profit in USD</b></td>
     </tr>
     <tr>
-        <td>Thermo Fisher Scientific Company</td>
+        <td>Amazon.com, Inc.</td>
         <td>USA</td>
-        <td>32 billion</td>
+        <td>$386 billion 2020</td>
     </tr>
     <tr>
-        <td>Certara</td>
+        <td>Apple Inc.</td>
         <td>USA</td>        
-        <td>243 million</td>
+        <td>$260 billion 2019</td>
     </tr>
     <tr>
-        <td>Schrodinger</td>
+        <td>Google Inc.</td>
         <td>USA</td>        
-        <td>85 million</td>
+        <td>$146.9 billion</td>
      </tr>    
     </tr>
     <tr>
-        <td>1QBit</td>
-        <td>Canada</td>        
-        <td>N/A</td>
+        <td>Microsoft Corporation</td>
+        <td>USA</td>        
+        <td> $143 billion 2020</td>
      </tr>          
 </table>
 
-Amazon.com, Inc. $386 billion 2020 
-Apple Inc. $260 billion 2019
-Baidu, Inc. $15 billion in 2018
-Google Inc. $146.9 billion
-IBM Corporation $73.57 billion 2020
-Microsoft Corporation $143 billion (2020)
-
-**The market:** dominated by large tech companies with vast R&D capacity and highly skilled workforce. Apple has started building emotional abilities in Siri [8].
+ **The market:** dominated by large tech companies with vast R&D capacity and highly skilled workforce. Apple has started building emotional abilities in Siri [8].
 
 **Value proposition:** comes from quantum enhanced NLP. As we have shown, quantum implementation of DisCoCat leads to exponential reduction of space resources as compared to implementations on classical hardware, reflects the nativeness of density matrices, and gives quantum advantage of quantum algorithms typical NLP tasks such as classification. 
 Advantage: Our strength lies in our quantum enhanced NLP algorithms and highly skilled team with machine learning expertise  with more than 10 years of combined experience.
