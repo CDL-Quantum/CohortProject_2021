@@ -4,3 +4,4 @@ pytket
 jax
 pytket-qiskit
 matplotlib~=3.3.4
+requests~=2.26.0
