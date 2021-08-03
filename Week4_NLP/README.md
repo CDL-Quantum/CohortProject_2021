@@ -16,3 +16,12 @@ For each week, your team is asked to complete a Business Application. Questions 
 * Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
 
 For more details refer to the [Business Application found here](./Business_Application.md)
+
+
+## Reference Code
+
+[Tutorial-Part1](.qnlp-tutorial-Part1.ipynb)
+[Tutorial-Part2](.qnlp-tutorial-Part2.ipynb)
+[Tutorial-Part3](.qnlp-tutorial-Part3.ipynb)
+[Tutorial-Part4](.qnlp-tutorial-Part4.ipynb)
+[Tutorial-Part5](.qnlp-tutorial-Part5.ipynb)
