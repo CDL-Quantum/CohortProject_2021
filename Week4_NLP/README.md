@@ -67,19 +67,19 @@ With help by Real IBMQ machine, we were able to generate the probability distrib
 
 As we increase the party, the enganglement decohere. 
 
-### E4.1
+## E4
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f4-1.png"width=1000/></p>
 
-### E4.2
+First, we take a look at the japense, we write the sentence Hanako ga tegami o kaita, which means Hanako has wrote a letter, [link](https://aclanthology.org/Y07-1009.pdf).
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f4-2.png"width=1000/></p>
 
-### E4.3
+ġadara ahmad al-madinah, which means ahmad left the city [link](https://www.researchgate.net/publication/326268380_Parsing_Arabic_Verb_Phrases_Using_Pregroup_Grammars).
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f4-3.png"width=1000/></p>
 
-### E4.4
+Then we implement "I see you saw her"
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f4-4.png"width=1000/></p>
 
