@@ -55,7 +55,7 @@ The global intelligent virtual assistant market size was valued at USD 5.82 bill
 
 <table align="center">
     <tr>
-        <td><img src="./siri.jpg" width="400"></td>
+        <td><img src="https://github.com/alice4space/CohortProject_2021/blob/4c8472cf2a35620f5c5ee0bc93d09206b01de9bd/Week4_NLP/imgs/alexa.jpg" width="400"></td>
         <td><img src="./alexa.jpg" width="400"></td>
      </tr>
  </table>
