@@ -32,21 +32,18 @@ Another challenges for tiramisu generation was language barriers. Many of recipe
 
 Our research is funded by international tiramisu & choc mousse Association (ITCMA). 
 
-## E2.1
+## E2
 
-<p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f2-1.gif"width=1000/></p>
 
-<p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f2-2.gif"width=1000/></p>
 
-<p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f2-3.gif"width=1000/></p>
-
-### E2.2
-
-<p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f2-4.png"width=1000/></p>
-
-### E2.3
-
-<p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f2-5.png"width=1000/></p>
+<table align="center">
+    <tr>
+        <td><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f2-4.png" width="400"></td>
+        <td><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f2-5.png" width="400"></td>
+     </tr>
+ </table>
+ 
+As we increase the tensor size, we can see exponetial increase of the time. However
 
 ### E3.1
 
