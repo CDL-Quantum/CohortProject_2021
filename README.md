@@ -2,7 +2,7 @@
 ### Quantum Bootcamp Cohort Project 2021
 
 The 2021 Cohort Project is an online collaboration bringing together founders in a series of open-source challenges.
-During the four-week bootcamp, the cohort will be split into teams.  These teams will compete on a set of challenges 
+During the four-week biootcamp, the cohort will be split into teams.  These teams will compete on a set of challenges 
 designed to engage their science, technology, and business skills on problems related to quantum entrepreneurship.
 This year's challenges will focus on Quantum Advantage in near-term devices.
 
