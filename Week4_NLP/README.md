@@ -83,11 +83,14 @@ Then we implement "I see you saw her"
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f4-4.png"width=1000/></p>
 
-### E4.5
+We now want to confirm that our sentense can be used as tensor and verify the truth statement. 
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f4-5.png"width=1000/></p>
 
-### E4.6
+Draw your favorite sentence, define the meaning of each word then evaluate it as a tensor.
+
+We now build a toy model with a 4-dimensional noun space, add Charlie and Diane to the story.
+
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f4-6.png"width=1000/></p>
 
