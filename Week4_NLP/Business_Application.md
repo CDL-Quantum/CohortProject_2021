@@ -18,8 +18,11 @@ Quantum Natural Language Processing (QNLP) enables canonical implementation of n
 
 A direct correspondence between the meanings of words and quantum states and grammatical structures and quantum measurements have been established as seen in the figure below:
 
+<p align="center"><img src=""width=500/></p>
 
 The network described above can’t be interpreted directly by IBM’s machine. It needs quantum circuit like this:
+
+<p align="center"><img src=""width=500/></p>
 
 
 NLP handled by quantum computers was first proposed in 2016. At the time there weren’t any sufficiently capable quantum computers able to implement the NLP tasks proposed. Encoding word meanings on a quantum computer using quantum random access memory (QRAM) is a distant possibility, despite theoretical progress and experimental proposals.
@@ -98,6 +101,35 @@ The text to speech segment dominated the intelligent virtual assistant market wi
 
 **Competitor and competitors advantage:**
 Key players:
+
+<table align="center">
+    <tr >
+        <td> <b>Company name</b> </td>
+        <td> <b>Headquarter</b> </td>
+        <td> <b>Profit in USD</b></td>
+    </tr>
+    <tr>
+        <td>Thermo Fisher Scientific Company</td>
+        <td>USA</td>
+        <td>32 billion</td>
+    </tr>
+    <tr>
+        <td>Certara</td>
+        <td>USA</td>        
+        <td>243 million</td>
+    </tr>
+    <tr>
+        <td>Schrodinger</td>
+        <td>USA</td>        
+        <td>85 million</td>
+     </tr>    
+    </tr>
+    <tr>
+        <td>1QBit</td>
+        <td>Canada</td>        
+        <td>N/A</td>
+     </tr>          
+</table>
 
 Amazon.com, Inc. $386 billion 2020 
 Apple Inc. $260 billion 2019
