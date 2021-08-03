@@ -58,7 +58,7 @@ Our solution provides a way forward in the absence of QRAM. Quantum machine lear
      </tr>
  </table>
  
-**The problem:** Siri, I’m lonely’: an increasing number of people are directing such affective statements, good and bad, to their digital helpmeets. According to Amazon, half of the conversations with the company’s smart-home device Alexa are of non-utilitarian nature – groans about life, jokes, existential questions. “People talk to Siri about all kinds of things, including when they’re having a stressful day or have something serious on their mind. They turn to Siri in emergencies or when they want guidance on living a healthier life.”[8]
+**The problem:** an increasing number of people are directing such affective statements, good and bad, to their digital helpmeets. According to Amazon, half of the conversations with the company’s smart-home device Alexa are of non-utilitarian nature – groans about life, jokes, existential questions. “People talk to Siri about all kinds of things, including when they’re having a stressful day or have something serious on their mind. They turn to Siri in emergencies or when they want guidance on living a healthier life.”[8]
 
 “Emotion is what gives humans motivation and drives us to act,” explains Dr. Hoey, whose research on ACT@Home is supported by the American Alzheimer’s Association. The disease brings problems with memory and reasoning for people, as well as personality swings and even shifts in power dynamics. He says it’s important to interpret how a virtual assistant’s prompts would “fit the person’s world model” and adapt accordingly [9]. 
 
