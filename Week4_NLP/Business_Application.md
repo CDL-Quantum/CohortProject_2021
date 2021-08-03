@@ -52,6 +52,14 @@ The global intelligent virtual assistant market size was valued at USD 5.82 bill
 **8. Email Classification and Filtering:** emails are automatically divided into 3 sections namely, Primary, Social, and Promotions. Email services use NLP to identify the contents of each Email with text classification so that it can be put in the correct section. In more advanced cases, some companies also use specialty anti-virus software with NLP to scan the Emails and see if there are any patterns and phrases that may indicate a phishing attempt on the employees [7].
 
 ## Siri, I’m lonely’
+
+<table align="center">
+    <tr>
+        <td><img src="./siri.jpg" width="400"></td>
+        <td><img src="./alexa.jpg" width="400"></td>
+     </tr>
+ </table>
+ 
 **The problem:** Siri, I’m lonely’: an increasing number of people are directing such affective statements, good and bad, to their digital helpmeets. According to Amazon, half of the conversations with the company’s smart-home device Alexa are of non-utilitarian nature – groans about life, jokes, existential questions. “People talk to Siri about all kinds of things, including when they’re having a stressful day or have something serious on their mind. They turn to Siri in emergencies or when they want guidance on living a healthier life.”[8]
 
 “Emotion is what gives humans motivation and drives us to act,” explains Dr. Hoey, whose research on ACT@Home is supported by the American Alzheimer’s Association. The disease brings problems with memory and reasoning for people, as well as personality swings and even shifts in power dynamics. He says it’s important to interpret how a virtual assistant’s prompts would “fit the person’s world model” and adapt accordingly [9]. 
