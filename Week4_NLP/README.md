@@ -38,8 +38,8 @@ Our research is funded by international tiramisu & choc mousse Association (ITCM
 
 <table align="center">
     <tr>
-        <td><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f2-4.png" width="400"></td>
-        <td><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f2-5.png" width="400"></td>
+        <td><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f2o-4.png" width="500"></td>
+        <td><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f2o-5.png" width="500"></td>
      </tr>
  </table>
  
