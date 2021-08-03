@@ -57,16 +57,15 @@ For this excerise, we accomplish three different generation, bell state, GHZ sta
      </tr>
  </table>
  
-With help by AerBackend simulator from Qiskit, we were able to replicate with high accuracy. 
+With help by Real IBMQ machine, we were able to generate the probability distribution of those states. From quick calculation, we picked first |00...0> value to calculate the accuracy of the state.
 
 | STate | Accuracy  |
 | :---: |  :---: |
-| Bell |  90% |
-| GHZ |  98% |
-| N-GHZ | 100% |
+| Bell |  81% |
+| GHZ |  72% |
+| 4-GHZ | 66% |
 
-For example, bell state, our accuracy of |00> is 90%, 
-
+As we increase the party, the enganglement decohere. 
 
 ### E4.1
 
