@@ -92,7 +92,6 @@ The text to speech segment dominated the intelligent virtual assistant market wi
 **Products/roadmap:** we build expertise first in QNLP hybrid-text sentiment algorithm and then extend our products to QNLP - speech to text and - text to speech hybrid algorithms.
 
 **Competitor and competitors advantage:**
-Key players:
 
 <table align="center">
     <tr >
