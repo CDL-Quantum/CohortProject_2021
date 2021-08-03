@@ -105,16 +105,27 @@ Consumer electronics: Apple (revenue $260 billion 2019), Samsung ($222 billion 2
 
 ## Conclusion
 
-references:
+## References
 [1] QNLP-ACT.pdf (ox.ac.uk)
+
 [2] Quantum Natural Language Processing Medium: 30-7
+
 [3] Applications of NLP | 5 Vital Applications of Natural Processing Language (educba.com) 30-7
+
 [4 Machine Translation Market Size, Statistics | Industry Trends 2021 to 2026 with COVID Impact - Mordor Intelligence: 30-7]
+
 [5] Global Chatbot Market | Size, Share, Growth | 2021 - 2026 (marketdataforecast.com): 30-7
+
 [6] Intelligent Virtual Assistant Market Size Report, 2021-2028
+
 [7] Top 7 Applications of NLP (Natural Language Processing) - GeeksforGeeks 30-7
+
 [8] Can emotion-regulating tech translate across cultures? | Aeon Essays: 30-7
+
 [9] AGE-WELL | An emotionally supportive virtual assistant (agewell-nce.ca): 30-7
+
 [10] Perform sentiment analysis and opinion mining with Text Analytics REST API - Azure Cognitive Services | Microsoft Docs
+
 [11] GPT-3 - Wikipedia: 3-August. 
+
 [12] Using GPT-3 To Measure Sentiment. And How To Add User Sentiment… | by Cobus Greyling | Jun, 2021 | Medium: 3-August. 
