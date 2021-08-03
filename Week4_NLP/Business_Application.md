@@ -125,7 +125,7 @@ The text to speech segment dominated the intelligent virtual assistant market wi
  **The market:** dominated by large tech companies with vast R&D capacity and highly skilled workforce. Apple has started building emotional abilities in Siri [8].
 
 **Value proposition:** comes from quantum enhanced NLP. As we have shown, quantum implementation of DisCoCat leads to exponential reduction of space resources as compared to implementations on classical hardware, reflects the nativeness of density matrices, and gives quantum advantage of quantum algorithms typical NLP tasks such as classification. 
-**Advantage:** Our strength lies in our quantum enhanced NLP algorithms and highly skilled team with machine learning expertise of more than 10 years of combined experience.
+**Advantage:** Our strength lies in our quantum enhanced NLP algorithms and highly skilled team with machine learning expertise from academia and industry of more than 10 years of combined experience.
 
 **Customers:**
 * **Auto:** Tesla ($25 billion/2019)
