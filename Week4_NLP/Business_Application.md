@@ -131,7 +131,7 @@ Advantage: Our strength lies in our quantum enhanced NLP algorithms and highly s
 * **Auto:** Tesla ($25 billion/2019)
 * **Consumer electronics:** Apple ($260 billion/2019), Samsung ($222 billion/2018), Microsoft ($143 billion/2020)
 
-## Conclusion: 
+## Conclusion 
 
 ## References
 [1] [Coecke, B. et al. Quantum Natural Language Processing](http://www.cs.ox.ac.uk/people/bob.coecke/QNLP-ACT.pdf)
