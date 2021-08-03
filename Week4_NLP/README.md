@@ -47,15 +47,25 @@ As we increase the tensor size, we can see exponetial increase of the time (left
 
 ### E3
 
-<p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f3-1.png"width=1000/></p>
+For this excerise, we accomplish three different generation, bell state, GHZ state, and N-GHZ state. 
 
+<table align="center">
+    <tr>
+        <td><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/bell-1.png" width="500"></td>
+        <td><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/GHZ1.png" width="500"></td>
+        <td><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/GHZ2.png" width="500"></td>
+     </tr>
+ </table>
+ 
+With help by AerBackend simulator from Qiskit, we were able to replicate with high accuracy. 
 
+| STate | Accuracy  |
+| :---: |  :---: |
+| Bell |  90% |
+| GHZ |  98% |
+| N-GHZ | 100% |
 
-<p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f3-2.png"width=1000/></p>
-
-
-
-<p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f3-2.png"width=1000/></p>
+For example, bell state, our accuracy of |00> is 90%, 
 
 
 ### E4.1
