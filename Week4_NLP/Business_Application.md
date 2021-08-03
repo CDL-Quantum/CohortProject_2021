@@ -21,7 +21,8 @@ The network described above can’t be interpreted directly by IBM’s machine. 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/b77b4c0b7fb0a99ea90da25f1ad00e9eeefbfc21/Week4_NLP/imgs/4.png"width=500/></p>
 
 NLP handled by quantum computers was first proposed in 2016. At the time there weren’t any sufficiently capable quantum computers able to implement the NLP tasks proposed. Encoding word meanings on a quantum computer using quantum random access memory (QRAM) is a distant possibility, despite theoretical progress and experimental proposals.
-In this project we demonstrate that QNLP can be implemented on NISQ devices, and will work extremely well as these devices scale in terms of size and performance. We used the ZX-language for drawing quantum circuits developed by BC and CQC’s Ross Duncan⁷ - part of the same network language of quantum theory that works very well together with QNLP.
+
+In this project we demonstrate that QNLP can be implemented on NISQ devices, and will work extremely well as these devices scale in terms of size and performance. We used the ZX-language for drawing quantum circuits developed by BC and CQC’s Ross Duncan - part of the same network language of quantum theory that works very well together with QNLP.
 
 Our solution provides a way forward in the absence of QRAM. Quantum machine learning algorithms do not directly encode the meanings of words. We use quantum circuits instead of classical neural networks in which quantum states and processes learn their meanings/patterns in data directly from text. Neural network architectures are the state-of-the-art in classical NLP. Majority of methods do not take advantage of grammatical structures. We show that our approach to QNLP naturally accommodates both grammar and meaning. We can do several tasks:
 
