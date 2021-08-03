@@ -6,10 +6,10 @@
 <table  align="center">
     <tr>
         <td>
-            <img src="" width=400>
+            <img src="Week4_NLP/imgs/1.jpg" width=400>
         </td>
         <td>
-            <img src="" width=400>
+            <img src="Week4_NLP/imgs/2.jpg" width=400>
         </td>
     </tr>
 </table>
@@ -18,12 +18,11 @@ Quantum Natural Language Processing (QNLP) enables canonical implementation of n
 
 A direct correspondence between the meanings of words and quantum states and grammatical structures and quantum measurements have been established as seen in the figure below:
 
-<p align="center"><img src=""width=500/></p>
+<p align="center"><img src="Week4_NLP/imgs/3.png"width=500/></p>
 
 The network described above can’t be interpreted directly by IBM’s machine. It needs quantum circuit like this:
 
-<p align="center"><img src=""width=500/></p>
-
+<p align="center"><img src="Week4_NLP/imgs/4.png"width=500/></p>
 
 NLP handled by quantum computers was first proposed in 2016. At the time there weren’t any sufficiently capable quantum computers able to implement the NLP tasks proposed. Encoding word meanings on a quantum computer using quantum random access memory (QRAM) is a distant possibility, despite theoretical progress and experimental proposals.
 In this project we demonstrate that QNLP can be implemented on NISQ devices, and will work extremely well as these devices scale in terms of size and performance. We used the ZX-language for drawing quantum circuits developed by BC and CQC’s Ross Duncan⁷ - part of the same network language of quantum theory that works very well together with QNLP.
