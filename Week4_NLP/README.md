@@ -7,6 +7,18 @@ Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tre
 
 **Please edit this markdown file directly with links to your completed tasks and challenges.**
 
+## Task 1
+
+Task 1 notebook can be found [here](./Task_1_Experiment.ipynb).
+
+## Task 2
+
+Task 2 notebook can be found [here](./Task_2_and_3_QNLP_Experiment.ipynb).
+
+## Task 3
+
+Task 3 notebook can be found [here](./Task_2_and_3_QNLP_Experiment.ipynb) (please scroll down in the notebook).
+
 ## Business Application
 For each week, your team is asked to complete a Business Application. Questions you will be asked are:
 
