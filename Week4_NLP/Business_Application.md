@@ -35,7 +35,7 @@ Here is a demo of one of our hyper realistic human looking NPCs:
 
 <p align="center">
   <img src="./resources/human-npc.gif">
-  <a href="https://www.futurewiseresearch.com/healthcare-market-research/Protein-Sequencing-Market/3383" target="_blank">Source</a>
+  <a href="https://cdn.techinasia.com/wp-content/uploads/2017/12/ezgif-5-af62b5a1db.gif" target="_blank">Source</a>
  </p>
 
 
