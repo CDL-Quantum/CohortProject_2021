@@ -60,7 +60,7 @@ On the other hand QNLP allows to formulate grammar rules as tensor operations, w
      </tr>
  </table>
  
-**The problem:** an increasing number of people are directing such affective statements, good and bad, to their digital helpmeets. According to Amazon, half of the conversations with the company’s smart-home device Alexa are of non-utilitarian nature – groans about life, jokes, existential questions. “People talk to Siri about all kinds of things, including when they’re having a stressful day or have something serious on their mind. They turn to Siri in emergencies or when they want guidance on living a healthier life.”[8]
+**The problem:** Siri, I’m lonely’ an increasing number of people are directing such affective statements, good and bad, to their digital helpmeets. According to Amazon, half of the conversations with the company’s smart-home device Alexa are of non-utilitarian nature – groans about life, jokes, existential questions. “People talk to Siri about all kinds of things, including when they’re having a stressful day or have something serious on their mind. They turn to Siri in emergencies or when they want guidance on living a healthier life.”[8]
 
 “Emotion is what gives humans motivation and drives us to act,” explains Dr. Hoey, whose research on ACT@Home is supported by the American Alzheimer’s Association. The disease brings problems with memory and reasoning for people, as well as personality swings and even shifts in power dynamics. He says it’s important to interpret how a virtual assistant’s prompts would “fit the person’s world model” and adapt accordingly [9]. 
 
@@ -135,7 +135,11 @@ The text to speech segment dominated the intelligent virtual assistant market wi
 * **Auto:** Tesla ($25 billion/2019)
 * **Consumer electronics:** Apple ($260 billion/2019), Samsung ($222 billion/2018), Microsoft ($143 billion/2020)
 
-## Conclusion 
+## Conclusion
+We have demonstrated that quantum implementation of DisCoCat leads to exponential reduction of computational resources necessary for the implementation of grammar compared to implementations on classical hardware while removing the black box effect of deep learning. The quantum advantage of QNLP lies in translating grammar into tensor operations which are native to quantum hardware. QNLP enables tasks such as classification, question answering and transformations (translations, summarisation).
+
+Our strength lies in our quantum enhanced NLP algorithms and highly skilled team. We have machine learning combined experience from academia and industry of more than 10 years. We are driven by the belief that quantum truly represents complex systems and by doing so assists mankind in creating solutions to problems we were not able to solve before. We love helping people to have a better life by humanizing an increasingly digitized world: "Hello Eva, I am happy!"
+
 
 
 ## References
