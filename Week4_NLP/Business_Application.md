@@ -31,12 +31,6 @@ NLP is the AI technique underlying chatbots that trigger interactions with human
 
 One of the critical challenges for gaming companies is to attract and retain users. AI offers unique retention and player acquisition solutions to these companies. It provides immersive experiences to engage gamers. In order to engage more gamers, video gaming industry is pushing businesses away from being product-centric to becoming experience-oriented platforms[[9]](https://newsroom.accenture.com/news/global-gaming-industry-value-now-exceeds-300-billion-new-accenture-report-finds.htm). That’s why digital customer experience is vital to a game's popularity. To address the above challenge, XBroca helps companies to enhance their customers’ experiences and their online interactions by providing human-like interactions between players and machines. We are revolutionizing the gaming industry with captivating gaming experience that can’t be achieved on any other platform. In XBroca the ultimate goal is to enhance player real-time interactions with animated game characters to initiate human-like conversation between players and machines. 
 
-Our technology adds three new features to your video games: 
-
-1. Enhance player interactions with animated actors (Humanlike interaction)
-2. Recognize voice commands
-3. Improve customer support
-
 Here is a demo of one of our hyper realistic human looking NPCs: 
 
 <p align="center">
@@ -44,6 +38,12 @@ Here is a demo of one of our hyper realistic human looking NPCs:
   <a href="https://www.futurewiseresearch.com/healthcare-market-research/Protein-Sequencing-Market/3383" target="_blank">Source</a>
  </p>
 
+
+Our technology adds three new features to your video games: 
+
+1. Enhance player interactions with animated actors (Humanlike interaction)
+2. Recognize voice commands
+3. Improve customer support
 
 ## Video Gaming Industry Overview
 
