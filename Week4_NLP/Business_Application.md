@@ -1,7 +1,11 @@
 ![CDL 2021 Cohort Project](../figures/CDL_logo.jpg)
 # XBroca: Quantum Cohort Project Business Application
 
-![cover photo](./resources/ba-game-console.png)
+<p align="center">
+  <img width="950" height="350" src="./resources/ba-game-console.png">
+  <a href="https://www.futurewiseresearch.com/healthcare-market-research/Protein-Sequencing-Market/3383" target="_blank">Source</a>
+ </p> 
+
 
 ## Introduction to XBroca
 
@@ -9,24 +13,25 @@ Word embedding is probably one of the most beautiful and romantic ideas in the h
 
 ## NLP Timeline
 
-![NLP timeline](./resources/nlp-timeline.png)
+<p align="center">
+  <img width="700" height="500" src="./resources/nlp-timeline.png">
+  <a href="https://www.futurewiseresearch.com/healthcare-market-research/Protein-Sequencing-Market/3383" target="_blank">Source</a>
+ </p>
 
-History has proven time and time again that we are willing to change everything in our environment to our wishes and desires. Speech is the most effective way of communication and it’s only normal that we want our inventions to understand it (https://medium.datadriveninvestor.com/the-brief-history-of-nlp-c90f331b6ad7). The study of NLP generally started in the 1950s. Alan Turing published and article titled “Computing Machinery and Intelligent” in 1950 which proposed what is called the Turing test as a criterion of intelligence (https://medium.datadriveninvestor.com/the-brief-history-of-nlp-c90f331b6ad7). In 1960 the first chatbot was developed in MIT. It answered some very simple decision tree questions (https://www.information-age.com/history-of-the-chatbot-123479024/).
 
-Furthermore, up to the 1980s, most NLP systems were based on complex sets of hand-written rules. Starting in the late 1980s, however, there was a revolution in NLP with the introduction of machine learning(ML) algorithms for language processing. (https://medium.datadriveninvestor.com/the-brief-history-of-nlp-c90f331b6ad7).
+History has proven time and time again that we are willing to change everything in our environment to our wishes and desires. Speech is the most effective way of communication and it’s only normal that we want our inventions to understand it [[1]](https://portlandpress.com/biochemsoctrans/article-abstract/46/5/1367/67796/Protein-structure-and-computational-drug-discovery). The study of NLP generally started in the 1950s. Alan Turing published and article titled “Computing Machinery and Intelligent” in 1950 which proposed what is called the Turing test as a criterion of intelligence [[[2]](https://medium.datadriveninvestor.com/the-brief-history-of-nlp-c90f331b6ad7). In 1960 the first chatbot was developed in MIT. It answered some very simple decision tree questions [[3]](https://www.information-age.com/history-of-the-chatbot-123479024/).
 
-Watson was a project developed from 2004 to 2011 by IBM to beat the best humans at the television game show Jeopardy! (https://medium.com/@giacaglia/how-ibm-watson-works-40d8d5185ac8)
+Furthermore, up to the 1980s, most NLP systems were based on complex sets of hand-written rules. Starting in the late 1980s, however, there was a revolution in NLP with the introduction of machine learning(ML) algorithms for language processing [[4]](https://medium.datadriveninvestor.com/the-brief-history-of-nlp-c90f331b6ad7).Watson was a project developed from 2004 to 2011 by IBM to beat the best humans at the television game show Jeopardy! [[5]](https://medium.com/@giacaglia/how-ibm-watson-works-40d8d5185ac8).
 
-While the grand challenge driving the project was to win on Jeopardy! The broader goal of Watson was to create a new generation of technology that can find answers in unstructured data more effectively than standard search technology. 
-(https://www.ibm.com/ibm/history/ibm100/us/en/icons/watson/)
+While the grand challenge driving the project was to win on Jeopardy! The broader goal of Watson was to create a new generation of technology that can find answers in unstructured data more effectively than standard search technology [[6]](https://www.ibm.com/ibm/history/ibm100/us/en/icons/watson/).
 
-Before deep learning became the go-to solution for most of the machine learning problems, Watson represented the peak of the use of probabilistic reasoning. Currently, much natural language processing research has relied heavily on ML and also relying even more on ML because of the big breakthrough the now-famous subfield of ML called Deep Learning(DL) (https://medium.datadriveninvestor.com/the-brief-history-of-nlp-c90f331b6ad7).
+Before deep learning became the go-to solution for most of the machine learning problems, Watson represented the peak of the use of probabilistic reasoning. Currently, much natural language processing research has relied heavily on ML and also relying even more on ML because of the big breakthrough the now-famous subfield of ML called Deep Learning(DL) [[7]](https://medium.datadriveninvestor.com/the-brief-history-of-nlp-c90f331b6ad7).
 
 NLP is the AI technique underlying chatbots that trigger interactions with humans in natural language. (Gaming Chatbots for Next-Level In-Game Experience (oodles.io). AI uses machine learning algorithm to inherent human reasoning and logic required to play the game efficiently. The earliest recorded use of AI in video games dates back to 1987 when AI mainly responded to certain actions encoded into the games as well as some random moves. Currently, the kind of self-learning AI which is deep learning subset of the broader machine learning revolution has led to advances in self-driving cars, computer vision and NLP hasn’t really blend over into commercial game development. Advance gaming technologies such as virtual reality and augmented reality are augmenting the demand for AI chatbots more than ever (Gaming Chatbots for Next-Level In-Game Experience (oodles.io).
 
 ## Business Pitch
 
-One of the critical challenges for gaming companies is to attract and retain users. AI offers unique retention and player acquisition solutions to these companies. It provides immersive experiences to engage gamers. In order to engage more gamers, video gaming industry is pushing businesses away from being product-centric to becoming experience-oriented platforms. (https://newsroom.accenture.com/news/global-gaming-industry-value-now-exceeds-300-billion-new-accenture-report-finds.htm). That’s why digital customer experience is vital to a game's popularity. To address the above challenge, XBroca helps companies to enhance their customers’ experiences and their online interactions by providing human-like interactions between players and machines. We are revolutionizing the gaming industry with captivating gaming experience that can’t be achieved on any other platform. In XBroca the ultimate goal is to enhance player real-time interactions with animated game characters to initiate human-like conversation between players and machines. 
+One of the critical challenges for gaming companies is to attract and retain users. AI offers unique retention and player acquisition solutions to these companies. It provides immersive experiences to engage gamers. In order to engage more gamers, video gaming industry is pushing businesses away from being product-centric to becoming experience-oriented platforms[[8]](https://newsroom.accenture.com/news/global-gaming-industry-value-now-exceeds-300-billion-new-accenture-report-finds.htm). That’s why digital customer experience is vital to a game's popularity. To address the above challenge, XBroca helps companies to enhance their customers’ experiences and their online interactions by providing human-like interactions between players and machines. We are revolutionizing the gaming industry with captivating gaming experience that can’t be achieved on any other platform. In XBroca the ultimate goal is to enhance player real-time interactions with animated game characters to initiate human-like conversation between players and machines. 
 
 Our technology adds three new features to your video games: 
 
@@ -36,13 +41,17 @@ Our technology adds three new features to your video games:
 
 ## Video Gaming Industry Overview
 
-Video gaming is one of the most popular hobbies cited by people around the globe. The video gaming industry reached $180 billion in 2020 with the growth rate of 20%. (https://www.forbes.com/sites/forbesbusinesscouncil/2021/03/16/why-the-gaming-industry-could-be-the-new-social-media/?sh=700ccf738f3a). In a new study conducted by Accenture, it is estimated that the full value of the gaming industry now exceeds $ 300 billion. (https://newsroom.accenture.com/news/global-gaming-industry-value-now-exceeds-300-billion-new-accenture-report-finds.htm). 
+Video gaming is one of the most popular hobbies cited by people around the globe. The video gaming industry reached $180 billion in 2020 with the growth rate of 20% [[9]](https://www.forbes.com/sites/forbesbusinesscouncil/2021/03/16/why-the-gaming-industry-could-be-the-new-social-media/?sh=700ccf738f3a). In a new study conducted by Accenture, it is estimated that the full value of the gaming industry now exceeds $ 300 billion [[10]](https://newsroom.accenture.com/news/global-gaming-industry-value-now-exceeds-300-billion-new-accenture-report-finds.htm). 
 
-![](./resources/ba-revenue.png)
+<p align="center">
+  <img width="700" height="550" src="./resources/ba-revenue.png">
+  <a href="https://www.futurewiseresearch.com/healthcare-market-research/Protein-Sequencing-Market/3383" target="_blank">Source</a>
+ </p>
 
-There are plenty of people who play video games as hobby, there are may who play professionally. In fact, with the development of video game platforms, people can also connect with each other in a way they have never been able to before. The gaming industry has increased by half a billion players in the past three years, totaling 2.7 billion people globally. For instance, Twitch has 15 million daily users and Discord sees over 140 million monthly users. The market research predicts more than 400 million new gamers are expected by the end of 2023. (https://newsroom.accenture.com/news/global-gaming-industry-value-now-exceeds-300-billion-new-accenture-report-finds.htm)
 
-In response to this demand, Google and Microsoft announced their own cloud gaming services. This means that players can stream games as easily as streaming a movie. (https://www.loginradius.com/blog/fuel/improving-customer-experience-in-the-gaming-industry/). Amazon has already mentioned its interest in developing an Amazon Games feature as a way to be part of this ever-expanding gaming industry, adding to its acquisition of Twitch several years ago. (https://www.forbes.com/sites/forbesbusinesscouncil/2021/03/16/why-the-gaming-industry-could-be-the-new-social-media/?sh=700ccf738f3a). 
+There are plenty of people who play video games as hobby, there are may who play professionally. In fact, with the development of video game platforms, people can also connect with each other in a way they have never been able to before. The gaming industry has increased by half a billion players in the past three years, totaling 2.7 billion people globally. For instance, Twitch has 15 million daily users and Discord sees over 140 million monthly users. The market research predicts more than 400 million new gamers are expected by the end of 2023 [[11]](https://newsroom.accenture.com/news/global-gaming-industry-value-now-exceeds-300-billion-new-accenture-report-finds.htm).
+
+In response to this demand, Google and Microsoft announced their own cloud gaming services. This means that players can stream games as easily as streaming a movie. [[12]](https://www.loginradius.com/blog/fuel/improving-customer-experience-in-the-gaming-industry/). Amazon has already mentioned its interest in developing an Amazon Games feature as a way to be part of this ever-expanding gaming industry, adding to its acquisition of Twitch several years ago [[13]](https://www.forbes.com/sites/forbesbusinesscouncil/2021/03/16/why-the-gaming-industry-could-be-the-new-social-media/?sh=700ccf738f3a). 
 
 ## Competitors
 The NLP market is getting increasingly competitive. Here there are top players according to the recent studies. 
@@ -80,19 +89,32 @@ Video gaming industry is selling products that are subject to difference in regi
 |3|Japan|$ 24 billion| 12%|3%|
 |4|United Kingdom|$ 7 billion|3%|1%|
 
-Source: https://www.accenture.com/us-en/insights/software-platforms/gaming-the-next-super-platform?c=acn_glb_thenewgamingexpbusinesswire_12160747&n=mrl_0421
+[Source](https://www.accenture.com/us-en/insights/software-platforms/gaming-the-next-super-platform?c=acn_glb_thenewgamingexpbusinesswire_12160747&n=mrl_0421)
 
 
 ## Market drivers
 
-Widespread adoption of smartphones globally is bringing in new players to the gaming world. And mobile will continue to enable new opportunities within gaming that simply didn’t exist even just a few years ago. But rather than cannibalizing existing markets for console and PC gaming, the industry has adapted by increasingly emphasizing gaming’s social dimension. As this happens, we’re seeing new levels of engagement, with different groups turning to online competition. In order to realize its full potential, the gaming industry must balance the needs of its newest adopters – and the 400 million new gamers expected within the next few years – with the expectations of historical gaming loyalists, many of whom are still the industry’s most lucrative customers. (https://www.accenture.com/us-en/insights/software-platforms/gaming-the-next-super-platform?c=acn_glb_thenewgamingexpbusinesswire_12160747&n=mrl_0421)
+Widespread adoption of smartphones globally is bringing in new players to the gaming world. And mobile will continue to enable new opportunities within gaming that simply didn’t exist even just a few years ago. But rather than cannibalizing existing markets for console and PC gaming, the industry has adapted by increasingly emphasizing gaming’s social dimension. As this happens, we’re seeing new levels of engagement, with different groups turning to online competition. In order to realize its full potential, the gaming industry must balance the needs of its newest adopters – and the 400 million new gamers expected within the next few years – with the expectations of historical gaming loyalists, many of whom are still the industry’s most lucrative customers [[15]](https://www.accenture.com/us-en/insights/software-platforms/gaming-the-next-super-platform?c=acn_glb_thenewgamingexpbusinesswire_12160747&n=mrl_0421)
 
 
-For each weekly project, your team is asked to complete the below business application exercise.
-To complement the technical tasks, please consdier the four questions below.
-You are free to format your response to these four questions as you wish (with the final question done as a short recorded video), and to include
-the content (or links to the content) on your forked repository.
+## REFERENCES
+
+1. [History of NLP-Medium](https://medium.datadriveninvestor.com/the-brief-history-of-nlp-c90f331b6ad)
+2. [Turing test-Medium](https://medium.datadriveninvestor.com/the-brief-history-of-nlp-c90f331b6ad7)
+3. [Chatbot](https://www.information-age.com/history-of-the-chatbot-123479024/)
+4. [Machine learning-Mediu](https://medium.datadriveninvestor.com/the-brief-history-of-nlp-c90f331b6ad7)
+5. [Watson-Medium](https://medium.com/@giacaglia/how-ibm-watson-works-40d8d5185ac8)
+6. [Watson-IBM](https://www.ibm.com/ibm/history/ibm100/us/en/icons/watson/)
+7. [Deep learning](https://medium.datadriveninvestor.com/the-brief-history-of-nlp-c90f331b6ad7)
+8. [Video gaming industry](https://newsroom.accenture.com/news/global-gaming-industry-value-now-exceeds-300-billion-new-accenture-report-finds.htm)
+9. [Demanad in video gaming industry-Forbes](https://www.forbes.com/sites/forbesbusinesscouncil/2021/03/16/why-the-gaming-industry-could-be-the-new-social-media/?sh=700ccf738f3a)
+10. [Video gaming market size](https://newsroom.accenture.com/news/global-gaming-industry-value-now-exceeds-300-billion-new-accenture-report-finds.htm)
+11. [Video gaming industry-users](https://newsroom.accenture.com/news/global-gaming-industry-value-now-exceeds-300-billion-new-accenture-report-finds.htm)
+12. [Video gaming industry-players](https://www.loginradius.com/blog/fuel/improving-customer-experience-in-the-gaming-industry/)
+13. [Video gaming industry-Competitors-Forbes](https://www.forbes.com/sites/forbesbusinesscouncil/2021/03/16/why-the-gaming-industry-could-be-the-new-social-media/?sh=700ccf738f3a)
+14. [Geographic market segmentation-Accenture](https://www.accenture.com/us-en/insights/software-platforms/gaming-the-next-super-platform?c=acn_glb_thenewgamingexpbusinesswire_12160747&n=mrl_0421)
+15. [Market drivers-Accenture](https://www.accenture.com/us-en/insights/software-platforms/gaming-the-next-super-platform?c=acn_glb_thenewgamingexpbusinesswire_12160747&n=mrl_0421)
 
 ## Video 
 
-Please see our video [here]().
+Please see our video [here](https://youtu.be/AUTOd1t-Pbg).
