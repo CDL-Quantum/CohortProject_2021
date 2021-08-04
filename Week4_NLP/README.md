@@ -65,7 +65,7 @@ With help by Real IBMQ machine, we were able to generate the probability distrib
 | GHZ |  72% |
 | 4-GHZ | 66% |
 
-As we increase the party, the enganglement decohere. 
+As we increase the parity, the entangelment decohere. 
 
 ## E4
 
