@@ -18,7 +18,7 @@ For each week, your team is asked to complete a Business Application. Questions 
 For more details refer to the [Business Application found here](./Business_Application.md)
  
  
-  
+   
   
  
   
