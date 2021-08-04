@@ -3,9 +3,7 @@
 
 This project will guide you through running your own QNLP experiment. 
 
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week4_NLP/instructions.pdf) to begin learning about your tasks for this week!
-
-**Please edit this markdown file directly with links to your completed tasks and challenges.**
+Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week4_NLP/instructions.pdf) for the assignment.
 
 ## Task 1
 
