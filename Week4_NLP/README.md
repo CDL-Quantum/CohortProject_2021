@@ -74,14 +74,6 @@ We solved this using the previous formulation. The resulting diagram is shown he
 
 ![Charlie and Diane Cat Ate Mouse](./resources/charlie-cat-ate-diane-mouse.png)
 
-**Reading:** Check out Lambek's From word to sentence, pick your favorite example and implement it in DisCoPy.
-
-We took the following phrase from [wikipedia article](https://en.wikipedia.org/wiki/Pregroup_grammar) on context-free grammar and implemented it:
-
-|  |  | 
-| - | - | 
-| ![Representation](./resources/wiki-dog.png) | ![Representation](./resources/wiki-dog-graph.png) |
-
 ## Task 2
 
 We built a spam detector. The notebook can be found [here](./Task_2_and_3_QNLP_Experiment.ipynb) which contains the work for both task 2 and 3.
@@ -98,7 +90,7 @@ We show our resulting diagrams here. On the left is the english word representat
 
 Task 3 notebook can be found [here](./Task_2_and_3_QNLP_Experiment.ipynb) (please scroll down in the notebook).
 
-This is running the experiment from task 2 with the quantum circuit.
+This is running the experiment from task 2 with the quantum circuit.  Below is the learning curves of cost and accuracy for each set.  Running on a specific set of data our model calculates a score based on the output of the quantum circuit.  Scores of ~1 represent correct sentences, and zero represents spam cases.
 
 We did training and we show the learning curve (training set, the development curve and the testing curve).
 
