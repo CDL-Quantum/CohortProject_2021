@@ -84,11 +84,11 @@ As we increase the number of qubits, some decoherence occurs and the accuracy go
 This task is about exploring more complex and different grammar structures.
 
 First, we take a look at the Japense, we write the sentence Hanako ga tegami o kaita, which means Hanako has wrote a letter, [reference](https://aclanthology.org/Y07-1009.pdf).
-<p align="center"><img src="./figures/japan.png"width=200/></p>
+<p align="center"><img src="./imgs/japan.png"width=200/></p>
 <p align="center"><img src="./figures/f4-1.png"width=1000/></p>
 
 Secondly we look into arabic with the sentence ġadara ahmad al-madinah, which means ahmad left the city [reference](https://www.researchgate.net/publication/326268380_Parsing_Arabic_Verb_Phrases_Using_Pregroup_Grammars).
-<p align="center"><img src="./figures/arabicFlag.png"width=200/></p>
+<p align="center"><img src="./imgs/arabicFlag.png"width=200/></p>
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f4-2.png"width=1000/></p>
 
 Then from Lambek's paper [From word to sentence](https://www.math.mcgill.ca/barr/lambek/pdffiles/2008lambek.pdf), we implement "I see you saw her", which we chose because of the nested sentence.
