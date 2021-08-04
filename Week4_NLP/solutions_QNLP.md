@@ -64,13 +64,48 @@ A **sentence** is done composing a Noun with a Verb with a Noun, an example is s
 
 ## Training Process
 
-## results
+There is a class imbalance between the True sentences (13) and the False sentences (36). We take 9 samples (~75%) of each class as training data. We therefore have 18 samples for training and 31 for testing. Training data examples :
+- Earth is round :  1
+- round is Earth :  1
+- Antartic is Antartic :  1
+- north is north :  1
+- flat is flat :  1
+- Antartic is south :  1
+- south is Antartic :  1
+- round is round :  1
+- north is Artic :  1
+- Artic is Antartic :  0
+- Earth is Antartic :  0
+- flat is round :  0
+- south is round :  0
+- north is Earth :  0
+- south is north :  0
+- Earth is flat :  0
+- Antartic is flat :  0
+- flat is Artic :  0
 
-Each word is encoded into a generic 1-qubit state, in the form psi = a |0> + b |1> with a,b complex number and (a,b) L2 norm = 1. We can plot any qubit into the bloch sphere (fig on the left). We do map the resulting qubit encoding to bloch coordinates for each noun and plot it in the diagram below, in the projection that shows the best information. What we can observe as general rules of thumb is that :
-1. similar concept are close together (e.g. "earth" is close to "round", "Artic" is close to "North")
-2. opposite concepts are on the oposite side of the circle (e.g. "north" is away from "south", "round" is away from "flat"
-3. unrelated concepts are orthogonal (e.g. "earth "and "north", "antartic" and "flat")
+We define the loss function to optimise as the Binary Cross Entropy, which is very common for binary classification task. Essentially for data point we add the logarithm of the probability of guessing the label right. It yields the following formula, where yt are the true labels and yp are the predicted label :
 
+C = - ( yt * log(yp) + (1 - yp) * log ( 1- yp ) )
+
+An additional metric we monitor is the accuracy, which is essentially  the percentage of correctly guessed labels.
+
+On the below graph we show how this metrics progress as iterations go by, for the training set on the left and the testing set on the right
+
+<center>
+<table>
+        <tr>
+            <td><img src="imgs/51_train.png"></td>
+            <td><img src="imgs/52_test.png"></td>
+        </tr>
+</table>
+</center>
+
+Even though the testing test shows overall a lower accuracy, there is no obvious overfitting, and the optimisation algorithm shows a reasonable convergence.
+
+## Results Display and Analysis
+
+As a result of the training process we have learned rotation parameters for each word. In particular each Noun is encoded into a generic 1-qubit state, in the form psi = a |0> + b |1>. We can display any qubit into the bloch sphere (on the left in the figure below). We evaluate the diagram for each Noun and map the resulting qubit encoding to the bloch coordinates for each noun. The results are plotted it in the diagram below, in a projection chosen by hand that shows the best information
 <center>
 <table>
         <tr>
@@ -80,7 +115,23 @@ Each word is encoded into a generic 1-qubit state, in the form psi = a |0> + b |
 </table>
 </center>
 
+. What we can observe as general rules of thumb is that :
+1. similar concept are close together (e.g. "earth" is close to "round", "Artic" is close to "North")
+2. opposite concepts are on the oposite side of the circle (e.g. "north" is away from "south", "round" is away from "flat"
+3. unrelated concepts are orthogonal (e.g. "earth "and "north", "antartic" and "flat")
 
+We also display the similarity between all words in the heatmap below
+<center>
+<table>
+        <tr>
+            <td><img src="imgs/70_matrix.png"></td>
+        </tr>
+</table>
+</center>
+
+## Discussion
+degrees of freedom.
+not complex grammar structures
 
 
 
