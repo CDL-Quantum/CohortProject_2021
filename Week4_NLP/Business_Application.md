@@ -75,6 +75,21 @@ It seems, there is a need to make virtual assistants human-like by bringing emot
 
 **The solution:** we make virtual assistants truly emotional with our QNLP hybrid algorithms as more accurate text, text to speech and voice to text sentiment analysis capabilities can be provided than with classical machine learning.  
 
+<center>
+<table>
+        <tr>
+            <td><img src="imgs/61_bloch.png"></td>
+            <td><img src="imgs/60_word_circle.png"></td>
+        </tr>
+</table>
+</center>
+
+From our QNLP work we can observe as a general rule of a thumb that:
+
+* similar concepts are close together (e.g. "earth" is close to "round", "Artic" is close to "North"). We can expect that feelings like Joyful and happy would fall into this category.
+* opposite concepts are on the oposite side of the circle (e.g. "north" is away from "south", "round" is away from "flat". Feelings like angry and happy should be opposing each other. 
+* unrelated concepts are orthogonal (e.g. "earth "and "north", "antartic" and "flat"). We expect emotional concepts to be unrelated to appraisal dimensions such as valence and arousal.
+
 **The current state:** The AI models used by the Azure Text Analytics API for instance are provided and trained by Microsoft and ready to use. Sentiment Analysis is staged on the entire offered text, instead of words in it, and it produces a more refined result when evaluating smaller pieces of text. Ideally, text size must be under 5,120 characters and returned document labels are positive, negative, neutral and mixed [10].
 
 Generative Pre-trained Transformer 3 (GPT-3) is an autoregressive language model that uses deep learning to produce human-like text. It is the third-generation language prediction model in the GPT-n series created by OpenAI. GPT-3's full version has a capacity of 175 billion machine learning parameters. GPT-3 is part of a trend in natural language processing (NLP) systems of pre-trained language representations. Before the release of GPT-3, the largest language model was Microsoft's Turing NLG with a capacity of 17 billion parameters.
