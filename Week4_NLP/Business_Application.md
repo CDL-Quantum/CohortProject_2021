@@ -83,7 +83,7 @@ Sentiment classification is available via OpenAI’s GPT-3 API and in true GPT-3
 
 **Business model:** SaaS.
 
-**Veticals:** consumer electronics, automotive, banking, call centers
+**Verticals:** consumer electronics, automotive, banking, call centers
 
 **Market:** The global intelligent virtual assistant market size was valued at USD 5.82 billion in 2020. It is expected to expand at a compound annual growth rate (CAGR) of 28.5% from 2021 to 2028). In terms of market size, North America dominated the market for intelligent virtual assistants with a revenue share of 43.94% in 2020 [6].
 
@@ -126,15 +126,15 @@ The text to speech segment dominated the intelligent virtual assistant market wi
 
  **The market:** dominated by large tech companies with vast R&D capacity and highly skilled workforce. Apple has started building emotional abilities in Siri [8].
 
-**Value proposition:** comes from quantum enhanced NLP. As we have shown, quantum implementation of DisCoCat leads to exponential reduction of space resources as compared to implementations on classical hardware, reflects the nativeness of density matrices, and gives quantum advantage of quantum algorithms typical NLP tasks such as classification.
-
-**Advantage:** Our strength lies in our quantum enhanced NLP algorithms and highly skilled team with machine learning expertise from academia and industry of more than 10 years of combined experience.
+**Value proposition:** comes from quantum enhanced NLP. Quantum implementation of DisCoCat leads to exponential reduction of resources necessary for the implementation of grammar compared to implementations on classical hardware while removing the black box effect of deep learning. The quantum advantage of QNLP comes from the fact that grammar can be translated into tensor operations which are native to quantum hardware. QNLP enables tasks such as classification, question answering and transformations (translations, summarisation).
+**Advantage:** Our strength lies in our quantum enhanced NLP algorithms and highly skilled team with machine learning combined experience from academia and industry of more than 10 years. We are driven by the belief that quantum truly represents complex systems and by doing so assists mankind in creating solutions to problems we were not able to solve before. We love helping people to have a better life.
 
 **Customers:**
 * **Auto:** Tesla ($25 billion/2019)
 * **Consumer electronics:** Apple ($260 billion/2019), Samsung ($222 billion/2018), Microsoft ($143 billion/2020)
 
 ## Conclusion 
+
 
 ## References
 [1] [Coecke, B. et al. Quantum Natural Language Processing](http://www.cs.ox.ac.uk/people/bob.coecke/QNLP-ACT.pdf)
