@@ -8,7 +8,7 @@ For more details refer to the [Business Application found here](./Business_Appli
 #working on it
 
 ## E1
-Our task was trying to generate Chocolate Mousse [Ref](https://www.recipetineats.com/chocolate-mousse/). 
+Our task was to generate Chocolate Mousse [Ref](https://www.recipetineats.com/chocolate-mousse/). 
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f1.png"width=1000/></p>
 
