@@ -156,7 +156,8 @@ We have demonstrated that quantum implementation of DisCoCat leads to exponentia
 
 Our strength lies in our quantum enhanced NLP algorithms and highly skilled team. We have machine learning combined experience from academia and industry of more than 10 years. We are driven by the belief that quantum truly represents complex systems and by doing so assists mankind in creating solutions to problems we were not able to solve before. We love helping people to have a better life by humanizing an increasingly digitized world: "Hello Eva, I am happy!"
 
-
+## Presentation
+Video presentation can be found [here](https://youtu.be/U1zbx987zgI)
 
 ## References
 [1] [Coecke, B. et al. Quantum Natural Language Processing](http://www.cs.ox.ac.uk/people/bob.coecke/QNLP-ACT.pdf)
