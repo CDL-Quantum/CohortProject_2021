@@ -185,7 +185,9 @@ Video presentation can be found [here](https://youtu.be/U1zbx987zgI)
 [12] [Using GPT-3 To Measure Sentiment. And How To Add User Sentiment](https://cobusgreyling.medium.com/using-gpt-3-to-measure-sentiment-9b234db37731). Accessed August 3, 2021. 
  
 **The video can be found [here](https://youtu.be/U1zbx987zgI)**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/U1zbx987zgI"></iframe>
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=U1zbx987zgI">
+</iframe>
 
 **table of contents**
 
