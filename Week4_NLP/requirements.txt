@@ -6,4 +6,5 @@ discopy
 noisyopt
 matplotlib
 pytket
+pytket-qiskit
 qiskit
