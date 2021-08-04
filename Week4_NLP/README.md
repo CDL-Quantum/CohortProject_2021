@@ -57,15 +57,15 @@ For this excerise, we accomplish three different generation, bell state, GHZ sta
      </tr>
  </table>
  
-With help by Real IBMQ machine, we were able to generate the probability distribution of those states. From quick calculation, we picked first |00...0> value to calculate the accuracy of the state.
+With help of Real IBMQ machine, we were able to generate the probability distribution of those states. From quick calculation, we picked first |00...0> value to calculate the accuracy of the state.
 
-| STate | Accuracy  |
+| State | Accuracy  |
 | :---: |  :---: |
 | Bell |  81% |
 | GHZ |  72% |
 | 4-GHZ | 66% |
 
-As we increase the parity, the entangelment decohere. 
+As we increase the parity, the entangelment decoheres. 
 
 ## E4
 
