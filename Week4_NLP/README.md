@@ -7,3 +7,7 @@
 2. For the Solution to the tutorial (Task 1), please refer to the [tutorial solution found here](./solutions_tutorial.md)
 3. For the custom QNLP pipeline (Task 2 + Task 3), please refer to the [QNLP solution found here](./solutions_QNLP.md)
 
+## Presentation
+**The pitch video can be found [here](https://youtu.be/U1zbx987zgI)**
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/U1zbx987zgI/0.jpg)](http://www.youtube.com/watch?v=U1zbx987zgI "Video Title")
