@@ -102,6 +102,7 @@ Widespread adoption of smartphones globally is bringing in new players to the ga
 
 
 ## Video 
+This video explains the value proposition of our innovation to the potential customers:
 
 Please see our video [here](https://youtu.be/AUTOd1t-Pbg).
 
