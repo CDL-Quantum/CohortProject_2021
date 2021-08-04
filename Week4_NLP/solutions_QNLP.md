@@ -24,11 +24,45 @@ The problem we are going to solve is to build a model to classify sentences into
 </table>
 </center>
 
-Our initial Idea was to work on the above dataset but the complexity of the task lead us to reduce it to a simpler problem with 7 nouns ('Earth', 'Antartic', 'Artic', 'north', 'south', 'flat', 'round') and one verb ('is'). We created a tool to label training data and store it, with two options : brute force or random.
+Our initial Idea was to work on the above dataset but the complexity of the task lead us to reduce it to a simpler problem with 7 nouns ('Earth', 'Antartic', 'Artic', 'north', 'south', 'flat', 'round') and one verb ('is'). We created a tool to easily label training data manually and store it, with two options : brute force or random. We use the Brute Force one for the Training.=, which means we have all the combination of word x word = 7 x 7 = 49.
 
-## From Diagram to Quantum
+## From Diagrams to Quantum Circuits
 
-## training
+We define an ansatz for 
+
+* **Nouns** with three real parameters reprenting the three Euler rotations Rx(p0) >> Rz(p1) >> Rx(p2). An example with random parameters is shown for the Noun "Earth", with the diagram on the left and the quantum circuit on the right.
+<center>
+<table>
+        <tr>
+            <td><img src="imgs/22_earth.png"></td>
+            <td><img src="imgs/21_earth.png"></td>
+        </tr>
+</table>
+</center>
+
+* **Verbs** more specifically the only transitive verb in our semantic space "is". We define a generic U4 unitary as an ansatz with six real parameters. The verb is is shown below, with the diagram on the left and the quantum circuit on the right.
+<center>
+<table>
+        <tr>
+            <td><img src="imgs/31_is.png"></td>
+            <td><img src="imgs/32_is.png"></td>
+        </tr>
+</table>
+</center>
+
+A **sentence** is done composing a Noun with a Verb with a Noun, an example is shown below, with the diagram on the top and the quantum circuit on the bottom.
+<center>
+<table>
+        <tr>
+            <td><img src="imgs/41_sentence.png"></td>
+        </tr>
+        <tr>
+            <td><img src="imgs/42_sentence.png"></td>
+        </tr>
+</table>
+</center>
+
+## Training Process
 
 ## results
 
