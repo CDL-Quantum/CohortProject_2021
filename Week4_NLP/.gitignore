@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# custom
+intermediate_notebooks/
+
 # C extensions
 *.so
 
