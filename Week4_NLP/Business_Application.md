@@ -81,16 +81,7 @@ As we can see from the graphs below, our QNLP work shows as a general rule of a 
 * opposite concepts are on the oposite side of the circle (e.g. "north" is away from "south", "round" is away from "flat". We could expect that feelings like angry and happy would oppose each other, hence produce opposing expression. 
 * unrelated concepts are orthogonal (e.g. "earth "and "north", "antartic" and "flat"). We could expect that emotional concepts (joy, sadness, etc) to be unrelated to appraisal dimensions such as valence and arousal.
 
-<center>
-<table>
-        <tr>
-            <td><img src="imgs/61_bloch.png"width="400"></td>
-            <td><img src="imgs/60_word_circle.png"width="400"></td>
-        </tr>
-</table>
-</center>
-
-<p align="center"><img src=""imgs/60_word_circle.png"width="400"></p>
+<p align="center"><img src=""https://github.com/alice4space/CohortProject_2021/blob/92c8cd663afe7b594a0ed49b1a577e487240f07d/Week4_NLP/imgs/60_word_circle.png"width="400"></p>
 
 
 **The current state:** The AI models used by the Azure Text Analytics API for instance are provided and trained by Microsoft and ready to use. Sentiment Analysis is staged on the entire offered text, instead of words in it, and it produces a more refined result when evaluating smaller pieces of text. Ideally, text size must be under 5,120 characters and returned document labels are positive, negative, neutral and mixed [10].
