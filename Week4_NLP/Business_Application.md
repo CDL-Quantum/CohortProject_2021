@@ -1,6 +1,6 @@
 ![CDL 2021 Cohort Project](../figures/CDL_logo.jpg)
-# XBroca: Quantum Cohort Project Business Application
-
+# Business Application: QNLP & Video Gaming Industry
+# XBroca
 <p align="center">
   <img width="1000" height="400" src="./resources/ba-game-console.png">
   <a href="https://www.futurewiseresearch.com/healthcare-market-research/Protein-Sequencing-Market/3383" target="_blank">Source</a>
