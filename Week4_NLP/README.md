@@ -39,37 +39,6 @@ We built logic to create a pancake recipe. Our resulting output is shown below:
 
 ![Pancakes](./resources/pancakes.png)
 
-**Exercise:** Define a functor that translate your favorite language to English, try composing it with `english2french`.
-
-Not yet completed.
-
-**Exercise:** Define a `french2english` functor, check that it's the inverse of `english2french` on a small example.
-
-Not yet completed.
-
-### Section 2 
-
-**Exercise:** Check out the [diagram rewriting](https://discopy.readthedocs.io/en/main/notebooks/rewriting-diagrams.html) notebook to learn how to remove snakes from a diagram. This can greatly speed up the evaluation of tensor diagrams!
-
-We implemented this and show the result below:
-
-**Exercise:** Define a function that takes a number `n` and returns the diagram for a [matrix product state](https://en.wikipedia.org/wiki/Matrix_product_state) (MPS) with `n` particles and random entries. Check how the evaluation time scales with the size of the diagram. 
-
-Not yet completed.
-
-**Exercise:** Pip install the [tensornetwork](https://pypi.org/project/tensornetwork/) library and use it to contract the MPS diagrams more efficiently. This is done with the syntax `diagram.eval(contractor=tn.contractor.auto)`, see the [docs](https://discopy.readthedocs.io/en/main/_autosummary/discopy.tensor.Diagram.html#discopy.tensor.Diagram.eval).
-
-Not yet completed.
-
-### Section 3
-
-Not completed.
-
-**Exercise:** Run your own Bell experiment on quantum hardware! You can use IBMQ machines for free, if you're ready to wait.
-
-**Exercise:** Draw a circuit that evaluates to the GHZ state $\frac{1}{\sqrt{2}} (|000\rangle + |111\rangle)$.
-
-**Exercise (harder):** Define a function that takes a number `n` and returns a circuit for the  state $\frac{1}{\sqrt{2}} (|0...0\rangle + |1...1\rangle)$.
 
 ### Section 4
 
@@ -107,10 +76,6 @@ We solved this using the previous formulation. The resulting diagram is shown he
 
 ![Charlie and Diane Cat Ate Mouse](./resources/charlie-cat-ate-diane-mouse.png)
 
-### Section 5
-
-Not done
-
 ## Task 2
 
 We built a spam detector. The notebook can be found [here](./Task_2_and_3_QNLP_Experiment.ipynb) which contains the work for both task 2 and 3.
@@ -137,11 +102,5 @@ We did training and we show the learning curve (training set, the development cu
 
 
 ## Business Application
-For each week, your team is asked to complete a Business Application. Questions you will be asked are:
 
-* Explain to a layperson the technical problem you solved in this exercise.
-* Explain or provide examples of the types of real-world problems this solution can solve.
-* Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved.
-* Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language.
-
-For more details refer to the [Business Application found here](./Business_Application.md)
+Please refer to the Business Application [found here](./Business_Application.md).
