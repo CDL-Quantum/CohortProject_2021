@@ -1,13 +1,17 @@
 ![CDL 2021 Cohort Project](../figures/CDL_logo.jpg)
 ## Project 4: NLP: Natural Language Processing on a Quantum Computer 
 
-For more details refer to the [Business Application found here](./Business_Application.md)
+**table of contents**
+
+1. To go back to the Readme [please click here](./README.md)
+2. To explore Business use cases, please refer to the [Business Application found here](./Business_Application.md)
+3. To explore the custom QNLP pipeline (Task 2 + Task 3), please refer to the [QNLP solution found here](./solutions_QNLP.md)
 
 # Technical Assignment : Tutorial
 
 ## Task 1
 
-** Reference Code ** :[Tutorial-Part1](qnlp-tutorial-Part1.ipynb)
+**Reference Code** :[Tutorial-Part1](qnlp-tutorial-Part1.ipynb)
 
 Our task was to generate Chocolate Mousse recipe
 
@@ -35,7 +39,7 @@ Our research is funded by international tiramisu & choc mousse Association (ITCM
 
 ## Task 2
 
-** Reference Code ** :[Tutorial-Part2](qnlp-tutorial-Part2.ipynb)
+**Reference Code** :[Tutorial-Part2](qnlp-tutorial-Part2.ipynb)
 
 <table align="center">
     <tr>
@@ -48,7 +52,7 @@ As we increase the tensor size, we can see exponetial increase of the time (left
 
 ### Task 3
 
-** Reference Code ** :[Tutorial-Part3](qnlp-tutorial-Part3.ipynb)
+**Reference Code** :[Tutorial-Part3](qnlp-tutorial-Part3.ipynb)
 
 For this excerise, we accomplish three different generation, bell state, GHZ state, and N-GHZ state. 
 
@@ -72,7 +76,7 @@ As we increase the parity, the entangelment decoheres.
 
 ## Task 4
 
-** Reference Code ** :[Tutorial-Part4](qnlp-tutorial-Part4.ipynb)
+**Reference Code** :[Tutorial-Part4](qnlp-tutorial-Part4.ipynb)
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f4-1.png"width=1000/></p>
 
@@ -100,4 +104,11 @@ Using the tensor, we further look at the statement including Charlie and Diane. 
 
 ## Task 5
 
-** Reference Code ** :[Tutorial-Part5](qnlp-tutorial-Part5.ipynb)
+**Reference Code** :[Tutorial-Part5](qnlp-tutorial-Part5.ipynb)
+
+
+**table of contents**
+
+1. To go back to the Readme [please click here](./README.md)
+2. To explore Business use cases, please refer to the [Business Application found here](./Business_Application.md)
+3. To explore the custom QNLP pipeline (Task 2 + Task 3), please refer to the [QNLP solution found here](./solutions_QNLP.md)
