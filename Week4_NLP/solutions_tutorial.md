@@ -14,7 +14,7 @@
 **Reference Code** :[Tutorial-Part1](qnlp-tutorial-Part1.ipynb)
 
 Our task was to write the recipe of our favorite recipe, and chose chocolate mousse (who doesnt like it ?).
-<p align="center"><img src="./figures/chocmousse.jpg"width=200/></p>
+<p align="center"><img src="./imgs/chocmousse.jpg"width=200/></p>
 <p align="center"><img src="./figures/f1.png"width=1000/></p>
 
 
@@ -99,7 +99,7 @@ We now look at the task of text binary classification, we create a ver small sem
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f4-4.png"width=1000/></p>
 
-Starting from the example Alice loves Bob, we expand our semantic space by including Charlie and Diane, and implement a love diagram inspired from the famous Shakespear play a midsummer nightdream, where Alice loves Bob who loves Charlie who loves Diane who loves Alice. We can evaluate a incomplete sentence and check it is equivalent to a word. 
+Starting from the example Alice loves Bob, we expand our semantic space by including Charlie and Diane, and implement a love diagram inspired from the famous Shakespeare play a midsummer nightdream, where Alice loves Bob who loves Charlie who loves Diane who loves Alice. We can evaluate a incomplete sentence and check it is equivalent to a word. 
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f4-5.png"width=1000/></p>
 
@@ -107,7 +107,18 @@ Starting from the example Alice loves Bob, we expand our semantic space by inclu
 ## Task 5
 
 **Reference Code** :[Tutorial-Part5](qnlp-tutorial-Part5.ipynb)
+The task we gave ourselves was to define the functor corresponding to the midsummer nightdream case into a 2 qubit statespace with the logic below on the left. We would then have have tested the truth of more complicated sentences such as "Alice loves Bob who loves Charlie" see below on the right, evaluatingg them using the `Aerbackend`
 
+<table align="center">
+    <tr>
+        <td><img src="./imgs/love_matrix.png" width="500"></td>
+        <td><img src="./imgs/complex_alicelovesbob.png" width="500"></td>
+     </tr>
+ </table>
+ 
+We failed at representing the "loves" verb in that multidimensional statespace using the `discopy` library, but know that the following maximally entangled state woud have been needed : x = |0001> + |0110> + |1011> + |1100>.
+
+For the second part, we struggled to create a CSWAP gate using the `discopy` library. Otherwise the implementation would have been straightforward.
 
 **table of contents**
 
