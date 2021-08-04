@@ -74,6 +74,14 @@ We solved this using the previous formulation. The resulting diagram is shown he
 
 ![Charlie and Diane Cat Ate Mouse](./resources/charlie-cat-ate-diane-mouse.png)
 
+**Reading:** Check out Lambek's From word to sentence, pick your favorite example and implement it in DisCoPy.
+
+We took the following phrase from [wikipedia article](https://en.wikipedia.org/wiki/Pregroup_grammar) on context-free grammar and implemented it:
+
+|  |  | 
+| - | - | 
+| ![Representation](./resources/wiki-dog.png) | ![Representation](./resources/wiki-dog-graph.png) |
+
 ## Task 2
 
 We built a spam detector. The notebook can be found [here](./Task_2_and_3_QNLP_Experiment.ipynb) which contains the work for both task 2 and 3.
