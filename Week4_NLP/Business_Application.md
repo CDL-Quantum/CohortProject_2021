@@ -2,7 +2,7 @@
 # XBroca: Quantum Cohort Project Business Application
 
 <p align="center">
-  <img width="950" height="350" src="./resources/ba-game-console.png">
+  <img width="1000" height="400" src="./resources/ba-game-console.png">
   <a href="https://www.futurewiseresearch.com/healthcare-market-research/Protein-Sequencing-Market/3383" target="_blank">Source</a>
  </p> 
 
@@ -55,28 +55,34 @@ In response to this demand, Google and Microsoft announced their own cloud gamin
 
 ## Competitors
 The NLP market is getting increasingly competitive. Here there are top players according to the recent studies. 
-|Company name|Country|R&D budget|Revenue|
+|Company name|Country|R&D budget|Revenue ↑ |
 |- | - | - | - |
-|IBM Watson|NA|$ 73.6 billion|
-|Folio3|USA|---|$ 55.5 million|$ 1.6 billion|
-|SoundHound|USA|NA|$ 51.5 million|
+|IBM Watson|NA|$ 73.6 billion|$ 23.38 billion*|
 |Gracenote|USA|NA|$ 98.76 million|
 |Mobvoi|China|NA|$ 80 million|
-|Open AI|NA|$ 27.4 million|
-|DeepMind|NA|$ 266 million|
+|Folio3|USA|NA|$ 55.5 million|$ 1.6 billion|
+|SoundHound|USA|NA|$ 51.5 million|
+
+*In cloud & cognitive software business segment
 
 ## Customers
 
-This top video game companies ranking is based on analysis of annual and quarterly financial report published by a number of relevant publicly listed game companies. 
+These top video game companies ranking is based on analysis of annual and quarterly financial report published by a number of relevant publicly listed game companies. 
 
-|Company name|Country|R&D budget|Revenue|
+|Company name|Country|R&D budget|Revenue ↑ |
 | - | - | -| - |
-|Tencent|China|$ 6.029 billion*|$ 74 billion|
 |Sony|Japan|$ 1.32 billion|$ 81.7 billion|
-|Apple|USA|$ 18.75 billion**|$ 79.5 billion**|
-|Microsoft|USA|$ 20.70 billion*|$ 5.0 billion***|
-|NVIDIA|USA|----|$ 10.92 billion|
+|Apple|USA|$ 18.75 billion*|$ 79.5 billion*|
+|Tencent|China|$ 6.029 billion**|$ 74 billion|
+|NVIDIA|USA|NA|$ 10.92 billion|
 |Epic Games|USA|NA|$ 5.1 billion|
+|Microsoft|USA|$ 20.70 billion**|$ 5.0 billion***|
+
+*Games accounted for 71% of total app revenue in 2020  
+** Total R&D budget  
+*** Quarter ended December 31, 2020
+
+
 
 ## Geographic market segmentation
 
@@ -97,6 +103,11 @@ Video gaming industry is selling products that are subject to difference in regi
 Widespread adoption of smartphones globally is bringing in new players to the gaming world. And mobile will continue to enable new opportunities within gaming that simply didn’t exist even just a few years ago. But rather than cannibalizing existing markets for console and PC gaming, the industry has adapted by increasingly emphasizing gaming’s social dimension. As this happens, we’re seeing new levels of engagement, with different groups turning to online competition. In order to realize its full potential, the gaming industry must balance the needs of its newest adopters – and the 400 million new gamers expected within the next few years – with the expectations of historical gaming loyalists, many of whom are still the industry’s most lucrative customers [[15]](https://www.accenture.com/us-en/insights/software-platforms/gaming-the-next-super-platform?c=acn_glb_thenewgamingexpbusinesswire_12160747&n=mrl_0421)
 
 
+## Video 
+
+Please see our video [here](https://youtu.be/AUTOd1t-Pbg).
+
+
 ## REFERENCES
 
 1. [History of NLP-Medium](https://medium.datadriveninvestor.com/the-brief-history-of-nlp-c90f331b6ad)
@@ -115,6 +126,3 @@ Widespread adoption of smartphones globally is bringing in new players to the ga
 14. [Geographic market segmentation-Accenture](https://www.accenture.com/us-en/insights/software-platforms/gaming-the-next-super-platform?c=acn_glb_thenewgamingexpbusinesswire_12160747&n=mrl_0421)
 15. [Market drivers-Accenture](https://www.accenture.com/us-en/insights/software-platforms/gaming-the-next-super-platform?c=acn_glb_thenewgamingexpbusinesswire_12160747&n=mrl_0421)
 
-## Video 
-
-Please see our video [here](https://youtu.be/AUTOd1t-Pbg).
