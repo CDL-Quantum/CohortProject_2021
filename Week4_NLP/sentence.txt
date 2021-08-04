@@ -1,0 +1,64 @@
+Alice loves Alice->True
+Alice loves Bob->True
+Alice loves Charlie->False
+Alice loves Diane->False
+Alice hates Alice->False
+Alice hates Bob->False
+Alice hates Charlie->True
+Alice hates Diane->False
+Alice not love Alice->False
+Alice not love Bob->False
+Alice not love Charlie->True
+Alice not love Diane->True
+Alice not hate Alice->True
+Alice not hate Bob->True
+Alice not hate Charlie->False
+Alice not hate Diane->True
+Bob loves Alice->True
+Bob loves Bob->True
+Bob loves Charlie->False
+Bob loves Diane->True
+Bob hates Alice->False
+Bob hates Bob->False
+Bob hates Charlie->True
+Bob hates Diane->False
+Bob not love Alice->False
+Bob not love Bob->False
+Bob not love Charlie->True
+Bob not love Diane->False
+Bob not hate Alice->True
+Bob not hate Bob->True
+Bob not hate Charlie->False
+Bob not hate Diane->True
+Charlie loves Alice->False
+Charlie loves Bob->False
+Charlie loves Charlie->True
+Charlie loves Diane->True
+Charlie hates Alice->False
+Charlie hates Bob->True
+Charlie hates Charlie->False
+Charlie hates Diane->False
+Charlie not love Alice->True
+Charlie not love Bob->True
+Charlie not love Charlie->False
+Charlie not love Diane->False
+Charlie not hate Alice->True
+Charlie not hate Bob->False
+Charlie not hate Charlie->True
+Charlie not hate Diane->True
+Diane loves Alice->True
+Diane loves Bob->False
+Diane loves Charlie->True
+Diane loves Diane->True
+Diane hates Alice->True
+Diane hates Bob->False
+Diane hates Charlie->False
+Diane hates Diane->False
+Diane not love Alice->False
+Diane not love Bob->True
+Diane not love Charlie->False
+Diane not love Diane->False
+Diane not hate Alice->False
+Diane not hate Bob->True
+Diane not hate Charlie->True
+Diane not hate Diane->True

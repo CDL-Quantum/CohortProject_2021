@@ -1,7 +1,10 @@
-discopy
+discopy~=0.3.6
 numpy~=1.20.1
 pytket
 jax
 pytket-qiskit
 matplotlib~=3.3.4
 requests~=2.26.0
+tqdm~=4.62.0
+
+scikit-learn~=0.24.2
