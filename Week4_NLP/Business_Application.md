@@ -63,7 +63,7 @@ The NLP market is getting increasingly competitive. Here there are top players a
 
 *In cloud & cognitive software business segment
 
-## Customers
+## Potential Customers
 
 These top video game companies ranking is based on analysis of annual and quarterly financial report published by a number of relevant publicly listed game companies. 
 
