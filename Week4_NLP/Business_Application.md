@@ -51,7 +51,7 @@ On the other hand QNLP allows to formulate grammar rules as tensor operations, w
 
 **8. Email Classification and Filtering:** emails are automatically divided into 3 sections namely, Primary, Social, and Promotions. Email services use NLP to identify the contents of each Email with text classification so that it can be put in the correct section. In more advanced cases, some companies also use specialty anti-virus software with NLP to scan the Emails and see if there are any patterns and phrases that may indicate a phishing attempt on the employees [7].
 
-## Siri, I’m lonely’
+## Business proposal: Siri, I’m lonely’
 
 <table align="center">
     <tr>
