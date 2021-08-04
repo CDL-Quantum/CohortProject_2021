@@ -77,9 +77,9 @@ It seems, there is a need to make virtual assistants human-like by bringing emot
 
 As we can see from the graphs below, our QNLP work shows as a general rule of a thumb that:
 
-* similar concepts are close together (e.g. "earth" is close to "round", "Artic" is close to "North"). We can expect that feelings like joyful and happy would be close to each other.
-* opposite concepts are on the oposite side of the circle (e.g. "north" is away from "south", "round" is away from "flat". Feelings like angry and happy would oppose each other. 
-* unrelated concepts are orthogonal (e.g. "earth "and "north", "antartic" and "flat"). Emotional concepts (joy, sadness, etc) to be unrelated to appraisal dimensions such as valence and arousal.
+* similar concepts are close together (e.g. "earth" is close to "round", "Artic" is close to "North"). We could expect that feelings like joyful and happy would be close to each other.
+* opposite concepts are on the oposite side of the circle (e.g. "north" is away from "south", "round" is away from "flat". We could expect that that feelings like angry and happy would oppose each other. 
+* unrelated concepts are orthogonal (e.g. "earth "and "north", "antartic" and "flat"). We could expect that that emotional concepts (joy, sadness, etc) to be unrelated to appraisal dimensions such as valence and arousal.
 
 <center>
 <table>
