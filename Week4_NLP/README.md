@@ -24,7 +24,7 @@ This diagram represents multi-layer structure of tiramisu, which can be easily r
 
 Our cascade and scalable egg york generation should resolve the challenges with large-egg process, and provide simple and compact solution for future multi-layer tiramisu generation. 
 
-Another challenges for tiramisu generation was language barriers. Many of recipes are based on English, and there are many intererest building tiramisu in other platfrom in different language. As part of the localization project, we have delelope our unique french to English translation where we can trannslate the recipe into French. 
+Another challenges for tiramisu generation was language barriers. Many of recipes are based on English, and there is alot of interest in building tiramisu in other platform in different language. As part of the localization project, we have developed our unique French to English translation where we can translate the recipe into French. 
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f4.png"width=1000/></p>
 
