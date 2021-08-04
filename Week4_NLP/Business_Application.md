@@ -157,7 +157,9 @@ We have demonstrated that quantum implementation of DisCoCat leads to exponentia
 Our strength lies in our quantum enhanced NLP algorithms and highly skilled team. We have machine learning combined experience from academia and industry of more than 10 years. We are driven by the belief that quantum truly represents complex systems and by doing so assists mankind in creating solutions to problems we were not able to solve before. We love helping people to have a better life by humanizing an increasingly digitized world: "Hello Eva, I am happy!"
 
 ## Presentation
-Video presentation can be found [here](https://youtu.be/U1zbx987zgI)
+**The video can be found [here](https://youtu.be/U1zbx987zgI)**
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/U1zbx987zgI/0.jpg)](http://www.youtube.com/watch?v=U1zbx987zgI "Video Title")
 
 ## References
 [1] [Coecke, B. et al. Quantum Natural Language Processing](http://www.cs.ox.ac.uk/people/bob.coecke/QNLP-ACT.pdf)
@@ -184,9 +186,7 @@ Video presentation can be found [here](https://youtu.be/U1zbx987zgI)
 
 [12] [Using GPT-3 To Measure Sentiment. And How To Add User Sentiment](https://cobusgreyling.medium.com/using-gpt-3-to-measure-sentiment-9b234db37731). Accessed August 3, 2021. 
  
-**The video can be found [here](https://youtu.be/U1zbx987zgI)**
 
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/U1zbx987zgI/0.jpg)](http://www.youtube.com/watch?v=U1zbx987zgI "Video Title")
 
 **table of contents**
 
