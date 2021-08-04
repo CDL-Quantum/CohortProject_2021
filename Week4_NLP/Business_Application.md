@@ -186,7 +186,7 @@ Video presentation can be found [here](https://youtu.be/U1zbx987zgI)
  
 **The video can be found [here](https://youtu.be/U1zbx987zgI)**
 
-<iframe width="420" height="315" src="https://www.youtube.com/watch?v=U1zbx987zgI"></iframe>
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/U1zbx987zgI/0.jpg)](http://www.youtube.com/watch?v=U1zbx987zgI "Video Title")
 
 **table of contents**
 
