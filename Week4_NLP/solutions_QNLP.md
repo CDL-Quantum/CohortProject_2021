@@ -4,6 +4,27 @@
 **Reference Code** can be foun in [this notebook](./QNLP_notebook.ipynb)
 
 ## The Problem and the Data
+The problem we are going to solve is to build a model to classify sentences into "True" or "False" on a limited semantic space. Namely we are going to fight the flat earth theory. We have a set of sentences some are true and some are False, some examples are shown below.
+
+**FALSE** Flat earth theory:
+* Earth is flat
+* Arctic is in the center
+* Sun revolves around Earth
+
+**TRUE** Reality :
+* Earth is round
+* Arctic is the North Pole
+* Earth revolves around the Sun
+
+<center>
+<table>
+        <tr>
+            <td><img src="imgs/10_histogram.png"></td>
+        </tr>
+</table>
+</center>
+
+Our initial Idea was to work on the above dataset but the complexity of the task lead us to reduce it to a simpler problem with 7 nouns ('Earth', 'Antartic', 'Artic', 'north', 'south', 'flat', 'round') and one verb ('is'). We created a tool to label training data and store it, with two options : brute force or random.
 
 ## From Diagram to Quantum
 
