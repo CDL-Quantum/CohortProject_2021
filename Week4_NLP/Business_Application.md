@@ -73,22 +73,22 @@ On the other hand QNLP allows to formulate grammar rules as tensor operations, w
 
 It seems, there is a need to make virtual assistants human-like by bringing emotional abilities to them. 
 
-**The solution:** we make virtual assistants truly emotional with our QNLP hybrid algorithms as more accurate text, text to speech and voice to text sentiment analysis capabilities can be provided than with classical machine learning.  
+**The solution:** we make virtual assistants truly emotional with our QNLP hybrid algorithms as more accurate text, text to speech and voice to text sentiment analysis capabilities can be provided than with classical machine learning. 
+
+As we can see from the graphs below, our QNLP work shows as a general rule of a thumb that:
+
+* similar concepts are close together (e.g. "earth" is close to "round", "Artic" is close to "North"). We can expect that feelings like joyful and happy would be close to each other.
+* opposite concepts are on the oposite side of the circle (e.g. "north" is away from "south", "round" is away from "flat". Feelings like angry and happy would oppose each other. 
+* unrelated concepts are orthogonal (e.g. "earth "and "north", "antartic" and "flat"). Emotional concepts (joy, sadness, etc) to be unrelated to appraisal dimensions such as valence and arousal.
 
 <center>
 <table>
         <tr>
-            <td><img src="imgs/61_bloch.png"></td>
-            <td><img src="imgs/60_word_circle.png"></td>
+            <td><img src="imgs/61_bloch.png"width="400"></td>
+            <td><img src="imgs/60_word_circle.png"width="400"></td>
         </tr>
 </table>
 </center>
-
-From our QNLP work we can observe as a general rule of a thumb that:
-
-* similar concepts are close together (e.g. "earth" is close to "round", "Artic" is close to "North"). We can expect that feelings like Joyful and happy would fall into this category.
-* opposite concepts are on the oposite side of the circle (e.g. "north" is away from "south", "round" is away from "flat". Feelings like angry and happy should be opposing each other. 
-* unrelated concepts are orthogonal (e.g. "earth "and "north", "antartic" and "flat"). We expect emotional concepts to be unrelated to appraisal dimensions such as valence and arousal.
 
 **The current state:** The AI models used by the Azure Text Analytics API for instance are provided and trained by Microsoft and ready to use. Sentiment Analysis is staged on the entire offered text, instead of words in it, and it produces a more refined result when evaluating smaller pieces of text. Ideally, text size must be under 5,120 characters and returned document labels are positive, negative, neutral and mixed [10].
 
