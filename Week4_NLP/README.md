@@ -66,7 +66,7 @@ This would be pronounced "billi nay chooha khaya". Here is the mapping we create
 Our favorite sentence is "Cat Ate the Mouse" which is depicted in this diagram:
 
 ![Cat Ate Mouse](./resources/cat-ate-mouse.png)
-<img src="https://github.com/TangrisJones/CohortProject_2021/blob/week4/Week4_NLP/resources/cat%20ate%20mouse.png" width="150" height="200">
+<img src="./resources/cat%20ate%20mouse.png" width="150" height="200">
 
 In the [notebook](./Task_1_Experiment.ipynb), we also define the meaning of each word and evaluate it as a tensor.
 
