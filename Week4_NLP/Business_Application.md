@@ -37,6 +37,14 @@ Our technology adds three new features to your video games:
 2. Recognize voice commands
 3. Improve customer support
 
+Here is a demo of one of our hyper realistic human looking NPCs: 
+
+<p align="center">
+  <img src="./resources/human-npc.gif">
+  <a href="https://www.futurewiseresearch.com/healthcare-market-research/Protein-Sequencing-Market/3383" target="_blank">Source</a>
+ </p>
+
+
 ## Video Gaming Industry Overview
 
 Video gaming is one of the most popular hobbies cited by people around the globe. The video gaming industry reached $180 billion in 2020 with the growth rate of 20% [[10]](https://www.forbes.com/sites/forbesbusinesscouncil/2021/03/16/why-the-gaming-industry-could-be-the-new-social-media/?sh=700ccf738f3a). In a new study conducted by Accenture, it is estimated that the full value of the gaming industry now exceeds $ 300 billion [[11]](https://newsroom.accenture.com/news/global-gaming-industry-value-now-exceeds-300-billion-new-accenture-report-finds.htm). 
