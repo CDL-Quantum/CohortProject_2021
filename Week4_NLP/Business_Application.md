@@ -1,4 +1,11 @@
 ![CDL 2021 Cohort Project](../figures/CDL_logo.jpg)
+
+**table of contents**
+
+1. To go back to the Readme [please click here](./README.md)
+2. To explore the Solution to the tutorial (Task 1), please refer to the [tutorial solution found here](./solutions_tutorial.md)
+3. To explore the custom QNLP pipeline (Task 2 + Task 3), please refer to the [QNLP solution found here](./solutions_QNLP.md)
+
 # Quantum Cohort Project Business Application
 
 ## Introduction
@@ -168,3 +175,10 @@ Our strength lies in our quantum enhanced NLP algorithms and highly skilled team
 [12] [Using GPT-3 To Measure Sentiment. And How To Add User Sentiment](https://cobusgreyling.medium.com/using-gpt-3-to-measure-sentiment-9b234db37731). Accessed August 3, 2021. 
  
 **The video can be found here**
+
+
+**table of contents**
+
+1. To go back to the Readme [please click here](./README.md)
+2. To explore the Solution to the tutorial (Task 1), please refer to the [tutorial solution found here](./solutions_tutorial.md)
+3. To explore the custom QNLP pipeline (Task 2 + Task 3), please refer to the [QNLP solution found here](./solutions_QNLP.md)
