@@ -71,7 +71,7 @@ As we increase the parity, the entangelment decohere.
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f4-1.png"width=1000/></p>
 
-First, we take a look at the japense, we write the sentence Hanako ga tegami o kaita, which means Hanako has wrote a letter, [link](https://aclanthology.org/Y07-1009.pdf).
+First, we take a look at the Japense, we write the sentence Hanako ga tegami o kaita, which means Hanako has wrote a letter, [link](https://aclanthology.org/Y07-1009.pdf).
 
 <p align="center"><img src="https://github.com/alice4space/CohortProject_2021/blob/week4/Week4_NLP/figures/f4-2.png"width=1000/></p>
 
