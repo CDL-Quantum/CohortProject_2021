@@ -6,10 +6,13 @@ generation of quantum computers can support only shallow circuits -- those consi
 of logical operations before degradation of the quantum data and program failure.    Reducing  the size of quantum circuits that solve  
 meaningful problems is therefore  critical for realizing the power of  near-term power of quantum computers.  
 
-Some quantum technologies, notably superconducting qubit devices, support only nearest neighbor interactions between qubits. Mapping an 
-ideal quantum circuit to a device supporting nearest-neighbor interactions (known as transpiling) greatly increases the depth of the circuit. 
+Some quantum technologies, notably superconducting qubit devices, support only nearest-neighbor interactions between qubits. For 
+example, IBM's backend "kolkata" supports interactions according to the following figure. 
 
-![ibmq_kolkata](../kolkata.jpeg)
+![ibmq_kolkata](./kolkata.jpeg)
+
+Mapping an 
+ideal quantum circuit to a device supporting nearest-neighbor interactions (known as transpiling) greatly increases the depth of the c
 
 Here we introduce WTF -- a method for predicting the cost of transpiling an ideal quantum circuit to a 
 
