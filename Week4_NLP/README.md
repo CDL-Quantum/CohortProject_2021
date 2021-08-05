@@ -45,39 +45,36 @@ pip install tensornetwork
 **Exercise 1-1:** Draw your favorite cooking recipe as a diagram. You'll want to keep your ingredients in order if you want to avoid swapping them too much.
 
 - We create a four eggs omelette recipe with vegetables/bacon and cheese options.
-
-![img1-1-1](./images/img1-1-1.png)
+<p align = center>
+<img src="./images/img1-1-1.png" width="700">
 
 **Exercise 1-2:** Define a function that takes a number `n` and returns the recipe of a tiramisu with `n` layers of crema di mascarpone and savoiardi.
 
 - We create the tiramisu recipe and duplicate it for multiple layers of filling
 
-![img1-2-1](./images/img1-2-1.png)
+<img src="./images/img1-2-1.png" width="500">
 
 
 **Exercise 1-3 (harder):** Define a function that takes a number `n` and returns the recipe for cracking `n` eggs.
 
 - We create a function drawing a diagram describing the cracking (and merging) mutliple eggs 
 
-![img1-3-1](./images/img1-3-1.png)
+<img src="./images/img1-3-1.png" width="500">
+
 
 **Exercise 1-4:** Define a functor that translate your favorite language to English, try composing it with `english2french`.
 
 - This diagram shows the translation of a recipe from English to Russian
 
-![img1-4-1](./images/img1-4-1.png)
-
+<img src="./images/img1-4-1.png" width="500">
 
 **Exercise 1-5:** Define a `french2english` functor, check that it's the inverse of `english2french` on a small example.
 
 - Here we convert the recipe back to english
 
-<img src="./images/img1-5-1.png" width="300">
-<img src="./images/img1-5-2.png" width="300">
-
 |||
 | :---------: | :----------: |
-|<img src="./images/img1-5-1.png" width="300">| <img src="./images/img1-5-2.png" width="300"> |
+|<img src="./images/img1-5-1.png" width="500">| <img src="./images/img1-5-2.png" width="500"> |
 
 <a name="paragraph2"></a>
 
