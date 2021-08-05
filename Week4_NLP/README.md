@@ -8,7 +8,7 @@ Team:
 - Dr. Ashish Mani
 - Uchenna Chukwu
 
-Our uphill battle of learning QNLP through the exercises: 
+Our uphill battle of learning QNLP through the exercises: https://github.com/uchukwu/CohortProject_2021/blob/rough_draft/Week4_NLP/qnlp-tutorial.ipynb
 
 Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week4_NLP/instructions.pdf) to begin learning about your tasks for this week!
 
