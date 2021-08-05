@@ -7,13 +7,18 @@ of logical operations before degradation of the quantum data and program failure
 meaningful problems is therefore  critical for realizing the power of  near-term power of quantum computers.  
 
 Some quantum technologies, notably superconducting qubit devices, support only nearest-neighbor interactions between qubits. For 
-example, IBM's backend "kolkata" supports interactions according to the following figure. 
+example, IBM's quantum computer "kolkata" supports interactions shown in the following figure: 
 
 ![ibmq_kolkata](./kolkata.jpeg)
 
-Mapping an 
-ideal quantum circuit to a device supporting nearest-neighbor interactions (known as transpiling) greatly increases the depth of the c
+Mapping an ideal quantum circuit to a device supporting nearest-neighbor interactions (known as transpiling) is required before
+running an algorithm on a real quantum computer. 
 
+![transpiling](./transpiling.png)
+
+
+greatly increases 
+the depth of the quantum circuit that is executed on a particular quantum computer. 
 Here we introduce WTF -- a method for predicting the cost of transpiling an ideal quantum circuit to a 
 
 
