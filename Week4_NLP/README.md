@@ -93,6 +93,7 @@ Task 3 notebook can be found [here](./Task_2_and_3_QNLP_Experiment.ipynb) (pleas
 This is running the experiment from task 2 with the quantum circuit.  Below is the learning curves of cost and accuracy for each set.  Running on a specific set of data our model calculates a score based on the output of the quantum circuit.  Scores of ~1 represent correct sentences, and zero represents spam cases.
 
 We did training and we show the learning curve (training set, the development curve and the testing curve).
+The results here were quite noisy and the accuracy could be improved.  Our data set was 26 words split 18, 4, 4.  Further testing needs to be done with larger vocabulary, and more varied phrase grammer.
 
 | Training | Development | Testing | 
 | - | - | - |
