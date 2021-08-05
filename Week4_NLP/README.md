@@ -125,7 +125,21 @@ We were also tasked with implementing a sentence from Lambek's classic paper. We
 
 ![4.3](./images/4.2.png)
 
-These tasks were more focused on practicing the drawing of the diagrams. The next three tasks enabled us to see how we could pry the grammatical structure from the diagrams. For example, we first had to draw our favourite sentence and evaluate it as a tensor. 
+These tasks were more focused on practicing the drawing of the diagrams. The next three tasks enabled us to see how we could pry the grammatical structure from the diagrams. For example, we first had to draw our favourite sentence and evaluate it as a tensor. We chose the sentence 'Batman is serious' (as a parody of the famous line from the Joker- why so serious). So we evaluated the sentence: who is serious?- and we obtained the correct response of Batman.
+
+![4.5](./images/4.5.png)
+
+next, we created a 4 noun wordspace with 4/5 of our group members. We added further difficulty by enabling interactions between multiple members of the noun space. For example, Eli and Yuval like eachother, but Eli and Ming are not so friendly:
+
+![4.6](./images/4.6.png)
+
+![4.7](./images/4.7.png)
+
+The final exercise for task4 had us evaluating the question 'Does Alice love Bob'. Here is a diagram of the question; it's a normalized diagram, since the word 'does' isn't contributing any grammatical structure to the sentence.
+
+![4.7](./images/4.8.png)
+
+By looking in the notebbok you can confirm we obtain the correct response of 'yes' for this task.
 
 For more details refer to the [Business Application found here](./Business_Application.md)
  
