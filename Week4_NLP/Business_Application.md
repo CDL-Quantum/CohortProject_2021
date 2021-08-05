@@ -17,13 +17,13 @@ Our work can be found at [Technical ReadMe](README.md).
 ## Business Strategy
 
 Our software service will automate business activities that require human language processing.
-Our strategy is to begin with easier, better established use cases of such technology in order to demonstrate the superiority of our technology. Our focus at this early stage will be on improving technical support outcomes by automating client interaction. This is a competitive space but our "secret sauce", quantum technology, will give us a powerful edge.
+Our strategy is to begin (**phase 1**) with easier, better established use cases of such technology in order to demonstrate the superiority of our technology. Our focus at this early stage will be on improving technical support outcomes by automating client interaction. This is a competitive space but our "secret sauce", quantum technology, will give us a powerful edge.
 
-Having established the competitive edge of our technology, we will progress to a problem that is currently intractable with current technology. This is the problem of identifying undesirables on social media. Our approach at this stage will be to progress from simpler versions of the problem (identifying "creeps" on dating websites) through to the more advanced forms (identifying "toxic content" on social media platforms like Twitter).
+Having established the competitive edge of our technology, we will progress (**phase 2**) to a problem that is currently intractable with current technology. This is the problem of identifying undesirables on social media. Our approach at this stage will be to progress from simpler versions of the problem (identifying "creeps" on dating websites) through to the more advanced forms (identifying "toxic content" on social media platforms like Twitter).
 
-Finally, we will tackle the most challenging problem that we believe has the highest payoff. This is the problem of legal compliance in large organisations. Currently, these large organisations need expensive teams of in-house legal counsel; most notably, to check for patent infringement. This is particularly difficult problem because legal text contains a great deal of bespoke jargon whose interpretation is precisely what is being debated. Furthermore, patents are often deliberately vague and so many possible interpretations must be considered. By automating even part of this process, we expect to significantly reduce legal costs for large organisations; especially those such as Samsung and Apple that have large and complex patent portfolios that are used in IP warfare.
+Finally (**phase 3**), we will tackle the most challenging problem that we believe has the highest payoff. This is the problem of legal compliance in large organisations. Currently, these large organisations need expensive teams of in-house legal counsel; most notably, to check for patent infringement. This is particularly difficult problem because legal text contains a great deal of bespoke jargon whose interpretation is precisely what is being debated. Furthermore, patents are often deliberately vague and so many possible interpretations must be considered. By automating even part of this process, we expect to significantly reduce legal costs for large organisations; especially those such as Samsung and Apple that have large and complex patent portfolios that are used in IP warfare.
 
-The triggers for these transitions are a combination of technological and commercial outcomes. We at each stage we validate our technology by demonstrating market viability. Dominance is desirable but not necessary. In the meantime, the revenue from these business activities will support the further development of the underlying technology in order to get ahead of current technological platforms. We are running a marathon, not sprinting.
+The triggers for these transitions between phases are a combination of technological and commercial outcomes. We at each stage we validate our technology by demonstrating market viability. Dominance is desirable but not necessary until phase 3, where we expect minimal competition due to the overwhelming advantage of our technology. In the meantime, the revenue from these business activities will support the further development of the underlying technology in order to get ahead of current technological platforms. We are running a marathon, not sprinting.
 
 ![pic](images/earnings.png).
 
@@ -43,7 +43,7 @@ large-scale social media platforms are also utilizing text analytics and NLP tec
 ------ ADD THE IMAGE SENT SEPARATELY
 
 
-### Target Early Adopters
+### Phase 1 Target Customers
 |Company name example|Sub-segment|Segment|
 |----|----|----|
 | CDC, ECDC|Covid-19 related organizations|Healthcare|
