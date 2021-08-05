@@ -171,6 +171,24 @@ def MPS_diagram(n,chi):
 
 In this task we use `pytket` to convert the `discopy` circuit diagrams for the Bell state ($\frac{1}{\sqrt{2}}(|00 \rangle+|11 \rangle)$, GHZ state ( $\frac{1}{\sqrt{2}}(|000\rangle+|111\rangle$), and the generalized n-qubit fully entangled state $\frac{1}{\sqrt{2}}(|00000\rangle+|11111\rangle$ (see below) and access the IBMQ backend `bogota` to perform the measurements. 
 
+    
+Generalized GHZ
+
+```py
+def Generalized_GHZ(n):
+    if type(n)!=int or n<3:
+        raise ValueError ("n must be an integer larger than three.")
+    tk_GHZ = tk.Circuit(n).H(0)
+    for i in range(n-1):
+        tk_GHZ=tk_GHZ.CX(i, i+1)
+    circ=Circuit.from_tk(tk_GHZ)[:-n] # Discard the last n lines of "Discards"
+    measure=Measure()
+    for _ in range(n-1):
+        measure=measure@Measure()
+    circ=circ>>measure
+    return circ
+```    
+    
 **Circuit for the Bell state:**
 
 <img src="./images/img3-1-1.png" width="500"> 
