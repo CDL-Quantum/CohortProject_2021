@@ -42,8 +42,6 @@ pip install tensornetwork
 
 ![task4](./images/exercise1.png)
 
-----Add images if needed (put the images in ./images/)---
-
 **Exercise 1-1:** Draw your favorite cooking recipe as a diagram. You'll want to keep your ingredients in order if you want to avoid swapping them too much.
 
 - We create a four eggs omelette recipe with vegetables/bacon and cheese options.
@@ -52,27 +50,27 @@ pip install tensornetwork
 
 **Exercise 1-2:** Define a function that takes a number `n` and returns the recipe of a tiramisu with `n` layers of crema di mascarpone and savoiardi.
 
-- add description
+- We create the tiramisu recipe and duplicate it for multiple layers of filling
 
 ![img1-2-1](./images/img1-2-1.png)
 
 
 **Exercise 1-3 (harder):** Define a function that takes a number `n` and returns the recipe for cracking `n` eggs.
 
-- add description
+- We create a function drawing a diagram describing the cracking (and merging) mutliple eggs 
 
 ![img1-3-1](./images/img1-3-1.png)
 
 **Exercise 1-4:** Define a functor that translate your favorite language to English, try composing it with `english2french`.
 
-- add description
+- This diagram shows the translation of a recipe from English to Russian
 
 ![img1-4-1](./images/img1-4-1.png)
 
 
 **Exercise 1-5:** Define a `french2english` functor, check that it's the inverse of `english2french` on a small example.
 
-- add description
+- Here we convert the recipe back to english
 
 
 ![img1-5-1](./images/img1-5-1.png)
@@ -84,7 +82,6 @@ pip install tensornetwork
 
 **Exercise 2-1:** Check out the [diagram rewriting](https://discopy.readthedocs.io/en/main/notebooks/rewriting-diagrams.html) notebook to learn how to remove snakes from a diagram. This can greatly speed up the evaluation of tensor diagrams!
 
-- add description
 
 ![img2-1-1](./images/img2-1-1.gif)
 ![img2-1-2](./images/img2-1-2.gif)
@@ -137,27 +134,41 @@ In this task we use `pytket` to convert the `discopy` circuit diagrams for the B
 
 ![task4](./images/exercise4.png)
 
+**Exercise 4-1:** Draw the diagram of a sentence in a language with a different word order, e.g. Japanese.
+
 In task4 we were charged with drawing the grammatical structure of sentences using diagrams. There we several exercises which tested this ability. For example, in one task we drew the diagrm to the sentence "Alice loves Bob" in japanese (where the sentence structure is not subject-verb-noun).
 
 ![4.1](./images/4.4.png)
+
+**Exercise 4-2:** Draw the diagram of a sentence in a language written right to left, e.g. Arabic
 
 We implemeted the same sentence in arabic, where the sentence is read right to left.
 
 ![4.2](./images/4.3.png)
 
+**Exercise 4-3:** Check out Lambek's From word to sentence, pick your favorite example and implement it in DisCoPy.
+
 We were also tasked with implementing a sentence from Lambek's classic paper. We chose the sentence, "cannibals prefer men to pork".
 
 ![4.3](./images/4.2.png)
 
-These tasks were more focused on practicing the drawing of the diagrams. The next three tasks enabled us to see how we could pry the grammatical structure from the diagrams. For example, we first had to draw our favourite sentence and evaluate it as a tensor. We chose the sentence 'Batman is serious' (as a parody of the famous line from the Joker- why so serious). So we evaluated the sentence: who is serious?- and we obtained the correct response of Batman.
+These tasks were more focused on practicing the drawing of the diagrams. The next three tasks enabled us to see how we could pry the grammatical structure from the diagrams. 
+
+**Exercise 4-4:** Draw your favorite sentence, define the meaning of each word then evaluate it as a tensor.
+
+For example, we first had to draw our favourite sentence and evaluate it as a tensor. We chose the sentence 'Batman is serious' (as a parody of the famous line from the Joker- why so serious). So we evaluated the sentence: who is serious?- and we obtained the correct response of Batman.
 
 ![4.5](./images/4.5.png)
+
+**Exercise 4-5:** Build a toy model with a 4-dimensional noun space, add Charlie and Diane to the story.
 
 next, we created a 4 noun wordspace with 4/5 of our group members. We added further difficulty by enabling interactions between multiple members of the noun space. For example, Eli and Yuval like eachother, but Eli and Ming are not so friendly:
 
 ![4.6](./images/4.6.png)
 
 ![4.7](./images/4.7.png)
+
+**Exercise 4-6:** Define the meaning of the word Does and draw the diagram for the yes-no question Does Alice love Bob?. The meaning of the question should be the same as the sentence Alice loves Bob, i.e. the answer is "yes" if the sentence is true.
 
 The final exercise for task4 had us evaluating the question 'Does Alice love Bob'. Here is a diagram of the question; it's a normalized diagram, since the word 'does' isn't contributing any grammatical structure to the sentence.
 
@@ -169,8 +180,12 @@ By looking in the notebbok you can confirm we obtain the correct response of 'ye
 
 ![task5](./images/exercise5.png)
 
-Our first exercise for task5 was to train a QNLP model using circuits to answer the types of questions (such as 'Does Alice love Bob') seen in task4. We were able to efficiently create the diagrams and circuits in this task. To supplement this task, we also included a classical NLP model, which can be seen in [this notebook](Classical_NLP.ipynb)
+**Exercise 5-1:** Run your own QNLP experiment on quantum hardware! There are multiple parameters that you can try to scale: the length of sentences, the size of the vocabulary, the number of qubits for the noun space.
 
+
+Our first exercise for task5 was to train a QNLP model using circuits to answer the types of questions (such as 'Does Alice love Bob') seen in task4. We were able to efficiently create the diagrams and circuits in this task. To supplement this task, we also included a classical NLP model, which can be seen in [this notebook](Classical_NLP.ipynb). Implementations of exercise 1 from Task 5 are found in [this notebook](qnlp_tutorial_solution_Task5-1.ipynb) and also in [this notebook](task5_implement2.ipynb).
+
+**Exercise 5-2:** Implement a swap test to compute whether "Alice" is an answer to "Who loves Bob?".
 
 In our second exercise for task5 we were required to perform a SWAP test to verify whether "Alice" is the answer of "Who loves Bob?" by performing the following steps:
 
