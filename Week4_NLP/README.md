@@ -130,7 +130,39 @@ else:
 
 - For Exercies 2-2 and 2-3, we define a function returning the diagram for a matrix product state with a size `n`. The diagram for `n` = 5 is shown above. We also compare the evaluation time between `DisCoPy` and `tensornetwork` with respective to the size of the diagram. As shown below, the evaluation time for the discopy significantly increases as `n` > 8. However, `tensornetwork` performs much efficiently at higher diagram size.
 
+Our code for generalized MPS diagram
+```py
+def block(*dimensions):
+    size = tuple([x for x in dimensions])
+    return np.random.random_sample(size)
+    
+def MPS_diagram(n,chi):
+    A_list=[]
+    if n==1:
+        return tensor.Box('A'+str(1), Dim(1), Dim(chi), block(chi * chi))
+    elif type(n)!=int or n<1:
+        raise ValueError ("n should be an integer bigger than zero.")
+    else:
+        for i in range(n):
+            if i==0 or i==n-1:
+                temp=tensor.Box('A'+str(i+1), Dim(1), Dim(chi) @ Dim(chi), block(chi * chi))
+            else:
+                temp=tensor.Box('A'+str(i+1), Dim(1), Dim(chi) @ Dim(chi) @ Dim(chi), block(chi * chi * chi))
+            A_list.append(temp)
+            #temp.draw()
+        layer1=A_list[0]
 
+        for i in range(1,n):
+            layer1= layer1@A_list[i]
+        #layer1.draw()
+        layer2=Id(Dim(chi))
+
+        for _ in range(n-1):
+            layer2=layer2 @ (tensor.Diagram.cups(Dim(chi),Dim(chi)) @ Id(Dim(chi)))
+        #layer2.draw()
+
+        return layer1>>layer2    
+```
 <img src="./images/img2-2-2.png" width="500"> 
  
 <a name="paragraph3"></a>
