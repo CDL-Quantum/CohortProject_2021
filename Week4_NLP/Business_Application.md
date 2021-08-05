@@ -43,6 +43,16 @@ large-scale social media platforms are also utilizing text analytics and NLP tec
 ------ ADD THE IMAGE SENT SEPARATELY
 
 
+### Target Early Adopters
+|Company name example|Sub-segment|Segment|
+|----|----|----|
+| CDC, ECDC|Covid-19 related organizations|Healthcare|
+|Vodafone,ATT|Telecoms|IT & telecom|
+|BOA, Scotiabank, Federal Reserve Banks|Banks & Insurance|Finance|
+|Seven eleven, Walmart| Supermarkets|Retail|
+|R&D computer science schools|Schools, Colleges, Universities|Education|
+|Reuters, Bloomberg|Financial data|Financial services|
+|BetUS, Aleph Holding |Multiple types|Other End User Industries|
 
 
 ### Analysis of Competition
@@ -67,16 +77,6 @@ large-scale social media platforms are also utilizing text analytics and NLP tec
 |PypeStream|USA|2009|$+22.5M |
 
 
-### Target Early Adopters
-|Company name example|Sub-segment|Segment|
-|----|----|----|
-| CDC, ECDC|Covid-19 related organizations|Healthcare|
-|Vodafone,ATT|Telecoms|IT & telecom|
-|BOA, Scotiabank, Federal Reserve Banks|Banks & Insurance|Finance|
-|Seven eleven, Walmart| Supermarkets|Retail|
-|R&D computer science schools|Schools, Colleges, Universities|Education|
-|Reuters, Bloomberg|Financial data|Financial services|
-|BetUS, Aleph Holding |Multiple types|Other End User Industries|
 
 
 
@@ -87,6 +87,6 @@ large-scale social media platforms are also utilizing text analytics and NLP tec
 
 [3] [Applications of NLP | 5 Vital Applications of Natural Processing Language](https://www.educba.com/applications-of-nlp/).
 
-[4 [Machine Translation Market](https://www.mordorintelligence.com/industry-reports/machine-translation-market).
+[4] [Machine Translation Market](https://www.mordorintelligence.com/industry-reports/machine-translation-market).
 
 [5] [Global Chatbot Market](https://www.marketdataforecast.com/market-reports/chatbot-market).
