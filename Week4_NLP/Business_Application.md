@@ -8,7 +8,7 @@ In science fiction, computers will sometimes say "does not compute" when faced w
 Qlinguo is a platform that *will* compute. Specifically, our platform will translate *human* language,
 with all its double entendres, sarcasm, and jargon, into *computer* language.
 As of now, we have produced an early technical demonstration of how our technology would enable this feat.
-Our work can be found at [this Jupyter notebook](http://www.example.com).
+Our work can be found at [Technical ReadMe](Readme.md).
 
 #### See our presentation [here](http://www.example.com).
 
