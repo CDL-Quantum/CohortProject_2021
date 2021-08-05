@@ -8,7 +8,7 @@ Team:
 - Dr. Ashish Mani
 - Uchenna Chukwu
 
-This project will guide you through running your own QNLP experiment. 
+Our uphill battle of learning QNLP through the exercises: 
 
 Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week4_NLP/instructions.pdf) to begin learning about your tasks for this week!
 
