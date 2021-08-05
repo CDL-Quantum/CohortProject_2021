@@ -6,9 +6,9 @@ In this Cohort project, we implement quantum natural machine learning with [`dis
 
 Solution Notebooks:
 
-Tasks 1 to 4: [`qnlp_tutorial_solution_Task_1-4.ipynb`](./notebooks/qnlp_tutorial_solution_Task_1-4.ipynb)
+Tasks 1 to 4: [`qnlp_tutorial_solution_Task_1-4.ipynb`](qnlp_tutorial_solution_Task_1-4.ipynb)
 
-Tasks 5: [`qnlp_tutorial_solution_Task_5.ipynb`](./notebooks/qnlp_tutorial_solution_Task5.ipynb)
+Tasks 5: [`qnlp_tutorial_solution_Task_5.ipynb`](qnlp_tutorial_solution_Task5.ipynb)
 
 ## Installation Guide
 
