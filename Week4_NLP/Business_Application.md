@@ -39,17 +39,17 @@ During our work, we derived grammatical structure from sentences to analyze thei
 
 ## NLP Industry Overview
 
+![Chatbot](https://www.techedgegroup.com/hs-fs/hubfs/chatbots-1.jpg?width=729&name=chatbots-1.jpg)
+
+<sub>[Image Source](https://www.techedgegroup.com/blog/how-to-select-a-chatbot-platform-for-your-business)</sub>
+
 ![Chatbot](images/nlp2.png)
 
-[source](https://www.kbvresearch.com/natural-language-processing-market/)
+<sub>[Image Source](https://www.kbvresearch.com/natural-language-processing-market/)</sub>
 
 According to [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/natural-language-processing-market):
 
 > The Global NLP Market was valued at USD 10.72 billion in 2020, and it is expected to be worth USD 48.46 billion by 2026, registering a compound annual growth rate (CAGR) of 26.84% during th forecast period (2021-2026).
-
-![Chatbot](https://www.techedgegroup.com/hs-fs/hubfs/chatbots-1.jpg?width=729&name=chatbots-1.jpg)
-
-Source: https://www.techedgegroup.com/blog/how-to-select-a-chatbot-platform-for-your-business
 
 ### Phase 1 Target Customers
 |Company name example|Sub-segment|Segment|
