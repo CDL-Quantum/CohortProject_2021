@@ -51,6 +51,8 @@ According to [Mordor Intelligence](https://www.mordorintelligence.com/industry-r
 
 > The Global NLP Market was valued at USD 10.72 billion in 2020, and it is expected to be worth USD 48.46 billion by 2026, registering a compound annual growth rate (CAGR) of 26.84% during th forecast period (2021-2026).
 
+We aim to carve out a growing niche over the next 5-10 years in this market, with the aim of market dominance in about 10 years.
+
 ### Phase 1 Target Customers
 |Company name example|Sub-segment|Segment|
 |----|----|----|
