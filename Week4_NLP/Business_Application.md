@@ -1,10 +1,18 @@
 ![CDL 2021 Cohort Project](../figures/CDL_logo.jpg)
-# Quantum Cohort Project Business Application
+# Functorial Learning Business Application
 
-For each weekly project, your team is asked to complete the below business application exercise.
-To complement the technical tasks, please consdier the four questions below.
-You are free to format your response to these four questions as you wish (with the final question done as a short recorded video), and to include
-the content (or links to the content) on your forked repository.
+Quantum algorithms are compiled into quantum circuits that implement the logical operations of the algorithm.  The current 
+generation of quantum computers can support only shallow circuits -- those consisting of only tens of qubits and a limited number 
+of logical operations before degradation of the quantum data and program failure.    Reducing  the size of quantum circuits that solve  
+meaningful problems is therefore  critical for realizing the power of  near-term power of quantum computers.  
+
+Some quantum technologies, notably superconducting qubit devices, support only nearest neighbor interactions between qubits. Mapping an 
+ideal quantum circuit to a device supporting nearest-neighbor interactions (known as transpiling) greatly increases the depth of the circuit. 
+
+![ibmq_kolkata](../kolkata.jpeg)
+
+Here we introduce WTF -- a method for predicting the cost of transpiling an ideal quantum circuit to a 
+
 
 A brief example for each question is included for the 
 [Traveling Salesman Problem.](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
