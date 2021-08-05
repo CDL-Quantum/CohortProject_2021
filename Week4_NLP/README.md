@@ -1,6 +1,15 @@
 # Cohort Project Week 4 (Team 8)
 ![logo](./images/logo.png)
-## Introduction
+
+# Table of contents
+1. [Introduction](#introduction)
+2. [Tensors as boxes](#paragraph2)
+3. [Drawing Quantum Circuits](#paragraph3)
+4. [Drawing Grammatical Structure](#paragraph4)
+5. [Putting it all together: QNLP](#paragraph5)
+
+
+## Introduction <a name="introduction"></a>
 
 In this Cohort project, we implement quantum natural machine learning with [`discopy`](https://github.com/oxford-quantum-group/discopy) and [`pytket`](https://github.com/CQCL/pytket). We solve all the exercies in the `qnlp-tutorial` [notebook](https://github.com/oxford-quantum-group/discopy/blob/main/docs/notebooks/qnlp-tutorial.ipynb).
 
@@ -27,6 +36,7 @@ pip install pytket
 pip install pytket-qiskit
 pip install tensornetwork
 ```
+<a name="paragraph1"></a>
 
 ![task4](./images/exercise1.png)
 
@@ -66,6 +76,7 @@ pip install tensornetwork
 ![img1-5-1](./images/img1-5-1.png)
 ![img1-5-2](./images/img1-5-2.png)
 
+<a name="paragraph2"></a>
 
 ![task2](./images/exercise2.png)
 
@@ -88,6 +99,7 @@ pip install tensornetwork
 
 ![img2-2-2](./images/img2-2-2.png)
 
+<a name="paragraph3"></a>
 
 ![task3](./images/exercise3.png)
 
@@ -110,6 +122,8 @@ The result shows that $|00\rangle$ and $|11\rangle$ states have nearly equal pro
 
 ![img3-3-1](./images/img3-3-1.png)
 ![img3-3-2](./images/img3-3-2.png)
+
+<a name="paragraph4"></a>
 
 ![task4](./images/exercise4.png)
 
@@ -140,6 +154,8 @@ The final exercise for task4 had us evaluating the question 'Does Alice love Bob
 ![4.7](./images/4.8.png)
 
 By looking in the notebbok you can confirm we obtain the correct response of 'yes' for this task.
+
+<a name="paragraph5"></a>
 
 ![task5](./images/exercise5.png)
 
