@@ -10,7 +10,7 @@ with all its double entendres, sarcasm, and jargon, into *computer* language.
 As of now, we have produced an early technical demonstration of how our technology would enable this feat.
 Our work can be found at [this Jupyter notebook](http://www.example.com).
 
-####See our presentation [here](http://www.example.com).
+#### See our presentation [here](http://www.example.com).
 
 ## Business Strategy
 
