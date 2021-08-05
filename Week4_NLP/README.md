@@ -48,6 +48,40 @@ pip install tensornetwork
 <p align = center>
 <img src="./images/img1-1-1.png" width="700">
 
+Here is our recipe
+```py
+recipes = ['vegetable', 'non-vegetable']
+recipe  = recipes[0]
+
+merge = lambda x: Box('merge', x @ x @ x @ x, x)
+
+melt_butter = Box('Melt in skillet', dom=butter, cod=melted_butter) 
+thin_cut = Box('Thinly cut ingredients', dom=non_veg_ingredients if recipe != 'vegetable' else veg_ingredients, cod=cut_ingredients)
+add_yolk = Box('Add yolk to melted butter and cook for 3 minutes', dom=melted_butter @ yolk, cod=yolk_in_butter)
+add_white = Box('Add white to yolky butter and cook for another 3 minutes', dom=yolk_in_butter @ white, cod=unfilled_omelette)
+prepare_filling = Box('Add egg white to the filling', dom=white @ cut_ingredients, cod=white_filling)
+
+fill_omelette   = Box('Add filling to omelette', dom=unfilled_omelette @ cut_ingredients, cod=completed_omelette)
+complete_recipe = Box('Add filling to yolk and cook for 3 minues', dom=yolk_in_butter @ white_filling, cod=completed_omelette)
+
+crack = Box('Crack', dom = egg, cod = white @ yolk)
+crack_four_eggs =  crack @ crack @ crack @ crack \
+    >> Id(white) @ Swap(yolk, white) @ Swap(yolk, white) @ Swap(yolk, white) @ Id(yolk)\
+    >> Id(white) @ Id(white) @ Swap(yolk, white) @ Swap(yolk, white) @ Id(yolk) @ Id(yolk)\
+    >> Id(white) @ Id(white) @ Id(white) @ Swap(yolk, white) @ Id(yolk) @ Id(yolk) @ Id(yolk)\
+    >> merge(white) @ merge(yolk)
+
+steps = melt_butter @ crack_four_eggs @ thin_cut\
+    >> Id(melted_butter) @ Id(white) @ Id(yolk) @ Id(cut_ingredients)\
+    >> Id(melted_butter) @ Swap(white, yolk) @ Id(cut_ingredients)\
+    >> add_yolk @ Id(white) @ Id(cut_ingredients)
+
+if recipe == 'vegetable':
+    final_step = steps >> add_white @ Id(cut_ingredients) >> fill_omelette
+else:
+    final_step = steps >> Id(yolk_in_butter) @ prepare_filling >> complete_recipe 
+``` 
+ 
 **Exercise 1-2:** Define a function that takes a number `n` and returns the recipe of a tiramisu with `n` layers of crema di mascarpone and savoiardi.
 
 - We create the tiramisu recipe and duplicate it for multiple layers of filling
