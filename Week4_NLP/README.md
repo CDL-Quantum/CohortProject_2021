@@ -1,3 +1,6 @@
+![joke](images/nlp.png)
+
+
 # Cohort Project Week 4 (Team 8)
 
 ```![logo](./images/)```
