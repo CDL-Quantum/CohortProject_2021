@@ -113,6 +113,19 @@ The result shows that $|00\rangle$ and $|11\rangle$ states have nearly equal pro
 
 ![task4](./images/exercise4.png)
 
+In task4 we were charged with drawing the grammatical structure of sentences using diagrams. There we several exercises which tested this ability. For example, in one task we drew the diagrm to the sentence "Alice loves Bob" in japanese (where the sentence structure is not subject-verb-noun).
+
+![4.1](./images/4.4.png)
+
+We implemeted the same sentence in arabic, where the sentence is read right to left.
+
+![4.2](./images/4.3.png)
+
+We were also tasked with implementing a sentence from Lambek's classic paper. We chose the sentence, "cannibals prefer men to pork".
+
+![4.3](./images/4.2.png)
+
+These tasks were more focused on practicing the drawing of the diagrams. The next three tasks enabled us to see how we could pry the grammatical structure from the diagrams. For example, we first had to draw our favourite sentence and evaluate it as a tensor. 
 
 For more details refer to the [Business Application found here](./Business_Application.md)
  
