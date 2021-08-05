@@ -35,18 +35,6 @@ Quantum Natural Language Processing (QNLP) is an approach to semantic analysis w
 
 This approach is typically referred to as a distributional approach to NLP and uses the vector space model to determine the meaning of words. A second approach to NLP called compositional model (also known as semantics), boils grammatical structures down to mathematical algorithms – essentially turning sentences into networks of words where these words interact to create meaning. Our approach combined the two previous approaches into something called the [“compositional distributional model”](https://arxiv.org/abs/1003.4394) implemented in a quantum computer. In our approach a direct correspondence is established on the one hand between the meanings of words and quantum states, and on the other hand grammatical structures and quantum measurements. This is done by encoding sentence networks into something a quantum circuit can understand.
 
-
-In a recent paper [6] a proof-of-concept has been published where text classification an important component of NLP and QNLP are compared. A hybrid quantum-classical model is used to solve a text classification problem on the IMDB Movie Sentiment Dataset, using 4 different types of embeddings. Using precalculated embedings along with dense neural network layers and a variational quantum circuit, the hybrid model clasifies text using Pennylan and TFHub, the results are good, taking into account the early stages of quantum hardware, and the potential of the use case for further developments of similar type.
-
-|Model embeddings|Accuracy classical model| Accuracy Hybrid classical-quantum model|
-|----|----|----|
-| Swivel| 87.5| 86.7 |
-|NNLM-50| 99.8| 99.6|
-| NNLM-128|99.7| 99.8|
-| USE | 84.0 | 88.0|
-
-As you can see in the table the hybrid quantum-classical model accuracy is close to the classical NLP model accuracy for the different embedings and in the USE case, QNLP surpases its classical analog. These are encouraging results.
-
 ## NLP Industry Overview
 The Global NLP Market was valued at USD 10.72 billion in 2020, and it is expected to be worth USD 48.46 billion by 2026, registering a compound annual growth rate (CAGR) of 26.84% during th forecast period (2021-2026). Due to the ongoing Covid-19 pandemic the market is witnessing growth in healthcare sector.
 The natural language processing market includes hardware (processor, GPU, etc.), software (tools provided by major vendors to support NLP-based features), and services (API-based SaaS offering). Other key segments include segmentation by processing type (image, text, and speech/voice-based), the market is also segmented by the size of organization (large organizations and small and medium organizations), by end-user industry (education, BFSI, healthcare, IT and telecom, retail, etc.) and by geography (North America, Europe, Asia-Pacific, and Rest of the World).
@@ -102,5 +90,3 @@ large-scale social media platforms are also utilizing text analytics and NLP tec
 [4 [Machine Translation Market](https://www.mordorintelligence.com/industry-reports/machine-translation-market).
 
 [5] [Global Chatbot Market](https://www.marketdataforecast.com/market-reports/chatbot-market).
-
-[6] Baronia, Dhruv (2021): Hybrid Quantum-Classical Neural Networks for Text Classification. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.13488420.v1
