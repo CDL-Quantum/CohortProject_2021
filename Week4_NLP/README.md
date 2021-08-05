@@ -314,6 +314,15 @@ Our first exercise for task5 was to train a QNLP model using circuits to answer 
 
 In our second exercise for task5 we were required to perform a SWAP test to verify whether "Alice" is the answer of "Who loves Bob?" by performing the following steps:
 
+Manually constructed SWAP Gate:
+```py
+swap_test_tk=tk.Circuit(3).H(0).CX(2,1).H(2).CX(1,2).\
+Rz(-np.pi/4,2).\
+CX(0,2).Rz(np.pi/4,2).CX(1,2).Rz(np.pi/4,1).Rz(-np.pi/4,2).CX(0,2).CX(0,1).Rz(np.pi/4,2).Rz(np.pi/4,0).\
+Rz(-np.pi/4,1).H(2).CX(0,1).CX(2,1).H(0)
+Circuit.from_tk(swap_test_tk)
+```
+    
 1. We use the [online generator]( https://qnlp.cambridgequantum.com/generate.html) to generate the circuits for "Who loves Bob?" and "Alice" individually. Then we use random parame between 0 and 1 into the parameters of these circuits.
 2. **Implement the SWAP test circuit**. In `discopy`, there is no build-in implementation for the controlled-SWAP gate. We have tried to use the built-in CSWAP gate in`pytket` and translate it into a `discopy.Circuit`. However, it produced an`Implement Error`. Fortunately, we found a way to use the transpiler in `qiskit` to decompose the `CSWAP` gate into single- and two- qubit gates. Then we manually type up the transpiled circuit into a `pytket` circuit, then translate it into a `discopy` circuit. 
 3. Combine the circuits of the "Who loves Bob?", "Alice", and the SWAP test, as shown below.
