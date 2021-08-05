@@ -161,8 +161,7 @@ By looking in the notebbok you can confirm we obtain the correct response of 'ye
 
 ![task5](./images/exercise5.png)
 
-Our first exercise for task5 was to train a QNLP model using circuits to answer the types of questions (such as 'Does Alice love Bob') seen in task4. We were able to efficiently create the diagrams and circuits in this task. To supplement this task, we also included a classical NLP model, which can be seen in [this notebook](Classical_NLP.ipynb). Implementations of exercise 1 from Task 5 are found here and also in [this notebook](task5_implement2.ipynb)
-
+Our first exercise for task5 was to train a QNLP model using circuits to answer the types of questions (such as 'Does Alice love Bob') seen in task4. We were able to efficiently create the diagrams and circuits in this task. To supplement this task, we also included a classical NLP model, which can be seen in [this notebook](Classical_NLP.ipynb). Implementations of exercise 1 from Task 5 are found in [this notebook](qnlp_tutorial_solution_Task5-1.ipynb) and also in [this notebook](task5_implement2.ipynb).
 
 In our second exercise for task5 we were required to create a SWAP circuit to answer the question, 'Does Alice love Bob'. This is implemented in....
 
