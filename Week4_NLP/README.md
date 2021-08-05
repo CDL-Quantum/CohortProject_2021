@@ -105,24 +105,32 @@ pip install tensornetwork
 
 ![task3](./images/exercise3.png)
 
-**Exercise 3-1:** Run your own Bell experiment on quantum hardware! You can use IBMQ machines for free, if you're ready to wait.
-**Exercise 3-2:** Draw a circuit that evaluates to the GHZ state 
-$\frac{1}{\sqrt{2}} (|000\rangle + |111\rangle)$.
-**Exercise 3-3 (harder):** Define a function that takes a number `n` and returns a circuit for the  state $\frac{1}{\sqrt{2}} (|0...0\rangle + |1...1\rangle)$.
+In this task we use `pytket` to convert the `discopy` circuit diagrams for the Bell state ($\frac{1}{\sqrt{2}}(|00 \rangle+|11 \rangle)$, GHZ state ( $\frac{1}{\sqrt{2}}(|000\rangle+|111\rangle$), and the generalized n-qubit fully entangled state $\frac{1}{\sqrt{2}}(|00000\rangle+|11111\rangle$ (see below) and access the IBMQ backend `bogota` to perform the measurements. 
 
-- In this exercise we use `pytket` to convert the `discopy` circuit diagram for the Bell state (see below) and access the IBMQ backend `bogota` to measure the Bell state. 
+**Circuit for the Bell state:**
+
 ![img3-1-1](./images/img3-1-1.png)
 
-The result shows that $|00\rangle$ and $|11\rangle$ states have nearly equal probabilities.
+**Bell state measurement:** The result shows that $|00\rangle$ and $|11\rangle$ states have nearly equal probabilities.
 
 ![img3-1-2](./images/img3-1-2.png)
 
--In
+**Circuit for the GHZ state:** 
 
 ![img3-2-1](./images/img3-2-1.png)
+
+**GHZ state measurement:** The result shows that $|000\rangle$ and $|111\rangle$ states have nearly equal probabilities.
+
+
 ![img3-2-2](./images/img3-2-2.png)
 
+**Circuit for the `n=5` entangled state:** 
+
 ![img3-3-1](./images/img3-3-1.png)
+
+**`n=5` entangled state measurement:** The result shows that $|00000\rangle$ and $|11111\rangle$ states have nearly equal probabilities.
+
+
 ![img3-3-2](./images/img3-3-2.png)
 
 <a name="paragraph4"></a>
@@ -164,7 +172,17 @@ By looking in the notebbok you can confirm we obtain the correct response of 'ye
 Our first exercise for task5 was to train a QNLP model using circuits to answer the types of questions (such as 'Does Alice love Bob') seen in task4. We were able to efficiently create the diagrams and circuits in this task. To supplement this task, we also included a classical NLP model, which can be seen in [this notebook](Classical_NLP.ipynb)
 
 
-In our second exercise for task5 we were required to create a SWAP circuit to answer the question, 'Does Alice love Bob'. This is implemented in....
+In our second exercise for task5 we were required to perform a SWAP test to verify whether "Alice" is the answer of "Who loves Bob?" by performing the following steps:
+
+1. We use the [online generator]( https://qnlp.cambridgequantum.com/generate.html) to generate the circuits for "Who loves Bob?" and "Alice" individually. Then we use random parame between 0 and 1 into the parameters of these circuits.
+2. **Implement the SWAP test circuit**. In `discopy`, there is no build-in implementation for the controlled-SWAP gate. We have tried to use the built-in CSWAP gate in`pytket` and translate it into a `discopy.Circuit`. However, it produced an`Implement Error`. Fortunately, we found a way to use the transpiler in `qiskit` to decompose the `CSWAP` gate into single- and two- qubit gates. Then we manually type up the transpiled circuit into a `pytket` circuit, then translate it into a `discopy` circuit. 
+3. Combine the circuits of the "Who loves Bob?", "Alice", and the SWAP test, as shown below.
+![swap_test](./images/SWAP_test_circuit.png)
+
+4. Measure the ancilla qubit with the simulator `Aerbackend` in `qiskit`  because this problem requires 8 qubits but there is no publically available quantum processors with more than 8 qubits yet. The result shows that the probability of measuring $|0\rangle$ is about 0.6 to 0.8, depending on the random initial parameters, which indicates that "Alice" is likely to be the correct answer.
+
+![swap_result](./images/SWAP_test_result.png)
+
 
 
 For more details refer to the [Business Application found here](./Business_Application.md)
