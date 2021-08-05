@@ -1,5 +1,7 @@
 # Business Application: Quantum Natural Language Processing (QNLP)
 
+![pic2](images/cir.png).
+
 ## Introduction to Qlinguo
 
 #### Qlinguo is a software service that translates human language into machine language.
