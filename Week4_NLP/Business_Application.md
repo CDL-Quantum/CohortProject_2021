@@ -38,12 +38,18 @@ This approach is typically referred to as a distributional approach to NLP and u
 During our work, we derived grammatical structure from sentences to analyze their sentiment. Compared to the classical 'Bag of Words' model for NLP; our model takes into account the technical details of Category theory. Category theory is important because it better enables us to look at the  interactions between elements of the sentence; as quantum computers grow in complexity we will be able to analyze larger, more complex sentences, easily matching the Classical NLP counterpart.
 
 ## NLP Industry Overview
-The Global NLP Market was valued at USD 10.72 billion in 2020, and it is expected to be worth USD 48.46 billion by 2026, registering a compound annual growth rate (CAGR) of 26.84% during th forecast period (2021-2026). Due to the ongoing Covid-19 pandemic the market is witnessing growth in healthcare sector.
+
+According to [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/natural-language-processing-market):
+
+> The Global NLP Market was valued at USD 10.72 billion in 2020, and it is expected to be worth USD 48.46 billion by 2026, registering a compound annual growth rate (CAGR) of 26.84% during th forecast period (2021-2026).
+ 
+Due to the ongoing Covid-19 pandemic the market is witnessing growth in healthcare sector.
 The natural language processing market includes hardware (processor, GPU, etc.), software (tools provided by major vendors to support NLP-based features), and services (API-based SaaS offering). Other key segments include segmentation by processing type (image, text, and speech/voice-based), the market is also segmented by the size of organization (large organizations and small and medium organizations), by end-user industry (education, BFSI, healthcare, IT and telecom, retail, etc.) and by geography (North America, Europe, Asia-Pacific, and Rest of the World).
 Large organizations are increasingly adopting deep learning, along with supervised and unsupervised machine learning technologies for various applications, the adoption of NLP is likely to increase. Cost and risk are some of the major factors driving the adoption of these technologies among large organizations. Most of the large end-user organizations across various industries are mainly utilizing these technologies to enhance their internal and external operations.
 large-scale social media platforms are also utilizing text analytics and NLP technologies for monitoring and tracking social media activities, such as political reviews and hate speeches. Platforms like Facebook and twitter are managing the published content with the help of these tools.
 
 ![Chatbot](https://www.techedgegroup.com/hs-fs/hubfs/chatbots-1.jpg?width=729&name=chatbots-1.jpg)
+
 Source: https://www.techedgegroup.com/blog/how-to-select-a-chatbot-platform-for-your-business
 
 ### Phase 1 Target Customers
