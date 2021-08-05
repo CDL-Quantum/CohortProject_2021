@@ -23,6 +23,8 @@ Finally, we will tackle the most challenging problem that we believe has the hig
 
 The triggers for these transitions are a combination of technological and commercial outcomes. We at each stage we validate our technology by demonstrating market viability. Dominance is desirable but not necessary. In the meantime, the revenue from these business activities will support the further development of the underlying technology in order to get ahead of current technological platforms. We are running a marathon, not sprinting.
 
+![pic](images/earnings.png).
+
 ## Technical Feasibility
 
 *Lots of editing needed here*
