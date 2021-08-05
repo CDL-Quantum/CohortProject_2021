@@ -38,7 +38,7 @@ pip install tensornetwork
 
 - We create a four eggs omelette recipe with vegetables/bacon and cheese options.
 
-![img1-1-1](./images/img1-1-1.png)
+![img1-1-1](images/img1-1-1.png)
 
 **Exercise 1-2:** Define a function that takes a number `n` and returns the recipe of a tiramisu with `n` layers of crema di mascarpone and savoiardi.
 
