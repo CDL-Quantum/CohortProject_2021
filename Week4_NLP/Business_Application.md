@@ -44,7 +44,7 @@ Large organizations are increasingly adopting deep learning, along with supervis
 large-scale social media platforms are also utilizing text analytics and NLP technologies for monitoring and tracking social media activities, such as political reviews and hate speeches. Platforms like Facebook and twitter are managing the published content with the help of these tools.
 
 ![Chatbot](https://www.techedgegroup.com/hs-fs/hubfs/chatbots-1.jpg?width=729&name=chatbots-1.jpg)
-
+Source: https://www.techedgegroup.com/blog/how-to-select-a-chatbot-platform-for-your-business
 
 ### Phase 1 Target Customers
 |Company name example|Sub-segment|Segment|
