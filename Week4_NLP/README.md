@@ -1,11 +1,36 @@
 ![CDL 2021 Cohort Project](../figures/CDL_logo.jpg)
+
+----
+## Qunova Computing, Inc.
+
+----
+
 ## Project 4: NLP: Natural Language Processing on a Quantum Computer 
 
-This project will guide you through running your own QNLP experiment. 
+### Task 1: Learning how to use DisCoPy
 
-Open up [instructions.pdf](https://github.com/CDL-Quantum/CohortProject_2021/tree/main/Week4_NLP/instructions.pdf) to begin learning about your tasks for this week!
+There are interesting exercises in qnlp tutorial!
+We executed the introduced codes in tutorial
+and provided answers to exercises.
 
-**Please edit this markdown file directly with links to your completed tasks and challenges.**
+Our answers can be found in
+[qnlp-tutorial.ipynb](https://github.com/QuNovaComputing/CohortProject_2021/blob/week4_qunovacomputing/Week4_NLP/qnlp-tutorial.ipynb).
+
+### Task 2: Generating your own dataset
+
+To run QNLP experiment, we made some simple sentences [sentences](https://github.com/QuNovaComputing/CohortProject_2021/blob/week4_qunovacomputing/Week4_NLP/sentence.txt)
+
+### Task 3: Run your first QNLP experiment
+
+
+With the sentences made in Task 2, we conducted an experiment.
+We refer to [Task3](https://github.com/QuNovaComputing/CohortProject_2021/blob/week4_qunovacomputing/Week4_NLP/notebook.ipynb).
+
+
+
+
+
+
 
 ## Business Application
 For each week, your team is asked to complete a Business Application. Questions you will be asked are:
