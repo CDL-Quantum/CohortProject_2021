@@ -92,43 +92,44 @@ pip install tensornetwork
 
 **Exercise 2-3:** Pip install the [tensornetwork](https://pypi.org/project/tensornetwork/) library and use it to contract the MPS diagrams more efficiently. This is done with the syntax `diagram.eval(contractor=tn.contractor.auto)`, see the [docs](https://discopy.readthedocs.io/en/main/_autosummary/discopy.tensor.Diagram.html#discopy.tensor.Diagram.eval).
 
-![img2-2-1](./images/img2-2-1.png)
+<img src="./images/img2-2-1.png" width="500"> 
 
 - For Exercies 2-2 and 2-3, we define a function returning the diagram for a matrix product state with a size `n`. The diagram for `n` = 5 is shown above. We also compare the evaluation time between `DisCoPy` and `tensornetwork` with respective to the size of the diagram. As shown below, the evaluation time for the discopy significantly increases as `n` > 8. However, `tensornetwork` performs much efficiently at higher diagram size.
 
-![img2-2-2](./images/img2-2-2.png)
 
+<img src="./images/img2-2-2.png" width="500"> 
+ 
 <a name="paragraph3"></a>
-
+ 
 ![task3](./images/exercise3.png)
 
 In this task we use `pytket` to convert the `discopy` circuit diagrams for the Bell state ($\frac{1}{\sqrt{2}}(|00 \rangle+|11 \rangle)$, GHZ state ( $\frac{1}{\sqrt{2}}(|000\rangle+|111\rangle$), and the generalized n-qubit fully entangled state $\frac{1}{\sqrt{2}}(|00000\rangle+|11111\rangle$ (see below) and access the IBMQ backend `bogota` to perform the measurements. 
 
 **Circuit for the Bell state:**
 
-![img3-1-1](./images/img3-1-1.png)
+<img src="./images/img3-1-1.png" width="500"> 
 
+  
 **Bell state measurement:** The result shows that $|00\rangle$ and $|11\rangle$ states have nearly equal probabilities.
 
-![img3-1-2](./images/img3-1-2.png)
+<img src="./images/img3-1-2.png" width="500"> 
 
+ 
 **Circuit for the GHZ state:** 
 
-![img3-2-1](./images/img3-2-1.png)
+ <img src="./images/img3-2-1.png" width="500"> 
 
 **GHZ state measurement:** The result shows that $|000\rangle$ and $|111\rangle$ states have nearly equal probabilities.
 
-
-![img3-2-2](./images/img3-2-2.png)
+<img src="./images/img3-2-2.png" width="500"> 
 
 **Circuit for the `n=5` entangled state:** 
 
-![img3-3-1](./images/img3-3-1.png)
-
+<img src="./images/img3-3-1.png" width="500"> 
+ 
 **`n=5` entangled state measurement:** The result shows that $|00000\rangle$ and $|11111\rangle$ states have nearly equal probabilities.
 
-
-![img3-3-2](./images/img3-3-2.png)
+<img src="./images/img3-3-2.png" width="500"> 
 
 <a name="paragraph4"></a>
 
