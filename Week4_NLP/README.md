@@ -28,7 +28,7 @@ pip install pytket-qiskit
 pip install tensornetwork
 ```
 
-![task4](.images/exercise4.png)
+![task4](./images/exercise1.png)
 
 ----Add images if needed (put the images in ./images/)---
 
@@ -67,7 +67,7 @@ pip install tensornetwork
 ![img1-5-2](./images/img1-5-2.png)
 
 
-![task2](.images/exercise2.png)
+![task2](./images/exercise2.png)
 
 **Exercise 2-1:** Check out the [diagram rewriting](https://discopy.readthedocs.io/en/main/notebooks/rewriting-diagrams.html) notebook to learn how to remove snakes from a diagram. This can greatly speed up the evaluation of tensor diagrams!
 
@@ -89,7 +89,7 @@ pip install tensornetwork
 ![img2-2-2](./images/img2-2-2.png)
 
 
-![task3](.images/exercise3.png)
+![task3](./images/exercise3.png)
 
 **Exercise 3-1:** Run your own Bell experiment on quantum hardware! You can use IBMQ machines for free, if you're ready to wait.
 **Exercise 3-2:** Draw a circuit that evaluates to the GHZ state 
@@ -105,12 +105,14 @@ The result shows that $|00\rangle$ and $|11\rangle$ states have nearly equal pro
 
 -In
 
-
 ![img3-2-1](./images/img3-2-1.png)
 ![img3-2-2](./images/img3-2-2.png)
 
 ![img3-3-1](./images/img3-3-1.png)
 ![img3-3-2](./images/img3-3-2.png)
+
+![task4](./images/exercise4.png)
+
 
 For more details refer to the [Business Application found here](./Business_Application.md)
  
