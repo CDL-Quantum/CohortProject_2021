@@ -12,14 +12,17 @@ example, IBM's quantum computer "kolkata" supports interactions shown in the fol
 ![ibmq_kolkata](./kolkata.jpeg)
 
 Mapping an ideal quantum circuit to a device supporting nearest-neighbor interactions (known as transpiling) is required before
-running an algorithm on a real quantum computer. 
+running an algorithm on a real quantum computer.  Transpiling a quantum circuit increases the depth (or number of timesteps) of
+the actual quantum circuit that is executed on the hardware. The following figure shows how a depth 6 circuit on 5 qubits expands
+under transpiling to a circuit running on IBM's "bogota" quantum computer: 
 
 ![transpiling](./transpiling.png)
 
 
-greatly increases 
-the depth of the quantum circuit that is executed on a particular quantum computer. 
-Here we introduce WTF -- a method for predicting the cost of transpiling an ideal quantum circuit to a 
+Here we introduce WTF -- a method for predicting the cost of transpiling an ideal quantum circuit to a quantum computer supporting 
+nearest-neighbor interactions.  
+
+
 
 
 A brief example for each question is included for the 
