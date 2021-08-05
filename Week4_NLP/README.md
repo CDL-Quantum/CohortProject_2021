@@ -249,6 +249,46 @@ For example, we first had to draw our favourite sentence and evaluate it as a te
 
 next, we created a 4 noun wordspace with 4/5 of our group members. We added further difficulty by enabling interactions between multiple members of the noun space. For example, Eli and Yuval like eachother, but Eli and Ming are not so friendly:
 
+```py    
+from discopy import drawing 
+
+q = Ty('q')
+
+n, s = Ty('n'), Ty('s')
+
+Eli = Word("Eli", n)
+Yuval = Word("Yuval", n)
+Henry = Word("Henry", n)
+Ming = Word("Ming", n)
+loves = Word("loves", n.r @ s @ n.l)
+hates = Word("hates", n.r @ s @ n.l)
+Who_ = Word("Who", q @ s.l @ n)
+Who__ = Word("Who", q @ s.l @ n)
+
+loves_ = np.zeros((4,4))
+loves_[0,3]=1
+loves_[1,2]=1
+loves_[2,1]=1
+loves_[3,0]=1
+
+hates_ = np.zeros((4,4))
+hates_[0,0]=1
+hates_[1,1]=1
+hates_[2,2]=1
+hates_[3,3]=1
+
+F = tensor.Functor(
+    ob={n: 4, s: 1, q :4},
+    ar={Eli: [0, 0, 1, 1],
+        Yuval: [1, 1, 0, 0],
+        Henry: [1, 1, 0, 0],
+        Ming: [0, 0, 1, 1],
+        loves: loves_.flatten().tolist(),
+        hates: hates_.flatten().tolist(),
+        Who_: loves_.flatten().tolist(),
+        Who__: hates_.flatten().tolist()
+        })
+```    
 ![4.6](./images/4.6.png)
 
 ![4.7](./images/4.7.png)
