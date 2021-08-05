@@ -1,10 +1,5 @@
-![joke](images/nlp.png)
-
-
 # Cohort Project Week 4 (Team 8)
-
-```![logo](./images/)```
-
+![logo](./images/logo.png)
 ## Introduction
 
 In this Cohort project, we implement quantum natural machine learning with [`discopy`](https://github.com/oxford-quantum-group/discopy) and [`pytket`](https://github.com/CQCL/pytket). We solve all the exercies in the `qnlp-tutorial` [notebook](https://github.com/oxford-quantum-group/discopy/blob/main/docs/notebooks/qnlp-tutorial.ipynb).
@@ -33,7 +28,7 @@ pip install pytket-qiskit
 pip install tensornetwork
 ```
 
-## Task 1: Drawing cooking recipes
+![task4](.images/exercise4.png)
 
 ----Add images if needed (put the images in ./images/)---
 
@@ -41,7 +36,7 @@ pip install tensornetwork
 
 - We create a four eggs omelette recipe with vegetables/bacon and cheese options.
 
-![img1-1-1](images/img1-1-1.png)
+![img1-1-1](./images/img1-1-1.png)
 
 **Exercise 1-2:** Define a function that takes a number `n` and returns the recipe of a tiramisu with `n` layers of crema di mascarpone and savoiardi.
 
@@ -72,7 +67,7 @@ pip install tensornetwork
 ![img1-5-2](./images/img1-5-2.png)
 
 
-## Task 2: Tensors as boxes
+![task2](.images/exercise2.png)
 
 **Exercise 2-1:** Check out the [diagram rewriting](https://discopy.readthedocs.io/en/main/notebooks/rewriting-diagrams.html) notebook to learn how to remove snakes from a diagram. This can greatly speed up the evaluation of tensor diagrams!
 
@@ -94,7 +89,7 @@ pip install tensornetwork
 ![img2-2-2](./images/img2-2-2.png)
 
 
-## Task 3:
+![task3](.images/exercise3.png)
 
 **Exercise 3-1:** Run your own Bell experiment on quantum hardware! You can use IBMQ machines for free, if you're ready to wait.
 **Exercise 3-2:** Draw a circuit that evaluates to the GHZ state 
