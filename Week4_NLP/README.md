@@ -171,7 +171,7 @@ next, we created a 4 noun wordspace with 4/5 of our group members. We added furt
 
 **Exercise 4-6:** Define the meaning of the word Does and draw the diagram for the yes-no question Does Alice love Bob?. The meaning of the question should be the same as the sentence Alice loves Bob, i.e. the answer is "yes" if the sentence is true.
 
-The final exercise for task4 had us evaluating the question 'Does Alice love Bob'. Here is a diagram of the question; it's a normalized diagram, since the word 'does' isn't contributing any grammatical structure to the sentence.
+The final exercise for task4 had us evaluating the question 'Does Alice love Bob?'. Here is a diagram of the question; it's a normalized diagram, since the word 'does' isn't contributing any grammatical structure to the sentence.
 
 ![4.7](./images/4.8.png)
 
