@@ -3,8 +3,7 @@
 
 Quantum algorithms are compiled into quantum circuits that implement the logical operations of the algorithm.  The current 
 generation of quantum computers can support only shallow circuits -- those consisting of only tens of qubits and a limited number 
-of logical operations before degradation of the quantum data and program failure.    Reducing  the size of quantum circuits that solve  
-meaningful problems is therefore  critical for realizing the power of  near-term power of quantum computers.  
+of logical operations before degradation of the quantum data and program failure.    Reducing  the size of quantum circuits that solve meaningful problems is therefore  critical for realizing the power of  near-term power of quantum computers.  
 
 Some quantum technologies, notably superconducting qubit devices, support only nearest-neighbor interactions between qubits. For 
 example, IBM's quantum computer "kolkata" supports interactions shown in the following figure: 
@@ -19,28 +18,11 @@ under transpiling to a circuit running on IBM's "bogota" quantum computer:
 ![transpiling](./transpiling.png)
 
 
-Here we introduce WTF -- a method for predicting the cost of transpiling an ideal quantum circuit to a quantum computer supporting 
-nearest-neighbor interactions.  
+Here we introduce What's The Functor?  -- a diagrammatic machine learning tool chain for predicting the cost of transpiling 
+an ideal quantum circuit to a quantum computer supporting nearest-neighbor interactions.  
 
 
 
-
-A brief example for each question is included for the 
-[Traveling Salesman Problem.](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
-
-## Step 1: Explain the technical problem you solved in this exercise
-
-Example: Finding a global minimum in settings where a classical approach may not be able to find a global minimum.
-
-## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
-
-Example: A courier has to deliver parcels to several locations and is looking to minimize its travel time. (e.g., “the travelling salesman problem”).
-
-## Step 3: Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved
-
-Examples: 
-- Federal Express
-- Canada Post
 
 ## Step 4: Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language
 
