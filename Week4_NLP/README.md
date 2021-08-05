@@ -25,13 +25,13 @@ Task 5-2: [`qnlp_tutorial_solution_Task5-2_SWAP_test.ipynb`](./qnlp_tutorial_sol
 
 To run the notebooks in this project, create a new conda environment to install the essential packages.
 
-```
+```py
 conda create -n env_name
 conda activate env_name
 ```
 Then install the following packages by
 
-```
+```py
 conda install python
 pip install discopy
 pip install pytket
