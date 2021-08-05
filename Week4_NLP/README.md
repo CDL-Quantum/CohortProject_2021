@@ -308,7 +308,10 @@ By looking in the notebbok you can confirm we obtain the correct response of 'ye
 **Exercise 5-1:** Run your own QNLP experiment on quantum hardware! There are multiple parameters that you can try to scale: the length of sentences, the size of the vocabulary, the number of qubits for the noun space.
 
 
-Our first exercise for task5 was to train a QNLP model using circuits to answer the types of questions (such as 'Does Alice love Bob') seen in task4. We were able to efficiently create the diagrams and circuits in this task. To supplement this task, we also included a classical NLP model, which can be seen in [this notebook](Classical_NLP.ipynb). Implementations of exercise 1 from Task 5 are found in [this notebook](qnlp_tutorial_solution_Task5-1.ipynb) and also in [this notebook](task5_implement2.ipynb).
+Our first exercise for task5 was to train a QNLP model using circuits to answer the types of questions (such as 'Does Alice love Bob') seen in task4. We were able to efficiently create the diagrams and circuits in this task. To supplement this task, we also included a classical NLP model, which can be seen in [this notebook](Classical_NLP.ipynb). Implementations of exercise 1 from Task 5 are found in [this notebook](qnlp_tutorial_solution_Task5-1.ipynb) and also in [this notebook](task5_implement2.ipynb). The plots should look like:
+    
+![task5](./images/5.1.png)
+![task5](./images/5.1.png)
 
 **Exercise 5-2:** Implement a swap test to compute whether "Alice" is an answer to "Who loves Bob?".
 
