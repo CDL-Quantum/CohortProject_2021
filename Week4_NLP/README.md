@@ -141,6 +141,8 @@ The final exercise for task4 had us evaluating the question 'Does Alice love Bob
 
 By looking in the notebbok you can confirm we obtain the correct response of 'yes' for this task.
 
+![task5](./images/exercise5.png)
+
 For more details refer to the [Business Application found here](./Business_Application.md)
  
 ![joke](./images/nlp.png)
