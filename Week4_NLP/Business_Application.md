@@ -29,13 +29,9 @@ The triggers for these transitions are a combination of technological and commer
 
 ## Technical Feasibility
 
-*Lots of editing needed here*
-
 From a technical standpoint, the problem we are solving is that of *sentiment analysis* in human speech and text. Sentiment analysis is the process of inferring what humans are *thinking* based on what humans are *saying*. Significant research and development resources are being directed at improving these outcomes. Qlinguo relies on quantum methods of natural language processing, as we explain below.
 
 Quantum Natural Language Processing (QNLP) is an approach to semantic analysis which uses emerging quantum technology to process human language more accurately than any established technology. Current approaches to Natural Language Processing (NLP) are dominated by the so-called “bag of words” approach: where first a set of several thousand context words gets identified. From there, researchers use a corpus to determine how often other words appear near these context words (for example, next to “sports,” you’ll likely see mentions of “football,” “baseball,” “hockey,” and other closely related words). All these words come together to create the word vector for any particular word (in this case, the term “sports”).
-
-Using strings of words defined only by the meaning of those individual words, without accounting for grammatical structure or composition.
 
 This approach is typically referred to as a distributional approach to NLP and uses the vector space model to determine the meaning of words. A second approach to NLP called compositional model (also known as semantics), boils grammatical structures down to mathematical algorithms – essentially turning sentences into networks of words where these words interact to create meaning. Our approach combined the two previous approaches into something called the “compositional distributional model” implemented in a quantum computer (QNLP), in our method a direct correspondence is established on the one hand between the meanings of words and quantum states, and on the other hand grammatical structures and quantum measurements. This is done by encoding sentence networks into something a quantum circuit can understand.
 
