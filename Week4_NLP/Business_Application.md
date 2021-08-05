@@ -1,30 +1,52 @@
 ![CDL 2021 Cohort Project](../figures/CDL_logo.jpg)
 # Quantum Cohort Project Business Application
 
-For each weekly project, your team is asked to complete the below business application exercise.
-To complement the technical tasks, please consdier the four questions below.
-You are free to format your response to these four questions as you wish (with the final question done as a short recorded video), and to include
-the content (or links to the content) on your forked repository.
-
-A brief example for each question is included for the 
-[Traveling Salesman Problem.](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
-
 ## Step 1: Explain the technical problem you solved in this exercise
 
-Example: Finding a global minimum in settings where a classical approach may not be able to find a global minimum.
+A Natural Language Processing can be trained to understand and judge a sentence 
+or a proposition is true or false, meaning that the machine understands the context of sentences. 
+
 
 ## Step 2: Explain or provide examples of the types of real-world problems this solution can solve
 
-Example: A courier has to deliver parcels to several locations and is looking to minimize its travel time. (e.g., “the travelling salesman problem”).
+We can consider a simple real world application where incoming calls should 
+be forwarded to designated department in a call-based service, such as 911 
+emergency calls. 
+
+911 emergency calls require immediate forwarding of the call to either police 
+fire department to engage an attention from the handling department in the 
+area,
+while the call operator starts the conversation with the caller. 
+
+The caller will report where s/he is calling from and what situation is 
+involved. The statements for this kind of discussion can be very precisely
+trained as the key words are limited to identify which local department is 
+in charge. 
+
+In the metropolitan Seoul area, Gangnam and Seocho are neighboring municipals
+that share emergency calls.
+
+We can consider a call classification by type of situation { accident, crime }
+as well as by location { Gangnam, Seocho }.
+
+From the initial conversation, a call-forward NLP machine can identify the 
+call forwarding to 
+
+- Fire dept in Gangnam
+- Police station in Gangnam
+- Fire dept in Seocho
+- Police station in Seocho
+ 
+in order to immediate responses of the dept in charge. 
+
+![911GangnamSeocho.png](./911GangnamSeocho.png)
 
 ## Step 3: Identify at least one potential customer for this solution - ie: a business who has this problem and would consider paying to have this problem solved
 
-Examples: 
-- Federal Express
-- Canada Post
+This service will be highly valuable to all municipals as it can reduce 
+a lead time to the adequate initial response in emergency situations.
 
 ## Step 4: Prepare a 90 second video explaining the value proposition of your innovation to this potential customer in non-technical language
 
-Example: By travelling to all destinations via the shortest route, a courier can generate the same revenue that it would have generated following any other route, but will minimize travel costs (e.g., fuel costs). By minimizing travel costs, the courier will be more profitable than it would have been had it travelled through any other route.
 
-**Please store your video externally to the repo, and provide a link e.g. to Google Drive**
+[Cohort_week4-qunova.mp4](https://drive.google.com/file/d/1BNi278ikoNo3hXtQJvFK49frA5HZ5xN2/view?usp=sharing)
