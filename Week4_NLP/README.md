@@ -82,7 +82,6 @@ pip install tensornetwork
 
 **Exercise 2-1:** Check out the [diagram rewriting](https://discopy.readthedocs.io/en/main/notebooks/rewriting-diagrams.html) notebook to learn how to remove snakes from a diagram. This can greatly speed up the evaluation of tensor diagrams!
 
-- add description
 
 ![img2-1-1](./images/img2-1-1.gif)
 ![img2-1-2](./images/img2-1-2.gif)
@@ -127,27 +126,41 @@ The result shows that $|00\rangle$ and $|11\rangle$ states have nearly equal pro
 
 ![task4](./images/exercise4.png)
 
+**Exercise 4-1:** Draw the diagram of a sentence in a language with a different word order, e.g. Japanese.
+
 In task4 we were charged with drawing the grammatical structure of sentences using diagrams. There we several exercises which tested this ability. For example, in one task we drew the diagrm to the sentence "Alice loves Bob" in japanese (where the sentence structure is not subject-verb-noun).
 
 ![4.1](./images/4.4.png)
+
+**Exercise 4-2:** Draw the diagram of a sentence in a language written right to left, e.g. Arabic
 
 We implemeted the same sentence in arabic, where the sentence is read right to left.
 
 ![4.2](./images/4.3.png)
 
+**Exercise 4-3:** Check out Lambek's From word to sentence, pick your favorite example and implement it in DisCoPy.
+
 We were also tasked with implementing a sentence from Lambek's classic paper. We chose the sentence, "cannibals prefer men to pork".
 
 ![4.3](./images/4.2.png)
 
-These tasks were more focused on practicing the drawing of the diagrams. The next three tasks enabled us to see how we could pry the grammatical structure from the diagrams. For example, we first had to draw our favourite sentence and evaluate it as a tensor. We chose the sentence 'Batman is serious' (as a parody of the famous line from the Joker- why so serious). So we evaluated the sentence: who is serious?- and we obtained the correct response of Batman.
+These tasks were more focused on practicing the drawing of the diagrams. The next three tasks enabled us to see how we could pry the grammatical structure from the diagrams. 
+
+**Exercise 4-4:** Draw your favorite sentence, define the meaning of each word then evaluate it as a tensor.
+
+For example, we first had to draw our favourite sentence and evaluate it as a tensor. We chose the sentence 'Batman is serious' (as a parody of the famous line from the Joker- why so serious). So we evaluated the sentence: who is serious?- and we obtained the correct response of Batman.
 
 ![4.5](./images/4.5.png)
+
+**Exercise 4-5:** Build a toy model with a 4-dimensional noun space, add Charlie and Diane to the story.
 
 next, we created a 4 noun wordspace with 4/5 of our group members. We added further difficulty by enabling interactions between multiple members of the noun space. For example, Eli and Yuval like eachother, but Eli and Ming are not so friendly:
 
 ![4.6](./images/4.6.png)
 
 ![4.7](./images/4.7.png)
+
+**Exercise 4-6:** Define the meaning of the word Does and draw the diagram for the yes-no question Does Alice love Bob?. The meaning of the question should be the same as the sentence Alice loves Bob, i.e. the answer is "yes" if the sentence is true.
 
 The final exercise for task4 had us evaluating the question 'Does Alice love Bob'. Here is a diagram of the question; it's a normalized diagram, since the word 'does' isn't contributing any grammatical structure to the sentence.
 
