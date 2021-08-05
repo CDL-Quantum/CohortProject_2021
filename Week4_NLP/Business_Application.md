@@ -12,7 +12,7 @@ with all its double entendres, sarcasm, and jargon, into *computer* language.
 As of now, we have produced an early technical demonstration of how our technology would enable this feat.
 Our work can be found at [Technical ReadMe](README.md).
 
-#### See our presentation [here](http://www.example.com).
+#### See our presentation [here](https://drive.google.com/file/d/18cDZyMOz2K5DMXj6QvFpHl18n7QQZbOi/view?usp=sharing).
 
 ## Business Strategy
 
