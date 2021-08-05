@@ -72,9 +72,12 @@ pip install tensornetwork
 
 - Here we convert the recipe back to english
 
+<img src="./images/img1-5-1.png" width="300">
+<img src="./images/img1-5-2.png" width="300">
 
-![img1-5-1](./images/img1-5-1.png)
-![img1-5-2](./images/img1-5-2.png)
+|||
+| :---------: | :----------: |
+|<img src="./images/img1-5-1.png" width="300">| <img src="./images/img1-5-2.png" width="300"> |
 
 <a name="paragraph2"></a>
 
@@ -82,10 +85,10 @@ pip install tensornetwork
 
 **Exercise 2-1:** Check out the [diagram rewriting](https://discopy.readthedocs.io/en/main/notebooks/rewriting-diagrams.html) notebook to learn how to remove snakes from a diagram. This can greatly speed up the evaluation of tensor diagrams!
 
+| | | | 
+| :---------: | :----------: | :----------: |
+| <img src="./images/img2-1-1.gif" width="400"> | <img src="./images/img2-1-2.gif" width="300"> | <img src="./images/img2-1-3.gif" width="400">| 
 
-![img2-1-1](./images/img2-1-1.gif)
-![img2-1-2](./images/img2-1-2.gif)
-![img2-1-3](./images/img2-1-3.gif)
 
 
 **Exercise 2-2:** Define a function that takes a number `n` and returns the diagram for a [matrix product state](https://en.wikipedia.org/wiki/Matrix_product_state) (MPS) with `n` particles and random entries. Check how the evaluation time scales with the size of the diagram. 
