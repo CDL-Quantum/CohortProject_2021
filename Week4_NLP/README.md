@@ -10,6 +10,7 @@
 ## Executive Summary
 
 ### QNLP pipeline
+
 We built a model to classify sentences into "True" or "False" on a limited semantic space. Namely we are going to fight the flat earth theory. We have a set of sentences some are True = 1 and some are False = 0, Training data sample is shown Below :
 - Earth is round :  1
 - Antartic is south :  1
@@ -57,10 +58,44 @@ What we can observe as general rules of thumb is that :
 </center>
 
 
-### Tutorial 
+### Tutorial Notebook
 
+Thanks to the `discopy` library :
 
+* we implemented a chocolate mousse recipe :
 
-**The pitch video can be found [here](https://youtu.be/U1zbx987zgI)**
+<center>
+<table>
+        <tr>
+            <td><img src="imgs/chocmousse.jpg"></td>
+            <td><img src="imgs/chocmousse_diagram.png"></td>
+        </tr>
+</table>
+</center>
+
+* We implemented a grammar diagram for a japanese sentence
+
+<center>
+<table>
+        <tr>
+            <td><img src="imgs/japan.png"></td>
+            <td><img src="imgs/japanese.png"></td>
+        </tr>
+</table>
+</center>
+
+* We implemented Shakespeare's Midsummer Night Dream romantic relationship pattern :
+<center>
+<table>
+        <tr>
+            <td><img src="imgs/midsummer.jpg"></td>
+            <td><img src="imgs/midsummer_code.png.png"></td>
+        </tr>
+</table>
+</center>
+
+## Business
+
+The pitch video can be found below :
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/U1zbx987zgI/0.jpg)](http://www.youtube.com/watch?v=U1zbx987zgI "Video Title")
