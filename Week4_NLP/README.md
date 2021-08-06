@@ -88,8 +88,8 @@ Thanks to the `discopy` library :
 <center>
 <table>
         <tr>
-            <td><img src="imgs/midsummer.jpg"></td>
-            <td><img src="imgs/midsummer_code.png.png"></td>
+            <td><img src="imgs/midsummer.png"></td>
+            <td><img src="imgs/midsummer_code.png"></td>
         </tr>
 </table>
 </center>
