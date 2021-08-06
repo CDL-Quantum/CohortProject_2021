@@ -51,7 +51,7 @@ What we can observe as general rules of thumb is that :
 <center>
 <table>
         <tr>
-            <td><img src="imgs/60_word_circle.png"></td>
+            <td><img src="imgs/60_word_circle.png"width=400></td>
             <td><img src="imgs/70_matrix.png"></td>
         </tr>
 </table>
@@ -67,7 +67,7 @@ Thanks to the `discopy` library :
 <center>
 <table>
         <tr>
-            <td><img src="imgs/chocmousse.jpg"></td>
+            <td><img src="imgs/chocmousse.jpg"width=400></td>
             <td><img src="imgs/chocmousse_diagram.png"></td>
         </tr>
 </table>
@@ -78,7 +78,7 @@ Thanks to the `discopy` library :
 <center>
 <table>
         <tr>
-            <td><img src="imgs/japan.png"></td>
+            <td><img src="imgs/japan.png"width=400></td>
             <td><img src="imgs/japanese.png"></td>
         </tr>
 </table>
@@ -88,7 +88,7 @@ Thanks to the `discopy` library :
 <center>
 <table>
         <tr>
-            <td><img src="imgs/midsummer.png"></td>
+            <td><img src="imgs/midsummer.png"width=400></td>
             <td><img src="imgs/midsummer_code.png"></td>
         </tr>
 </table>
